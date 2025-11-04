@@ -1,0 +1,57 @@
+{
+  "name": "trade-analysis-dashboard",
+  "version": "1.0.0",
+  "description": "Fantasy Football Trade Analysis Dashboard",
+  "private": true,
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd dashboard/backend && npm install",
+    "install:frontend": "cd dashboard/frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd dashboard/backend && npm run dev",
+    "dev:frontend": "cd dashboard/frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd dashboard/backend && npm run build",
+    "build:frontend": "cd dashboard/frontend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd dashboard/backend && npm start",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd dashboard/backend && npm test",
+    "test:frontend": "cd dashboard/frontend && npm test",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd dashboard/backend && npm run lint",
+    "lint:frontend": "cd dashboard/frontend && npm run lint",
+    "format": "npm run format:backend && npm run format:frontend",
+    "format:backend": "cd dashboard/backend && npm run format",
+    "format:frontend": "cd dashboard/frontend && npm run format",
+    "clean": "npm run clean:backend && npm run clean:frontend",
+    "clean:backend": "cd dashboard/backend && rm -rf dist node_modules",
+    "clean:frontend": "cd dashboard/frontend && rm -rf dist node_modules",
+    "setup": "npm run install:all && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capitanlandr/trade-analysis-dashboard.git"
+  },
+  "keywords": [
+    "fantasy-football",
+    "trade-analysis",
+    "dashboard",
+    "react",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "capitanlandr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capitanlandr/trade-analysis-dashboard/issues"
+  },
+  "homepage": "https://github.com/capitanlandr/trade-analysis-dashboard#readme"
+}

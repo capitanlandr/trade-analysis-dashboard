@@ -1,0 +1,77 @@
+export interface Trade {
+  tradeId: string;
+  tradeDate: string;
+  transactionId: string;
+  teamA: string;
+  teamB: string;
+  teamAReceived: string[];
+  teamBReceived: string[];
+  teamAValueThen: number;
+  teamAValueNow: number;
+  teamBValueThen: number;
+  teamBValueNow: number;
+  winnerAtTrade: string;
+  winnerCurrent: string;
+  marginAtTrade: number;
+  marginCurrent: number;
+  swingWinner: string;
+  swingMargin: number;
+}
+
+export interface Team {
+  rosterId: number;
+  teamName: string;
+  realName: string;
+  sleeperUsername: string;
+  tradeCount: number;
+  winRate: number;
+  avgMargin: number;
+  totalValueGained: number;
+}
+
+export interface LeagueStats {
+  totalTrades: number;
+  totalTradeValue: number;
+  avgTradeMargin: number;
+  mostActiveTrader: string;
+  biggestWinner: string;
+  blockbusterCount: number;
+  dateRange: {
+    earliest: string;
+    latest: string;
+  };
+}
+
+export interface TradeData {
+  metadata: {
+    lastUpdated: string;
+    totalTrades: number;
+    dateRange: {
+      earliest: string;
+      latest: string;
+    };
+    filteredCount?: number;
+    totalCount?: number;
+    filters?: any;
+  };
+  trades: Trade[];
+  teams?: Team[];
+  statistics?: LeagueStats;
+}
+
+export interface ApiResponse<T = any> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  timestamp: string;
+}
+
+export interface FilterState {
+  dateRange: {
+    start: Date | null;
+    end: Date | null;
+  };
+  selectedTeams: string[];
+  minTradeValue: number;
+  blockbusterThreshold: number;
+}
