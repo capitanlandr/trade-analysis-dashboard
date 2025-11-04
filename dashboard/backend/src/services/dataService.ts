@@ -68,14 +68,25 @@ export class DataService {
   }
 
   async loadTrades(): Promise<Trade[]> {
-    const filePath = config.pipelineFiles.tradesAnalysis;
-    const exists = await this.csvParser.fileExists(filePath);
+    const primaryPath = config.pipelineFiles.tradesAnalysis;
+    const fallbackPath = '../../pipeline_outputs/example_trades.csv';
+    
+    // Try primary path first (your real data)
+    let exists = await this.csvParser.fileExists(primaryPath);
+    let filePath = primaryPath;
     
     if (!exists) {
-      logger.warn(`Trades file not found: ${filePath}`);
+      logger.warn(`Primary trades file not found: ${primaryPath}, trying fallback: ${fallbackPath}`);
+      exists = await this.csvParser.fileExists(fallbackPath);
+      filePath = fallbackPath;
+    }
+    
+    if (!exists) {
+      logger.warn(`No trades file found, using empty data`);
       return [];
     }
 
+    logger.info(`Loading trades from: ${filePath}`);
     return await this.csvParser.parseTradesCSV(filePath);
   }
 
@@ -97,7 +108,25 @@ export class DataService {
   }
 
   async loadMultiTeamTrades(): Promise<any[]> {
-    const filePath = config.pipelineFiles.multiTeamTrades;
+    const primaryPath = config.pipelineFiles.multiTeamTrades;
+    const fallbackPath = '../../pipeline_outputs/example_3team_trades.json';
+    
+    // Try primary path first (your real data)
+    let exists = await this.csvParser.fileExists(primaryPath);
+    let filePath = primaryPath;
+    
+    if (!exists) {
+      logger.warn(`Primary multi-team trades file not found: ${primaryPath}, trying fallback: ${fallbackPath}`);
+      exists = await this.csvParser.fileExists(fallbackPath);
+      filePath = fallbackPath;
+    }
+    
+    if (!exists) {
+      logger.warn(`No multi-team trades file found, using empty data`);
+      return [];
+    }
+
+    logger.info(`Loading multi-team trades from: ${filePath}`);
     return await this.csvParser.parseMultiTeamTradesJSON(filePath);
   }
 

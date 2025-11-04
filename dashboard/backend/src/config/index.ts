@@ -2,18 +2,18 @@ export const config = {
   port: process.env.PORT || 3001,
   nodeEnv: process.env.NODE_ENV || 'development',
   
-  // Pipeline file paths - adjust these to match your pipeline output directory
+  // Pipeline file paths - read from local dashboard directory
   pipelineFiles: {
-    tradesAnalysis: process.env.TRADES_FILE || (process.env.NODE_ENV === 'production' ? './league_trades_analysis_pipeline.csv' : '../../league_trades_analysis_pipeline.csv'),
-    teamIdentity: process.env.TEAMS_FILE || (process.env.NODE_ENV === 'production' ? './team_identity_mapping.csv' : '../../team_identity_mapping.csv'),
-    multiTeamTrades: process.env.MULTI_TEAM_FILE || (process.env.NODE_ENV === 'production' ? './3team_trades_analysis.json' : '../../3team_trades_analysis.json')
+    tradesAnalysis: process.env.TRADES_FILE || '../../league_trades_analysis_pipeline.csv',
+    teamIdentity: process.env.TEAMS_FILE || '../../team_identity_mapping.csv',
+    multiTeamTrades: process.env.MULTI_TEAM_FILE || '../../3team_trades_analysis.json'
   },
   
   // CORS settings
   cors: {
     origin: process.env.NODE_ENV === 'production' 
       ? process.env.FRONTEND_URL || false 
-      : ['http://localhost:3000'],
+      : ['http://localhost:3000', 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: true
   },

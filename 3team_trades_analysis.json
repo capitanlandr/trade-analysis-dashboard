@@ -1,0 +1,45 @@
+[
+  {
+    "date": "2025-03-24",
+    "trade_id": 1209959102013263872,
+    "teams": [
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 17187.0
+      },
+      {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13626.0,
+        "value_now": 12922.0
+      },
+      {
+        "manager": "zachlearningtogolf",
+        "assets": [
+          "Rashee Rice",
+          "Adonai Mitchell",
+          "Calvin Ridley",
+          "Drake London",
+          "2025 Round 1",
+          "2025 Round 3",
+          "2025 Round 4",
+          "2026 Round 1"
+        ],
+        "value_then": 12552.0,
+        "value_now": 14616.0
+      }
+    ]
+  }
+]

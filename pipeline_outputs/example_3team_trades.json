@@ -1,0 +1,37 @@
+{
+  "multiTeamTrades": [
+    {
+      "tradeId": "3team_001",
+      "tradeDate": "2024-03-15",
+      "teams": ["Team Alpha", "Team Beta", "Team Gamma"],
+      "assets": {
+        "Team Alpha": {
+          "gives": ["Josh Jacobs", "2024 2nd Round Pick"],
+          "receives": ["Saquon Barkley"]
+        },
+        "Team Beta": {
+          "gives": ["Saquon Barkley"],
+          "receives": ["Cooper Kupp", "2024 3rd Round Pick"]
+        },
+        "Team Gamma": {
+          "gives": ["Cooper Kupp", "2024 3rd Round Pick"],
+          "receives": ["Josh Jacobs", "2024 2nd Round Pick"]
+        }
+      },
+      "analysis": {
+        "winner": "Team Alpha",
+        "totalValue": 45.2,
+        "margins": {
+          "Team Alpha": 18.7,
+          "Team Beta": -5.3,
+          "Team Gamma": -13.4
+        }
+      }
+    }
+  ],
+  "summary": {
+    "totalTrades": 1,
+    "averageTeamsPerTrade": 3,
+    "totalValueExchanged": 45.2
+  }
+}

@@ -30,8 +30,30 @@ export class TeamResolver {
   constructor(private mappingFile: string) {}
 
   async loadMapping(): Promise<void> {
+    const primaryPath = this.mappingFile;
+    const fallbackPath = '../../pipeline_outputs/example_teams.csv';
+    
+    let filePath = primaryPath;
+    let csvContent: string;
+    
     try {
-      const csvContent = await fs.readFile(this.mappingFile, 'utf-8');
+      // Try primary path first (your real data)
+      csvContent = await fs.readFile(primaryPath, 'utf-8');
+      logger.info(`Loading team mapping from: ${primaryPath}`);
+    } catch (error) {
+      logger.warn(`Primary team mapping file not found: ${primaryPath}, trying fallback: ${fallbackPath}`);
+      try {
+        csvContent = await fs.readFile(fallbackPath, 'utf-8');
+        filePath = fallbackPath;
+        logger.info(`Loading team mapping from fallback: ${fallbackPath}`);
+      } catch (fallbackError) {
+        logger.error(`No team mapping file found, creating default teams`);
+        this.createDefaultTeams();
+        return;
+      }
+    }
+
+    try {
       
       const parseResult = Papa.parse(csvContent, {
         header: true,
@@ -73,12 +95,46 @@ export class TeamResolver {
         }
       });
 
-      logger.info(`Loaded ${this.teams.size} teams from ${this.mappingFile}`);
+      logger.info(`Loaded ${this.teams.size} teams from ${filePath}`);
 
     } catch (error) {
-      logger.error(`Error loading team mapping from ${this.mappingFile}:`, error);
+      logger.error(`Error parsing team mapping from ${filePath}:`, error);
       throw error;
     }
+  }
+
+  private createDefaultTeams(): void {
+    // Create default teams when no mapping file is available
+    const defaultTeams = [
+      { rosterId: 1, sleeperUsername: 'alpha_user', realName: 'Alex Johnson' },
+      { rosterId: 2, sleeperUsername: 'beta_user', realName: 'Sarah Chen' },
+      { rosterId: 3, sleeperUsername: 'gamma_user', realName: 'Mike Rodriguez' },
+      { rosterId: 4, sleeperUsername: 'delta_user', realName: 'Emily Davis' },
+      { rosterId: 5, sleeperUsername: 'epsilon_user', realName: 'Chris Thompson' }
+    ];
+
+    this.teams.clear();
+    this.usernameToRosterId.clear();
+    this.realNameToRosterId.clear();
+
+    defaultTeams.forEach(team => {
+      const teamInfo: TeamInfo = {
+        rosterId: team.rosterId,
+        sleeperUsername: team.sleeperUsername,
+        realName: team.realName,
+        nickname: team.realName,
+        currentTeamName: `Team ${team.realName.split(' ')[0]}`,
+        week7TeamName: '',
+        historicalTeamNames: '',
+        notes: 'Default team (no mapping file)'
+      };
+
+      this.teams.set(team.rosterId, teamInfo);
+      this.usernameToRosterId.set(team.sleeperUsername.toLowerCase(), team.rosterId);
+      this.realNameToRosterId.set(team.realName.toLowerCase(), team.rosterId);
+    });
+
+    logger.info(`Created ${this.teams.size} default teams`);
   }
 
   getByRosterId(rosterId: number): TeamInfo | undefined {
