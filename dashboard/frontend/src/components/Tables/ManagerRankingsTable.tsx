@@ -79,7 +79,7 @@ const ManagerRankingsTable: React.FC = () => {
       <ErrorMessage
         title="Failed to Load Rankings"
         message={error instanceof Error ? error.message : 'Unknown error occurred'}
-        onRetry={refetch}
+        onRetry={() => { refetch(); }}
       />
     );
   }

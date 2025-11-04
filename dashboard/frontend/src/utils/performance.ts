@@ -45,8 +45,8 @@ export class PerformanceMonitor {
 }
 
 // Bundle size optimization utilities
-export const lazyImport = <T extends Record<string, any>>(
-  importFn: () => Promise<T>
+export const lazyImport = <T extends React.ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>
 ) => {
   return React.lazy(() => importFn());
 };
@@ -79,5 +79,3 @@ export const withPerformanceTracking = <P extends object>(
     return React.createElement(Component, props);
   });
 };
-
-import React from 'react';

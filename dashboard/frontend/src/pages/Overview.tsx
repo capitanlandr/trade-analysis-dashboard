@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { BarChart3, Users, TrendingUp, Trophy, Calendar, DollarSign } from 'lucide-react';
 import { api } from '../services/api';
-import LoadingSpinner from '../components/UI/LoadingSpinner';
+
 import ErrorMessage from '../components/UI/ErrorMessage';
 import SimpleManagerRankingsTable from '../components/Tables/SimpleManagerRankingsTable';
 import RecentTradesTable from '../components/Tables/RecentTradesTable';
@@ -67,7 +67,7 @@ const Overview: React.FC = () => {
       <ErrorMessage
         title="Failed to Load Dashboard"
         message={statsError instanceof Error ? statsError.message : 'Unknown error occurred'}
-        onRetry={refetchStats}
+        onRetry={() => { refetchStats(); }}
       />
     );
   }
