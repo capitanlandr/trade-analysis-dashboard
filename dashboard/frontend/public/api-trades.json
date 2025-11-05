@@ -1331,7 +1331,7 @@
         "teamAValueNow": 11.0,
         "teamAValueChange": 0.0,
         "teamB": "donewton",
-        "teamBReceived": NaN,
+        "teamBReceived": "nan",
         "teamBValueThen": 0.0,
         "teamBValueNow": 0.0,
         "teamBValueChange": 0.0,
@@ -1351,7 +1351,7 @@
         "teamAValueNow": 2.0,
         "teamAValueChange": 0.0,
         "teamB": "gnewman4",
-        "teamBReceived": NaN,
+        "teamBReceived": "nan",
         "teamBValueThen": 0.0,
         "teamBValueNow": 0.0,
         "teamBValueChange": 0.0,
@@ -1404,7 +1404,7 @@
       }
     ],
     "metadata": {
-      "lastUpdated": "2025-11-04T16:22:12.732420",
+      "lastUpdated": "2025-11-04T16:36:33.145404",
       "totalTrades": 70,
       "dateRange": {
         "earliest": "2025-03-14",
