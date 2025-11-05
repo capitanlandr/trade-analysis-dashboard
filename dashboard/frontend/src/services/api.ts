@@ -117,17 +117,18 @@ const fetchStaticData = async (endpoint: string) => {
     if (!response.ok) {
       throw new Error(`Failed to fetch ${endpoint}`);
     }
-    const data = await response.json();
-    return { data };
+    const jsonData = await response.json();
+    // JSON files already have { success: true, data: {...} } structure
+    return jsonData;
   } catch (error) {
     console.error('Static data fetch error:', error);
     // Return empty data structure to prevent crashes
     if (endpoint.includes('trades')) {
-      return { data: { success: true, data: { trades: [] } } };
+      return { success: true, data: { trades: [] } };
     } else if (endpoint.includes('teams')) {
-      return { data: { success: true, data: { teams: [] } } };
+      return { success: true, data: { teams: [] } };
     } else {
-      return { data: { success: true, data: { overview: {}, teamRankings: { byValueGained: [] } } } };
+      return { success: true, data: { overview: {}, teamRankings: { byValueGained: [] } } };
     }
   }
 };
