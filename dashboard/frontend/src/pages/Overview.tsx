@@ -19,7 +19,7 @@ const Overview: React.FC = () => {
     queryKey: ['stats', 'summary', Date.now()], // Force refresh
     queryFn: () => api.getStatsSummary(),
     staleTime: 0, // Always fetch fresh data
-    cacheTime: 0, // Don't cache
+    gcTime: 0, // Don't cache (renamed from cacheTime)
   });
 
   const { 
@@ -74,7 +74,7 @@ const Overview: React.FC = () => {
     );
   }
 
-  const stats = statsData?.data;
+  const stats = (statsData as any)?.data;
   
   // Debug logging
   console.log('Overview Debug:', {
