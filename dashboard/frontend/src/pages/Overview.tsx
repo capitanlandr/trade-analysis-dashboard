@@ -16,8 +16,10 @@ const Overview: React.FC = () => {
     error: statsError,
     refetch: refetchStats 
   } = useQuery({
-    queryKey: ['stats', 'summary'],
+    queryKey: ['stats', 'summary', Date.now()], // Force refresh
     queryFn: () => api.getStatsSummary(),
+    staleTime: 0, // Always fetch fresh data
+    cacheTime: 0, // Don't cache
   });
 
   const { 
@@ -73,6 +75,15 @@ const Overview: React.FC = () => {
   }
 
   const stats = statsData?.data;
+  
+  // Debug logging
+  console.log('Overview Debug:', {
+    statsData,
+    stats,
+    totalTrades: stats?.overview?.totalTrades,
+    totalValue: stats?.overview?.totalTradeValue,
+    mostActive: stats?.overview?.mostActiveTrader
+  });
 
   return (
     <div className="space-y-8">
