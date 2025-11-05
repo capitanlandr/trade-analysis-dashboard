@@ -3,6 +3,11 @@ import { ApiResponse, Trade, Team, LeagueStats, TradeData } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api');
 const USE_STATIC_DATA = import.meta.env.PROD;
+console.log('API Configuration:', {
+  USE_STATIC_DATA,
+  PROD: import.meta.env.PROD,
+  API_BASE_URL
+});
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -112,12 +117,15 @@ function isRetryableError(error: any): boolean {
 
 // Static data fallback for production
 const fetchStaticData = async (endpoint: string) => {
+  console.log('fetchStaticData called with:', endpoint);
   try {
     const response = await fetch(endpoint);
+    console.log('Fetch response:', { status: response.status, ok: response.ok, url: response.url });
     if (!response.ok) {
-      throw new Error(`Failed to fetch ${endpoint}`);
+      throw new Error(`Failed to fetch ${endpoint}: ${response.status} ${response.statusText}`);
     }
     const jsonData = await response.json();
+    console.log('Parsed JSON data:', jsonData);
     // JSON files already have { success: true, data: {...} } structure
     return jsonData;
   } catch (error) {

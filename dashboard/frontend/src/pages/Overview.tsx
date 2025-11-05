@@ -16,10 +16,20 @@ const Overview: React.FC = () => {
     error: statsError,
     refetch: refetchStats 
   } = useQuery({
-    queryKey: ['stats', 'summary', Date.now()], // Force refresh
-    queryFn: () => api.getStatsSummary(),
-    staleTime: 0, // Always fetch fresh data
-    gcTime: 0, // Don't cache (renamed from cacheTime)
+    queryKey: ['stats', 'summary'],
+    queryFn: async () => {
+      console.log('Fetching stats summary...');
+      try {
+        const result = await api.getStatsSummary();
+        console.log('Stats API result:', result);
+        return result;
+      } catch (error) {
+        console.error('Stats API error:', error);
+        throw error;
+      }
+    },
+    retry: 3,
+    retryDelay: 1000,
   });
 
   const { 
@@ -30,6 +40,14 @@ const Overview: React.FC = () => {
   });
 
 
+
+  // Enhanced logging
+  console.log('Overview state:', {
+    statsLoading,
+    tradesLoading,
+    statsError: statsError?.message,
+    hasStatsData: !!statsData
+  });
 
   if (statsLoading || tradesLoading) {
     return (
