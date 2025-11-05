@@ -55,7 +55,7 @@ const SimpleManagerRankingsTable: React.FC = () => {
   }
 
   // Safely extract and validate teams data
-  const rawTeams = teamsData?.data?.data?.teams || [];
+  const rawTeams = teamsData?.data?.teams || [];
   
   // Data structure is now validated and working correctly
 

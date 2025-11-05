@@ -72,7 +72,7 @@ const Overview: React.FC = () => {
     );
   }
 
-  const stats = statsData?.data?.data;
+  const stats = statsData?.data;
 
   return (
     <div className="space-y-8">

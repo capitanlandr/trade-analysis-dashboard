@@ -74,8 +74,8 @@ const RecentTradesTable: React.FC = () => {
     queryFn: () => api.getTeams(),
   });
 
-  const trades = tradesData?.data?.data?.trades || [];
-  const teams = teamsData?.data?.data?.teams || [];
+  const trades = tradesData?.data?.trades || [];
+  const teams = teamsData?.data?.teams || [];
 
   // Filter and sort trades
   const filteredAndSortedTrades = useMemo(() => {

@@ -84,7 +84,7 @@ const ManagerRankingsTable: React.FC = () => {
     );
   }
 
-  const teams = teamsData?.data?.data?.teams || [];
+  const teams = teamsData?.data?.teams || [];
   
   // Convert team data to manager rankings format and apply filtering/sorting
   const filteredAndSortedRankings = useMemo(() => {

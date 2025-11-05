@@ -13,7 +13,7 @@ const DashboardLayout: React.FC = () => {
   });
 
   const { isConnected, refreshData } = useWebSocket();
-  const lastUpdate = (statusData?.data as any)?.data?.lastDataUpdate || (statusData?.data as any)?.lastDataUpdate;
+  const lastUpdate = (statusData?.data as any)?.lastDataUpdate;
 
   return (
     <div className="min-h-screen bg-gray-50">
