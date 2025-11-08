@@ -3,11 +3,11 @@
   "data": {
     "overview": {
       "totalTrades": 70,
-      "totalTradeValue": 286179.0,
-      "avgTradeMargin": 997.3285714285714,
+      "totalTradeValue": 277881.0,
+      "avgTradeMargin": 878.7857142857143,
       "mostActiveTrader": "Johnny",
-      "biggestWinner": "Johnny",
-      "blockbusterCount": 20,
+      "biggestWinner": "Landry",
+      "blockbusterCount": 19,
       "dateRange": {
         "earliest": "2025-03-14",
         "latest": "2025-11-01"
@@ -15,28 +15,6 @@
     },
     "teamRankings": {
       "byValueGained": [
-        {
-          "rosterId": 7,
-          "teamName": "Breece Lightning",
-          "realName": "Johnny",
-          "sleeperUsername": "jwalters74",
-          "nickname": "Johnny",
-          "tradeCount": 25,
-          "winRate": 40.0,
-          "avgMargin": 1500.76,
-          "totalValueGained": 10045.0
-        },
-        {
-          "rosterId": 12,
-          "teamName": "The Life of Showtime",
-          "realName": "Don",
-          "sleeperUsername": "donewton",
-          "nickname": "Don",
-          "tradeCount": 24,
-          "winRate": 41.66666666666667,
-          "avgMargin": 802.6666666666666,
-          "totalValueGained": 9496.0
-        },
         {
           "rosterId": 1,
           "teamName": "208 Ferrari Way",
@@ -58,6 +36,28 @@
           "winRate": 46.15384615384615,
           "avgMargin": 1273.2307692307693,
           "totalValueGained": 8013.0
+        },
+        {
+          "rosterId": 12,
+          "teamName": "The Life of Showtime",
+          "realName": "Don",
+          "sleeperUsername": "donewton",
+          "nickname": "Don",
+          "tradeCount": 24,
+          "winRate": 41.66666666666667,
+          "avgMargin": 629.7916666666666,
+          "totalValueGained": 5347.0
+        },
+        {
+          "rosterId": 7,
+          "teamName": "Breece Lightning",
+          "realName": "Johnny",
+          "sleeperUsername": "jwalters74",
+          "nickname": "Johnny",
+          "tradeCount": 25,
+          "winRate": 40.0,
+          "avgMargin": 1168.84,
+          "totalValueGained": 3410.0
         },
         {
           "rosterId": 8,
@@ -223,8 +223,8 @@
           "nickname": "Kyle",
           "tradeCount": 7,
           "winRate": 42.857142857142854,
-          "avgMargin": 1338.7142857142858,
-          "totalValueGained": -2346.0
+          "avgMargin": 746.0,
+          "totalValueGained": -3240.0
         },
         {
           "rosterId": 12,
@@ -234,8 +234,8 @@
           "nickname": "Don",
           "tradeCount": 24,
           "winRate": 41.66666666666667,
-          "avgMargin": 802.6666666666666,
-          "totalValueGained": 9496.0
+          "avgMargin": 629.7916666666666,
+          "totalValueGained": 5347.0
         }
       ],
       "byTradeCount": [
@@ -247,8 +247,8 @@
           "nickname": "Johnny",
           "tradeCount": 25,
           "winRate": 40.0,
-          "avgMargin": 1500.76,
-          "totalValueGained": 10045.0
+          "avgMargin": 1168.84,
+          "totalValueGained": 3410.0
         },
         {
           "rosterId": 12,
@@ -258,8 +258,8 @@
           "nickname": "Don",
           "tradeCount": 24,
           "winRate": 41.66666666666667,
-          "avgMargin": 802.6666666666666,
-          "totalValueGained": 9496.0
+          "avgMargin": 629.7916666666666,
+          "totalValueGained": 5347.0
         },
         {
           "rosterId": 5,
@@ -324,8 +324,8 @@
           "nickname": "Kyle",
           "tradeCount": 7,
           "winRate": 42.857142857142854,
-          "avgMargin": 1338.7142857142858,
-          "totalValueGained": -2346.0
+          "avgMargin": 746.0,
+          "totalValueGained": -3240.0
         },
         {
           "rosterId": 11,

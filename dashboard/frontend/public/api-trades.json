@@ -95,34 +95,6 @@
         "swingMargin": 4801.0
       },
       {
-        "tradeId": "1243355152602103808",
-        "transactionId": "1243355152602103808",
-        "tradeDate": "2025-06-24",
-        "teamA": "thekylecasey",
-        "teamAReceived": [
-          "Jack Bech",
-          "Jauan Jennings",
-          "2026 Round 4"
-        ],
-        "teamAValueThen": 29.0,
-        "teamAValueNow": 806.0,
-        "teamAValueChange": 777.0,
-        "teamB": "jwalters74",
-        "teamBReceived": [
-          "Tyreek Hill",
-          "2026 Round 2"
-        ],
-        "teamBValueThen": 622.0,
-        "teamBValueNow": 5572.0,
-        "teamBValueChange": 4950.0,
-        "winnerAtTrade": "jwalters74",
-        "winnerCurrent": "jwalters74",
-        "marginAtTrade": 593.0,
-        "marginCurrent": 4766.0,
-        "swingWinner": "jwalters74",
-        "swingMargin": 4173.0
-      },
-      {
         "tradeId": "1225522406177652736",
         "transactionId": "1225522406177652736",
         "tradeDate": "2025-05-06",
@@ -151,31 +123,6 @@
         "marginCurrent": 4110.0,
         "swingWinner": "jwalters74",
         "swingMargin": 4054.0
-      },
-      {
-        "tradeId": "1278793259467935744",
-        "transactionId": "1278793259467935744",
-        "tradeDate": "2025-09-30",
-        "teamA": "donewton",
-        "teamAReceived": [
-          "Tyreek Hill"
-        ],
-        "teamAValueThen": 2175.0,
-        "teamAValueNow": 4950.0,
-        "teamAValueChange": 2775.0,
-        "teamB": "jwalters74",
-        "teamBReceived": [
-          "2026 Round 4"
-        ],
-        "teamBValueThen": 20.0,
-        "teamBValueNow": 20.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "donewton",
-        "winnerCurrent": "donewton",
-        "marginAtTrade": 2155.0,
-        "marginCurrent": 4930.0,
-        "swingWinner": "donewton",
-        "swingMargin": 2775.0
       },
       {
         "tradeId": "1223365523358621696",
@@ -255,6 +202,34 @@
         "marginCurrent": 1487.0,
         "swingWinner": "zachlearningtogolf",
         "swingMargin": 1705.0
+      },
+      {
+        "tradeId": "1243355152602103808",
+        "transactionId": "1243355152602103808",
+        "tradeDate": "2025-06-24",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Jack Bech",
+          "Jauan Jennings",
+          "2026 Round 4"
+        ],
+        "teamAValueThen": 923.0,
+        "teamAValueNow": 806.0,
+        "teamAValueChange": -117.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Tyreek Hill",
+          "2026 Round 2"
+        ],
+        "teamBValueThen": 3108.0,
+        "teamBValueNow": 1423.0,
+        "teamBValueChange": -1685.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 2185.0,
+        "marginCurrent": 617.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 1568.0
       },
       {
         "tradeId": "1264650342717472768",
@@ -371,6 +346,31 @@
         "marginCurrent": 817.0,
         "swingWinner": "mgaeta23",
         "swingMargin": 1375.0
+      },
+      {
+        "tradeId": "1278793259467935744",
+        "transactionId": "1278793259467935744",
+        "tradeDate": "2025-09-30",
+        "teamA": "donewton",
+        "teamAReceived": [
+          "Tyreek Hill"
+        ],
+        "teamAValueThen": 2175.0,
+        "teamAValueNow": 801.0,
+        "teamAValueChange": -1374.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2026 Round 4"
+        ],
+        "teamBValueThen": 20.0,
+        "teamBValueNow": 20.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 2155.0,
+        "marginCurrent": 781.0,
+        "swingWinner": "donewton",
+        "swingMargin": 1374.0
       },
       {
         "tradeId": "1223398803554451456",
@@ -1892,7 +1892,7 @@
       }
     ],
     "metadata": {
-      "lastUpdated": "2025-11-07T15:36:34.580802",
+      "lastUpdated": "2025-11-07T16:55:18.378383",
       "totalTrades": 70,
       "dateRange": {
         "earliest": "2025-03-14",
