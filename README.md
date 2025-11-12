@@ -40,20 +40,119 @@ A comprehensive web application for analyzing fantasy football trades, tracking 
 4. **Open your browser**
    Navigate to `http://localhost:5173`
 
-## 📊 Data Format
+## 📊 Data Pipeline Integration
 
-The dashboard expects CSV files in the `pipeline_outputs` directory:
+This dashboard is powered by a Python pipeline that processes Sleeper API data. The pipeline runs in the parent directory and generates the data files this dashboard consumes.
 
-### trades.csv
-```csv
-tradeId,tradeDate,teamA,teamB,teamAReceived,teamBReceived,winnerCurrent,marginCurrent
-trade_001,2024-01-15,Team1,Team2,"Player A,Player B","Player C",Team1,15.5
+### Data Flow
+
+```
+Sleeper API
+    ↓
+Python Pipeline (4 stages)
+    ↓
+CSV Files (league_trades_analysis_pipeline.csv, team_identity_mapping.csv)
+    ↓
+JSON Generation (scripts/generate_dashboard_json.py)
+    ↓
+Dashboard JSON Files (api-trades.json, api-teams.json, api-stats-summary.json)
+    ↓
+React Dashboard (this application)
 ```
 
-### teams.csv
-```csv
-sleeperUsername,realName,tradeCount,totalValueGained,winRate
-user123,John Doe,5,125.5,80.0
+### Updating Dashboard Data
+
+**Automated (Recommended):**
+```bash
+cd ..  # Go to parent directory
+python3 update_dashboard.py
+```
+
+This single command:
+1. Fetches latest trades from Sleeper
+2. Processes and values all assets
+3. Generates CSV and JSON files
+4. Copies files to dashboard directory
+5. Commits and pushes to GitHub
+6. Triggers Vercel deployment
+
+**Manual:**
+```bash
+cd ..  # Go to parent directory
+python3 stage1_fetch_trades.py
+python3 stage2_extract_assets.py
+python3 stage3_cache_values.py
+python3 stage4_final.py
+python3 scripts/generate_dashboard_json.py
+
+# Then commit and push the generated JSON files
+cd trade-analysis-dashboard-clean
+git add dashboard/frontend/public/*.json
+git commit -m "data: update dashboard data"
+git push origin main
+```
+
+### Data Files
+
+The dashboard reads from JSON files in `dashboard/frontend/public/`:
+
+**api-trades.json** - Trade data
+```json
+{
+  "success": true,
+  "data": {
+    "trades": [
+      {
+        "tradeId": "123",
+        "tradeDate": "2025-09-30",
+        "teamA": "manager1",
+        "teamAReceived": ["Player A", "2026 Round 1"],
+        "teamAValueThen": 5000,
+        "teamAValueNow": 5500,
+        "teamB": "manager2",
+        "teamBReceived": ["Player B"],
+        "teamBValueThen": 4800,
+        "teamBValueNow": 4200,
+        "winnerCurrent": "manager1",
+        "swingMargin": 800
+      }
+    ]
+  }
+}
+```
+
+**api-teams.json** - Team statistics
+```json
+{
+  "success": true,
+  "data": {
+    "teams": [
+      {
+        "sleeperUsername": "manager1",
+        "realName": "John Doe",
+        "teamName": "Team Name",
+        "tradeCount": 15,
+        "winRate": 73.3,
+        "totalValueGained": 2500
+      }
+    ]
+  }
+}
+```
+
+**api-stats-summary.json** - League-wide statistics
+```json
+{
+  "success": true,
+  "data": {
+    "overview": {
+      "totalTrades": 70,
+      "avgTradeMargin": 850,
+      "mostActiveTrader": "John Doe",
+      "biggestWinner": "Jane Smith"
+    }
+  }
+}
 ```
 
 ## 🛠️ Development
@@ -151,19 +250,47 @@ The main dashboard provides:
 ### Common Issues
 
 1. **"Failed to Load Data"**
-   - Check that CSV files exist in `pipeline_outputs/`
-   - Verify file format matches expected structure
-   - Check backend server is running
+   - **Cause:** JSON files missing or not generated
+   - **Solution:** Run `cd .. && python3 update_dashboard.py`
+   - **Check:** Verify files exist in `dashboard/frontend/public/api-*.json`
 
-2. **Real-time Updates Not Working**
+2. **Dashboard Shows Old Data**
+   - **Cause:** JSON files not regenerated after pipeline run
+   - **Solution:** Always run `scripts/generate_dashboard_json.py` after Stage 4
+   - **Quick Fix:** Use `update_dashboard.py` which handles this automatically
+
+3. **Vercel Deployment Not Updating**
+   - **Cause:** JSON files not committed/pushed to GitHub
+   - **Solution:** Ensure JSON files are committed and pushed
+   - **Check:** Verify commit appears on GitHub and Vercel deployment triggered
+
+4. **Real-time Updates Not Working**
    - Ensure WebSocket connection is established
    - Check browser console for connection errors
    - Verify file watching permissions
 
-3. **Performance Issues**
+5. **Performance Issues**
    - Large datasets may cause slow rendering
    - Consider implementing pagination for 100+ trades
    - Check browser memory usage
+
+### Pipeline Integration Issues
+
+**Problem:** Dashboard shows incorrect player values
+
+**Solution:** Use the value correction script:
+```bash
+cd ..  # Go to parent directory
+python3 fix_tyreek_value.py  # Edit script for specific player/value
+```
+
+**Problem:** Missing trades in dashboard
+
+**Solution:** Run full pipeline refresh:
+```bash
+cd ..
+python3 update_dashboard.py
+```
 
 ## 🤝 Contributing
 
