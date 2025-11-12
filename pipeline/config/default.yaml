@@ -1,0 +1,69 @@
+# Trade Analysis Pipeline Configuration
+# Default configuration for main league
+
+pipeline:
+  name: "trade_analysis"
+  version: "1.5.0"
+  description: "Dynasty fantasy football trade analysis pipeline"
+
+# League configuration
+league:
+  id: "1180814327660371968"
+  name: "Main Dynasty League"
+  platform: "sleeper"
+
+# API configuration
+api:
+  sleeper:
+    base_url: "https://api.sleeper.app/v1"
+    timeout: 10
+    max_retries: 3
+    retry_backoff: 2
+  github:
+    base_url: "https://api.github.com"
+    repo: "dynastyprocess/data"
+    values_path: "files/values.csv"
+    timeout: 15
+    max_retries: 5
+    retry_backoff: 2
+
+# Valuation configuration
+valuations:
+  # 2025 1st round tier values
+  tiers:
+    early_first: 5430  # Picks 1-4
+    mid_first: 2558    # Picks 5-8
+    late_first: 1232   # Picks 9-12
+  
+  # FAAB conversion
+  faab_multiplier: 1.0
+  
+  # Important dates
+  draft_completion_date: "2025-05-05"
+  season_start_date: "2025-09-03"
+
+# Storage configuration
+storage:
+  output_dir: "./output"
+  backup_dir: "./backups"
+  logs_dir: "./logs"
+  metrics_dir: "./metrics"
+  retention_days: 30
+
+# Validation configuration
+validation:
+  max_zero_value_pct: 0.10  # Maximum 10% zero values
+  min_trades_expected: 1
+  fail_fast: true
+  git_commit_search_days: 7
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "json"  # json or text
+  
+# Performance configuration  
+performance:
+  parallel_workers: 10  # Workers for parallel processing
+  enable_caching: true
+  cache_ttl_hours: 24

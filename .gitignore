@@ -109,3 +109,19 @@ data/*.csv
 !pipeline_outputs/.gitkeep
 !pipeline_outputs/example_*.csv
 !data/example_*.csv
+
+# Pipeline intermediate files (don't commit these)
+pipeline/backups/
+pipeline/logs/
+pipeline/metrics/
+pipeline/__pycache__/
+pipeline/**/__pycache__/
+pipeline/*.pyc
+pipeline/**/*.pyc
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python

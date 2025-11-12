@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "data": {
+    "teams": [
+      {
+        "rosterId": 1,
+        "teamName": "208 Ferrari Way",
+        "realName": "Landry",
+        "sleeperUsername": "lndahayo",
+        "nickname": "Landry",
+        "tradeCount": 14,
+        "winRate": 71.42857142857143,
+        "avgMargin": 742.3571428571429,
+        "totalValueGained": 8154.0
+      },
+      {
+        "rosterId": 2,
+        "teamName": "Like a Good Naber",
+        "realName": "Grant",
+        "sleeperUsername": "gnewman4",
+        "nickname": "Grant",
+        "tradeCount": 16,
+        "winRate": 43.75,
+        "avgMargin": 1089.875,
+        "totalValueGained": 8013.0
+      },
+      {
+        "rosterId": 3,
+        "teamName": "Tyler Is Scared",
+        "realName": "Brevin",
+        "sleeperUsername": "brevinowens",
+        "nickname": "Brevin",
+        "tradeCount": 1,
+        "winRate": 100.0,
+        "avgMargin": 15.0,
+        "totalValueGained": 14.0
+      },
+      {
+        "rosterId": 4,
+        "teamName": "Spirit Halloween",
+        "realName": "Kyle",
+        "sleeperUsername": "thekylecasey",
+        "nickname": "Kyle",
+        "tradeCount": 8,
+        "winRate": 37.5,
+        "avgMargin": 1348.125,
+        "totalValueGained": -3240.0
+      },
+      {
+        "rosterId": 5,
+        "teamName": "Mommy Rainier ",
+        "realName": "Zach",
+        "sleeperUsername": "zachlearningtogolf",
+        "nickname": "Zach",
+        "tradeCount": 23,
+        "winRate": 47.82608695652174,
+        "avgMargin": 1277.8260869565217,
+        "totalValueGained": -6673.0
+      },
+      {
+        "rosterId": 6,
+        "teamName": "Washed",
+        "realName": "Chris",
+        "sleeperUsername": "cjsyregelas",
+        "nickname": "Chris",
+        "tradeCount": 4,
+        "winRate": 50.0,
+        "avgMargin": 1208.25,
+        "totalValueGained": -1401.0
+      },
+      {
+        "rosterId": 7,
+        "teamName": "Breece Lightning",
+        "realName": "Johnny",
+        "sleeperUsername": "jwalters74",
+        "nickname": "Johnny",
+        "tradeCount": 26,
+        "winRate": 42.30769230769231,
+        "avgMargin": 1497.423076923077,
+        "totalValueGained": 7559.0
+      },
+      {
+        "rosterId": 8,
+        "teamName": "TRIPS \ud83d\udd25",
+        "realName": "Tyler",
+        "sleeperUsername": "tylerpilgrim",
+        "nickname": "Tyler",
+        "tradeCount": 12,
+        "winRate": 66.66666666666666,
+        "avgMargin": 324.4166666666667,
+        "totalValueGained": 350.0
+      },
+      {
+        "rosterId": 9,
+        "teamName": "Gaeta Spur FC",
+        "realName": "Matt",
+        "sleeperUsername": "mgaeta23",
+        "nickname": "Gaeta",
+        "tradeCount": 9,
+        "winRate": 66.66666666666666,
+        "avgMargin": 533.3333333333334,
+        "totalValueGained": -1642.0
+      },
+      {
+        "rosterId": 10,
+        "teamName": "Rashid Shaheed Truthers",
+        "realName": "Jake",
+        "sleeperUsername": "jakeduf",
+        "nickname": "Jake",
+        "tradeCount": 6,
+        "winRate": 33.33333333333333,
+        "avgMargin": 179.66666666666666,
+        "totalValueGained": -1246.0
+      },
+      {
+        "rosterId": 11,
+        "teamName": "On To 2026",
+        "realName": "Will",
+        "sleeperUsername": "wkerwin",
+        "nickname": "Will",
+        "tradeCount": 8,
+        "winRate": 50.0,
+        "avgMargin": 840.0,
+        "totalValueGained": -131.0
+      },
+      {
+        "rosterId": 12,
+        "teamName": "The Life of Showtime",
+        "realName": "Don",
+        "sleeperUsername": "donewton",
+        "nickname": "Don",
+        "tradeCount": 25,
+        "winRate": 44.0,
+        "avgMargin": 785.52,
+        "totalValueGained": 9496.0
+      }
+    ],
+    "summary": {
+      "totalTeams": 12,
+      "totalTrades": 76
+    }
+  }
+}
