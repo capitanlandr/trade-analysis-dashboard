@@ -4,8 +4,8 @@
     "league_name": "Dynasuiiii",
     "season": "2025",
     "current_week": 11,
-    "fetch_timestamp": "2025-11-15T14:34:04.490421",
-    "total_trades": 77,
+    "fetch_timestamp": "2025-11-16T14:34:35.986382",
+    "total_trades": 78,
     "incremental_mode": true
   },
   "users": [
@@ -291,8 +291,8 @@
       },
       "starters": [
         "4881",
+        "6790",
         "12512",
-        "12474",
         "11620",
         "9488",
         "8110",
@@ -485,7 +485,7 @@
         "9511",
         "9221",
         "12526",
-        "11637",
+        "12501",
         "7553",
         "12485",
         "8167",
@@ -730,7 +730,6 @@
         "12539",
         "3198",
         "3214",
-        "4866",
         "4988",
         "5927",
         "5995",
@@ -739,12 +738,14 @@
         "7528",
         "7569",
         "7587",
+        "8138",
         "8188",
         "9500",
         "96",
         "9758"
       ],
       "reserve": [
+        "10859",
         "7528"
       ],
       "roster_id": 6,
@@ -765,12 +766,12 @@
       },
       "starters": [
         "6797",
-        "4866",
+        "11647",
         "3198",
         "11627",
         "11635",
         "11600",
-        "11647",
+        "8138",
         "7569",
         "96"
       ],
@@ -806,6 +807,7 @@
         "p_nick_12487": "Sleeper TE Prospect",
         "p_nick_12512": "Lost Nickname Privileges ",
         "p_nick_8154": "Premier Handcuff",
+        "p_nick_4866": "The Final Infinity Stone",
         "p_nick_12483": "Man on a Mission",
         "p_nick_3214": "MAGA Diversity Hire",
         "p_nick_2449": "Powered by Infinite New Father Boosts",
@@ -871,6 +873,7 @@
         "4034",
         "4137",
         "4199",
+        "4866",
         "4892",
         "5012",
         "5967",
@@ -878,7 +881,6 @@
         "6826",
         "7670",
         "8137",
-        "8138",
         "8154",
         "8155",
         "8205",
@@ -905,13 +907,13 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 91,
-        "waiver_position": 11,
+        "waiver_position": 10,
         "wins": 15
       },
       "starters": [
         "11564",
         "4034",
-        "8138",
+        "4866",
         "9493",
         "2449",
         "5012",
@@ -1008,7 +1010,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 82,
-        "waiver_position": 10,
+        "waiver_position": 9,
         "wins": 6
       },
       "starters": [
@@ -1060,6 +1062,7 @@
         "5970",
         "6768",
         "6806",
+        "6943",
         "7526",
         "7828",
         "8126",
@@ -1067,7 +1070,8 @@
         "9508"
       ],
       "reserve": [
-        "4018"
+        "4018",
+        "6806"
       ],
       "roster_id": 9,
       "settings": {
@@ -1117,6 +1121,7 @@
       "players": [
         "10213",
         "10236",
+        "11299",
         "11565",
         "11625",
         "11630",
@@ -1161,7 +1166,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 43,
-        "waiver_position": 9,
+        "waiver_position": 12,
         "wins": 8
       },
       "starters": [
@@ -1276,7 +1281,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 50,
-        "waiver_position": 12,
+        "waiver_position": 11,
         "wins": 6
       },
       "starters": [
@@ -1425,7 +1430,7 @@
         "10229",
         "11604",
         "6786",
-        "11624",
+        "12489",
         "4046"
       ],
       "taxi": [
@@ -1436,6 +1441,38 @@
     }
   ],
   "trades": [
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1295665737184083968",
+        "veto_msg_id": "1295665737263742976"
+      },
+      "created": 1763272626740,
+      "settings": null,
+      "leg": 11,
+      "draft_picks": [],
+      "creator": "865815956675538944",
+      "transaction_id": "1295662941210697728",
+      "adds": {
+        "4866": 7,
+        "8138": 6
+      },
+      "drops": {
+        "4866": 6,
+        "8138": 7
+      },
+      "consenter_ids": [
+        6,
+        7
+      ],
+      "roster_ids": [
+        6,
+        7
+      ],
+      "status_updated": 1763275020089,
+      "waiver_budget": []
+    },
     {
       "status": "complete",
       "type": "trade",
