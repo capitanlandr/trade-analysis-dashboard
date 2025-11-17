@@ -1,6 +1,6 @@
 asset_name,asset_type,trade_date,trade_id,trade_type,receiving_team,giving_team,origin_owner,value_at_trade,value_current,value_source_at_trade,value_source_current,metadata
-Saquon Barkley,player,2025-11-16,1295662941210697728,2-team,jwalters74,cjsyregelas,,4756,4756,Git:634dc28,DynastyProcess,
-James Cook,player,2025-11-16,1295662941210697728,2-team,cjsyregelas,jwalters74,,4756,4756,Git:634dc28,DynastyProcess,
+Saquon Barkley,player,2025-11-15,1295662941210697728,2-team,jwalters74,cjsyregelas,,4756,4756,Git:634dc28,DynastyProcess,
+James Cook,player,2025-11-15,1295662941210697728,2-team,cjsyregelas,jwalters74,,4756,4756,Git:634dc28,DynastyProcess,
 Jonathon Brooks,player,2025-11-12,1294350847387398144,2-team,thekylecasey,jwalters74,,54,74,Git:d5a64e9,DynastyProcess,
 Terrance Ferguson,player,2025-11-12,1294350847387398144,2-team,thekylecasey,jwalters74,,137,167,Git:d5a64e9,DynastyProcess,
 Luther Burden,player,2025-11-12,1294350847387398144,2-team,thekylecasey,jwalters74,,962,1008,Git:d5a64e9,DynastyProcess,
@@ -8,15 +8,15 @@ Aaron Jones,player,2025-11-12,1294350847387398144,2-team,jwalters74,thekylecasey
 George Pickens,player,2025-11-12,1294350847387398144,2-team,jwalters74,thekylecasey,,2350,2606,Git:d5a64e9,DynastyProcess,
 2027 Round 3,pick,2025-11-12,1294350847387398144,2-team,thekylecasey,jwalters74,thekylecasey,106,106,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'thekylecasey', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
 2027 Round 3,pick,2025-11-12,1294350847387398144,2-team,thekylecasey,jwalters74,jwalters74,42,42,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'jwalters74', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
-DeAndre Hopkins,player,2025-11-12,1294198173723557888,2-team,tylerpilgrim,gnewman4,,60,76,Git:d5a64e9,DynastyProcess,
-Chuba Hubbard,player,2025-11-12,1294198173723557888,2-team,gnewman4,tylerpilgrim,,495,531,Git:d5a64e9,DynastyProcess,
-2026 Round 3,pick,2025-11-12,1294198173723557888,2-team,tylerpilgrim,gnewman4,tylerpilgrim,106,106,Projection:Week11_3rd,Projection:Week11_3rd,"{'week': 11, 'target_week': 11, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week11_2026_3rd'}"
-Bhayshul Tuten,player,2025-11-12,1294189559839465472,2-team,wkerwin,lndahayo,,391,472,Git:d5a64e9,DynastyProcess,
-Juwan Johnson,player,2025-11-12,1294189559839465472,2-team,lndahayo,wkerwin,,84,61,Git:d5a64e9,DynastyProcess,
-DeVonta Smith,player,2025-11-12,1294189559839465472,2-team,lndahayo,wkerwin,,2952,2883,Git:d5a64e9,DynastyProcess,
-2026 Round 1,pick,2025-11-12,1294189559839465472,2-team,wkerwin,lndahayo,lndahayo,1232,1232,Projection:Week9_1st,Projection:Week9_1st,"{'week': 9, 'target_week': 11, 'origin': 'lndahayo', 'round': '1st', 'column_used': 'Week9_2026_1st'}"
-2026 Round 4,pick,2025-11-12,1294189559839465472,2-team,lndahayo,wkerwin,wkerwin,29,29,Projection:Week11_4th,Projection:Week11_4th,"{'week': 11, 'target_week': 11, 'origin': 'wkerwin', 'round': '4th', 'column_used': 'Week11_2026_4th'}"
-2027 Round 4,pick,2025-11-12,1294189559839465472,2-team,lndahayo,wkerwin,wkerwin,29,29,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'wkerwin', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
+DeAndre Hopkins,player,2025-11-11,1294198173723557888,2-team,tylerpilgrim,gnewman4,,60,76,Git:d5a64e9,DynastyProcess,
+Chuba Hubbard,player,2025-11-11,1294198173723557888,2-team,gnewman4,tylerpilgrim,,495,531,Git:d5a64e9,DynastyProcess,
+2026 Round 3,pick,2025-11-11,1294198173723557888,2-team,tylerpilgrim,gnewman4,tylerpilgrim,106,106,Projection:Week10_3rd,Projection:Week10_3rd,"{'week': 10, 'target_week': 10, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week10_2026_3rd'}"
+Bhayshul Tuten,player,2025-11-11,1294189559839465472,2-team,wkerwin,lndahayo,,391,472,Git:d5a64e9,DynastyProcess,
+Juwan Johnson,player,2025-11-11,1294189559839465472,2-team,lndahayo,wkerwin,,84,61,Git:d5a64e9,DynastyProcess,
+DeVonta Smith,player,2025-11-11,1294189559839465472,2-team,lndahayo,wkerwin,,2952,2883,Git:d5a64e9,DynastyProcess,
+2026 Round 1,pick,2025-11-11,1294189559839465472,2-team,wkerwin,lndahayo,lndahayo,1232,1232,Projection:Week9_1st,Projection:Week9_1st,"{'week': 9, 'target_week': 10, 'origin': 'lndahayo', 'round': '1st', 'column_used': 'Week9_2026_1st'}"
+2026 Round 4,pick,2025-11-11,1294189559839465472,2-team,lndahayo,wkerwin,wkerwin,29,29,Projection:Week10_4th,Projection:Week10_4th,"{'week': 10, 'target_week': 10, 'origin': 'wkerwin', 'round': '4th', 'column_used': 'Week10_2026_4th'}"
+2027 Round 4,pick,2025-11-11,1294189559839465472,2-team,lndahayo,wkerwin,wkerwin,29,29,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'wkerwin', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
 Alvin Kamara,player,2025-11-11,1294076505202098176,2-team,donewton,tylerpilgrim,,621,750,Git:d5a64e9,DynastyProcess,
 Dontayvion Wicks,player,2025-11-11,1294076505202098176,2-team,tylerpilgrim,donewton,,182,125,Git:d5a64e9,DynastyProcess,
 2026 Round 3,pick,2025-11-11,1294076505202098176,2-team,tylerpilgrim,donewton,mgaeta23,65,65,Projection:Week10_3rd,Projection:Week10_3rd,"{'week': 10, 'target_week': 10, 'origin': 'mgaeta23', 'round': '3rd', 'column_used': 'Week10_2026_3rd'}"
@@ -26,14 +26,14 @@ Wan'Dale Robinson,player,2025-11-11,1294061216544587776,2-team,mgaeta23,gnewman4
 2026 Round 2,pick,2025-11-11,1294061216544587776,2-team,mgaeta23,gnewman4,donewton,330,330,Projection:Week10_2nd,Projection:Week10_2nd,"{'week': 10, 'target_week': 10, 'origin': 'donewton', 'round': '2nd', 'column_used': 'Week10_2026_2nd'}"
 2027 Round 3,pick,2025-11-11,1294061216544587776,2-team,mgaeta23,gnewman4,donewton,65,65,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'donewton', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
 2026 Round 4,pick,2025-11-11,1294061216544587776,2-team,gnewman4,mgaeta23,mgaeta23,20,20,Projection:Week10_4th,Projection:Week10_4th,"{'week': 10, 'target_week': 10, 'origin': 'mgaeta23', 'round': '4th', 'column_used': 'Week10_2026_4th'}"
-Geno Smith,player,2025-11-10,1293486502654791680,2-team,zachlearningtogolf,gnewman4,,636,664,Git:d5a64e9,DynastyProcess,
-Justin Fields,player,2025-11-10,1293486502654791680,2-team,gnewman4,zachlearningtogolf,,676,994,Git:d5a64e9,DynastyProcess,
-2026 Round 2,pick,2025-11-10,1293486502654791680,2-team,zachlearningtogolf,gnewman4,gnewman4,330,330,Projection:Week10_2nd,Projection:Week10_2nd,"{'week': 10, 'target_week': 10, 'origin': 'gnewman4', 'round': '2nd', 'column_used': 'Week10_2026_2nd'}"
-2026 Round 3,pick,2025-11-10,1293486502654791680,2-team,gnewman4,zachlearningtogolf,tylerpilgrim,106,106,Projection:Week10_3rd,Projection:Week10_3rd,"{'week': 10, 'target_week': 10, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week10_2026_3rd'}"
-$1 FAAB,faab,2025-11-10,1293486502654791680,2-team,zachlearningtogolf,gnewman4,,1,1,FAAB,FAAB,$1
-Jonathon Brooks,player,2025-11-02,1290567058949427200,2-team,jwalters74,tylerpilgrim,,62,74,Git:0b66517,DynastyProcess,
-Alvin Kamara,player,2025-11-02,1290567058949427200,2-team,tylerpilgrim,jwalters74,,608,750,Git:0b66517,DynastyProcess,
-2027 Round 3,pick,2025-11-02,1290567058949427200,2-team,jwalters74,tylerpilgrim,thekylecasey,106,106,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'thekylecasey', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
+Geno Smith,player,2025-11-09,1293486502654791680,2-team,zachlearningtogolf,gnewman4,,636,664,Git:d5a64e9,DynastyProcess,
+Justin Fields,player,2025-11-09,1293486502654791680,2-team,gnewman4,zachlearningtogolf,,676,994,Git:d5a64e9,DynastyProcess,
+2026 Round 2,pick,2025-11-09,1293486502654791680,2-team,zachlearningtogolf,gnewman4,gnewman4,330,330,Projection:Week10_2nd,Projection:Week10_2nd,"{'week': 10, 'target_week': 10, 'origin': 'gnewman4', 'round': '2nd', 'column_used': 'Week10_2026_2nd'}"
+2026 Round 3,pick,2025-11-09,1293486502654791680,2-team,gnewman4,zachlearningtogolf,tylerpilgrim,106,106,Projection:Week10_3rd,Projection:Week10_3rd,"{'week': 10, 'target_week': 10, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week10_2026_3rd'}"
+$1 FAAB,faab,2025-11-09,1293486502654791680,2-team,zachlearningtogolf,gnewman4,,1,1,FAAB,FAAB,$1
+Jonathon Brooks,player,2025-11-01,1290567058949427200,2-team,jwalters74,tylerpilgrim,,62,74,Git:0b66517,DynastyProcess,
+Alvin Kamara,player,2025-11-01,1290567058949427200,2-team,tylerpilgrim,jwalters74,,608,750,Git:0b66517,DynastyProcess,
+2027 Round 3,pick,2025-11-01,1290567058949427200,2-team,jwalters74,tylerpilgrim,thekylecasey,106,106,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'thekylecasey', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
 Cedric Tillman,player,2025-11-01,1290362815730708480,2-team,thekylecasey,lndahayo,,220,636,Git:0b66517,DynastyProcess,
 Tyrone Tracy,player,2025-11-01,1290362815730708480,2-team,lndahayo,thekylecasey,,366,371,Git:0b66517,DynastyProcess,
 Shedeur Sanders,player,2025-11-01,1290362815730708480,2-team,thekylecasey,lndahayo,,513,3,Git:0b66517,DynastyProcess,
@@ -49,9 +49,9 @@ Wan'Dale Robinson,player,2025-10-26,1288261486111641600,2-team,gnewman4,donewton
 Pat Bryant,player,2025-10-23,1287157631126876160,2-team,donewton,tylerpilgrim,,136,72,Git:cca1eb2,DynastyProcess,
 Kayshon Boutte,player,2025-10-23,1287157631126876160,2-team,tylerpilgrim,donewton,,128,212,Git:cca1eb2,DynastyProcess,
 2027 Round 4,pick,2025-10-23,1287157631126876160,2-team,donewton,tylerpilgrim,tylerpilgrim,29,29,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'tylerpilgrim', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
-Dont'e Thornton,player,2025-10-23,1286931153982361600,2-team,zachlearningtogolf,jwalters74,,212,77,Git:cca1eb2,DynastyProcess,
-Alvin Kamara,player,2025-10-23,1286931153982361600,2-team,jwalters74,zachlearningtogolf,,912,750,Git:cca1eb2,DynastyProcess,
-2026 Round 3,pick,2025-10-23,1286931153982361600,2-team,zachlearningtogolf,jwalters74,lndahayo,42,42,Projection:Week8_3rd,Projection:Week8_3rd,"{'week': 8, 'target_week': 8, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week8_2026_3rd'}"
+Dont'e Thornton,player,2025-10-22,1286931153982361600,2-team,zachlearningtogolf,jwalters74,,212,77,Git:cca1eb2,DynastyProcess,
+Alvin Kamara,player,2025-10-22,1286931153982361600,2-team,jwalters74,zachlearningtogolf,,912,750,Git:cca1eb2,DynastyProcess,
+2026 Round 3,pick,2025-10-22,1286931153982361600,2-team,zachlearningtogolf,jwalters74,lndahayo,42,42,Projection:Week8_3rd,Projection:Week8_3rd,"{'week': 8, 'target_week': 8, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week8_2026_3rd'}"
 Travis Kelce,player,2025-10-22,1286819210667765760,2-team,tylerpilgrim,thekylecasey,,382,334,Git:cca1eb2,DynastyProcess,
 Jerry Jeudy,player,2025-10-22,1286819210667765760,2-team,thekylecasey,tylerpilgrim,,1108,824,Git:cca1eb2,DynastyProcess,
 Justin Jefferson,player,2025-10-22,1286819210667765760,2-team,tylerpilgrim,thekylecasey,,9513,9249,Git:cca1eb2,DynastyProcess,
@@ -79,31 +79,31 @@ Kyle Williams,player,2025-10-10,1282507621953204224,2-team,wkerwin,lndahayo,,163
 $11 FAAB,faab,2025-10-07,1281385171571974144,2-team,tylerpilgrim,donewton,,11,11,FAAB,FAAB,$11
 Theo Johnson,player,2025-10-07,1281334172710883328,2-team,donewton,tylerpilgrim,,87,199,Git:861fa53,DynastyProcess,
 Brenton Strange,player,2025-10-07,1281334172710883328,2-team,tylerpilgrim,donewton,,269,216,Git:861fa53,DynastyProcess,
-Trevor Etienne,player,2025-10-01,1278946311571251200,2-team,zachlearningtogolf,lndahayo,,35,20,Git:3c0379e,DynastyProcess,
-Matthew Stafford,player,2025-10-01,1278946311571251200,2-team,lndahayo,zachlearningtogolf,,938,1113,Git:3c0379e,DynastyProcess,
-2027 Round 4,pick,2025-10-01,1278946311571251200,2-team,lndahayo,zachlearningtogolf,lndahayo,15,15,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'lndahayo', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
-2026 Round 2,pick,2025-10-01,1278946311571251200,2-team,zachlearningtogolf,lndahayo,cjsyregelas,183,183,Projection:Week5_2nd,Projection:Week5_2nd,"{'week': 5, 'target_week': 5, 'origin': 'cjsyregelas', 'round': '2nd', 'column_used': 'Week5_2026_2nd'}"
-D'Andre Swift,player,2025-10-01,1278942529986764800,2-team,lndahayo,jwalters74,,734,927,Git:3c0379e,DynastyProcess,
-Brian Robinson,player,2025-10-01,1278942529986764800,2-team,jwalters74,lndahayo,,134,96,Git:3c0379e,DynastyProcess,
-2026 Round 3,pick,2025-10-01,1278942529986764800,2-team,jwalters74,lndahayo,lndahayo,42,42,Projection:Week5_3rd,Projection:Week5_3rd,"{'week': 5, 'target_week': 5, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week5_2026_3rd'}"
-Quentin Johnston,player,2025-10-01,1278916121231106048,2-team,gnewman4,tylerpilgrim,,330,709,Git:3c0379e,DynastyProcess,
-2027 Round 1,pick,2025-10-01,1278916121231106048,2-team,tylerpilgrim,gnewman4,jwalters74,1232,1232,Projection:Week9_2026_1st,Projection:Week9_2026_1st,"{'origin': 'jwalters74', 'round': '1st', 'latest_week_used': 9, 'column_used': 'Week9_2026_1st'}"
-Tyreek Hill,player,2025-09-30,1278793259467935744,2-team,donewton,jwalters74,,2175,801,Git:3c0379e,Manual fix (Oct 31 value),
+Trevor Etienne,player,2025-09-30,1278946311571251200,2-team,zachlearningtogolf,lndahayo,,35,20,Git:3c0379e,DynastyProcess,
+Matthew Stafford,player,2025-09-30,1278946311571251200,2-team,lndahayo,zachlearningtogolf,,938,1113,Git:3c0379e,DynastyProcess,
+2027 Round 4,pick,2025-09-30,1278946311571251200,2-team,lndahayo,zachlearningtogolf,lndahayo,15,15,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'lndahayo', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
+2026 Round 2,pick,2025-09-30,1278946311571251200,2-team,zachlearningtogolf,lndahayo,cjsyregelas,183,183,Projection:Week4_2nd,Projection:Week4_2nd,"{'week': 4, 'target_week': 4, 'origin': 'cjsyregelas', 'round': '2nd', 'column_used': 'Week4_2026_2nd'}"
+D'Andre Swift,player,2025-09-30,1278942529986764800,2-team,lndahayo,jwalters74,,734,927,Git:3c0379e,DynastyProcess,
+Brian Robinson,player,2025-09-30,1278942529986764800,2-team,jwalters74,lndahayo,,134,96,Git:3c0379e,DynastyProcess,
+2026 Round 3,pick,2025-09-30,1278942529986764800,2-team,jwalters74,lndahayo,lndahayo,42,42,Projection:Week4_3rd,Projection:Week4_3rd,"{'week': 4, 'target_week': 4, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week4_2026_3rd'}"
+Quentin Johnston,player,2025-09-30,1278916121231106048,2-team,gnewman4,tylerpilgrim,,330,709,Git:3c0379e,DynastyProcess,
+2027 Round 1,pick,2025-09-30,1278916121231106048,2-team,tylerpilgrim,gnewman4,jwalters74,1232,1232,Projection:Week9_2026_1st,Projection:Week9_2026_1st,"{'origin': 'jwalters74', 'round': '1st', 'latest_week_used': 9, 'column_used': 'Week9_2026_1st'}"
+Tyreek Hill,player,2025-09-30,1278793259467935744,2-team,donewton,jwalters74,,2175,1006,Git:3c0379e,DynastyProcess,
 2026 Round 4,pick,2025-09-30,1278793259467935744,2-team,jwalters74,donewton,gnewman4,20,20,Projection:Week4_4th,Projection:Week4_4th,"{'week': 4, 'target_week': 4, 'origin': 'gnewman4', 'round': '4th', 'column_used': 'Week4_2026_4th'}"
-Keenan Allen,player,2025-09-30,1278609411799027712,2-team,lndahayo,zachlearningtogolf,,222,154,Git:3c0379e,DynastyProcess,
-2026 Round 3,pick,2025-09-30,1278609411799027712,2-team,lndahayo,zachlearningtogolf,lndahayo,42,42,Projection:Week4_3rd,Projection:Week4_3rd,"{'week': 4, 'target_week': 4, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week4_2026_3rd'}"
-2027 Round 4,pick,2025-09-30,1278609411799027712,2-team,zachlearningtogolf,lndahayo,lndahayo,15,15,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'lndahayo', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
-2026 Round 2,pick,2025-09-30,1278609411799027712,2-team,zachlearningtogolf,lndahayo,jakeduf,330,330,Projection:Week4_2nd,Projection:Week4_2nd,"{'week': 4, 'target_week': 4, 'origin': 'jakeduf', 'round': '2nd', 'column_used': 'Week4_2026_2nd'}"
-Mike Evans,player,2025-09-30,1278590799092658176,2-team,jwalters74,zachlearningtogolf,,1030,1018,Git:3c0379e,DynastyProcess,
-Matthew Stafford,player,2025-09-30,1278590799092658176,2-team,zachlearningtogolf,jwalters74,,938,1113,Git:3c0379e,DynastyProcess,
-2026 Round 3,pick,2025-09-30,1278590799092658176,2-team,zachlearningtogolf,jwalters74,jwalters74,42,42,Projection:Week4_3rd,Projection:Week4_3rd,"{'week': 4, 'target_week': 4, 'origin': 'jwalters74', 'round': '3rd', 'column_used': 'Week4_2026_3rd'}"
-$19 FAAB,faab,2025-09-30,1278590799092658176,2-team,jwalters74,zachlearningtogolf,,19,19,FAAB,FAAB,$19
+Keenan Allen,player,2025-09-29,1278609411799027712,2-team,lndahayo,zachlearningtogolf,,222,154,Git:3c0379e,DynastyProcess,
+2026 Round 3,pick,2025-09-29,1278609411799027712,2-team,lndahayo,zachlearningtogolf,lndahayo,42,42,Projection:Week4_3rd,Projection:Week4_3rd,"{'week': 4, 'target_week': 4, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week4_2026_3rd'}"
+2027 Round 4,pick,2025-09-29,1278609411799027712,2-team,zachlearningtogolf,lndahayo,lndahayo,15,15,Projection:Week11_2026_4th,Projection:Week11_2026_4th,"{'origin': 'lndahayo', 'round': '4th', 'latest_week_used': 11, 'column_used': 'Week11_2026_4th'}"
+2026 Round 2,pick,2025-09-29,1278609411799027712,2-team,zachlearningtogolf,lndahayo,jakeduf,330,330,Projection:Week4_2nd,Projection:Week4_2nd,"{'week': 4, 'target_week': 4, 'origin': 'jakeduf', 'round': '2nd', 'column_used': 'Week4_2026_2nd'}"
+Mike Evans,player,2025-09-29,1278590799092658176,2-team,jwalters74,zachlearningtogolf,,1030,1018,Git:3c0379e,DynastyProcess,
+Matthew Stafford,player,2025-09-29,1278590799092658176,2-team,zachlearningtogolf,jwalters74,,938,1113,Git:3c0379e,DynastyProcess,
+2026 Round 3,pick,2025-09-29,1278590799092658176,2-team,zachlearningtogolf,jwalters74,jwalters74,42,42,Projection:Week4_3rd,Projection:Week4_3rd,"{'week': 4, 'target_week': 4, 'origin': 'jwalters74', 'round': '3rd', 'column_used': 'Week4_2026_3rd'}"
+$19 FAAB,faab,2025-09-29,1278590799092658176,2-team,jwalters74,zachlearningtogolf,,19,19,FAAB,FAAB,$19
 $2 FAAB,faab,2025-09-26,1277318767591825408,2-team,zachlearningtogolf,gnewman4,,2,2,FAAB,FAAB,$2
-Marcus Mariota,player,2025-09-26,1277109098646605824,2-team,gnewman4,zachlearningtogolf,,0,2,Not found,DynastyProcess,
-$20 FAAB,faab,2025-09-26,1277109098646605824,2-team,zachlearningtogolf,gnewman4,,20,20,FAAB,FAAB,$20
-MarShawn Lloyd,player,2025-09-25,1276812030426251264,2-team,gnewman4,lndahayo,,4,33,Git:a1e6c5d,DynastyProcess,
-Taysom Hill,player,2025-09-25,1276812030426251264,2-team,lndahayo,gnewman4,,0,17,Not found,DynastyProcess,
-Noah Fant,player,2025-09-25,1276812030426251264,2-team,lndahayo,gnewman4,,58,58,Git:a1e6c5d,DynastyProcess,
+Marcus Mariota,player,2025-09-25,1277109098646605824,2-team,gnewman4,zachlearningtogolf,,0,2,Not found,DynastyProcess,
+$20 FAAB,faab,2025-09-25,1277109098646605824,2-team,zachlearningtogolf,gnewman4,,20,20,FAAB,FAAB,$20
+MarShawn Lloyd,player,2025-09-24,1276812030426251264,2-team,gnewman4,lndahayo,,4,33,Git:a1e6c5d,DynastyProcess,
+Taysom Hill,player,2025-09-24,1276812030426251264,2-team,lndahayo,gnewman4,,0,17,Not found,DynastyProcess,
+Noah Fant,player,2025-09-24,1276812030426251264,2-team,lndahayo,gnewman4,,58,58,Git:a1e6c5d,DynastyProcess,
 Wan'Dale Robinson,player,2025-09-23,1276246071017742336,2-team,donewton,jakeduf,,215,607,Git:a1e6c5d,DynastyProcess,
 2027 Round 2,pick,2025-09-23,1276246071017742336,2-team,jakeduf,donewton,donewton,330,330,Projection:Week11_2026_2nd,Projection:Week11_2026_2nd,"{'origin': 'donewton', 'round': '2nd', 'latest_week_used': 11, 'column_used': 'Week11_2026_2nd'}"
 Kareem Hunt,player,2025-09-16,1273767222258454528,2-team,mgaeta23,donewton,,18,37,Git:4d879fa,DynastyProcess,
@@ -122,13 +122,13 @@ Daniel Jones,player,2025-09-12,1272244641206398976,2-team,zachlearningtogolf,wke
 2026 Round 2,pick,2025-09-12,1272244641206398976,2-team,wkerwin,zachlearningtogolf,zachlearningtogolf,622,622,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'zachlearningtogolf', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
 TreVeyon Henderson,player,2025-08-22,1264650342717472768,2-team,thekylecasey,zachlearningtogolf,,2897,2406,Git:be72d52,DynastyProcess,
 De'Von Achane,player,2025-08-22,1264650342717472768,2-team,zachlearningtogolf,thekylecasey,,4443,4950,Git:be72d52,DynastyProcess,
-LeQuint Allen,player,2025-08-21,1264067657422864384,2-team,tylerpilgrim,jwalters74,,30,3,Git:164dcc4,DynastyProcess,
-Joshua Palmer,player,2025-08-21,1264067657422864384,2-team,jwalters74,tylerpilgrim,,171,107,Git:164dcc4,DynastyProcess,
-George Pickens,player,2025-08-21,1264067657422864384,2-team,tylerpilgrim,jwalters74,,1794,2606,Git:164dcc4,DynastyProcess,
-Breece Hall,player,2025-08-21,1264067657422864384,2-team,jwalters74,tylerpilgrim,,5176,4635,Git:164dcc4,DynastyProcess,
-2026 Round 1,pick,2025-08-21,1264067657422864384,2-team,tylerpilgrim,jwalters74,cjsyregelas,1232,1232,Projection:Week2_1st,Projection:Week2_1st,"{'week': 2, 'target_week': 2, 'origin': 'cjsyregelas', 'round': '1st', 'column_used': 'Week2_2026_1st'}"
-Shedeur Sanders,player,2025-08-09,1259713999834984449,2-team,lndahayo,jwalters74,,306,3,Git:890387b,DynastyProcess,
-2026 Round 3,pick,2025-08-09,1259713999834984449,2-team,jwalters74,lndahayo,jwalters74,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'jwalters74', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
+LeQuint Allen,player,2025-08-20,1264067657422864384,2-team,tylerpilgrim,jwalters74,,30,3,Git:164dcc4,DynastyProcess,
+Joshua Palmer,player,2025-08-20,1264067657422864384,2-team,jwalters74,tylerpilgrim,,171,107,Git:164dcc4,DynastyProcess,
+George Pickens,player,2025-08-20,1264067657422864384,2-team,tylerpilgrim,jwalters74,,1794,2606,Git:164dcc4,DynastyProcess,
+Breece Hall,player,2025-08-20,1264067657422864384,2-team,jwalters74,tylerpilgrim,,5176,4635,Git:164dcc4,DynastyProcess,
+2026 Round 1,pick,2025-08-20,1264067657422864384,2-team,tylerpilgrim,jwalters74,cjsyregelas,1232,1232,Projection:Week2_1st,Projection:Week2_1st,"{'week': 2, 'target_week': 2, 'origin': 'cjsyregelas', 'round': '1st', 'column_used': 'Week2_2026_1st'}"
+Shedeur Sanders,player,2025-08-08,1259713999834984449,2-team,lndahayo,jwalters74,,306,3,Git:890387b,DynastyProcess,
+2026 Round 3,pick,2025-08-08,1259713999834984449,2-team,jwalters74,lndahayo,jwalters74,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'jwalters74', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
 Will Howard,player,2025-08-07,1259296297278525440,2-team,thekylecasey,zachlearningtogolf,,170,3,Git:6b57cfb,DynastyProcess,
 2026 Round 3,pick,2025-08-07,1259296297278525440,2-team,zachlearningtogolf,thekylecasey,thekylecasey,106,106,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'thekylecasey', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
 Quinshon Judkins,player,2025-08-07,1259245972907622400,2-team,lndahayo,jwalters74,,1539,4432,Git:6b57cfb,DynastyProcess,
@@ -157,16 +157,16 @@ Keon Coleman,player,2025-07-31,1256714512900292608,2-team,brevinowens,jakeduf,,5
 T.J. Hockenson,player,2025-07-31,1256714512900292608,2-team,jakeduf,brevinowens,,2055,786,Git:d18ea69,DynastyProcess,
 2027 Round 2,pick,2025-07-31,1256714512900292608,2-team,brevinowens,jakeduf,jakeduf,330,330,Projection:Week11_2026_2nd,Projection:Week11_2026_2nd,"{'origin': 'jakeduf', 'round': '2nd', 'latest_week_used': 11, 'column_used': 'Week11_2026_2nd'}"
 2026 Round 3,pick,2025-07-31,1256714512900292608,2-team,jakeduf,brevinowens,brevinowens,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'brevinowens', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
-Marquise Brown,player,2025-07-16,1251046974694637568,2-team,mgaeta23,donewton,,185,168,Git:8dc80b1,DynastyProcess,
-2026 Round 3,pick,2025-07-16,1251046974694637568,2-team,donewton,mgaeta23,mgaeta23,65,65,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'mgaeta23', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
-Phil Mafah,player,2025-07-16,1251038903863881728,2-team,donewton,zachlearningtogolf,,18,3,Git:8dc80b1,DynastyProcess,
-Javonte Williams,player,2025-07-16,1251038903863881728,2-team,donewton,zachlearningtogolf,,207,1100,Git:8dc80b1,DynastyProcess,
-2026 Round 3,pick,2025-07-16,1251038903863881728,2-team,zachlearningtogolf,donewton,lndahayo,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
-2026 Round 4,pick,2025-07-16,1251038903863881728,2-team,zachlearningtogolf,donewton,jakeduf,20,20,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
+Marquise Brown,player,2025-07-15,1251046974694637568,2-team,mgaeta23,donewton,,185,168,Git:8dc80b1,DynastyProcess,
+2026 Round 3,pick,2025-07-15,1251046974694637568,2-team,donewton,mgaeta23,mgaeta23,65,65,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'mgaeta23', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
+Phil Mafah,player,2025-07-15,1251038903863881728,2-team,donewton,zachlearningtogolf,,18,3,Git:8dc80b1,DynastyProcess,
+Javonte Williams,player,2025-07-15,1251038903863881728,2-team,donewton,zachlearningtogolf,,207,1100,Git:8dc80b1,DynastyProcess,
+2026 Round 3,pick,2025-07-15,1251038903863881728,2-team,zachlearningtogolf,donewton,lndahayo,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
+2026 Round 4,pick,2025-07-15,1251038903863881728,2-team,zachlearningtogolf,donewton,jakeduf,20,20,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
 Isiah Pacheco,player,2025-07-08,1248286928684462080,2-team,jwalters74,wkerwin,,716,243,Git:c25046c,DynastyProcess,
 2026 Round 2,pick,2025-07-08,1248286928684462080,2-team,wkerwin,jwalters74,thekylecasey,622,622,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'thekylecasey', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
 Jack Bech,player,2025-06-24,1243355152602103808,2-team,thekylecasey,jwalters74,,323,177,Git:87c33e3,DynastyProcess,
-Tyreek Hill,player,2025-06-24,1243355152602103808,2-team,jwalters74,thekylecasey,,2486,801,Git:87c33e3,Manual fix (Oct 31 value),
+Tyreek Hill,player,2025-06-24,1243355152602103808,2-team,jwalters74,thekylecasey,,2486,1006,Git:87c33e3,DynastyProcess,
 Jauan Jennings,player,2025-06-24,1243355152602103808,2-team,thekylecasey,jwalters74,,571,726,Git:87c33e3,DynastyProcess,
 2026 Round 2,pick,2025-06-24,1243355152602103808,2-team,jwalters74,thekylecasey,thekylecasey,622,622,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'thekylecasey', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
 2026 Round 4,pick,2025-06-24,1243355152602103808,2-team,thekylecasey,jwalters74,zachlearningtogolf,29,29,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'zachlearningtogolf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
@@ -184,12 +184,12 @@ Brenton Strange,player,2025-05-20,1230670926694076416,2-team,donewton,zachlearni
 Brashard Smith,player,2025-05-13,1228149347338698753,2-team,donewton,lndahayo,,38,73,Git:c5fa48f,DynastyProcess,
 2026 Round 3,pick,2025-05-13,1228149347338698753,2-team,donewton,lndahayo,lndahayo,42,42,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'lndahayo', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
 2026 Round 2,pick,2025-05-13,1228149347338698753,2-team,lndahayo,donewton,jakeduf,330,330,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
-Javonte Williams,player,2025-05-11,1227129044529582080,2-team,zachlearningtogolf,jwalters74,,207,1100,Git:c5fa48f,DynastyProcess,
-2026 Round 4,pick,2025-05-11,1227129044529582080,2-team,jwalters74,zachlearningtogolf,zachlearningtogolf,29,29,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'zachlearningtogolf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
-$10 FAAB,faab,2025-05-11,1227129044529582080,2-team,jwalters74,zachlearningtogolf,,10,10,FAAB,FAAB,$10
-Khalil Shakir,player,2025-05-08,1226043559040270336,2-team,jakeduf,donewton,,899,1001,Git:7cc1923,DynastyProcess,
-2026 Round 2,pick,2025-05-08,1226043559040270336,2-team,donewton,jakeduf,jakeduf,330,330,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
-2026 Round 4,pick,2025-05-08,1226043559040270336,2-team,donewton,jakeduf,jakeduf,20,20,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
+Javonte Williams,player,2025-05-10,1227129044529582080,2-team,zachlearningtogolf,jwalters74,,207,1100,Git:c5fa48f,DynastyProcess,
+2026 Round 4,pick,2025-05-10,1227129044529582080,2-team,jwalters74,zachlearningtogolf,zachlearningtogolf,29,29,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'zachlearningtogolf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
+$10 FAAB,faab,2025-05-10,1227129044529582080,2-team,jwalters74,zachlearningtogolf,,10,10,FAAB,FAAB,$10
+Khalil Shakir,player,2025-05-07,1226043559040270336,2-team,jakeduf,donewton,,899,1001,Git:7cc1923,DynastyProcess,
+2026 Round 2,pick,2025-05-07,1226043559040270336,2-team,donewton,jakeduf,jakeduf,330,330,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
+2026 Round 4,pick,2025-05-07,1226043559040270336,2-team,donewton,jakeduf,jakeduf,20,20,Projection:Week2_4th,Projection:Week2_4th,"{'week': 2, 'target_week': 2, 'origin': 'jakeduf', 'round': '4th', 'column_used': 'Week2_2026_4th'}"
 Ladd McConkey,player,2025-05-06,1225522406177652736,2-team,cjsyregelas,jwalters74,,4950,4229,Git:7cc1923,DynastyProcess,
 Mason Taylor,player,2025-05-06,1225522406177652736,2-team,cjsyregelas,jwalters74,,272,475,Git:7cc1923,DynastyProcess,
 Tyler Warren,player,2025-05-06,1225522406177652736,2-team,jwalters74,cjsyregelas,,1719,2706,Git:7cc1923,DynastyProcess,
@@ -232,20 +232,20 @@ Zach Wilson,player,2025-05-01,1223663647079792640,2-team,mgaeta23,donewton,,3,2,
 $1 FAAB,faab,2025-05-01,1223663647079792640,2-team,donewton,mgaeta23,,1,1,FAAB,FAAB,$1
 2025 Round 4,pick,2025-05-01,1223657978725400576,2-team,jwalters74,jakeduf,wkerwin,31,167,Git:2025 Pick 4.02,Player:Terrance Ferguson,"{'player': 'Terrance Ferguson', 'pick_position': '4.02'}"
 2026 Round 3,pick,2025-05-01,1223657978725400576,2-team,jakeduf,jwalters74,donewton,65,65,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'donewton', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
-Trey Benson,player,2025-05-01,1223523595133657088,2-team,jwalters74,tylerpilgrim,,405,884,Git:db126e3,DynastyProcess,
-Jerry Jeudy,player,2025-05-01,1223523595133657088,2-team,tylerpilgrim,jwalters74,,1448,824,Git:db126e3,DynastyProcess,
-2025 Round 4,pick,2025-05-01,1223523595133657088,2-team,tylerpilgrim,jwalters74,jwalters74,24,72,Git:2025 Pick 4.05,Player:Pat Bryant,"{'player': 'Pat Bryant', 'pick_position': '4.05'}"
-2026 Round 3,pick,2025-05-01,1223523595133657088,2-team,jwalters74,tylerpilgrim,tylerpilgrim,106,106,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
-Tyler Allgeier,player,2025-05-01,1223496024669028352,2-team,gnewman4,tylerpilgrim,,126,98,Git:db126e3,DynastyProcess,
-2025 Round 3,pick,2025-05-01,1223496024669028352,2-team,tylerpilgrim,gnewman4,wkerwin,126,365,Git:2025 Pick 3.02,Player:Jaylin Noel,"{'player': 'Jaylin Noel', 'pick_position': '3.02'}"
-2025 Round 4,pick,2025-05-01,1223496024669028352,2-team,gnewman4,tylerpilgrim,tylerpilgrim,34,139,Git:2025 Pick 4.01,Player:DJ Giddens,"{'player': 'DJ Giddens', 'pick_position': '4.01'}"
-Tucker Kraft,player,2025-05-01,1223495018262581248,2-team,gnewman4,jwalters74,,1090,2334,Git:db126e3,DynastyProcess,
-2025 Round 3,pick,2025-05-01,1223495018262581248,2-team,jwalters74,gnewman4,tylerpilgrim,145,475,Git:2025 Pick 3.01,Player:Mason Taylor,"{'player': 'Mason Taylor', 'pick_position': '3.01'}"
-Adonai Mitchell,player,2025-05-01,1223467807560183808,2-team,jakeduf,zachlearningtogolf,,183,102,Git:db126e3,DynastyProcess,
-Tutu Atwell,player,2025-05-01,1223467807560183808,2-team,jakeduf,zachlearningtogolf,,22,1,Git:db126e3,DynastyProcess,
-2025 Round 2,pick,2025-05-01,1223467807560183808,2-team,zachlearningtogolf,jakeduf,jakeduf,193,3,Git:2025 Pick 2.11,Player:Jalen Milroe,"{'player': 'Jalen Milroe', 'pick_position': '2.11'}"
-2025 Round 4,pick,2025-05-01,1223467807560183808,2-team,zachlearningtogolf,jakeduf,jakeduf,16,3,Git:2025 Pick 4.11,Player:Will Howard,"{'player': 'Will Howard', 'pick_position': '4.11'}"
-2025 Round 4,pick,2025-05-01,1223467807560183808,2-team,jakeduf,zachlearningtogolf,zachlearningtogolf,28,160,Git:2025 Pick 4.03,Player:Kyle Monangai,"{'player': 'Kyle Monangai', 'pick_position': '4.03'}"
+Trey Benson,player,2025-04-30,1223523595133657088,2-team,jwalters74,tylerpilgrim,,405,884,Git:db126e3,DynastyProcess,
+Jerry Jeudy,player,2025-04-30,1223523595133657088,2-team,tylerpilgrim,jwalters74,,1448,824,Git:db126e3,DynastyProcess,
+2025 Round 4,pick,2025-04-30,1223523595133657088,2-team,tylerpilgrim,jwalters74,jwalters74,24,72,Git:2025 Pick 4.05,Player:Pat Bryant,"{'player': 'Pat Bryant', 'pick_position': '4.05'}"
+2026 Round 3,pick,2025-04-30,1223523595133657088,2-team,jwalters74,tylerpilgrim,tylerpilgrim,106,106,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'tylerpilgrim', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
+Tyler Allgeier,player,2025-04-30,1223496024669028352,2-team,gnewman4,tylerpilgrim,,126,98,Git:db126e3,DynastyProcess,
+2025 Round 3,pick,2025-04-30,1223496024669028352,2-team,tylerpilgrim,gnewman4,wkerwin,126,365,Git:2025 Pick 3.02,Player:Jaylin Noel,"{'player': 'Jaylin Noel', 'pick_position': '3.02'}"
+2025 Round 4,pick,2025-04-30,1223496024669028352,2-team,gnewman4,tylerpilgrim,tylerpilgrim,34,139,Git:2025 Pick 4.01,Player:DJ Giddens,"{'player': 'DJ Giddens', 'pick_position': '4.01'}"
+Tucker Kraft,player,2025-04-30,1223495018262581248,2-team,gnewman4,jwalters74,,1090,2334,Git:db126e3,DynastyProcess,
+2025 Round 3,pick,2025-04-30,1223495018262581248,2-team,jwalters74,gnewman4,tylerpilgrim,145,475,Git:2025 Pick 3.01,Player:Mason Taylor,"{'player': 'Mason Taylor', 'pick_position': '3.01'}"
+Adonai Mitchell,player,2025-04-30,1223467807560183808,2-team,jakeduf,zachlearningtogolf,,183,102,Git:db126e3,DynastyProcess,
+Tutu Atwell,player,2025-04-30,1223467807560183808,2-team,jakeduf,zachlearningtogolf,,22,1,Git:db126e3,DynastyProcess,
+2025 Round 2,pick,2025-04-30,1223467807560183808,2-team,zachlearningtogolf,jakeduf,jakeduf,193,3,Git:2025 Pick 2.11,Player:Jalen Milroe,"{'player': 'Jalen Milroe', 'pick_position': '2.11'}"
+2025 Round 4,pick,2025-04-30,1223467807560183808,2-team,zachlearningtogolf,jakeduf,jakeduf,16,3,Git:2025 Pick 4.11,Player:Will Howard,"{'player': 'Will Howard', 'pick_position': '4.11'}"
+2025 Round 4,pick,2025-04-30,1223467807560183808,2-team,jakeduf,zachlearningtogolf,zachlearningtogolf,28,160,Git:2025 Pick 4.03,Player:Kyle Monangai,"{'player': 'Kyle Monangai', 'pick_position': '4.03'}"
 2025 Round 4,pick,2025-04-30,1223423845638090752,2-team,lndahayo,donewton,donewton,22,491,Git:2025 Pick 4.06,Player:Woody Marks,"{'player': 'Woody Marks', 'pick_position': '4.06'}"
 2025 Round 2,pick,2025-04-30,1223423845638090752,2-team,lndahayo,donewton,thekylecasey,303,472,Git:2025 Pick 2.08,Player:Bhayshul Tuten,"{'player': 'Bhayshul Tuten', 'pick_position': '2.08'}"
 2025 Round 2,pick,2025-04-30,1223423845638090752,2-team,donewton,lndahayo,cjsyregelas,223,113,Git:2025 Pick 2.10,Player:Jalen Royals,"{'player': 'Jalen Royals', 'pick_position': '2.10'}"
@@ -279,28 +279,28 @@ CeeDee Lamb,player,2025-04-29,1223003680916123648,2-team,donewton,jwalters74,,85
 2025 Round 1,pick,2025-04-29,1223003680916123648,2-team,jwalters74,donewton,lndahayo,2910,4432,Git:2025 Pick 1.07,Player:Quinshon Judkins,"{'player': 'Quinshon Judkins', 'pick_position': '1.07'}"
 2026 Round 3,pick,2025-04-29,1223003680916123648,2-team,jwalters74,donewton,donewton,65,65,Projection:Week2_3rd,Projection:Week2_3rd,"{'week': 2, 'target_week': 2, 'origin': 'donewton', 'round': '3rd', 'column_used': 'Week2_2026_3rd'}"
 2025 Round 2,pick,2025-04-29,1223003680916123648,2-team,donewton,jwalters74,jwalters74,487,755,Git:2025 Pick 2.05,Player:Jayden Higgins,"{'player': 'Jayden Higgins', 'pick_position': '2.05'}"
-Ray Davis,player,2025-04-29,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,177,70,Git:db126e3,DynastyProcess,
-Geno Smith,player,2025-04-29,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,892,664,Git:db126e3,DynastyProcess,
-Christian McCaffrey,player,2025-04-29,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,3391,4259,Git:db126e3,DynastyProcess,
-Baker Mayfield,player,2025-04-29,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,4209,5349,Git:db126e3,DynastyProcess,
-J.K. Dobbins,player,2025-04-29,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,205,362,Git:db126e3,DynastyProcess,
-James Cook,player,2025-04-29,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,3431,4756,Git:db126e3,DynastyProcess,
-2025 Round 2,pick,2025-04-29,1222779260813459456,2-team,jwalters74,zachlearningtogolf,donewton,414,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
-2025 Round 1,pick,2025-04-29,1222779260813459456,2-team,zachlearningtogolf,jwalters74,jwalters74,4314,1328,Git:2025 Pick 1.05,Player:Cam Ward,"{'player': 'Cam Ward', 'pick_position': '1.05'}"
+Ray Davis,player,2025-04-28,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,177,70,Git:db126e3,DynastyProcess,
+Geno Smith,player,2025-04-28,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,892,664,Git:db126e3,DynastyProcess,
+Christian McCaffrey,player,2025-04-28,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,3391,4259,Git:db126e3,DynastyProcess,
+Baker Mayfield,player,2025-04-28,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,4209,5349,Git:db126e3,DynastyProcess,
+J.K. Dobbins,player,2025-04-28,1222779260813459456,2-team,jwalters74,zachlearningtogolf,,205,362,Git:db126e3,DynastyProcess,
+James Cook,player,2025-04-28,1222779260813459456,2-team,zachlearningtogolf,jwalters74,,3431,4756,Git:db126e3,DynastyProcess,
+2025 Round 2,pick,2025-04-28,1222779260813459456,2-team,jwalters74,zachlearningtogolf,donewton,414,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
+2025 Round 1,pick,2025-04-28,1222779260813459456,2-team,zachlearningtogolf,jwalters74,jwalters74,4314,1328,Git:2025 Pick 1.05,Player:Cam Ward,"{'player': 'Cam Ward', 'pick_position': '1.05'}"
 Courtland Sutton,player,2025-04-28,1222706043209924608,2-team,donewton,thekylecasey,,1013,2027,Git:db126e3,DynastyProcess,
 Tank Dell,player,2025-04-28,1222706043209924608,2-team,thekylecasey,donewton,,292,141,Git:db126e3,DynastyProcess,
 2025 Round 2,pick,2025-04-28,1222706043209924608,2-team,donewton,thekylecasey,thekylecasey,303,472,Git:2025 Pick 2.08,Player:Bhayshul Tuten,"{'player': 'Bhayshul Tuten', 'pick_position': '2.08'}"
 2025 Round 3,pick,2025-04-28,1222706043209924608,2-team,donewton,thekylecasey,thekylecasey,58,73,Git:2025 Pick 3.08,Player:Jaydon Blue,"{'player': 'Jaydon Blue', 'pick_position': '3.08'}"
 2025 Round 1,pick,2025-04-28,1222706043209924608,2-team,thekylecasey,donewton,cjsyregelas,1648,1153,Git:2025 Pick 1.10,Player:Colston Loveland,"{'player': 'Colston Loveland', 'pick_position': '1.10'}"
-Davante Adams,player,2025-04-22,1220272163022438400,2-team,donewton,zachlearningtogolf,,1105,2041,Git:9419eae,DynastyProcess,
-Justin Fields,player,2025-04-22,1220272163022438400,2-team,zachlearningtogolf,donewton,,892,994,Git:9419eae,DynastyProcess,
-Brenton Strange,player,2025-04-22,1220272163022438400,2-team,zachlearningtogolf,donewton,,72,216,Git:9419eae,DynastyProcess,
-2025 Round 2,pick,2025-04-22,1220272163022438400,2-team,zachlearningtogolf,donewton,donewton,411,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
-2025 Round 1,pick,2025-04-22,1220272163022438400,2-team,donewton,zachlearningtogolf,cjsyregelas,1635,1153,Git:2025 Pick 1.10,Player:Colston Loveland,"{'player': 'Colston Loveland', 'pick_position': '1.10'}"
-2025 Round 3,pick,2025-04-22,1220272163022438400,2-team,donewton,zachlearningtogolf,cjsyregelas,46,1448,Git:2025 Pick 3.10,Player:Harold Fannin,"{'player': 'Harold Fannin', 'pick_position': '3.10'}"
-2025 Round 2,pick,2025-03-30,1211903239012765696,2-team,donewton,gnewman4,donewton,420,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
-2026 Round 2,pick,2025-03-30,1211903239012765696,2-team,gnewman4,donewton,donewton,330,330,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'donewton', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
-2027 Round 3,pick,2025-03-30,1211903239012765696,2-team,gnewman4,donewton,donewton,65,65,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'donewton', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
+Davante Adams,player,2025-04-21,1220272163022438400,2-team,donewton,zachlearningtogolf,,1105,2041,Git:9419eae,DynastyProcess,
+Justin Fields,player,2025-04-21,1220272163022438400,2-team,zachlearningtogolf,donewton,,892,994,Git:9419eae,DynastyProcess,
+Brenton Strange,player,2025-04-21,1220272163022438400,2-team,zachlearningtogolf,donewton,,72,216,Git:9419eae,DynastyProcess,
+2025 Round 2,pick,2025-04-21,1220272163022438400,2-team,zachlearningtogolf,donewton,donewton,411,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
+2025 Round 1,pick,2025-04-21,1220272163022438400,2-team,donewton,zachlearningtogolf,cjsyregelas,1635,1153,Git:2025 Pick 1.10,Player:Colston Loveland,"{'player': 'Colston Loveland', 'pick_position': '1.10'}"
+2025 Round 3,pick,2025-04-21,1220272163022438400,2-team,donewton,zachlearningtogolf,cjsyregelas,46,1448,Git:2025 Pick 3.10,Player:Harold Fannin,"{'player': 'Harold Fannin', 'pick_position': '3.10'}"
+2025 Round 2,pick,2025-03-29,1211903239012765696,2-team,donewton,gnewman4,donewton,420,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
+2026 Round 2,pick,2025-03-29,1211903239012765696,2-team,gnewman4,donewton,donewton,330,330,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'donewton', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
+2027 Round 3,pick,2025-03-29,1211903239012765696,2-team,gnewman4,donewton,donewton,65,65,Projection:Week11_2026_3rd,Projection:Week11_2026_3rd,"{'origin': 'donewton', 'round': '3rd', 'latest_week_used': 11, 'column_used': 'Week11_2026_3rd'}"
 Rashee Rice,player,2025-03-24,1209959102013263872,3-team,zachlearningtogolf,3-team,,3488,6073,Git:dcb6113,DynastyProcess,
 Rome Odunze,player,2025-03-24,1209959102013263872,3-team,cjsyregelas,3-team,,3335,4858,Git:dcb6113,DynastyProcess,
 Adonai Mitchell,player,2025-03-24,1209959102013263872,3-team,zachlearningtogolf,3-team,,169,102,Git:dcb6113,DynastyProcess,
@@ -317,13 +317,13 @@ C.J. Stroud,player,2025-03-24,1209959102013263872,3-team,cjsyregelas,3-team,,768
 2026 Round 2,pick,2025-03-24,1209959102013263872,3-team,lndahayo,3-team,cjsyregelas,183,183,Projection:Week2_2nd,Projection:Week2_2nd,"{'week': 2, 'target_week': 2, 'origin': 'cjsyregelas', 'round': '2nd', 'column_used': 'Week2_2026_2nd'}"
 2026 Round 1,pick,2025-03-24,1209959102013263872,3-team,zachlearningtogolf,3-team,jwalters74,1232,1232,Projection:Week2_1st,Projection:Week2_1st,"{'week': 2, 'target_week': 2, 'origin': 'jwalters74', 'round': '1st', 'column_used': 'Week2_2026_1st'}"
 2025 Round 2,pick,2025-03-24,1209959102013263872,3-team,cjsyregelas,3-team,tylerpilgrim,987,2706,Git:2025 Pick 2.01,Player:Tyler Warren,"{'player': 'Tyler Warren', 'pick_position': '2.01'}"
-Ray Davis,player,2025-03-18,1207589817261490176,2-team,jwalters74,lndahayo,,207,70,Git:ab24c9c,DynastyProcess,
-James Cook,player,2025-03-18,1207589817261490176,2-team,jwalters74,lndahayo,,3335,4756,Git:ab24c9c,DynastyProcess,
-Tucker Kraft,player,2025-03-18,1207589817261490176,2-team,jwalters74,lndahayo,,994,2334,Git:ab24c9c,DynastyProcess,
-Jaxon Smith-Njigba,player,2025-03-18,1207589817261490176,2-team,lndahayo,jwalters74,,4559,7503,Git:ab24c9c,DynastyProcess,
-2025 Round 1,pick,2025-03-18,1207589817261490176,2-team,jwalters74,lndahayo,jwalters74,4254,1328,Git:2025 Pick 1.05,Player:Cam Ward,"{'player': 'Cam Ward', 'pick_position': '1.05'}"
-2026 Round 1,pick,2025-03-18,1207589817261490176,2-team,lndahayo,jwalters74,jwalters74,1232,1232,Projection:Week2_1st,Projection:Week2_1st,"{'week': 2, 'target_week': 2, 'origin': 'jwalters74', 'round': '1st', 'column_used': 'Week2_2026_1st'}"
-2025 Round 2,pick,2025-03-18,1207589817261490176,2-team,lndahayo,jwalters74,tylerpilgrim,989,2706,Git:2025 Pick 2.01,Player:Tyler Warren,"{'player': 'Tyler Warren', 'pick_position': '2.01'}"
+Ray Davis,player,2025-03-17,1207589817261490176,2-team,jwalters74,lndahayo,,207,70,Git:ab24c9c,DynastyProcess,
+James Cook,player,2025-03-17,1207589817261490176,2-team,jwalters74,lndahayo,,3335,4756,Git:ab24c9c,DynastyProcess,
+Tucker Kraft,player,2025-03-17,1207589817261490176,2-team,jwalters74,lndahayo,,994,2334,Git:ab24c9c,DynastyProcess,
+Jaxon Smith-Njigba,player,2025-03-17,1207589817261490176,2-team,lndahayo,jwalters74,,4559,7503,Git:ab24c9c,DynastyProcess,
+2025 Round 1,pick,2025-03-17,1207589817261490176,2-team,jwalters74,lndahayo,jwalters74,4254,1328,Git:2025 Pick 1.05,Player:Cam Ward,"{'player': 'Cam Ward', 'pick_position': '1.05'}"
+2026 Round 1,pick,2025-03-17,1207589817261490176,2-team,lndahayo,jwalters74,jwalters74,1232,1232,Projection:Week2_1st,Projection:Week2_1st,"{'week': 2, 'target_week': 2, 'origin': 'jwalters74', 'round': '1st', 'column_used': 'Week2_2026_1st'}"
+2025 Round 2,pick,2025-03-17,1207589817261490176,2-team,lndahayo,jwalters74,tylerpilgrim,989,2706,Git:2025 Pick 2.01,Player:Tyler Warren,"{'player': 'Tyler Warren', 'pick_position': '2.01'}"
 2025 Round 1,pick,2025-03-14,1206314724464001024,2-team,donewton,gnewman4,lndahayo,2904,4432,Git:2025 Pick 1.07,Player:Quinshon Judkins,"{'player': 'Quinshon Judkins', 'pick_position': '1.07'}"
 2025 Round 2,pick,2025-03-14,1206314724464001024,2-team,gnewman4,donewton,donewton,436,1719,Git:2025 Pick 2.06,Player:Cam Skattebo,"{'player': 'Cam Skattebo', 'pick_position': '2.06'}"
 2025 Round 2,pick,2025-03-14,1206314724464001024,2-team,gnewman4,donewton,zachlearningtogolf,707,1008,Git:2025 Pick 2.03,Player:Luther Burden,"{'player': 'Luther Burden', 'pick_position': '2.03'}"

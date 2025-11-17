@@ -3,14 +3,14 @@
   "data": {
     "overview": {
       "totalTrades": 77,
-      "totalTradeValue": 315458.0,
-      "avgTradeMargin": 822.4675324675325,
+      "totalTradeValue": 315868.0,
+      "avgTradeMargin": 827.7922077922078,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 21,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2025-11-16"
+        "latest": "2025-11-15"
       }
     },
     "teamRankings": {
@@ -45,8 +45,8 @@
           "nickname": "Don",
           "tradeCount": 25,
           "winRate": 40.0,
-          "avgMargin": 681.84,
-          "totalValueGained": 7701.0
+          "avgMargin": 690.04,
+          "totalValueGained": 7906.0
         },
         {
           "rosterId": 7,
@@ -56,8 +56,8 @@
           "nickname": "Johnny",
           "tradeCount": 27,
           "winRate": 48.148148148148145,
-          "avgMargin": 1065.5925925925926,
-          "totalValueGained": 4698.0
+          "avgMargin": 1080.7777777777778,
+          "totalValueGained": 4903.0
         },
         {
           "rosterId": 8,
@@ -111,7 +111,7 @@
           "nickname": "Kyle",
           "tradeCount": 8,
           "winRate": 37.5,
-          "avgMargin": 871.0,
+          "avgMargin": 896.625,
           "totalValueGained": -1134.0
         },
         {
@@ -212,8 +212,8 @@
           "nickname": "Johnny",
           "tradeCount": 27,
           "winRate": 48.148148148148145,
-          "avgMargin": 1065.5925925925926,
-          "totalValueGained": 4698.0
+          "avgMargin": 1080.7777777777778,
+          "totalValueGained": 4903.0
         },
         {
           "rosterId": 5,
@@ -234,8 +234,8 @@
           "nickname": "Don",
           "tradeCount": 25,
           "winRate": 40.0,
-          "avgMargin": 681.84,
-          "totalValueGained": 7701.0
+          "avgMargin": 690.04,
+          "totalValueGained": 7906.0
         }
       ],
       "byTradeCount": [
@@ -247,8 +247,8 @@
           "nickname": "Johnny",
           "tradeCount": 27,
           "winRate": 48.148148148148145,
-          "avgMargin": 1065.5925925925926,
-          "totalValueGained": 4698.0
+          "avgMargin": 1080.7777777777778,
+          "totalValueGained": 4903.0
         },
         {
           "rosterId": 12,
@@ -258,8 +258,8 @@
           "nickname": "Don",
           "tradeCount": 25,
           "winRate": 40.0,
-          "avgMargin": 681.84,
-          "totalValueGained": 7701.0
+          "avgMargin": 690.04,
+          "totalValueGained": 7906.0
         },
         {
           "rosterId": 5,
@@ -324,7 +324,7 @@
           "nickname": "Kyle",
           "tradeCount": 8,
           "winRate": 37.5,
-          "avgMargin": 871.0,
+          "avgMargin": 896.625,
           "totalValueGained": -1134.0
         },
         {
@@ -358,7 +358,7 @@
       {
         "tradeId": "1251046974694637568",
         "transactionId": "1251046974694637568",
-        "tradeDate": "2025-07-16",
+        "tradeDate": "2025-07-15",
         "teamA": "mgaeta23",
         "teamAReceived": [
           "Marquise Brown"
@@ -383,7 +383,7 @@
       {
         "tradeId": "1276812030426251264",
         "transactionId": "1276812030426251264",
-        "tradeDate": "2025-09-25",
+        "tradeDate": "2025-09-24",
         "teamA": "gnewman4",
         "teamAReceived": [
           "MarShawn Lloyd"
@@ -465,7 +465,7 @@
       {
         "tradeId": "1277109098646605824",
         "transactionId": "1277109098646605824",
-        "tradeDate": "2025-09-26",
+        "tradeDate": "2025-09-25",
         "teamA": "gnewman4",
         "teamAReceived": [
           "Marcus Mariota"
@@ -513,27 +513,25 @@
         "swingMargin": 1.0
       },
       {
-        "tradeId": "1295662941210697728",
-        "transactionId": "1295662941210697728",
-        "tradeDate": "2025-11-16",
-        "teamA": "jwalters74",
+        "tradeId": "1281385171571974144",
+        "transactionId": "1281385171571974144",
+        "tradeDate": "2025-10-07",
+        "teamA": "tylerpilgrim",
         "teamAReceived": [
-          "Saquon Barkley"
+          "$11 FAAB"
         ],
-        "teamAValueThen": 4756.0,
-        "teamAValueNow": 4756.0,
+        "teamAValueThen": 11.0,
+        "teamAValueNow": 11.0,
         "teamAValueChange": 0.0,
-        "teamB": "cjsyregelas",
-        "teamBReceived": [
-          "James Cook"
-        ],
-        "teamBValueThen": 4756.0,
-        "teamBValueNow": 4756.0,
+        "teamB": "donewton",
+        "teamBReceived": [],
+        "teamBValueThen": 0.0,
+        "teamBValueNow": 0.0,
         "teamBValueChange": 0.0,
-        "winnerAtTrade": "cjsyregelas",
-        "winnerCurrent": "cjsyregelas",
-        "marginAtTrade": 0.0,
-        "marginCurrent": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 11.0,
+        "marginCurrent": 11.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
       },
@@ -561,29 +559,6 @@
         "swingMargin": 0.0
       },
       {
-        "tradeId": "1281385171571974144",
-        "transactionId": "1281385171571974144",
-        "tradeDate": "2025-10-07",
-        "teamA": "tylerpilgrim",
-        "teamAReceived": [
-          "$11 FAAB"
-        ],
-        "teamAValueThen": 11.0,
-        "teamAValueNow": 11.0,
-        "teamAValueChange": 0.0,
-        "teamB": "donewton",
-        "teamBReceived": [],
-        "teamBValueThen": 0.0,
-        "teamBValueNow": 0.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": 11.0,
-        "marginCurrent": 11.0,
-        "swingWinner": "Tie",
-        "swingMargin": 0.0
-      },
-      {
         "tradeId": "1230259367983456256",
         "transactionId": "1230259367983456256",
         "tradeDate": "2025-05-19",
@@ -605,6 +580,31 @@
         "winnerCurrent": "cjsyregelas",
         "marginAtTrade": 5.0,
         "marginCurrent": 5.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1295662941210697728",
+        "transactionId": "1295662941210697728",
+        "tradeDate": "2025-11-15",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Saquon Barkley"
+        ],
+        "teamAValueThen": 4756.0,
+        "teamAValueNow": 4756.0,
+        "teamAValueChange": 0.0,
+        "teamB": "cjsyregelas",
+        "teamBReceived": [
+          "James Cook"
+        ],
+        "teamBValueThen": 4756.0,
+        "teamBValueNow": 4756.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 0.0,
+        "marginCurrent": 0.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
       }
