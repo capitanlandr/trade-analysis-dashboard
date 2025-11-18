@@ -82,65 +82,7 @@ def check_file_exists(filepath):
         print(f"   ❌ {filepath} - NOT FOUND")
         return False
 
-def check_tyreek_value():
-    """
-    Check if Tyreek Hill's value is abnormal (> 1000).
-    Returns True if value needs fixing, False otherwise.
-    """
-    cache_file = os.path.join(PIPELINE_DIR, 'asset_values_cache.csv')
-    try:
-        df = pd.read_csv(cache_file)
-        tyreek_rows = df[df['asset_name'] == 'Tyreek Hill']
-        
-        if tyreek_rows.empty:
-            print("   ℹ️  No Tyreek Hill entries found")
-            return False
-        
-        # Check if any value_current is abnormally high (> 1000)
-        abnormal_values = tyreek_rows[tyreek_rows['value_current'] > 1000]
-        
-        if not abnormal_values.empty:
-            max_value = abnormal_values['value_current'].max()
-            print(f"   ⚠️  Tyreek Hill has abnormal value: {max_value}")
-            return True
-        else:
-            print(f"   ✅ Tyreek Hill value is normal (≤ 1000)")
-            return False
-            
-    except FileNotFoundError:
-        print(f"   ⚠️  {cache_file} not found, skipping Tyreek check")
-        return False
-    except Exception as e:
-        print(f"   ⚠️  Error checking Tyreek value: {e}")
-        return False
 
-def fix_tyreek_value(dry_run=False):
-    """
-    Fix Tyreek Hill's abnormal value by setting it to 801.
-    This is the fix_tyreek_value.py logic without the git push.
-    """
-    print(f"\n🔧 Fixing Tyreek Hill's value...")
-    
-    if dry_run:
-        print("   [DRY RUN - Would fix Tyreek value]")
-        return True
-    
-    cache_file = os.path.join(PIPELINE_DIR, 'asset_values_cache.csv')
-    try:
-        df = pd.read_csv(cache_file)
-        tyreek_mask = df['asset_name'] == 'Tyreek Hill'
-        
-        # Update value_current to 801
-        df.loc[tyreek_mask, 'value_current'] = 801
-        df.loc[tyreek_mask, 'value_source_current'] = 'Manual fix (Oct 31 value)'
-        
-        df.to_csv(cache_file, index=False)
-        print("   ✅ Fixed Tyreek Hill's value to 801")
-        return True
-        
-    except Exception as e:
-        print(f"   ❌ Failed to fix Tyreek value: {e}")
-        return False
 
 def copy_files_to_dashboard(dry_run=False):
     """Copy the 3 required files from pipeline/ to git root for Vercel."""
@@ -231,32 +173,14 @@ def main():
     if args.dry_run:
         print("🔍 DRY RUN MODE - No changes will be made")
     
-    # Step 0: Check and fix Tyreek value if needed (before Stage 3)
-    print("\n🔍 Checking Tyreek Hill's value...")
-    needs_tyreek_fix = check_tyreek_value()
-    
-    # Step 1: Run Python Pipeline (Stages 1-3) from pipeline directory
-    print("\n📊 Running Python Pipeline (Stages 1-3)...")
-    for stage_name, command in PIPELINE_STAGES[:3]:  # Only stages 1-3
+    # Step 1: Run Python Pipeline (Stages 1-7) from pipeline directory
+    print("\n📊 Running Python Pipeline (Stages 1-7)...")
+    for stage_name, command in PIPELINE_STAGES:
         if not run_command(command, stage_name, args.dry_run, cwd=PIPELINE_DIR):
             print(f"\n❌ Pipeline failed at: {stage_name}")
             sys.exit(1)
     
-    # Step 1.5: Fix Tyreek value if needed (after Stage 3, before Stage 4)
-    if needs_tyreek_fix:
-        if not fix_tyreek_value(args.dry_run):
-            print("\n❌ Failed to fix Tyreek value.")
-            sys.exit(1)
-        print("   ✅ Tyreek value fixed, continuing with Stage 4...")
-    
-    # Step 2: Continue with remaining pipeline stages (4-7) from pipeline directory
-    print("\n📊 Running remaining pipeline stages (4-7)...")
-    for stage_name, command in PIPELINE_STAGES[3:]:  # Stages 4-7
-        if not run_command(command, stage_name, args.dry_run, cwd=PIPELINE_DIR):
-            print(f"\n❌ Pipeline failed at: {stage_name}")
-            sys.exit(1)
-    
-    # Step 3: Verify output files in pipeline directory
+    # Step 2: Verify output files in pipeline directory
     print(f"\n📋 Checking output files in {PIPELINE_DIR}/...")
     all_files_exist = True
     for filename in REQUIRED_FILES:
@@ -268,12 +192,12 @@ def main():
         print("\n❌ Some required files are missing. Pipeline may have failed.")
         sys.exit(1)
     
-    # Step 4: Copy files to dashboard
+    # Step 3: Copy files to dashboard
     if not copy_files_to_dashboard(args.dry_run):
         print("\n❌ Failed to copy files to dashboard directory.")
         sys.exit(1)
     
-    # Step 5: Deploy (unless skipped)
+    # Step 4: Deploy (unless skipped)
     if not args.skip_git:
         if not git_deploy(args.dry_run):
             print("\n❌ Deployment failed.")
