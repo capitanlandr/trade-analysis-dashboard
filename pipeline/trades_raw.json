@@ -4,8 +4,8 @@
     "league_name": "Dynasuiiii",
     "season": "2025",
     "current_week": 11,
-    "fetch_timestamp": "2025-11-17T14:43:48.236137",
-    "total_trades": 78,
+    "fetch_timestamp": "2025-11-18T14:43:20.596450",
+    "total_trades": 81,
     "incremental_mode": true
   },
   "users": [
@@ -239,9 +239,9 @@
         "allow_pn_player_injury_status": "on",
         "allow_pn_scoring": "on",
         "p_nick_2306": "Jameis F****** Winston",
-        "record": "WLWWWWWWWWWWWWLLWLLW",
+        "record": "WLWWWWWWWWWWWWLLWLLWLL",
         "restrict_pn_scoring_starters_only": "on",
-        "streak": "1W"
+        "streak": "2L"
       },
       "owner_id": "870177576986034176",
       "player_map": null,
@@ -276,13 +276,13 @@
       "roster_id": 1,
       "settings": {
         "division": 3,
-        "fpts": 1465,
-        "fpts_against": 1235,
-        "fpts_against_decimal": 16,
-        "fpts_decimal": 20,
-        "losses": 5,
-        "ppts": 1601,
-        "ppts_decimal": 12,
+        "fpts": 1555,
+        "fpts_against": 1348,
+        "fpts_against_decimal": 60,
+        "fpts_decimal": 44,
+        "losses": 7,
+        "ppts": 1728,
+        "ppts_decimal": 14,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 92,
@@ -307,7 +307,7 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
-        "record": "LWWWLLLLLLWWWWLWWWWW",
+        "record": "LWWWLLLLLLWWWWLWWWWWWW",
         "p_nick_11579": "Breakout game coming",
         "p_nick_12481": "RIP",
         "p_nick_5892": "The Terminator",
@@ -335,7 +335,7 @@
         "p_nick_4972": "Miles Garrett",
         "p_nick_2307": "$20 Monopoly Money",
         "p_nick_11643": "Better than Devon Achane",
-        "streak": "5W",
+        "streak": "7W",
         "p_nick_9999": "Mayo Cum",
         "p_nick_11256": "QB1",
         "p_nick_9481": "Tucker Kraft handcuff",
@@ -362,7 +362,6 @@
         "11632",
         "11638",
         "11643",
-        "12471",
         "12481",
         "12641",
         "1339",
@@ -393,29 +392,29 @@
       "roster_id": 2,
       "settings": {
         "division": 3,
-        "fpts": 1448,
-        "fpts_against": 1327,
-        "fpts_against_decimal": 64,
-        "fpts_decimal": 84,
+        "fpts": 1592,
+        "fpts_against": 1446,
+        "fpts_against_decimal": 30,
+        "fpts_decimal": 76,
         "losses": 8,
-        "ppts": 1658,
-        "ppts_decimal": 80,
+        "ppts": 1825,
+        "ppts_decimal": 94,
         "ties": 0,
         "total_moves": 0,
-        "waiver_budget_used": 39,
+        "waiver_budget_used": 15,
         "waiver_position": 2,
-        "wins": 12
+        "wins": 14
       },
       "starters": [
-        "2307",
+        "8183",
         "9509",
-        "5850",
-        "7564",
+        "7021",
+        "8148",
         "2133",
         "8130",
         "7543",
-        "7021",
-        "8183"
+        "5850",
+        "10226"
       ],
       "taxi": [
         "11579",
@@ -429,8 +428,8 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
-        "record": "WWWWLWWWLLWWWWWWLLWW",
-        "streak": "2W"
+        "record": "WWWWLWWWLLWWWWWWLLWWLW",
+        "streak": "1W"
       },
       "owner_id": "596536664185163776",
       "player_map": null,
@@ -449,6 +448,7 @@
         "12535",
         "2306",
         "2505",
+        "4217",
         "6804",
         "6813",
         "7553",
@@ -462,26 +462,27 @@
         "9511"
       ],
       "reserve": [
+        "11559",
         "2505"
       ],
       "roster_id": 3,
       "settings": {
         "division": 2,
-        "fpts": 1329,
-        "fpts_against": 1177,
-        "fpts_against_decimal": 48,
-        "fpts_decimal": 56,
-        "losses": 5,
-        "ppts": 1468,
-        "ppts_decimal": 62,
+        "fpts": 1444,
+        "fpts_against": 1342,
+        "fpts_against_decimal": 14,
+        "fpts_decimal": 12,
+        "losses": 6,
+        "ppts": 1609,
+        "ppts_decimal": 80,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 62,
         "waiver_position": 5,
-        "wins": 15
+        "wins": 16
       },
       "starters": [
-        "11559",
+        "0",
         "9511",
         "9221",
         "12526",
@@ -514,14 +515,13 @@
         "p_nick_4983": "Gsme winning catch only thing to remember",
         "p_nick_9226": "Generationaler Talent",
         "p_nick_9502": "Secret weapon dont forget ",
-        "record": "LLLLWWLLLLLLWLLLWWLW",
+        "record": "LLLLWWLLLLLLWLLLWWLWLL",
         "restrict_pn_scoring_starters_only": "on",
-        "streak": "1W"
+        "streak": "2L"
       },
       "owner_id": "1051659324998668288",
       "player_map": null,
       "players": [
-        "10232",
         "10444",
         "11199",
         "11560",
@@ -558,13 +558,13 @@
       "roster_id": 4,
       "settings": {
         "division": 1,
-        "fpts": 1084,
-        "fpts_against": 1318,
-        "fpts_against_decimal": 58,
-        "fpts_decimal": 22,
-        "losses": 14,
-        "ppts": 1256,
-        "ppts_decimal": 54,
+        "fpts": 1184,
+        "fpts_against": 1433,
+        "fpts_against_decimal": 76,
+        "fpts_decimal": 52,
+        "losses": 16,
+        "ppts": 1411,
+        "ppts_decimal": 74,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 27,
@@ -593,7 +593,7 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
-        "record": "LLLWLLWWLLWWLLLLWWWL",
+        "record": "LLLWLLWWLLWWLLLLWWWLWW",
         "p_nick_1479": "Keenan Alexander Allen ",
         "p_nick_4035": "Alvin Mentian Kamara ",
         "p_nick_12860": "Who is this guy ",
@@ -610,7 +610,7 @@
         "p_nick_6828": "Algiers Jameal William Dillion Jr. ",
         "p_nick_8112": "Middle name not public ",
         "p_nick_12738": "Mafah > Blue",
-        "streak": "1L",
+        "streak": "2W",
         "p_nick_12520": "X",
         "p_nick_827": "Tyrod Di\u2019allo Taylor ",
         "p_nick_12478": "Ex QB",
@@ -669,18 +669,18 @@
       "roster_id": 5,
       "settings": {
         "division": 3,
-        "fpts": 1238,
-        "fpts_against": 1235,
-        "fpts_against_decimal": 70,
-        "fpts_decimal": 76,
+        "fpts": 1353,
+        "fpts_against": 1335,
+        "fpts_against_decimal": 99,
+        "fpts_decimal": 94,
         "losses": 12,
-        "ppts": 1414,
-        "ppts_decimal": 22,
+        "ppts": 1535,
+        "ppts_decimal": 50,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 81,
         "waiver_position": 8,
-        "wins": 8
+        "wins": 10
       },
       "starters": [
         "12522",
@@ -712,8 +712,8 @@
         "p_nick_7569": "Information Disadvantage",
         "p_nick_96": "Still got it ",
         "p_nick_9758": "Consistent Overvaluation",
-        "record": "WWWLLLLLWLLWLLWWLLWL",
-        "streak": "1L"
+        "record": "WWWLLLLLWLLWLLWWLLWLLL",
+        "streak": "3L"
       },
       "owner_id": "1112526078167375872",
       "player_map": null,
@@ -751,13 +751,13 @@
       "roster_id": 6,
       "settings": {
         "division": 1,
-        "fpts": 1175,
-        "fpts_against": 1242,
-        "fpts_against_decimal": 8,
-        "fpts_decimal": 42,
-        "losses": 12,
-        "ppts": 1455,
-        "ppts_decimal": 2,
+        "fpts": 1279,
+        "fpts_against": 1346,
+        "fpts_against_decimal": 2,
+        "fpts_decimal": 10,
+        "losses": 14,
+        "ppts": 1570,
+        "ppts_decimal": 66,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 25,
@@ -786,7 +786,7 @@
       "league_id": "1180814327660371968",
       "metadata": {
         "p_nick_8139": "Does Not Have That Dawg in Him",
-        "record": "WWLWWWWWWWWLLLLWWWWW",
+        "record": "WWLWWWWWWWWLLLLWWWWWWW",
         "p_nick_1479": "Overpaid",
         "p_nick_5848": "Waste of $9",
         "p_nick_5892": "Forgotten Johnny Player",
@@ -795,7 +795,7 @@
         "p_nick_12518": "The Johnny Player",
         "p_nick_6801": "Long Term WR2",
         "p_nick_12544": "Better than Tuten",
-        "p_nick_8137": "Definitely Not Insider Trading",
+        "p_nick_8137": "Insider Trading Succcess Story",
         "p_nick_7049": "3rd and Jauan",
         "p_nick_9506": "Tyler Liked Him Once",
         "p_nick_11589": "Time to Shine",
@@ -815,7 +815,7 @@
         "p_nick_5970": "Washed",
         "p_nick_8131": "Future TE1",
         "p_nick_6819": "Cooking Behind the Scenes",
-        "p_nick_6826": "Trade Block",
+        "p_nick_6826": "Elite TE2",
         "p_nick_11557": "Future Cowboys QB if Jerry Dies",
         "p_nick_11635": "Go Dawgs",
         "p_nick_4892": "Welcome Home",
@@ -831,10 +831,11 @@
         "p_nick_8155": "Buy Low, Sell High",
         "p_nick_3294": "Should\u2019ve Gone for Daniels",
         "p_nick_8205": "Rutgahs",
-        "streak": "5W",
+        "streak": "7W",
         "p_nick_8143": "Handcuff to the Truth",
         "p_nick_12543": "Tahj Mahal",
-        "p_nick_9493": "Age is Just a Number",
+        "p_nick_827": "Week 14 Starter",
+        "p_nick_9493": "The Cornerstone",
         "p_nick_3321": "No Comment",
         "p_nick_4137": "Johnny Player Emeritus",
         "p_nick_10218": "Needs a New QB",
@@ -842,7 +843,7 @@
         "p_nick_5850": "Exception to the Anti-Packer Rule",
         "p_nick_9501": "Stop Going Backwards",
         "p_nick_12524": "Shock the World",
-        "p_nick_5012": "Needs PTSD Therapy",
+        "p_nick_5012": "RB2",
         "p_nick_8138": "CMC - Cook 2028",
         "p_nick_7588": "Tar Heel FC",
         "p_nick_4034": "Olivia Culpo\u2019s Husband",
@@ -854,7 +855,7 @@
         "p_nick_9508": "Underrated",
         "p_nick_11576": "17 Again (RIP Matthew Perry)",
         "p_nick_6783": "Give Jeudy My Notice",
-        "p_nick_4033": "GetnOutta Cleveland",
+        "p_nick_4033": "Might be Washed",
         "p_nick_11650": "Cost Me a Median Win"
       },
       "owner_id": "865815956675538944",
@@ -897,18 +898,18 @@
       "roster_id": 7,
       "settings": {
         "division": 3,
-        "fpts": 1472,
-        "fpts_against": 1345,
-        "fpts_against_decimal": 42,
-        "fpts_decimal": 54,
+        "fpts": 1637,
+        "fpts_against": 1459,
+        "fpts_against_decimal": 98,
+        "fpts_decimal": 20,
         "losses": 5,
-        "ppts": 1675,
-        "ppts_decimal": 20,
+        "ppts": 1842,
+        "ppts_decimal": 56,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 91,
         "waiver_position": 10,
-        "wins": 15
+        "wins": 17
       },
       "starters": [
         "11564",
@@ -933,6 +934,7 @@
       "league_id": "1180814327660371968",
       "metadata": {
         "p_nick_10222": "",
+        "p_nick_10232": "Untouchable until March",
         "p_nick_11576": "18",
         "p_nick_11583": "",
         "p_nick_11589": "",
@@ -958,18 +960,18 @@
         "p_nick_9506": "Sean Tucker Must Die",
         "p_nick_9508": "",
         "p_nick_9754": "Ferrari and WR4",
-        "record": "WWLLWLLWLLLLLLWWLLLL",
-        "streak": "4L"
+        "record": "WWLLWLLWLLLLLLWWLLLLLW",
+        "streak": "1W"
       },
       "owner_id": "1115878936925294592",
       "player_map": null,
       "players": [
         "10222",
+        "10232",
         "11435",
         "11576",
         "11628",
         "11646",
-        "11834",
         "12486",
         "12502",
         "12527",
@@ -978,7 +980,6 @@
         "1466",
         "19",
         "4066",
-        "5906",
         "6794",
         "6904",
         "7567",
@@ -994,34 +995,33 @@
       ],
       "reserve": [
         "10222",
-        "11576",
-        "9480"
+        "11576"
       ],
       "roster_id": 8,
       "settings": {
         "division": 1,
-        "fpts": 1144,
-        "fpts_against": 1286,
-        "fpts_against_decimal": 20,
-        "fpts_decimal": 70,
-        "losses": 14,
-        "ppts": 1333,
-        "ppts_decimal": 84,
+        "fpts": 1263,
+        "fpts_against": 1430,
+        "fpts_against_decimal": 12,
+        "fpts_decimal": 36,
+        "losses": 15,
+        "ppts": 1492,
+        "ppts_decimal": 50,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 82,
         "waiver_position": 9,
-        "wins": 6
+        "wins": 7
       },
       "starters": [
         "6904",
         "12527",
-        "9506",
+        "11435",
         "6794",
-        "9486",
+        "10232",
         "1466",
-        "5906",
-        "8408",
+        "9504",
+        "7567",
         "19"
       ],
       "taxi": [
@@ -1034,8 +1034,8 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
-        "record": "LLWLLLWLWWWWLLWWLLLW",
-        "streak": "1W"
+        "record": "LLWLLLWLWWWWLLWWLLLWWL",
+        "streak": "1L"
       },
       "owner_id": "1129475833942372352",
       "player_map": null,
@@ -1051,7 +1051,6 @@
         "4098",
         "4147",
         "4177",
-        "4217",
         "4981",
         "5022",
         "5846",
@@ -1076,29 +1075,29 @@
       "roster_id": 9,
       "settings": {
         "division": 2,
-        "fpts": 1190,
-        "fpts_against": 1158,
-        "fpts_against_decimal": 90,
-        "fpts_decimal": 32,
-        "losses": 11,
-        "ppts": 1485,
-        "ppts_decimal": 96,
+        "fpts": 1303,
+        "fpts_against": 1249,
+        "fpts_against_decimal": 14,
+        "fpts_decimal": 76,
+        "losses": 12,
+        "ppts": 1634,
+        "ppts_decimal": 6,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 17,
         "waiver_position": 6,
-        "wins": 9
+        "wins": 10
       },
       "starters": [
-        "6768",
+        "3163",
         "5892",
         "9224",
         "5846",
-        "7526",
-        "4217",
         "8126",
-        "5872",
-        "3163"
+        "5022",
+        "9508",
+        "5970",
+        "5947"
       ],
       "taxi": [
         "12496",
@@ -1112,9 +1111,10 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
+        "p_nick_10213": "What Bowers wishes he could be ",
         "p_nick_4943": "GEQBUS",
-        "record": "WWLLWWLLWWLLLWLLLWLL",
-        "streak": "2L"
+        "record": "WWLLWWLLWWLLLWLLLWLLWW",
+        "streak": "2W"
       },
       "owner_id": "725577957241896960",
       "player_map": null,
@@ -1156,18 +1156,18 @@
       "roster_id": 10,
       "settings": {
         "division": 2,
-        "fpts": 1205,
-        "fpts_against": 1327,
-        "fpts_against_decimal": 96,
-        "fpts_decimal": 78,
+        "fpts": 1323,
+        "fpts_against": 1417,
+        "fpts_against_decimal": 94,
+        "fpts_decimal": 52,
         "losses": 12,
-        "ppts": 1464,
-        "ppts_decimal": 26,
+        "ppts": 1609,
+        "ppts_decimal": 34,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 43,
         "waiver_position": 12,
-        "wins": 8
+        "wins": 10
       },
       "starters": [
         "4984",
@@ -1192,7 +1192,7 @@
       "league_id": "1180814327660371968",
       "metadata": {
         "p_nick_2374": "Bald Old Man",
-        "record": "LLWLLLLLLWLLWWWLLLWL",
+        "record": "LLWLLLLLLWLLWWWLLLWLLL",
         "p_nick_7600": "Friar Tuck - Jonnu\u2019s Handcuff",
         "p_nick_9756": "Wet Reckless",
         "p_nick_2078": "Idiot",
@@ -1219,7 +1219,7 @@
         "p_nick_4972": "QB2\u2026 for now. @Chris want a handcuff?",
         "p_nick_8205": "Stompy Boy",
         "p_nick_4454": "Bourne Supremacy",
-        "streak": "1L",
+        "streak": "3L",
         "p_nick_8143": "Judkins\u2019 Handcuff\u2019s Handcuff",
         "p_nick_7568": "God",
         "p_nick_7564": "Big Baby",
@@ -1238,6 +1238,7 @@
         "11592",
         "11596",
         "11603",
+        "12471",
         "12490",
         "12497",
         "12504",
@@ -1246,7 +1247,6 @@
         "12516",
         "12530",
         "12547",
-        "12775",
         "4454",
         "6130",
         "6151",
@@ -1271,16 +1271,16 @@
       "roster_id": 11,
       "settings": {
         "division": 1,
-        "fpts": 1052,
-        "fpts_against": 1266,
-        "fpts_against_decimal": 36,
-        "fpts_decimal": 72,
-        "losses": 14,
-        "ppts": 1293,
-        "ppts_decimal": 24,
+        "fpts": 1142,
+        "fpts_against": 1384,
+        "fpts_against_decimal": 10,
+        "fpts_decimal": 70,
+        "losses": 16,
+        "ppts": 1400,
+        "ppts_decimal": 42,
         "ties": 0,
         "total_moves": 0,
-        "waiver_budget_used": 50,
+        "waiver_budget_used": 74,
         "waiver_position": 11,
         "wins": 6
       },
@@ -1306,12 +1306,13 @@
       "keepers": null,
       "league_id": "1180814327660371968",
       "metadata": {
-        "record": "LLLWWWWWWWLLWWWLWWLL",
+        "record": "LLLWWWWWWWLLWWWLWWLLWL",
         "p_nick_1479": "Gramps",
         "p_nick_5848": "",
+        "p_nick_4035": "Old",
         "p_nick_12482": "Discount Deebo",
         "p_nick_2133": "Puka Handcuff",
-        "p_nick_6786": "Dak\u2019s Binky",
+        "p_nick_6786": "Cowboys WR2",
         "allow_pn_player_injury_status": "on",
         "p_nick_8126": "1/2 of \u201cMid Stack\u201d",
         "p_nick_11624": "Taylor\u2019s favorite draft pick",
@@ -1321,31 +1322,31 @@
         "p_nick_12492": "Walmart Michael Thomas",
         "p_nick_6130": "Little Giant",
         "p_nick_11563": "Walmart Mahomes",
-        "p_nick_8136": "Bucky Handcuff",
+        "p_nick_8136": "Tampa RB3",
         "p_nick_1466": "Never gonna run around",
         "p_nick_5987": "",
         "p_nick_10219": "Bill\u2019s Handcuff",
         "restrict_pn_scoring_starters_only": "on",
         "p_nick_12670": "Stash",
-        "p_nick_12455": "Coverage LB\u2019s Worst Nightmare",
+        "p_nick_12455": "Invisible to Andy",
         "p_nick_11635": "",
         "p_nick_9480": "Trevor\u2019s Binky",
         "p_nick_3161": "Not Nick Foles",
-        "p_nick_12533": "Bill",
+        "p_nick_12533": "Commanders suck",
         "p_nick_11595": "",
         "p_nick_12489": "Ron Jeremy Harvey",
         "p_nick_11604": "DO NOT KISS FOREHEAD",
-        "p_nick_12521": "The Next Breakout TE",
+        "p_nick_12521": "Seattle TE2",
         "p_nick_11582": "Fumblerooski",
         "p_nick_7591": "",
         "p_nick_12508": "Lamar Jaxson",
-        "p_nick_7571": "Throw in",
+        "p_nick_7571": "Ravens suck",
         "p_nick_9502": "",
         "p_nick_5995": "",
         "p_nick_4068": "Better than Lazard",
         "allow_pn_inactive_starters": "on",
         "p_nick_12738": "Phil Meh-fah",
-        "streak": "2L",
+        "streak": "1L",
         "p_nick_12505": "Rashee Rice but safer driver",
         "p_nick_8143": "",
         "p_nick_4098": "Cost KC a SB in 2018",
@@ -1353,14 +1354,15 @@
         "p_nick_1234": "Let Russ Reheat Leftovers",
         "p_nick_9504": "Maye have something here\u2026",
         "p_nick_3321": "Probably Needs Handcuffs",
+        "p_nick_6271": "Getting dropped tomorrow",
         "p_nick_11577": "",
         "p_nick_11618": "Still Here",
-        "p_nick_7588": "Is a Horse, Ride a Cowboy",
+        "p_nick_7588": "Fine",
         "p_nick_4381": "Washed",
-        "p_nick_5045": "Walmart CeeDee",
+        "p_nick_5045": "Walmart WR2",
         "p_nick_7496": "",
         "p_nick_9486": "Never going to be Davante Adams",
-        "p_nick_11597": "Tucker Kraft but nothing like Tucker Kraft",
+        "p_nick_11597": "Maybe next year",
         "p_nick_9494": "Walmart Worthy",
         "p_nick_12457": "Needs to carry a football to class",
         "p_nick_4018": "Never gonna let you down",
@@ -1409,18 +1411,18 @@
       "roster_id": 12,
       "settings": {
         "division": 2,
-        "fpts": 1307,
-        "fpts_against": 1193,
-        "fpts_against_decimal": 78,
-        "fpts_decimal": 20,
-        "losses": 8,
-        "ppts": 1543,
-        "ppts_decimal": 0,
+        "fpts": 1411,
+        "fpts_against": 1297,
+        "fpts_against_decimal": 46,
+        "fpts_decimal": 14,
+        "losses": 9,
+        "ppts": 1652,
+        "ppts_decimal": 14,
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 98,
         "waiver_position": 7,
-        "wins": 12
+        "wins": 13
       },
       "starters": [
         "11563",
@@ -1441,6 +1443,156 @@
     }
   ],
   "trades": [
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1296325554139578368",
+        "veto_msg_id": "1296325554240249856"
+      },
+      "created": 1763427435554,
+      "settings": {
+        "expires_at": 1763445599
+      },
+      "leg": 11,
+      "draft_picks": [
+        {
+          "round": 4,
+          "season": "2026",
+          "league_id": null,
+          "roster_id": 7,
+          "owner_id": 2,
+          "previous_owner_id": 11
+        }
+      ],
+      "creator": "867921673234632704",
+      "transaction_id": "1296312256438497280",
+      "adds": {
+        "12471": 11
+      },
+      "drops": {
+        "12471": 2
+      },
+      "consenter_ids": [
+        2,
+        11
+      ],
+      "roster_ids": [
+        2,
+        11
+      ],
+      "status_updated": 1763446030124,
+      "waiver_budget": [
+        {
+          "amount": 15,
+          "receiver": 2,
+          "sender": 11
+        },
+        {
+          "amount": 2,
+          "receiver": 2,
+          "sender": 11
+        },
+        {
+          "amount": 8,
+          "receiver": 2,
+          "sender": 11
+        },
+        {
+          "amount": 1,
+          "receiver": 11,
+          "sender": 2
+        }
+      ]
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1296287472619102208",
+        "veto_msg_id": "1296287472711405568"
+      },
+      "created": 1763421471087,
+      "settings": null,
+      "leg": 11,
+      "draft_picks": [
+        {
+          "round": 3,
+          "season": "2028",
+          "league_id": null,
+          "roster_id": 8,
+          "owner_id": 4,
+          "previous_owner_id": 8
+        }
+      ],
+      "creator": "1115878936925294592",
+      "transaction_id": "1296287239650684928",
+      "adds": {
+        "10232": 8
+      },
+      "drops": {
+        "10232": 4
+      },
+      "consenter_ids": [
+        4,
+        8
+      ],
+      "roster_ids": [
+        4,
+        8
+      ],
+      "status_updated": 1763446014457,
+      "waiver_budget": []
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1296216575631712256",
+        "veto_msg_id": "1296216575715606528"
+      },
+      "created": 1763404572875,
+      "settings": {
+        "is_counter": 1
+      },
+      "leg": 11,
+      "draft_picks": [
+        {
+          "round": 2,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 10,
+          "owner_id": 9,
+          "previous_owner_id": 3
+        },
+        {
+          "round": 2,
+          "season": "2026",
+          "league_id": null,
+          "roster_id": 3,
+          "owner_id": 9,
+          "previous_owner_id": 3
+        }
+      ],
+      "creator": "1129475833942372352",
+      "transaction_id": "1296216363412516864",
+      "adds": {
+        "4217": 3
+      },
+      "drops": {
+        "4217": 9
+      },
+      "consenter_ids": [
+        3,
+        9
+      ],
+      "roster_ids": [
+        3,
+        9
+      ],
+      "status_updated": 1763440274018,
+      "waiver_budget": []
+    },
     {
       "status": "complete",
       "type": "trade",

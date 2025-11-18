@@ -23,18 +23,23 @@
   },
   {
     "Team": "gnewman4",
-    "Total_Picks": 2,
+    "Total_Picks": 3,
     "Round_1": 0,
     "Round_2": 0,
     "Round_3": 1,
-    "Round_4": 1,
-    "Net_Picks": -2,
-    "Estimated_Value": 98,
+    "Round_4": 2,
+    "Net_Picks": -1,
+    "Estimated_Value": 110,
     "Pick_Details": [
       {
         "round": 3,
         "origin_team": "gnewman4",
         "is_own_pick": true
+      },
+      {
+        "round": 4,
+        "origin_team": "jwalters74",
+        "is_own_pick": false
       },
       {
         "round": 4,
@@ -45,21 +50,16 @@
   },
   {
     "Team": "brevinowens",
-    "Total_Picks": 3,
+    "Total_Picks": 2,
     "Round_1": 1,
-    "Round_2": 1,
+    "Round_2": 0,
     "Round_3": 0,
     "Round_4": 1,
-    "Net_Picks": -1,
-    "Estimated_Value": 1394,
+    "Net_Picks": -2,
+    "Estimated_Value": 1244,
     "Pick_Details": [
       {
         "round": 1,
-        "origin_team": "brevinowens",
-        "is_own_pick": true
-      },
-      {
-        "round": 2,
         "origin_team": "brevinowens",
         "is_own_pick": true
       },
@@ -232,13 +232,13 @@
   },
   {
     "Team": "mgaeta23",
-    "Total_Picks": 6,
+    "Total_Picks": 7,
     "Round_1": 4,
-    "Round_2": 2,
+    "Round_2": 3,
     "Round_3": 0,
     "Round_4": 0,
-    "Net_Picks": 2,
-    "Estimated_Value": 12278,
+    "Net_Picks": 3,
+    "Estimated_Value": 12428,
     "Pick_Details": [
       {
         "round": 1,
@@ -259,6 +259,11 @@
         "round": 1,
         "origin_team": "mgaeta23",
         "is_own_pick": true
+      },
+      {
+        "round": 2,
+        "origin_team": "brevinowens",
+        "is_own_pick": false
       },
       {
         "round": 2,
@@ -311,13 +316,13 @@
   },
   {
     "Team": "wkerwin",
-    "Total_Picks": 8,
+    "Total_Picks": 7,
     "Round_1": 3,
     "Round_2": 3,
     "Round_3": 1,
-    "Round_4": 1,
-    "Net_Picks": 4,
-    "Estimated_Value": 10992,
+    "Round_4": 0,
+    "Net_Picks": 3,
+    "Estimated_Value": 10980,
     "Pick_Details": [
       {
         "round": 1,
@@ -353,11 +358,6 @@
         "round": 3,
         "origin_team": "wkerwin",
         "is_own_pick": true
-      },
-      {
-        "round": 4,
-        "origin_team": "jwalters74",
-        "is_own_pick": false
       }
     ]
   },
