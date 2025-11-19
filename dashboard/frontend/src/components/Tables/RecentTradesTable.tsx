@@ -50,7 +50,7 @@ const RecentTradesTable: React.FC = () => {
   const [sortField, setSortField] = useState<keyof Trade>('tradeDate');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
   const [selectedTeam, setSelectedTeam] = useState('');
-  const [maxResults, setMaxResults] = useState(1000);
+  const [maxResults, setMaxResults] = useState(10);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
@@ -115,8 +115,9 @@ const RecentTradesTable: React.FC = () => {
       return sortDirection === 'asc' ? numA - numB : numB - numA;
     });
 
-    return filteredTrades;
-  }, [trades, debouncedSearchTerm, sortField, sortDirection, selectedTeam, startDate, endDate]);
+    // Limit results based on maxResults
+    return filteredTrades.slice(0, maxResults);
+  }, [trades, debouncedSearchTerm, sortField, sortDirection, selectedTeam, startDate, endDate, maxResults]);
 
   const handleSort = (field: keyof Trade) => {
     if (sortField === field) {

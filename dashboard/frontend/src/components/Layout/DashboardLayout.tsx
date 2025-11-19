@@ -1,9 +1,8 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { BarChart3, Users, TrendingUp, Trophy, RefreshCw, Wifi, WifiOff } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, RefreshCw, Award } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '../../services/api';
-import { useWebSocket } from '../../hooks/useWebSocket';
 
 const DashboardLayout: React.FC = () => {
   const { data: statusData } = useQuery({
@@ -12,7 +11,6 @@ const DashboardLayout: React.FC = () => {
     refetchInterval: 30000, // Refresh every 30 seconds
   });
 
-  const { isConnected, refreshData } = useWebSocket();
   const lastUpdate = (statusData?.data as any)?.lastDataUpdate;
 
   return (
@@ -25,10 +23,10 @@ const DashboardLayout: React.FC = () => {
               <Trophy className="h-8 w-8 text-primary-600 mr-3" />
               <div>
                 <h1 className="text-xl font-bold text-gray-900">
-                  Trade Analysis Dashboard
+                  Dynasuiiii Analytics
                 </h1>
                 <p className="text-sm text-gray-500">
-                  Fantasy Football Trade Performance & Analytics
+                  Trade Analytics & League Standings
                 </p>
               </div>
             </div>
@@ -42,30 +40,6 @@ const DashboardLayout: React.FC = () => {
                   </span>
                 </div>
               )}
-              
-              <button
-                onClick={refreshData}
-                disabled={!isConnected}
-                className="flex items-center space-x-1 px-3 py-1 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                title="Manually refresh data"
-              >
-                <RefreshCw className="h-4 w-4" />
-                <span>Refresh</span>
-              </button>
-              
-              <div className="flex items-center space-x-1">
-                {isConnected ? (
-                  <>
-                    <Wifi className="h-4 w-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Live</span>
-                  </>
-                ) : (
-                  <>
-                    <WifiOff className="h-4 w-4 text-red-500" />
-                    <span className="text-sm text-gray-600">Offline</span>
-                  </>
-                )}
-              </div>
             </div>
           </div>
         </div>
@@ -76,8 +50,8 @@ const DashboardLayout: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8">
             <NavItem icon={BarChart3} label="Overview" href="/" />
-            <NavItem icon={Users} label="Teams" href="/teams" />
-            <NavItem icon={TrendingUp} label="Trends" href="/trends" />
+            <NavItem icon={Award} label="Standings" href="/standings" />
+            <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
           </div>
         </div>
       </nav>
@@ -92,13 +66,8 @@ const DashboardLayout: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex justify-between items-center">
             <p className="text-sm text-gray-500">
-              Trade Analysis Dashboard - Built with React & TypeScript
+              Dynasuiiii Analytics - Built with React & TypeScript
             </p>
-            <div className="flex items-center space-x-4 text-sm text-gray-500">
-              <span>API Status: Connected</span>
-              <span>•</span>
-              <span>Real-time Updates: Enabled</span>
-            </div>
           </div>
         </div>
       </footer>

@@ -1,0 +1,2056 @@
+{
+  "divisions": [
+    {
+      "division_id": 1,
+      "division_name": "Chicago",
+      "teams": [
+        {
+          "roster_id": 6,
+          "team_name": "Washed",
+          "owner_name": "Chris",
+          "rank": 1,
+          "record": {
+            "wins": 8,
+            "losses": 14,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 5,
+            "losses": 6,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 3,
+            "losses": 8
+          },
+          "division_record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1279.1,
+          "points_against": 1346.02,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 11,
+              "points_for": 124.94,
+              "points_against": 68.44,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 2,
+              "opponent_id": 8,
+              "points_for": 108.06,
+              "points_against": 89.2,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 3,
+              "opponent_id": 4,
+              "points_for": 100.36,
+              "points_against": 121.48,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 4,
+              "opponent_id": 9,
+              "points_for": 85.94,
+              "points_against": 129.7,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 5,
+              "opponent_id": 3,
+              "points_for": 136.7,
+              "points_against": 126.82,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 6,
+              "opponent_id": 5,
+              "points_for": 123.46,
+              "points_against": 149.08,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 7,
+              "opponent_id": 2,
+              "points_for": 98.26,
+              "points_against": 176.12,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 8,
+              "opponent_id": 7,
+              "points_for": 164.2,
+              "points_against": 156.32,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 9,
+              "opponent_id": 1,
+              "points_for": 117.96,
+              "points_against": 125.26,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 10,
+              "opponent_id": 10,
+              "points_for": 115.54,
+              "points_against": 99.66,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 11,
+              "opponent_id": 12,
+              "points_for": 103.68,
+              "points_against": 103.94,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 12,
+              "opponent_id": 11,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 13,
+              "opponent_id": 8,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 14,
+              "opponent_id": 4,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Spirit Halloween"
+            }
+          ]
+        },
+        {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "owner_name": "Tyler",
+          "rank": 2,
+          "record": {
+            "wins": 7,
+            "losses": 15,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 3,
+            "losses": 8,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 4,
+            "losses": 7
+          },
+          "division_record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1263.36,
+          "points_against": 1430.12,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 4,
+              "points_for": 129.68,
+              "points_against": 114.52,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 2,
+              "opponent_id": 6,
+              "points_for": 89.2,
+              "points_against": 108.06,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 3,
+              "opponent_id": 11,
+              "points_for": 114.14,
+              "points_against": 88.14,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 4,
+              "opponent_id": 7,
+              "points_for": 160.06,
+              "points_against": 173.18,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 5,
+              "opponent_id": 1,
+              "points_for": 125.8,
+              "points_against": 154.04,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 6,
+              "opponent_id": 9,
+              "points_for": 116.16,
+              "points_against": 136.14,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 7,
+              "opponent_id": 3,
+              "points_for": 78.18,
+              "points_against": 150.6,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 8,
+              "opponent_id": 10,
+              "points_for": 132.38,
+              "points_against": 116.12,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 9,
+              "opponent_id": 12,
+              "points_for": 107.9,
+              "points_against": 143.54,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 10,
+              "opponent_id": 5,
+              "points_for": 91.2,
+              "points_against": 101.86,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 11,
+              "opponent_id": 2,
+              "points_for": 118.66,
+              "points_against": 143.92,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 12,
+              "opponent_id": 4,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 13,
+              "opponent_id": 6,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 14,
+              "opponent_id": 11,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "On To 2026"
+            }
+          ]
+        },
+        {
+          "roster_id": 4,
+          "team_name": "Spirit Halloween",
+          "owner_name": "Kyle",
+          "rank": 3,
+          "record": {
+            "wins": 6,
+            "losses": 16,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 3,
+            "losses": 8,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 3,
+            "losses": 8
+          },
+          "division_record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "points_for": 1184.52,
+          "points_against": 1433.76,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 8,
+              "points_for": 114.52,
+              "points_against": 129.68,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 2,
+              "opponent_id": 11,
+              "points_for": 102.58,
+              "points_against": 110.98,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 3,
+              "opponent_id": 6,
+              "points_for": 121.48,
+              "points_against": 100.36,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 4,
+              "opponent_id": 1,
+              "points_for": 102.88,
+              "points_against": 193.74,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 5,
+              "opponent_id": 7,
+              "points_for": 90.4,
+              "points_against": 174.28,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 6,
+              "opponent_id": 3,
+              "points_for": 91.18,
+              "points_against": 120.42,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 7,
+              "opponent_id": 9,
+              "points_for": 76.14,
+              "points_against": 61.54,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 8,
+              "opponent_id": 12,
+              "points_for": 75.0,
+              "points_against": 121.14,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 9,
+              "opponent_id": 10,
+              "points_for": 161.82,
+              "points_against": 148.82,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 10,
+              "opponent_id": 2,
+              "points_for": 148.22,
+              "points_against": 157.62,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 11,
+              "opponent_id": 5,
+              "points_for": 100.3,
+              "points_against": 115.18,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 12,
+              "opponent_id": 8,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 13,
+              "opponent_id": 11,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 14,
+              "opponent_id": 6,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Washed"
+            }
+          ]
+        },
+        {
+          "roster_id": 11,
+          "team_name": "On To 2026",
+          "owner_name": "Will",
+          "rank": 4,
+          "record": {
+            "wins": 6,
+            "losses": 16,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 4,
+            "losses": 7,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 2,
+            "losses": 9
+          },
+          "division_record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "points_for": 1142.7,
+          "points_against": 1384.1,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 6,
+              "points_for": 68.44,
+              "points_against": 124.94,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 2,
+              "opponent_id": 4,
+              "points_for": 110.98,
+              "points_against": 102.58,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 3,
+              "opponent_id": 8,
+              "points_for": 88.14,
+              "points_against": 114.14,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 4,
+              "opponent_id": 3,
+              "points_for": 95.86,
+              "points_against": 151.3,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 5,
+              "opponent_id": 9,
+              "points_for": 147.82,
+              "points_against": 152.48,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 6,
+              "opponent_id": 2,
+              "points_for": 89.5,
+              "points_against": 203.5,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 7,
+              "opponent_id": 5,
+              "points_for": 130.52,
+              "points_against": 110.26,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 8,
+              "opponent_id": 1,
+              "points_for": 92.38,
+              "points_against": 79.52,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 9,
+              "opponent_id": 7,
+              "points_for": 101.3,
+              "points_against": 152.26,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 10,
+              "opponent_id": 12,
+              "points_for": 127.78,
+              "points_against": 75.38,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 11,
+              "opponent_id": 10,
+              "points_for": 89.98,
+              "points_against": 117.74,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 12,
+              "opponent_id": 6,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 13,
+              "opponent_id": 4,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 14,
+              "opponent_id": 8,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "division_id": 2,
+      "division_name": "Wisconsin",
+      "teams": [
+        {
+          "roster_id": 3,
+          "team_name": "Tyler Is Scared",
+          "owner_name": "Brevin",
+          "rank": 1,
+          "record": {
+            "wins": 16,
+            "losses": 6,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 7,
+            "losses": 4,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 9,
+            "losses": 2
+          },
+          "division_record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1444.12,
+          "points_against": 1342.14,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 9,
+              "points_for": 122.94,
+              "points_against": 110.16,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 2,
+              "opponent_id": 12,
+              "points_for": 129.78,
+              "points_against": 125.72,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 3,
+              "opponent_id": 10,
+              "points_for": 130.0,
+              "points_against": 135.74,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 4,
+              "opponent_id": 11,
+              "points_for": 151.3,
+              "points_against": 95.86,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 5,
+              "opponent_id": 6,
+              "points_for": 126.82,
+              "points_against": 136.7,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 6,
+              "opponent_id": 4,
+              "points_for": 120.42,
+              "points_against": 91.18,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 7,
+              "opponent_id": 8,
+              "points_for": 150.6,
+              "points_against": 78.18,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 8,
+              "opponent_id": 2,
+              "points_for": 149.22,
+              "points_against": 126.12,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 9,
+              "opponent_id": 5,
+              "points_for": 76.96,
+              "points_against": 143.48,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 10,
+              "opponent_id": 1,
+              "points_for": 171.52,
+              "points_against": 134.34,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 11,
+              "opponent_id": 7,
+              "points_for": 114.56,
+              "points_against": 164.66,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 12,
+              "opponent_id": 9,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 13,
+              "opponent_id": 12,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 14,
+              "opponent_id": 10,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Rashid Shaheed Truthers"
+            }
+          ]
+        },
+        {
+          "roster_id": 12,
+          "team_name": "The Life of Showtime",
+          "owner_name": "Don",
+          "rank": 2,
+          "record": {
+            "wins": 13,
+            "losses": 9,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 7,
+            "losses": 4,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 6,
+            "losses": 5
+          },
+          "division_record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "points_for": 1411.14,
+          "points_against": 1297.46,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 10,
+              "points_for": 121.86,
+              "points_against": 140.98,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 2,
+              "opponent_id": 3,
+              "points_for": 125.72,
+              "points_against": 129.78,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 3,
+              "opponent_id": 9,
+              "points_for": 121.98,
+              "points_against": 116.92,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 4,
+              "opponent_id": 2,
+              "points_for": 165.34,
+              "points_against": 132.34,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 5,
+              "opponent_id": 5,
+              "points_for": 151.3,
+              "points_against": 113.9,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 6,
+              "opponent_id": 1,
+              "points_for": 102.54,
+              "points_against": 128.88,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 7,
+              "opponent_id": 7,
+              "points_for": 178.4,
+              "points_against": 120.3,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 8,
+              "opponent_id": 4,
+              "points_for": 121.14,
+              "points_against": 75.0,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 9,
+              "opponent_id": 8,
+              "points_for": 143.54,
+              "points_against": 107.9,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 10,
+              "opponent_id": 11,
+              "points_for": 75.38,
+              "points_against": 127.78,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 11,
+              "opponent_id": 6,
+              "points_for": 103.94,
+              "points_against": 103.68,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 12,
+              "opponent_id": 10,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 13,
+              "opponent_id": 3,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 14,
+              "opponent_id": 9,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Gaeta Spur FC"
+            }
+          ]
+        },
+        {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers",
+          "owner_name": "Jake",
+          "rank": 3,
+          "record": {
+            "wins": 10,
+            "losses": 12,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 4,
+            "losses": 7,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 6,
+            "losses": 5
+          },
+          "division_record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1323.52,
+          "points_against": 1417.94,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 12,
+              "points_for": 140.98,
+              "points_against": 121.86,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 2,
+              "opponent_id": 9,
+              "points_for": 87.84,
+              "points_against": 118.26,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 3,
+              "opponent_id": 3,
+              "points_for": 135.74,
+              "points_against": 130.0,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 4,
+              "opponent_id": 5,
+              "points_for": 106.24,
+              "points_against": 135.72,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 5,
+              "opponent_id": 2,
+              "points_for": 155.36,
+              "points_against": 93.26,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 6,
+              "opponent_id": 7,
+              "points_for": 94.1,
+              "points_against": 118.48,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 7,
+              "opponent_id": 1,
+              "points_for": 120.92,
+              "points_against": 200.64,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 8,
+              "opponent_id": 8,
+              "points_for": 116.12,
+              "points_against": 132.38,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 9,
+              "opponent_id": 4,
+              "points_for": 148.82,
+              "points_against": 161.82,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 10,
+              "opponent_id": 6,
+              "points_for": 99.66,
+              "points_against": 115.54,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 11,
+              "opponent_id": 11,
+              "points_for": 117.74,
+              "points_against": 89.98,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 12,
+              "opponent_id": 12,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 13,
+              "opponent_id": 9,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 14,
+              "opponent_id": 3,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Tyler Is Scared"
+            }
+          ]
+        },
+        {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC",
+          "owner_name": "Matt",
+          "rank": 4,
+          "record": {
+            "wins": 10,
+            "losses": 12,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 6,
+            "losses": 5,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 4,
+            "losses": 7
+          },
+          "division_record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "points_for": 1303.76,
+          "points_against": 1249.14,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 3,
+              "points_for": 110.16,
+              "points_against": 122.94,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 2,
+              "opponent_id": 10,
+              "points_for": 118.26,
+              "points_against": 87.84,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 3,
+              "opponent_id": 12,
+              "points_for": 116.92,
+              "points_against": 121.98,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 4,
+              "opponent_id": 6,
+              "points_for": 129.7,
+              "points_against": 85.94,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 5,
+              "opponent_id": 11,
+              "points_for": 152.48,
+              "points_against": 147.82,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 6,
+              "opponent_id": 8,
+              "points_for": 136.14,
+              "points_against": 116.16,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 7,
+              "opponent_id": 4,
+              "points_for": 61.54,
+              "points_against": 76.14,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 8,
+              "opponent_id": 5,
+              "points_for": 129.9,
+              "points_against": 112.94,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 9,
+              "opponent_id": 2,
+              "points_for": 103.7,
+              "points_against": 143.52,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 10,
+              "opponent_id": 7,
+              "points_for": 131.52,
+              "points_against": 143.62,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 11,
+              "opponent_id": 1,
+              "points_for": 113.44,
+              "points_against": 90.24,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 12,
+              "opponent_id": 3,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 13,
+              "opponent_id": 10,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 14,
+              "opponent_id": 12,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "The Life of Showtime"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "division_id": 3,
+      "division_name": "American",
+      "teams": [
+        {
+          "roster_id": 7,
+          "team_name": "Breece Lightning",
+          "owner_name": "Johnny",
+          "rank": 1,
+          "record": {
+            "wins": 17,
+            "losses": 5,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 8,
+            "losses": 3,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 9,
+            "losses": 2
+          },
+          "division_record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1637.2,
+          "points_against": 1459.98,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 2,
+              "points_for": 143.26,
+              "points_against": 125.5,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 2,
+              "opponent_id": 1,
+              "points_for": 158.8,
+              "points_against": 180.04,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 3,
+              "opponent_id": 5,
+              "points_for": 132.04,
+              "points_against": 119.9,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 4,
+              "opponent_id": 8,
+              "points_for": 173.18,
+              "points_against": 160.06,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 5,
+              "opponent_id": 4,
+              "points_for": 174.28,
+              "points_against": 90.4,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 6,
+              "opponent_id": 10,
+              "points_for": 118.48,
+              "points_against": 94.1,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 7,
+              "opponent_id": 12,
+              "points_for": 120.3,
+              "points_against": 178.4,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 8,
+              "opponent_id": 6,
+              "points_for": 156.32,
+              "points_against": 164.2,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 9,
+              "opponent_id": 11,
+              "points_for": 152.26,
+              "points_against": 101.3,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 10,
+              "opponent_id": 9,
+              "points_for": 143.62,
+              "points_against": 131.52,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 11,
+              "opponent_id": 3,
+              "points_for": 164.66,
+              "points_against": 114.56,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 12,
+              "opponent_id": 1,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 13,
+              "opponent_id": 5,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 14,
+              "opponent_id": 2,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Like a Good Naber"
+            }
+          ]
+        },
+        {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way",
+          "owner_name": "Landry",
+          "rank": 2,
+          "record": {
+            "wins": 15,
+            "losses": 7,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 8,
+            "losses": 3,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 7,
+            "losses": 4
+          },
+          "division_record": {
+            "wins": 3,
+            "losses": 0,
+            "ties": 0
+          },
+          "points_for": 1555.44,
+          "points_against": 1348.6,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 5,
+              "points_for": 122.88,
+              "points_against": 122.7,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 2,
+              "opponent_id": 7,
+              "points_for": 180.04,
+              "points_against": 158.8,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 3,
+              "opponent_id": 2,
+              "points_for": 145.86,
+              "points_against": 119.66,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.69,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 4,
+              "opponent_id": 4,
+              "points_for": 193.74,
+              "points_against": 102.88,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 5,
+              "opponent_id": 8,
+              "points_for": 154.04,
+              "points_against": 125.8,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 142.26,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 6,
+              "opponent_id": 12,
+              "points_for": 128.88,
+              "points_against": 102.54,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 7,
+              "opponent_id": 10,
+              "points_for": 200.64,
+              "points_against": 120.92,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 8,
+              "opponent_id": 11,
+              "points_for": 79.52,
+              "points_against": 92.38,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 9,
+              "opponent_id": 6,
+              "points_for": 125.26,
+              "points_against": 117.96,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 10,
+              "opponent_id": 3,
+              "points_for": 134.34,
+              "points_against": 171.52,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 11,
+              "opponent_id": 9,
+              "points_for": 90.24,
+              "points_against": 113.44,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 114.0,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 12,
+              "opponent_id": 7,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 13,
+              "opponent_id": 2,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 14,
+              "opponent_id": 5,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Mommy Rainier "
+            }
+          ]
+        },
+        {
+          "roster_id": 2,
+          "team_name": "Like a Good Naber",
+          "owner_name": "Grant",
+          "rank": 3,
+          "record": {
+            "wins": 14,
+            "losses": 8,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 6,
+            "losses": 5,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 8,
+            "losses": 3
+          },
+          "division_record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "points_for": 1592.76,
+          "points_against": 1446.3,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 7,
+              "points_for": 125.5,
+              "points_against": 143.26,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 2,
+              "opponent_id": 5,
+              "points_for": 171.2,
+              "points_against": 128.92,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 3,
+              "opponent_id": 1,
+              "points_for": 119.66,
+              "points_against": 145.86,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 4,
+              "opponent_id": 12,
+              "points_for": 132.34,
+              "points_against": 165.34,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.03,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 5,
+              "opponent_id": 10,
+              "points_for": 93.26,
+              "points_against": 155.36,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 6,
+              "opponent_id": 11,
+              "points_for": 203.5,
+              "points_against": 89.5,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 7,
+              "opponent_id": 6,
+              "points_for": 176.12,
+              "points_against": 98.26,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 120.61,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 8,
+              "opponent_id": 3,
+              "points_for": 126.12,
+              "points_against": 149.22,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 9,
+              "opponent_id": 9,
+              "points_for": 143.52,
+              "points_against": 103.7,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 10,
+              "opponent_id": 4,
+              "points_for": 157.62,
+              "points_against": 148.22,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 129.65,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 11,
+              "opponent_id": 8,
+              "points_for": 143.92,
+              "points_against": 118.66,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 12,
+              "opponent_id": 5,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 13,
+              "opponent_id": 1,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 14,
+              "opponent_id": 7,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Breece Lightning"
+            }
+          ]
+        },
+        {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier ",
+          "owner_name": "Zach",
+          "rank": 4,
+          "record": {
+            "wins": 10,
+            "losses": 12,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 5,
+            "losses": 6,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 5,
+            "losses": 6
+          },
+          "division_record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 0
+          },
+          "points_for": 1353.94,
+          "points_against": 1336.0,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 1,
+              "points_for": 122.7,
+              "points_against": 122.88,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 122.91,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 2,
+              "opponent_id": 2,
+              "points_for": 128.92,
+              "points_against": 171.2,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 3,
+              "opponent_id": 7,
+              "points_for": 119.9,
+              "points_against": 132.04,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 4,
+              "opponent_id": 10,
+              "points_for": 135.72,
+              "points_against": 106.24,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 5,
+              "opponent_id": 12,
+              "points_for": 113.9,
+              "points_against": 151.3,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "The Life of Showtime"
+            },
+            {
+              "week": 6,
+              "opponent_id": 6,
+              "points_for": 149.08,
+              "points_against": 123.46,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 119.45,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 7,
+              "opponent_id": 11,
+              "points_for": 110.26,
+              "points_against": 130.52,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 8,
+              "opponent_id": 9,
+              "points_for": 112.94,
+              "points_against": 129.9,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 123.63,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 9,
+              "opponent_id": 3,
+              "points_for": 143.48,
+              "points_against": 76.96,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 134.37,
+              "opponent_name": "Tyler Is Scared"
+            },
+            {
+              "week": 10,
+              "opponent_id": 8,
+              "points_for": 101.86,
+              "points_against": 91.2,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "TRIPS \ud83d\udd25"
+            },
+            {
+              "week": 11,
+              "opponent_id": 4,
+              "points_for": 115.18,
+              "points_against": 100.3,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 12,
+              "opponent_id": 2,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 13,
+              "opponent_id": 7,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 14,
+              "opponent_id": 1,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "208 Ferrari Way"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "current_week": 11,
+    "total_weeks": 14,
+    "last_updated": "2025-11-18T23:01:09.100152",
+    "season": 2025
+  }
+}

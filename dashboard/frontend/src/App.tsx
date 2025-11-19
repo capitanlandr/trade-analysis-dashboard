@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import DashboardLayout from './components/Layout/DashboardLayout'
 import Overview from './pages/Overview'
+import Standings from './pages/Standings'
 import UpdateNotification from './components/Notifications/UpdateNotification'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
@@ -46,8 +47,8 @@ function App() {
             <Routes>
               <Route path="/" element={<DashboardLayout />}>
                 <Route index element={<Overview />} />
-                <Route path="teams" element={<div className="card">Teams page coming soon...</div>} />
-                <Route path="trends" element={<div className="card">Trends page coming soon...</div>} />
+                <Route path="standings" element={<Standings />} />
+                <Route path="playoff-scenarios" element={<div className="card">Playoff Scenarios page coming soon...</div>} />
               </Route>
             </Routes>
           </ErrorBoundary>

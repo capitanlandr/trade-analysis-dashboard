@@ -27,12 +27,14 @@ TRADES_CSV = PIPELINE_DIR / 'league_trades_analysis_pipeline.csv'
 TEAMS_CSV = PIPELINE_DIR / 'team_identity_mapping.csv'
 MULTITEAM_JSON = PIPELINE_DIR / '3team_trades_analysis.json'
 ASSET_VALUES_CSV = PIPELINE_DIR / 'asset_values_cache.csv'
+STANDINGS_JSON = PIPELINE_DIR / 'standings_data.json'
 
 # Output paths (go up to repo root, then into dashboard)
 DASHBOARD_DIR = REPO_ROOT / 'dashboard/frontend/public'
 OUTPUT_TRADES = DASHBOARD_DIR / 'api-trades.json'
 OUTPUT_TEAMS = DASHBOARD_DIR / 'api-teams.json'
 OUTPUT_STATS = DASHBOARD_DIR / 'api-stats-summary.json'
+OUTPUT_STANDINGS = DASHBOARD_DIR / 'api-standings.json'
 
 
 def load_asset_values() -> pd.DataFrame:
@@ -347,6 +349,19 @@ def generate_json_files():
     with open(OUTPUT_STATS, 'w') as f:
         json.dump(stats_response, f, indent=2, ensure_ascii=False, default=str)
     logger.info(f"✓ Generated {OUTPUT_STATS}")
+    
+    # Generate standings JSON (if available)
+    if STANDINGS_JSON.exists():
+        logger.info(f"Loading standings from {STANDINGS_JSON}")
+        with open(STANDINGS_JSON, 'r') as f:
+            standings_data = json.load(f)
+        
+        with open(OUTPUT_STANDINGS, 'w') as f:
+            json.dump(standings_data, f, indent=2)
+        logger.info(f"✓ Generated {OUTPUT_STANDINGS}")
+    else:
+        logger.warning(f"Standings data not found at {STANDINGS_JSON}")
+        logger.warning("Run 'python scripts/fetch_standings.py' to generate standings data")
     
     logger.info("="*80)
     logger.info("✅ JSON GENERATION COMPLETE")
