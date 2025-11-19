@@ -363,6 +363,22 @@ def generate_json_files():
         logger.warning(f"Standings data not found at {STANDINGS_JSON}")
         logger.warning("Run 'python scripts/fetch_standings.py' to generate standings data")
     
+    # Generate playoff scenarios JSON (if available)
+    PLAYOFF_SCENARIOS_JSON = PIPELINE_DIR / 'playoff_scenarios_simulated.json'
+    OUTPUT_PLAYOFF_SCENARIOS = DASHBOARD_DIR / 'api-playoff-scenarios.json'
+    
+    if PLAYOFF_SCENARIOS_JSON.exists():
+        logger.info(f"Loading playoff scenarios from {PLAYOFF_SCENARIOS_JSON}")
+        with open(PLAYOFF_SCENARIOS_JSON, 'r') as f:
+            playoff_data = json.load(f)
+        
+        with open(OUTPUT_PLAYOFF_SCENARIOS, 'w') as f:
+            json.dump(playoff_data, f, indent=2)
+        logger.info(f"✓ Generated {OUTPUT_PLAYOFF_SCENARIOS}")
+    else:
+        logger.warning(f"Playoff scenarios not found at {PLAYOFF_SCENARIOS_JSON}")
+        logger.warning("Run 'python scripts/simulate_playoff_scenarios.py' to generate playoff scenarios")
+    
     logger.info("="*80)
     logger.info("✅ JSON GENERATION COMPLETE")
     logger.info(f"   Dashboard files updated with {len(trades)} trades")
