@@ -17,6 +17,10 @@ interface Trade {
   teamBReceived: string[];
   teamAAssets?: AssetDetail[];
   teamBAssets?: AssetDetail[];
+  teamAValueThen?: number;
+  teamAValueNow?: number;
+  teamBValueThen?: number;
+  teamBValueNow?: number;
   winnerCurrent: string;
   marginCurrent: number;
 }
@@ -47,8 +51,7 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
     });
   };
 
-  // Unused but kept for potential future use
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // @ts-ignore - Unused but kept for potential future use
   const parseAssetName = (name: string) => {
     // Check if the asset contains FAAB (e.g., "DJ Giddens | $1 FAAB")
     if (name.includes('|') && name.includes('FAAB')) {

@@ -15,10 +15,10 @@ export interface Trade {
   teamBReceived: string[];
   teamAAssets?: AssetDetail[];
   teamBAssets?: AssetDetail[];
-  teamAValueThen: number;
-  teamAValueNow: number;
-  teamBValueThen: number;
-  teamBValueNow: number;
+  teamAValueThen?: number;
+  teamAValueNow?: number;
+  teamBValueThen?: number;
+  teamBValueNow?: number;
   winnerAtTrade: string;
   winnerCurrent: string;
   marginAtTrade: number;
