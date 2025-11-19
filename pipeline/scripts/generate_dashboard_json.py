@@ -17,27 +17,43 @@ from typing import Dict, List, Any
 logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)-8s | %(message)s')
 logger = logging.getLogger(__name__)
 
-# File paths
-TRADES_CSV = 'league_trades_analysis_pipeline.csv'
-TEAMS_CSV = 'team_identity_mapping.csv'
-MULTITEAM_JSON = '3team_trades_analysis.json'
+# Get script directory and set up paths
+SCRIPT_DIR = Path(__file__).parent
+PIPELINE_DIR = SCRIPT_DIR.parent
+REPO_ROOT = PIPELINE_DIR.parent
 
-# Output paths
-DASHBOARD_DIR = Path('trade-analysis-dashboard-clean/dashboard/frontend/public')
+# File paths (relative to pipeline directory)
+TRADES_CSV = PIPELINE_DIR / 'league_trades_analysis_pipeline.csv'
+TEAMS_CSV = PIPELINE_DIR / 'team_identity_mapping.csv'
+MULTITEAM_JSON = PIPELINE_DIR / '3team_trades_analysis.json'
+ASSET_VALUES_CSV = PIPELINE_DIR / 'asset_values_cache.csv'
+
+# Output paths (go up to repo root, then into dashboard)
+DASHBOARD_DIR = REPO_ROOT / 'dashboard/frontend/public'
 OUTPUT_TRADES = DASHBOARD_DIR / 'api-trades.json'
 OUTPUT_TEAMS = DASHBOARD_DIR / 'api-teams.json'
 OUTPUT_STATS = DASHBOARD_DIR / 'api-stats-summary.json'
 
 
+def load_asset_values() -> pd.DataFrame:
+    """Load asset values cache."""
+    logger.info(f"Loading asset values from {ASSET_VALUES_CSV}")
+    df = pd.read_csv(ASSET_VALUES_CSV)
+    logger.info(f"✓ Loaded {len(df)} asset valuations")
+    return df
+
+
 def load_trades_data() -> List[Dict[str, Any]]:
-    """Load and convert trades CSV to JSON format."""
+    """Load and convert trades CSV to JSON format with individual asset values."""
     logger.info(f"Loading trades from {TRADES_CSV}")
     
-    df = pd.read_csv(TRADES_CSV)
-    logger.info(f"✓ Loaded {len(df)} trades")
+    trades_df = pd.read_csv(TRADES_CSV)
+    asset_values_df = load_asset_values()
+    
+    logger.info(f"✓ Loaded {len(trades_df)} trades")
     
     trades = []
-    for _, row in df.iterrows():
+    for _, row in trades_df.iterrows():
         # Helper function to safely convert to float, replacing NaN with 0
         def safe_float(value):
             try:
@@ -46,23 +62,71 @@ def load_trades_data() -> List[Dict[str, Any]]:
             except (ValueError, TypeError):
                 return 0
         
-        # Convert pipe-separated strings to arrays
-        def parse_assets(asset_string):
+        # Convert pipe-separated strings to arrays with values
+        def parse_assets_with_values(asset_string, transaction_id, receiving_team):
             if pd.isna(asset_string) or str(asset_string).strip() == '':
                 return []
-            return [asset.strip() for asset in str(asset_string).split('|') if asset.strip()]
+            
+            asset_names = [asset.strip() for asset in str(asset_string).split('|') if asset.strip()]
+            assets_with_values = []
+            
+            for asset_name in asset_names:
+                # Look up asset value from asset_values_cache
+                # Note: asset_values_cache uses 'trade_id' column
+                asset_row = asset_values_df[
+                    (asset_values_df['trade_id'].astype(str) == str(transaction_id)) &
+                    (asset_values_df['asset_name'] == asset_name) &
+                    (asset_values_df['receiving_team'] == receiving_team)
+                ]
+                
+                if not asset_row.empty:
+                    assets_with_values.append({
+                        "name": asset_name,
+                        "valueThen": safe_float(asset_row.iloc[0]['value_at_trade']),
+                        "valueNow": safe_float(asset_row.iloc[0]['value_current'])
+                    })
+                else:
+                    # Debug: try without receiving_team filter
+                    debug_row = asset_values_df[
+                        (asset_values_df['trade_id'].astype(str) == str(transaction_id)) &
+                        (asset_values_df['asset_name'] == asset_name)
+                    ]
+                    
+                    if not debug_row.empty:
+                        logger.warning(f"Found asset '{asset_name}' but receiving_team mismatch. Expected: '{receiving_team}', Found: '{debug_row.iloc[0]['receiving_team']}'")
+                        # Use it anyway
+                        assets_with_values.append({
+                            "name": asset_name,
+                            "valueThen": safe_float(debug_row.iloc[0]['value_at_trade']),
+                            "valueNow": safe_float(debug_row.iloc[0]['value_current'])
+                        })
+                    else:
+                        logger.warning(f"Asset not found: trade_id={transaction_id}, asset={asset_name}, team={receiving_team}")
+                        assets_with_values.append({
+                            "name": asset_name,
+                            "valueThen": 0,
+                            "valueNow": 0
+                        })
+            
+            return assets_with_values
+        
+        transaction_id = str(row['transaction_id'])
+        team_a = str(row['team_a'])
+        team_b = str(row['team_b'])
         
         trade = {
-            "tradeId": str(row['transaction_id']),
-            "transactionId": str(row['transaction_id']),
+            "tradeId": transaction_id,
+            "transactionId": transaction_id,
             "tradeDate": str(row['trade_date']),
-            "teamA": str(row['team_a']),
-            "teamAReceived": parse_assets(row['team_a_received']),
+            "teamA": team_a,
+            "teamAReceived": [a['name'] for a in parse_assets_with_values(row['team_a_received'], transaction_id, team_a)],
+            "teamAAssets": parse_assets_with_values(row['team_a_received'], transaction_id, team_a),
             "teamAValueThen": safe_float(row['team_a_value_then']),
             "teamAValueNow": safe_float(row['team_a_value_now']),
             "teamAValueChange": safe_float(row['team_a_value_change']),
-            "teamB": str(row['team_b']),
-            "teamBReceived": parse_assets(row['team_b_received']),
+            "teamB": team_b,
+            "teamBReceived": [a['name'] for a in parse_assets_with_values(row['team_b_received'], transaction_id, team_b)],
+            "teamBAssets": parse_assets_with_values(row['team_b_received'], transaction_id, team_b),
             "teamBValueThen": safe_float(row['team_b_value_then']),
             "teamBValueNow": safe_float(row['team_b_value_now']),
             "teamBValueChange": safe_float(row['team_b_value_change']),

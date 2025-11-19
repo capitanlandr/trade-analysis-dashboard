@@ -31,35 +31,12 @@ const SimpleManagerRankingsTable: React.FC = () => {
     queryFn: () => api.getTeams(),
   });
 
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        <div className="flex flex-wrap gap-4 items-center bg-gray-50 p-4 rounded-lg animate-pulse">
-          <div className="h-8 bg-gray-200 rounded w-48"></div>
-          <div className="h-8 bg-gray-200 rounded w-32"></div>
-          <div className="h-8 bg-gray-200 rounded w-40"></div>
-        </div>
-        <TableSkeleton rows={8} columns={5} />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <ErrorMessage
-        title="Failed to Load Rankings"
-        message={error instanceof Error ? error.message : 'Unknown error occurred'}
-        onRetry={async () => { await refetch(); }}
-      />
-    );
-  }
-
   // Safely extract and validate teams data
+  // Both dev and prod now return: { success: true, data: { teams: [...] } }
   const rawTeams = teamsData?.data?.teams || [];
   
-  // Data structure is now validated and working correctly
-
   // Safely normalize team data with proper type checking
+  // MUST be called before any early returns to maintain hook order
   const teams: Team[] = useMemo(() => {
     return rawTeams.map((team: any): Team => ({
       sleeperUsername: String(team?.sleeperUsername || ''),
@@ -71,6 +48,7 @@ const SimpleManagerRankingsTable: React.FC = () => {
   }, [rawTeams]);
 
   // Safe filtering and sorting with proper error handling
+  // MUST be called before any early returns to maintain hook order
   const processedTeams = useMemo(() => {
     try {
       // Filter teams with multiple criteria
@@ -122,6 +100,29 @@ const SimpleManagerRankingsTable: React.FC = () => {
       return [];
     }
   }, [teams, debouncedSearchTerm, minTrades, performanceTier, sortConfig]);
+
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        <div className="flex flex-wrap gap-4 items-center bg-gray-50 p-4 rounded-lg animate-pulse">
+          <div className="h-8 bg-gray-200 rounded w-48"></div>
+          <div className="h-8 bg-gray-200 rounded w-32"></div>
+          <div className="h-8 bg-gray-200 rounded w-40"></div>
+        </div>
+        <TableSkeleton rows={8} columns={5} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <ErrorMessage
+        title="Failed to Load Rankings"
+        message={error instanceof Error ? error.message : 'Unknown error occurred'}
+        onRetry={async () => { await refetch(); }}
+      />
+    );
+  }
 
   // Sorting handlers
   const handleSort = (field: TeamSortField) => {

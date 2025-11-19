@@ -6,7 +6,8 @@ export const config = {
   pipelineFiles: {
     tradesAnalysis: process.env.TRADES_FILE || '../../league_trades_analysis_pipeline.csv',
     teamIdentity: process.env.TEAMS_FILE || '../../team_identity_mapping.csv',
-    multiTeamTrades: process.env.MULTI_TEAM_FILE || '../../3team_trades_analysis.json'
+    multiTeamTrades: process.env.MULTI_TEAM_FILE || '../../3team_trades_analysis.json',
+    assetValues: process.env.ASSET_VALUES_FILE || '../../pipeline/asset_values_cache.csv'
   },
   
   // CORS settings

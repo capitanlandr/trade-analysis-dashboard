@@ -31,26 +31,30 @@ export class DataService {
       // Load team resolver first
       await this.teamResolver.loadMapping();
 
-      // Load trades and teams in parallel
-      const [trades, teams, multiTeamTrades] = await Promise.all([
+      // Load trades, teams, and asset values in parallel
+      const [trades, teams, multiTeamTrades, assetValues] = await Promise.all([
         this.loadTrades(),
         this.loadTeams(),
-        this.loadMultiTeamTrades()
+        this.loadMultiTeamTrades(),
+        this.loadAssetValues()
       ]);
 
+      // Enrich trades with asset-level details
+      const enrichedTrades = this.enrichTradesWithAssetValues(trades, assetValues);
+
       // Calculate team statistics based on trades
-      const enhancedTeams = this.calculateTeamStats(teams, trades);
+      const enhancedTeams = this.calculateTeamStats(teams, enrichedTrades);
       
       // Calculate league statistics
-      const statistics = this.calculateLeagueStats(trades, enhancedTeams);
+      const statistics = this.calculateLeagueStats(enrichedTrades, enhancedTeams);
 
       const tradeData: TradeData = {
         metadata: {
           lastUpdated: new Date().toISOString(),
-          totalTrades: trades.length,
-          dateRange: this.getDateRange(trades)
+          totalTrades: enrichedTrades.length,
+          dateRange: this.getDateRange(enrichedTrades)
         },
-        trades,
+        trades: enrichedTrades,
         teams: enhancedTeams,
         statistics
       };
@@ -58,7 +62,7 @@ export class DataService {
       this.cachedData = tradeData;
       this.lastUpdate = new Date();
       
-      logger.info(`Successfully loaded ${trades.length} trades and ${enhancedTeams.length} teams`);
+      logger.info(`Successfully loaded ${enrichedTrades.length} trades and ${enhancedTeams.length} teams`);
       return tradeData;
 
     } catch (error) {
@@ -128,6 +132,79 @@ export class DataService {
 
     logger.info(`Loading multi-team trades from: ${filePath}`);
     return await this.csvParser.parseMultiTeamTradesJSON(filePath);
+  }
+
+  async loadAssetValues(): Promise<any[]> {
+    // Hardcoded path to bypass config caching issue
+    const assetValuesPath = '../../trade-analysis-dashboard-clean/pipeline/asset_values_cache.csv';
+    
+    logger.info(`Attempting to load asset values from: ${assetValuesPath}`);
+    
+    const exists = await this.csvParser.fileExists(assetValuesPath);
+    if (!exists) {
+      logger.error(`Asset values file not found: ${assetValuesPath}, trades will not have asset-level details`);
+      return [];
+    }
+
+    logger.info(`Asset values file exists, parsing...`);
+    const assets = await this.csvParser.parseAssetValuesCSV(assetValuesPath);
+    logger.info(`Successfully loaded ${assets.length} asset values`);
+    return assets;
+  }
+
+  private enrichTradesWithAssetValues(trades: Trade[], assetValues: any[]): Trade[] {
+    logger.info(`Enriching ${trades.length} trades with ${assetValues.length} asset values`);
+    
+    // Group asset values by trade_id
+    const assetsByTrade = new Map<string, any[]>();
+    assetValues.forEach(asset => {
+      const tradeId = asset.trade_id;
+      if (!assetsByTrade.has(tradeId)) {
+        assetsByTrade.set(tradeId, []);
+      }
+      assetsByTrade.get(tradeId)!.push(asset);
+    });
+
+    logger.info(`Grouped assets into ${assetsByTrade.size} unique trades`);
+    
+    // Log first few trade IDs for debugging
+    if (trades.length > 0) {
+      logger.info(`Sample trade transactionId: ${trades[0].transactionId}`);
+    }
+    if (assetsByTrade.size > 0) {
+      const firstKey = Array.from(assetsByTrade.keys())[0];
+      logger.info(`Sample asset trade_id: ${firstKey}`);
+    }
+
+    // Enrich each trade with asset details
+    return trades.map(trade => {
+      const tradeAssets = assetsByTrade.get(trade.transactionId) || [];
+      
+      // Separate assets by receiving team
+      const teamAAssets = tradeAssets
+        .filter(a => a.receiving_team === trade.teamA)
+        .map(a => ({
+          name: a.asset_name,
+          type: a.asset_type,
+          valueThen: a.value_at_trade,
+          valueNow: a.value_current
+        }));
+
+      const teamBAssets = tradeAssets
+        .filter(a => a.receiving_team === trade.teamB)
+        .map(a => ({
+          name: a.asset_name,
+          type: a.asset_type,
+          valueThen: a.value_at_trade,
+          valueNow: a.value_current
+        }));
+
+      return {
+        ...trade,
+        teamAAssets,
+        teamBAssets
+      };
+    });
   }
 
   private calculateTeamStats(teams: Team[], trades: Trade[]): Team[] {

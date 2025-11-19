@@ -50,7 +50,7 @@ const RecentTradesTable: React.FC = () => {
   const [sortField, setSortField] = useState<keyof Trade>('tradeDate');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
   const [selectedTeam, setSelectedTeam] = useState('');
-  const [maxResults, setMaxResults] = useState(20);
+  const [maxResults, setMaxResults] = useState(1000);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
@@ -237,6 +237,7 @@ const RecentTradesTable: React.FC = () => {
             <option value={20}>20 trades</option>
             <option value={50}>50 trades</option>
             <option value={100}>100 trades</option>
+            <option value={1000}>All trades</option>
           </select>
         </div>
 
@@ -282,7 +283,10 @@ const RecentTradesTable: React.FC = () => {
                 onClick={() => handleTradeClick(trade)}
               >
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  {new Date(trade.tradeDate).toLocaleDateString()}
+                  {(() => {
+                    const [year, month, day] = trade.tradeDate.split('-').map(Number);
+                    return new Date(year, month - 1, day).toLocaleDateString();
+                  })()}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                   {trade.teamA} ↔ {trade.teamB}

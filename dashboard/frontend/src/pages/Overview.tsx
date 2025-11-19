@@ -92,6 +92,8 @@ const Overview: React.FC = () => {
     );
   }
 
+  // Extract stats - now consistent between dev and prod
+  // Both return: { success: true, data: { overview: {...} } }
   const stats = (statsData as any)?.data;
   
   // Debug logging
@@ -122,17 +124,17 @@ const Overview: React.FC = () => {
           color="blue"
         />
         <MetricCard
-          title="Total Value"
-          value={`$${((stats?.overview?.totalTradeValue || 0) / 1000).toFixed(1)}K`}
+          title="Placeholder 1"
+          value="TBD"
           icon={DollarSign}
           color="green"
         />
         <MetricCard
-          title="Active Traders"
-          value={stats?.teamRankings?.byTradeCount?.length || 0}
+          title="Placeholder 2"
+          value="TBD"
           icon={Users}
           color="yellow"
-          subtitle="Managers with trades"
+
         />
         <MetricCard
           title="Avg Margin"
@@ -154,16 +156,28 @@ const Overview: React.FC = () => {
             <LeaderItem
               label="Most Active Trader"
               value={stats?.overview?.mostActiveTrader || 'N/A'}
-              subtitle={`${stats?.overview?.totalTrades || 0} total trades`}
-            />
-            <LeaderItem
-              label="Biggest Winner"
-              value={stats?.overview?.biggestWinner || 'N/A'}
-              subtitle="Highest total value gained"
+              subtitle={`${stats?.teamRankings?.byTradeCount?.[0]?.tradeCount || 0} trades`}
             />
             <LeaderItem
               label="Trade Season"
-              value={`${stats?.overview?.dateRange?.earliest || ''} to ${stats?.overview?.dateRange?.latest || ''}`}
+              value={(() => {
+                const start = stats?.overview?.dateRange?.earliest;
+                const end = stats?.overview?.dateRange?.latest;
+                if (!start || !end) return 'N/A';
+                
+                const formatDate = (dateStr: string) => {
+                  const [year, month, day] = dateStr.split('-').map(Number);
+                  const date = new Date(year, month - 1, day);
+                  const monthName = date.toLocaleDateString('en-US', { month: 'long' });
+                  const dayNum = date.getDate();
+                  const suffix = dayNum === 1 || dayNum === 21 || dayNum === 31 ? 'st' :
+                                 dayNum === 2 || dayNum === 22 ? 'nd' :
+                                 dayNum === 3 || dayNum === 23 ? 'rd' : 'th';
+                  return `${monthName} ${dayNum}${suffix}, ${year}`;
+                };
+                
+                return `${formatDate(start)} to ${formatDate(end)}`;
+              })()}
               subtitle="Active trading period"
             />
           </div>

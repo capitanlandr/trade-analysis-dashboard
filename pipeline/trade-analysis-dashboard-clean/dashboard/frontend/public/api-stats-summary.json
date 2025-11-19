@@ -364,12 +364,31 @@
           "Will Shipley",
           "Justice Hill"
         ],
+        "teamAAssets": [
+          {
+            "name": "Will Shipley",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "Justice Hill",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 78.0,
         "teamAValueNow": 75.0,
         "teamAValueChange": -3.0,
         "teamB": "donewton",
         "teamBReceived": [
           "$5 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$5 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 5.0,
         "teamBValueNow": 5.0,
@@ -389,12 +408,26 @@
         "teamAReceived": [
           "Marcus Mariota"
         ],
+        "teamAAssets": [
+          {
+            "name": "Marcus Mariota",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 0.0,
         "teamAValueNow": 2.0,
         "teamAValueChange": 2.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "$20 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$20 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 20.0,
         "teamBValueNow": 20.0,
@@ -414,12 +447,26 @@
         "teamAReceived": [
           "Zach Wilson"
         ],
+        "teamAAssets": [
+          {
+            "name": "Zach Wilson",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 3.0,
         "teamAValueNow": 2.0,
         "teamAValueChange": -1.0,
         "teamB": "donewton",
         "teamBReceived": [
           "$1 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$1 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 1.0,
         "teamBValueNow": 1.0,
@@ -439,6 +486,13 @@
         "teamAReceived": [
           "George Kittle"
         ],
+        "teamAAssets": [
+          {
+            "name": "George Kittle",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 1276.0,
         "teamAValueNow": 1276.0,
         "teamAValueChange": 0.0,
@@ -446,6 +500,18 @@
         "teamBReceived": [
           "2027 Round 2",
           "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2027 Round 2",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "2026 Round 2",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 513.0,
         "teamBValueNow": 513.0,
@@ -465,12 +531,26 @@
         "teamAReceived": [
           "Michael Wilson"
         ],
+        "teamAAssets": [
+          {
+            "name": "Michael Wilson",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 106.0,
         "teamAValueNow": 106.0,
         "teamAValueChange": 0.0,
         "teamB": "thekylecasey",
         "teamBReceived": [
           "2028 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2028 Round 3",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 106.0,
         "teamBValueNow": 106.0,
@@ -488,8 +568,20 @@
         "tradeDate": "2025-11-18",
         "teamA": "wkerwin",
         "teamAReceived": [
-          "DJ Giddens",
+          "TEST_MODIFIED_DJ_Giddens",
           "$1 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "TEST_MODIFIED_DJ_Giddens",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "$1 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamAValueThen": 140.0,
         "teamAValueNow": 140.0,
@@ -500,6 +592,28 @@
           "$15 FAAB",
           "$2 FAAB",
           "$8 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "$15 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "$2 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          },
+          {
+            "name": "$8 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 40.0,
         "teamBValueNow": 40.0,
@@ -519,12 +633,26 @@
         "teamAReceived": [
           "Saquon Barkley"
         ],
+        "teamAAssets": [
+          {
+            "name": "Saquon Barkley",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 4756.0,
         "teamAValueNow": 4756.0,
         "teamAValueChange": 0.0,
         "teamB": "cjsyregelas",
         "teamBReceived": [
           "James Cook"
+        ],
+        "teamBAssets": [
+          {
+            "name": "James Cook",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 4756.0,
         "teamBValueNow": 4756.0,
@@ -544,11 +672,19 @@
         "teamAReceived": [
           "$2 FAAB"
         ],
+        "teamAAssets": [
+          {
+            "name": "$2 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 2.0,
         "teamAValueNow": 2.0,
         "teamAValueChange": 0.0,
         "teamB": "gnewman4",
         "teamBReceived": [],
+        "teamBAssets": [],
         "teamBValueThen": 0.0,
         "teamBValueNow": 0.0,
         "teamBValueChange": 0.0,
@@ -567,11 +703,19 @@
         "teamAReceived": [
           "$11 FAAB"
         ],
+        "teamAAssets": [
+          {
+            "name": "$11 FAAB",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 11.0,
         "teamAValueNow": 11.0,
         "teamAValueChange": 0.0,
         "teamB": "donewton",
         "teamBReceived": [],
+        "teamBAssets": [],
         "teamBValueThen": 0.0,
         "teamBValueNow": 0.0,
         "teamBValueChange": 0.0,
@@ -590,12 +734,26 @@
         "teamAReceived": [
           "2026 Round 4"
         ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 4",
+            "valueThen": 0,
+            "valueNow": 0
+          }
+        ],
         "teamAValueThen": 20.0,
         "teamAValueNow": 20.0,
         "teamAValueChange": 0.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "valueThen": 0,
+            "valueNow": 0
+          }
         ],
         "teamBValueThen": 15.0,
         "teamBValueNow": 15.0,

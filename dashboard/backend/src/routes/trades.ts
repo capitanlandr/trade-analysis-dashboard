@@ -6,6 +6,89 @@ const router = Router();
 
 export function createTradesRouter(dataService: DataService): Router {
   
+  // GET /api/trades/debug-csv - Test CSV parsing directly
+  router.get('/debug-csv', async (req: Request, res: Response) => {
+    try {
+      const { CSVParser } = await import('../services/csvParser.js');
+      const { config } = await import('../config/index.js');
+      const csvParser = new CSVParser();
+      
+      const assetValuesPath = config.pipelineFiles.assetValues;
+      const exists = await csvParser.fileExists(assetValuesPath);
+      
+      if (!exists) {
+        return res.json({
+          success: false,
+          error: `File not found: ${assetValuesPath}`,
+          absolutePath: assetValuesPath
+        });
+      }
+      
+      const assets = await csvParser.parseAssetValuesCSV(assetValuesPath);
+      
+      res.json({
+        success: true,
+        data: {
+          path: assetValuesPath,
+          fileExists: exists,
+          assetsLoaded: assets.length,
+          sampleAssets: assets.slice(0, 3)
+        }
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+  
+  // GET /api/trades/debug - Debug endpoint to check asset loading
+  router.get('/debug', async (req: Request, res: Response) => {
+    try {
+      // Force reload data
+      dataService.clearCache();
+      const tradeData = await dataService.loadAllData();
+
+      const sampleTrade = tradeData.trades[0];
+      
+      // Check all trades for any with assets
+      const tradesWithAssets = tradeData.trades.filter(t => 
+        (t.teamAAssets && t.teamAAssets.length > 0) || 
+        (t.teamBAssets && t.teamBAssets.length > 0)
+      );
+      
+      const response: ApiResponse = {
+        success: true,
+        data: {
+          totalTrades: tradeData.trades.length,
+          tradesWithAssets: tradesWithAssets.length,
+          sampleTrade: {
+            transactionId: sampleTrade?.transactionId,
+            teamAAssets: sampleTrade?.teamAAssets,
+            teamBAssets: sampleTrade?.teamBAssets,
+            hasAssets: (sampleTrade?.teamAAssets?.length || 0) > 0 || (sampleTrade?.teamBAssets?.length || 0) > 0
+          },
+          sampleTradeWithAssets: tradesWithAssets[0] ? {
+            transactionId: tradesWithAssets[0].transactionId,
+            teamAAssets: tradesWithAssets[0].teamAAssets,
+            teamBAssets: tradesWithAssets[0].teamBAssets
+          } : null
+        },
+        timestamp: new Date().toISOString()
+      };
+
+      res.json(response);
+    } catch (error) {
+      const response: ApiResponse = {
+        success: false,
+        error: error instanceof Error ? error.message : 'Debug failed',
+        timestamp: new Date().toISOString()
+      };
+      res.status(500).json(response);
+    }
+  });
+  
   // GET /api/trades/blockbuster - Get blockbuster trades (must come before /:id)
   router.get('/blockbuster', async (req: Request, res: Response) => {
     try {

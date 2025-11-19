@@ -122,6 +122,41 @@ export class CSVParser {
     }
   }
 
+  async parseAssetValuesCSV(filePath: string): Promise<any[]> {
+    try {
+      const absolutePath = path.resolve(filePath);
+      const csvContent = await fs.readFile(absolutePath, 'utf-8');
+      
+      const parseResult = Papa.parse(csvContent, {
+        header: true,
+        skipEmptyLines: true,
+        transformHeader: (header) => header.trim()
+      });
+
+      if (parseResult.errors.length > 0) {
+        logger.warn('Asset values CSV parsing warnings:', parseResult.errors);
+      }
+
+      const assets = parseResult.data.map((row: any) => ({
+        asset_name: row.asset_name,
+        asset_type: row.asset_type,
+        trade_date: row.trade_date,
+        trade_id: row.trade_id,
+        receiving_team: row.receiving_team,
+        giving_team: row.giving_team,
+        value_at_trade: parseFloat(row.value_at_trade) || 0,
+        value_current: parseFloat(row.value_current) || 0
+      }));
+
+      logger.info(`Parsed ${assets.length} asset values from ${filePath}`);
+      return assets;
+
+    } catch (error) {
+      logger.error(`Error parsing asset values CSV from ${filePath}:`, error);
+      return [];
+    }
+  }
+
   private parseAssetList(assetString: string): string[] {
     if (!assetString || assetString.trim() === '') {
       return [];

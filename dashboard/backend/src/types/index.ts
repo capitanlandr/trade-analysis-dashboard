@@ -1,3 +1,10 @@
+export interface AssetDetail {
+  name: string;
+  type: string;
+  valueThen: number;
+  valueNow: number;
+}
+
 export interface Trade {
   tradeId: string;
   tradeDate: string;
@@ -6,6 +13,8 @@ export interface Trade {
   teamB: string;
   teamAReceived: string[];
   teamBReceived: string[];
+  teamAAssets?: AssetDetail[];
+  teamBAssets?: AssetDetail[];
   teamAValueThen: number;
   teamAValueNow: number;
   teamBValueThen: number;

@@ -1,6 +1,13 @@
 import React from 'react';
 import { X, Calendar, Users, TrendingUp, Award } from 'lucide-react';
 
+interface AssetDetail {
+  name: string;
+  type: string;
+  valueThen: number;
+  valueNow: number;
+}
+
 interface Trade {
   tradeId: string;
   tradeDate: string;
@@ -8,6 +15,8 @@ interface Trade {
   teamB: string;
   teamAReceived: string[];
   teamBReceived: string[];
+  teamAAssets?: AssetDetail[];
+  teamBAssets?: AssetDetail[];
   winnerCurrent: string;
   marginCurrent: number;
 }
@@ -27,12 +36,33 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    // Parse as local date to avoid timezone offset issues
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+    return date.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
+  };
+
+  const parseAssetName = (name: string) => {
+    // Check if the asset contains FAAB (e.g., "DJ Giddens | $1 FAAB")
+    if (name.includes('|') && name.includes('FAAB')) {
+      const parts = name.split('|').map(p => p.trim());
+      const playerName = parts[0];
+      const faabMatch = parts[1].match(/\$(\d+)\s*FAAB/);
+      const faabAmount = faabMatch ? parseInt(faabMatch[1]) : 0;
+      
+      return [
+        { name: playerName, isFAAB: false },
+        { name: `$${faabAmount} FAAB`, value: faabAmount, isFAAB: true }
+      ];
+    }
+    
+    // Regular asset without FAAB
+    return [{ name, isFAAB: false }];
   };
 
   return (
@@ -93,15 +123,33 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
               </div>
               
               <div className="space-y-2">
-                {formatAssets(trade.teamAReceived).map((asset, index) => (
-                  <div key={index} className="bg-white p-3 rounded border-l-4 border-blue-400">
-                    <div className="font-medium text-gray-900">{asset}</div>
-                  </div>
-                ))}
+                {trade.teamAAssets && trade.teamAAssets.length > 0 ? (
+                  <ul className="space-y-2">
+                    {trade.teamAAssets.map((asset, assetIndex) => (
+                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-blue-400 flex justify-between items-center">
+                        <span className="font-medium text-gray-900">{asset.name}</span>
+                        <span className="text-sm text-gray-600 font-semibold">
+                          {Math.round(asset.valueNow)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  formatAssets(trade.teamAReceived).map((asset, index) => (
+                    <div key={index} className="bg-white p-3 rounded border-l-4 border-blue-400">
+                      <div className="font-medium text-gray-900">{asset}</div>
+                    </div>
+                  ))
+                )}
               </div>
               
-              <div className="mt-4 text-sm text-blue-600">
-                Total: {formatAssets(trade.teamAReceived).length} asset{formatAssets(trade.teamAReceived).length !== 1 ? 's' : ''}
+              <div className="mt-4 flex justify-between items-center text-sm">
+                <span className="text-blue-600">
+                  Total: {trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length} asset{(trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length) !== 1 ? 's' : ''}
+                </span>
+                <span className="text-blue-600 font-semibold">
+                  Total: {Math.round(trade.teamAValueNow)}
+                </span>
               </div>
             </div>
 
@@ -113,15 +161,33 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
               </div>
               
               <div className="space-y-2">
-                {formatAssets(trade.teamBReceived).map((asset, index) => (
-                  <div key={index} className="bg-white p-3 rounded border-l-4 border-green-400">
-                    <div className="font-medium text-gray-900">{asset}</div>
-                  </div>
-                ))}
+                {trade.teamBAssets && trade.teamBAssets.length > 0 ? (
+                  <ul className="space-y-2">
+                    {trade.teamBAssets.map((asset, assetIndex) => (
+                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-green-400 flex justify-between items-center">
+                        <span className="font-medium text-gray-900">{asset.name}</span>
+                        <span className="text-sm text-gray-600 font-semibold">
+                          {Math.round(asset.valueNow)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  formatAssets(trade.teamBReceived).map((asset, index) => (
+                    <div key={index} className="bg-white p-3 rounded border-l-4 border-green-400">
+                      <div className="font-medium text-gray-900">{asset}</div>
+                    </div>
+                  ))
+                )}
               </div>
               
-              <div className="mt-4 text-sm text-green-600">
-                Total: {formatAssets(trade.teamBReceived).length} asset{formatAssets(trade.teamBReceived).length !== 1 ? 's' : ''}
+              <div className="mt-4 flex justify-between items-center text-sm">
+                <span className="text-green-600">
+                  Total: {trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length} asset{(trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length) !== 1 ? 's' : ''}
+                </span>
+                <span className="text-green-600 font-semibold">
+                  Total: {Math.round(trade.teamBValueNow)}
+                </span>
               </div>
             </div>
           </div>
