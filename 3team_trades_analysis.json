@@ -4,17 +4,6 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12205.0
-      },
-      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -39,6 +28,17 @@
         ],
         "value_then": 15270.0,
         "value_now": 14006.0
+      },
+      {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12205.0
       }
     ]
   }
