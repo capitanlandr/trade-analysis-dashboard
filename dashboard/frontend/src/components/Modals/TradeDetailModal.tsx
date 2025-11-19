@@ -47,6 +47,8 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
     });
   };
 
+  // Unused but kept for potential future use
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const parseAssetName = (name: string) => {
     // Check if the asset contains FAAB (e.g., "DJ Giddens | $1 FAAB")
     if (name.includes('|') && name.includes('FAAB')) {
@@ -148,7 +150,7 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                   Total: {trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length} asset{(trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length) !== 1 ? 's' : ''}
                 </span>
                 <span className="text-blue-600 font-semibold">
-                  Total: {Math.round(trade.teamAValueNow)}
+                  Total: {Math.round(trade.teamAValueNow || 0)}
                 </span>
               </div>
             </div>
@@ -186,7 +188,7 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                   Total: {trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length} asset{(trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length) !== 1 ? 's' : ''}
                 </span>
                 <span className="text-green-600 font-semibold">
-                  Total: {Math.round(trade.teamBValueNow)}
+                  Total: {Math.round(trade.teamBValueNow || 0)}
                 </span>
               </div>
             </div>

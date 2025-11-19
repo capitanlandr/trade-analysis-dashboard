@@ -1,4 +1,4 @@
-import { ApiResponse, Trade, Team, LeagueStats, TradeData } from '../types';
+import type { ApiResponse, Trade, Team, LeagueStats, TradeData } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 const USE_STATIC_DATA = true; // Always use static JSON files (same as prod)
