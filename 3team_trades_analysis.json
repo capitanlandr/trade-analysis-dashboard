@@ -19,17 +19,6 @@
         "value_now": 16274.0
       },
       {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 14006.0
-      },
-      {
         "manager": "lndahayo",
         "assets": [
           "Amon-Ra St. Brown",
@@ -39,6 +28,17 @@
         ],
         "value_then": 13482.0,
         "value_now": 12205.0
+      },
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 14006.0
       }
     ]
   }

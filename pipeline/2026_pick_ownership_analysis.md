@@ -1,6 +1,6 @@
 # 2026 Draft Pick Ownership Analysis
 
-*Generated: 2025-11-19 14:43:17*
+*Generated: 2025-11-20 14:40:40*
 
 ## Summary Table
 
