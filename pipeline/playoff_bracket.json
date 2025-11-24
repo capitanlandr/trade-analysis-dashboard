@@ -151,10 +151,10 @@
       "first_round": [
         {
           "home": "TeamRecord(roster_id=10, owner_id='725577957241896960', team_name='Rashid Shaheed Truthers', division=2, wins=10, losses=12, ties=0, points_for=1323.52, points_against=1417.94, h2h_wins={12: 2, 3: 1, 2: 1, 11: 1}, division_wins=3, division_losses=1)",
-          "away": "TeamRecord(roster_id=4, owner_id='1051659324998668288', team_name='Spirit Halloween', division=1, wins=6, losses=16, ties=0, points_for=1184.52, points_against=1433.76, h2h_wins={6: 1, 9: 1, 10: 1, 8: 1}, division_wins=2, division_losses=2)"
+          "away": "TeamRecord(roster_id=4, owner_id='1051659324998668288', team_name='Spirit Halloween', division=1, wins=6, losses=16, ties=0, points_for=1184.52, points_against=1433.76, h2h_wins={6: 1, 9: 1, 10: 1}, division_wins=1, division_losses=3)"
         },
         {
-          "home": "TeamRecord(roster_id=8, owner_id='1115878936925294592', team_name='TRIPS \ud83d\udd25', division=1, wins=7, losses=15, ties=0, points_for=1263.36, points_against=1430.12, h2h_wins={4: 1, 11: 1, 10: 1}, division_wins=2, division_losses=2)",
+          "home": "TeamRecord(roster_id=8, owner_id='1115878936925294592', team_name='TRIPS \ud83d\udd25', division=1, wins=7, losses=15, ties=0, points_for=1263.36, points_against=1430.12, h2h_wins={4: 2, 11: 1, 10: 1}, division_wins=3, division_losses=1)",
           "away": "TeamRecord(roster_id=11, owner_id='1124774814427832320', team_name='On To 2026', division=1, wins=6, losses=16, ties=0, points_for=1142.7, points_against=1384.1, h2h_wins={4: 1, 5: 1, 1: 1, 12: 1}, division_wins=1, division_losses=3)"
         }
       ],
