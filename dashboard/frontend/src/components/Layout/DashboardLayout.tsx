@@ -49,7 +49,7 @@ const DashboardLayout: React.FC = () => {
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8">
-            <NavItem icon={BarChart3} label="Overview" href="/" />
+            <NavItem icon={BarChart3} label="Trade Analysis" href="/" />
             <NavItem icon={Award} label="Standings" href="/standings" />
             <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
           </div>
