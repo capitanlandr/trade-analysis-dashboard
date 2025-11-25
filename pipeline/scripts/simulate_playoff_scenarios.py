@@ -75,15 +75,22 @@ def get_current_week(league_id: str = LEAGUE_ID) -> int:
 def load_standings() -> Dict:
     """Load current standings from JSON"""
     possible_paths = [
+        Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-standings.json',
         Path(__file__).parent.parent / 'dashboard/frontend/public/api-standings.json',
-        Path('trade-analysis-dashboard-clean/dashboard/frontend/public/api-standings.json')
+        Path('trade-analysis-dashboard-clean/dashboard/frontend/public/api-standings.json'),
+        Path('dashboard/frontend/public/api-standings.json')
     ]
     
     for standings_file in possible_paths:
         if standings_file.exists():
+            logger.info(f"Loading standings from: {standings_file}")
             with open(standings_file) as f:
                 return json.load(f)
     
+    # Log attempted paths for debugging
+    logger.error("Standings file not found. Attempted paths:")
+    for path in possible_paths:
+        logger.error(f"  - {path.absolute()} (exists: {path.exists()})")
     raise FileNotFoundError("Standings file not found")
 
 
