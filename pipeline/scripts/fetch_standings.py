@@ -115,6 +115,7 @@ def get_opponent_roster_id(matchup: Dict, matchups: List[Dict]) -> Optional[int]
 def build_schedule_data(rosters: List[Dict], current_week: int) -> Dict[int, List[Dict]]:
     """Build complete schedule data for all teams"""
     logger.info(f"Building schedule data for weeks 1-{REGULAR_SEASON_WEEKS}")
+    logger.info(f"Processing matchups through Week {current_week}")
     
     # Initialize schedule for each roster
     schedules = {roster['roster_id']: [] for roster in rosters}
@@ -173,6 +174,16 @@ def build_schedule_data(rosters: List[Dict], current_week: int) -> Dict[int, Lis
                 })
     
     logger.info(f"✓ Schedule data built for {len(schedules)} teams")
+    
+    # Validate that current week data is present
+    if current_week > 0:
+        sample_roster_id = list(schedules.keys())[0]
+        week_data = [g for g in schedules[sample_roster_id] if g['week'] == current_week]
+        if week_data and week_data[0]['result'] != 'UPCOMING':
+            logger.info(f"✓ Week {current_week} data validated - results present")
+        else:
+            logger.warning(f"⚠ Week {current_week} data may be incomplete")
+    
     return schedules
 
 
@@ -263,6 +274,64 @@ def load_team_identity_mapping() -> Dict[int, Dict]:
     return mapping
 
 
+def compare_teams_tiebreaker(team1_data: Dict, team2_data: Dict, records: Dict, schedules: Dict) -> int:
+    """
+    Compare two teams using tiebreaker rules.
+    Returns: -1 if team1 better, 1 if team2 better, 0 if tied
+    
+    Tiebreakers:
+    1. Win/Loss record
+    2. Head-to-head record
+    3. Division record
+    4. Points for
+    5. Points against (lower is better)
+    """
+    roster_id_1 = team1_data['roster_id']
+    roster_id_2 = team2_data['roster_id']
+    
+    record1 = records[roster_id_1]
+    record2 = records[roster_id_2]
+    
+    # 1. Win/Loss record
+    wins1 = record1['record']['wins']
+    wins2 = record2['record']['wins']
+    if wins1 != wins2:
+        return -1 if wins1 > wins2 else 1
+    
+    # 2. Head-to-head record
+    h2h_1_vs_2 = 0
+    h2h_2_vs_1 = 0
+    for game in schedules[roster_id_1]:
+        if game['opponent_id'] == roster_id_2 and game['result'] == 'W':
+            h2h_1_vs_2 += 1
+    for game in schedules[roster_id_2]:
+        if game['opponent_id'] == roster_id_1 and game['result'] == 'W':
+            h2h_2_vs_1 += 1
+    
+    if h2h_1_vs_2 != h2h_2_vs_1:
+        return -1 if h2h_1_vs_2 > h2h_2_vs_1 else 1
+    
+    # 3. Division record
+    div_wins_1 = record1['division_record']['wins']
+    div_wins_2 = record2['division_record']['wins']
+    if div_wins_1 != div_wins_2:
+        return -1 if div_wins_1 > div_wins_2 else 1
+    
+    # 4. Points for
+    pf_1 = record1['points_for']
+    pf_2 = record2['points_for']
+    if abs(pf_1 - pf_2) > 0.01:
+        return -1 if pf_1 > pf_2 else 1
+    
+    # 5. Points against (lower is better)
+    pa_1 = record1['points_against']
+    pa_2 = record2['points_against']
+    if abs(pa_1 - pa_2) > 0.01:
+        return -1 if pa_1 < pa_2 else 1
+    
+    return 0
+
+
 def organize_by_division(rosters: List[Dict], records: Dict, schedules: Dict, 
                         user_map: Dict, team_mapping: Dict, league_info: Dict) -> List[Dict]:
     """Organize teams by division and calculate rankings"""
@@ -289,12 +358,15 @@ def organize_by_division(rosters: List[Dict], records: Dict, schedules: Dict,
     for division_id in sorted(divisions.keys()):
         division_rosters = divisions[division_id]
         
-        # Sort by wins, then points for
+        # Sort using tiebreaker rules
+        from functools import cmp_to_key
         division_rosters.sort(
-            key=lambda r: (
-                -records[r['roster_id']]['record']['wins'],
-                -records[r['roster_id']]['points_for']
-            )
+            key=cmp_to_key(lambda r1, r2: compare_teams_tiebreaker(
+                {'roster_id': r1['roster_id']},
+                {'roster_id': r2['roster_id']},
+                records,
+                schedules
+            ))
         )
         
         teams = []

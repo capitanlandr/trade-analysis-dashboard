@@ -5,179 +5,10 @@
       "division_name": "Chicago",
       "teams": [
         {
-          "roster_id": 8,
-          "team_name": "TRIPS \ud83d\udd25",
-          "owner_name": "Tyler",
-          "rank": 1,
-          "record": {
-            "wins": 9,
-            "losses": 15,
-            "ties": 0
-          },
-          "matchup_record": {
-            "wins": 4,
-            "losses": 8,
-            "ties": 0
-          },
-          "median_record": {
-            "wins": 5,
-            "losses": 7
-          },
-          "division_record": {
-            "wins": 3,
-            "losses": 1,
-            "ties": 0
-          },
-          "points_for": 1417.94,
-          "points_against": 1556.14,
-          "schedule": [
-            {
-              "week": 1,
-              "opponent_id": 4,
-              "points_for": 129.68,
-              "points_against": 114.52,
-              "result": "W",
-              "beat_median": true,
-              "median_score": 122.91,
-              "opponent_name": "Spirit Halloween"
-            },
-            {
-              "week": 2,
-              "opponent_id": 6,
-              "points_for": 89.2,
-              "points_against": 108.06,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 121.99000000000001,
-              "opponent_name": "Washed"
-            },
-            {
-              "week": 3,
-              "opponent_id": 11,
-              "points_for": 114.14,
-              "points_against": 88.14,
-              "result": "W",
-              "beat_median": false,
-              "median_score": 120.69,
-              "opponent_name": "On To 2026"
-            },
-            {
-              "week": 4,
-              "opponent_id": 7,
-              "points_for": 160.06,
-              "points_against": 173.18,
-              "result": "L",
-              "beat_median": true,
-              "median_score": 134.03,
-              "opponent_name": "Breece Lightning"
-            },
-            {
-              "week": 5,
-              "opponent_id": 1,
-              "points_for": 125.8,
-              "points_against": 154.04,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 142.26,
-              "opponent_name": "208 Ferrari Way"
-            },
-            {
-              "week": 6,
-              "opponent_id": 9,
-              "points_for": 116.16,
-              "points_against": 136.14,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 119.45,
-              "opponent_name": "Gaeta Spur FC"
-            },
-            {
-              "week": 7,
-              "opponent_id": 3,
-              "points_for": 78.18,
-              "points_against": 150.6,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 120.61,
-              "opponent_name": "Bucky\u2019s Depression"
-            },
-            {
-              "week": 8,
-              "opponent_id": 10,
-              "points_for": 132.38,
-              "points_against": 116.12,
-              "result": "W",
-              "beat_median": true,
-              "median_score": 123.63,
-              "opponent_name": "Rashid Shaheed Truthers"
-            },
-            {
-              "week": 9,
-              "opponent_id": 12,
-              "points_for": 107.9,
-              "points_against": 143.54,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 134.37,
-              "opponent_name": "Paper Tigers"
-            },
-            {
-              "week": 10,
-              "opponent_id": 5,
-              "points_for": 91.2,
-              "points_against": 101.86,
-              "result": "L",
-              "beat_median": false,
-              "median_score": 129.65,
-              "opponent_name": "Mommy Rainier "
-            },
-            {
-              "week": 11,
-              "opponent_id": 2,
-              "points_for": 118.66,
-              "points_against": 143.92,
-              "result": "L",
-              "beat_median": true,
-              "median_score": 114.0,
-              "opponent_name": "Like a Good Naber"
-            },
-            {
-              "week": 12,
-              "opponent_id": 4,
-              "points_for": 154.58,
-              "points_against": 126.02,
-              "result": "W",
-              "beat_median": true,
-              "median_score": 121.0,
-              "opponent_name": "Spirit Halloween"
-            },
-            {
-              "week": 13,
-              "opponent_id": 6,
-              "points_for": 0.0,
-              "points_against": 0.0,
-              "result": "UPCOMING",
-              "beat_median": null,
-              "median_score": 0.0,
-              "opponent_name": "Washed"
-            },
-            {
-              "week": 14,
-              "opponent_id": 11,
-              "points_for": 0.0,
-              "points_against": 0.0,
-              "result": "UPCOMING",
-              "beat_median": null,
-              "median_score": 0.0,
-              "opponent_name": "On To 2026"
-            }
-          ]
-        },
-        {
           "roster_id": 6,
           "team_name": "Washed",
           "owner_name": "Chris",
-          "rank": 2,
+          "rank": 1,
           "record": {
             "wins": 9,
             "losses": 15,
@@ -339,6 +170,175 @@
               "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Spirit Halloween"
+            }
+          ]
+        },
+        {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "owner_name": "Tyler",
+          "rank": 2,
+          "record": {
+            "wins": 9,
+            "losses": 15,
+            "ties": 0
+          },
+          "matchup_record": {
+            "wins": 4,
+            "losses": 8,
+            "ties": 0
+          },
+          "median_record": {
+            "wins": 5,
+            "losses": 7
+          },
+          "division_record": {
+            "wins": 3,
+            "losses": 1,
+            "ties": 0
+          },
+          "points_for": 1417.94,
+          "points_against": 1556.14,
+          "schedule": [
+            {
+              "week": 1,
+              "opponent_id": 4,
+              "points_for": 129.68,
+              "points_against": 114.52,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 122.91,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 2,
+              "opponent_id": 6,
+              "points_for": 89.2,
+              "points_against": 108.06,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 121.99000000000001,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 3,
+              "opponent_id": 11,
+              "points_for": 114.14,
+              "points_against": 88.14,
+              "result": "W",
+              "beat_median": false,
+              "median_score": 120.69,
+              "opponent_name": "On To 2026"
+            },
+            {
+              "week": 4,
+              "opponent_id": 7,
+              "points_for": 160.06,
+              "points_against": 173.18,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 134.03,
+              "opponent_name": "Breece Lightning"
+            },
+            {
+              "week": 5,
+              "opponent_id": 1,
+              "points_for": 125.8,
+              "points_against": 154.04,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 142.26,
+              "opponent_name": "208 Ferrari Way"
+            },
+            {
+              "week": 6,
+              "opponent_id": 9,
+              "points_for": 116.16,
+              "points_against": 136.14,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 119.45,
+              "opponent_name": "Gaeta Spur FC"
+            },
+            {
+              "week": 7,
+              "opponent_id": 3,
+              "points_for": 78.18,
+              "points_against": 150.6,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 120.61,
+              "opponent_name": "Bucky\u2019s Depression"
+            },
+            {
+              "week": 8,
+              "opponent_id": 10,
+              "points_for": 132.38,
+              "points_against": 116.12,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 123.63,
+              "opponent_name": "Rashid Shaheed Truthers"
+            },
+            {
+              "week": 9,
+              "opponent_id": 12,
+              "points_for": 107.9,
+              "points_against": 143.54,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 134.37,
+              "opponent_name": "Paper Tigers"
+            },
+            {
+              "week": 10,
+              "opponent_id": 5,
+              "points_for": 91.2,
+              "points_against": 101.86,
+              "result": "L",
+              "beat_median": false,
+              "median_score": 129.65,
+              "opponent_name": "Mommy Rainier "
+            },
+            {
+              "week": 11,
+              "opponent_id": 2,
+              "points_for": 118.66,
+              "points_against": 143.92,
+              "result": "L",
+              "beat_median": true,
+              "median_score": 114.0,
+              "opponent_name": "Like a Good Naber"
+            },
+            {
+              "week": 12,
+              "opponent_id": 4,
+              "points_for": 154.58,
+              "points_against": 126.02,
+              "result": "W",
+              "beat_median": true,
+              "median_score": 121.0,
+              "opponent_name": "Spirit Halloween"
+            },
+            {
+              "week": 13,
+              "opponent_id": 6,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "Washed"
+            },
+            {
+              "week": 14,
+              "opponent_id": 11,
+              "points_for": 0.0,
+              "points_against": 0.0,
+              "result": "UPCOMING",
+              "beat_median": null,
+              "median_score": 0.0,
+              "opponent_name": "On To 2026"
             }
           ]
         },
@@ -2050,7 +2050,7 @@
   "metadata": {
     "current_week": 12,
     "total_weeks": 14,
-    "last_updated": "2025-11-25T11:49:01.283365",
+    "last_updated": "2025-11-25T12:09:17.781563",
     "season": 2025
   }
 }

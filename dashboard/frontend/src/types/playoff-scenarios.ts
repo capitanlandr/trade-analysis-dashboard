@@ -17,7 +17,14 @@ export interface PlayoffScenario {
   eliminated: boolean;
 }
 
+export interface PlayoffScenariosMetadata {
+  current_week: number;
+  last_updated: string;
+  season: number;
+}
+
 export interface PlayoffScenariosData {
+  metadata?: PlayoffScenariosMetadata;
   num_simulations: number;
   results: PlayoffScenario[];
 }
