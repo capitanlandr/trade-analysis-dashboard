@@ -13,10 +13,17 @@ Uses 10,000 random simulations with proper tiebreaker rules.
 import json
 import random
 import logging
+import sys
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from collections import defaultdict
 from copy import deepcopy
+from datetime import datetime
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.api_client import fetch_with_retry, APIError
 
 # Setup logging
 logging.basicConfig(
@@ -24,6 +31,45 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger('Playoff Simulator')
+
+# League configuration
+LEAGUE_ID = "1180814327660371968"
+SLEEPER_API_BASE = "https://api.sleeper.app/v1"
+
+
+def get_current_week(league_id: str = LEAGUE_ID) -> int:
+    """
+    Fetch current week from Sleeper API.
+    
+    Args:
+        league_id: Sleeper league identifier
+        
+    Returns:
+        Current week number (1-14)
+        
+    Raises:
+        APIError: If API call fails after retries
+    """
+    url = f"{SLEEPER_API_BASE}/league/{league_id}"
+    
+    try:
+        logger.info(f"Fetching current week from Sleeper API...")
+        response = fetch_with_retry(url, timeout=10)
+        
+        if response and 'settings' in response and 'leg' in response['settings']:
+            current_week = response['settings']['leg']
+            logger.info(f"Current week from API: {current_week}")
+            return current_week
+        else:
+            logger.warning("API response missing 'settings.leg' field")
+            raise APIError("Invalid API response structure")
+            
+    except Exception as e:
+        logger.error(f"Failed to fetch current week from API: {e}")
+        # Fallback to Week 12 with warning
+        fallback_week = 12
+        logger.warning(f"Using fallback week: {fallback_week}")
+        return fallback_week
 
 
 def load_standings() -> Dict:
@@ -41,8 +87,17 @@ def load_standings() -> Dict:
     raise FileNotFoundError("Standings file not found")
 
 
-def get_remaining_schedule(team_schedule: List[Dict], current_week: int = 11) -> List[Dict]:
-    """Get remaining games for a team"""
+def get_remaining_schedule(team_schedule: List[Dict], current_week: int) -> List[Dict]:
+    """
+    Get remaining games for a team.
+    
+    Args:
+        team_schedule: List of game dictionaries with 'week' field
+        current_week: Current week number (games with week > current_week are remaining)
+        
+    Returns:
+        List of games that haven't been played yet
+    """
     return [game for game in team_schedule if game['week'] > current_week]
 
 
@@ -200,11 +255,20 @@ def simulate_single_scenario(teams: List[Dict], divisions_data: List[Dict],
     }
 
 
-def run_simulations(standings: Dict, num_simulations: int = 10000) -> Dict:
+def run_simulations(standings: Dict, current_week: int, num_simulations: int = 10000) -> Dict:
     """
     Run Monte Carlo simulations to calculate playoff probabilities.
+    
+    Args:
+        standings: Standings data with team records and schedules
+        current_week: Current week number for filtering remaining games
+        num_simulations: Number of simulations to run
+        
+    Returns:
+        Dictionary with playoff probabilities for each team
     """
-    logger.info(f"Running {num_simulations} simulations...")
+    logger.info(f"Starting playoff simulation for Week {current_week}")
+    logger.info(f"Running {num_simulations:,} simulations...")
     
     # Prepare teams data
     all_teams = []
@@ -235,7 +299,7 @@ def run_simulations(standings: Dict, num_simulations: int = 10000) -> Dict:
     processed_matchups = set()
     
     for team in all_teams:
-        remaining = get_remaining_schedule(team['schedule'])
+        remaining = get_remaining_schedule(team['schedule'], current_week)
         for game in remaining:
             week = game['week']
             opponent_name = game['opponent_name']
@@ -256,7 +320,11 @@ def run_simulations(standings: Dict, num_simulations: int = 10000) -> Dict:
                 })
                 processed_matchups.add(week_key)
     
-    logger.info(f"Found {sum(len(m) for m in matchups_by_week.values())} matchups across {len(matchups_by_week)} weeks")
+    total_matchups = sum(len(m) for m in matchups_by_week.values())
+    logger.info(f"Found {total_matchups} remaining matchups across {len(matchups_by_week)} weeks")
+    
+    if total_matchups == 0:
+        logger.warning("No remaining matchups found - season may be complete")
     
     # Run simulations
     for i in range(num_simulations):
@@ -334,7 +402,24 @@ def run_simulations(standings: Dict, num_simulations: int = 10000) -> Dict:
         # Keep projected_seed for backward compatibility (used in display)
         result['projected_seed'] = result['most_likely_seed']
     
+    # Log summary statistics
+    clinched_playoff = sum(1 for r in results if r['clinched_playoff'])
+    clinched_division = sum(1 for r in results if r['clinched_division'])
+    clinched_bye = sum(1 for r in results if r['clinched_bye'])
+    eliminated = sum(1 for r in results if r['eliminated'])
+    
+    logger.info(f"Simulation complete - Summary:")
+    logger.info(f"  Teams clinched playoff: {clinched_playoff}")
+    logger.info(f"  Teams clinched division: {clinched_division}")
+    logger.info(f"  Teams clinched bye: {clinched_bye}")
+    logger.info(f"  Teams eliminated: {eliminated}")
+    
     return {
+        'metadata': {
+            'current_week': current_week,
+            'last_updated': datetime.now().isoformat(),
+            'season': 2025
+        },
         'num_simulations': num_simulations,
         'results': results
     }
@@ -343,18 +428,31 @@ def run_simulations(standings: Dict, num_simulations: int = 10000) -> Dict:
 def main():
     """Main execution"""
     try:
+        # Get current week from Sleeper API
+        logger.info("Fetching current week from Sleeper API...")
+        current_week = get_current_week()
+        logger.info(f"Using current week: {current_week}")
+        
         logger.info("Loading standings data...")
         standings = load_standings()
         
         # Run simulations
-        simulation_results = run_simulations(standings, num_simulations=20000)
+        simulation_results = run_simulations(standings, current_week, num_simulations=20000)
         
-        # Save results
+        # Save results to pipeline directory
         output_file = Path(__file__).parent.parent / 'playoff_scenarios_simulated.json'
         with open(output_file, 'w') as f:
             json.dump(simulation_results, f, indent=2)
         
-        logger.info(f"\n✓ Simulation results saved to: {output_file}")
+        logger.info(f"✓ Simulation results saved to: {output_file}")
+        
+        # Also save to dashboard public directory (go up 3 levels: scripts -> pipeline -> trade-analysis-dashboard-clean)
+        dashboard_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-playoff-scenarios.json'
+        dashboard_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(dashboard_file, 'w') as f:
+            json.dump(simulation_results, f, indent=2)
+        
+        logger.info(f"✓ Dashboard file updated: {dashboard_file}")
         
         # Print summary
         print("\n" + "="*80)
