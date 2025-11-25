@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Calendar, RefreshCw } from 'lucide-react';
+import { Trophy, Calendar, RefreshCw, Star, Award, CheckCircle, XCircle } from 'lucide-react';
 import DivisionTable from '../components/Tables/DivisionTable';
 import TeamScheduleModal from '../components/Modals/TeamScheduleModal';
 import { StandingsData, StandingsTeam } from '../types/standings';
+import { PlayoffScenariosData } from '../types/playoff-scenarios';
 
 const Standings: React.FC = () => {
   const [standingsData, setStandingsData] = useState<StandingsData | null>(null);
+  const [playoffData, setPlayoffData] = useState<PlayoffScenariosData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedTeam, setSelectedTeam] = useState<StandingsTeam | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    loadStandings();
+    loadData();
   }, []);
 
-  const loadStandings = async () => {
+  const loadData = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      const response = await fetch('/api-standings.json');
-      if (!response.ok) {
+      // Load standings
+      const standingsResponse = await fetch('/api-standings.json');
+      if (!standingsResponse.ok) {
         throw new Error('Failed to load standings data');
       }
-      
-      const data: StandingsData = await response.json();
-      setStandingsData(data);
+      const standings: StandingsData = await standingsResponse.json();
+      setStandingsData(standings);
+
+      // Load playoff scenarios
+      try {
+        const playoffResponse = await fetch('/api-playoff-scenarios.json');
+        if (playoffResponse.ok) {
+          const playoff: PlayoffScenariosData = await playoffResponse.json();
+          setPlayoffData(playoff);
+        }
+      } catch (playoffErr) {
+        console.warn('Playoff scenarios not available:', playoffErr);
+        // Continue without playoff data
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load standings');
       console.error('Error loading standings:', err);
@@ -75,7 +89,7 @@ const Standings: React.FC = () => {
             <p className="text-red-800 font-semibold mb-2">Error Loading Standings</p>
             <p className="text-red-600 text-sm">{error}</p>
             <button
-              onClick={loadStandings}
+              onClick={loadData}
               className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
             >
               Try Again
@@ -136,37 +150,80 @@ const Standings: React.FC = () => {
           <DivisionTable
             key={division.division_id}
             division={division}
+            playoffData={playoffData}
             onTeamClick={handleTeamClick}
           />
         ))}
 
         {/* Legend */}
         <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Column Definitions</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-            <div>
-              <span className="font-semibold text-gray-700">Record:</span>
-              <span className="text-gray-600 ml-2">Overall wins-losses</span>
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">Legend</h3>
+          
+          {/* Clinch Indicators */}
+          {playoffData && (
+            <div className="mb-6">
+              <h4 className="text-sm font-semibold text-gray-700 mb-3">Playoff Status Indicators</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-purple-600">
+                    <Star size={14} className="fill-purple-600" />
+                    BYE
+                  </span>
+                  <span className="text-gray-600">Clinched First Round Bye</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-yellow-600">
+                    <Award size={14} className="fill-yellow-600" />
+                    DIV
+                  </span>
+                  <span className="text-gray-600">Clinched Division</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-600">
+                    <CheckCircle size={14} />
+                    PLAYOFF
+                  </span>
+                  <span className="text-gray-600">Clinched Playoff Spot</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-red-600">
+                    <XCircle size={14} />
+                    ELIM
+                  </span>
+                  <span className="text-gray-600">Eliminated from Playoffs</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <span className="font-semibold text-gray-700">H2H:</span>
-              <span className="text-gray-600 ml-2">Head-to-head record</span>
-            </div>
-            <div>
-              <span className="font-semibold text-gray-700">Median:</span>
-              <span className="text-gray-600 ml-2">Games above/below median score</span>
-            </div>
-            <div>
-              <span className="font-semibold text-gray-700">Division:</span>
-              <span className="text-gray-600 ml-2">Record vs division opponents</span>
-            </div>
-            <div>
-              <span className="font-semibold text-gray-700">PF:</span>
-              <span className="text-gray-600 ml-2">Points For (total scored)</span>
-            </div>
-            <div>
-              <span className="font-semibold text-gray-700">PA:</span>
-              <span className="text-gray-600 ml-2">Points Against (total allowed)</span>
+          )}
+
+          {/* Column Definitions */}
+          <div>
+            <h4 className="text-sm font-semibold text-gray-700 mb-3">Column Definitions</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div>
+                <span className="font-semibold text-gray-700">Record:</span>
+                <span className="text-gray-600 ml-2">Overall wins-losses</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">H2H:</span>
+                <span className="text-gray-600 ml-2">Head-to-head record</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">Median:</span>
+                <span className="text-gray-600 ml-2">Games above/below median score</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">Division:</span>
+                <span className="text-gray-600 ml-2">Record vs division opponents</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">PF:</span>
+                <span className="text-gray-600 ml-2">Points For (total scored)</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">PA:</span>
+                <span className="text-gray-600 ml-2">Points Against (total allowed)</span>
+              </div>
             </div>
           </div>
         </div>

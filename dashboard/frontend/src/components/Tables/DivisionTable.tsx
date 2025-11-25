@@ -1,13 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import { Division, StandingsTeam, StandingsSortConfig } from '../../types/standings';
-import { ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
+import { PlayoffScenariosData } from '../../types/playoff-scenarios';
+import { ArrowUpDown, ArrowUp, ArrowDown, CheckCircle, XCircle, Award, Star } from 'lucide-react';
 
 interface DivisionTableProps {
   division: Division;
+  playoffData: PlayoffScenariosData | null;
   onTeamClick: (team: StandingsTeam) => void;
 }
 
-const DivisionTable: React.FC<DivisionTableProps> = ({ division, onTeamClick }) => {
+const DivisionTable: React.FC<DivisionTableProps> = ({ division, playoffData, onTeamClick }) => {
   const [sortConfig, setSortConfig] = useState<StandingsSortConfig>({
     field: 'rank',
     direction: 'asc'
@@ -15,6 +17,65 @@ const DivisionTable: React.FC<DivisionTableProps> = ({ division, onTeamClick }) 
 
   const formatRecord = (wins: number, losses: number, ties?: number) => {
     return ties ? `${wins}-${losses}-${ties}` : `${wins}-${losses}`;
+  };
+
+  const getTeamClinchStatus = (teamName: string) => {
+    if (!playoffData) return null;
+    
+    const teamScenario = playoffData.results.find(r => r.team_name === teamName);
+    if (!teamScenario) return null;
+
+    return {
+      clinched_playoff: teamScenario.clinched_playoff,
+      clinched_division: teamScenario.clinched_division,
+      clinched_bye: teamScenario.clinched_bye,
+      eliminated: teamScenario.eliminated
+    };
+  };
+
+  const renderClinchIndicators = (teamName: string) => {
+    const status = getTeamClinchStatus(teamName);
+    if (!status) return null;
+
+    const indicators = [];
+
+    if (status.clinched_bye) {
+      indicators.push(
+        <span key="bye" className="inline-flex items-center gap-1 text-xs font-semibold text-purple-600" title="Clinched First Round Bye">
+          <Star size={14} className="fill-purple-600" />
+          BYE
+        </span>
+      );
+    } else if (status.clinched_division) {
+      indicators.push(
+        <span key="division" className="inline-flex items-center gap-1 text-xs font-semibold text-yellow-600" title="Clinched Division">
+          <Award size={14} className="fill-yellow-600" />
+          DIV
+        </span>
+      );
+    } else if (status.clinched_playoff) {
+      indicators.push(
+        <span key="playoff" className="inline-flex items-center gap-1 text-xs font-semibold text-green-600" title="Clinched Playoff Spot">
+          <CheckCircle size={14} />
+          PLAYOFF
+        </span>
+      );
+    }
+
+    if (status.eliminated) {
+      indicators.push(
+        <span key="eliminated" className="inline-flex items-center gap-1 text-xs font-semibold text-red-600" title="Eliminated from Playoffs">
+          <XCircle size={14} />
+          ELIM
+        </span>
+      );
+    }
+
+    return indicators.length > 0 ? (
+      <div className="flex items-center gap-2 ml-2">
+        {indicators}
+      </div>
+    ) : null;
   };
 
   const sortedTeams = useMemo(() => {
@@ -186,8 +247,13 @@ const DivisionTable: React.FC<DivisionTableProps> = ({ division, onTeamClick }) 
                 <td className="px-4 py-3 text-sm font-medium text-gray-900">
                   {team.rank}
                 </td>
-                <td className="px-4 py-3 text-sm font-semibold text-blue-600 hover:text-blue-800">
-                  {team.team_name}
+                <td className="px-4 py-3 text-sm">
+                  <div className="flex items-center">
+                    <span className="font-semibold text-blue-600 hover:text-blue-800">
+                      {team.team_name}
+                    </span>
+                    {renderClinchIndicators(team.team_name)}
+                  </div>
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-700">
                   {team.owner_name}
