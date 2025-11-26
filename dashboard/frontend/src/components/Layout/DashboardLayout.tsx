@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { BarChart3, TrendingUp, Trophy, RefreshCw, Award } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { api } from '../../services/api';
 
 const DashboardLayout: React.FC = () => {
   // Fetch standings data to get last update time
