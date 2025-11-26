@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "current_week": 13,
-    "last_updated": "2025-11-26T14:45:11.443148",
+    "current_week": 12,
+    "last_updated": "2025-11-26T11:09:59.411746",
     "season": 2025
   },
   "num_simulations": 20000,
@@ -14,8 +14,8 @@
       "division_winner_probability": 100.0,
       "bye_week_probability": 100.0,
       "seed_probabilities": {
-        "1": 49.6,
-        "2": 50.4
+        "1": 40.7,
+        "2": 59.3
       },
       "playoff_count": 20000,
       "division_winner_count": 20000,
@@ -32,38 +32,40 @@
       "division": "American",
       "current_record": "18-6",
       "playoff_probability": 100.0,
-      "division_winner_probability": 69.1,
-      "bye_week_probability": 69.1,
+      "division_winner_probability": 63.8,
+      "bye_week_probability": 63.8,
       "seed_probabilities": {
-        "4": 30.9,
-        "2": 35.8,
-        "1": 33.3
+        "4": 35.3,
+        "2": 14.8,
+        "1": 49.0,
+        "5": 0.8
       },
       "playoff_count": 20000,
-      "division_winner_count": 13820,
-      "bye_week_count": 13820,
+      "division_winner_count": 12768,
+      "bye_week_count": 12768,
       "clinched_playoff": true,
       "clinched_division": false,
       "clinched_bye": false,
       "eliminated": false,
-      "most_likely_seed": 2,
-      "projected_seed": 2
+      "most_likely_seed": 1,
+      "projected_seed": 1
     },
     {
       "team_name": "208 Ferrari Way",
       "division": "American",
       "current_record": "17-7",
       "playoff_probability": 100.0,
-      "division_winner_probability": 30.9,
-      "bye_week_probability": 30.9,
+      "division_winner_probability": 36.1,
+      "bye_week_probability": 36.1,
       "seed_probabilities": {
-        "2": 13.8,
-        "1": 17.1,
-        "4": 69.1
+        "2": 25.8,
+        "4": 63.1,
+        "1": 10.3,
+        "5": 0.8
       },
       "playoff_count": 20000,
-      "division_winner_count": 6180,
-      "bye_week_count": 6180,
+      "division_winner_count": 7217,
+      "bye_week_count": 7217,
       "clinched_playoff": true,
       "clinched_division": false,
       "clinched_bye": false,
@@ -72,20 +74,22 @@
       "projected_seed": 4
     },
     {
-      "team_name": "Like a Good Naber",
+      "team_name": "ANTIFA",
       "division": "American",
       "current_record": "14-10",
-      "playoff_probability": 100.0,
-      "division_winner_probability": 0.0,
-      "bye_week_probability": 0.0,
+      "playoff_probability": 94.7,
+      "division_winner_probability": 0.1,
+      "bye_week_probability": 0.1,
       "seed_probabilities": {
-        "5": 81.6,
-        "6": 18.4
+        "5": 61.8,
+        "6": 31.3,
+        "4": 1.5,
+        "2": 0.1
       },
-      "playoff_count": 20000,
-      "division_winner_count": 0,
-      "bye_week_count": 0,
-      "clinched_playoff": true,
+      "playoff_count": 18933,
+      "division_winner_count": 15,
+      "bye_week_count": 15,
+      "clinched_playoff": false,
       "clinched_division": false,
       "clinched_bye": false,
       "eliminated": false,
@@ -96,14 +100,14 @@
       "team_name": "Paper Tigers",
       "division": "Wisconsin",
       "current_record": "13-11",
-      "playoff_probability": 82.0,
+      "playoff_probability": 75.0,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 63.5,
-        "5": 18.4
+        "6": 41.0,
+        "5": 34.0
       },
-      "playoff_count": 16391,
+      "playoff_count": 15002,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -114,17 +118,17 @@
       "projected_seed": 6
     },
     {
-      "team_name": "TRIPS \ud83d\udd25",
+      "team_name": "Washed",
       "division": "Chicago",
       "current_record": "9-15",
-      "playoff_probability": 58.1,
-      "division_winner_probability": 58.1,
+      "playoff_probability": 49.5,
+      "division_winner_probability": 49.5,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "3": 58.1
+        "3": 49.5
       },
-      "playoff_count": 11610,
-      "division_winner_count": 11610,
+      "playoff_count": 9891,
+      "division_winner_count": 9891,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
@@ -134,17 +138,17 @@
       "projected_seed": 3
     },
     {
-      "team_name": "Washed",
+      "team_name": "TRIPS \ud83d\udd25",
       "division": "Chicago",
       "current_record": "9-15",
-      "playoff_probability": 41.9,
-      "division_winner_probability": 41.9,
+      "playoff_probability": 48.7,
+      "division_winner_probability": 48.7,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "3": 41.9
+        "3": 48.7
       },
-      "playoff_count": 8390,
-      "division_winner_count": 8390,
+      "playoff_count": 9733,
+      "division_winner_count": 9733,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
@@ -157,13 +161,14 @@
       "team_name": "Gaeta Spur FC",
       "division": "Wisconsin",
       "current_record": "11-13",
-      "playoff_probability": 7.5,
+      "playoff_probability": 13.5,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 7.5
+        "6": 13.1,
+        "5": 0.4
       },
-      "playoff_count": 1503,
+      "playoff_count": 2698,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -177,13 +182,14 @@
       "team_name": "Rashid Shaheed Truthers",
       "division": "Wisconsin",
       "current_record": "11-13",
-      "playoff_probability": 6.4,
+      "playoff_probability": 10.7,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 6.4
+        "6": 8.9,
+        "5": 1.8
       },
-      "playoff_count": 1274,
+      "playoff_count": 2138,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -197,13 +203,14 @@
       "team_name": "Mommy Rainier ",
       "division": "American",
       "current_record": "11-13",
-      "playoff_probability": 4.2,
+      "playoff_probability": 6.1,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 4.2
+        "5": 0.5,
+        "6": 5.6
       },
-      "playoff_count": 832,
+      "playoff_count": 1229,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -217,17 +224,19 @@
       "team_name": "Spirit Halloween",
       "division": "Chicago",
       "current_record": "7-17",
-      "playoff_probability": 0.0,
-      "division_winner_probability": 0.0,
+      "playoff_probability": 1.8,
+      "division_winner_probability": 1.8,
       "bye_week_probability": 0.0,
-      "seed_probabilities": {},
-      "playoff_count": 0,
-      "division_winner_count": 0,
+      "seed_probabilities": {
+        "3": 1.8
+      },
+      "playoff_count": 366,
+      "division_winner_count": 366,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
       "clinched_bye": false,
-      "eliminated": true,
+      "eliminated": false,
       "most_likely_seed": null,
       "projected_seed": null
     },
@@ -235,17 +244,19 @@
       "team_name": "On To 2026",
       "division": "Chicago",
       "current_record": "6-18",
-      "playoff_probability": 0.0,
-      "division_winner_probability": 0.0,
+      "playoff_probability": 0.1,
+      "division_winner_probability": 0.1,
       "bye_week_probability": 0.0,
-      "seed_probabilities": {},
-      "playoff_count": 0,
-      "division_winner_count": 0,
+      "seed_probabilities": {
+        "3": 0.1
+      },
+      "playoff_count": 10,
+      "division_winner_count": 10,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
       "clinched_bye": false,
-      "eliminated": true,
+      "eliminated": false,
       "most_likely_seed": null,
       "projected_seed": null
     }

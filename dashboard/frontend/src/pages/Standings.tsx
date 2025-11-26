@@ -128,7 +128,7 @@ const Standings: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-gray-500" />
                 <span className="text-gray-600">
-                  Week {standingsData.metadata.current_week} of {standingsData.metadata.total_weeks}
+                  Through the end of Week {standingsData.metadata.current_week}
                 </span>
               </div>
               <div className="text-gray-500">
@@ -197,7 +197,7 @@ const Standings: React.FC = () => {
           )}
 
           {/* Column Definitions */}
-          <div>
+          <div className="mb-6">
             <h4 className="text-sm font-semibold text-gray-700 mb-3">Column Definitions</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
               <div>
@@ -224,6 +224,19 @@ const Standings: React.FC = () => {
                 <span className="font-semibold text-gray-700">PA:</span>
                 <span className="text-gray-600 ml-2">Points Against (total allowed)</span>
               </div>
+            </div>
+          </div>
+
+          {/* Tiebreaker Rules */}
+          <div>
+            <h4 className="text-sm font-semibold text-gray-700 mb-3">Tiebreaker Rules</h4>
+            <div className="text-sm text-gray-600 space-y-2">
+              <p>When teams have identical records, the following tiebreakers are applied in order:</p>
+              <ol className="list-decimal list-inside space-y-1 ml-2">
+                <li><span className="font-semibold text-gray-700">Head-to-Head Record</span> - Winner of matchups between tied teams</li>
+                <li><span className="font-semibold text-gray-700">Division Record</span> - Better record against division opponents</li>
+                <li><span className="font-semibold text-gray-700">Points For (PF)</span> - Higher total points scored</li>
+              </ol>
             </div>
           </div>
         </div>

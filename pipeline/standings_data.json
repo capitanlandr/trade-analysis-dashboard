@@ -11,22 +11,22 @@
           "rank": 1,
           "record": {
             "wins": 9,
-            "losses": 16,
-            "ties": 1
+            "losses": 15,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 6,
             "losses": 6,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 3,
-            "losses": 10
+            "losses": 9
           },
           "division_record": {
             "wins": 3,
             "losses": 1,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1390.44,
           "points_against": 1393.56,
@@ -156,8 +156,8 @@
               "opponent_id": 8,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "TRIPS \ud83d\udd25"
             },
@@ -180,22 +180,22 @@
           "rank": 2,
           "record": {
             "wins": 9,
-            "losses": 16,
-            "ties": 1
+            "losses": 15,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 4,
             "losses": 8,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 5,
-            "losses": 8
+            "losses": 7
           },
           "division_record": {
             "wins": 3,
             "losses": 1,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1417.94,
           "points_against": 1556.14,
@@ -325,8 +325,8 @@
               "opponent_id": 6,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Washed"
             },
@@ -349,22 +349,22 @@
           "rank": 3,
           "record": {
             "wins": 7,
-            "losses": 18,
-            "ties": 1
+            "losses": 17,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 3,
             "losses": 9,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 4,
-            "losses": 9
+            "losses": 8
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1310.54,
           "points_against": 1588.34,
@@ -494,8 +494,8 @@
               "opponent_id": 11,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "On To 2026"
             },
@@ -518,22 +518,22 @@
           "rank": 4,
           "record": {
             "wins": 6,
-            "losses": 19,
-            "ties": 1
+            "losses": 18,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 4,
             "losses": 8,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 2,
-            "losses": 11
+            "losses": 10
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1190.24,
           "points_against": 1495.44,
@@ -663,8 +663,8 @@
               "opponent_id": 4,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Spirit Halloween"
             },
@@ -693,22 +693,22 @@
           "rank": 1,
           "record": {
             "wins": 18,
-            "losses": 7,
-            "ties": 1
+            "losses": 6,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 8,
             "losses": 4,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 10,
-            "losses": 3
+            "losses": 2
           },
           "division_record": {
             "wins": 3,
             "losses": 1,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1586.94,
           "points_against": 1481.8,
@@ -838,8 +838,8 @@
               "opponent_id": 12,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Paper Tigers"
             },
@@ -862,22 +862,22 @@
           "rank": 2,
           "record": {
             "wins": 13,
-            "losses": 12,
-            "ties": 1
+            "losses": 11,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 7,
             "losses": 5,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 6,
-            "losses": 7
+            "losses": 6
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1516.72,
           "points_against": 1407.44,
@@ -1007,8 +1007,8 @@
               "opponent_id": 3,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Bucky\u2019s Depression"
             },
@@ -1031,22 +1031,22 @@
           "rank": 3,
           "record": {
             "wins": 11,
-            "losses": 14,
-            "ties": 1
+            "losses": 13,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 6,
             "losses": 6,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 5,
-            "losses": 8
+            "losses": 7
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1443.42,
           "points_against": 1391.96,
@@ -1176,8 +1176,8 @@
               "opponent_id": 10,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Rashid Shaheed Truthers"
             },
@@ -1200,22 +1200,22 @@
           "rank": 4,
           "record": {
             "wins": 11,
-            "losses": 14,
-            "ties": 1
+            "losses": 13,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 5,
             "losses": 7,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 6,
-            "losses": 7
+            "losses": 6
           },
           "division_record": {
             "wins": 3,
             "losses": 1,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1433.5,
           "points_against": 1523.52,
@@ -1345,8 +1345,8 @@
               "opponent_id": 9,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Gaeta Spur FC"
             },
@@ -1375,22 +1375,22 @@
           "rank": 1,
           "record": {
             "wins": 18,
-            "losses": 7,
-            "ties": 1
+            "losses": 6,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 8,
             "losses": 4,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 10,
-            "losses": 3
+            "losses": 2
           },
           "division_record": {
             "wins": 2,
             "losses": 2,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1770.0,
           "points_against": 1616.02,
@@ -1520,8 +1520,8 @@
               "opponent_id": 5,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Mommy Rainier "
             },
@@ -1544,22 +1544,22 @@
           "rank": 2,
           "record": {
             "wins": 17,
-            "losses": 8,
-            "ties": 1
+            "losses": 7,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 9,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 8,
-            "losses": 5
+            "losses": 4
           },
           "division_record": {
             "wins": 4,
             "losses": 0,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1711.48,
           "points_against": 1481.4,
@@ -1689,8 +1689,8 @@
               "opponent_id": 2,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "ANTIFA"
             },
@@ -1713,22 +1713,22 @@
           "rank": 3,
           "record": {
             "wins": 14,
-            "losses": 11,
-            "ties": 1
+            "losses": 10,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 6,
             "losses": 6,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 8,
-            "losses": 5
+            "losses": 4
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1704.14,
           "points_against": 1562.28,
@@ -1858,8 +1858,8 @@
               "opponent_id": 1,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "208 Ferrari Way"
             },
@@ -1882,22 +1882,22 @@
           "rank": 4,
           "record": {
             "wins": 11,
-            "losses": 14,
-            "ties": 1
+            "losses": 13,
+            "ties": 0
           },
           "matchup_record": {
             "wins": 6,
             "losses": 6,
-            "ties": 1
+            "ties": 0
           },
           "median_record": {
             "wins": 5,
-            "losses": 8
+            "losses": 7
           },
           "division_record": {
             "wins": 1,
             "losses": 3,
-            "ties": 1
+            "ties": 0
           },
           "points_for": 1469.92,
           "points_against": 1447.38,
@@ -2027,8 +2027,8 @@
               "opponent_id": 7,
               "points_for": 0.0,
               "points_against": 0.0,
-              "result": "T",
-              "beat_median": false,
+              "result": "UPCOMING",
+              "beat_median": null,
               "median_score": 0.0,
               "opponent_name": "Breece Lightning"
             },
@@ -2048,9 +2048,9 @@
     }
   ],
   "metadata": {
-    "current_week": 13,
+    "current_week": 12,
     "total_weeks": 14,
-    "last_updated": "2025-11-26T14:44:52.032524",
+    "last_updated": "2025-11-26T11:09:47.653654",
     "season": 2025
   }
 }

@@ -138,7 +138,7 @@ def build_schedule_data(rosters: List[Dict], current_week: int) -> Dict[int, Lis
                 points_for = matchup.get('points', 0)
                 points_against = matchup_lookup.get(opponent_id, {}).get('points', 0) if opponent_id else 0
                 
-                # Determine result
+                # Determine result - weeks <= current_week are completed
                 if week <= current_week:
                     if points_for > points_against:
                         result = 'W'
@@ -423,9 +423,13 @@ def main():
         rosters = fetch_rosters()
         user_map = fetch_users()
         
-        # Determine current week (simplified - could be enhanced)
-        current_week = league_info.get('settings', {}).get('leg', 1)
-        logger.info(f"Current week: {current_week}")
+        # Determine current week from Sleeper API
+        # Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week
+        # So we subtract 1 to get the last completed week for standings
+        sleeper_current_week = league_info.get('settings', {}).get('leg', 1)
+        current_week = max(1, sleeper_current_week - 1)  # Ensure we don't go below week 1
+        logger.info(f"Sleeper current week (upcoming): {sleeper_current_week}")
+        logger.info(f"Last completed week (for standings): {current_week}")
         
         # Build schedule and calculate records
         schedules = build_schedule_data(rosters, current_week)

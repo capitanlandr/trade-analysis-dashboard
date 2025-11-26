@@ -1,84 +1,35 @@
 {
-  "generated_at": "2025-11-18",
-  "current_week": 11,
-  "weeks_remaining": 3,
+  "generated_at": "2025-11-26",
+  "current_week": 12,
+  "weeks_remaining": 2,
   "playoff_spots": 6,
   "scenarios": [
     {
-      "team_name": "Breece Lightning",
+      "team_name": "Bucky\u2019s Depression",
       "current_record": {
-        "wins": 17,
-        "losses": 5
+        "wins": 18,
+        "losses": 6
       },
       "current_seed": 1,
       "in_playoffs": true,
-      "remaining_games": 3,
-      "best_case_record": "23-5",
-      "worst_case_record": "17-11",
-      "playoff_status": {
-        "clinched": false,
-        "eliminated": false,
-        "magic_number": null,
-        "clinch_scenarios": []
-      },
-      "division_status": {
-        "clinched": false,
-        "eliminated": false,
-        "magic_numbers": {
-          "208 Ferrari Way": 5,
-          "Like a Good Naber": 4
-        }
-      },
-      "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "208 Ferrari Way"
-        },
-        {
-          "week": 13,
-          "opponent": "Mommy Rainier "
-        },
-        {
-          "week": 14,
-          "opponent": "Like a Good Naber"
-        }
-      ],
-      "division": "American"
-    },
-    {
-      "team_name": "Tyler Is Scared",
-      "current_record": {
-        "wins": 16,
-        "losses": 6
-      },
-      "current_seed": 2,
-      "in_playoffs": true,
-      "remaining_games": 3,
+      "remaining_games": 2,
       "best_case_record": "22-6",
-      "worst_case_record": "16-12",
+      "worst_case_record": "18-10",
       "playoff_status": {
-        "clinched": false,
+        "clinched": true,
         "eliminated": false,
         "magic_number": null,
         "clinch_scenarios": []
       },
       "division_status": {
-        "clinched": false,
+        "clinched": true,
         "eliminated": false,
-        "magic_numbers": {
-          "The Life of Showtime": 4,
-          "Rashid Shaheed Truthers": 1,
-          "Gaeta Spur FC": 1
-        }
+        "magic_numbers": {}
       },
       "key_matchups": [
         {
-          "week": 12,
-          "opponent": "Gaeta Spur FC"
-        },
-        {
           "week": 13,
-          "opponent": "The Life of Showtime"
+          "opponent": "Paper Tigers"
         },
         {
           "week": 14,
@@ -88,16 +39,89 @@
       "division": "Wisconsin"
     },
     {
+      "team_name": "Breece Lightning",
+      "current_record": {
+        "wins": 18,
+        "losses": 6
+      },
+      "current_seed": 2,
+      "in_playoffs": true,
+      "remaining_games": 2,
+      "best_case_record": "22-6",
+      "worst_case_record": "18-10",
+      "playoff_status": {
+        "clinched": false,
+        "eliminated": false,
+        "magic_number": null,
+        "clinch_scenarios": []
+      },
+      "division_status": {
+        "clinched": false,
+        "eliminated": false,
+        "magic_numbers": {
+          "208 Ferrari Way": 4,
+          "ANTIFA": 1
+        }
+      },
+      "key_matchups": [
+        {
+          "week": 13,
+          "opponent": "Mommy Rainier "
+        },
+        {
+          "week": 14,
+          "opponent": "ANTIFA"
+        }
+      ],
+      "division": "American"
+    },
+    {
       "team_name": "208 Ferrari Way",
       "current_record": {
-        "wins": 15,
+        "wins": 17,
         "losses": 7
       },
       "current_seed": 4,
       "in_playoffs": true,
-      "remaining_games": 3,
+      "remaining_games": 2,
       "best_case_record": "21-7",
-      "worst_case_record": "15-13",
+      "worst_case_record": "17-11",
+      "playoff_status": {
+        "clinched": true,
+        "eliminated": false,
+        "magic_number": null,
+        "clinch_scenarios": []
+      },
+      "division_status": {
+        "clinched": false,
+        "eliminated": true,
+        "magic_numbers": {
+          "ANTIFA": 2
+        }
+      },
+      "key_matchups": [
+        {
+          "week": 13,
+          "opponent": "ANTIFA"
+        },
+        {
+          "week": 14,
+          "opponent": "Mommy Rainier "
+        }
+      ],
+      "division": "American"
+    },
+    {
+      "team_name": "ANTIFA",
+      "current_record": {
+        "wins": 14,
+        "losses": 10
+      },
+      "current_seed": 5,
+      "in_playoffs": true,
+      "remaining_games": 2,
+      "best_case_record": "18-10",
+      "worst_case_record": "14-14",
       "playoff_status": {
         "clinched": false,
         "eliminated": false,
@@ -110,37 +134,32 @@
         "clinched": false,
         "eliminated": true,
         "magic_numbers": {
-          "Like a Good Naber": 6,
           "Mommy Rainier ": 2
         }
       },
       "key_matchups": [
         {
-          "week": 12,
-          "opponent": "Breece Lightning"
-        },
-        {
           "week": 13,
-          "opponent": "Like a Good Naber"
+          "opponent": "208 Ferrari Way"
         },
         {
           "week": 14,
-          "opponent": "Mommy Rainier "
+          "opponent": "Breece Lightning"
         }
       ],
       "division": "American"
     },
     {
-      "team_name": "Like a Good Naber",
+      "team_name": "Paper Tigers",
       "current_record": {
-        "wins": 14,
-        "losses": 8
+        "wins": 13,
+        "losses": 11
       },
-      "current_seed": 5,
+      "current_seed": 6,
       "in_playoffs": true,
-      "remaining_games": 3,
-      "best_case_record": "20-8",
-      "worst_case_record": "14-14",
+      "remaining_games": 2,
+      "best_case_record": "17-11",
+      "worst_case_record": "13-15",
       "playoff_status": {
         "clinched": false,
         "eliminated": false,
@@ -154,61 +173,14 @@
         "clinched": false,
         "eliminated": true,
         "magic_numbers": {
-          "Mommy Rainier ": 3
+          "Gaeta Spur FC": 3,
+          "Rashid Shaheed Truthers": 3
         }
       },
       "key_matchups": [
         {
-          "week": 12,
-          "opponent": "Mommy Rainier "
-        },
-        {
           "week": 13,
-          "opponent": "208 Ferrari Way"
-        },
-        {
-          "week": 14,
-          "opponent": "Breece Lightning"
-        }
-      ],
-      "division": "American"
-    },
-    {
-      "team_name": "The Life of Showtime",
-      "current_record": {
-        "wins": 13,
-        "losses": 9
-      },
-      "current_seed": 6,
-      "in_playoffs": true,
-      "remaining_games": 3,
-      "best_case_record": "19-9",
-      "worst_case_record": "13-15",
-      "playoff_status": {
-        "clinched": false,
-        "eliminated": false,
-        "magic_number": 4,
-        "clinch_scenarios": [
-          "Win 2-0 in Week 12 + 2-0 in Week 13",
-          "Win 2-0 in Week 12 + 1-1 in Week 13 + 1-1 in Week 14"
-        ]
-      },
-      "division_status": {
-        "clinched": false,
-        "eliminated": true,
-        "magic_numbers": {
-          "Rashid Shaheed Truthers": 4,
-          "Gaeta Spur FC": 4
-        }
-      },
-      "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "Rashid Shaheed Truthers"
-        },
-        {
-          "week": 13,
-          "opponent": "Tyler Is Scared"
+          "opponent": "Bucky\u2019s Depression"
         },
         {
           "week": 14,
@@ -220,14 +192,14 @@
     {
       "team_name": "Washed",
       "current_record": {
-        "wins": 8,
-        "losses": 14
+        "wins": 9,
+        "losses": 15
       },
       "current_seed": 3,
       "in_playoffs": true,
-      "remaining_games": 3,
-      "best_case_record": "14-14",
-      "worst_case_record": "8-20",
+      "remaining_games": 2,
+      "best_case_record": "13-15",
+      "worst_case_record": "9-19",
       "playoff_status": {
         "clinched": false,
         "eliminated": false,
@@ -236,18 +208,13 @@
       },
       "division_status": {
         "clinched": false,
-        "eliminated": false,
+        "eliminated": true,
         "magic_numbers": {
-          "TRIPS \ud83d\udd25": 6,
-          "Spirit Halloween": 5,
-          "On To 2026": 5
+          "Spirit Halloween": 3,
+          "On To 2026": 2
         }
       },
       "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "On To 2026"
-        },
         {
           "week": 13,
           "opponent": "TRIPS \ud83d\udd25"
@@ -260,54 +227,16 @@
       "division": "Chicago"
     },
     {
-      "team_name": "Rashid Shaheed Truthers",
-      "current_record": {
-        "wins": 10,
-        "losses": 12
-      },
-      "current_seed": null,
-      "in_playoffs": false,
-      "remaining_games": 3,
-      "best_case_record": "16-12",
-      "worst_case_record": "10-18",
-      "playoff_status": {
-        "clinched": false,
-        "eliminated": true,
-        "magic_number": null,
-        "clinch_scenarios": []
-      },
-      "division_status": {
-        "clinched": false,
-        "eliminated": true,
-        "magic_numbers": {}
-      },
-      "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "The Life of Showtime"
-        },
-        {
-          "week": 13,
-          "opponent": "Gaeta Spur FC"
-        },
-        {
-          "week": 14,
-          "opponent": "Tyler Is Scared"
-        }
-      ],
-      "division": "Wisconsin"
-    },
-    {
       "team_name": "Gaeta Spur FC",
       "current_record": {
-        "wins": 10,
-        "losses": 12
+        "wins": 11,
+        "losses": 13
       },
       "current_seed": null,
       "in_playoffs": false,
-      "remaining_games": 3,
-      "best_case_record": "16-12",
-      "worst_case_record": "10-18",
+      "remaining_games": 2,
+      "best_case_record": "15-13",
+      "worst_case_record": "11-17",
       "playoff_status": {
         "clinched": false,
         "eliminated": true,
@@ -320,17 +249,47 @@
         "magic_numbers": {}
       },
       "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "Tyler Is Scared"
-        },
         {
           "week": 13,
           "opponent": "Rashid Shaheed Truthers"
         },
         {
           "week": 14,
-          "opponent": "The Life of Showtime"
+          "opponent": "Paper Tigers"
+        }
+      ],
+      "division": "Wisconsin"
+    },
+    {
+      "team_name": "Rashid Shaheed Truthers",
+      "current_record": {
+        "wins": 11,
+        "losses": 13
+      },
+      "current_seed": null,
+      "in_playoffs": false,
+      "remaining_games": 2,
+      "best_case_record": "15-13",
+      "worst_case_record": "11-17",
+      "playoff_status": {
+        "clinched": false,
+        "eliminated": true,
+        "magic_number": null,
+        "clinch_scenarios": []
+      },
+      "division_status": {
+        "clinched": false,
+        "eliminated": true,
+        "magic_numbers": {}
+      },
+      "key_matchups": [
+        {
+          "week": 13,
+          "opponent": "Gaeta Spur FC"
+        },
+        {
+          "week": 14,
+          "opponent": "Bucky\u2019s Depression"
         }
       ],
       "division": "Wisconsin"
@@ -338,14 +297,14 @@
     {
       "team_name": "Mommy Rainier ",
       "current_record": {
-        "wins": 10,
-        "losses": 12
+        "wins": 11,
+        "losses": 13
       },
       "current_seed": null,
       "in_playoffs": false,
-      "remaining_games": 3,
-      "best_case_record": "16-12",
-      "worst_case_record": "10-18",
+      "remaining_games": 2,
+      "best_case_record": "15-13",
+      "worst_case_record": "11-17",
       "playoff_status": {
         "clinched": false,
         "eliminated": true,
@@ -358,10 +317,6 @@
         "magic_numbers": {}
       },
       "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "Like a Good Naber"
-        },
         {
           "week": 13,
           "opponent": "Breece Lightning"
@@ -376,14 +331,14 @@
     {
       "team_name": "TRIPS \ud83d\udd25",
       "current_record": {
-        "wins": 7,
+        "wins": 9,
         "losses": 15
       },
       "current_seed": null,
       "in_playoffs": false,
-      "remaining_games": 3,
+      "remaining_games": 2,
       "best_case_record": "13-15",
-      "worst_case_record": "7-21",
+      "worst_case_record": "9-19",
       "playoff_status": {
         "clinched": false,
         "eliminated": true,
@@ -394,15 +349,11 @@
         "clinched": false,
         "eliminated": true,
         "magic_numbers": {
-          "Spirit Halloween": 6,
-          "On To 2026": 6
+          "Spirit Halloween": 3,
+          "On To 2026": 2
         }
       },
       "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "Spirit Halloween"
-        },
         {
           "week": 13,
           "opponent": "Washed"
@@ -417,14 +368,14 @@
     {
       "team_name": "Spirit Halloween",
       "current_record": {
-        "wins": 6,
-        "losses": 16
+        "wins": 7,
+        "losses": 17
       },
       "current_seed": null,
       "in_playoffs": false,
-      "remaining_games": 3,
-      "best_case_record": "12-16",
-      "worst_case_record": "6-22",
+      "remaining_games": 2,
+      "best_case_record": "11-17",
+      "worst_case_record": "7-21",
       "playoff_status": {
         "clinched": false,
         "eliminated": true,
@@ -434,13 +385,11 @@
       "division_status": {
         "clinched": false,
         "eliminated": true,
-        "magic_numbers": {}
+        "magic_numbers": {
+          "On To 2026": 4
+        }
       },
       "key_matchups": [
-        {
-          "week": 12,
-          "opponent": "TRIPS \ud83d\udd25"
-        },
         {
           "week": 13,
           "opponent": "On To 2026"
@@ -456,12 +405,12 @@
       "team_name": "On To 2026",
       "current_record": {
         "wins": 6,
-        "losses": 16
+        "losses": 18
       },
       "current_seed": null,
       "in_playoffs": false,
-      "remaining_games": 3,
-      "best_case_record": "12-16",
+      "remaining_games": 2,
+      "best_case_record": "10-18",
       "worst_case_record": "6-22",
       "playoff_status": {
         "clinched": false,
@@ -476,10 +425,6 @@
       },
       "key_matchups": [
         {
-          "week": 12,
-          "opponent": "Washed"
-        },
-        {
           "week": 13,
           "opponent": "Spirit Halloween"
         },
@@ -492,11 +437,16 @@
     }
   ],
   "summary": {
-    "clinched_playoff": [],
-    "clinched_division": [],
+    "clinched_playoff": [
+      "Bucky\u2019s Depression",
+      "208 Ferrari Way"
+    ],
+    "clinched_division": [
+      "Bucky\u2019s Depression"
+    ],
     "eliminated": [
-      "Rashid Shaheed Truthers",
       "Gaeta Spur FC",
+      "Rashid Shaheed Truthers",
       "Mommy Rainier ",
       "TRIPS \ud83d\udd25",
       "Spirit Halloween",
@@ -504,10 +454,8 @@
     ],
     "in_contention": [
       "Breece Lightning",
-      "Tyler Is Scared",
-      "208 Ferrari Way",
-      "Like a Good Naber",
-      "The Life of Showtime",
+      "ANTIFA",
+      "Paper Tigers",
       "Washed"
     ]
   }
