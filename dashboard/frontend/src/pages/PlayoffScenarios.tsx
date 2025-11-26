@@ -10,7 +10,14 @@ const PlayoffScenarios: React.FC = () => {
     fetch('/api-playoff-scenarios.json')
       .then(res => res.json())
       .then(data => {
-        setData(data);
+        // Sort by current seed (nulls at the end)
+        const sortedResults = [...data.results].sort((a, b) => {
+          if (a.current_seed === null && b.current_seed === null) return 0;
+          if (a.current_seed === null) return 1;
+          if (b.current_seed === null) return -1;
+          return a.current_seed - b.current_seed;
+        });
+        setData({ ...data, results: sortedResults });
         setLoading(false);
       })
       .catch(err => {
@@ -57,7 +64,10 @@ const PlayoffScenarios: React.FC = () => {
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Seed
+                  Projected Seed
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Current Seed
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Team
@@ -89,6 +99,9 @@ const PlayoffScenarios: React.FC = () => {
                     {scenario.most_likely_seed || 'N/A'}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    {scenario.current_seed || 'N/A'}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     {scenario.team_name}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -116,14 +129,45 @@ const PlayoffScenarios: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h3 className="text-sm font-semibold text-blue-900 mb-2">How to Read This</h3>
-        <ul className="text-sm text-blue-800 space-y-1">
-          <li><strong>Playoff %:</strong> Chance of making top 6 (3 division winners + 3 wildcards)</li>
-          <li><strong>Division %:</strong> Chance of winning your division (automatic playoff berth)</li>
-          <li><strong>Bye Week %:</strong> Chance of getting top 2 seed (skip wild card round)</li>
-          <li><strong>Projected Seed:</strong> Most likely playoff seed based on current standings</li>
-        </ul>
+      <div className="mt-6 space-y-4">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-blue-900 mb-2">How to Read This</h3>
+          <ul className="text-sm text-blue-800 space-y-1">
+            <li><strong>Projected Seed:</strong> Most likely playoff seed based on {data.num_simulations.toLocaleString()} simulations of remaining games</li>
+            <li><strong>Current Seed:</strong> Playoff seed if the season ended today (based on current standings)</li>
+            <li><strong>Playoff %:</strong> Probability of making top 6 (3 division winners + 3 wildcards)</li>
+            <li><strong>Division %:</strong> Probability of winning your division (automatic playoff berth)</li>
+            <li><strong>Bye Week %:</strong> Probability of getting top 2 seed (skip wild card round)</li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-gray-900 mb-2">Simulation Methodology</h3>
+          <div className="text-sm text-gray-700 space-y-2">
+            <p>
+              These probabilities are calculated by running {data.num_simulations.toLocaleString()} Monte Carlo simulations 
+              of all remaining regular season games. Each simulation:
+            </p>
+            <ol className="list-decimal list-inside space-y-1 ml-2">
+              <li>Randomly determines the outcome of each remaining matchup (win/loss for each team)</li>
+              <li>Calculates final standings using official playoff tiebreaker rules:
+                <ul className="list-disc list-inside ml-6 mt-1 space-y-0.5">
+                  <li>Overall win/loss record</li>
+                  <li>Head-to-head record</li>
+                  <li>Division record</li>
+                  <li>Total points scored</li>
+                  <li>Points against (lower is better)</li>
+                </ul>
+              </li>
+              <li>Determines playoff seeding (3 division winners + 3 wildcards by record)</li>
+              <li>Records which teams made playoffs, won divisions, and earned byes</li>
+            </ol>
+            <p className="mt-2">
+              The percentages represent how often each outcome occurred across all simulations. 
+              For example, a 75% playoff probability means the team made the playoffs in 75% of the simulated scenarios.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

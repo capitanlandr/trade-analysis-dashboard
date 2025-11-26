@@ -7,6 +7,7 @@ export interface PlayoffScenario {
   bye_week_probability: number;
   projected_seed: number | null;
   most_likely_seed: number | null;
+  current_seed: number | null;  // Seed if season ended today
   seed_probabilities: Record<number, number>;
   playoff_count: number;
   division_winner_count: number;

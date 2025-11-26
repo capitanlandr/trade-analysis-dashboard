@@ -316,6 +316,24 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
             }
             all_teams.append(team_data)
     
+    # Calculate current playoff seeding (if season ended today)
+    logger.info("Calculating current playoff seeding...")
+    current_seeding_teams = []
+    for team in all_teams:
+        current_seeding_teams.append({
+            'roster_id': team['roster_id'],
+            'team_name': team['team_name'],
+            'division_id': team['division_id'],
+            'sim_wins': team['current_wins'],
+            'sim_division_wins': team['current_division_wins'],
+            'sim_points_for': team['points_for'],
+            'sim_points_against': team['points_against'],
+            'h2h_wins': team['historical_h2h'].copy()
+        })
+    
+    current_playoff_teams = calculate_playoff_seeding(current_seeding_teams, standings['divisions'])
+    current_seed_map = {team['team_name']: idx + 1 for idx, team in enumerate(current_playoff_teams)}
+    
     # Build matchup schedule for remaining weeks
     matchups_by_week = defaultdict(list)
     processed_matchups = set()
@@ -408,21 +426,22 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
             'clinched_playoff': playoff_prob == 100.0,
             'clinched_division': division_prob == 100.0,
             'clinched_bye': bye_prob == 100.0,
-            'eliminated': playoff_prob == 0.0
+            'eliminated': playoff_prob == 0.0,
+            'current_seed': current_seed_map.get(team['team_name'])  # Seed if season ended today
         })
     
     # Sort by playoff probability
     results.sort(key=lambda r: r['playoff_probability'], reverse=True)
     
-    # Assign most_likely_seed only to top 6 teams (those with realistic playoff chances)
+    # Assign most_likely_seed (projected seed from simulations) to top 6 teams
     for i, result in enumerate(results):
         if i < 6 and result['seed_probabilities']:
-            # Find the seed they get most often
+            # Find the seed they get most often in simulations
             result['most_likely_seed'] = max(result['seed_probabilities'].items(), key=lambda x: x[1])[0]
         else:
             result['most_likely_seed'] = None
         
-        # Keep projected_seed for backward compatibility (used in display)
+        # projected_seed = most likely seed from simulations (different from current_seed)
         result['projected_seed'] = result['most_likely_seed']
     
     # Log summary statistics
