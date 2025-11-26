@@ -124,16 +124,11 @@ const Standings: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
-                <Calendar size={16} className="text-gray-500" />
-                <span className="text-gray-600">
-                  Through the end of Week {standingsData.metadata.current_week}
-                </span>
-              </div>
-              <div className="text-gray-500">
-                Updated: {formatDate(standingsData.metadata.last_updated)}
-              </div>
+            <div className="flex items-center gap-2 text-sm ml-auto">
+              <Calendar size={16} className="text-gray-500" />
+              <span className="text-gray-600">
+                Through the end of Week {standingsData.metadata.current_week}
+              </span>
             </div>
           </div>
         </div>

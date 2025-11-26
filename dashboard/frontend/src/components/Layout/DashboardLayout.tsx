@@ -5,13 +5,14 @@ import { useQuery } from '@tanstack/react-query';
 import { api } from '../../services/api';
 
 const DashboardLayout: React.FC = () => {
-  const { data: statusData } = useQuery({
-    queryKey: ['status'],
-    queryFn: () => api.status(),
+  // Fetch standings data to get last update time
+  const { data: standingsData } = useQuery({
+    queryKey: ['standings'],
+    queryFn: () => fetch('/api-standings.json').then(res => res.json()),
     refetchInterval: 30000, // Refresh every 30 seconds
   });
 
-  const lastUpdate = (statusData?.data as any)?.lastDataUpdate;
+  const lastUpdate = standingsData?.metadata?.last_updated;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,6 +29,17 @@ const DashboardLayout: React.FC = () => {
                 <p className="text-sm text-gray-500">
                   Trade Analytics & League Standings
                 </p>
+                <p className="text-xs text-gray-400">
+                  League ID:{' '}
+                  <a
+                    href="https://sleeper.com/leagues/1180814327660371968"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 hover:underline"
+                  >
+                    1180814327660371968
+                  </a>
+                </p>
               </div>
             </div>
             
@@ -36,7 +48,14 @@ const DashboardLayout: React.FC = () => {
                 <div className="text-sm text-gray-500">
                   <span className="flex items-center">
                     <RefreshCw className="h-4 w-4 mr-1" />
-                    Updated: {new Date(lastUpdate).toLocaleString()}
+                    Last Updated: {new Date(lastUpdate).toLocaleString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                      hour: 'numeric',
+                      minute: '2-digit',
+                      hour12: true
+                    })}
                   </span>
                 </div>
               )}
