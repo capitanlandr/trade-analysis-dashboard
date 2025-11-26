@@ -41,11 +41,14 @@ def get_current_week(league_id: str = LEAGUE_ID) -> int:
     """
     Fetch current week from Sleeper API.
     
+    Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week.
+    We subtract 1 to get the last completed week to match standings logic.
+    
     Args:
         league_id: Sleeper league identifier
         
     Returns:
-        Current week number (1-14)
+        Last completed week number (1-14)
         
     Raises:
         APIError: If API call fails after retries
@@ -57,8 +60,11 @@ def get_current_week(league_id: str = LEAGUE_ID) -> int:
         response = fetch_with_retry(url, timeout=10)
         
         if response and 'settings' in response and 'leg' in response['settings']:
-            current_week = response['settings']['leg']
-            logger.info(f"Current week from API: {current_week}")
+            sleeper_week = response['settings']['leg']
+            # Sleeper's leg is the upcoming week, subtract 1 for last completed week
+            current_week = max(1, sleeper_week - 1)
+            logger.info(f"Sleeper upcoming week: {sleeper_week}")
+            logger.info(f"Last completed week (for simulations): {current_week}")
             return current_week
         else:
             logger.warning("API response missing 'settings.leg' field")
@@ -281,6 +287,14 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
     all_teams = []
     for div in standings['divisions']:
         for team in div['teams']:
+            # Build historical H2H record from completed games
+            historical_h2h = {}
+            for game in team['schedule']:
+                if game['result'] in ['W', 'L', 'T'] and game.get('opponent_id'):
+                    opponent_id = game['opponent_id']
+                    if game['result'] == 'W':
+                        historical_h2h[opponent_id] = historical_h2h.get(opponent_id, 0) + 1
+            
             team_data = {
                 'roster_id': team['roster_id'],
                 'team_name': team['team_name'],
@@ -293,6 +307,7 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
                 'points_for': team['points_for'],
                 'points_against': team['points_against'],
                 'schedule': team['schedule'],
+                'historical_h2h': historical_h2h,  # H2H wins from completed games
                 'h2h_wins': {},  # Will be populated during simulation
                 'playoff_count': 0,
                 'division_winner_count': 0,
@@ -344,7 +359,8 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
             team['sim_division_wins'] = team['current_division_wins']
             team['sim_points_for'] = team['points_for']
             team['sim_points_against'] = team['points_against']
-            team['h2h_wins'] = {}  # Reset H2H tracking
+            # Start with historical H2H wins, will add simulated games on top
+            team['h2h_wins'] = team['historical_h2h'].copy()
         
         # Simulate and get results
         sim_result = simulate_single_scenario(all_teams, standings['divisions'], matchups_by_week)

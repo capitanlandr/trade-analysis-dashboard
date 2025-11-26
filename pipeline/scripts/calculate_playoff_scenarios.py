@@ -17,6 +17,11 @@ from pathlib import Path
 from typing import List, Dict, Tuple
 import logging
 
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.api_client import fetch_with_retry, APIError
+
 # Setup basic logging
 logging.basicConfig(
     level=logging.INFO,
@@ -24,11 +29,57 @@ logging.basicConfig(
 )
 logger = logging.getLogger('Playoff Scenarios Calculator')
 
+# League configuration
+LEAGUE_ID = "1180814327660371968"
+SLEEPER_API_BASE = "https://api.sleeper.app/v1"
+
+
+def get_current_week(league_id: str = LEAGUE_ID) -> int:
+    """
+    Fetch current week from Sleeper API.
+    
+    Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week.
+    We subtract 1 to get the last completed week to match standings logic.
+    
+    Args:
+        league_id: Sleeper league identifier
+        
+    Returns:
+        Last completed week number (1-14)
+        
+    Raises:
+        APIError: If API call fails after retries
+    """
+    url = f"{SLEEPER_API_BASE}/league/{league_id}"
+    
+    try:
+        logger.info(f"Fetching current week from Sleeper API...")
+        response = fetch_with_retry(url, timeout=10)
+        
+        if response and 'settings' in response and 'leg' in response['settings']:
+            sleeper_week = response['settings']['leg']
+            # Sleeper's leg is the upcoming week, subtract 1 for last completed week
+            current_week = max(1, sleeper_week - 1)
+            logger.info(f"Sleeper upcoming week: {sleeper_week}")
+            logger.info(f"Last completed week: {current_week}")
+            return current_week
+        else:
+            logger.warning("API response missing 'settings.leg' field")
+            raise APIError("Invalid API response structure")
+            
+    except Exception as e:
+        logger.error(f"Failed to fetch current week from API: {e}")
+        # Fallback to Week 12 with warning
+        fallback_week = 12
+        logger.warning(f"Using fallback week: {fallback_week}")
+        return fallback_week
+
 
 def load_standings() -> Dict:
     """Load current standings from JSON"""
     # Try multiple possible locations
     possible_paths = [
+        Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-standings.json',
         Path(__file__).parent.parent / 'dashboard/frontend/public/api-standings.json',
         Path(__file__).parent.parent.parent / 'trade-analysis-dashboard-clean/dashboard/frontend/public/api-standings.json',
         Path('trade-analysis-dashboard-clean/dashboard/frontend/public/api-standings.json')
@@ -43,8 +94,8 @@ def load_standings() -> Dict:
     raise FileNotFoundError(f"Standings file not found in any of: {possible_paths}")
 
 
-def get_remaining_schedule(team_schedule: List[Dict], current_week: int = 11) -> List[Dict]:
-    """Get remaining games for a team"""
+def get_remaining_schedule(team_schedule: List[Dict], current_week: int) -> List[Dict]:
+    """Get remaining games for a team (games with week > current_week)"""
     return [game for game in team_schedule if game['week'] > current_week]
 
 
@@ -89,7 +140,7 @@ def get_current_playoff_seeding(all_teams: List[Dict], divisions_data: List[Dict
 
 
 def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: List[Dict], 
-                            playoff_teams: List[Dict], seventh_place: Dict) -> Dict:
+                            playoff_teams: List[Dict], seventh_place: Dict, current_week: int) -> Dict:
     """
     Calculate playoff scenarios for a single team.
     
@@ -101,7 +152,7 @@ def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: 
     current_losses = team['record']['losses']
     
     # Get remaining games
-    remaining = get_remaining_schedule(team['schedule'])
+    remaining = get_remaining_schedule(team['schedule'], current_week)
     num_remaining = len(remaining)
     max_possible_wins = current_wins + (num_remaining * 2)
     min_possible_wins = current_wins
@@ -131,7 +182,7 @@ def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: 
         playoff_clinched = False  # Will be set based on division status
     elif seventh_place:
         # Wildcards: need to beat 7th place team
-        seventh_remaining = get_remaining_schedule(seventh_place['schedule'])
+        seventh_remaining = get_remaining_schedule(seventh_place['schedule'], current_week)
         seventh_best = seventh_place['record']['wins'] + len(seventh_remaining) * 2
         
         logger.info(f"  7th place: {seventh_place['team_name']} ({seventh_place['record']['wins']}-{seventh_place['record']['losses']}, best: {seventh_best})")
@@ -154,7 +205,7 @@ def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: 
     division_rivals = [t for t in division_teams if t['team_name'] != team_name]
     
     for rival in division_rivals:
-        rival_remaining = get_remaining_schedule(rival['schedule'])
+        rival_remaining = get_remaining_schedule(rival['schedule'], current_week)
         rival_best = rival['record']['wins'] + len(rival_remaining) * 2
         
         if min_possible_wins > rival_best:
@@ -236,6 +287,10 @@ def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: 
 def main():
     """Main execution"""
     try:
+        # Get current week from Sleeper API
+        current_week = get_current_week()
+        weeks_remaining = 14 - current_week  # Regular season ends at week 14
+        
         logger.info("Loading standings data...")
         standings = load_standings()
         
@@ -268,7 +323,7 @@ def main():
             logger.info(f"\nProcessing {division_name} Division...")
             
             for team in division_teams:
-                team_scenarios = calculate_team_scenarios(team, all_teams, division_teams, playoff_teams, seventh_place)
+                team_scenarios = calculate_team_scenarios(team, all_teams, division_teams, playoff_teams, seventh_place, current_week)
                 team_scenarios['division'] = division_name
                 scenarios.append(team_scenarios)
         
@@ -276,10 +331,11 @@ def main():
         scenarios.sort(key=lambda s: (not s['in_playoffs'], -s['current_record']['wins']))
         
         # Create output structure
+        from datetime import datetime
         output = {
-            'generated_at': '2025-11-18',  # Current date
-            'current_week': 11,
-            'weeks_remaining': 3,
+            'generated_at': datetime.now().strftime('%Y-%m-%d'),
+            'current_week': current_week,
+            'weeks_remaining': weeks_remaining,
             'playoff_spots': 6,
             'scenarios': scenarios,
             'summary': {
