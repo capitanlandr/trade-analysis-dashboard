@@ -1,7 +1,7 @@
 {
   "league_name": "Dynasuiiii",
   "season": "2025",
-  "current_week": 12,
+  "current_week": 13,
   "playoff_bracket": {
     "seeds": [
       {
@@ -47,7 +47,7 @@
       {
         "seed": 5,
         "roster_id": 2,
-        "team_name": "Like a Good Naber",
+        "team_name": "ANTIFA",
         "division": 3,
         "record": "14-10",
         "points_for": 1704.14,
@@ -73,7 +73,7 @@
         },
         {
           "home": "TeamRecord(roster_id=1, owner_id='870177576986034176', team_name='208 Ferrari Way', division=3, wins=17, losses=7, ties=0, points_for=1711.48, points_against=1481.4, h2h_wins={5: 1, 7: 2, 2: 1, 4: 1, 8: 1, 12: 1, 10: 1, 6: 1}, division_wins=4, division_losses=0)",
-          "away": "TeamRecord(roster_id=2, owner_id='867921673234632704', team_name='Like a Good Naber', division=3, wins=14, losses=10, ties=0, points_for=1704.14, points_against=1562.28, h2h_wins={5: 1, 11: 1, 6: 1, 9: 1, 4: 1, 8: 1}, division_wins=1, division_losses=3)"
+          "away": "TeamRecord(roster_id=2, owner_id='867921673234632704', team_name='ANTIFA', division=3, wins=14, losses=10, ties=0, points_for=1704.14, points_against=1562.28, h2h_wins={5: 1, 11: 1, 6: 1, 9: 1, 4: 1, 8: 1}, division_wins=1, division_losses=3)"
         }
       ],
       "semifinals": [],
