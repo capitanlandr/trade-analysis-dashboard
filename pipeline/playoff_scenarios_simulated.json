@@ -1,7 +1,7 @@
 {
   "metadata": {
     "current_week": 12,
-    "last_updated": "2025-11-30T14:36:17.757777",
+    "last_updated": "2025-12-01T14:50:41.394136",
     "season": 2025
   },
   "num_simulations": 20000,
@@ -33,17 +33,17 @@
       "division": "American",
       "current_record": "18-6",
       "playoff_probability": 100.0,
-      "division_winner_probability": 64.2,
-      "bye_week_probability": 64.2,
+      "division_winner_probability": 63.6,
+      "bye_week_probability": 63.6,
       "seed_probabilities": {
-        "1": 48.8,
-        "4": 35.2,
-        "2": 15.4,
-        "5": 0.6
+        "1": 48.6,
+        "4": 35.7,
+        "2": 15.0,
+        "5": 0.7
       },
       "playoff_count": 20000,
-      "division_winner_count": 12843,
-      "bye_week_count": 12843,
+      "division_winner_count": 12730,
+      "bye_week_count": 12730,
       "clinched_playoff": true,
       "clinched_division": false,
       "clinched_bye": false,
@@ -57,17 +57,17 @@
       "division": "American",
       "current_record": "17-7",
       "playoff_probability": 100.0,
-      "division_winner_probability": 35.7,
-      "bye_week_probability": 35.7,
+      "division_winner_probability": 36.2,
+      "bye_week_probability": 36.2,
       "seed_probabilities": {
-        "4": 63.5,
-        "1": 10.1,
-        "2": 25.6,
-        "5": 0.8
+        "4": 63.0,
+        "2": 25.9,
+        "1": 10.3,
+        "5": 0.7
       },
       "playoff_count": 20000,
-      "division_winner_count": 7135,
-      "bye_week_count": 7135,
+      "division_winner_count": 7244,
+      "bye_week_count": 7244,
       "clinched_playoff": true,
       "clinched_division": false,
       "clinched_bye": false,
@@ -80,18 +80,18 @@
       "team_name": "ANTIFA",
       "division": "American",
       "current_record": "14-10",
-      "playoff_probability": 94.8,
+      "playoff_probability": 94.6,
       "division_winner_probability": 0.1,
       "bye_week_probability": 0.1,
       "seed_probabilities": {
-        "6": 31.5,
-        "5": 61.9,
-        "4": 1.3,
-        "2": 0.1
+        "5": 62.5,
+        "6": 30.7,
+        "2": 0.1,
+        "4": 1.3
       },
-      "playoff_count": 18959,
-      "division_winner_count": 22,
-      "bye_week_count": 22,
+      "playoff_count": 18923,
+      "division_winner_count": 26,
+      "bye_week_count": 26,
       "clinched_playoff": false,
       "clinched_division": false,
       "clinched_bye": false,
@@ -104,14 +104,14 @@
       "team_name": "Paper Tigers",
       "division": "Wisconsin",
       "current_record": "13-11",
-      "playoff_probability": 75.2,
+      "playoff_probability": 75.1,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "5": 34.0,
-        "6": 41.2
+        "5": 33.5,
+        "6": 41.6
       },
-      "playoff_count": 15047,
+      "playoff_count": 15014,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -126,14 +126,14 @@
       "team_name": "Washed",
       "division": "Chicago",
       "current_record": "9-15",
-      "playoff_probability": 50.3,
-      "division_winner_probability": 50.3,
+      "playoff_probability": 49.6,
+      "division_winner_probability": 49.6,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "3": 50.3
+        "3": 49.6
       },
-      "playoff_count": 10069,
-      "division_winner_count": 10069,
+      "playoff_count": 9923,
+      "division_winner_count": 9923,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
@@ -147,14 +147,14 @@
       "team_name": "TRIPS \ud83d\udd25",
       "division": "Chicago",
       "current_record": "9-15",
-      "playoff_probability": 47.8,
-      "division_winner_probability": 47.8,
+      "playoff_probability": 48.5,
+      "division_winner_probability": 48.5,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "3": 47.8
+        "3": 48.5
       },
-      "playoff_count": 9563,
-      "division_winner_count": 9563,
+      "playoff_count": 9706,
+      "division_winner_count": 9706,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
@@ -168,14 +168,14 @@
       "team_name": "Gaeta Spur FC",
       "division": "Wisconsin",
       "current_record": "11-13",
-      "playoff_probability": 13.3,
+      "playoff_probability": 13.5,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 12.9,
-        "5": 0.3
+        "6": 13.2,
+        "5": 0.4
       },
-      "playoff_count": 2652,
+      "playoff_count": 2705,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -194,10 +194,10 @@
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 8.9,
-        "5": 1.8
+        "5": 1.6,
+        "6": 9.1
       },
-      "playoff_count": 2141,
+      "playoff_count": 2138,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -212,14 +212,14 @@
       "team_name": "Mommy Rainier ",
       "division": "American",
       "current_record": "11-13",
-      "playoff_probability": 6.0,
+      "playoff_probability": 6.1,
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 5.4,
+        "6": 5.5,
         "5": 0.6
       },
-      "playoff_count": 1201,
+      "playoff_count": 1220,
       "division_winner_count": 0,
       "bye_week_count": 0,
       "clinched_playoff": false,
@@ -234,14 +234,14 @@
       "team_name": "Spirit Halloween",
       "division": "Chicago",
       "current_record": "7-17",
-      "playoff_probability": 1.8,
-      "division_winner_probability": 1.8,
+      "playoff_probability": 1.9,
+      "division_winner_probability": 1.9,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "3": 1.8
+        "3": 1.9
       },
-      "playoff_count": 368,
-      "division_winner_count": 368,
+      "playoff_count": 371,
+      "division_winner_count": 371,
       "bye_week_count": 0,
       "clinched_playoff": false,
       "clinched_division": false,
