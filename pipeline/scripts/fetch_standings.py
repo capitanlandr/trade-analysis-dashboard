@@ -17,6 +17,7 @@ import yaml
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.logging_config import setup_logging
+from utils.week_config import get_current_week_from_config
 
 # Constants
 LEAGUE_ID = "1180814327660371968"
@@ -423,13 +424,10 @@ def main():
         rosters = fetch_rosters()
         user_map = fetch_users()
         
-        # Determine current week from Sleeper API
-        # Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week
-        # So we subtract 1 to get the last completed week for standings
-        sleeper_current_week = league_info.get('settings', {}).get('leg', 1)
-        current_week = max(1, sleeper_current_week - 1)  # Ensure we don't go below week 1
-        logger.info(f"Sleeper current week (upcoming): {sleeper_current_week}")
-        logger.info(f"Last completed week (for standings): {current_week}")
+        # Use centralized week detection from config
+        # Week is determined by detect_current_week.py using roster validation
+        current_week = get_current_week_from_config()
+        logger.info(f"Current week from centralized config: {current_week}")
         
         # Build schedule and calculate records
         schedules = build_schedule_data(rosters, current_week)
@@ -452,14 +450,22 @@ def main():
             }
         }
         
-        # Write output
+        # Write output to TWO locations:
+        # 1. Pipeline directory (for debugging, auditing, and pipeline script dependencies)
         output_path = Path(__file__).parent.parent / "standings_data.json"
         with open(output_path, 'w') as f:
             json.dump(output, f, indent=2)
+        logger.info(f"✓ Pipeline copy: {output_path}")
+        
+        # 2. Dashboard directory (for frontend consumption - direct write for efficiency)
+        dashboard_path = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-standings.json'
+        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(dashboard_path, 'w') as f:
+            json.dump(output, f, indent=2)
+        logger.info(f"✓ Dashboard copy: {dashboard_path}")
         
         logger.info("=" * 80)
         logger.info(f"✅ STANDINGS DATA GENERATED")
-        logger.info(f"   Output: {output_path}")
         logger.info(f"   Divisions: {len(divisions)}")
         logger.info(f"   Teams: {sum(len(d['teams']) for d in divisions)}")
         logger.info("=" * 80)

@@ -34,45 +34,8 @@ LEAGUE_ID = "1180814327660371968"
 SLEEPER_API_BASE = "https://api.sleeper.app/v1"
 
 
-def get_current_week(league_id: str = LEAGUE_ID) -> int:
-    """
-    Fetch current week from Sleeper API.
-    
-    Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week.
-    We subtract 1 to get the last completed week to match standings logic.
-    
-    Args:
-        league_id: Sleeper league identifier
-        
-    Returns:
-        Last completed week number (1-14)
-        
-    Raises:
-        APIError: If API call fails after retries
-    """
-    url = f"{SLEEPER_API_BASE}/league/{league_id}"
-    
-    try:
-        logger.info(f"Fetching current week from Sleeper API...")
-        response = fetch_with_retry(url, timeout=10)
-        
-        if response and 'settings' in response and 'leg' in response['settings']:
-            sleeper_week = response['settings']['leg']
-            # Sleeper's leg is the upcoming week, subtract 1 for last completed week
-            current_week = max(1, sleeper_week - 1)
-            logger.info(f"Sleeper upcoming week: {sleeper_week}")
-            logger.info(f"Last completed week: {current_week}")
-            return current_week
-        else:
-            logger.warning("API response missing 'settings.leg' field")
-            raise APIError("Invalid API response structure")
-            
-    except Exception as e:
-        logger.error(f"Failed to fetch current week from API: {e}")
-        # Fallback to Week 12 with warning
-        fallback_week = 12
-        logger.warning(f"Using fallback week: {fallback_week}")
-        return fallback_week
+# Week detection now handled by centralized config (detect_current_week.py)
+# get_current_week() function removed - use get_current_week_from_config() instead
 
 
 def load_standings() -> Dict:
@@ -287,8 +250,10 @@ def calculate_team_scenarios(team: Dict, all_teams: List[Dict], division_teams: 
 def main():
     """Main execution"""
     try:
-        # Get current week from Sleeper API
-        current_week = get_current_week()
+        # Use centralized week detection from config
+        # Week is determined by detect_current_week.py using roster validation
+        current_week = get_current_week_from_config()
+        logger.info(f"Current week from centralized config: {current_week}")
         weeks_remaining = 14 - current_week  # Regular season ends at week 14
         
         logger.info("Loading standings data...")

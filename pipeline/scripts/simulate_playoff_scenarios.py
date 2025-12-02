@@ -24,6 +24,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.api_client import fetch_with_retry, APIError
+from utils.week_config import get_current_week_from_config
 
 # Setup logging
 logging.basicConfig(
@@ -37,45 +38,8 @@ LEAGUE_ID = "1180814327660371968"
 SLEEPER_API_BASE = "https://api.sleeper.app/v1"
 
 
-def get_current_week(league_id: str = LEAGUE_ID) -> int:
-    """
-    Fetch current week from Sleeper API.
-    
-    Note: Sleeper's 'leg' represents the UPCOMING week, not the completed week.
-    We subtract 1 to get the last completed week to match standings logic.
-    
-    Args:
-        league_id: Sleeper league identifier
-        
-    Returns:
-        Last completed week number (1-14)
-        
-    Raises:
-        APIError: If API call fails after retries
-    """
-    url = f"{SLEEPER_API_BASE}/league/{league_id}"
-    
-    try:
-        logger.info(f"Fetching current week from Sleeper API...")
-        response = fetch_with_retry(url, timeout=10)
-        
-        if response and 'settings' in response and 'leg' in response['settings']:
-            sleeper_week = response['settings']['leg']
-            # Sleeper's leg is the upcoming week, subtract 1 for last completed week
-            current_week = max(1, sleeper_week - 1)
-            logger.info(f"Sleeper upcoming week: {sleeper_week}")
-            logger.info(f"Last completed week (for simulations): {current_week}")
-            return current_week
-        else:
-            logger.warning("API response missing 'settings.leg' field")
-            raise APIError("Invalid API response structure")
-            
-    except Exception as e:
-        logger.error(f"Failed to fetch current week from API: {e}")
-        # Fallback to Week 12 with warning
-        fallback_week = 12
-        logger.warning(f"Using fallback week: {fallback_week}")
-        return fallback_week
+# Week detection now handled by centralized config (detect_current_week.py)
+# get_current_week() function removed - use get_current_week_from_config() instead
 
 
 def load_standings() -> Dict:
@@ -470,10 +434,10 @@ def run_simulations(standings: Dict, current_week: int, num_simulations: int = 1
 def main():
     """Main execution"""
     try:
-        # Get current week from Sleeper API
-        logger.info("Fetching current week from Sleeper API...")
-        current_week = get_current_week()
-        logger.info(f"Using current week: {current_week}")
+        # Use centralized week detection from config
+        # Week is determined by detect_current_week.py using roster validation
+        current_week = get_current_week_from_config()
+        logger.info(f"Current week from centralized config: {current_week}")
         
         logger.info("Loading standings data...")
         standings = load_standings()
@@ -481,20 +445,19 @@ def main():
         # Run simulations
         simulation_results = run_simulations(standings, current_week, num_simulations=20000)
         
-        # Save results to pipeline directory
+        # Write results to TWO locations (from memory - no redundant file I/O):
+        # 1. Pipeline directory (for debugging, auditing, and historical records)
         output_file = Path(__file__).parent.parent / 'playoff_scenarios_simulated.json'
         with open(output_file, 'w') as f:
             json.dump(simulation_results, f, indent=2)
+        logger.info(f"✓ Pipeline copy: {output_file}")
         
-        logger.info(f"✓ Simulation results saved to: {output_file}")
-        
-        # Also save to dashboard public directory (go up 3 levels: scripts -> pipeline -> trade-analysis-dashboard-clean)
+        # 2. Dashboard directory (for frontend consumption - direct write for efficiency)
         dashboard_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-playoff-scenarios.json'
         dashboard_file.parent.mkdir(parents=True, exist_ok=True)
         with open(dashboard_file, 'w') as f:
             json.dump(simulation_results, f, indent=2)
-        
-        logger.info(f"✓ Dashboard file updated: {dashboard_file}")
+        logger.info(f"✓ Dashboard copy: {dashboard_file}")
         
         # Print summary
         print("\n" + "="*80)

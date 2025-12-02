@@ -21,6 +21,7 @@ import sys
 from config import get_config
 from utils.logging_config import setup_logging
 from utils.api_client import fetch_with_retry, APIError
+from utils.week_config import get_current_week_from_config
 
 logger = setup_logging('Playoff Bracket Generator')
 config = get_config()
@@ -79,8 +80,9 @@ def fetch_league_data() -> Dict:
     # Get rosters
     rosters = fetch_with_retry(f"{base_url}/league/{league_id}/rosters", timeout=timeout)
     
-    # Get matchups for all weeks to calculate records
-    current_week = league.get('settings', {}).get('leg', 1)
+    # Use centralized week detection from config
+    # Week is determined by detect_current_week.py using roster validation
+    current_week = get_current_week_from_config()
     
     return {
         'league': league,

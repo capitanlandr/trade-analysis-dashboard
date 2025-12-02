@@ -44,6 +44,7 @@ DASHBOARD_JSON_FILES = [
 ]
 
 PIPELINE_STAGES = [
+    ("Stage 0: Detect Current Week", "python3 scripts/detect_current_week.py"),
     ("Stage 1: Fetch Trades", "python3 stage1_fetch_trades.py"),
     ("Stage 2: Extract Assets", "python3 stage2_extract_assets.py"),
     ("Stage 3: Cache Values", "python3 stage3_cache_values.py"),
