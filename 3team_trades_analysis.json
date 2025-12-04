@@ -4,19 +4,15 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
-        "manager": "zachlearningtogolf",
+        "manager": "lndahayo",
         "assets": [
-          "Rashee Rice",
-          "Adonai Mitchell",
-          "Calvin Ridley",
-          "Drake London",
-          "2025 Round 1",
-          "2025 Round 3",
-          "2025 Round 4",
-          "2026 Round 1"
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
         ],
-        "value_then": 12552.0,
-        "value_now": 16325.0
+        "value_then": 13482.0,
+        "value_now": 11960.0
       },
       {
         "manager": "cjsyregelas",
@@ -30,15 +26,19 @@
         "value_now": 16004.0
       },
       {
-        "manager": "lndahayo",
+        "manager": "zachlearningtogolf",
         "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
+          "Rashee Rice",
+          "Adonai Mitchell",
+          "Calvin Ridley",
+          "Drake London",
+          "2025 Round 1",
+          "2025 Round 3",
+          "2025 Round 4",
+          "2026 Round 1"
         ],
-        "value_then": 13482.0,
-        "value_now": 11960.0
+        "value_then": 12552.0,
+        "value_now": 16325.0
       }
     ]
   }
