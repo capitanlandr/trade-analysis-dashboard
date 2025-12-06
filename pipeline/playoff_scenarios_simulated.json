@@ -1,7 +1,7 @@
 {
   "metadata": {
     "current_week": 13,
-    "last_updated": "2025-12-05T14:17:42.985141",
+    "last_updated": "2025-12-06T14:14:28.989306",
     "season": 2025
   },
   "num_simulations": 20000,
@@ -35,8 +35,8 @@
       "division_winner_probability": 100.0,
       "bye_week_probability": 100.0,
       "seed_probabilities": {
-        "2": 93.8,
-        "1": 6.2
+        "2": 93.7,
+        "1": 6.3
       },
       "playoff_count": 20000,
       "division_winner_count": 20000,
@@ -57,8 +57,8 @@
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "5": 30.7,
-        "6": 69.3
+        "5": 30.8,
+        "6": 69.2
       },
       "playoff_count": 20000,
       "division_winner_count": 0,
@@ -79,8 +79,8 @@
       "division_winner_probability": 100.0,
       "bye_week_probability": 100.0,
       "seed_probabilities": {
-        "1": 93.8,
-        "2": 6.2
+        "1": 93.7,
+        "2": 6.3
       },
       "playoff_count": 20000,
       "division_winner_count": 20000,
@@ -123,8 +123,8 @@
       "division_winner_probability": 0.0,
       "bye_week_probability": 0.0,
       "seed_probabilities": {
-        "6": 30.7,
-        "5": 63.0,
+        "6": 30.8,
+        "5": 62.9,
         "4": 6.3
       },
       "playoff_count": 20000,
