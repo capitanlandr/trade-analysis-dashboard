@@ -4,6 +4,7 @@ import DashboardLayout from './components/Layout/DashboardLayout'
 import Overview from './pages/Overview'
 import Standings from './pages/Standings'
 import PlayoffScenarios from './pages/PlayoffScenarios'
+import CommishTiersArchive from './pages/CommishTiersArchive'
 import UpdateNotification from './components/Notifications/UpdateNotification'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
@@ -50,6 +51,7 @@ function App() {
                 <Route index element={<Overview />} />
                 <Route path="standings" element={<Standings />} />
                 <Route path="playoff-scenarios" element={<PlayoffScenarios />} />
+                <Route path="commish-tiers" element={<CommishTiersArchive />} />
               </Route>
             </Routes>
           </ErrorBoundary>

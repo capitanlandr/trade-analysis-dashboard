@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Trophy, RefreshCw, Award } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 
 const DashboardLayout: React.FC = () => {
@@ -18,7 +18,7 @@ const DashboardLayout: React.FC = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <Trophy className="h-8 w-8 text-primary-600 mr-3" />
               <div>
@@ -64,12 +64,13 @@ const DashboardLayout: React.FC = () => {
       </header>
 
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
+      <nav className="bg-white shadow-sm relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8">
             <NavItem icon={BarChart3} label="Trade Analysis" href="/" />
             <NavItem icon={Award} label="Standings" href="/standings" />
             <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
+            <NavItem icon={FileText} label="Commish Tiers" href="/commish-tiers" />
           </div>
         </div>
       </nav>

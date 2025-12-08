@@ -8,6 +8,7 @@ A comprehensive web application for analyzing fantasy football trades, tracking 
 - **Manager Rankings**: Comprehensive skill-based rankings with win rates and value analysis
 - **Trade History**: Detailed trade logs with filtering and search capabilities
 - **Performance Analytics**: Team performance metrics and trend analysis
+- **Commish Tiers Archive**: Browse and download weekly power rankings from embedded Google Drive folder
 - **Interactive Dashboard**: Modern, responsive UI with real-time updates
 - **Error Handling**: Robust error boundaries and retry mechanisms
 - **Performance Optimized**: Skeleton loading, debounced search, and memoized components
@@ -219,7 +220,19 @@ CORS_ORIGIN=http://localhost:5173
 **Frontend (.env):**
 ```env
 VITE_API_BASE_URL=http://localhost:3001/api
+VITE_DRIVE_FOLDER_ID=your_google_drive_folder_id
 ```
+
+**Google Drive Configuration:**
+
+The Commish Tiers Archive feature embeds a Google Drive folder for viewing weekly power rankings. To configure:
+
+1. Create or identify your Google Drive folder containing Commish Tiers documents
+2. Get the folder ID from the URL: `https://drive.google.com/drive/folders/[FOLDER_ID]`
+3. Set `VITE_DRIVE_FOLDER_ID` in `dashboard/frontend/.env`
+4. Ensure folder sharing is set to "Anyone with the link can view"
+
+The folder ID is not sensitive and can be committed to version control since it's visible in the iframe URL anyway.
 
 ## 📱 Usage
 
@@ -244,6 +257,13 @@ The main dashboard provides:
 - **Filtering**: By date range, teams, or trade value
 - **Search**: Find trades by team names or player assets
 - **Real-time Updates**: Automatically refreshes with new data
+
+### Commish Tiers Archive
+
+- **Browse Documents**: View all weekly power rankings in embedded Google Drive folder
+- **Preview & Download**: Click any document to preview or download
+- **Mobile Responsive**: Optimized viewing on all device sizes
+- **Direct Access**: Fallback link provided if embed fails to load
 
 ## 🚨 Troubleshooting
 
