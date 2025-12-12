@@ -5,6 +5,7 @@ import Overview from './pages/Overview'
 import Standings from './pages/Standings'
 import PlayoffScenarios from './pages/PlayoffScenarios'
 import CommishTiersArchive from './pages/CommishTiersArchive'
+import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
 import UpdateNotification from './components/Notifications/UpdateNotification'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
@@ -52,6 +53,7 @@ function App() {
                 <Route path="standings" element={<Standings />} />
                 <Route path="playoff-scenarios" element={<PlayoffScenarios />} />
                 <Route path="commish-tiers" element={<CommishTiersArchive />} />
+                <Route path="waiver-wire" element={<WaiverWireAnalysis />} />
               </Route>
             </Routes>
           </ErrorBoundary>

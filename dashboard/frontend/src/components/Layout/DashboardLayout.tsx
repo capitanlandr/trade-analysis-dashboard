@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 
 const DashboardLayout: React.FC = () => {
@@ -71,6 +71,7 @@ const DashboardLayout: React.FC = () => {
             <NavItem icon={Award} label="Standings" href="/standings" />
             <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
             <NavItem icon={FileText} label="Commish Tiers" href="/commish-tiers" />
+            <NavItem icon={Users} label="Waiver Wire Analysis" href="/waiver-wire" />
           </div>
         </div>
       </nav>

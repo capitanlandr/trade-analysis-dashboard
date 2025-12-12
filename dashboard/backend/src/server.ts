@@ -14,6 +14,7 @@ import { FileWatcher } from './services/fileWatcher.js'
 import { createTradesRouter } from './routes/trades.js'
 import { createTeamsRouter } from './routes/teams.js'
 import { createStatsRouter } from './routes/stats.js'
+import { createWaiverWireRouter } from './routes/waiver-wire.js'
 
 // Configure logger
 const logger = winston.createLogger({
@@ -113,6 +114,7 @@ app.get('/api/data/load', async (req, res) => {
 app.use('/api/trades', createTradesRouter(dataService))
 app.use('/api/teams', createTeamsRouter(dataService))
 app.use('/api/stats', createStatsRouter(dataService))
+app.use('/api/waiver-wire', createWaiverWireRouter())
 
 // File watcher event handlers
 fileWatcher.on('fileChanged', async (event) => {

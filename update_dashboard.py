@@ -40,7 +40,8 @@ DASHBOARD_JSON_FILES = [
     ("../dashboard/frontend/public/api-teams.json", "dashboard/frontend/public/api-teams.json"),
     ("../dashboard/frontend/public/api-stats-summary.json", "dashboard/frontend/public/api-stats-summary.json"),
     ("../dashboard/frontend/public/api-standings.json", "dashboard/frontend/public/api-standings.json"),
-    ("../dashboard/frontend/public/api-playoff-scenarios.json", "dashboard/frontend/public/api-playoff-scenarios.json")
+    ("../dashboard/frontend/public/api-playoff-scenarios.json", "dashboard/frontend/public/api-playoff-scenarios.json"),
+    ("../dashboard/frontend/public/api-waiver-wire.json", "dashboard/frontend/public/api-waiver-wire.json")
 ]
 
 PIPELINE_STAGES = [
@@ -49,12 +50,14 @@ PIPELINE_STAGES = [
     ("Stage 2: Extract Assets", "python3 stage2_extract_assets.py"),
     ("Stage 3: Cache Values", "python3 stage3_cache_values.py"),
     ("Stage 4: Generate Analysis", "python3 stage4_final.py"),
-    ("Stage 5: Analyze 2026 Pick Ownership", "python3 analyze_2026_pick_ownership.py"),
-    ("Stage 6: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
-    ("Stage 7: Generate Dashboard JSON", "python3 scripts/generate_dashboard_json.py"),
-    ("Stage 8: Fetch Current Standings", "python3 scripts/fetch_standings.py"),
-    ("Stage 9: Run Playoff Simulations", "python3 scripts/simulate_playoff_scenarios.py"),
-    ("Stage 10: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json.py")
+    ("Stage 5: Waiver Wire Analysis", "python3 stage5_waiver_wire.py"),
+    ("Stage 6: Analyze 2026 Pick Ownership", "python3 analyze_2026_pick_ownership.py"),
+    ("Stage 7: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
+    ("Stage 8: Generate Dashboard JSON", "python3 scripts/generate_dashboard_json.py"),
+    ("Stage 9: Generate Waiver Wire JSON", "python3 scripts/generate_waiver_wire_json.py"),
+    ("Stage 10: Fetch Current Standings", "python3 scripts/fetch_standings.py"),
+    ("Stage 11: Run Playoff Simulations", "python3 scripts/simulate_playoff_scenarios.py"),
+    ("Stage 12: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json.py")
 ]
 
 def run_command(cmd, description="", dry_run=False, cwd=None):

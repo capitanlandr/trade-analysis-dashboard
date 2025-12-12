@@ -94,6 +94,14 @@ export const api = {
     return apiFetch(`/stats/trends${params}`);
   },
 
+  // Waiver Wire
+  getWaiverWireData: () => {
+    if (USE_STATIC_DATA) {
+      return apiFetch('/api-waiver-wire.json');
+    }
+    return apiFetch('/waiver-wire');
+  },
+
   // Data management
   loadData: () => apiFetch('/data/load'),
 };
