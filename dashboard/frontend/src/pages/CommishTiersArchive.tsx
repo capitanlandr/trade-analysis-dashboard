@@ -57,7 +57,7 @@ export default function CommishTiersArchive() {
         description="Access the complete collection of weekly Commish Tiers power rankings"
       />
 
-      <ArchiveInstructions isVisible={true} />
+      <ArchiveInstructions isVisible={true} folderId={driveFolderId} />
 
       <GoogleDriveEmbed
         folderId={driveFolderId}
