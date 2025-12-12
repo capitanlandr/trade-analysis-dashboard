@@ -66,7 +66,7 @@ const DashboardLayout: React.FC = () => {
       {/* Navigation */}
       <nav className="bg-white shadow-sm relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8">
+          <div className="flex overflow-x-auto scrollbar-hide space-x-1 sm:space-x-8">
             <NavItem icon={BarChart3} label="Trade Analysis" href="/" />
             <NavItem icon={Award} label="Standings" href="/standings" />
             <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
@@ -108,14 +108,16 @@ const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, href }) => {
   return (
     <Link
       to={href}
-      className={`flex items-center px-3 py-4 text-sm font-medium border-b-2 transition-colors ${
+      className={`flex flex-col xs:flex-row items-center justify-center xs:justify-start px-2 xs:px-3 py-3 xs:py-4 text-xs xs:text-sm font-medium border-b-2 transition-colors whitespace-nowrap min-w-0 ${
         isActive
-          ? 'border-primary-600 text-primary-600'
-          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+          ? 'border-primary-600 text-primary-600 bg-primary-50'
+          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 hover:bg-gray-50'
       }`}
     >
-      <Icon className="h-4 w-4 mr-2" />
-      {label}
+      <Icon className="h-4 w-4 xs:mr-2 flex-shrink-0" />
+      <span className="text-[10px] xs:text-sm leading-tight text-center xs:text-left mt-1 xs:mt-0">
+        {label}
+      </span>
     </Link>
   );
 };
