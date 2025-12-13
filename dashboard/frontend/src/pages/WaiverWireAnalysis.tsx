@@ -296,7 +296,7 @@ export default function WaiverWireAnalysis() {
           ) : isMultiSelect && fieldValues ? (
             <div className="max-h-48 overflow-y-auto space-y-2">
               {fieldValues.map(value => {
-                const filterKey = field === 'team_name' ? 'team' : field as keyof FilterState;
+                const filterKey = field as keyof FilterState;
                 const currentValues = filters[filterKey] as string[];
                 
                 return (
@@ -325,7 +325,7 @@ export default function WaiverWireAnalysis() {
                 if (field === 'player_name') handleTextFilter('player', '');
                 else if (field === 'waiver_bid') handleTextFilter('bid', '');
                 else {
-                  const filterKey = field === 'team_name' ? 'team' : field as keyof FilterState;
+                  const filterKey = field as keyof FilterState;
                   setFilters(prev => ({ ...prev, [filterKey]: [] }));
                 }
               }}
