@@ -16,28 +16,25 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from utils.logging_config import setup_logging
 from utils.team_resolver import TeamResolver
+from utils.api_client import fetch_with_retry
 
 logger = setup_logging(__name__)
 
 def load_player_data() -> Dict[str, Dict[str, Any]]:
-    """Load player data for name resolution."""
+    """Fetch player data from Sleeper API for name resolution."""
     try:
-        # Try to load from existing player data
-        player_files = [
-            'players.json',
-            'pipeline/players.json',
-            'dashboard/public/players.json'
-        ]
+        logger.info("Fetching player data from Sleeper API...")
+        players_url = "https://api.sleeper.app/v1/players/nfl"
+        players = fetch_with_retry(players_url, timeout=30)
         
-        for file_path in player_files:
-            if Path(file_path).exists():
-                with open(file_path, 'r') as f:
-                    return json.load(f)
-        
-        logger.warning("No player data file found, player names will show as IDs")
-        return {}
+        if players:
+            logger.info(f"✓ Loaded {len(players)} players from Sleeper API")
+            return players
+        else:
+            logger.warning("No player data received from API")
+            return {}
     except Exception as e:
-        logger.warning(f"Failed to load player data: {e}")
+        logger.warning(f"Failed to fetch player data from API: {e}")
         return {}
 
 def generate_waiver_wire_dashboard_data():
