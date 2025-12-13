@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { Users, AlertCircle, ChevronUp, ChevronDown, Filter, X, Search, Calendar } from 'lucide-react';
 import type { WaiverWireData, WaiverWireTransaction } from '../types/waiver-wire';
+import { ChurnIndexCard } from '../components/WaiverWire/ChurnIndexCard';
 
 type SortField = keyof WaiverWireTransaction;
 type SortDirection = 'asc' | 'desc';
@@ -27,6 +28,9 @@ export default function WaiverWireAnalysis() {
   // Sorting state
   const [sortField, setSortField] = useState<SortField>('created_date');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+  
+  // Pagination state
+  const [maxTransactions, setMaxTransactions] = useState<number | 'All'>(50);
   
   // Filtering state
   const [filters, setFilters] = useState<FilterState>({
@@ -80,8 +84,8 @@ export default function WaiverWireAnalysis() {
     };
   }, [data]);
 
-  // Filtered and sorted data
-  const processedData = useMemo(() => {
+  // Filtered and sorted data (before pagination)
+  const filteredAndSorted = useMemo(() => {
     if (!data?.all_transactions) return [];
     
     console.log('Processing data with filters:', filters, 'sort:', sortField, sortDirection);
@@ -198,6 +202,14 @@ export default function WaiverWireAnalysis() {
     
     return sorted;
   }, [data, filters, sortField, sortDirection]);
+
+  // Apply pagination limit to filtered and sorted data
+  const processedData = useMemo(() => {
+    if (maxTransactions === 'All') {
+      return filteredAndSorted;
+    }
+    return filteredAndSorted.slice(0, maxTransactions);
+  }, [filteredAndSorted, maxTransactions]);
 
   // Sorting handler
   const handleSort = (field: SortField) => {
@@ -432,22 +444,60 @@ export default function WaiverWireAnalysis() {
         </p>
       </div>
 
+      {/* Metrics Cards Section */}
+      {data?.churn_metrics && data.churn_metrics.length > 0 && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <ChurnIndexCard
+            metrics={data.churn_metrics}
+            currentTeamId={5}
+          />
+          {/* Placeholder for other 3 cards in future phases */}
+          <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
+            <div className="text-sm">More metrics coming soon...</div>
+            <div className="text-xs mt-2">Waiver Wire Efficiency Score, Hit Rate, and Timing Score</div>
+          </div>
+        </div>
+      )}
+
       {/* Enhanced Table with Excel-style Column Filtering */}
       <div className="card">
         <div className="p-6 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold text-gray-900">
-              All Transactions ({processedData.length} of {data.all_transactions.length})
-            </h2>
-            {hasActiveFilters && (
-              <button
-                onClick={clearFilters}
-                className="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+              <h2 className="text-xl font-semibold text-gray-900">
+                All Transactions
+              </h2>
+              <span className="text-sm text-gray-600">
+                Showing {processedData.length} of {filteredAndSorted.length}
+                {filteredAndSorted.length !== data.all_transactions.length && ` (${data.all_transactions.length} total)`}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <label htmlFor="max-transactions" className="text-sm text-gray-700 whitespace-nowrap">
+                Show:
+              </label>
+              <select
+                id="max-transactions"
+                value={maxTransactions}
+                onChange={(e) => setMaxTransactions(e.target.value === 'All' ? 'All' : Number(e.target.value))}
+                className="px-3 py-1.5 border border-gray-300 rounded-md shadow-sm text-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               >
-                <X className="h-4 w-4 mr-1" />
-                Clear All Filters
-              </button>
-            )}
+                <option value={50}>50</option>
+                <option value={100}>100</option>
+                <option value={200}>200</option>
+                <option value={500}>500</option>
+                <option value="All">All</option>
+              </select>
+              {hasActiveFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                >
+                  <X className="h-4 w-4 mr-1" />
+                  Clear All Filters
+                </button>
+              )}
+            </div>
           </div>
           
           {/* Search and Date Range Controls */}

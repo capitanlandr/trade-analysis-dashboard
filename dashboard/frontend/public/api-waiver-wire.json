@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-13T10:52:28.359471",
+    "generated_at": "2025-12-13T11:33:22.981190",
     "total_waiver_transactions": 291,
     "total_free_agent_transactions": 191,
     "successful_waivers": 194,
@@ -129,6 +129,104 @@
       "total_bid": 150,
       "avg_bid": 4.69,
       "max_bid": 39
+    }
+  ],
+  "churn_metrics": [
+    {
+      "roster_id": 5,
+      "team_name": "Mommy Rainier ",
+      "total_adds": 43,
+      "total_drops": 37,
+      "overall_churn_rate": 22.86,
+      "management_style": "extreme"
+    },
+    {
+      "roster_id": 2,
+      "team_name": "Like a Good Naber",
+      "total_adds": 11,
+      "total_drops": 10,
+      "overall_churn_rate": 6.0,
+      "management_style": "moderate"
+    },
+    {
+      "roster_id": 9,
+      "team_name": "Gaeta Spur FC",
+      "total_adds": 28,
+      "total_drops": 24,
+      "overall_churn_rate": 14.86,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 8,
+      "team_name": "TRIPS \ud83d\udd25",
+      "total_adds": 22,
+      "total_drops": 17,
+      "overall_churn_rate": 11.14,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 1,
+      "team_name": "208 Ferrari Way",
+      "total_adds": 20,
+      "total_drops": 25,
+      "overall_churn_rate": 12.86,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 7,
+      "team_name": "2-Man Title Charge",
+      "total_adds": 29,
+      "total_drops": 33,
+      "overall_churn_rate": 17.71,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 12,
+      "team_name": "Paper Tigers",
+      "total_adds": 24,
+      "total_drops": 23,
+      "overall_churn_rate": 13.43,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 3,
+      "team_name": "Bucky\u2019s Depression",
+      "total_adds": 14,
+      "total_drops": 19,
+      "overall_churn_rate": 9.43,
+      "management_style": "moderate"
+    },
+    {
+      "roster_id": 6,
+      "team_name": "Mostly Washed",
+      "total_adds": 11,
+      "total_drops": 10,
+      "overall_churn_rate": 6.0,
+      "management_style": "moderate"
+    },
+    {
+      "roster_id": 4,
+      "team_name": "Spirit Halloween",
+      "total_adds": 14,
+      "total_drops": 10,
+      "overall_churn_rate": 6.86,
+      "management_style": "moderate"
+    },
+    {
+      "roster_id": 11,
+      "team_name": "On To 2026",
+      "total_adds": 20,
+      "total_drops": 19,
+      "overall_churn_rate": 11.14,
+      "management_style": "active"
+    },
+    {
+      "roster_id": 10,
+      "team_name": "Rashid Shaheed Truthers",
+      "total_adds": 9,
+      "total_drops": 10,
+      "overall_churn_rate": 5.43,
+      "management_style": "moderate"
     }
   ],
   "all_transactions": [

@@ -37,6 +37,43 @@ def load_player_data() -> Dict[str, Dict[str, Any]]:
         logger.warning(f"Failed to fetch player data from API: {e}")
         return {}
 
+def calculate_churn_metrics(df, current_week=15, roster_size=25):
+    """Calculate roster churn index for each manager."""
+    churn_data = []
+    
+    for roster_id in df['roster_id'].unique():
+        manager_txns = df[df['roster_id'] == roster_id]
+        team_name = manager_txns['team_name'].iloc[0] if not manager_txns.empty else f"Team {roster_id}"
+        
+        # Count adds and drops
+        adds = len(manager_txns[manager_txns['action'] == 'add'])
+        drops = len(manager_txns[manager_txns['action'] == 'drop'])
+        
+        # Calculate overall churn
+        weeks_elapsed = current_week - 1
+        overall_churn = ((adds + drops) / (weeks_elapsed * roster_size)) * 100 if weeks_elapsed > 0 else 0
+        
+        # Categorize management style
+        if overall_churn > 20:
+            style = 'extreme'
+        elif overall_churn > 10:
+            style = 'active'
+        elif overall_churn > 5:
+            style = 'moderate'
+        else:
+            style = 'passive'
+        
+        churn_data.append({
+            'roster_id': int(roster_id),
+            'team_name': team_name,
+            'total_adds': adds,
+            'total_drops': drops,
+            'overall_churn_rate': round(overall_churn, 2),
+            'management_style': style
+        })
+    
+    return churn_data
+
 def generate_waiver_wire_dashboard_data():
     """Generate dashboard JSON files for waiver wire analysis."""
     logger.info("Generating waiver wire dashboard data...")
@@ -131,6 +168,10 @@ def generate_waiver_wire_dashboard_data():
         # Also keep recent activity for backward compatibility
         recent_activity = all_transactions[:50] if all_transactions else []
         
+        # Calculate churn metrics
+        churn_metrics = calculate_churn_metrics(df, current_week=15, roster_size=25)
+        logger.info(f"Calculated churn metrics for {len(churn_metrics)} managers")
+        
         # Generate weekly activity chart data
         weekly_activity = []
         if 'weekly_activity' in analysis_summary:
@@ -181,13 +222,14 @@ def generate_waiver_wire_dashboard_data():
                 'successful_waivers': analysis_summary.get('summary', {}).get('successful_waivers', 0),
                 'failed_waivers': analysis_summary.get('summary', {}).get('failed_waivers', 0),
                 'success_rate': round(
-                    (analysis_summary.get('summary', {}).get('successful_waivers', 0) / 
+                    (analysis_summary.get('summary', {}).get('successful_waivers', 0) /
                      max(analysis_summary.get('summary', {}).get('total_waiver_transactions', 1), 1)) * 100, 1
                 ),
                 'total_waiver_bids': analysis_summary.get('summary', {}).get('total_waiver_bids', 0),
                 'average_waiver_bid': round(analysis_summary.get('summary', {}).get('average_waiver_bid', 0), 1)
             },
             'manager_activity': manager_activity,
+            'churn_metrics': churn_metrics,
             'all_transactions': all_transactions,
             'recent_activity': recent_activity,
             'weekly_activity': weekly_activity,

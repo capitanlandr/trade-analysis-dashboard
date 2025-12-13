@@ -16,6 +16,21 @@ export interface WaiverWireTransaction {
   priority: number | null;
 }
 
+export interface ChurnMetric {
+  roster_id: number;
+  team_name: string;
+  total_adds: number;
+  total_drops: number;
+  overall_churn_rate: number;
+  management_style: 'extreme' | 'active' | 'moderate' | 'passive';
+  position_churn?: {
+    position: string;
+    churn_rate: number;
+    total_moves: number;
+  }[];
+}
+
 export interface WaiverWireData {
   all_transactions: WaiverWireTransaction[];
+  churn_metrics?: ChurnMetric[];
 }
