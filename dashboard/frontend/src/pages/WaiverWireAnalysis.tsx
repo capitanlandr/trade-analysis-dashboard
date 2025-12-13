@@ -650,16 +650,17 @@ export default function WaiverWireAnalysis() {
             <thead className="bg-gray-50">
               <tr>
                 {/* Date Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   <div className="flex items-center justify-between">
-                    <div 
+                    <div
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
                       onClick={() => handleSort('created_date')}
                     >
-                      <span>Date</span>
+                      <span className="hidden sm:inline">Date</span>
+                      <span className="sm:hidden">Date</span>
                       {sortField === 'created_date' && (
-                        sortDirection === 'asc' ? 
-                          <ChevronUp className="h-4 w-4" /> : 
+                        sortDirection === 'asc' ?
+                          <ChevronUp className="h-4 w-4" /> :
                           <ChevronDown className="h-4 w-4" />
                       )}
                     </div>
@@ -667,7 +668,7 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Type Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -693,7 +694,7 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Action Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative hidden sm:table-cell">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -719,7 +720,7 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Status Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative hidden md:table-cell">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -745,20 +746,20 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Team Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
                        onClick={() => handleSort('team_name')}>
                     <span>Team</span>
                     {sortField === 'team_name' && (
-                      sortDirection === 'asc' ? 
-                        <ChevronUp className="h-4 w-4" /> : 
+                      sortDirection === 'asc' ?
+                        <ChevronUp className="h-4 w-4" /> :
                         <ChevronDown className="h-4 w-4" />
                     )}
                   </div>
                 </th>
 
                 {/* Player Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -784,7 +785,7 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Bid Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative hidden sm:table-cell">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -810,7 +811,7 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Week Column */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
                   <div className="flex items-center justify-between">
                     <div 
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
@@ -839,51 +840,62 @@ export default function WaiverWireAnalysis() {
             <tbody className="bg-white divide-y divide-gray-200">
               {processedData.map((transaction, index) => (
                 <tr key={`${transaction.transaction_id}-${transaction.player_id}-${transaction.action}-${index}`} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {new Date(transaction.created_date).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
+                    <div className="hidden sm:block">
+                      {new Date(transaction.created_date).toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                      })}
+                    </div>
+                    <div className="sm:hidden">
+                      {new Date(transaction.created_date).toLocaleDateString('en-US', {
+                        month: 'numeric',
+                        day: 'numeric'
+                      })}
+                    </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      transaction.type === 'waiver' 
-                        ? 'bg-blue-100 text-blue-800' 
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap">
+                    <span className={`inline-flex items-center px-2 sm:px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      transaction.type === 'waiver'
+                        ? 'bg-blue-100 text-blue-800'
                         : 'bg-green-100 text-green-800'
                     }`}>
-                      {transaction.type === 'waiver' ? 'Waiver' : 'Free Agent'}
+                      <span className="hidden sm:inline">{transaction.type === 'waiver' ? 'Waiver' : 'Free Agent'}</span>
+                      <span className="sm:hidden">{transaction.type === 'waiver' ? 'W' : 'FA'}</span>
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap hidden sm:table-cell">
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      transaction.action === 'add' 
-                        ? 'bg-emerald-100 text-emerald-800' 
+                      transaction.action === 'add'
+                        ? 'bg-emerald-100 text-emerald-800'
                         : 'bg-red-100 text-red-800'
                     }`}>
                       {transaction.action === 'add' ? 'Add' : 'Drop'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap hidden md:table-cell">
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      transaction.status === 'complete' 
-                        ? 'bg-green-100 text-green-800' 
+                      transaction.status === 'complete'
+                        ? 'bg-green-100 text-green-800'
                         : 'bg-red-100 text-red-800'
                     }`}>
                       {transaction.status === 'complete' ? 'Complete' : 'Failed'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {transaction.team_name}
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
+                    <div className="max-w-[120px] sm:max-w-none truncate">
+                      {transaction.team_name}
+                    </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
                     {transaction.player_name}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900 hidden sm:table-cell">
                     {transaction.waiver_bid > 0 ? `${transaction.waiver_bid}` : '-'}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
                     {transaction.week}
                   </td>
                 </tr>

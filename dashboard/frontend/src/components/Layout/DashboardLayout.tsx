@@ -67,11 +67,11 @@ const DashboardLayout: React.FC = () => {
       <nav className="bg-white shadow-sm relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto scrollbar-hide space-x-1 sm:space-x-8">
-            <NavItem icon={BarChart3} label="Trade Analysis" href="/" />
-            <NavItem icon={Award} label="Standings" href="/standings" />
-            <NavItem icon={TrendingUp} label="Playoff Scenarios" href="/playoff-scenarios" />
-            <NavItem icon={FileText} label="Commish Tiers" href="/commish-tiers" />
-            <NavItem icon={Users} label="Waiver Wire Analysis" href="/waiver-wire" />
+            <NavItem icon={BarChart3} label="Trade Analysis" mobileLabel="Trade Analysis" href="/" />
+            <NavItem icon={Award} label="Standings" mobileLabel="Standings" href="/standings" />
+            <NavItem icon={TrendingUp} label="Playoff Scenarios" mobileLabel="Playoff Scenarios" href="/playoff-scenarios" />
+            <NavItem icon={FileText} label="Commish Tiers" mobileLabel="Commish Tiers" href="/commish-tiers" />
+            <NavItem icon={Users} label="Waiver Wire Analysis" mobileLabel="Waiver Wire" href="/waiver-wire" />
           </div>
         </div>
       </nav>
@@ -98,12 +98,14 @@ const DashboardLayout: React.FC = () => {
 interface NavItemProps {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
+  mobileLabel?: string;
   href: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, href }) => {
+const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, mobileLabel, href }) => {
   const location = useLocation();
   const isActive = location.pathname === href;
+  const displayLabel = mobileLabel || label;
   
   return (
     <Link
@@ -115,8 +117,11 @@ const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, href }) => {
       }`}
     >
       <Icon className="h-4 w-4 xs:mr-2 flex-shrink-0" />
-      <span className="text-[10px] xs:text-sm leading-tight text-center xs:text-left mt-1 xs:mt-0">
+      <span className="hidden sm:inline text-sm leading-tight">
         {label}
+      </span>
+      <span className="sm:hidden text-[10px] leading-tight text-center mt-1">
+        {displayLabel}
       </span>
     </Link>
   );
