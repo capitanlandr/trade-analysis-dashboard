@@ -49,7 +49,19 @@ const TeamScheduleModal: React.FC<TeamScheduleModalProps> = ({ team, isOpen, onC
           {/* Completed Games */}
           {completedGames.length > 0 && (
             <div className="p-6 border-b">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Completed Games</h3>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-800">Completed Games</h3>
+                <div className="flex items-center gap-3 text-xs text-gray-600">
+                  <div className="flex items-center gap-1">
+                    <CheckCircle size={16} className="text-green-600" />
+                    <span>Above Median</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <XCircle size={16} className="text-red-600" />
+                    <span>Below Median</span>
+                  </div>
+                </div>
+              </div>
               <div className="space-y-2">
                 {completedGames.map((game) => (
                   <div
@@ -57,8 +69,8 @@ const TeamScheduleModal: React.FC<TeamScheduleModalProps> = ({ team, isOpen, onC
                     className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     <div className="flex items-center gap-3 flex-1">
-                      <span className="text-sm font-medium text-gray-500 w-16">
-                        Week {game.week}
+                      <span className="text-sm font-medium text-gray-500 w-12 whitespace-nowrap">
+                        Wk {game.week}
                       </span>
                       <span className="text-sm text-gray-700">vs {game.opponent_name}</span>
                     </div>
@@ -107,8 +119,8 @@ const TeamScheduleModal: React.FC<TeamScheduleModalProps> = ({ team, isOpen, onC
                     className="flex items-center justify-between p-3 bg-blue-50 rounded-lg"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-sm font-medium text-blue-600 w-16">
-                        Week {game.week}
+                      <span className="text-sm font-medium text-blue-600 w-12 whitespace-nowrap">
+                        Wk {game.week}
                       </span>
                       <span className="text-sm text-gray-700">vs {game.opponent_name}</span>
                     </div>
