@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 289,
+    "total_waiver_transactions": 291,
     "total_free_agent_transactions": 191,
-    "successful_waivers": 192,
+    "successful_waivers": 194,
     "failed_waivers": 97,
-    "total_waiver_bids": "2330",
-    "average_waiver_bid": 14.382716049382717
+    "total_waiver_bids": "2340",
+    "average_waiver_bid": 14.268292682926829
   },
   "manager_activity": [
     {
@@ -71,12 +71,12 @@
     {
       "roster_id": 7,
       "team_name": "2-Man Title Charge",
-      "total_claims": 18,
-      "total_bid": 215,
-      "avg_bid": 6.94,
+      "total_claims": 19,
+      "total_bid": 225,
+      "avg_bid": 6.82,
       "max_bid": 109,
-      "successful_claims": 21,
-      "success_rate": 116.7
+      "successful_claims": 23,
+      "success_rate": 121.1
     },
     {
       "roster_id": 8,
@@ -188,7 +188,7 @@
     },
     "15": {
       "free_agent": 6,
-      "waiver": 0
+      "waiver": 2
     }
   },
   "contested_players": {
@@ -217,50 +217,30 @@
       "waiver_bid": 46,
       "status": 1
     },
-    "9497": {
-      "transaction_id": 4,
-      "waiver_bid": 0,
-      "status": 4
-    },
     "11834": {
       "transaction_id": 4,
       "waiver_bid": 25,
       "status": 2
-    },
-    "6271": {
-      "transaction_id": 4,
-      "waiver_bid": 2,
-      "status": 3
     },
     "12531": {
       "transaction_id": 4,
       "waiver_bid": 52,
       "status": 1
     },
-    "8917": {
-      "transaction_id": 3,
-      "waiver_bid": 6,
-      "status": 1
-    },
-    "8160": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "7670": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 1
-    },
-    "11435": {
-      "transaction_id": 3,
-      "waiver_bid": 5,
-      "status": 2
-    },
-    "3161": {
-      "transaction_id": 3,
+    "9497": {
+      "transaction_id": 4,
       "waiver_bid": 0,
-      "status": 2
+      "status": 4
+    },
+    "6271": {
+      "transaction_id": 4,
+      "waiver_bid": 2,
+      "status": 3
+    },
+    "12502": {
+      "transaction_id": 3,
+      "waiver_bid": 7,
+      "status": 1
     },
     "4454": {
       "transaction_id": 3,
@@ -272,24 +252,44 @@
       "waiver_bid": 6,
       "status": 1
     },
-    "12502": {
+    "11435": {
       "transaction_id": 3,
-      "waiver_bid": 7,
+      "waiver_bid": 5,
+      "status": 2
+    },
+    "7670": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
       "status": 1
     },
-    "12718": {
+    "8160": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
+    },
+    "8917": {
+      "transaction_id": 3,
+      "waiver_bid": 6,
+      "status": 1
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
+    },
+    "12493": {
+      "transaction_id": 2,
+      "waiver_bid": 55,
+      "status": 1
+    },
+    "11650": {
       "transaction_id": 2,
       "waiver_bid": 0,
       "status": 2
     },
-    "2197": {
+    "10218": {
       "transaction_id": 2,
-      "waiver_bid": 0,
-      "status": 2
-    },
-    "9479": {
-      "transaction_id": 2,
-      "waiver_bid": 7,
+      "waiver_bid": 10,
       "status": 1
     }
   },
@@ -297,37 +297,37 @@
     "bid_distribution": {
       "1": 20,
       "2": 15,
+      "5": 13,
       "10": 12,
-      "5": 11,
       "4": 10,
+      "6": 8,
       "20": 8,
       "7": 8,
-      "6": 8,
       "25": 7,
       "15": 6,
       "9": 6,
-      "11": 5,
-      "8": 5,
       "3": 5,
+      "11": 5,
       "12": 5,
+      "8": 5,
       "35": 3,
+      "46": 2,
+      "39": 2,
       "31": 2,
-      "32": 2,
-      "51": 2,
+      "16": 2,
+      "52": 2,
       "38": 2,
       "43": 2,
       "50": 2,
+      "32": 2,
       "17": 2,
-      "52": 2,
-      "16": 2,
-      "46": 2,
-      "39": 2,
-      "109": 1,
-      "41": 1,
+      "51": 2,
       "55": 1,
-      "84": 1,
+      "41": 1,
+      "109": 1,
+      "13": 1,
       "75": 1,
-      "13": 1
+      "84": 1
     },
     "highest_bids": [
       {
