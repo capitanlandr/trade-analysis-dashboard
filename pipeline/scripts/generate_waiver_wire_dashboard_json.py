@@ -101,22 +101,33 @@ def generate_waiver_wire_dashboard_data():
             df_sorted = df.sort_values('created_dt', ascending=False)
             
             for _, row in df_sorted.iterrows():
+                # Handle sequence and priority - convert -1 to None
+                sequence_val = None
+                if pd.notna(row['sequence']):
+                    seq = int(row['sequence'])
+                    sequence_val = None if seq == -1 else seq
+                
+                priority_val = None
+                if pd.notna(row['priority']):
+                    pri = int(row['priority'])
+                    priority_val = None if pri == -1 else pri
+                
                 transaction = {
                     'transaction_id': row['transaction_id'],
                     'type': row['type'],
                     'action': row['action'],
                     'status': row['status'],
                     'team_name': row['team_name'] or f"Team {row['roster_id']}",
-                    'roster_id': row['roster_id'],
+                    'roster_id': int(row['roster_id']) if pd.notna(row['roster_id']) else None,
                     'player_name': get_player_name(row['player_id']),
-                    'player_id': row['player_id'],
-                    'waiver_bid': row['waiver_bid'] if pd.notna(row['waiver_bid']) else 0,
-                    'week': row['week'],
+                    'player_id': str(row['player_id']) if pd.notna(row['player_id']) else None,
+                    'waiver_bid': int(row['waiver_bid']) if pd.notna(row['waiver_bid']) else 0,
+                    'week': int(row['week']) if pd.notna(row['week']) else 1,
                     'created_date': row['created_dt'].strftime('%Y-%m-%d %H:%M:%S') if pd.notna(row['created_dt']) and hasattr(row['created_dt'], 'strftime') else str(row['created_dt']) if pd.notna(row['created_dt']) else None,
                     'status_updated_date': row['status_updated_dt'].strftime('%Y-%m-%d %H:%M:%S') if pd.notna(row['status_updated_dt']) and hasattr(row['status_updated_dt'], 'strftime') else str(row['status_updated_dt']) if pd.notna(row['status_updated_dt']) else None,
-                    'notes': row.get('notes', ''),
-                    'sequence': row.get('sequence'),
-                    'priority': row.get('priority')
+                    'notes': str(row['notes']) if pd.notna(row['notes']) else '',
+                    'sequence': sequence_val,
+                    'priority': priority_val
                 }
                 all_transactions.append(transaction)
         
@@ -193,16 +204,31 @@ def generate_waiver_wire_dashboard_data():
         
         # Save dashboard data
         output_files = [
-            'dashboard/public/api-waiver-wire.json',
-            'api-waiver-wire.json'
+            '../dashboard/frontend/public/api-waiver-wire.json',  # Correct path relative to pipeline dir
+            'api-waiver-wire.json'  # Also save in pipeline dir for reference
         ]
+        
+        def clean_nan(obj):
+            """Recursively replace NaN with None in nested structures."""
+            import math
+            if isinstance(obj, dict):
+                return {k: clean_nan(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [clean_nan(item) for item in obj]
+            elif isinstance(obj, float) and math.isnan(obj):
+                return None
+            else:
+                return obj
+        
+        # Clean NaN values before serializing
+        cleaned_data = clean_nan(dashboard_data)
         
         for output_file in output_files:
             # Create directory if it doesn't exist
             Path(output_file).parent.mkdir(parents=True, exist_ok=True)
             
             with open(output_file, 'w') as f:
-                json.dump(dashboard_data, f, indent=2, default=str)
+                json.dump(cleaned_data, f, indent=2)
             
             logger.info(f"Generated {output_file}")
         

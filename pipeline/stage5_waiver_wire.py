@@ -175,8 +175,8 @@ class WaiverWireProcessor:
                     'creator': txn.get('creator'),
                     'roster_id': txn.get('roster_ids', [None])[0],
                     'waiver_bid': 0,  # Free agents don't have bids
-                    'sequence': None,
-                    'priority': None,
+                    'sequence': -1,  # Use -1 to indicate no sequence (will be converted to None in JSON)
+                    'priority': -1,  # Use -1 to indicate no priority (will be converted to None in JSON)
                     'notes': 'Free agent transaction'
                 }
                 
