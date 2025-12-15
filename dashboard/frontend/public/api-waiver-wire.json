@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-13T11:33:22.981190",
+    "generated_at": "2025-12-13T12:18:48.475618",
     "total_waiver_transactions": 291,
     "total_free_agent_transactions": 191,
     "successful_waivers": 194,
@@ -229,6 +229,135 @@
       "management_style": "moderate"
     }
   ],
+  "efficiency_metrics": {
+    "manager_metrics": [
+      {
+        "roster_id": 5,
+        "team_name": "Mommy Rainier ",
+        "total_points_from_adds": 802.68,
+        "faab_spent": 82,
+        "free_agent_count": 15,
+        "raw_wwes": 8.28,
+        "normalized_wwes": 0.86,
+        "league_percentile": 75.0
+      },
+      {
+        "roster_id": 2,
+        "team_name": "Like a Good Naber",
+        "total_points_from_adds": 176.46,
+        "faab_spent": 100,
+        "free_agent_count": 3,
+        "raw_wwes": 1.71,
+        "normalized_wwes": -1.27,
+        "league_percentile": 8.3
+      },
+      {
+        "roster_id": 9,
+        "team_name": "Gaeta Spur FC",
+        "total_points_from_adds": 392.2,
+        "faab_spent": 73,
+        "free_agent_count": 11,
+        "raw_wwes": 4.67,
+        "normalized_wwes": -0.31,
+        "league_percentile": 33.3
+      },
+      {
+        "roster_id": 8,
+        "team_name": "TRIPS \ud83d\udd25",
+        "total_points_from_adds": 589.88,
+        "faab_spent": 111,
+        "free_agent_count": 1,
+        "raw_wwes": 5.27,
+        "normalized_wwes": -0.11,
+        "league_percentile": 50.0
+      },
+      {
+        "roster_id": 1,
+        "team_name": "208 Ferrari Way",
+        "total_points_from_adds": 330.9,
+        "faab_spent": 70,
+        "free_agent_count": 1,
+        "raw_wwes": 4.66,
+        "normalized_wwes": -0.31,
+        "league_percentile": 25.0
+      },
+      {
+        "roster_id": 7,
+        "team_name": "2-Man Title Charge",
+        "total_points_from_adds": 475.38,
+        "faab_spent": 125,
+        "free_agent_count": 10,
+        "raw_wwes": 3.52,
+        "normalized_wwes": -0.68,
+        "league_percentile": 16.7
+      },
+      {
+        "roster_id": 12,
+        "team_name": "Paper Tigers",
+        "total_points_from_adds": 548.2,
+        "faab_spent": 95,
+        "free_agent_count": 1,
+        "raw_wwes": 5.71,
+        "normalized_wwes": 0.03,
+        "league_percentile": 58.3
+      },
+      {
+        "roster_id": 3,
+        "team_name": "Bucky\u2019s Depression",
+        "total_points_from_adds": 378.14,
+        "faab_spent": 62,
+        "free_agent_count": 1,
+        "raw_wwes": 6.0,
+        "normalized_wwes": 0.12,
+        "league_percentile": 66.7
+      },
+      {
+        "roster_id": 6,
+        "team_name": "Mostly Washed",
+        "total_points_from_adds": 489.34,
+        "faab_spent": 55,
+        "free_agent_count": 0,
+        "raw_wwes": 8.9,
+        "normalized_wwes": 1.07,
+        "league_percentile": 83.3
+      },
+      {
+        "roster_id": 4,
+        "team_name": "Spirit Halloween",
+        "total_points_from_adds": 389.16,
+        "faab_spent": 77,
+        "free_agent_count": 5,
+        "raw_wwes": 4.75,
+        "normalized_wwes": -0.28,
+        "league_percentile": 41.7
+      },
+      {
+        "roster_id": 11,
+        "team_name": "On To 2026",
+        "total_points_from_adds": 669.8,
+        "faab_spent": 50,
+        "free_agent_count": 2,
+        "raw_wwes": 12.88,
+        "normalized_wwes": 2.36,
+        "league_percentile": 91.7
+      },
+      {
+        "roster_id": 10,
+        "team_name": "Rashid Shaheed Truthers",
+        "total_points_from_adds": 105.74,
+        "faab_spent": 94,
+        "free_agent_count": 2,
+        "raw_wwes": 1.1,
+        "normalized_wwes": -1.47,
+        "league_percentile": 0.0
+      }
+    ],
+    "league_stats": {
+      "mean_wwes": 5.62,
+      "std_dev_wwes": 3.08,
+      "median_wwes": 5.27
+    }
+  },
   "all_transactions": [
     {
       "transaction_id": 1305339981010571264,

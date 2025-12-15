@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react';
 import { Users, AlertCircle, ChevronUp, ChevronDown, Filter, X, Search, Calendar } from 'lucide-react';
 import type { WaiverWireData, WaiverWireTransaction } from '../types/waiver-wire';
 import { ChurnIndexCard } from '../components/WaiverWire/ChurnIndexCard';
+import { EfficiencyScoreCard } from '../components/WaiverWire/EfficiencyScoreCard';
 
 type SortField = keyof WaiverWireTransaction;
 type SortDirection = 'asc' | 'desc';
@@ -445,17 +446,26 @@ export default function WaiverWireAnalysis() {
       </div>
 
       {/* Metrics Cards Section */}
-      {data?.churn_metrics && data.churn_metrics.length > 0 && (
+      {(data?.churn_metrics || data?.efficiency_metrics) && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <ChurnIndexCard
-            metrics={data.churn_metrics}
-            currentTeamId={5}
-          />
-          {/* Placeholder for other 3 cards in future phases */}
-          <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
-            <div className="text-sm">More metrics coming soon...</div>
-            <div className="text-xs mt-2">Waiver Wire Efficiency Score, Hit Rate, and Timing Score</div>
-          </div>
+          {data?.churn_metrics && data.churn_metrics.length > 0 && (
+            <ChurnIndexCard
+              metrics={data.churn_metrics}
+              currentTeamId={5}
+            />
+          )}
+          
+          {data?.efficiency_metrics ? (
+            <EfficiencyScoreCard
+              data={data.efficiency_metrics}
+              currentTeamId={5}
+            />
+          ) : (
+            <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
+              <div className="text-sm">More metrics coming soon...</div>
+              <div className="text-xs mt-2">Waiver Hit Rate and Timing Score</div>
+            </div>
+          )}
         </div>
       )}
 

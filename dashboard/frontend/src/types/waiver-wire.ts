@@ -30,7 +30,28 @@ export interface ChurnMetric {
   }[];
 }
 
+export interface EfficiencyMetric {
+  roster_id: number;
+  team_name: string;
+  total_points_from_adds: number;
+  faab_spent: number;
+  free_agent_count: number;
+  raw_wwes: number;
+  normalized_wwes: number;
+  league_percentile: number;
+}
+
+export interface EfficiencyData {
+  manager_metrics: EfficiencyMetric[];
+  league_stats: {
+    mean_wwes: number;
+    std_dev_wwes: number;
+    median_wwes: number;
+  };
+}
+
 export interface WaiverWireData {
   all_transactions: WaiverWireTransaction[];
   churn_metrics?: ChurnMetric[];
+  efficiency_metrics?: EfficiencyData;
 }

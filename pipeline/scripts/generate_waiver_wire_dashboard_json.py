@@ -74,6 +74,100 @@ def calculate_churn_metrics(df, current_week=15, roster_size=25):
     
     return churn_data
 
+def calculate_efficiency_metrics(df, player_stats):
+    """
+    Calculate Waiver Wire Efficiency Score (WWES) for each manager.
+    
+    Args:
+        df: DataFrame with waiver wire transactions
+        player_stats: Dict mapping player_id -> {week -> {fantasy_points, stats}}
+    
+    Returns:
+        Dict with manager_metrics and league_stats
+    """
+    if not player_stats:
+        logger.warning("No player stats available - skipping efficiency calculation")
+        return None
+    
+    efficiency_data = []
+    
+    for roster_id in df['roster_id'].unique():
+        manager_txns = df[df['roster_id'] == roster_id]
+        team_name = manager_txns['team_name'].iloc[0] if not manager_txns.empty else f"Team {roster_id}"
+        
+        # Filter to successful adds only
+        adds = manager_txns[
+            (manager_txns['action'] == 'add') &
+            (manager_txns['status'] == 'complete')
+        ]
+        
+        total_points = 0
+        for _, add in adds.iterrows():
+            player_id = str(add['player_id'])
+            acq_week = int(add['week']) if pd.notna(add['week']) else 1
+            
+            # Sum points scored AFTER acquisition
+            if player_id in player_stats:
+                for week, stats in player_stats[player_id].items():
+                    if int(week) > acq_week:
+                        total_points += stats.get('fantasy_points', 0)
+        
+        # Calculate WWES components
+        faab_spent = adds[adds['type'] == 'waiver']['waiver_bid'].sum()
+        faab_spent = int(faab_spent) if pd.notna(faab_spent) else 0
+        fa_count = len(adds[adds['type'] == 'free_agent'])
+        
+        # WWES = Total Points / (FAAB Spent + Free Agent Count)
+        denominator = faab_spent + fa_count
+        raw_wwes = total_points / denominator if denominator > 0 else 0
+        
+        efficiency_data.append({
+            'roster_id': int(roster_id),
+            'team_name': team_name,
+            'total_points_from_adds': round(total_points, 2),
+            'faab_spent': faab_spent,
+            'free_agent_count': fa_count,
+            'raw_wwes': round(raw_wwes, 2)
+        })
+    
+    # Calculate league stats for normalization
+    wwes_values = [m['raw_wwes'] for m in efficiency_data if m['raw_wwes'] > 0]
+    
+    if not wwes_values:
+        logger.warning("No valid WWES scores - all managers have 0")
+        return None
+    
+    mean_wwes = sum(wwes_values) / len(wwes_values) if wwes_values else 0
+    
+    # Calculate std dev
+    if len(wwes_values) > 1:
+        variance = sum((x - mean_wwes) ** 2 for x in wwes_values) / len(wwes_values)
+        std_dev = variance ** 0.5
+    else:
+        std_dev = 1
+    
+    # Add normalized scores and percentiles
+    for metric in efficiency_data:
+        if std_dev > 0 and metric['raw_wwes'] > 0:
+            metric['normalized_wwes'] = round(
+                (metric['raw_wwes'] - mean_wwes) / std_dev, 2
+            )
+        else:
+            metric['normalized_wwes'] = 0
+        
+        # Calculate percentile
+        rank = sum(1 for m in efficiency_data if m['raw_wwes'] < metric['raw_wwes'])
+        metric['league_percentile'] = round((rank / len(efficiency_data)) * 100, 1) if efficiency_data else 50
+    
+    return {
+        'manager_metrics': efficiency_data,
+        'league_stats': {
+            'mean_wwes': round(mean_wwes, 2),
+            'std_dev_wwes': round(std_dev, 2),
+            'median_wwes': round(sorted(wwes_values)[len(wwes_values)//2], 2) if wwes_values else 0
+        }
+    }
+
 def generate_waiver_wire_dashboard_data():
     """Generate dashboard JSON files for waiver wire analysis."""
     logger.info("Generating waiver wire dashboard data...")
@@ -172,6 +266,25 @@ def generate_waiver_wire_dashboard_data():
         churn_metrics = calculate_churn_metrics(df, current_week=15, roster_size=25)
         logger.info(f"Calculated churn metrics for {len(churn_metrics)} managers")
         
+        # Load player stats and calculate efficiency metrics
+        efficiency_metrics = None
+        player_stats_file = Path('player_stats_weekly.json')
+        if player_stats_file.exists():
+            try:
+                logger.info("Loading player stats for efficiency calculation...")
+                with open(player_stats_file, 'r') as f:
+                    player_stats = json.load(f)
+                
+                efficiency_metrics = calculate_efficiency_metrics(df, player_stats)
+                if efficiency_metrics:
+                    logger.info(f"Calculated efficiency metrics for {len(efficiency_metrics['manager_metrics'])} managers")
+                else:
+                    logger.warning("Efficiency metrics calculation returned None")
+            except Exception as e:
+                logger.warning(f"Failed to calculate efficiency metrics: {e}")
+        else:
+            logger.info("player_stats_weekly.json not found - skipping efficiency metrics")
+        
         # Generate weekly activity chart data
         weekly_activity = []
         if 'weekly_activity' in analysis_summary:
@@ -230,6 +343,7 @@ def generate_waiver_wire_dashboard_data():
             },
             'manager_activity': manager_activity,
             'churn_metrics': churn_metrics,
+            'efficiency_metrics': efficiency_metrics,
             'all_transactions': all_transactions,
             'recent_activity': recent_activity,
             'weekly_activity': weekly_activity,
