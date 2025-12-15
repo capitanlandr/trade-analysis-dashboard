@@ -203,6 +203,186 @@ def calculate_efficiency_metrics(df, player_stats):
         }
     }
 
+def classify_add_as_hit(player_id, acq_week, lineup_data, player_stats, roster_id):
+    """
+    Classify waiver add as Tier 1, 2, 3 hit or miss.
+    
+    Criteria:
+    - Tier 1: Started ≥50% of weeks post-acquisition
+    - Tier 2: Started 25-49% of weeks post-acquisition
+    - Tier 3: Scored ≥10 pts in any single week
+    - Miss: None of above
+    
+    Args:
+        player_id: Player ID as string
+        acq_week: Week player was acquired
+        lineup_data: Dict mapping roster_id -> {week: {starters, points}}
+        player_stats: Dict mapping player_id -> {week -> {fantasy_points, stats}}
+        roster_id: Roster ID of the manager
+    
+    Returns:
+        Tuple: (tier, weeks_started, total_weeks_available)
+            tier: 1, 2, 3, or None (miss)
+            weeks_started: Number of weeks player was in starting lineup
+            total_weeks_available: Total weeks available post-acquisition
+    """
+    weeks_after_acq = []
+    weeks_started = 0
+    max_single_week_score = 0
+    
+    roster_lineups = lineup_data.get(str(roster_id), {})
+    
+    # Check all weeks after acquisition
+    for week_str, lineup in roster_lineups.items():
+        week = int(week_str)
+        if week > acq_week:
+            weeks_after_acq.append(week)
+            
+            # Check if player was in starting lineup
+            if str(player_id) in lineup.get('starters', []):
+                weeks_started += 1
+            
+            # Check scoring (for Tier 3 classification)
+            if str(player_id) in player_stats:
+                week_stats = player_stats[str(player_id)].get(str(week), {})
+                week_score = week_stats.get('fantasy_points', 0)
+                max_single_week_score = max(max_single_week_score, week_score)
+    
+    total_weeks_available = len(weeks_after_acq)
+    
+    # Calculate usage rate
+    usage_rate = (weeks_started / total_weeks_available) if total_weeks_available > 0 else 0
+    
+    # Classify by tier
+    if usage_rate >= 0.5:
+        return 1, weeks_started, total_weeks_available
+    elif usage_rate >= 0.25:
+        return 2, weeks_started, total_weeks_available
+    elif max_single_week_score >= 10:
+        return 3, weeks_started, total_weeks_available
+    else:
+        return None, weeks_started, total_weeks_available
+
+def calculate_hit_rate_metrics(df, lineup_data, player_stats, players_dict):
+    """
+    Calculate Waiver Hit Rate (WHR) for each manager.
+    
+    Args:
+        df: DataFrame with waiver wire transactions
+        lineup_data: Dict mapping roster_id -> {week: {starters, points}}
+        player_stats: Dict mapping player_id -> {week -> {fantasy_points, stats}}
+        players_dict: Dict mapping player_id -> player info (for name resolution)
+    
+    Returns:
+        Dict with manager_metrics and league_stats
+    """
+    if not lineup_data or not player_stats:
+        logger.warning("Missing lineup_data or player_stats - skipping hit rate calculation")
+        return None
+    
+    # Helper function to get player name
+    def get_player_name_local(player_id):
+        if not player_id:
+            return f"Player {player_id}"
+        
+        player_info = players_dict.get(str(player_id), {})
+        if isinstance(player_info, dict):
+            first_name = player_info.get('first_name', '')
+            last_name = player_info.get('last_name', '')
+            if first_name and last_name:
+                return f"{first_name} {last_name}"
+            elif first_name or last_name:
+                return first_name or last_name
+        
+        return f"Player {player_id}"
+    
+    hit_rate_data = []
+    
+    for roster_id in df['roster_id'].unique():
+        manager_adds = df[
+            (df['roster_id'] == roster_id) &
+            (df['action'] == 'add') &
+            (df['status'] == 'complete')
+        ]
+        
+        if manager_adds.empty:
+            continue
+        
+        team_name = manager_adds['team_name'].iloc[0]
+        
+        tier1_hits = []
+        tier2_hits = []
+        tier3_hits = []
+        misses = []
+        
+        for _, add in manager_adds.iterrows():
+            player_id = str(add['player_id'])
+            acq_week = int(add['week']) if pd.notna(add['week']) else 1
+            
+            tier, weeks_started, weeks_avail = classify_add_as_hit(
+                player_id,
+                acq_week,
+                lineup_data,
+                player_stats,
+                roster_id
+            )
+            
+            # Get player name using helper function
+            player_name = get_player_name_local(player_id)
+            
+            hit_detail = {
+                'player_name': player_name,
+                'player_id': player_id,
+                'acquisition_week': acq_week,
+                'weeks_started': weeks_started,
+                'total_weeks_available': weeks_avail,
+                'tier': tier
+            }
+            
+            if tier == 1:
+                tier1_hits.append(hit_detail)
+            elif tier == 2:
+                tier2_hits.append(hit_detail)
+            elif tier == 3:
+                tier3_hits.append(hit_detail)
+            else:
+                misses.append(hit_detail)
+        
+        total_adds = len(manager_adds)
+        total_hits = len(tier1_hits) + len(tier2_hits) + len(tier3_hits)
+        
+        # Sort tier1 hits by weeks_started for notable hits
+        tier1_hits_sorted = sorted(tier1_hits, key=lambda x: x['weeks_started'], reverse=True)
+        
+        hit_rate_data.append({
+            'roster_id': int(roster_id),
+            'team_name': team_name,
+            'total_adds': total_adds,
+            'tier1_hits': len(tier1_hits),
+            'tier2_hits': len(tier2_hits),
+            'tier3_hits': len(tier3_hits),
+            'misses': len(misses),
+            'overall_hit_rate': round((total_hits / total_adds * 100), 1) if total_adds > 0 else 0,
+            'notable_hits': tier1_hits_sorted[:3]  # Top 3 Tier 1 hits
+        })
+    
+    # Calculate league statistics
+    if not hit_rate_data:
+        logger.warning("No hit rate data calculated")
+        return None
+    
+    hit_rates = [m['overall_hit_rate'] for m in hit_rate_data]
+    avg_hit_rate = sum(hit_rates) / len(hit_rates) if hit_rates else 0
+    median_hit_rate = sorted(hit_rates)[len(hit_rates) // 2] if hit_rates else 0
+    
+    return {
+        'manager_metrics': hit_rate_data,
+        'league_stats': {
+            'avg_hit_rate': round(avg_hit_rate, 1),
+            'median_hit_rate': round(median_hit_rate, 1)
+        }
+    }
+
 def generate_waiver_wire_dashboard_data():
     """Generate dashboard JSON files for waiver wire analysis."""
     logger.info("Generating waiver wire dashboard data...")
@@ -346,6 +526,34 @@ def generate_waiver_wire_dashboard_data():
         else:
             logger.info("player_stats_weekly.json not found - skipping efficiency metrics")
         
+        # Load lineup data and calculate hit rate metrics
+        hit_rate_metrics = None
+        lineup_data_file = Path('lineup_data_weekly.json')
+        if lineup_data_file.exists() and player_stats_file.exists():
+            try:
+                logger.info("Loading lineup data for hit rate calculation...")
+                with open(lineup_data_file, 'r') as f:
+                    lineup_data = json.load(f)
+                
+                # Reuse player_stats if already loaded for efficiency metrics
+                if 'player_stats' not in locals():
+                    logger.info("Loading player stats for hit rate calculation...")
+                    with open(player_stats_file, 'r') as f:
+                        player_stats = json.load(f)
+                
+                hit_rate_metrics = calculate_hit_rate_metrics(df, lineup_data, player_stats, players)
+                if hit_rate_metrics:
+                    logger.info(f"Calculated hit rate metrics for {len(hit_rate_metrics['manager_metrics'])} managers")
+                else:
+                    logger.warning("Hit rate metrics calculation returned None")
+            except Exception as e:
+                logger.warning(f"Failed to calculate hit rate metrics: {e}")
+        else:
+            if not lineup_data_file.exists():
+                logger.info("lineup_data_weekly.json not found - skipping hit rate metrics")
+            if not player_stats_file.exists():
+                logger.info("player_stats_weekly.json not found - skipping hit rate metrics")
+        
         # Generate weekly activity chart data
         weekly_activity = []
         if 'weekly_activity' in analysis_summary:
@@ -405,6 +613,7 @@ def generate_waiver_wire_dashboard_data():
             'manager_activity': manager_activity,
             'churn_metrics': churn_metrics,
             'efficiency_metrics': efficiency_metrics,
+            'hit_rate_metrics': hit_rate_metrics,
             'all_transactions': all_transactions,
             'recent_activity': recent_activity,
             'weekly_activity': weekly_activity,

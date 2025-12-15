@@ -3,6 +3,7 @@ import { Users, AlertCircle, ChevronUp, ChevronDown, Filter, X, Search, Calendar
 import type { WaiverWireData, WaiverWireTransaction } from '../types/waiver-wire';
 import { ChurnIndexCard } from '../components/WaiverWire/ChurnIndexCard';
 import { EfficiencyScoreCard } from '../components/WaiverWire/EfficiencyScoreCard';
+import { HitRateCard } from '../components/WaiverWire/HitRateCard';
 
 type SortField = keyof WaiverWireTransaction;
 type SortDirection = 'asc' | 'desc';
@@ -446,7 +447,7 @@ export default function WaiverWireAnalysis() {
       </div>
 
       {/* Metrics Cards Section */}
-      {(data?.churn_metrics || data?.efficiency_metrics) && (
+      {(data?.churn_metrics || data?.efficiency_metrics || data?.hit_rate_metrics) && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {data?.churn_metrics && data.churn_metrics.length > 0 && (
             <ChurnIndexCard
@@ -463,9 +464,27 @@ export default function WaiverWireAnalysis() {
           ) : (
             <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
               <div className="text-sm">More metrics coming soon...</div>
-              <div className="text-xs mt-2">Waiver Hit Rate and Timing Score</div>
+              <div className="text-xs mt-2">Efficiency Score</div>
             </div>
           )}
+          
+          {data?.hit_rate_metrics ? (
+            <HitRateCard
+              data={data.hit_rate_metrics}
+              currentTeamId={5}
+            />
+          ) : (
+            <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
+              <div className="text-sm">More metrics coming soon...</div>
+              <div className="text-xs mt-2">Waiver Hit Rate</div>
+            </div>
+          )}
+          
+          {/* Placeholder for Timing Score (Phase 4) */}
+          <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
+            <div className="text-sm">More metrics coming soon...</div>
+            <div className="text-xs mt-2">Timing Score</div>
+          </div>
         </div>
       )}
 

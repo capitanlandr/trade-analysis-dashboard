@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-14T22:56:38.606970",
+    "generated_at": "2025-12-14T23:25:18.626217",
     "total_waiver_transactions": 291,
     "total_free_agent_transactions": 191,
     "successful_waivers": 194,
@@ -356,6 +356,223 @@
       "mean_wwes": 5.62,
       "std_dev_wwes": 3.08,
       "median_wwes": 5.27
+    }
+  },
+  "hit_rate_metrics": {
+    "manager_metrics": [
+      {
+        "roster_id": 5,
+        "team_name": "Mommy Rainier ",
+        "total_adds": 32,
+        "tier1_hits": 2,
+        "tier2_hits": 3,
+        "tier3_hits": 8,
+        "misses": 19,
+        "overall_hit_rate": 40.6,
+        "notable_hits": [
+          {
+            "player_name": "Oronde Gadsden",
+            "player_id": "12493",
+            "acquisition_week": 1,
+            "weeks_started": 9,
+            "total_weeks_available": 14,
+            "tier": 1
+          },
+          {
+            "player_name": "Zonovan Knight",
+            "player_id": "8122",
+            "acquisition_week": 5,
+            "weeks_started": 7,
+            "total_weeks_available": 10,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 2,
+        "team_name": "Like a Good Naber",
+        "total_adds": 8,
+        "tier1_hits": 1,
+        "tier2_hits": 0,
+        "tier3_hits": 1,
+        "misses": 6,
+        "overall_hit_rate": 25.0,
+        "notable_hits": [
+          {
+            "player_name": "Kirk Cousins",
+            "player_id": "1166",
+            "acquisition_week": 11,
+            "weeks_started": 2,
+            "total_weeks_available": 4,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 9,
+        "team_name": "Gaeta Spur FC",
+        "total_adds": 25,
+        "tier1_hits": 0,
+        "tier2_hits": 1,
+        "tier3_hits": 6,
+        "misses": 18,
+        "overall_hit_rate": 28.0,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 8,
+        "team_name": "TRIPS \ud83d\udd25",
+        "total_adds": 16,
+        "tier1_hits": 0,
+        "tier2_hits": 2,
+        "tier3_hits": 6,
+        "misses": 8,
+        "overall_hit_rate": 50.0,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 1,
+        "team_name": "208 Ferrari Way",
+        "total_adds": 13,
+        "tier1_hits": 0,
+        "tier2_hits": 0,
+        "tier3_hits": 4,
+        "misses": 9,
+        "overall_hit_rate": 30.8,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 7,
+        "team_name": "2-Man Title Charge",
+        "total_adds": 24,
+        "tier1_hits": 0,
+        "tier2_hits": 1,
+        "tier3_hits": 6,
+        "misses": 17,
+        "overall_hit_rate": 29.2,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 12,
+        "team_name": "Paper Tigers",
+        "total_adds": 18,
+        "tier1_hits": 0,
+        "tier2_hits": 1,
+        "tier3_hits": 6,
+        "misses": 11,
+        "overall_hit_rate": 38.9,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 3,
+        "team_name": "Bucky\u2019s Depression",
+        "total_adds": 9,
+        "tier1_hits": 0,
+        "tier2_hits": 1,
+        "tier3_hits": 5,
+        "misses": 3,
+        "overall_hit_rate": 66.7,
+        "notable_hits": []
+      },
+      {
+        "roster_id": 6,
+        "team_name": "Mostly Washed",
+        "total_adds": 8,
+        "tier1_hits": 1,
+        "tier2_hits": 1,
+        "tier3_hits": 4,
+        "misses": 2,
+        "overall_hit_rate": 75.0,
+        "notable_hits": [
+          {
+            "player_name": "Hunter Henry",
+            "player_id": "3214",
+            "acquisition_week": 1,
+            "weeks_started": 7,
+            "total_weeks_available": 14,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 4,
+        "team_name": "Spirit Halloween",
+        "total_adds": 11,
+        "tier1_hits": 3,
+        "tier2_hits": 2,
+        "tier3_hits": 2,
+        "misses": 4,
+        "overall_hit_rate": 63.6,
+        "notable_hits": [
+          {
+            "player_name": "John Metchie",
+            "player_id": "8147",
+            "acquisition_week": 9,
+            "weeks_started": 4,
+            "total_weeks_available": 6,
+            "tier": 1
+          },
+          {
+            "player_name": "Ty Johnson",
+            "player_id": "6039",
+            "acquisition_week": 10,
+            "weeks_started": 4,
+            "total_weeks_available": 5,
+            "tier": 1
+          },
+          {
+            "player_name": "Philip Rivers",
+            "player_id": "331",
+            "acquisition_week": 14,
+            "weeks_started": 1,
+            "total_weeks_available": 1,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 11,
+        "team_name": "On To 2026",
+        "total_adds": 14,
+        "tier1_hits": 2,
+        "tier2_hits": 4,
+        "tier3_hits": 3,
+        "misses": 5,
+        "overall_hit_rate": 64.3,
+        "notable_hits": [
+          {
+            "player_name": "Mac Jones",
+            "player_id": "7527",
+            "acquisition_week": 2,
+            "weeks_started": 7,
+            "total_weeks_available": 13,
+            "tier": 1
+          },
+          {
+            "player_name": "Devin Singletary",
+            "player_id": "6130",
+            "acquisition_week": 8,
+            "weeks_started": 5,
+            "total_weeks_available": 7,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 10,
+        "team_name": "Rashid Shaheed Truthers",
+        "total_adds": 7,
+        "tier1_hits": 0,
+        "tier2_hits": 0,
+        "tier3_hits": 2,
+        "misses": 5,
+        "overall_hit_rate": 28.6,
+        "notable_hits": []
+      }
+    ],
+    "league_stats": {
+      "avg_hit_rate": 45.1,
+      "median_hit_rate": 40.6
     }
   },
   "all_transactions": [

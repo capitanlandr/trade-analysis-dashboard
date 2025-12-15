@@ -51,8 +51,38 @@ export interface EfficiencyData {
   };
 }
 
+export interface NotableHit {
+  player_name: string;
+  player_id: string;
+  acquisition_week: number;
+  weeks_started: number;
+  total_weeks_available: number;
+  tier: number | null;
+}
+
+export interface HitRateMetric {
+  roster_id: number;
+  team_name: string;
+  total_adds: number;
+  tier1_hits: number;
+  tier2_hits: number;
+  tier3_hits: number;
+  misses: number;
+  overall_hit_rate: number;
+  notable_hits: NotableHit[];
+}
+
+export interface HitRateData {
+  manager_metrics: HitRateMetric[];
+  league_stats: {
+    avg_hit_rate: number;
+    median_hit_rate: number;
+  };
+}
+
 export interface WaiverWireData {
   all_transactions: WaiverWireTransaction[];
   churn_metrics?: ChurnMetric[];
   efficiency_metrics?: EfficiencyData;
+  hit_rate_metrics?: HitRateData;
 }
