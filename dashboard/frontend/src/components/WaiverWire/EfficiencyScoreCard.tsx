@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DollarSign, Info, ChevronDown, ChevronUp, User } from 'lucide-react';
+import { DollarSign, Info, ChevronDown, ChevronUp } from 'lucide-react';
 import { EfficiencyData } from '../../types/waiver-wire';
 
 interface EfficiencyScoreCardProps {
@@ -35,11 +35,10 @@ export const EfficiencyScoreCard: React.FC<EfficiencyScoreCardProps> = ({
   const [showAllTeams, setShowAllTeams] = useState(false);
   const [selectedTeamId, setSelectedTeamId] = useState(topTeam?.roster_id || currentTeamId);
   
-  const userMetric = data.manager_metrics.find(m => m.roster_id === currentTeamId);
   const selectedMetric = data.manager_metrics.find(m => m.roster_id === selectedTeamId);
+  const userMetric = data.manager_metrics.find(m => m.roster_id === currentTeamId);
   const displayMetric = selectedMetric || userMetric;
   const scoreBadge = displayMetric ? getScoreBadge(displayMetric.normalized_wwes) : null;
-  const isViewingOwnTeam = selectedTeamId === currentTeamId;
   
   return (
     <div className="card">
