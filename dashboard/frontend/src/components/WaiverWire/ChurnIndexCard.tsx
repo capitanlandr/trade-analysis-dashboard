@@ -11,22 +11,15 @@ export const ChurnIndexCard: React.FC<ChurnIndexCardProps> = ({
   metrics,
   currentTeamId
 }) => {
+  // Default to #1 ranked team (highest churn rate)
+  const topTeam = [...metrics].sort((a, b) => b.overall_churn_rate - a.overall_churn_rate)[0];
   const [showInfo, setShowInfo] = useState(false);
   const [showAllTeams, setShowAllTeams] = useState(false);
+  const [selectedTeamId, setSelectedTeamId] = useState(topTeam?.roster_id || currentTeamId);
+  
+  const selectedMetric = metrics.find(m => m.roster_id === selectedTeamId);
   const userMetric = metrics.find(m => m.roster_id === currentTeamId);
-  
-  // Style badge based on management style
-  const getStyleBadge = (style: string) => {
-    const styles = {
-      'extreme': { bg: 'bg-red-100', text: 'text-red-800', label: 'Extreme Churn' },
-      'active': { bg: 'bg-orange-100', text: 'text-orange-800', label: 'Active' },
-      'moderate': { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Moderate' },
-      'passive': { bg: 'bg-gray-100', text: 'text-gray-800', label: 'Passive' }
-    };
-    return styles[style as keyof typeof styles] || styles.moderate;
-  };
-  
-  const styleBadge = userMetric ? getStyleBadge(userMetric.management_style) : null;
+  const displayMetric = selectedMetric || userMetric;
   
   return (
     <div className="card">
@@ -65,31 +58,23 @@ export const ChurnIndexCard: React.FC<ChurnIndexCardProps> = ({
         </div>
       </div>
       
-      {userMetric ? (
+      {displayMetric ? (
         <>
           <div className="text-center mb-4">
-            <div className="text-4xl font-bold text-gray-900">
-              {userMetric.overall_churn_rate}%
+            <div className="text-4xl font-bold text-orange-600">
+              {displayMetric.overall_churn_rate}%
             </div>
             <div className="text-sm text-gray-600">Weekly Churn Rate</div>
           </div>
           
-          {styleBadge && (
-            <div className="flex justify-center mb-4">
-              <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${styleBadge.bg} ${styleBadge.text}`}>
-                {styleBadge.label} Management Style
-              </span>
-            </div>
-          )}
-          
           <div className="grid grid-cols-2 gap-4 text-sm mb-6">
             <div className="text-center">
               <div className="text-gray-600">Total Adds</div>
-              <div className="font-semibold text-lg">{userMetric.total_adds}</div>
+              <div className="font-semibold text-lg">{displayMetric.total_adds}</div>
             </div>
             <div className="text-center">
               <div className="text-gray-600">Total Drops</div>
-              <div className="font-semibold text-lg">{userMetric.total_drops}</div>
+              <div className="font-semibold text-lg">{displayMetric.total_drops}</div>
             </div>
           </div>
           
@@ -103,8 +88,10 @@ export const ChurnIndexCard: React.FC<ChurnIndexCardProps> = ({
                 .map((m, idx) => (
                   <div
                     key={m.roster_id}
-                    className={`flex justify-between items-center text-sm py-1.5 px-2 rounded ${
-                      m.roster_id === currentTeamId ? 'bg-orange-50 font-medium' : ''
+                    onClick={() => setSelectedTeamId(m.roster_id)}
+                    className={`flex justify-between items-center text-sm py-1.5 px-2 rounded cursor-pointer transition-all ${
+                      m.roster_id === selectedTeamId ? 'bg-orange-100 ring-2 ring-orange-400 font-medium' :
+                      'hover:bg-gray-100'
                     }`}
                   >
                     <span className="text-gray-600 truncate flex-1">
