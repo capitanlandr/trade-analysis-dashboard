@@ -9,7 +9,7 @@ import logging
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 import yaml
@@ -445,7 +445,7 @@ def main():
             'metadata': {
                 'current_week': current_week,
                 'total_weeks': REGULAR_SEASON_WEEKS,
-                'last_updated': datetime.now().isoformat(),
+                'last_updated': datetime.now(timezone.utc).isoformat(),
                 'season': CURRENT_SEASON
             }
         }
