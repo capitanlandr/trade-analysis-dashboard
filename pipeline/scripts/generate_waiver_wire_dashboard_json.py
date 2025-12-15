@@ -20,6 +20,41 @@ from utils.api_client import fetch_with_retry
 
 logger = setup_logging(__name__)
 
+def load_asset_values() -> Dict[str, int]:
+    """Load player values from asset_values_cache.csv."""
+    try:
+        cache_file = Path('asset_values_cache.csv')
+        if not cache_file.exists():
+            logger.warning("asset_values_cache.csv not found - player values will not be available")
+            return {}
+        
+        df = pd.read_csv(cache_file)
+        
+        # Filter to only player assets (not picks or FAAB)
+        player_df = df[df['asset_type'] == 'player'].copy()
+        
+        if player_df.empty:
+            logger.warning("No player data found in asset_values_cache.csv")
+            return {}
+        
+        # Create mapping from player name to current value
+        # We'll use asset_name (player name) as key since that's what we have
+        player_values = {}
+        for _, row in player_df.iterrows():
+            player_name = row['asset_name']
+            value = row['value_current']
+            
+            if pd.notna(player_name) and pd.notna(value):
+                # Store the most recent value for each player (last occurrence wins)
+                player_values[player_name] = int(value)
+        
+        logger.info(f"✓ Loaded values for {len(player_values)} players from asset_values_cache.csv")
+        return player_values
+        
+    except Exception as e:
+        logger.warning(f"Failed to load asset values: {e}")
+        return {}
+
 def load_player_data() -> Dict[str, Dict[str, Any]]:
     """Fetch player data from Sleeper API for name resolution."""
     try:
@@ -190,6 +225,9 @@ def generate_waiver_wire_dashboard_data():
         players = load_player_data()
         team_resolver = TeamResolver()
         
+        # Load player values
+        player_values = load_asset_values()
+        
         # Helper function to get player name
         def get_player_name(player_id):
             if not player_id or player_id == 'None':
@@ -205,6 +243,25 @@ def generate_waiver_wire_dashboard_data():
                     return first_name or last_name
             
             return f"Player {player_id}"
+        
+        # Helper function to get player value
+        def get_player_value(player_name):
+            """Get player value from cache, returns None if not found."""
+            if not player_name or player_name == 'Unknown Player':
+                return None
+            
+            # Direct lookup by name
+            value = player_values.get(player_name)
+            if value is not None:
+                return value
+            
+            # Try case-insensitive match as fallback
+            player_name_lower = player_name.lower()
+            for name, val in player_values.items():
+                if name.lower() == player_name_lower:
+                    return val
+            
+            return None
         
         # Generate manager activity summary
         manager_activity = []
@@ -240,6 +297,9 @@ def generate_waiver_wire_dashboard_data():
                     pri = int(row['priority'])
                     priority_val = None if pri == -1 else pri
                 
+                player_name = get_player_name(row['player_id'])
+                player_value = get_player_value(player_name)
+                
                 transaction = {
                     'transaction_id': row['transaction_id'],
                     'type': row['type'],
@@ -247,8 +307,9 @@ def generate_waiver_wire_dashboard_data():
                     'status': row['status'],
                     'team_name': row['team_name'] or f"Team {row['roster_id']}",
                     'roster_id': int(row['roster_id']) if pd.notna(row['roster_id']) else None,
-                    'player_name': get_player_name(row['player_id']),
+                    'player_name': player_name,
                     'player_id': str(row['player_id']) if pd.notna(row['player_id']) else None,
+                    'player_value': player_value,
                     'waiver_bid': int(row['waiver_bid']) if pd.notna(row['waiver_bid']) else 0,
                     'week': int(row['week']) if pd.notna(row['week']) else 1,
                     'created_date': row['created_dt'].strftime('%Y-%m-%d %H:%M:%S') if pd.notna(row['created_dt']) and hasattr(row['created_dt'], 'strftime') else str(row['created_dt']) if pd.notna(row['created_dt']) else None,

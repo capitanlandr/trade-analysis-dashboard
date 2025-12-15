@@ -7,6 +7,7 @@ export interface WaiverWireTransaction {
   roster_id: number;
   player_name: string;
   player_id: string;
+  player_value?: number | null;
   waiver_bid: number;
   week: number;
   created_date: string;

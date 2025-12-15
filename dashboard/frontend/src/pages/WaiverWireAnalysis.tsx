@@ -177,8 +177,8 @@ export default function WaiverWireAnalysis() {
         bValue = new Date(bValue as string).getTime();
       }
       
-      // Handle numeric sorting (waiver_bid, week, etc.)
-      if (sortField === 'waiver_bid' || sortField === 'week' || sortField === 'roster_id' || sortField === 'sequence' || sortField === 'priority') {
+      // Handle numeric sorting (waiver_bid, week, player_value, etc.)
+      if (sortField === 'waiver_bid' || sortField === 'week' || sortField === 'roster_id' || sortField === 'sequence' || sortField === 'priority' || sortField === 'player_value') {
         aValue = Number(aValue) || 0;
         bValue = Number(bValue) || 0;
       }
@@ -821,14 +821,14 @@ export default function WaiverWireAnalysis() {
                 {/* Player Column */}
                 <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
                   <div className="flex items-center justify-between">
-                    <div 
+                    <div
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
                       onClick={() => handleSort('player_name')}
                     >
                       <span>Player</span>
                       {sortField === 'player_name' && (
-                        sortDirection === 'asc' ? 
-                          <ChevronUp className="h-4 w-4" /> : 
+                        sortDirection === 'asc' ?
+                          <ChevronUp className="h-4 w-4" /> :
                           <ChevronDown className="h-4 w-4" />
                       )}
                     </div>
@@ -842,6 +842,20 @@ export default function WaiverWireAnalysis() {
                     </button>
                   </div>
                   <ColumnFilterDropdown field="player_name" uniqueValues={null} />
+                </th>
+
+                {/* Value Column */}
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
+                       onClick={() => handleSort('player_value')}>
+                    <span className="hidden sm:inline">Value (at txn)</span>
+                    <span className="sm:hidden">Value</span>
+                    {sortField === 'player_value' && (
+                      sortDirection === 'asc' ?
+                        <ChevronUp className="h-4 w-4" /> :
+                        <ChevronDown className="h-4 w-4" />
+                    )}
+                  </div>
                 </th>
 
                 {/* Bid Column */}
@@ -951,6 +965,9 @@ export default function WaiverWireAnalysis() {
                   </td>
                   <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
                     {transaction.player_name}
+                  </td>
+                  <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
+                    {transaction.player_value ? transaction.player_value.toLocaleString() : '-'}
                   </td>
                   <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900 hidden sm:table-cell">
                     {transaction.waiver_bid > 0 ? `${transaction.waiver_bid}` : '-'}
