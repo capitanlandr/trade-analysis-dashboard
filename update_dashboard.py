@@ -51,10 +51,12 @@ PIPELINE_STAGES = [
     ("Stage 3: Cache Values", "python3 stage3_cache_values.py"),
     ("Stage 4: Generate Analysis", "python3 stage4_final.py"),
     ("Stage 5: Waiver Wire Analysis", "python3 stage5_waiver_wire.py"),
+    ("Stage 5a: Fetch Player Stats", "python3 scripts/fetch_player_stats.py"),
+    ("Stage 5b: Fetch Lineup Data", "python3 scripts/fetch_lineup_data.py"),
     ("Stage 6: Analyze 2026 Pick Ownership", "python3 analyze_2026_pick_ownership.py"),
     ("Stage 7: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
     ("Stage 8: Generate Dashboard JSON", "python3 scripts/generate_dashboard_json.py"),
-    ("Stage 9: Generate Waiver Wire JSON", "python3 scripts/generate_waiver_wire_json.py"),
+    ("Stage 9: Generate Waiver Wire JSON", "python3 scripts/generate_waiver_wire_dashboard_json.py"),
     ("Stage 10: Fetch Current Standings", "python3 scripts/fetch_standings.py"),
     ("Stage 11: Run Playoff Simulations", "python3 scripts/simulate_playoff_scenarios.py"),
     ("Stage 12: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json.py")
