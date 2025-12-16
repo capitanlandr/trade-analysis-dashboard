@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-16T14:20:23.864374",
+    "generated_at": "2025-12-16T10:26:11.460990",
     "total_waiver_transactions": 291,
     "total_free_agent_transactions": 192,
     "successful_waivers": 194,
@@ -573,6 +573,271 @@
     "league_stats": {
       "avg_hit_rate": 44.9,
       "median_hit_rate": 40.6
+    }
+  },
+  "timing_metrics": {
+    "manager_metrics": [
+      {
+        "roster_id": 5,
+        "team_name": "Mommy Rainier ",
+        "early_week_hits": 2,
+        "late_week_hits": 3,
+        "early_avg_points": 48.3,
+        "late_avg_points": 73.1,
+        "timing_score": -24.8,
+        "strategy_type": "reactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Zonovan Knight",
+            "points": 83.7,
+            "tier": 1
+          },
+          {
+            "player_name": "Darnell Washington",
+            "points": 12.9,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": [
+          {
+            "player_name": "Oronde Gadsden",
+            "points": 103.1,
+            "tier": 1
+          },
+          {
+            "player_name": "Chimere Dike",
+            "points": 91.3,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "roster_id": 2,
+        "team_name": "Like a Good Naber",
+        "early_week_hits": 1,
+        "late_week_hits": 0,
+        "early_avg_points": 33.3,
+        "late_avg_points": 0,
+        "timing_score": 33.3,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Kirk Cousins",
+            "points": 33.3,
+            "tier": 1
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 9,
+        "team_name": "Gaeta Spur FC",
+        "early_week_hits": 1,
+        "late_week_hits": 0,
+        "early_avg_points": 20.2,
+        "late_avg_points": 0,
+        "timing_score": 20.2,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Greg Dortch",
+            "points": 20.2,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 8,
+        "team_name": "TRIPS \ud83d\udd25",
+        "early_week_hits": 2,
+        "late_week_hits": 0,
+        "early_avg_points": 108.2,
+        "late_avg_points": 0,
+        "timing_score": 108.2,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Kenneth Gainwell",
+            "points": 144.4,
+            "tier": 2
+          },
+          {
+            "player_name": "Dillon Gabriel",
+            "points": 72.1,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 1,
+        "team_name": "208 Ferrari Way",
+        "early_week_hits": 0,
+        "late_week_hits": 0,
+        "early_avg_points": 0,
+        "late_avg_points": 0,
+        "timing_score": 0,
+        "strategy_type": "balanced",
+        "notable_early_hits": [],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 7,
+        "team_name": "2-Man Title Charge",
+        "early_week_hits": 1,
+        "late_week_hits": 0,
+        "early_avg_points": 34.3,
+        "late_avg_points": 0,
+        "timing_score": 34.3,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Tyrod Taylor",
+            "points": 34.3,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 12,
+        "team_name": "Paper Tigers",
+        "early_week_hits": 0,
+        "late_week_hits": 1,
+        "early_avg_points": 0,
+        "late_avg_points": 76.6,
+        "timing_score": -76.6,
+        "strategy_type": "reactive",
+        "notable_early_hits": [],
+        "notable_late_hits": [
+          {
+            "player_name": "Jacory Croskey-Merritt",
+            "points": 76.6,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "roster_id": 3,
+        "team_name": "Bucky\u2019s Depression",
+        "early_week_hits": 1,
+        "late_week_hits": 0,
+        "early_avg_points": 84.4,
+        "late_avg_points": 0,
+        "timing_score": 84.4,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Tez Johnson",
+            "points": 84.4,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 6,
+        "team_name": "Mostly Washed",
+        "early_week_hits": 2,
+        "late_week_hits": 0,
+        "early_avg_points": 66.5,
+        "late_avg_points": 0,
+        "timing_score": 66.5,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Hunter Henry",
+            "points": 125.4,
+            "tier": 1
+          },
+          {
+            "player_name": "Mason Rudolph",
+            "points": 7.5,
+            "tier": 2
+          }
+        ],
+        "notable_late_hits": []
+      },
+      {
+        "roster_id": 4,
+        "team_name": "Spirit Halloween",
+        "early_week_hits": 2,
+        "late_week_hits": 3,
+        "early_avg_points": 17.3,
+        "late_avg_points": 78.5,
+        "timing_score": -61.2,
+        "strategy_type": "reactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Ty Johnson",
+            "points": 34.6,
+            "tier": 1
+          },
+          {
+            "player_name": "Philip Rivers",
+            "points": 0,
+            "tier": 1
+          }
+        ],
+        "notable_late_hits": [
+          {
+            "player_name": "Jacoby Brissett",
+            "points": 147.3,
+            "tier": 2
+          },
+          {
+            "player_name": "John Metchie",
+            "points": 45.7,
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "roster_id": 11,
+        "team_name": "On To 2026",
+        "early_week_hits": 5,
+        "late_week_hits": 1,
+        "early_avg_points": 88.8,
+        "late_avg_points": 38.3,
+        "timing_score": 50.5,
+        "strategy_type": "proactive",
+        "notable_early_hits": [
+          {
+            "player_name": "Juwan Johnson",
+            "points": 119.8,
+            "tier": 2
+          },
+          {
+            "player_name": "Mac Jones",
+            "points": 114.6,
+            "tier": 1
+          }
+        ],
+        "notable_late_hits": [
+          {
+            "player_name": "Kendrick Bourne",
+            "points": 38.3,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "roster_id": 10,
+        "team_name": "Rashid Shaheed Truthers",
+        "early_week_hits": 0,
+        "late_week_hits": 0,
+        "early_avg_points": 0,
+        "late_avg_points": 0,
+        "timing_score": 0,
+        "strategy_type": "balanced",
+        "notable_early_hits": [],
+        "notable_late_hits": []
+      }
+    ],
+    "league_stats": {
+      "avg_timing_score": 19.6,
+      "median_timing_score": 33.3
     }
   },
   "all_transactions": [

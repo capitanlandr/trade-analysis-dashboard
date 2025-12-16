@@ -80,9 +80,37 @@ export interface HitRateData {
   };
 }
 
+export interface NotableTimingHit {
+  player_name: string;
+  points: number;
+  tier: number;
+}
+
+export interface TimingMetric {
+  roster_id: number;
+  team_name: string;
+  early_week_hits: number;
+  late_week_hits: number;
+  early_avg_points: number;
+  late_avg_points: number;
+  timing_score: number;
+  strategy_type: 'proactive' | 'balanced' | 'reactive';
+  notable_early_hits: NotableTimingHit[];
+  notable_late_hits: NotableTimingHit[];
+}
+
+export interface TimingData {
+  manager_metrics: TimingMetric[];
+  league_stats: {
+    avg_timing_score: number;
+    median_timing_score: number;
+  };
+}
+
 export interface WaiverWireData {
   all_transactions: WaiverWireTransaction[];
   churn_metrics?: ChurnMetric[];
   efficiency_metrics?: EfficiencyData;
   hit_rate_metrics?: HitRateData;
+  timing_metrics?: TimingData;
 }
