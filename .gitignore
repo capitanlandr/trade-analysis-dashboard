@@ -8,8 +8,6 @@ pnpm-debug.log*
 # Production builds
 /dashboard/frontend/dist/
 /dashboard/frontend/build/
-/dashboard/backend/dist/
-/dashboard/backend/build/
 
 # Environment variables
 .env
