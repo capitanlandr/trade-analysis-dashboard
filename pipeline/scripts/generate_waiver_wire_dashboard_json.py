@@ -845,11 +845,9 @@ def generate_waiver_wire_dashboard_data():
             }
         }
         
-        # Save dashboard data
-        output_files = [
-            '../dashboard/frontend/public/api-waiver-wire.json',  # Correct path relative to pipeline dir
-            'api-waiver-wire.json'  # Also save in pipeline dir for reference
-        ]
+        # Save dashboard data to single source of truth
+        output_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-waiver-wire.json'
+        output_file.parent.mkdir(parents=True, exist_ok=True)
         
         def clean_nan(obj):
             """Recursively replace NaN with None in nested structures."""
@@ -866,14 +864,10 @@ def generate_waiver_wire_dashboard_data():
         # Clean NaN values before serializing
         cleaned_data = clean_nan(dashboard_data)
         
-        for output_file in output_files:
-            # Create directory if it doesn't exist
-            Path(output_file).parent.mkdir(parents=True, exist_ok=True)
-            
-            with open(output_file, 'w') as f:
-                json.dump(cleaned_data, f, indent=2)
-            
-            logger.info(f"Generated {output_file}")
+        with open(output_file, 'w') as f:
+            json.dump(cleaned_data, f, indent=2)
+        
+        logger.info(f"✓ Generated {output_file}")
         
         # Generate summary stats for quick access
         summary_stats = {

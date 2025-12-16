@@ -450,19 +450,12 @@ def main():
             }
         }
         
-        # Write output to TWO locations:
-        # 1. Pipeline directory (for debugging, auditing, and pipeline script dependencies)
-        output_path = Path(__file__).parent.parent / "standings_data.json"
-        with open(output_path, 'w') as f:
-            json.dump(output, f, indent=2)
-        logger.info(f"✓ Pipeline copy: {output_path}")
-        
-        # 2. Dashboard directory (for frontend consumption - direct write for efficiency)
+        # Write output to single source of truth
         dashboard_path = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-standings.json'
         dashboard_path.parent.mkdir(parents=True, exist_ok=True)
         with open(dashboard_path, 'w') as f:
             json.dump(output, f, indent=2)
-        logger.info(f"✓ Dashboard copy: {dashboard_path}")
+        logger.info(f"✓ Generated {dashboard_path}")
         
         logger.info("=" * 80)
         logger.info(f"✅ STANDINGS DATA GENERATED")

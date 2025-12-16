@@ -445,19 +445,12 @@ def main():
         # Run simulations
         simulation_results = run_simulations(standings, current_week, num_simulations=20000)
         
-        # Write results to TWO locations (from memory - no redundant file I/O):
-        # 1. Pipeline directory (for debugging, auditing, and historical records)
-        output_file = Path(__file__).parent.parent / 'playoff_scenarios_simulated.json'
-        with open(output_file, 'w') as f:
-            json.dump(simulation_results, f, indent=2)
-        logger.info(f"✓ Pipeline copy: {output_file}")
-        
-        # 2. Dashboard directory (for frontend consumption - direct write for efficiency)
+        # Write results to single source of truth
         dashboard_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-playoff-scenarios.json'
         dashboard_file.parent.mkdir(parents=True, exist_ok=True)
         with open(dashboard_file, 'w') as f:
             json.dump(simulation_results, f, indent=2)
-        logger.info(f"✓ Dashboard copy: {dashboard_file}")
+        logger.info(f"✓ Generated {dashboard_file}")
         
         # Print summary
         print("\n" + "="*80)

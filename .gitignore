@@ -108,6 +108,15 @@ data/*.csv
 !pipeline_outputs/example_*.csv
 !data/example_*.csv
 
+# Generated dashboard JSON files (rebuilt by pipeline)
+dashboard/frontend/public/api-*.json
+dashboard/frontend/public/playoff_*.json
+dashboard/frontend/public/*_analysis.json
+
+# Keep example files for documentation
+!dashboard/frontend/public/api-*.example.json
+!dashboard/frontend/public/README.md
+
 # Pipeline intermediate files (don't commit these)
 pipeline/backups/
 pipeline/logs/

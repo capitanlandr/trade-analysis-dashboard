@@ -24,24 +24,22 @@ from pathlib import Path
 
 # Configuration
 PIPELINE_DIR = "pipeline"  # Directory containing all pipeline scripts
-DASHBOARD_ROOT = "."       # Root of git repo (where files get copied for Vercel)
 
+# CSV files used by pipeline (still in pipeline/)
 REQUIRED_FILES = [
     "league_trades_analysis_pipeline.csv",
-    "team_identity_mapping.csv", 
+    "team_identity_mapping.csv",
     "3team_trades_analysis.json"
 ]
 
-# JSON files that need to be copied
-# Stages 7-10 generate these in ../dashboard/frontend/public/ (relative to pipeline dir)
-# We need to copy them from there to the git root dashboard/frontend/public/
+# JSON files generated directly to dashboard/frontend/public/ by scripts
 DASHBOARD_JSON_FILES = [
-    ("../dashboard/frontend/public/api-trades.json", "dashboard/frontend/public/api-trades.json"),
-    ("../dashboard/frontend/public/api-teams.json", "dashboard/frontend/public/api-teams.json"),
-    ("../dashboard/frontend/public/api-stats-summary.json", "dashboard/frontend/public/api-stats-summary.json"),
-    ("../dashboard/frontend/public/api-standings.json", "dashboard/frontend/public/api-standings.json"),
-    ("../dashboard/frontend/public/api-playoff-scenarios.json", "dashboard/frontend/public/api-playoff-scenarios.json"),
-    ("../dashboard/frontend/public/api-waiver-wire.json", "dashboard/frontend/public/api-waiver-wire.json")
+    "api-trades.json",
+    "api-teams.json",
+    "api-stats-summary.json",
+    "api-standings.json",
+    "api-playoff-scenarios.json",
+    "api-waiver-wire.json"
 ]
 
 PIPELINE_STAGES = [
@@ -140,43 +138,24 @@ def print_playoff_summary():
         print(f"   ⚠️  Could not load playoff summary: {e}")
 
 
-def copy_files_to_dashboard(dry_run=False):
-    """Copy the 3 required files from pipeline/ to git root for Vercel."""
-    print(f"\n📁 Copying files from {PIPELINE_DIR}/ to git root...")
+def verify_dashboard_files(dry_run=False):
+    """Verify dashboard JSON files were generated correctly."""
+    print(f"\n📁 Verifying dashboard JSON files in dashboard/frontend/public/...")
     
-    all_copied = True
-    for filename in REQUIRED_FILES:
-        src = os.path.join(PIPELINE_DIR, filename)
-        dst = os.path.join(DASHBOARD_ROOT, filename)
+    all_verified = True
+    dashboard_dir = Path("dashboard/frontend/public")
+    
+    for filename in DASHBOARD_JSON_FILES:
+        filepath = dashboard_dir / filename
         
-        if not os.path.exists(src):
-            print(f"   ❌ Source file {src} not found!")
-            all_copied = False
-            continue
-            
-        if dry_run:
-            print(f"   [DRY RUN] Would copy {src} → {dst}")
+        if not filepath.exists():
+            print(f"   ❌ {filename} not found!")
+            all_verified = False
         else:
-            try:
-                shutil.copy2(src, dst)
-                print(f"   ✅ Copied {src} → {dst}")
-            except Exception as e:
-                print(f"   ❌ Failed to copy {src}: {e}")
-                all_copied = False
+            size = filepath.stat().st_size
+            print(f"   ✅ {filename} ({size:,} bytes)")
     
-    # Verify dashboard JSON files exist (they're generated directly in place by stages 7-10)
-    print(f"\n📁 Verifying dashboard JSON files...")
-    for _, dst_path in DASHBOARD_JSON_FILES:
-        dst = os.path.join(DASHBOARD_ROOT, dst_path)
-        
-        if not os.path.exists(dst):
-            print(f"   ❌ Dashboard file {dst} not found!")
-            all_copied = False
-        else:
-            size = os.path.getsize(dst)
-            print(f"   ✅ {dst} ({size:,} bytes)")
-    
-    return all_copied
+    return all_verified
 
 def git_deploy(dry_run=False):
     """Commit and push changes to trigger Vercel deployment."""
@@ -244,9 +223,9 @@ def main():
         print("\n❌ Some required files are missing. Pipeline may have failed.")
         sys.exit(1)
     
-    # Step 3: Copy files to dashboard
-    if not copy_files_to_dashboard(args.dry_run):
-        print("\n❌ Failed to copy files to dashboard directory.")
+    # Step 3: Verify dashboard files generated
+    if not verify_dashboard_files(args.dry_run):
+        print("\n❌ Dashboard JSON files missing or incomplete.")
         sys.exit(1)
     
     # Step 4: Deploy (unless skipped)
