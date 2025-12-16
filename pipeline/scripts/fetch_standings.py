@@ -18,9 +18,11 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.logging_config import setup_logging
 from utils.week_config import get_current_week_from_config
+from config import get_config
 
-# Constants
-LEAGUE_ID = "1180814327660371968"
+# Constants from config
+config = get_config()
+LEAGUE_ID = config.league_id
 CURRENT_SEASON = 2025
 REGULAR_SEASON_WEEKS = 14  # Weeks 1-14 are regular season
 

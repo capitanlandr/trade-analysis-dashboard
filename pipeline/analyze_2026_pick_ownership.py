@@ -13,9 +13,16 @@ import pandas as pd
 import requests
 from collections import defaultdict
 import json
+import sys
+from pathlib import Path
 
-# League configuration
-LEAGUE_ID = "1180814327660371968"
+# Add parent directory for imports
+sys.path.insert(0, str(Path(__file__).parent))
+from config import get_config
+
+# League configuration from centralized config
+config = get_config()
+LEAGUE_ID = config.league_id
 
 # Roster ID to username mapping (from Sleeper API)
 ROSTER_TO_USER = {

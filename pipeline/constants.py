@@ -5,31 +5,38 @@ Centralized constants for tier values, dates, and other configuration
 
 from enum import Enum
 from datetime import datetime
+from config import get_config
 
 
 class PickTier(Enum):
-    """2025 1st round pick tier values with rationale"""
-    EARLY_FIRST = 5430  # Picks 1-4: Elite prospects (Bijan Robinson, Breece Hall tier)
-    MID_FIRST = 2558    # Picks 5-8: High-quality starters  
-    LATE_FIRST = 1232   # Picks 9-12: Depth/development pieces
+    """2025 1st round pick tier labels - values come from config"""
+    EARLY_FIRST = "early_first"  # Picks 1-4: Elite prospects
+    MID_FIRST = "mid_first"       # Picks 5-8: High-quality starters
+    LATE_FIRST = "late_first"     # Picks 9-12: Depth/development pieces
     
     @classmethod
     def get_value(cls, pick_in_round: int) -> int:
         """
-        Get tier value based on pick position.
+        Get tier value from centralized config based on pick position.
         
         Args:
             pick_in_round: Pick number within round (1-12)
             
         Returns:
-            Tier value as integer
+            Tier value as integer from config.yaml
+            
+        Example:
+            >>> value = PickTier.get_value(2)
+            >>> print(value)  # 5430 (from config.yaml)
         """
+        config = get_config()
+        
         if pick_in_round <= 4:
-            return cls.EARLY_FIRST.value
+            return config.valuations.tiers.early_first
         elif pick_in_round <= 8:
-            return cls.MID_FIRST.value
+            return config.valuations.tiers.mid_first
         else:
-            return cls.LATE_FIRST.value
+            return config.valuations.tiers.late_first
     
     @classmethod
     def get_tier_name(cls, pick_in_round: int) -> str:

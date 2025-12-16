@@ -23,10 +23,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.api_client import fetch_with_retry, APIError
 from utils.logging_config import setup_logging
+from config import get_config
 
-# League configuration
-LEAGUE_ID = "1180814327660371968"
-SLEEPER_API_BASE = "https://api.sleeper.app/v1"
+# League configuration from centralized config
+config = get_config()
+LEAGUE_ID = config.league_id
+SLEEPER_API_BASE = config.sleeper_api.base_url
 
 # Setup logging
 logger = setup_logging(__name__)
