@@ -46,7 +46,7 @@ if [ -n "$STAGED_PY_FILES" ]; then
   
   # Check Python syntax
   for file in $STAGED_PY_FILES; do
-    python -m py_compile "$file" 2>/dev/null
+    python3 -m py_compile "$file" 2>/dev/null
     if [ $? -ne 0 ]; then
       echo "❌ Python syntax error in: $file"
       exit 1

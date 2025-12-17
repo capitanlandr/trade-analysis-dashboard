@@ -2,14 +2,32 @@
 Week Detection Script with Roster Validation
 Centralized week detection to avoid timing issues during Tuesday waivers.
 
+THE TUESDAY TIMING PROBLEM 🕒
+================================
+When Sleeper processes waivers on Tuesday morning (~3 AM EST), the API's 'leg'
+field advances to the NEXT week before games are actually played:
+
+  Monday Night (11:30 PM) - Week 12 games finish
+  ├─ Rosters: 6-6-0 record (12 games / 2 = Week 12 complete) ✓
+  └─ Sleeper leg: 12 (correct)
+
+  Tuesday Morning (3 AM) - Waivers process
+  ├─ Rosters: 6-6-0 record (still only 12 games!) ✓
+  └─ Sleeper leg: 13 (⚠️ advanced to NEXT week prematurely)
+
+OUR SOLUTION: Validate using roster records, not the 'leg' field
+================================================================
+
 This script determines the current completed week by:
-1. Fetching Sleeper's 'leg' field (upcoming week)
+1. Fetching Sleeper's 'leg' field (upcoming week indicator)
 2. Validating completion using roster records: (wins + losses + ties) / 2
 3. Writing the validated week to config/current_week.json
 
 The validation ensures we don't advance to a new week until all games
 are completed and records are finalized, even if Sleeper has moved to
 the next leg during Tuesday waivers.
+
+See: docs/guides/WEEK_DETECTION.md for detailed architecture explanation
 """
 
 import sys
