@@ -6,7 +6,6 @@ import Standings from './pages/Standings'
 import PlayoffScenarios from './pages/PlayoffScenarios'
 import CommishTiersArchive from './pages/CommishTiersArchive'
 import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
-import UpdateNotification from './components/Notifications/UpdateNotification'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
 const queryClient = new QueryClient({
@@ -46,7 +45,6 @@ function App() {
               </div>
             }
           >
-            <UpdateNotification />
             <Routes>
               <Route path="/" element={<DashboardLayout />}>
                 <Route index element={<Overview />} />
