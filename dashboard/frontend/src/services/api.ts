@@ -1,3 +1,8 @@
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
+import type { WaiverWireData } from '../types/waiver-wire';
+import type { StandingsData } from '../types/standings';
+import type { PlayoffScenariosData } from '../types/playoff-scenarios';
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 const USE_STATIC_DATA = true; // Always use static JSON files (same as prod)
 console.log('API Configuration:', {
@@ -104,6 +109,47 @@ export const api = {
 
   // Data management
   loadData: () => apiFetch('/data/load'),
+};
+
+/**
+ * Centralized data hooks for consistent caching and error handling
+ * Uses React Query for automatic refetching, caching, and loading states
+ */
+
+export const useWaiverWireData = (): UseQueryResult<WaiverWireData> => {
+  return useQuery({
+    queryKey: ['waiver-wire'],
+    queryFn: () => fetch('/api-waiver-wire.json').then(r => {
+      if (!r.ok) throw new Error('Failed to fetch waiver wire data');
+      return r.json();
+    }),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    gcTime: 30 * 60 * 1000, // 30 minutes (formerly cacheTime)
+  });
+};
+
+export const useStandingsData = (): UseQueryResult<StandingsData> => {
+  return useQuery({
+    queryKey: ['standings'],
+    queryFn: () => fetch('/api-standings.json').then(r => {
+      if (!r.ok) throw new Error('Failed to fetch standings data');
+      return r.json();
+    }),
+    staleTime: 5 * 60 * 1000,
+    gcTime: 30 * 60 * 1000,
+  });
+};
+
+export const usePlayoffScenariosData = (): UseQueryResult<PlayoffScenariosData> => {
+  return useQuery({
+    queryKey: ['playoff-scenarios'],
+    queryFn: () => fetch('/api-playoff-scenarios.json').then(r => {
+      if (!r.ok) throw new Error('Failed to fetch playoff scenarios data');
+      return r.json();
+    }),
+    staleTime: 5 * 60 * 1000,
+    gcTime: 30 * 60 * 1000,
+  });
 };
 
 export default api;

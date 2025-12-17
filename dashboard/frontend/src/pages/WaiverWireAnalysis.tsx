@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { Users, AlertCircle, ChevronUp, ChevronDown, Filter, X, Search, Calendar } from 'lucide-react';
-import type { WaiverWireData, WaiverWireTransaction } from '../types/waiver-wire';
+import type { WaiverWireTransaction } from '../types/waiver-wire';
+import { useWaiverWireData } from '../services/api';
 import { ChurnIndexCard } from '../components/WaiverWire/ChurnIndexCard';
 import { EfficiencyScoreCard } from '../components/WaiverWire/EfficiencyScoreCard';
 import { HitRateCard } from '../components/WaiverWire/HitRateCard';
@@ -24,9 +25,8 @@ interface FilterState {
 
 
 export default function WaiverWireAnalysis() {
-  const [data, setData] = useState<WaiverWireData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // Use centralized React Query hook for consistent caching
+  const { data, isLoading, error } = useWaiverWireData();
   
   // Sorting state
   const [sortField, setSortField] = useState<SortField>('created_date');
@@ -51,25 +51,6 @@ export default function WaiverWireAnalysis() {
   // Column filter dropdown state
   const [activeColumnFilter, setActiveColumnFilter] = useState<SortField | null>(null);
   const filterRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api-waiver-wire.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch waiver wire data');
-        }
-        const waiverData = await response.json();
-        setData(waiverData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   // Get unique values for filtering
   const uniqueValues = useMemo(() => {
@@ -360,7 +341,7 @@ export default function WaiverWireAnalysis() {
     );
   };
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="space-y-8">
         <div className="text-center">
@@ -403,7 +384,7 @@ export default function WaiverWireAnalysis() {
           <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Error Loading Data
           </h3>
-          <p className="text-gray-600">{error}</p>
+          <p className="text-gray-600">{error.message}</p>
         </div>
       </div>
     );
