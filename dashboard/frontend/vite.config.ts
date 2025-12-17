@@ -10,6 +10,17 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: process.env.NODE_ENV === 'development', // Only generate source maps in dev
+    minify: 'esbuild', // Fast, excellent minification (Vite default)
+    target: 'es2015', // Support modern browsers
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Separate vendor chunks for better caching
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          query: ['@tanstack/react-query']
+        }
+      }
+    }
   }
 })
