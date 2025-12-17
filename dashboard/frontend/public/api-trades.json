@@ -3996,6 +3996,45 @@
         "swingMargin": 1.0
       },
       {
+        "tradeId": "1230259367983456256",
+        "transactionId": "1230259367983456256",
+        "tradeDate": "2025-05-19",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 4",
+            "valueThen": 20.0,
+            "valueNow": 20.0
+          }
+        ],
+        "teamAValueThen": 20.0,
+        "teamAValueNow": 20.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "valueThen": 15.0,
+            "valueNow": 15.0
+          }
+        ],
+        "teamBValueThen": 15.0,
+        "teamBValueNow": 15.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 5.0,
+        "marginCurrent": 5.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
         "tradeId": "1277318767591825408",
         "transactionId": "1277318767591825408",
         "tradeDate": "2025-09-26",
@@ -4056,49 +4095,10 @@
         "marginCurrent": 11.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
-      },
-      {
-        "tradeId": "1230259367983456256",
-        "transactionId": "1230259367983456256",
-        "tradeDate": "2025-05-19",
-        "teamA": "cjsyregelas",
-        "teamAReceived": [
-          "2026 Round 4"
-        ],
-        "teamAAssets": [
-          {
-            "name": "2026 Round 4",
-            "valueThen": 20.0,
-            "valueNow": 20.0
-          }
-        ],
-        "teamAValueThen": 20.0,
-        "teamAValueNow": 20.0,
-        "teamAValueChange": 0.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "2026 Round 4"
-        ],
-        "teamBAssets": [
-          {
-            "name": "2026 Round 4",
-            "valueThen": 15.0,
-            "valueNow": 15.0
-          }
-        ],
-        "teamBValueThen": 15.0,
-        "teamBValueNow": 15.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "cjsyregelas",
-        "winnerCurrent": "cjsyregelas",
-        "marginAtTrade": 5.0,
-        "marginCurrent": 5.0,
-        "swingWinner": "Tie",
-        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2025-12-16T15:48:59.712245",
+      "lastUpdated": "2025-12-17T14:19:20.910703",
       "totalTrades": 80,
       "dateRange": {
         "earliest": "2025-03-14",
