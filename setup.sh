@@ -23,9 +23,19 @@ echo "✅ Node.js $(node -v) detected"
 echo "Installing frontend dependencies..."
 cd dashboard/frontend && npm install
 
+# Setup git hooks
 echo ""
-echo "✅ Setup complete! Run 'npm run dev' to start development server"
+echo "Setting up git hooks..."
+cd ../..
+./setup-hooks.sh
+
 echo ""
-echo "🌐 The dashboard will be available at: http://localhost:5173"
+echo "✅ Setup complete!"
+echo ""
+echo "To start development:"
+echo "  cd dashboard/frontend && npm run dev"
+echo ""
+echo "🌐 Dashboard will be available at: http://localhost:5173"
+echo "🔒 Pre-commit checks enabled (TypeScript + Python validation)"
 echo ""
 echo "📖 See README.md for detailed usage instructions"
