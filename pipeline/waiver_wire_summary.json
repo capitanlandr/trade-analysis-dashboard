@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 309,
+    "total_waiver_transactions": 310,
     "total_free_agent_transactions": 201,
-    "successful_waivers": 204,
+    "successful_waivers": 205,
     "failed_waivers": 105,
-    "total_waiver_bids": "2496",
-    "average_waiver_bid": 14.344827586206897
+    "total_waiver_bids": "2497",
+    "average_waiver_bid": 14.268571428571429
   },
   "manager_activity": [
     {
@@ -71,12 +71,12 @@
     {
       "roster_id": 7,
       "team_name": "2-Man Title Charge",
-      "total_claims": 19,
-      "total_bid": 225,
-      "avg_bid": 6.82,
+      "total_claims": 20,
+      "total_bid": 226,
+      "avg_bid": 6.65,
       "max_bid": 109,
-      "successful_claims": 23,
-      "success_rate": 121.1
+      "successful_claims": 24,
+      "success_rate": 120.0
     },
     {
       "roster_id": 8,
@@ -192,7 +192,7 @@
     },
     "16": {
       "free_agent": 8,
-      "waiver": 0
+      "waiver": 1
     }
   },
   "contested_players": {
@@ -299,7 +299,7 @@
   },
   "bidding_patterns": {
     "bid_distribution": {
-      "1": 22,
+      "1": 23,
       "2": 15,
       "5": 13,
       "10": 12,
