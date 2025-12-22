@@ -708,37 +708,6 @@
         "swingMargin": 0.0
       },
       {
-        "tradeId": "1281385171571974144",
-        "transactionId": "1281385171571974144",
-        "tradeDate": "2025-10-07",
-        "teamA": "tylerpilgrim",
-        "teamAReceived": [
-          "$11 FAAB"
-        ],
-        "teamAAssets": [
-          {
-            "name": "$11 FAAB",
-            "valueThen": 11.0,
-            "valueNow": 11.0
-          }
-        ],
-        "teamAValueThen": 11.0,
-        "teamAValueNow": 11.0,
-        "teamAValueChange": 0.0,
-        "teamB": "donewton",
-        "teamBReceived": [],
-        "teamBAssets": [],
-        "teamBValueThen": 0.0,
-        "teamBValueNow": 0.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": 11.0,
-        "marginCurrent": 11.0,
-        "swingWinner": "Tie",
-        "swingMargin": 0.0
-      },
-      {
         "tradeId": "1230259367983456256",
         "transactionId": "1230259367983456256",
         "tradeDate": "2025-05-19",
@@ -774,6 +743,37 @@
         "winnerCurrent": "cjsyregelas",
         "marginAtTrade": 5.0,
         "marginCurrent": 5.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1281385171571974144",
+        "transactionId": "1281385171571974144",
+        "tradeDate": "2025-10-07",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "$11 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "$11 FAAB",
+            "valueThen": 11.0,
+            "valueNow": 11.0
+          }
+        ],
+        "teamAValueThen": 11.0,
+        "teamAValueNow": 11.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [],
+        "teamBAssets": [],
+        "teamBValueThen": 0.0,
+        "teamBValueNow": 0.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 11.0,
+        "marginCurrent": 11.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
       }
