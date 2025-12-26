@@ -4,17 +4,6 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 15401.0
-      },
-      {
         "manager": "lndahayo",
         "assets": [
           "Amon-Ra St. Brown",
@@ -23,7 +12,7 @@
           "2026 Round 2"
         ],
         "value_then": 13482.0,
-        "value_now": 12456.0
+        "value_now": 12443.0
       },
       {
         "manager": "zachlearningtogolf",
@@ -38,7 +27,18 @@
           "2026 Round 1"
         ],
         "value_then": 12552.0,
-        "value_now": 16620.0
+        "value_now": 16023.0
+      },
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 16744.0
       }
     ]
   }
