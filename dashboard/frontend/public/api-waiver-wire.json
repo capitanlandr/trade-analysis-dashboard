@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-26T14:17:09.520873",
+    "generated_at": "2025-12-27T14:15:38.960781",
     "total_waiver_transactions": 316,
     "total_free_agent_transactions": 205,
     "successful_waivers": 211,
@@ -11249,13 +11249,6 @@
       "highest_bid": 51
     },
     {
-      "player_id": "2505",
-      "player_name": "Darren Waller",
-      "total_claims": 5,
-      "successful_claims": 1,
-      "highest_bid": 46
-    },
-    {
       "player_id": "8123",
       "player_name": "Hassan Haskins",
       "total_claims": 5,
@@ -11263,10 +11256,17 @@
       "highest_bid": 43
     },
     {
-      "player_id": "11834",
-      "player_name": "Devaughn Vele",
+      "player_id": "2505",
+      "player_name": "Darren Waller",
+      "total_claims": 5,
+      "successful_claims": 1,
+      "highest_bid": 46
+    },
+    {
+      "player_id": "4454",
+      "player_name": "Kendrick Bourne",
       "total_claims": 4,
-      "successful_claims": 2,
+      "successful_claims": 3,
       "highest_bid": 25
     },
     {
@@ -11277,18 +11277,11 @@
       "highest_bid": 52
     },
     {
-      "player_id": "9497",
-      "player_name": "Jalin Hyatt",
+      "player_id": "7670",
+      "player_name": "Joshua Palmer",
       "total_claims": 4,
-      "successful_claims": 4,
-      "highest_bid": 0
-    },
-    {
-      "player_id": "4454",
-      "player_name": "Kendrick Bourne",
-      "total_claims": 4,
-      "successful_claims": 3,
-      "highest_bid": 25
+      "successful_claims": 2,
+      "highest_bid": 12
     },
     {
       "player_id": "6271",
@@ -11298,39 +11291,18 @@
       "highest_bid": 2
     },
     {
-      "player_id": "7670",
-      "player_name": "Joshua Palmer",
+      "player_id": "9497",
+      "player_name": "Jalin Hyatt",
+      "total_claims": 4,
+      "successful_claims": 4,
+      "highest_bid": 0
+    },
+    {
+      "player_id": "11834",
+      "player_name": "Devaughn Vele",
       "total_claims": 4,
       "successful_claims": 2,
-      "highest_bid": 12
-    },
-    {
-      "player_id": "11435",
-      "player_name": "Emanuel Wilson",
-      "total_claims": 3,
-      "successful_claims": 2,
-      "highest_bid": 5
-    },
-    {
-      "player_id": "12470",
-      "player_name": "Riley Leonard",
-      "total_claims": 3,
-      "successful_claims": 1,
-      "highest_bid": 6
-    },
-    {
-      "player_id": "11439",
-      "player_name": "Jaleel McLaughlin",
-      "total_claims": 3,
-      "successful_claims": 2,
-      "highest_bid": 12
-    },
-    {
-      "player_id": "12502",
-      "player_name": "Gunnar Helm",
-      "total_claims": 3,
-      "successful_claims": 1,
-      "highest_bid": 7
+      "highest_bid": 25
     },
     {
       "player_id": "3161",
@@ -11340,11 +11312,32 @@
       "highest_bid": 0
     },
     {
-      "player_id": "6011",
-      "player_name": "Gardner Minshew",
+      "player_id": "827",
+      "player_name": "Tyrod Taylor",
+      "total_claims": 3,
+      "successful_claims": 3,
+      "highest_bid": 0
+    },
+    {
+      "player_id": "11435",
+      "player_name": "Emanuel Wilson",
+      "total_claims": 3,
+      "successful_claims": 2,
+      "highest_bid": 5
+    },
+    {
+      "player_id": "11439",
+      "player_name": "Jaleel McLaughlin",
+      "total_claims": 3,
+      "successful_claims": 2,
+      "highest_bid": 12
+    },
+    {
+      "player_id": "12470",
+      "player_name": "Riley Leonard",
       "total_claims": 3,
       "successful_claims": 1,
-      "highest_bid": 41
+      "highest_bid": 6
     },
     {
       "player_id": "8160",
@@ -11354,18 +11347,25 @@
       "highest_bid": 12
     },
     {
+      "player_id": "6011",
+      "player_name": "Gardner Minshew",
+      "total_claims": 3,
+      "successful_claims": 1,
+      "highest_bid": 41
+    },
+    {
+      "player_id": "12502",
+      "player_name": "Gunnar Helm",
+      "total_claims": 3,
+      "successful_claims": 1,
+      "highest_bid": 7
+    },
+    {
       "player_id": "8917",
       "player_name": "KaVontae Turpin",
       "total_claims": 3,
       "successful_claims": 1,
       "highest_bid": 6
-    },
-    {
-      "player_id": "827",
-      "player_name": "Tyrod Taylor",
-      "total_claims": 3,
-      "successful_claims": 3,
-      "highest_bid": 0
     }
   ],
   "bidding_patterns": {
@@ -11376,33 +11376,33 @@
       "10": 12,
       "12": 11,
       "4": 10,
-      "6": 8,
       "7": 8,
       "20": 8,
+      "6": 8,
       "3": 7,
       "25": 7,
-      "9": 6,
       "15": 6,
+      "9": 6,
       "11": 5,
       "8": 5,
-      "41": 3,
       "35": 3,
-      "39": 2,
+      "41": 3,
       "31": 2,
-      "46": 2,
-      "16": 2,
       "50": 2,
-      "43": 2,
-      "52": 2,
-      "32": 2,
-      "17": 2,
       "51": 2,
       "38": 2,
-      "55": 1,
+      "43": 2,
+      "32": 2,
+      "39": 2,
+      "52": 2,
+      "16": 2,
+      "46": 2,
+      "17": 2,
       "109": 1,
       "13": 1,
-      "75": 1,
-      "84": 1
+      "55": 1,
+      "84": 1,
+      "75": 1
     },
     "highest_bids": [
       {
