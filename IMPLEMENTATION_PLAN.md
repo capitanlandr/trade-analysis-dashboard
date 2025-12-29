@@ -11,16 +11,16 @@
 
 | ID | Item | Priority | Time | Phase | Dependencies | Status |
 |---|---|---|---|---|---|---|
-| IMPL-001 | Delete Unused Backend | CRITICAL | 1h | Foundation | None | ⬜ Not Started |
-| IMPL-002 | Consolidate Data Architecture | CRITICAL | 45m | Foundation | None | ⬜ Not Started |
-| IMPL-003 | Centralize Configuration | CRITICAL | 30m | Foundation | None | ⬜ Not Started |
-| IMPL-004 | Remove Unused Frontend Utilities | HIGH | 15m | Quick Wins | None | ⬜ Not Started |
-| IMPL-005 | Standardize Data Fetching Pattern | HIGH | 20m | Quick Wins | None | ⬜ Not Started |
-| IMPL-006 | Production-Safe Vite Config | HIGH | 10m | Quick Wins | None | ⬜ Not Started |
-| IMPL-007 | Create .env.example Files | MEDIUM | 5m | Quick Wins | None | ⬜ Not Started |
-| IMPL-008 | Add Pre-commit Hook | MEDIUM | 15m | Quick Wins | IMPL-003 | ⬜ Not Started |
-| IMPL-009 | Document Week Detection | MEDIUM | 10m | Quick Wins | None | ⬜ Not Started |
-| IMPL-010 | Add Health Check Script | MEDIUM | 15m | Quick Wins | IMPL-003 | ⬜ Not Started |
+| IMPL-001 | Delete Unused Backend | CRITICAL | 1h | Foundation | None | ✅ Completed |
+| IMPL-002 | Consolidate Data Architecture | CRITICAL | 45m | Foundation | None | ✅ Completed |
+| IMPL-003 | Centralize Configuration | CRITICAL | 30m | Foundation | None | ✅ Completed |
+| IMPL-004 | Remove Unused Frontend Utilities | HIGH | 15m | Quick Wins | None | 🔶 Partial (useRetry.ts remains) |
+| IMPL-005 | Standardize Data Fetching Pattern | HIGH | 20m | Quick Wins | None | ✅ Completed |
+| IMPL-006 | Production-Safe Vite Config | HIGH | 10m | Quick Wins | None | ✅ Completed |
+| IMPL-007 | Create .env.example Files | MEDIUM | 5m | Quick Wins | None | ✅ Completed |
+| IMPL-008 | Add Pre-commit Hook | MEDIUM | 15m | Quick Wins | IMPL-003 | ✅ Completed |
+| IMPL-009 | Document Week Detection | MEDIUM | 10m | Quick Wins | None | ✅ Completed |
+| IMPL-010 | Add Health Check Script | MEDIUM | 15m | Quick Wins | IMPL-003 | ✅ Completed |
 | IMPL-011 | Add Frontend Tests | LOW | 3h | Medium-Term | IMPL-005 | ⬜ Not Started |
 | IMPL-012 | Code Splitting by Route | LOW | 1h | Medium-Term | IMPL-006 | ⬜ Not Started |
 | IMPL-013 | Automated Backup Strategy | MEDIUM | 1.5h | Medium-Term | None | ⬜ Not Started |
@@ -286,14 +286,14 @@ git push origin backup-before-backend-removal --force
 
 #### Success Criteria
 
-- [ ] Backend directory completely removed from repository
-- [ ] Vercel builds successfully without backend compilation step
-- [ ] Frontend loads all data from `/public/api-*.json` files correctly
-- [ ] No console errors about missing backend endpoints
-- [ ] No 404 errors in Vercel logs for `/api/*` routes
-- [ ] Production dashboard displays all pages correctly
-- [ ] Repository reduced by 1,200+ lines of code
-- [ ] `package.json` contains only frontend-related scripts
+- [x] Backend directory completely removed from repository
+- [x] Vercel builds successfully without backend compilation step
+- [x] Frontend loads all data from `/public/api-*.json` files correctly
+- [x] No console errors about missing backend endpoints
+- [x] No 404 errors in Vercel logs for `/api/*` routes
+- [x] Production dashboard displays all pages correctly
+- [x] Repository reduced by 1,200+ lines of code
+- [x] `package.json` contains only frontend-related scripts
 
 ---
 
@@ -543,14 +543,14 @@ python update_dashboard.py
 
 #### Success Criteria
 
-- [ ] All `api-*.json` files generate in `dashboard/frontend/public/` only
-- [ ] No duplicate JSON files exist in root, pipeline/, or dashboard/public/
-- [ ] Pipeline scripts updated to write to single location
-- [ ] `.gitignore` excludes generated files
-- [ ] Example files (`.example.json`) committed for documentation
-- [ ] README.md explains data generation process
-- [ ] Frontend loads data correctly from new location
-- [ ] Repository size reduced by removing duplicate files
+- [x] All `api-*.json` files generate in `dashboard/frontend/public/` only
+- [x] No duplicate JSON files exist in root, pipeline/, or dashboard/public/
+- [x] Pipeline scripts updated to write to single location
+- [x] `.gitignore` excludes generated files
+- [x] Example files (`.example.json`) committed for documentation
+- [x] README.md explains data generation process
+- [x] Frontend loads data correctly from new location
+- [x] Repository size reduced by removing duplicate files
 
 ---
 
@@ -758,13 +758,13 @@ git checkout HEAD~1 pipeline/requirements.txt
 
 #### Success Criteria
 
-- [ ] No hardcoded league IDs remain in pipeline scripts
-- [ ] All scripts successfully import from `config.py`
-- [ ] Pick tier values retrieved from config, not duplicated constants
-- [ ] Dependencies pinned to specific versions
-- [ ] Pipeline runs successfully using centralized configuration
-- [ ] Changing `config/default.yaml` updates all scripts
-- [ ] Config validation prevents invalid YAML edits
+- [x] No hardcoded league IDs remain in pipeline scripts
+- [x] All scripts successfully import from `config.py`
+- [x] Pick tier values retrieved from config, not duplicated constants
+- [ ] Dependencies pinned to specific versions (partially - requirements.txt needs review)
+- [x] Pipeline runs successfully using centralized configuration
+- [x] Changing `config/default.yaml` updates all scripts
+- [x] Config validation prevents invalid YAML edits
 
 ---
 
@@ -825,10 +825,10 @@ npm run build
 
 #### Success Criteria
 
-- [ ] Three files deleted: `useRetry.ts`, `useWebSocket.ts`, `performance.ts`
-- [ ] No TypeScript compilation errors
-- [ ] No import errors in remaining files
-- [ ] Frontend builds successfully
+- [ ] Three files deleted: `useRetry.ts`, `useWebSocket.ts`, `performance.ts` (PARTIAL: useRetry.ts still exists, useWebSocket.ts and performance.ts deleted)
+- [x] No TypeScript compilation errors
+- [x] No import errors in remaining files
+- [x] Frontend builds successfully
 
 ---
 
@@ -927,11 +927,11 @@ Apply similar pattern to other pages using manual fetching.
 
 #### Success Criteria
 
-- [ ] Centralized hooks created in `api.ts`
-- [ ] All pages use React Query hooks consistently
-- [ ] Manual `useEffect` data fetching removed
-- [ ] Consistent caching behavior across all pages
-- [ ] Unified error and loading states
+- [x] Centralized hooks created in `api.ts`
+- [x] All pages use React Query hooks consistently
+- [x] Manual `useEffect` data fetching removed
+- [x] Consistent caching behavior across all pages
+- [x] Unified error and loading states
 
 ---
 
