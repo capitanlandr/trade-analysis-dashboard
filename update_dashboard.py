@@ -39,7 +39,8 @@ DASHBOARD_JSON_FILES = [
     "api-stats-summary.json",
     "api-standings.json",
     "api-playoff-scenarios.json",
-    "api-waiver-wire.json"
+    "api-waiver-wire.json",
+    "api-draft-order.json"
 ]
 
 PIPELINE_STAGES = [
@@ -53,6 +54,7 @@ PIPELINE_STAGES = [
     ("Stage 5b: Fetch Lineup Data", "python3 scripts/fetch_lineup_data.py"),
     ("Stage 6: Analyze 2026 Pick Ownership", "python3 analyze_2026_pick_ownership.py"),
     ("Stage 7: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
+    ("Stage 7a: Calculate Progressive Draft Order", "python3 scripts/calculate_progressive_draft_order.py"),
     ("Stage 8: Generate Dashboard JSON", "python3 scripts/generate_dashboard_json.py"),
     ("Stage 9: Generate Waiver Wire JSON", "python3 scripts/generate_waiver_wire_dashboard_json.py"),
     ("Stage 10: Fetch Current Standings", "python3 scripts/fetch_standings.py"),

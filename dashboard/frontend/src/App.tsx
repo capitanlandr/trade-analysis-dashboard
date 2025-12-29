@@ -4,6 +4,7 @@ import DashboardLayout from './components/Layout/DashboardLayout'
 import Overview from './pages/Overview'
 import Standings from './pages/Standings'
 import PlayoffScenarios from './pages/PlayoffScenarios'
+import DraftOrderProjection from './pages/DraftOrderProjection'
 import CommishTiersArchive from './pages/CommishTiersArchive'
 import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
 import { ErrorBoundary } from './components/ErrorBoundary'
@@ -50,6 +51,7 @@ function App() {
                 <Route index element={<Overview />} />
                 <Route path="standings" element={<Standings />} />
                 <Route path="playoff-scenarios" element={<PlayoffScenarios />} />
+                <Route path="draft-order" element={<DraftOrderProjection />} />
                 <Route path="commish-tiers" element={<CommishTiersArchive />} />
                 <Route path="waiver-wire" element={<WaiverWireAnalysis />} />
               </Route>

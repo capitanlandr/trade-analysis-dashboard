@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 
 const DashboardLayout: React.FC = () => {
@@ -65,13 +65,14 @@ const DashboardLayout: React.FC = () => {
 
       {/* Navigation */}
       <nav className="bg-white shadow-sm relative z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-hide space-x-1 sm:space-x-8">
-            <NavItem icon={BarChart3} label="Trade Analysis" mobileLabel="Trade Analysis" href="/" />
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pb-px">
+            <NavItem icon={BarChart3} label="Trade Analysis" mobileLabel="Trades" href="/" />
             <NavItem icon={Award} label="Standings" mobileLabel="Standings" href="/standings" />
-            <NavItem icon={TrendingUp} label="Playoff Scenarios" mobileLabel="Playoff Scenarios" href="/playoff-scenarios" />
-            <NavItem icon={FileText} label="Commish Tiers" mobileLabel="Commish Tiers" href="/commish-tiers" />
-            <NavItem icon={Users} label="Waiver Wire Analysis" mobileLabel="Waiver Wire" href="/waiver-wire" />
+            <NavItem icon={TrendingUp} label="Playoff Scenarios" mobileLabel="Playoffs" href="/playoff-scenarios" />
+            <NavItem icon={Target} label="Draft Order" mobileLabel="Draft" href="/draft-order" />
+            <NavItem icon={FileText} label="Commish Tiers" mobileLabel="Tiers" href="/commish-tiers" />
+            <NavItem icon={Users} label="Waiver Wire" mobileLabel="Waivers" href="/waiver-wire" />
           </div>
         </div>
       </nav>
@@ -110,17 +111,17 @@ const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, mobileLabel, href 
   return (
     <Link
       to={href}
-      className={`flex flex-col xs:flex-row items-center justify-center xs:justify-start px-2 xs:px-3 py-3 xs:py-4 text-xs xs:text-sm font-medium border-b-2 transition-colors whitespace-nowrap min-w-0 ${
+      className={`flex items-center justify-center gap-1.5 px-3 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap flex-shrink-0 ${
         isActive
           ? 'border-primary-600 text-primary-600 bg-primary-50'
           : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 hover:bg-gray-50'
       }`}
     >
-      <Icon className="h-4 w-4 xs:mr-2 flex-shrink-0" />
-      <span className="hidden sm:inline text-sm leading-tight">
+      <Icon className="h-4 w-4 flex-shrink-0" />
+      <span className="hidden md:inline">
         {label}
       </span>
-      <span className="sm:hidden text-[10px] leading-tight text-center mt-1">
+      <span className="md:hidden text-xs">
         {displayLabel}
       </span>
     </Link>
