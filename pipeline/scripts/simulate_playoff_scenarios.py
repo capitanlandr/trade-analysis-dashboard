@@ -24,7 +24,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.api_client import fetch_with_retry, APIError
-from utils.week_config import get_current_week_from_config
+from utils.week_config import get_regular_season_week
 from config import get_config
 
 # Setup logging
@@ -438,8 +438,8 @@ def main():
     try:
         # Use centralized week detection from config
         # Week is determined by detect_current_week.py using roster validation
-        current_week = get_current_week_from_config()
-        logger.info(f"Current week from centralized config: {current_week}")
+        current_week = get_regular_season_week()
+        logger.info(f"Regular season week from centralized config: {current_week}")
         
         logger.info("Loading standings data...")
         standings = load_standings()

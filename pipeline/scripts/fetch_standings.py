@@ -17,7 +17,7 @@ import yaml
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.logging_config import setup_logging
-from utils.week_config import get_current_week_from_config
+from utils.week_config import get_regular_season_week
 from config import get_config
 
 # Constants from config
@@ -428,8 +428,8 @@ def main():
         
         # Use centralized week detection from config
         # Week is determined by detect_current_week.py using roster validation
-        current_week = get_current_week_from_config()
-        logger.info(f"Current week from centralized config: {current_week}")
+        current_week = get_regular_season_week()
+        logger.info(f"Regular season week from centralized config: {current_week}")
         
         # Build schedule and calculate records
         schedules = build_schedule_data(rosters, current_week)

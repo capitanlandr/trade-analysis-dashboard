@@ -8,15 +8,20 @@ as the season progresses, using tier-based value calculations.
 
 import pandas as pd
 import logging
+import sys
+from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Tuple
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.week_config import get_through_week
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)-8s | %(message)s')
 logger = logging.getLogger(__name__)
 
 # Season configuration
-SEASON_START_DATE = datetime(2025, 9, 3)
 PROJECTIONS_FILE = 'weekly_2026_pick_projections_expanded.csv'
 
 # Tier-based values for 2nd/3rd/4th round picks
@@ -39,12 +44,7 @@ TIER_VALUES = {
 }
 
 
-def get_current_week() -> int:
-    """Calculate current NFL week based on season start date."""
-    current_date = datetime.now()
-    days = (current_date - SEASON_START_DATE).days
-    week = max(2, (days // 7) + 1)
-    return min(week, 18)  # Cap at Week 18
+# Removed get_current_week() - now using get_through_week() from week_config
 
 
 def get_missing_columns(df: pd.DataFrame, current_week: int) -> List[str]:
@@ -126,9 +126,9 @@ def update_weekly_projections() -> bool:
     logger.info("AUTOMATIC WEEKLY PROJECTIONS UPDATE")
     logger.info("="*80)
     
-    # Calculate current week
-    current_week = get_current_week()
-    logger.info(f"Current NFL week: {current_week}")
+    # Get through week (last week with complete data)
+    current_week = get_through_week()
+    logger.info(f"Through week (last scored): {current_week}")
     
     # Load projections file
     try:
