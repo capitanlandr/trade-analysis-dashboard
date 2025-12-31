@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 316,
-    "total_free_agent_transactions": 207,
-    "successful_waivers": 211,
+    "total_waiver_transactions": 319,
+    "total_free_agent_transactions": 209,
+    "successful_waivers": 214,
     "failed_waivers": 105,
-    "total_waiver_bids": "2505",
-    "average_waiver_bid": 13.994413407821229
+    "total_waiver_bids": "2507",
+    "average_waiver_bid": 13.850828729281767
   },
   "manager_activity": [
     {
@@ -71,12 +71,12 @@
     {
       "roster_id": 7,
       "team_name": "2-Man Title Charge",
-      "total_claims": 21,
+      "total_claims": 22,
       "total_bid": 232,
-      "avg_bid": 6.44,
+      "avg_bid": 6.27,
       "max_bid": 109,
-      "successful_claims": 26,
-      "success_rate": 123.8
+      "successful_claims": 27,
+      "success_rate": 122.7
     },
     {
       "roster_id": 8,
@@ -101,12 +101,12 @@
     {
       "roster_id": 10,
       "team_name": "Rashid Shaheed Truthers",
-      "total_claims": 7,
-      "total_bid": 250,
-      "avg_bid": 22.73,
+      "total_claims": 8,
+      "total_bid": 252,
+      "avg_bid": 19.38,
       "max_bid": 51,
-      "successful_claims": 8,
-      "success_rate": 114.3
+      "successful_claims": 10,
+      "success_rate": 125.0
     },
     {
       "roster_id": 11,
@@ -195,8 +195,8 @@
       "waiver": 7
     },
     "17": {
-      "free_agent": 4,
-      "waiver": 0
+      "free_agent": 6,
+      "waiver": 3
     }
   },
   "contested_players": {
@@ -255,39 +255,19 @@
       "waiver_bid": 25,
       "status": 2
     },
-    "3161": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 2
-    },
-    "827": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
-    "11435": {
-      "transaction_id": 3,
-      "waiver_bid": 5,
-      "status": 2
-    },
-    "11439": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
-    },
     "12470": {
       "transaction_id": 3,
       "waiver_bid": 6,
       "status": 1
     },
-    "8160": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
-    },
     "6011": {
       "transaction_id": 3,
       "waiver_bid": 41,
+      "status": 1
+    },
+    "8917": {
+      "transaction_id": 3,
+      "waiver_bid": 6,
       "status": 1
     },
     "12502": {
@@ -295,15 +275,35 @@
       "waiver_bid": 7,
       "status": 1
     },
-    "8917": {
+    "827": {
       "transaction_id": 3,
-      "waiver_bid": 6,
-      "status": 1
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "8160": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
+    },
+    "11439": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
+    },
+    "11650": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
     }
   },
   "bidding_patterns": {
     "bid_distribution": {
-      "1": 25,
+      "1": 27,
       "2": 15,
       "5": 13,
       "10": 12,
@@ -399,6 +399,6 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 77.37226277372264
+    "zero_bid_success_rate": 77.53623188405797
   }
 }
