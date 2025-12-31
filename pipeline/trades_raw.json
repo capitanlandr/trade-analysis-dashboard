@@ -4,7 +4,7 @@
     "league_name": "Dynasuiiii",
     "season": "2025",
     "current_week": 17,
-    "fetch_timestamp": "2025-12-29T14:17:55.367849",
+    "fetch_timestamp": "2025-12-31T14:16:59.016322",
     "total_trades": 81,
     "incremental_mode": true
   },
@@ -287,7 +287,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 92,
-        "waiver_position": 12,
+        "waiver_position": 10,
         "wins": 19
       },
       "starters": [
@@ -401,18 +401,18 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 99,
-        "waiver_position": 7,
+        "waiver_position": 6,
         "wins": 16
       },
       "starters": [
         "8183",
-        "5850",
+        "9509",
         "7543",
         "8148",
         "7564",
         "8130",
         "11638",
-        "9509",
+        "7021",
         "1166"
       ],
       "taxi": [
@@ -566,7 +566,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 77,
-        "waiver_position": 4,
+        "waiver_position": 3,
         "wins": 8
       },
       "starters": [
@@ -678,7 +678,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 100,
-        "waiver_position": 9,
+        "waiver_position": 8,
         "wins": 11
       },
       "starters": [
@@ -864,6 +864,7 @@
         "10218",
         "11557",
         "11564",
+        "11650",
         "12476",
         "12518",
         "12543",
@@ -873,7 +874,6 @@
         "4034",
         "4137",
         "4199",
-        "4381",
         "4866",
         "4892",
         "5012",
@@ -907,18 +907,18 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 100,
-        "waiver_position": 10,
+        "waiver_position": 12,
         "wins": 22
       },
       "starters": [
         "11564",
         "4034",
-        "4866",
+        "5967",
         "9493",
         "8137",
-        "4381",
+        "5012",
         "2216",
-        "2449",
+        "8155",
         "4892"
       ],
       "taxi": [
@@ -1013,7 +1013,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 100,
-        "waiver_position": 8,
+        "waiver_position": 7,
         "wins": 9
       },
       "starters": [
@@ -1091,7 +1091,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 93,
-        "waiver_position": 6,
+        "waiver_position": 5,
         "wins": 13
       },
       "starters": [
@@ -1139,7 +1139,6 @@
         "4984",
         "5844",
         "5859",
-        "7496",
         "7607",
         "8111",
         "8134",
@@ -1149,6 +1148,7 @@
         "8228",
         "8676",
         "8698",
+        "8800",
         "9753",
         "9997"
       ],
@@ -1167,8 +1167,8 @@
         "ppts_decimal": 72,
         "ties": 0,
         "total_moves": 0,
-        "waiver_budget_used": 94,
-        "waiver_position": 3,
+        "waiver_budget_used": 95,
+        "waiver_position": 11,
         "wins": 12
       },
       "starters": [
@@ -1282,7 +1282,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 75,
-        "waiver_position": 11,
+        "waiver_position": 9,
         "wins": 10
       },
       "starters": [
@@ -1399,7 +1399,6 @@
         "4035",
         "4046",
         "5045",
-        "5906",
         "6786",
         "7588",
         "8136",
@@ -1423,7 +1422,7 @@
         "ties": 0,
         "total_moves": 0,
         "waiver_budget_used": 100,
-        "waiver_position": 5,
+        "waiver_position": 4,
         "wins": 16
       },
       "starters": [
@@ -1432,7 +1431,7 @@
         "7588",
         "11624",
         "6786",
-        "5906",
+        "0",
         "5045",
         "12489",
         "11563"
