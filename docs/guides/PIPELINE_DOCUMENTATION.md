@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Trade Analysis Dashboard pipeline consists of **10 stages** that fetch, analyze, and deploy fantasy football data. Each stage has a specific purpose and dependencies, orchestrated by `update_dashboard.py` to ensure correct execution order.
+The Trade Analysis Dashboard pipeline consists of **12 stages** that fetch, analyze, and deploy fantasy football data. Each stage has a specific purpose and dependencies, orchestrated by `update_dashboard.py` to ensure correct execution order.
 
 ---
 
@@ -22,15 +22,26 @@ The Trade Analysis Dashboard pipeline consists of **10 stages** that fetch, anal
 │  ├─ Stage 3: Cache dynasty values from KeepTradeCut                │
 │  └─ Stage 4: Generate complete trade analysis                      │
 │                                                                     │
-│  Stages 5-6: Additional Analysis [Enrichment]                      │
-│  ├─ Stage 5: Analyze 2026 pick ownership                           │
-│  └─ Stage 6: Generate playoff bracket                              │
+│  Stage 5: Waiver Wire Analysis  [Player Movement]                  │
+│  ├─ Stage 5: Analyze waiver claims and free agent pickups          │
+│  ├─ Stage 5a: Fetch player stats for efficiency calculations       │
+│  └─ Stage 5b: Fetch lineup data for hit rate analysis              │
 │                                                                     │
-│  Stages 7-10: Dashboard Generation [Output]                        │
-│  ├─ Stage 7: Convert CSVs to dashboard JSON                        │
-│  ├─ Stage 8: Fetch current standings                               │
-│  ├─ Stage 9: Run playoff simulations                               │
-│  └─ Stage 10: Final dashboard JSON update                          │
+│  Stage 6: 2026 Pick Analysis    [Draft Capital]                    │
+│  └─ Stage 6: Track 2026 pick ownership and trading                 │
+│                                                                     │
+│  Stage 7: Playoff Bracket       [Visualization]                    │
+│  └─ Stage 7: Generate playoff bracket structure                    │
+│                                                                     │
+│  Stage 7a: Draft Order          [Future Planning]                  │
+│  └─ Stage 7a: Calculate progressive 2026 draft order projections   │
+│                                                                     │
+│  Stages 8-12: Dashboard JSON    [Output & Deployment]              │
+│  ├─ Stage 8: Convert CSVs to dashboard JSON                        │
+│  ├─ Stage 9: Generate waiver wire dashboard JSON                   │
+│  ├─ Stage 10: Fetch current standings                              │
+│  ├─ Stage 11: Run playoff simulations (10,000 scenarios)           │
+│  └─ Stage 12: Final dashboard JSON update with playoff data        │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -503,23 +514,30 @@ python3 scripts/simulate_playoff_scenarios.py
 ```
 pipeline/
 ├── config/
-│   └── current_week.json                      [Stage 0]
-├── league_trades_analysis_pipeline.csv        [Stage 4]
-├── team_identity_mapping.csv                  [Stage 5]
-├── 3team_trades_analysis.json                 [Stage 5]
-├── playoff_bracket.json                       [Stage 6]
-├── standings_data.json                        [Stage 8]
-└── playoff_scenarios_simulated.json           [Stage 9]
+│   └── current_week.json                       [Stage 0]
+├── league_trades_analysis_pipeline.csv         [Stage 4]
+├── team_identity_mapping.csv                   [Stage 6]
+├── waiver_wire_stats.json                      [Stage 5]
+├── waiver_transactions_raw.json                [Stage 5]
+├── player_stats_weekly.json                    [Stage 5a]
+├── lineup_data_weekly.json                     [Stage 5b]
+├── 2026_pick_ownership_detailed.json           [Stage 6]
+├── draft_order_2026_progressive.json           [Stage 7a]
+├── playoff_bracket.json                        [Stage 7]
+├── standings_data.json                         [Stage 10]
+└── playoff_scenarios_simulated.json            [Stage 11]
 ```
 
 ### Dashboard Directory (Frontend Consumption)
 ```
 dashboard/frontend/public/
-├── api-trades.json              [Stage 7]
-├── api-teams.json               [Stage 7]
-├── api-stats-summary.json       [Stage 7]
-├── api-standings.json           [Stage 8]
-└── api-playoff-scenarios.json   [Stage 9]
+├── api-trades.json              [Stage 8]
+├── api-teams.json               [Stage 8]
+├── api-stats-summary.json       [Stage 8]
+├── api-waiver-wire.json         [Stage 9]
+├── api-standings.json           [Stage 10]
+├── api-playoff-scenarios.json   [Stage 11]
+└── api-draft-order.json         [Stage 7a/8]
 ```
 
 **See also:** [DATA_ARCHITECTURE.md](./DATA_ARCHITECTURE.md) for details on why files are in two locations.

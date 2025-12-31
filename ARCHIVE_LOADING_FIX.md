@@ -1,5 +1,8 @@
 # Commish Tiers Archive - Loading Issues Fixed
 
+> **Status:** Issues Resolved (December 2024)
+> **Note:** This document describes resolved loading issues. Archive feature is now working as expected.
+
 ## Issue 1: Infinite Loading Loop (RESOLVED)
 
 ### Problem

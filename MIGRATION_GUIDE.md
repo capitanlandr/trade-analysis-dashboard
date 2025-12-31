@@ -1,5 +1,8 @@
 # Migration Guide: Moving Pipeline to Git Repo
 
+> **Status:** Migration Complete (December 2024)
+> **Note:** Pipeline successfully moved to git repo. Now runs 12 stages. See [`QUICK_START.md`](QUICK_START.md) for current usage.
+
 ## Goal
 Move all pipeline code into the `trade-analysis-dashboard-clean` git repository so the entire workflow can run in one place (locally or via GitHub Actions).
 

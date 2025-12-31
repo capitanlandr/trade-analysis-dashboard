@@ -1,5 +1,8 @@
 # Commish Tiers Archive - Manual Testing Guide
 
+> **Status:** Testing Complete (December 2024)
+> **Note:** Archive feature passed all test scenarios. This document serves as a reference for future testing.
+
 This document provides a comprehensive testing checklist for the Commish Tiers Archive feature. Complete each test scenario and document the results.
 
 ## Prerequisites

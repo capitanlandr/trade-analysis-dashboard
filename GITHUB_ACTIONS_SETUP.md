@@ -80,8 +80,8 @@ GitHub Actions Server (in the cloud):
 3. Installs dependencies (pandas, requests, etc.)
 4. Runs: python3 update_dashboard.py
    - Fetches trades from Sleeper API
-   - Processes data through all 7 stages
-   - Copies 3 files to git root
+   - Processes data through all 12 pipeline stages
+   - Generates JSON files for dashboard
    - Commits and pushes to GitHub
 5. Vercel detects the push
 6. Vercel deploys updated dashboard

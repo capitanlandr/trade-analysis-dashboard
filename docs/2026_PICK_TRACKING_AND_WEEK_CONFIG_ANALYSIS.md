@@ -1,8 +1,10 @@
 # 2026 Draft Pick Tracking and Week Configuration Analysis
 
-**Date:** December 29, 2024  
-**Status:** Analysis Documentation  
+**Date:** December 29, 2024
+**Status:** Analysis Documentation (Current)
 **Purpose:** Comprehensive documentation of the 2026 draft pick tracking system, weekly projections process, and week configuration architecture
+
+**Current State:** Draft order projection feature implemented. Week configuration uses [`pipeline/config/current_week.json`](../pipeline/config/current_week.json). See [`PIPELINE_DOCUMENTATION.md`](guides/PIPELINE_DOCUMENTATION.md) for current 12-stage pipeline.
 
 ---
 

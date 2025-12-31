@@ -1,5 +1,8 @@
 # Week Detection Architecture
 
+> **Status:** Current Implementation (December 2024)
+> **Note:** Week detection uses [`pipeline/config/current_week.json`](../../pipeline/config/current_week.json) as single source of truth. Auto-detection via [`pipeline/scripts/detect_current_week.py`](../../pipeline/scripts/detect_current_week.py).
+
 ## Overview
 
 The centralized week detection system solves the **Tuesday timing problem** where Sleeper's `leg` field advances before games are actually completed and records are finalized. This document explains how we validate week completion using roster records and provide a single source of truth for all pipeline scripts.

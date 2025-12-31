@@ -31,19 +31,25 @@ git push origin main
 ```
 Every day at 9 AM EST:
 
-GitHub Actions (cloud) 
+GitHub Actions (cloud)
     ↓
-Runs your pipeline
+Runs update_dashboard.py pipeline
     ↓
-Fetches trades from Sleeper
+Detects current week from Sleeper
     ↓
-Processes all data
+Fetches trades, standings, and waiver data
     ↓
-Pushes to GitHub
+Runs playoff simulations (10,000 scenarios)
     ↓
-Vercel deploys dashboard
+Calculates draft order projections
     ↓
-✅ Dashboard updated!
+Generates 7 dashboard JSON files
+    ↓
+Commits and pushes to GitHub
+    ↓
+Vercel auto-deploys dashboard
+    ↓
+✅ Dashboard updated with all features!
 ```
 
 ## 🎮 Manual Run Anytime

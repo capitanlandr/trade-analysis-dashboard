@@ -1,8 +1,11 @@
 # Data Architecture: Pipeline vs Dashboard Files
 
+> **Status:** Current Architecture (December 2024)
+> **Note:** Data consolidated to [`dashboard/frontend/public/`](../../dashboard/frontend/public/) as single source of truth. Pipeline generates 12 stages of data.
+
 ## Overview
 
-The project maintains JSON files in two locations with distinct purposes:
+The project maintains JSON files primarily in [`dashboard/frontend/public/`](../../dashboard/frontend/public/). The pipeline generates these files through a 12-stage process.
 
 ```
 pipeline/

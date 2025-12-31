@@ -1,5 +1,7 @@
 # Testing Your New Setup
 
+> **Note:** This document describes the initial migration setup. The pipeline has since evolved to 12 stages. See [`QUICK_START.md`](QUICK_START.md) for current usage.
+
 ## ✅ Files Moved Successfully
 
 All pipeline files have been moved to `trade-analysis-dashboard-clean/pipeline/`:
