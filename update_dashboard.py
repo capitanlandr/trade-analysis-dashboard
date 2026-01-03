@@ -4,6 +4,7 @@ Trade Analysis Dashboard Update Script
 =====================================
 
 This script automates the entire pipeline from data fetching to dashboard deployment.
+Now supports multi-season architecture with active/static season management.
 
 Usage:
     python update_dashboard.py [--dry-run] [--skip-git]
@@ -18,12 +19,23 @@ import shutil
 import os
 import sys
 import argparse
+import time
 import pandas as pd
 from datetime import datetime
 from pathlib import Path
+import logging
+
+# Add pipeline utils to path for season configuration
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'pipeline'))
+from utils.season_config import get_season_config, validate_season_operation
+from utils.logging_config import setup_logging, get_operation_logger
 
 # Configuration
 PIPELINE_DIR = "pipeline"  # Directory containing all pipeline scripts
+
+# Initialize comprehensive logging (Requirement 5.5, 6.3, 12.5)
+logger = setup_logging('Dashboard Update Pipeline', log_dir='logs')
+op_logger = get_operation_logger(__name__)
 
 # CSV files used by pipeline (still in pipeline/)
 REQUIRED_FILES = [
@@ -43,23 +55,29 @@ DASHBOARD_JSON_FILES = [
     "api-draft-order.json"
 ]
 
+# Cumulative files that need to be copied to frontend
+CUMULATIVE_FILES = [
+    "trades.json",
+    "waiver-wire.json"
+]
+
 PIPELINE_STAGES = [
     ("Stage 0: Detect Current Week", "python3 scripts/detect_current_week.py"),
-    ("Stage 1: Fetch Trades", "python3 stage1_fetch_trades.py"),
+    ("Stage 1: Fetch Trades (Active Seasons Only)", "python3 stage1_fetch_trades.py"),
     ("Stage 2: Extract Assets", "python3 stage2_extract_assets.py"),
     ("Stage 3: Cache Values", "python3 stage3_cache_values.py"),
     ("Stage 4: Generate Analysis", "python3 stage4_final.py"),
-    ("Stage 5: Waiver Wire Analysis", "python3 stage5_waiver_wire.py"),
+    ("Stage 5: Waiver Wire Analysis (Active Seasons Only)", "python3 stage5_waiver_wire.py"),
     ("Stage 5a: Fetch Player Stats", "python3 scripts/fetch_player_stats.py"),
     ("Stage 5b: Fetch Lineup Data", "python3 scripts/fetch_lineup_data.py"),
     ("Stage 6: Analyze 2026 Pick Ownership", "python3 analyze_2026_pick_ownership.py"),
     ("Stage 7: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
     ("Stage 7a: Calculate Progressive Draft Order", "python3 scripts/calculate_progressive_draft_order.py"),
-    ("Stage 8: Generate Dashboard JSON", "python3 scripts/generate_dashboard_json.py"),
-    ("Stage 9: Generate Waiver Wire JSON", "python3 scripts/generate_waiver_wire_dashboard_json.py"),
+    ("Stage 8: Generate Dashboard JSON from Cumulative Files", "python3 scripts/generate_dashboard_json_from_cumulative.py"),
+    ("Stage 9: Generate Waiver Wire JSON from Cumulative Files", "python3 scripts/generate_waiver_wire_dashboard_json_from_cumulative.py"),
     ("Stage 10: Fetch Current Standings", "python3 scripts/fetch_standings.py"),
     ("Stage 11: Run Playoff Simulations", "python3 scripts/simulate_playoff_scenarios.py"),
-    ("Stage 12: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json.py")
+    ("Stage 12: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json_from_cumulative.py")
 ]
 
 def run_command(cmd, description="", dry_run=False, cwd=None):
@@ -83,6 +101,176 @@ def run_command(cmd, description="", dry_run=False, cwd=None):
         if e.stderr:
             print(f"   Error details: {e.stderr}")
         return False
+
+
+def validate_season_configuration():
+    """
+    Validate season configuration before pipeline execution.
+    
+    Returns:
+        tuple: (is_valid, season_config, active_seasons, static_seasons)
+        
+    Raises:
+        SystemExit: If configuration is invalid
+    """
+    print("   Validating season configuration...")
+    
+    try:
+        # Load and validate season configuration
+        season_config = get_season_config()
+        
+        active_seasons = season_config.get_active_seasons()
+        static_seasons = season_config.get_static_seasons()
+        
+        print(f"   Active seasons: {active_seasons}")
+        print(f"   Static seasons: {static_seasons}")
+        
+        # Validate that we have at least one active season
+        if not active_seasons:
+            print("   ❌ No active seasons configured. Pipeline requires at least one active season.")
+            return False, None, [], []
+        
+        # Validate league IDs for active seasons
+        for season_name in active_seasons:
+            season_info = season_config.get_season_info(season_name)
+            if not season_info or not season_info.league_id:
+                print(f"   ❌ Active season '{season_name}' missing league_id")
+                return False, None, [], []
+            
+            # Check for placeholder values
+            placeholder_patterns = ['placeholder', 'TODO', 'CHANGE_ME', 'xxx']
+            if any(pattern.lower() in season_info.league_id.lower() for pattern in placeholder_patterns):
+                print(f"   ❌ Active season '{season_name}' has placeholder league_id: {season_info.league_id}")
+                return False, None, [], []
+        
+        print("   ✅ Season configuration validated successfully")
+        logger.info("Season configuration validated successfully")
+        return True, season_config, active_seasons, static_seasons
+        
+    except Exception as e:
+        print(f"   ❌ Season configuration validation failed: {e}")
+        logger.error(f"Season configuration validation failed: {e}")
+        return False, None, [], []
+
+
+def log_season_processing_summary(active_seasons, static_seasons):
+    """
+    Log comprehensive summary of which seasons will be processed vs skipped.
+    
+    Args:
+        active_seasons: List of active season names
+        static_seasons: List of static season names
+    """
+    print("\n" + "=" * 60)
+    print("MULTI-SEASON PIPELINE EXECUTION SUMMARY")
+    print("=" * 60)
+    
+    print(f"🔄 ACTIVE SEASONS (will be processed):")
+    for season in active_seasons:
+        print(f"   • {season} - Daily incremental fetch")
+    
+    print(f"🔒 STATIC SEASONS (will be skipped):")
+    for season in static_seasons:
+        print(f"   • {season} - Immutable historical data")
+    
+    if not active_seasons:
+        print("⚠️  No active seasons to process!")
+    
+    if not static_seasons:
+        print("ℹ️  No static seasons configured")
+    
+    print("=" * 60)
+    
+    # Also log to file
+    logger.info(f"Active seasons to process: {active_seasons}")
+    logger.info(f"Static seasons to skip: {static_seasons}")
+
+
+def update_season_metadata(season_config, active_seasons):
+    """
+    Update season metadata after successful pipeline execution.
+    
+    Args:
+        season_config: SeasonConfiguration instance
+        active_seasons: List of active season names that were processed
+    """
+    try:
+        print("   Updating season metadata after successful pipeline run...")
+        logger.info("Updating season metadata after successful pipeline run...")
+        
+        # Update last fetch timestamps for active seasons
+        current_timestamp = datetime.utcnow().isoformat() + 'Z'
+        
+        for season_name in active_seasons:
+            season_config.update_last_fetch_timestamp(season_name, current_timestamp)
+            print(f"   Updated last fetch timestamp for {season_name}: {current_timestamp}")
+            logger.info(f"Updated last fetch timestamp for {season_name}: {current_timestamp}")
+        
+        # Save updated configuration
+        season_config.save('pipeline/config/seasons.yaml')
+        print("   ✅ Season metadata updated successfully")
+        logger.info("Season metadata updated successfully")
+        
+    except Exception as e:
+        print(f"   ❌ Failed to update season metadata: {e}")
+        logger.error(f"Failed to update season metadata: {e}")
+        # Don't fail the entire pipeline for metadata update issues
+        print("   ⚠️  Continuing despite metadata update failure...")
+        logger.warning("Continuing despite metadata update failure...")
+
+
+def copy_cumulative_files_to_frontend():
+    """
+    Copy cumulative data files to frontend public directory.
+    
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    print("   Copying cumulative files to frontend public directory...")
+    logger.info("Copying cumulative files to frontend public directory...")
+    
+    source_dir = Path(PIPELINE_DIR)
+    target_dir = Path("dashboard/frontend/public")
+    
+    # Ensure target directory exists
+    target_dir.mkdir(parents=True, exist_ok=True)
+    
+    success = True
+    for filename in CUMULATIVE_FILES:
+        source_file = source_dir / filename
+        target_file = target_dir / filename
+        
+        if source_file.exists():
+            try:
+                shutil.copy2(source_file, target_file)
+                size = target_file.stat().st_size
+                print(f"   ✓ Copied {filename} ({size:,} bytes)")
+                logger.info(f"Copied {filename} ({size:,} bytes)")
+            except Exception as e:
+                print(f"   ❌ Failed to copy {filename}: {e}")
+                logger.error(f"Failed to copy {filename}: {e}")
+                success = False
+        else:
+            print(f"   ⚠️  Source file not found: {source_file}")
+            logger.warning(f"Source file not found: {source_file}")
+            # Don't fail for missing cumulative files - they might not exist yet
+    
+    return success
+
+
+def tag_new_season3_transactions():
+    """
+    Ensure all new Season 3 transactions are properly tagged.
+    This is handled by the individual pipeline stages, but we log the operation.
+    """
+    print("   Season 3 transaction tagging handled by pipeline stages:")
+    print("     • Stage 1 (fetch_trades.py) - Tags new trade transactions")
+    print("     • Stage 5 (waiver_wire.py) - Tags new waiver transactions")
+    print("     • All new transactions automatically tagged with season: 'season_3'")
+    
+    logger.info("Season 3 transaction tagging configured in pipeline stages")
+    logger.info("Stage 1 and Stage 5 will tag new transactions with season: 'season_3'")
+
 
 def check_file_exists(filepath):
     """Check if a required file exists."""
@@ -199,21 +387,65 @@ def main():
     if args.dry_run:
         print("🔍 DRY RUN MODE - No changes will be made")
     
+    # Step 0: Validate Season Configuration (Requirement 12.1)
+    print("\n🔧 Validating Multi-Season Configuration...")
+    is_valid, season_config, active_seasons, static_seasons = validate_season_configuration()
+    
+    if not is_valid:
+        print("\n❌ Season configuration validation failed.")
+        print("   Please check pipeline/config/seasons.yaml and fix any issues.")
+        sys.exit(1)
+    
+    # Log processing summary (Requirement 12.5)
+    log_season_processing_summary(active_seasons, static_seasons)
+    
     print("\nThis script will:")
+    print("  • Process ONLY active seasons (skip static seasons)")
     print("  • Run trade analysis pipeline (Stages 1-7)")
     print("  • Fetch current standings (Stage 8)")
     print("  • Run playoff simulations (Stage 9)")
-    print("  • Update dashboard JSON files (Stage 10)")
+    print("  • Generate dashboard JSON from cumulative files (Stage 10)")
+    print("  • Copy cumulative files to frontend")
     print("  • Deploy to GitHub/Vercel")
     
-    # Step 1: Run Python Pipeline (Stages 1-10) from pipeline directory
-    print("\n📊 Running Python Pipeline (Stages 1-10)...")
+    # Step 1: Tag Season 3 transactions (Requirement 3.4)
+    print("\n🏷️  Season 3 Transaction Tagging...")
+    tag_new_season3_transactions()
+    
+    # Step 2: Run Python Pipeline (Stages 1-12) from pipeline directory
+    # Pipeline stages now only process active seasons (Requirement 12.1, 12.2)
+    print(f"\n📊 Running Python Pipeline (Stages 1-12) - Active Seasons Only...")
+    print(f"   Processing seasons: {', '.join(active_seasons)}")
+    print(f"   Skipping static seasons: {', '.join(static_seasons)}")
+    
+    # Log comprehensive season processing summary (Requirement 12.5)
+    op_logger.log_season_summary(active_seasons, static_seasons, [])
+    
+    pipeline_start_time = time.time()
+    processed_stages = []
+    
     for stage_name, command in PIPELINE_STAGES:
+        stage_start_time = time.time()
+        
         if not run_command(command, stage_name, args.dry_run, cwd=PIPELINE_DIR):
+            stage_duration = time.time() - stage_start_time
+            logger.error(f"Pipeline failed at: {stage_name} after {stage_duration:.2f}s")
             print(f"\n❌ Pipeline failed at: {stage_name}")
             sys.exit(1)
+        
+        stage_duration = time.time() - stage_start_time
+        processed_stages.append(stage_name)
+        logger.info(f"✓ Completed {stage_name} in {stage_duration:.2f}s")
     
-    # Step 2: Verify output files in pipeline directory
+    pipeline_duration = time.time() - pipeline_start_time
+    logger.info(f"✓ All {len(processed_stages)} pipeline stages completed in {pipeline_duration:.2f}s")
+    
+    # Step 3: Copy cumulative files to frontend (Requirement 12.3)
+    print(f"\n📁 Copying cumulative files to frontend...")
+    if not copy_cumulative_files_to_frontend():
+        print("\n⚠️  Some cumulative files could not be copied, but continuing...")
+    
+    # Step 4: Verify output files in pipeline directory
     print(f"\n📋 Checking output files in {PIPELINE_DIR}/...")
     all_files_exist = True
     for filename in REQUIRED_FILES:
@@ -225,12 +457,16 @@ def main():
         print("\n❌ Some required files are missing. Pipeline may have failed.")
         sys.exit(1)
     
-    # Step 3: Verify dashboard files generated
+    # Step 5: Verify dashboard files generated (Requirement 12.4)
     if not verify_dashboard_files(args.dry_run):
         print("\n❌ Dashboard JSON files missing or incomplete.")
         sys.exit(1)
     
-    # Step 4: Deploy (unless skipped)
+    # Step 6: Update season metadata after successful execution (Requirement 3.5)
+    if not args.dry_run:
+        update_season_metadata(season_config, active_seasons)
+    
+    # Step 7: Deploy (unless skipped)
     if not args.skip_git:
         if not git_deploy(args.dry_run):
             print("\n❌ Deployment failed.")
@@ -241,15 +477,30 @@ def main():
     # Display playoff scenarios summary
     print_playoff_summary()
     
-    # Success!
+    # Success! (Requirement 12.5)
     print("\n" + "=" * 50)
     if args.dry_run:
         print("🔍 DRY RUN COMPLETE - No changes were made")
         print("   Remove --dry-run flag to execute for real")
     else:
-        print("🎉 DASHBOARD UPDATE COMPLETE!")
+        print("🎉 MULTI-SEASON DASHBOARD UPDATE COMPLETE!")
+        print(f"   Processed active seasons: {', '.join(active_seasons)}")
+        print(f"   Skipped static seasons: {', '.join(static_seasons)}")
         print("   Your dashboard should update in 2-3 minutes")
         print("   Check: https://dynasuiiiianalytics.vercel.app/")
+    
+    # Log final operation summary with comprehensive statistics (Requirement 12.5)
+    logger.info("=" * 80)
+    logger.info("PIPELINE EXECUTION COMPLETED SUCCESSFULLY")
+    logger.info("=" * 80)
+    logger.info(f"Active seasons processed: {active_seasons}")
+    logger.info(f"Static seasons skipped: {static_seasons}")
+    logger.info(f"Total pipeline stages: {len(processed_stages)}")
+    logger.info(f"Total execution time: {pipeline_duration:.2f}s")
+    logger.info("=" * 80)
+    
+    # Log accumulated operation statistics
+    op_logger.log_operation_stats()
     
     return 0
 
