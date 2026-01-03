@@ -443,6 +443,14 @@ def generate_all_transactions_from_cumulative(df: pd.DataFrame, players: Dict, p
         player_name = get_player_name(row['player_id'])
         player_value = get_player_value(player_name)
         
+        # Map season to year
+        season_str = str(row.get('season', 'unknown'))
+        year_map = {
+            'season_2': 2025,
+            'season_3': 2026
+        }
+        year = year_map.get(season_str, None)
+        
         transaction = {
             'transaction_id': str(row['transaction_id']),
             'type': str(row['type']),
@@ -460,7 +468,8 @@ def generate_all_transactions_from_cumulative(df: pd.DataFrame, players: Dict, p
             'notes': str(row['notes']) if pd.notna(row['notes']) else '',
             'sequence': sequence_val,
             'priority': priority_val,
-            'season': str(row.get('season', 'unknown'))  # Include season tag
+            'season': season_str,  # Include season tag
+            'year': year  # Add year field for display
         }
         all_transactions.append(transaction)
     

@@ -15,6 +15,8 @@ export interface WaiverWireTransaction {
   notes: string;
   sequence: number | null;
   priority: number | null;
+  season: string;
+  year: number;
 }
 
 export interface ChurnMetric {
