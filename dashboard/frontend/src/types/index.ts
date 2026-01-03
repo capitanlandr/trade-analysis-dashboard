@@ -25,6 +25,7 @@ export interface Trade {
   marginCurrent: number;
   swingWinner: string;
   swingMargin: number;
+  season?: string; // Season identifier (e.g., "season_2", "season_3")
 }
 
 export interface Team {
@@ -62,10 +63,32 @@ export interface TradeData {
     filteredCount?: number;
     totalCount?: number;
     filters?: any;
+    // Multi-season metadata
+    schema_version?: string;
+    last_updated?: string;
+    seasons_included?: string[];
+    total_trades?: number;
+    trades_by_season?: Record<string, number>;
+    season_info?: Record<string, SeasonInfo>;
   };
   trades: Trade[];
   teams?: Team[];
   statistics?: LeagueStats;
+}
+
+export interface SeasonInfo {
+  status: 'active' | 'static';
+  last_fetched: string;
+  league_id?: string;
+  year?: number;
+  backfill_completed?: boolean;
+  incremental_updates?: number;
+}
+
+export interface SeasonFilter {
+  type: 'all' | 'individual' | 'combination';
+  seasons: string[];
+  label: string;
 }
 
 export interface ApiResponse<T = any> {
