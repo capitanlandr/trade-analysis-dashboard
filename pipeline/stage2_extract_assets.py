@@ -4,6 +4,11 @@ STAGE 2: Extract Assets from Trades
 Flattens trade data into individual asset transactions
 Creates asset_transactions.csv where each row = one asset changing hands
 
+MULTI-SEASON COMPATIBILITY:
+- Loads roster mappings from cumulative files when processing historical data
+- Handles cross-season roster ID resolution
+- Supports both current season (trades_raw.json) and historical (trades.json) data sources
+
 IMPROVEMENTS:
 - Structured logging
 - Error handling for API calls
@@ -16,8 +21,9 @@ import json
 import pandas as pd
 import time
 from datetime import datetime
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 import sys
+from pathlib import Path
 
 # Pipeline utilities
 from config import get_config
@@ -27,62 +33,181 @@ from utils.api_client import fetch_with_retry, APIError
 from utils.validators import StageValidator, ValidationError
 from utils.backup import BackupManager
 from utils.metrics import LocalMetrics
+from utils.cumulative_file_manager import CumulativeFileManager
+from utils.team_resolver import TeamResolver
 
 # Initialize
 logger = setup_logging('Stage 2: Extract Assets')
 config = get_config()
 metrics = LocalMetrics()
 
+# Initialize team resolver for roster ID to username mapping
+try:
+    team_resolver = TeamResolver("team_identity_mapping.csv")
+    logger.info("✓ Loaded team resolver for roster ID to username mapping")
+except Exception as e:
+    logger.error(f"Failed to load team resolver: {e}")
+    raise ValidationError(f"Team resolver initialization failed: {e}")
+cumulative_manager = CumulativeFileManager()
+
 
 def load_trades() -> Dict:
     """
-    Load trades from Stage 1 output.
+    Load trades from Stage 1 output or cumulative files.
+    
+    Attempts to load from trades_raw.json first (current season data),
+    then falls back to trades.json (cumulative multi-season data).
     
     Returns:
         Trade data dictionary
         
     Raises:
-        ValidationError: If trades_raw.json not found or invalid
+        ValidationError: If no valid trade data found
     """
-    logger.info("Loading trades_raw.json...")
+    logger.info("Loading trade data...")
     
-    try:
-        with open(OutputFiles.TRADES_RAW.value, 'r') as f:
-            data = json.load(f)
-    except FileNotFoundError:
-        raise ValidationError("trades_raw.json not found - run Stage 1 first")
-    except json.JSONDecodeError as e:
-        raise ValidationError(f"Invalid JSON in trades_raw.json: {e}")
+    # Try current season data first
+    current_season_file = Path(OutputFiles.TRADES_RAW.value)
+    cumulative_file = Path("pipeline/trades.json")
+    
+    data = None
+    source_file = None
+    
+    # Try current season file first
+    if current_season_file.exists():
+        try:
+            logger.info(f"Attempting to load current season data: {current_season_file}")
+            with open(current_season_file, 'r') as f:
+                data = json.load(f)
+            source_file = current_season_file
+            logger.info("✓ Loaded current season data")
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            logger.warning(f"Failed to load current season data: {e}")
+    
+    # Fall back to cumulative file if current season failed or has no trades
+    if data is None or data.get('metadata', {}).get('total_trades', 0) == 0:
+        if cumulative_file.exists():
+            try:
+                logger.info(f"Loading cumulative multi-season data: {cumulative_file}")
+                with open(cumulative_file, 'r') as f:
+                    cumulative_data = json.load(f)
+                
+                # Convert cumulative format to expected format
+                data = {
+                    'metadata': cumulative_data['metadata'],
+                    'trades': cumulative_data['trades'],
+                    'users': [],  # Will be populated from cumulative data
+                    'rosters': []  # Will be populated from cumulative data
+                }
+                source_file = cumulative_file
+                logger.info("✓ Loaded cumulative multi-season data")
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                logger.error(f"Failed to load cumulative data: {e}")
+    
+    if data is None:
+        raise ValidationError("No valid trade data found - run Stage 1 first or check cumulative files")
     
     metadata = data['metadata']
-    logger.info(f"✓ League: {metadata['league_name']}")
-    logger.info(f"✓ Season: {metadata['season']}")
-    logger.info(f"✓ Total trades: {metadata['total_trades']}")
+    logger.info(f"✓ Source: {source_file}")
+    logger.info(f"✓ League: {metadata.get('league_name', 'Unknown')}")
+    logger.info(f"✓ Season: {metadata.get('season', 'Multi-season')}")
+    logger.info(f"✓ Total trades: {metadata.get('total_trades', len(data.get('trades', [])))}")
     
-    metrics.record('count.input_trades', metadata['total_trades'])
+    # Record metrics
+    total_trades = metadata.get('total_trades', len(data.get('trades', [])))
+    metrics.record('count.input_trades', total_trades)
     
     return data
 
 
-def create_user_maps(users: List, rosters: List) -> Tuple[Dict, Dict, Dict]:
+def create_user_maps(users: List, rosters: List, trades: List = None) -> Tuple[Dict, Dict, Dict]:
     """
     Create lookup dictionaries for users and rosters.
+    
+    For multi-season compatibility, if users/rosters are empty (current season),
+    extract roster mappings from historical trade data.
     
     Args:
         users: List of user objects
         rosters: List of roster objects
+        trades: List of trade objects (for extracting historical mappings)
         
     Returns:
         Tuple of (user_map, roster_to_user, roster_to_username)
     """
-    user_map = {u['user_id']: u.get('display_name', u.get('username')) for u in users}
-    roster_to_user = {r['roster_id']: r.get('owner_id') for r in rosters}
-    roster_to_username = {
-        r['roster_id']: user_map.get(r.get('owner_id'), f"Roster{r['roster_id']}") 
-        for r in rosters
-    }
+    # If we have current season data, use it directly
+    if users and rosters:
+        user_map = {u['user_id']: u.get('display_name', u.get('username')) for u in users}
+        roster_to_user = {r['roster_id']: r.get('owner_id') for r in rosters}
+        roster_to_username = {
+            r['roster_id']: user_map.get(r.get('owner_id'), f"Roster{r['roster_id']}") 
+            for r in rosters
+        }
+        
+        logger.debug(f"Created maps from current season data: {len(users)} users, {len(rosters)} rosters")
+        return user_map, roster_to_user, roster_to_username
     
-    logger.debug(f"Created maps for {len(users)} users and {len(rosters)} rosters")
+    # For historical/cumulative data, extract mappings from trades
+    logger.info("Extracting roster mappings from historical trade data...")
+    
+    roster_to_username = {}
+    user_map = {}
+    roster_to_user = {}
+    
+    if trades:
+        # Extract unique roster IDs and create mappings from trade data
+        roster_ids = set()
+        
+        for trade in trades:
+            # Collect roster IDs from various trade fields
+            if 'roster_ids' in trade:
+                roster_ids.update(trade['roster_ids'])
+            
+            # Extract from adds/drops
+            adds = trade.get('adds', {}) or {}
+            for player_id, roster_id in adds.items():
+                roster_ids.add(roster_id)
+            
+            drops = trade.get('drops', {}) or {}
+            for player_id, roster_id in drops.items():
+                roster_ids.add(roster_id)
+            
+            # Extract from draft picks
+            draft_picks = trade.get('draft_picks', [])
+            for pick in draft_picks:
+                if 'owner_id' in pick:
+                    roster_ids.add(pick['owner_id'])
+                if 'roster_id' in pick:
+                    roster_ids.add(pick['roster_id'])
+            
+            # Extract from waiver budget
+            waiver_budget = trade.get('waiver_budget', [])
+            for faab in waiver_budget:
+                if 'sender' in faab:
+                    roster_ids.add(faab['sender'])
+                if 'receiver' in faab:
+                    roster_ids.add(faab['receiver'])
+        
+        # Create mappings for historical data using team_resolver
+        for roster_id in roster_ids:
+            if roster_id is not None:
+                # Use team_resolver to get actual username
+                team_info = team_resolver.get_by_roster_id(roster_id)
+                if team_info:
+                    username = team_info['sleeper_username']
+                    roster_to_username[roster_id] = username
+                    roster_to_user[roster_id] = f"user_{roster_id}"
+                    user_map[f"user_{roster_id}"] = username
+                    logger.debug(f"Mapped historical roster {roster_id} to username {username}")
+                else:
+                    # Fallback if roster not in team_identity_mapping
+                    roster_to_username[roster_id] = f"Team{roster_id}"
+                    roster_to_user[roster_id] = f"user_{roster_id}"
+                    user_map[f"user_{roster_id}"] = f"Team{roster_id}"
+                    logger.warning(f"Roster {roster_id} not found in team_identity_mapping, using Team{roster_id}")
+    
+    logger.info(f"✓ Created historical mappings for {len(roster_to_username)} rosters")
+    logger.debug(f"Roster mappings: {dict(list(roster_to_username.items())[:5])}...")
     
     return user_map, roster_to_user, roster_to_username
 
@@ -120,7 +245,7 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
     Extract all assets from all trades.
     
     Args:
-        data: Trade data from Stage 1
+        data: Trade data from Stage 1 or cumulative files
         
     Returns:
         List of asset transaction dictionaries
@@ -130,10 +255,11 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
     logger.info("="*80)
     
     trades = data['trades']
-    users = data['users']
-    rosters = data['rosters']
+    users = data.get('users', [])
+    rosters = data.get('rosters', [])
     
-    user_map, roster_to_user, roster_to_username = create_user_maps(users, rosters)
+    # Create roster mappings (handles both current season and historical data)
+    user_map, roster_to_user, roster_to_username = create_user_maps(users, rosters, trades)
     
     # Load player data once
     players = fetch_player_data()
@@ -159,8 +285,8 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
         # For 2-team, set team_a and team_b for roster_a/roster_b columns
         if len(roster_ids) == 2:
             roster_a, roster_b = roster_ids[0], roster_ids[1]
-            team_a = roster_to_username[roster_a]
-            team_b = roster_to_username[roster_b]
+            team_a = roster_to_username.get(roster_a, f"Team{roster_a}")
+            team_b = roster_to_username.get(roster_b, f"Team{roster_b}")
         else:
             # Multi-team: set to first two for compatibility, but mark as multi-team
             team_a = f"{len(roster_ids)}-team trade"
@@ -172,7 +298,7 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
             player_name = players.get(str(player_id), {}).get('full_name', f'Player_{player_id}')
             
             # Find receiving and giving teams
-            receiving_team = roster_to_username.get(to_roster, f'Roster{to_roster}')
+            receiving_team = roster_to_username.get(to_roster, f'Team{to_roster}')
             
             # Giving team = everyone else who didn't receive (for 2-team it's the other team)
             if len(roster_ids) == 2:
@@ -206,10 +332,11 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
             
             pick_name = f"{season} Round {round_num}"
             
-            origin_owner = roster_to_username.get(original_roster_id, f'Roster{original_roster_id}')
+            # Get origin_owner username (roster_to_username now uses team_resolver for historical data)
+            origin_owner = roster_to_username.get(original_roster_id, f'Team{original_roster_id}')
             
             # Find teams
-            receiving_team = roster_to_username.get(new_roster_id, f'Roster{new_roster_id}')
+            receiving_team = roster_to_username.get(new_roster_id, f'Team{new_roster_id}')
             
             if len(roster_ids) == 2:
                 giving_team = team_b if new_roster_id == roster_a else team_a
@@ -240,7 +367,7 @@ def extract_assets_from_trades(data: Dict) -> List[Dict]:
             
             faab_name = f"${amount} FAAB"
             
-            receiving_team = roster_to_username.get(receiver, f'Roster{receiver}')
+            receiving_team = roster_to_username.get(receiver, f'Team{receiver}')
             
             if len(roster_ids) == 2:
                 giving_team = team_b if receiver == roster_a else team_a

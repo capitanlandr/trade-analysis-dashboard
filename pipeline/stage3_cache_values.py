@@ -30,12 +30,21 @@ from utils.api_client import fetch_with_retry, APIError
 from utils.validators import StageValidator, ValidationError
 from utils.backup import BackupManager
 from utils.metrics import LocalMetrics
+from utils.team_resolver import TeamResolver
 from pick_origin_mapping import get_pick_origin_owner
 
 # Initialize
 logger = setup_logging('Stage 3: Cache Values')
 config = get_config()
 metrics = LocalMetrics()
+
+# Initialize team resolver for name mapping
+try:
+    team_resolver = TeamResolver("../team_identity_mapping.csv")
+    logger.info("✓ Loaded team resolver for roster-based name mapping")
+except Exception as e:
+    logger.error(f"Failed to load team resolver: {e}")
+    raise ValidationError(f"Team resolver initialization failed: {e}")
 
 # Auto-update weekly projections before loading
 logger.info("Checking for missing weekly projection columns...")
@@ -374,7 +383,7 @@ def get_2026_plus_pick_value(
         round_name = ROUND_ORDINALS.get(int(round_num))
         
         if round_name:
-            # Find team in projections
+            # Find team in projections using origin_owner (which is now always a username)
             team_row = PICK_PROJECTIONS[PICK_PROJECTIONS['Team'] == origin_owner]
             if not team_row.empty:
                 try:
@@ -403,6 +412,7 @@ def get_2026_plus_pick_value(
         round_name = ROUND_ORDINALS.get(int(round_num))
         
         if round_name:
+            # Find team in projections using origin_owner (which is now always a username)
             team_row = PICK_PROJECTIONS[PICK_PROJECTIONS['Team'] == origin_owner]
             if not team_row.empty:
                 try:
@@ -483,6 +493,10 @@ def cache_asset_values(df_assets: pd.DataFrame) -> List[Dict]:
         trade_date = row['trade_date']
         origin_owner = row['origin_owner']
         
+        # Debug logging for picks
+        if asset_type == 'pick':
+            logger.debug(f"Processing asset {idx}: {asset_type} '{asset_name}' origin='{origin_owner}'")
+        
         if (idx + 1) % 50 == 0:
             logger.info(f"  Processed {idx + 1}/{len(df_assets)}...")
         
@@ -537,8 +551,11 @@ def cache_asset_values(df_assets: pd.DataFrame) -> List[Dict]:
         
         # Determine value based on asset type
         if asset_type == 'pick':
+            logger.debug(f"Processing pick: {asset_name}, origin_owner: '{origin_owner}'")
+            
             # 2025 picks
             if '2025 Round' in asset_name and origin_owner:
+                logger.debug(f"Processing 2025 pick: {asset_name} for {origin_owner}")
                 df_for_at_trade = df_hist if df_hist is not None else df_current
                 value_at_trade, source_at_trade, meta_at_trade = get_2025_pick_value(
                     asset_name, origin_owner, trade_date, df_for_at_trade, False
@@ -549,6 +566,7 @@ def cache_asset_values(df_assets: pd.DataFrame) -> List[Dict]:
             
             # 2026+ picks
             elif ('2026' in asset_name or '2027' in asset_name or '2028' in asset_name) and origin_owner:
+                logger.debug(f"Processing 2026+ pick: {asset_name} for {origin_owner}")
                 df_for_at_trade = df_hist if df_hist is not None else df_current
                 value_at_trade, source_at_trade, meta_at_trade = get_2026_plus_pick_value(
                     asset_name, origin_owner, trade_date, df_for_at_trade
@@ -559,6 +577,7 @@ def cache_asset_values(df_assets: pd.DataFrame) -> List[Dict]:
             
             else:
                 # Fallback
+                logger.warning(f"Unknown pick format or missing origin_owner: {asset_name} for '{origin_owner}'")
                 value_at_trade = 0
                 value_current = 0
                 source_at_trade = "Unknown pick"

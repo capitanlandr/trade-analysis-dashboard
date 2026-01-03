@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """
-Stage 5: Waiver Wire Analysis Pipeline
-Fetches and processes waiver wire and free agent transaction data from Sleeper API.
+Stage 5: Waiver Wire Analysis Pipeline (Multi-Season Architecture)
+Fetches and processes waiver wire and free agent transaction data with incremental support
+
+MULTI-SEASON FEATURES:
+- Incremental fetching based on last_fetch_timestamp for active seasons
+- Season configuration integration for active vs static season handling
+- Cumulative file management with atomic operations and deduplication
+- Enhanced API error handling with exponential backoff for rate limits
+- Season tagging for all new transactions
 """
 
 import json
@@ -11,64 +18,177 @@ from typing import Dict, List, Any, Optional
 import logging
 from pathlib import Path
 
-from utils.api_client import fetch_with_retry
+from utils.api_client import fetch_with_retry, RateLimitError, APIError
 from utils.logging_config import setup_logging
 from utils.backup import BackupManager
 from utils.team_resolver import TeamResolver
+from utils.season_config import get_season_config, validate_season_operation
+from utils.cumulative_file_manager import CumulativeFileManager, CumulativeFileError
 
 # Setup logging
 logger = setup_logging(__name__)
 
 class WaiverWireProcessor:
-    """Process waiver wire and free agent transactions."""
+    """Process waiver wire and free agent transactions with multi-season support."""
     
-    def __init__(self, league_id: str):
+    def __init__(self, league_id: str, season_name: str = None):
         self.league_id = league_id
+        self.season_name = season_name
         self.team_resolver = TeamResolver()
         self.base_url = "https://api.sleeper.app/v1"
         
-    def fetch_waiver_transactions(self) -> List[Dict[str, Any]]:
-        """Fetch all waiver wire transactions for the season."""
+    def fetch_waiver_transactions(self, incremental: bool = True, 
+                                last_fetch_timestamp: Optional[str] = None) -> List[Dict[str, Any]]:
+        """
+        Fetch waiver wire transactions with incremental support.
+        
+        Args:
+            incremental: If True, only fetch transactions newer than last_fetch_timestamp
+            last_fetch_timestamp: ISO timestamp of last fetch (for incremental mode)
+            
+        Returns:
+            List of waiver transactions
+            
+        Raises:
+            RateLimitError: If rate limits are exceeded
+            APIError: If API calls fail after retries
+        """
         logger.info("Fetching waiver wire transactions...")
         
+        # Convert last_fetch_timestamp to milliseconds for comparison
+        last_fetch_ms = None
+        if incremental and last_fetch_timestamp:
+            try:
+                dt = datetime.fromisoformat(last_fetch_timestamp.replace('Z', '+00:00'))
+                last_fetch_ms = int(dt.timestamp() * 1000)
+                logger.info(f"Incremental fetch since: {dt} ({last_fetch_ms}ms)")
+            except ValueError as e:
+                logger.warning(f"Invalid last_fetch_timestamp format, performing full fetch: {e}")
+                incremental = False
+        
         all_transactions = []
+        rate_limited_weeks = 0
         
         # Fetch transactions for each week (1-18 for regular season + playoffs)
         for week in range(1, 19):
             try:
                 url = f"{self.base_url}/league/{self.league_id}/transactions/{week}"
                 transactions = fetch_with_retry(url)
+                
                 if transactions:
                     # Filter for waiver transactions only
                     waiver_transactions = [t for t in transactions if t.get('type') == 'waiver']
+                    
+                    # Add league_id to each transaction (required by cumulative file manager)
+                    for txn in waiver_transactions:
+                        txn['league_id'] = self.league_id
+                    
+                    # Filter by timestamp if incremental
+                    if incremental and last_fetch_ms:
+                        new_transactions = []
+                        for txn in waiver_transactions:
+                            txn_created = txn.get('created', 0)
+                            if txn_created > last_fetch_ms:
+                                new_transactions.append(txn)
+                        waiver_transactions = new_transactions
+                        
+                        if waiver_transactions:
+                            logger.info(f"Week {week}: Found {len(waiver_transactions)} new waiver transactions since last fetch")
+                    elif waiver_transactions:
+                        logger.info(f"Week {week}: Found {len(waiver_transactions)} waiver transactions")
+                    
                     all_transactions.extend(waiver_transactions)
-                    logger.info(f"Week {week}: Found {len(waiver_transactions)} waiver transactions")
+                    
+            except RateLimitError as e:
+                logger.warning(f"Rate limited on waiver transactions for week {week}: {e}")
+                rate_limited_weeks += 1
+                raise  # Re-raise to trigger retry logic
             except Exception as e:
                 logger.warning(f"Failed to fetch waiver transactions for week {week}: {e}")
                 
-        logger.info(f"Total waiver transactions fetched: {len(all_transactions)}")
+        fetch_mode = "incremental" if incremental and last_fetch_ms else "full"
+        logger.info(f"Total waiver transactions fetched ({fetch_mode}): {len(all_transactions)}")
+        
+        if rate_limited_weeks > 0:
+            logger.warning(f"Rate limited on {rate_limited_weeks} weeks during waiver fetch")
+        
         return all_transactions
     
-    def fetch_free_agent_transactions(self) -> List[Dict[str, Any]]:
-        """Fetch all free agent transactions for the season."""
+    def fetch_free_agent_transactions(self, incremental: bool = True,
+                                    last_fetch_timestamp: Optional[str] = None) -> List[Dict[str, Any]]:
+        """
+        Fetch free agent transactions with incremental support.
+        
+        Args:
+            incremental: If True, only fetch transactions newer than last_fetch_timestamp
+            last_fetch_timestamp: ISO timestamp of last fetch (for incremental mode)
+            
+        Returns:
+            List of free agent transactions
+            
+        Raises:
+            RateLimitError: If rate limits are exceeded
+            APIError: If API calls fail after retries
+        """
         logger.info("Fetching free agent transactions...")
         
+        # Convert last_fetch_timestamp to milliseconds for comparison
+        last_fetch_ms = None
+        if incremental and last_fetch_timestamp:
+            try:
+                dt = datetime.fromisoformat(last_fetch_timestamp.replace('Z', '+00:00'))
+                last_fetch_ms = int(dt.timestamp() * 1000)
+                logger.info(f"Incremental fetch since: {dt} ({last_fetch_ms}ms)")
+            except ValueError as e:
+                logger.warning(f"Invalid last_fetch_timestamp format, performing full fetch: {e}")
+                incremental = False
+        
         all_transactions = []
+        rate_limited_weeks = 0
         
         # Fetch transactions for each week
         for week in range(1, 19):
             try:
                 url = f"{self.base_url}/league/{self.league_id}/transactions/{week}"
                 transactions = fetch_with_retry(url)
+                
                 if transactions:
                     # Filter for free agent transactions only
                     fa_transactions = [t for t in transactions if t.get('type') == 'free_agent']
+                    
+                    # Add league_id to each transaction (required by cumulative file manager)
+                    for txn in fa_transactions:
+                        txn['league_id'] = self.league_id
+                    
+                    # Filter by timestamp if incremental
+                    if incremental and last_fetch_ms:
+                        new_transactions = []
+                        for txn in fa_transactions:
+                            txn_created = txn.get('created', 0)
+                            if txn_created > last_fetch_ms:
+                                new_transactions.append(txn)
+                        fa_transactions = new_transactions
+                        
+                        if fa_transactions:
+                            logger.info(f"Week {week}: Found {len(fa_transactions)} new free agent transactions since last fetch")
+                    elif fa_transactions:
+                        logger.info(f"Week {week}: Found {len(fa_transactions)} free agent transactions")
+                    
                     all_transactions.extend(fa_transactions)
-                    logger.info(f"Week {week}: Found {len(fa_transactions)} free agent transactions")
+                    
+            except RateLimitError as e:
+                logger.warning(f"Rate limited on free agent transactions for week {week}: {e}")
+                rate_limited_weeks += 1
+                raise  # Re-raise to trigger retry logic
             except Exception as e:
                 logger.warning(f"Failed to fetch free agent transactions for week {week}: {e}")
                 
-        logger.info(f"Total free agent transactions fetched: {len(all_transactions)}")
+        fetch_mode = "incremental" if incremental and last_fetch_ms else "full"
+        logger.info(f"Total free agent transactions fetched ({fetch_mode}): {len(all_transactions)}")
+        
+        if rate_limited_weeks > 0:
+            logger.warning(f"Rate limited on {rate_limited_weeks} weeks during free agent fetch")
+        
         return all_transactions
     
     def process_waiver_transactions(self, transactions: List[Dict[str, Any]]) -> pd.DataFrame:
@@ -289,68 +409,207 @@ class WaiverWireProcessor:
         
         return analysis
 
-def main():
-    """Main execution function."""
-    logger.info("Starting Stage 5: Waiver Wire Analysis")
+
+def process_waiver_wire_multi_season(force_full_refresh: bool = False) -> str:
+    """
+    Process waiver wire data for all active seasons using multi-season architecture.
+    
+    Args:
+        force_full_refresh: If True, perform full refresh for all active seasons
+        
+    Returns:
+        Path to cumulative waiver wire file
+        
+    Raises:
+        APIError: If API calls fail after retries
+        CumulativeFileError: If cumulative file operations fail
+    """
+    logger.info("Starting Stage 5: Waiver Wire Analysis (Multi-Season)")
     
     try:
-        # Load configuration
-        import yaml
-        with open('config/default.yaml', 'r') as f:
-            config = yaml.safe_load(f)
+        # Load season configuration
+        season_config = get_season_config()
+        active_seasons = season_config.get_active_seasons()
         
-        league_id = config['league']['id']
+        if not active_seasons:
+            logger.warning("No active seasons configured, nothing to fetch")
+            return ""
         
-        # Initialize processor
-        processor = WaiverWireProcessor(league_id)
+        logger.info(f"Processing {len(active_seasons)} active seasons: {active_seasons}")
         
-        # Create backups
+        # Initialize cumulative file manager
+        cumulative_manager = CumulativeFileManager()
+        cumulative_file = "waiver-wire.json"  # Cumulative waiver wire file
+        
+        # Initialize cumulative file if it doesn't exist
+        if not cumulative_manager.initialize_cumulative_file(cumulative_file, "waiver-wire"):
+            raise CumulativeFileError(f"Failed to initialize cumulative file: {cumulative_file}")
+        
+        total_new_transactions = 0
+        total_duplicates = 0
+        processed_seasons = []
+        
+        # Process each active season
+        for season_name in active_seasons:
+            try:
+                logger.info(f"Processing waiver wire for season: {season_name}")
+                
+                # Validate season operation is allowed
+                validate_season_operation(season_name, "fetch")
+                
+                # Get season info
+                season_info = season_config.get_season_info(season_name)
+                if not season_info:
+                    logger.error(f"Season info not found: {season_name}")
+                    continue
+                
+                league_id = season_info.league_id
+                last_fetch = season_info.last_incremental_fetch
+                
+                # Determine if incremental fetch is possible
+                incremental = not force_full_refresh and last_fetch is not None
+                
+                # Initialize processor for this season
+                processor = WaiverWireProcessor(league_id, season_name)
+                
+                # Fetch waiver transactions
+                waiver_transactions = processor.fetch_waiver_transactions(
+                    incremental=incremental,
+                    last_fetch_timestamp=last_fetch
+                )
+                
+                # Fetch free agent transactions
+                fa_transactions = processor.fetch_free_agent_transactions(
+                    incremental=incremental,
+                    last_fetch_timestamp=last_fetch
+                )
+                
+                # Combine all transactions
+                all_transactions = waiver_transactions + fa_transactions
+                
+                # Append to cumulative file if we have new transactions
+                if all_transactions:
+                    result = cumulative_manager.append_to_cumulative_file(
+                        file_path=cumulative_file,
+                        new_records=all_transactions,
+                        season=season_name
+                    )
+                    
+                    total_new_transactions += result['records_added']
+                    total_duplicates += result['duplicates_skipped']
+                    
+                    logger.info(f"✓ {season_name}: {result['records_added']} new transactions, "
+                               f"{result['duplicates_skipped']} duplicates")
+                else:
+                    logger.info(f"✓ {season_name}: No new transactions")
+                
+                # Update last fetch timestamp in season config
+                current_timestamp = datetime.now(timezone.utc).isoformat()
+                season_config.update_last_fetch_timestamp(season_name, current_timestamp)
+                processed_seasons.append(season_name)
+                
+                # Save raw data for this season (for backward compatibility)
+                season_waiver_file = f'waiver_transactions_raw_{season_name}.json'
+                season_fa_file = f'free_agent_transactions_raw_{season_name}.json'
+                
+                with open(season_waiver_file, 'w') as f:
+                    json.dump(waiver_transactions, f, indent=2)
+                
+                with open(season_fa_file, 'w') as f:
+                    json.dump(fa_transactions, f, indent=2)
+                
+            except Exception as e:
+                logger.error(f"Failed to process waiver wire for season {season_name}: {e}")
+                # Continue with other seasons
+                continue
+        
+        # Save updated season configuration
+        season_config.save()
+        
+        # Create legacy output files for backward compatibility
+        if processed_seasons:
+            # Load cumulative data for processing
+            try:
+                with open(cumulative_file, 'r') as f:
+                    cumulative_data = json.load(f)
+                    all_waiver_transactions = cumulative_data.get('waiver-wire', [])
+                
+                # Separate waiver and free agent transactions
+                waiver_only = [t for t in all_waiver_transactions if t.get('type') == 'waiver']
+                fa_only = [t for t in all_waiver_transactions if t.get('type') == 'free_agent']
+                
+                # Save legacy format files
+                with open('waiver_transactions_raw.json', 'w') as f:
+                    json.dump(waiver_only, f, indent=2)
+                
+                with open('free_agent_transactions_raw.json', 'w') as f:
+                    json.dump(fa_only, f, indent=2)
+                
+                # Process data for analysis (using first season's processor for compatibility)
+                if processed_seasons:
+                    first_season = processed_seasons[0]
+                    season_info = season_config.get_season_info(first_season)
+                    processor = WaiverWireProcessor(season_info.league_id, first_season)
+                    
+                    waiver_df = processor.process_waiver_transactions(waiver_only)
+                    fa_df = processor.process_free_agent_transactions(fa_only)
+                    
+                    # Combine and save processed data
+                    combined_df = pd.concat([waiver_df, fa_df], ignore_index=True)
+                    combined_df.to_csv('waiver_wire_analysis.csv', index=False)
+                    
+                    # Generate analysis
+                    analysis = processor.generate_waiver_analysis(waiver_df, fa_df)
+                    
+                    # Add multi-season metadata
+                    analysis['multi_season_metadata'] = {
+                        'processed_seasons': processed_seasons,
+                        'total_new_transactions': total_new_transactions,
+                        'total_duplicates': total_duplicates,
+                        'fetch_mode': 'incremental' if not force_full_refresh else 'full'
+                    }
+                    
+                    # Save analysis
+                    with open('waiver_wire_summary.json', 'w') as f:
+                        json.dump(analysis, f, indent=2, default=str)
+                
+            except Exception as e:
+                logger.warning(f"Could not create legacy output files: {e}")
+        
+        # Create backup
         backup_manager = BackupManager()
-        backup_files = [
-            'waiver_transactions_raw.json',
-            'free_agent_transactions_raw.json',
-            'waiver_wire_analysis.csv',
-            'waiver_wire_summary.json'
-        ]
+        backup_manager.backup_file(cumulative_file, 'stage5_multi_season')
         
-        for file in backup_files:
-            if Path(file).exists():
-                backup_manager.backup_file(file, 'stage5')
+        # Display summary stats
+        logger.info(f"📊 MULTI-SEASON WAIVER WIRE SUMMARY:")
+        logger.info(f"  Processed seasons: {processed_seasons}")
+        logger.info(f"  Total new transactions: {total_new_transactions}")
+        logger.info(f"  Duplicates skipped: {total_duplicates}")
         
-        # Fetch raw data
-        waiver_transactions = processor.fetch_waiver_transactions()
-        fa_transactions = processor.fetch_free_agent_transactions()
+        logger.info("✓ Stage 5 Multi-Season completed successfully")
         
-        # Save raw data
-        with open('waiver_transactions_raw.json', 'w') as f:
-            json.dump(waiver_transactions, f, indent=2)
-        
-        with open('free_agent_transactions_raw.json', 'w') as f:
-            json.dump(fa_transactions, f, indent=2)
-        
-        # Process data
-        waiver_df = processor.process_waiver_transactions(waiver_transactions)
-        fa_df = processor.process_free_agent_transactions(fa_transactions)
-        
-        # Combine and save processed data
-        combined_df = pd.concat([waiver_df, fa_df], ignore_index=True)
-        combined_df.to_csv('waiver_wire_analysis.csv', index=False)
-        
-        # Generate analysis
-        analysis = processor.generate_waiver_analysis(waiver_df, fa_df)
-        
-        # Save analysis
-        with open('waiver_wire_summary.json', 'w') as f:
-            json.dump(analysis, f, indent=2, default=str)
-        
-        logger.info("Stage 5 completed successfully")
-        logger.info(f"Processed {len(waiver_transactions)} waiver transactions")
-        logger.info(f"Processed {len(fa_transactions)} free agent transactions")
-        logger.info(f"Generated analysis with {len(analysis)} sections")
+        return cumulative_file
         
     except Exception as e:
-        logger.error(f"Stage 5 failed: {e}")
+        logger.error(f"Stage 5 multi-season failed: {e}")
         raise
+
+
+def main():
+    """Main execution function with multi-season support."""
+    import sys
+    
+    # Check for --full flag
+    full_refresh = '--full' in sys.argv
+    
+    try:
+        output_file = process_waiver_wire_multi_season(force_full_refresh=full_refresh)
+        logger.info(f"✓ Output ready: {output_file}")
+        return output_file
+    except Exception as e:
+        logger.error(f"❌ Stage 5 failed: {e}")
+        raise
+
 
 if __name__ == "__main__":
     main()
