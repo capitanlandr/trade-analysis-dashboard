@@ -500,12 +500,20 @@ def process_waiver_wire_multi_season(force_full_refresh: bool = False) -> str:
                     
                     logger.info(f"✓ {season_name}: {result['records_added']} new transactions, "
                                f"{result['duplicates_skipped']} duplicates")
+                    
+                    # Find the most recent transaction timestamp from newly added transactions
+                    # This ensures incremental fetch uses the actual data timestamp, not script execution time
+                    most_recent_txn_ms = max(txn.get('created', 0) for txn in all_transactions)
+                    most_recent_dt = datetime.fromtimestamp(most_recent_txn_ms / 1000, tz=timezone.utc)
+                    current_timestamp = most_recent_dt.isoformat()
+                    
+                    # Update last fetch timestamp in season config ONLY when we have new data
+                    season_config.update_last_fetch_timestamp(season_name, current_timestamp)
+                    logger.info(f"Updated last_fetch to most recent transaction: {current_timestamp}")
                 else:
-                    logger.info(f"✓ {season_name}: No new transactions")
+                    logger.info(f"✓ {season_name}: No new transactions, keeping existing last_fetch timestamp")
+                    # Don't update timestamp - this prevents gaps when one stage has no data
                 
-                # Update last fetch timestamp in season config
-                current_timestamp = datetime.now(timezone.utc).isoformat()
-                season_config.update_last_fetch_timestamp(season_name, current_timestamp)
                 processed_seasons.append(season_name)
                 
                 # Save raw data for this season (for backward compatibility)

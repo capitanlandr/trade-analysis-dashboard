@@ -337,12 +337,20 @@ def fetch_all_trades_multi_season(force_full_refresh: bool = False) -> str:
                     
                     logger.info(f"✓ {season_name}: {result['records_added']} new trades, "
                                f"{result['duplicates_skipped']} duplicates")
+                    
+                    # Find the most recent transaction timestamp from newly added trades
+                    # This ensures incremental fetch uses the actual data timestamp, not script execution time
+                    most_recent_trade_ms = max(trade.get('created', 0) for trade in trades)
+                    most_recent_dt = datetime.fromtimestamp(most_recent_trade_ms / 1000, tz=timezone.utc)
+                    current_timestamp = most_recent_dt.isoformat()
+                    
+                    # Update last fetch timestamp in season config ONLY when we have new data
+                    season_config.update_last_fetch_timestamp(season_name, current_timestamp)
+                    logger.info(f"Updated last_fetch to most recent trade: {current_timestamp}")
                 else:
-                    logger.info(f"✓ {season_name}: No new trades")
+                    logger.info(f"✓ {season_name}: No new trades, keeping existing last_fetch timestamp")
+                    # Don't update timestamp - this prevents gaps when one stage has no data
                 
-                # Update last fetch timestamp in season config
-                current_timestamp = datetime.now(timezone.utc).isoformat()
-                season_config.update_last_fetch_timestamp(season_name, current_timestamp)
                 processed_seasons.append(season_name)
                 
             except Exception as e:

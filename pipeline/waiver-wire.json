@@ -1,24 +1,24 @@
 {
   "metadata": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-01-02T23:44:51.031682Z",
+    "last_updated": "2026-01-03T22:13:34.268420Z",
     "seasons_included": [
       "season_2",
       "season_3"
     ],
-    "total_waiver-wire": 212,
+    "total_waiver-wire": 218,
     "waiver-wire_by_season": {
       "season_2": 208,
-      "season_3": 4
+      "season_3": 10
     },
     "season_info": {
       "season_2": {
         "status": "active",
-        "last_fetched": "2025-12-31T22:21:51.566499Z"
+        "last_fetched": "2025-12-31T22:19:22.566324Z"
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-01-02T23:44:51.031682Z"
+        "last_fetched": "2026-01-03T22:13:34.268420Z"
       }
     }
   },
@@ -6505,6 +6505,246 @@
       "metadata": {
         "notes": "Your waiver claim was processed successfully!"
       },
+      "created": 1767384350478,
+      "settings": {
+        "seq": 4,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "596536664185163776",
+      "transaction_id": "1312908760536092672",
+      "adds": {
+        "12699": 3
+      },
+      "drops": null,
+      "consenter_ids": [
+        3
+      ],
+      "roster_ids": [
+        3
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767384334475,
+      "settings": {
+        "seq": 2,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "596536664185163776",
+      "transaction_id": "1312908693410439168",
+      "adds": {
+        "12634": 3
+      },
+      "drops": null,
+      "consenter_ids": [
+        3
+      ],
+      "roster_ids": [
+        3
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767384183401,
+      "settings": {
+        "seq": 0,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "596536664185163776",
+      "transaction_id": "1312908059760164864",
+      "adds": {
+        "12523": 3
+      },
+      "drops": null,
+      "consenter_ids": [
+        3
+      ],
+      "roster_ids": [
+        3
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "failed",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Unfortunately, your roster will have too many players after this transaction."
+      },
+      "created": 1767384004616,
+      "settings": {
+        "seq": 7,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "870177576986034176",
+      "transaction_id": "1312907309885710336",
+      "adds": {
+        "5857": 1
+      },
+      "drops": null,
+      "consenter_ids": [
+        1
+      ],
+      "roster_ids": [
+        1
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767383986376,
+      "settings": {
+        "seq": 6,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "870177576986034176",
+      "transaction_id": "1312907233381601280",
+      "adds": {
+        "8917": 1
+      },
+      "drops": null,
+      "consenter_ids": [
+        1
+      ],
+      "roster_ids": [
+        1
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767383977132,
+      "settings": {
+        "seq": 5,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "870177576986034176",
+      "transaction_id": "1312907194609455104",
+      "adds": {
+        "6271": 1
+      },
+      "drops": null,
+      "consenter_ids": [
+        1
+      ],
+      "roster_ids": [
+        1
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767383973268,
+      "settings": {
+        "seq": 3,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "870177576986034176",
+      "transaction_id": "1312907178398478336",
+      "adds": {
+        "5906": 1
+      },
+      "drops": null,
+      "consenter_ids": [
+        1
+      ],
+      "roster_ids": [
+        1
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1767383968796,
+      "settings": {
+        "seq": 1,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "870177576986034176",
+      "transaction_id": "1312907159645736960",
+      "adds": {
+        "1339": 1
+      },
+      "drops": null,
+      "consenter_ids": [
+        1
+      ],
+      "roster_ids": [
+        1
+      ],
+      "status_updated": 1767427510335,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
       "created": 1767298241844,
       "settings": {
         "seq": 0,
@@ -6517,12 +6757,12 @@
       "adds": {
         "11168": 11
       },
-      "consenter_ids": [
-        11
-      ],
       "drops": {
         "9220": 11
       },
+      "consenter_ids": [
+        11
+      ],
       "roster_ids": [
         11
       ],
@@ -6549,74 +6789,12 @@
       "adds": {
         "12462": 12
       },
+      "drops": null,
       "consenter_ids": [
         12
       ],
-      "drops": null,
       "roster_ids": [
         12
-      ],
-      "status_updated": 1767254689628,
-      "waiver_budget": [],
-      "league_id": "1312166810505719808",
-      "season": "season_3"
-    },
-    {
-      "status": "complete",
-      "type": "waiver",
-      "metadata": {
-        "notes": "Your waiver claim was processed successfully!"
-      },
-      "created": 1767209362042,
-      "settings": {
-        "seq": 2,
-        "waiver_bid": 0
-      },
-      "leg": 1,
-      "draft_picks": [],
-      "creator": "870177576986034176",
-      "transaction_id": "1312174805834792960",
-      "adds": {
-        "11377": 1
-      },
-      "consenter_ids": [
-        1
-      ],
-      "drops": {
-        "4718": 1
-      },
-      "roster_ids": [
-        1
-      ],
-      "status_updated": 1767254689628,
-      "waiver_budget": [],
-      "league_id": "1312166810505719808",
-      "season": "season_3"
-    },
-    {
-      "status": "complete",
-      "type": "waiver",
-      "metadata": {
-        "notes": "Your waiver claim was processed successfully!"
-      },
-      "created": 1767209347578,
-      "settings": {
-        "seq": 0,
-        "waiver_bid": 1
-      },
-      "leg": 1,
-      "draft_picks": [],
-      "creator": "870177576986034176",
-      "transaction_id": "1312174745168416768",
-      "adds": {
-        "12462": 1
-      },
-      "consenter_ids": [
-        1
-      ],
-      "drops": null,
-      "roster_ids": [
-        1
       ],
       "status_updated": 1767254689628,
       "waiver_budget": [],
