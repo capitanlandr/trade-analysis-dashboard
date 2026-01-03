@@ -1,1448 +1,18 @@
 {
   "metadata": {
-    "league_id": "1180814327660371968",
-    "league_name": "Dynasuiiii",
-    "season": "2025",
-    "current_week": 17,
-    "fetch_timestamp": "2026-01-02T14:17:09.324416",
-    "total_trades": 81,
-    "incremental_mode": true
+    "league_id": "1312166810505719808",
+    "league_name": "Multi-Season (season_3)",
+    "season": 2025,
+    "current_week": 1,
+    "fetch_timestamp": "2026-01-02T14:55:21.905638",
+    "total_trades": 0,
+    "incremental_mode": true,
+    "processed_seasons": [
+      "season_3"
+    ]
   },
-  "users": [
-    {
-      "avatar": "97d2f1313e604ed094d5f9dce769bd91",
-      "display_name": "brevinowens",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "archived": "off",
-        "mention_pn": "on",
-        "team_name": "Bucky\u2019s Depression"
-      },
-      "settings": null,
-      "user_id": "596536664185163776"
-    },
-    {
-      "avatar": null,
-      "display_name": "jakeduf",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "avatar": "https://sleepercdn.com/uploads/803c5a109153d1dc178552a576116e8d.jpg",
-        "mention_pn": "on",
-        "team_name": "Rashid Shaheed Truthers"
-      },
-      "settings": null,
-      "user_id": "725577957241896960"
-    },
-    {
-      "avatar": "b3338675f635c2c1f42b469621d38ec6",
-      "display_name": "jwalters74",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "avatar": "https://sleepercdn.com/uploads/8d92b0b27c4de401b20a7867e01763b0.jpg",
-        "mention_pn": "on",
-        "team_name": "2-Man Title Charge"
-      },
-      "settings": null,
-      "user_id": "865815956675538944"
-    },
-    {
-      "avatar": "b3338675f635c2c1f42b469621d38ec6",
-      "display_name": "gnewman4",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "allow_sms": "on",
-        "avatar": "https://sleepercdn.com/uploads/f04fa878c0c404e278fb47231351ba5b.jpg",
-        "mention_pn": "on",
-        "team_name": "Like a Good Naber"
-      },
-      "settings": null,
-      "user_id": "867921673234632704"
-    },
-    {
-      "avatar": "62003926fc84d364c494469601e0957e",
-      "display_name": "lndahayo",
-      "is_bot": false,
-      "is_owner": true,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "archived": "off",
-        "avatar": "https://sleepercdn.com/uploads/ef523d12346666911219537c6d4577a1.jpg",
-        "league_report_pn": "off",
-        "mascot_message": "off",
-        "mention_pn": "on",
-        "player_like_pn": "on",
-        "player_nickname_update": "off",
-        "team_name": "208 Ferrari Way",
-        "team_name_update": "off",
-        "trade_block_pn": "on",
-        "transaction_commissioner": "on",
-        "transaction_free_agent": "on",
-        "transaction_trade": "on",
-        "transaction_waiver": "on",
-        "user_message_pn": "on"
-      },
-      "settings": null,
-      "user_id": "870177576986034176"
-    },
-    {
-      "avatar": "4f4090e5e9c3941414db40a871e3e909",
-      "display_name": "thekylecasey",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "allow_sms": "on",
-        "avatar": "https://sleepercdn.com/uploads/883d55e5e388ca3782f946c2bbe280e5.jpg",
-        "league_report_pn": "on",
-        "mascot_message": "on",
-        "mention_pn": "on",
-        "player_like_pn": "on",
-        "player_nickname_update": "on",
-        "team_name": "Spirit Halloween",
-        "team_name_update": "on",
-        "trade_block_pn": "on",
-        "transaction_commissioner": "on",
-        "transaction_free_agent": "on",
-        "transaction_trade": "on",
-        "transaction_waiver": "on",
-        "user_message_pn": "on"
-      },
-      "settings": null,
-      "user_id": "1051659324998668288"
-    },
-    {
-      "avatar": "b319fdf8b7b5b0359d3c78622ba4d70c",
-      "display_name": "cjsyregelas",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "allow_sms": "on",
-        "avatar": "https://sleepercdn.com/uploads/e2399c6cbb704315c6db6901c502525b.jpg",
-        "mention_pn": "on",
-        "team_name": "Mostly Washed"
-      },
-      "settings": null,
-      "user_id": "1112526078167375872"
-    },
-    {
-      "avatar": "4f4090e5e9c3941414db40a871e3e909",
-      "display_name": "tylerpilgrim",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "avatar": "https://sleepercdn.com/uploads/b3246ccd62f9241df3cb9ef8cc9485ef.jpg",
-        "mention_pn": "on",
-        "team_name": "TRIPS \ud83d\udd25"
-      },
-      "settings": null,
-      "user_id": "1115878936925294592"
-    },
-    {
-      "avatar": "a0b276eaf8fe4762b06c7d31904b008e",
-      "display_name": "wkerwin",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "archived": "off",
-        "avatar": "https://sleepercdn.com/uploads/60739eb4e02e15227433c1dae485eee7.jpg",
-        "mention_pn": "on",
-        "team_name": "On To 2026"
-      },
-      "settings": null,
-      "user_id": "1124774814427832320"
-    },
-    {
-      "avatar": "c356f82dc5f8a5481e9e253e7c34739d",
-      "display_name": "donewton",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "avatar": "https://sleepercdn.com/uploads/1718259975f8ad09ac5466b9e3a46673.jpg",
-        "league_report_pn": "off",
-        "mascot_message": "off",
-        "mention_pn": "on",
-        "player_like_pn": "off",
-        "player_nickname_update": "off",
-        "team_name": "Paper Tigers",
-        "team_name_update": "off",
-        "trade_block_pn": "off",
-        "transaction_commissioner": "off",
-        "transaction_free_agent": "off",
-        "transaction_trade": "on",
-        "transaction_waiver": "off",
-        "user_message_pn": "on"
-      },
-      "settings": null,
-      "user_id": "1124978574760521728"
-    },
-    {
-      "avatar": "b3338675f635c2c1f42b469621d38ec6",
-      "display_name": "mgaeta23",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "avatar": "https://sleepercdn.com/uploads/35d13432a97ac875681a9585a100d233.jpg",
-        "mention_pn": "on",
-        "team_name": "Gaeta Spur FC"
-      },
-      "settings": null,
-      "user_id": "1129475833942372352"
-    },
-    {
-      "avatar": "15d7cf259bc30eab8f6120f45f652fb6",
-      "display_name": "zachlearningtogolf",
-      "is_bot": false,
-      "is_owner": false,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn": "on",
-        "allow_sms": "on",
-        "avatar": "https://sleepercdn.com/uploads/e79d04d91fc13845a2e2e3c537d5f7eb.jpg",
-        "mention_pn": "on",
-        "team_name": "Mommy Rainier "
-      },
-      "settings": null,
-      "user_id": "1129843037888204800"
-    }
-  ],
-  "rosters": [
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn_inactive_starters": "on",
-        "allow_pn_player_injury_status": "on",
-        "allow_pn_scoring": "on",
-        "p_nick_2306": "Jameis F****** Winston",
-        "record": "WLWWWWWWWWWWWWLLWLLWLLWWLLWW",
-        "restrict_pn_scoring_starters_only": "on",
-        "streak": "2W"
-      },
-      "owner_id": "870177576986034176",
-      "player_map": null,
-      "players": [
-        "11620",
-        "11655",
-        "12469",
-        "12474",
-        "12512",
-        "12534",
-        "1479",
-        "3294",
-        "4037",
-        "421",
-        "4219",
-        "4663",
-        "4718",
-        "4881",
-        "5854",
-        "6149",
-        "6790",
-        "7002",
-        "7525",
-        "7547",
-        "8110",
-        "8121",
-        "9488"
-      ],
-      "reserve": [
-        "12512",
-        "4663"
-      ],
-      "roster_id": 1,
-      "settings": {
-        "division": 3,
-        "fpts": 1907,
-        "fpts_against": 1725,
-        "fpts_against_decimal": 12,
-        "fpts_decimal": 72,
-        "losses": 9,
-        "ppts": 2199,
-        "ppts_decimal": 24,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 92,
-        "waiver_position": 10,
-        "wins": 19
-      },
-      "starters": [
-        "421",
-        "12474",
-        "6790",
-        "7547",
-        "9488",
-        "7002",
-        "11655",
-        "7525",
-        "3294"
-      ],
-      "taxi": null
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "record": "LWWWLLLLLLWWWWLWWWWWWWLLWWLL",
-        "p_nick_11579": "Breakout game!!!!",
-        "p_nick_12481": "RIP",
-        "p_nick_5892": "The Terminator",
-        "p_nick_7543": "Not washed!",
-        "p_nick_2133": "Tush fade \ud83d\udc51",
-        "p_nick_8126": "Fart catcher",
-        "p_nick_5185": "Will trade for 3rd round pick",
-        "p_nick_1339": "Palpatine",
-        "p_nick_2309": "WR1",
-        "p_nick_6130": "Dumb pedestrian",
-        "p_nick_9484": "Kraft YAC & Cheese \u2122\ufe0f",
-        "p_nick_11592": "Erick Nothing",
-        "p_nick_12471": "Not for sale Brevin!",
-        "p_nick_5859": "Old ass",
-        "p_nick_8132": "Generational handcuff",
-        "p_nick_11631": "Freddy Kreuger",
-        "p_nick_8148": "Jihad",
-        "p_nick_11620": "Larry Fitzgerald",
-        "p_nick_8183": "Please dont make me trade for Mac Jones",
-        "p_nick_9509": "Praying for ACL",
-        "p_nick_5248": "Old ass 2",
-        "p_nick_7571": "Thank You Johnny",
-        "p_nick_4972": "Miles Garrett",
-        "p_nick_2307": "$20 Monopoly Money",
-        "p_nick_11643": "Better than Devon Achane",
-        "streak": "2L",
-        "p_nick_9999": "Mayo Cum",
-        "p_nick_11256": "QB1",
-        "p_nick_9481": "Tucker Kraft handcuff",
-        "p_nick_7564": "Hold the spit\ud83d\udca6",
-        "p_nick_10226": "Storm Trooper (bitch ass Vader handcuff)",
-        "p_nick_5850": "Emmanuel Wilson handcuff",
-        "p_nick_1166": "Noodle arm mania",
-        "p_nick_1373": "Mommy Rainer wrote me off, I ain\u2019t write back tho",
-        "p_nick_9486": "Dondropion Wicks",
-        "p_nick_2028": "Sid from Toy Story",
-        "p_nick_11584": "Perhaps touchable afterall",
-        "p_nick_10229": "Ra Prison Price actually aint bad",
-        "p_nick_9225": "Most efficient RB in Philly",
-        "p_nick_11292": "\ud83e\udd0c LeCheeks and Bernard sleep with the fishes"
-      },
-      "owner_id": "867921673234632704",
-      "player_map": null,
-      "players": [
-        "10226",
-        "11566",
-        "11579",
-        "11581",
-        "11632",
-        "11638",
-        "11643",
-        "1166",
-        "12481",
-        "12641",
-        "2133",
-        "2307",
-        "4039",
-        "5850",
-        "7021",
-        "7543",
-        "7564",
-        "7591",
-        "7594",
-        "8130",
-        "8132",
-        "8148",
-        "8183",
-        "827",
-        "9225",
-        "9481",
-        "9484",
-        "9509",
-        "9754"
-      ],
-      "reserve": [
-        "11632",
-        "12481",
-        "9484"
-      ],
-      "roster_id": 2,
-      "settings": {
-        "division": 3,
-        "fpts": 1960,
-        "fpts_against": 1741,
-        "fpts_against_decimal": 76,
-        "fpts_decimal": 12,
-        "losses": 12,
-        "ppts": 2271,
-        "ppts_decimal": 2,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 99,
-        "waiver_position": 6,
-        "wins": 16
-      },
-      "starters": [
-        "8183",
-        "9509",
-        "7543",
-        "8148",
-        "7564",
-        "8130",
-        "11638",
-        "7021",
-        "1166"
-      ],
-      "taxi": [
-        "11579",
-        "11643",
-        "12641",
-        "9481"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "record": "WWWWLWWWLLWWWWWWLLWWLWWWLWWW",
-        "streak": "3W"
-      },
-      "owner_id": "596536664185163776",
-      "player_map": null,
-      "players": [
-        "11559",
-        "11569",
-        "11571",
-        "11584",
-        "11637",
-        "11640",
-        "12485",
-        "12501",
-        "12503",
-        "12509",
-        "12526",
-        "12535",
-        "2505",
-        "4217",
-        "6804",
-        "6813",
-        "7553",
-        "8125",
-        "8144",
-        "8161",
-        "8167",
-        "9221",
-        "9228",
-        "9482",
-        "9511"
-      ],
-      "reserve": [
-        "11559"
-      ],
-      "roster_id": 3,
-      "settings": {
-        "division": 2,
-        "fpts": 1875,
-        "fpts_against": 1767,
-        "fpts_against_decimal": 6,
-        "fpts_decimal": 40,
-        "losses": 7,
-        "ppts": 2075,
-        "ppts_decimal": 86,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 62,
-        "waiver_position": 1,
-        "wins": 21
-      },
-      "starters": [
-        "8161",
-        "9221",
-        "6813",
-        "8167",
-        "8144",
-        "7553",
-        "11584",
-        "12526",
-        "9228"
-      ],
-      "taxi": [
-        "11569",
-        "11640"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "allow_pn_inactive_starters": "on",
-        "allow_pn_player_injury_status": "on",
-        "allow_pn_scoring": "on",
-        "p_nick_11199": "Untouchable ",
-        "p_nick_11299": "Limited to special teams",
-        "p_nick_11560": "Game winning drive at lambeau (tangible) ",
-        "p_nick_12511": "Future QB1",
-        "p_nick_12529": "Engaged \ud83d\udcc8\ud83d\udcc8\ud83d\udcc8",
-        "p_nick_4037": "RodGod\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d",
-        "p_nick_4199": "Gaeta player ",
-        "p_nick_4983": "Gsme winning catch only thing to remember",
-        "p_nick_9226": "Generationaler Talent",
-        "p_nick_9502": "Secret weapon dont forget ",
-        "record": "LLLLWWLLLLLLWLLLWWLWLLLWLLWL",
-        "restrict_pn_scoring_starters_only": "on",
-        "streak": "1L"
-      },
-      "owner_id": "1051659324998668288",
-      "player_map": null,
-      "players": [
-        "10444",
-        "11199",
-        "11560",
-        "11583",
-        "11610",
-        "11616",
-        "11623",
-        "1234",
-        "12483",
-        "12487",
-        "12511",
-        "12517",
-        "12519",
-        "12524",
-        "12529",
-        "12718",
-        "3257",
-        "331",
-        "4040",
-        "4983",
-        "5001",
-        "5849",
-        "6039",
-        "6783",
-        "7049",
-        "8147",
-        "8180",
-        "9502"
-      ],
-      "reserve": [
-        "11616",
-        "5849",
-        "9502"
-      ],
-      "roster_id": 4,
-      "settings": {
-        "division": 1,
-        "fpts": 1473,
-        "fpts_against": 1789,
-        "fpts_against_decimal": 92,
-        "fpts_decimal": 56,
-        "losses": 20,
-        "ppts": 1763,
-        "ppts_decimal": 78,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 77,
-        "waiver_position": 3,
-        "wins": 8
-      },
-      "starters": [
-        "11560",
-        "11199",
-        "12529",
-        "4983",
-        "7049",
-        "12517",
-        "8147",
-        "12519",
-        "12524"
-      ],
-      "taxi": [
-        "12483",
-        "12511",
-        "12718"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "record": "LLLWLLWWLLWWLLLLWWWLWWWLLLLL",
-        "p_nick_1479": "Keenan Alexander Allen",
-        "p_nick_4035": "Alvin Mentian Kamara",
-        "p_nick_12860": "Who is this guy",
-        "p_nick_9226": "No middle name",
-        "p_nick_12542": "Effon Freakin Chism",
-        "p_nick_7828": "Travis is cooked",
-        "p_nick_4144": "Jonnu Andre Smith",
-        "p_nick_11631": "Disgusting lazy eye\u2019d piece of shit",
-        "p_nick_4981": "\ud83c\udfb0",
-        "p_nick_9480": "Strange>Warren",
-        "p_nick_12510": "Jalen Oluwaseun Isaiah Milroe",
-        "p_nick_5967": "Point scorer",
-        "p_nick_7591": "Justin Skyler Fields",
-        "p_nick_6828": "Algiers Jameal William Dillion Jr.",
-        "p_nick_8112": "Middle name not public",
-        "p_nick_12738": "Mafah > Blue",
-        "streak": "5L",
-        "p_nick_12520": "X",
-        "p_nick_827": "Tyrod Di\u2019allo Taylor",
-        "p_nick_12478": "Ex QB",
-        "p_nick_12529": "Heard hes good",
-        "p_nick_12472": "Raheim G Rocket Sanders",
-        "p_nick_12493": "Orande Benjamin Gadsen",
-        "p_nick_12522": "Cameron Anthoney Ward",
-        "p_nick_12718": "McVay\u2019s guy",
-        "p_nick_11575": "Re\u2019mahn Walter Zhamar Jamar Davis",
-        "p_nick_12484": "Jayden William Higgins",
-        "p_nick_8138": "James Dalvin Cook",
-        "p_nick_2216": "Michael Lynn Evans",
-        "p_nick_5022": "Chlamydia",
-        "p_nick_5955": "James Hunter Renfrow",
-        "p_nick_7567": "Untouchable",
-        "p_nick_4993": "Burrow\u2019s guy",
-        "p_nick_12523": "2nd reason Sheduer was good",
-        "p_nick_4950": "Christian Davon Kirk",
-        "p_nick_4033": "David Cheif Innocent Njoku"
-      },
-      "owner_id": "1129843037888204800",
-      "player_map": null,
-      "players": [
-        "10219",
-        "11439",
-        "11575",
-        "11588",
-        "11589",
-        "11631",
-        "12470",
-        "12472",
-        "12484",
-        "12493",
-        "12510",
-        "12522",
-        "12531",
-        "12538",
-        "12540",
-        "12541",
-        "12542",
-        "1373",
-        "4017",
-        "4144",
-        "4950",
-        "5870",
-        "6801",
-        "8112",
-        "9226",
-        "9479",
-        "9999"
-      ],
-      "reserve": [
-        "4017",
-        "5870",
-        "9999"
-      ],
-      "roster_id": 5,
-      "settings": {
-        "division": 3,
-        "fpts": 1644,
-        "fpts_against": 1694,
-        "fpts_against_decimal": 20,
-        "fpts_decimal": 54,
-        "losses": 17,
-        "ppts": 1872,
-        "ppts_decimal": 14,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 100,
-        "waiver_position": 8,
-        "wins": 11
-      },
-      "starters": [
-        "12522",
-        "10219",
-        "9226",
-        "11631",
-        "6801",
-        "12493",
-        "11588",
-        "8112",
-        "12538"
-      ],
-      "taxi": [
-        "12510",
-        "12542"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "p_nick_11577": "White Handcuff",
-        "p_nick_11635": "Trading Under Duress",
-        "p_nick_12498": "Undervalued Surrendered Asset",
-        "p_nick_3198": "The missing piece\u2026",
-        "p_nick_4663": "Commies RB1",
-        "p_nick_5995": "Old Handcuff",
-        "p_nick_7569": "Information Disadvantage",
-        "p_nick_96": "Still got it ",
-        "p_nick_9758": "Consistent Overvaluation",
-        "record": "WWWLLLLLWLLWLLWWLLWLLLWLWWLL",
-        "streak": "2L"
-      },
-      "owner_id": "1112526078167375872",
-      "player_map": null,
-      "players": [
-        "10859",
-        "11562",
-        "11577",
-        "11586",
-        "11600",
-        "11627",
-        "11635",
-        "11647",
-        "12498",
-        "12539",
-        "3198",
-        "3214",
-        "4972",
-        "4988",
-        "5927",
-        "5995",
-        "6797",
-        "7090",
-        "7528",
-        "7569",
-        "7587",
-        "8138",
-        "8188",
-        "9500",
-        "96",
-        "9758"
-      ],
-      "reserve": [
-        "10859",
-        "7528"
-      ],
-      "roster_id": 6,
-      "settings": {
-        "division": 1,
-        "fpts": 1608,
-        "fpts_against": 1583,
-        "fpts_against_decimal": 6,
-        "fpts_decimal": 50,
-        "losses": 17,
-        "ppts": 1963,
-        "ppts_decimal": 12,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 60,
-        "waiver_position": 2,
-        "wins": 11
-      },
-      "starters": [
-        "6797",
-        "8138",
-        "3198",
-        "7569",
-        "11635",
-        "3214",
-        "5927",
-        "11627",
-        "9758"
-      ],
-      "taxi": [
-        "11586",
-        "12539"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "p_nick_8139": "Does Not Have That Dawg in Him",
-        "record": "WWLWWWWWWWWLLLLWWWWWWWLWWWWW",
-        "p_nick_1479": "Overpaid",
-        "p_nick_5848": "Waste of $9",
-        "p_nick_5892": "Forgotten Johnny Player",
-        "p_nick_6786": "Only Cost a Walkoff Grand Slam",
-        "p_nick_6790": "In His Johnny Era",
-        "p_nick_12518": "The Johnny Player",
-        "p_nick_6801": "Long Term WR2",
-        "p_nick_12544": "Better than Tuten",
-        "p_nick_8137": "Insider Trading Succcess Story",
-        "p_nick_7049": "3rd and Jauan",
-        "p_nick_9506": "Tyler Liked Him Once",
-        "p_nick_11589": "Time to Shine",
-        "p_nick_11617": "Need a Taxi Squad for Him",
-        "p_nick_11564": "Proving Iven Wrong",
-        "p_nick_7670": "Khalil Shawho?",
-        "p_nick_9484": "Not Part of the Purpose",
-        "p_nick_11619": "Patience is a Virtue",
-        "p_nick_12487": "Sleeper TE Prospect",
-        "p_nick_12512": "Lost Nickname Privileges ",
-        "p_nick_8154": "Premier Handcuff",
-        "p_nick_4866": "The Final Infinity Stone",
-        "p_nick_12483": "Man on a Mission",
-        "p_nick_3214": "MAGA Diversity Hire",
-        "p_nick_2449": "Powered by Infinite New Father Boosts",
-        "p_nick_4199": "Hopefully Not Still Made of Glass",
-        "p_nick_5970": "Washed",
-        "p_nick_8131": "Future TE1",
-        "p_nick_6819": "Cooking Behind the Scenes",
-        "p_nick_6826": "Elite TE2",
-        "p_nick_11557": "Future Cowboys QB if Jerry Dies",
-        "p_nick_11635": "Go Dawgs",
-        "p_nick_4892": "Welcome Home",
-        "p_nick_9754": "Bust",
-        "p_nick_4219": "Better than Bill",
-        "p_nick_2749": "Just Need 1 More Good Szn",
-        "p_nick_12541": "Better than Bech",
-        "p_nick_12634": "Running Reb",
-        "p_nick_5967": "2024 Dynasty Auction Survivor",
-        "p_nick_6806": "Move Over Steve Harvey",
-        "p_nick_7571": "Never Too Late to Succeed",
-        "p_nick_12476": "RIP Kendre Miller",
-        "p_nick_8155": "Still Part of the 2026 Foundation",
-        "p_nick_3294": "Should\u2019ve Gone for Daniels",
-        "p_nick_8205": "Rutgahs",
-        "streak": "5W",
-        "p_nick_8143": "Handcuff to the Truth",
-        "p_nick_12543": "Tahj Mahal",
-        "p_nick_827": "Week 14 Starter",
-        "p_nick_9493": "The Cornerstone",
-        "p_nick_3321": "No Comment",
-        "p_nick_4137": "Johnny Player Emeritus",
-        "p_nick_10218": "Needs a New QB",
-        "p_nick_5872": "Stayed Healthy for 1.95 Games",
-        "p_nick_5850": "Exception to the Anti-Packer Rule",
-        "p_nick_9501": "Stop Going Backwards",
-        "p_nick_12524": "Shock the World",
-        "p_nick_5012": "RB2",
-        "p_nick_8138": "CMC - Cook 2028",
-        "p_nick_7588": "Tar Heel FC",
-        "p_nick_4034": "Olivia Culpo\u2019s Husband",
-        "p_nick_6111": "$109 FAAB",
-        "p_nick_12519": "Potential Franchise Cornerstone",
-        "p_nick_2216": "Rest Up for the Playoffs",
-        "p_nick_5022": "\u201cSuch a Johnny Player\u201d",
-        "p_nick_421": "Still Got It",
-        "p_nick_9508": "Underrated",
-        "p_nick_11576": "17 Again (RIP Matthew Perry)",
-        "p_nick_6783": "Give Jeudy My Notice",
-        "p_nick_4033": "Might be Washed",
-        "p_nick_11650": "Cost Me a Median Win"
-      },
-      "owner_id": "865815956675538944",
-      "player_map": null,
-      "players": [
-        "10218",
-        "11557",
-        "11564",
-        "11650",
-        "12476",
-        "12518",
-        "12543",
-        "2216",
-        "2449",
-        "4033",
-        "4034",
-        "4137",
-        "4199",
-        "4866",
-        "4892",
-        "5012",
-        "5967",
-        "6819",
-        "6826",
-        "7571",
-        "8122",
-        "8137",
-        "8154",
-        "8155",
-        "8205",
-        "9493",
-        "9501"
-      ],
-      "reserve": [
-        "12476",
-        "4137",
-        "8122"
-      ],
-      "roster_id": 7,
-      "settings": {
-        "division": 3,
-        "fpts": 2000,
-        "fpts_against": 1802,
-        "fpts_against_decimal": 90,
-        "fpts_decimal": 6,
-        "losses": 6,
-        "ppts": 2281,
-        "ppts_decimal": 54,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 100,
-        "waiver_position": 12,
-        "wins": 22
-      },
-      "starters": [
-        "11564",
-        "4034",
-        "5967",
-        "9493",
-        "8137",
-        "5012",
-        "2216",
-        "8155",
-        "4892"
-      ],
-      "taxi": [
-        "11557",
-        "12543"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "p_nick_10222": "\ud83e\udd2b",
-        "p_nick_10232": "Fkn legend bro",
-        "p_nick_11576": "18",
-        "p_nick_11583": "",
-        "p_nick_11589": "",
-        "p_nick_11597": "",
-        "p_nick_11628": "",
-        "p_nick_11646": "Great add for a contender",
-        "p_nick_12486": "",
-        "p_nick_12502": "PFF #3 Rookie TE",
-        "p_nick_12527": "",
-        "p_nick_12544": "LaQuinta Inn",
-        "p_nick_19": "\ud83d\udc10",
-        "p_nick_3214": "TE1",
-        "p_nick_4066": "Injured",
-        "p_nick_4951": "\ud83e\udd88",
-        "p_nick_6794": "",
-        "p_nick_6828": "\ud83e\uddb5\ud83e\udd96",
-        "p_nick_6904": "",
-        "p_nick_7594": "Dowdle Handcuff",
-        "p_nick_8131": "2026 TE1",
-        "p_nick_8132": "Grant Newman",
-        "p_nick_8146": "Gdub",
-        "p_nick_9229": "Rams 2026 QB",
-        "p_nick_9486": "The Next Davante",
-        "p_nick_9501": "Pop Dougie",
-        "p_nick_9504": "Booty",
-        "p_nick_9506": "Sean Tucker Must Die",
-        "p_nick_9508": "",
-        "p_nick_9754": "Ferrari and WR4",
-        "record": "WWLLWLLWLLLLLLWWLLLLLWWWLLLL",
-        "streak": "4L"
-      },
-      "owner_id": "1115878936925294592",
-      "player_map": null,
-      "players": [
-        "10222",
-        "10232",
-        "11435",
-        "11576",
-        "11628",
-        "11646",
-        "12486",
-        "12502",
-        "12527",
-        "12536",
-        "12544",
-        "1466",
-        "19",
-        "2306",
-        "4066",
-        "6794",
-        "6904",
-        "7567",
-        "7670",
-        "8131",
-        "8146",
-        "8408",
-        "9229",
-        "9480",
-        "9486",
-        "9504",
-        "9506"
-      ],
-      "reserve": [
-        "11576",
-        "8146",
-        "9229"
-      ],
-      "roster_id": 8,
-      "settings": {
-        "division": 1,
-        "fpts": 1596,
-        "fpts_against": 1789,
-        "fpts_against_decimal": 54,
-        "fpts_decimal": 74,
-        "losses": 19,
-        "ppts": 1902,
-        "ppts_decimal": 38,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 100,
-        "waiver_position": 7,
-        "wins": 9
-      },
-      "starters": [
-        "6904",
-        "12527",
-        "7567",
-        "6794",
-        "10232",
-        "9480",
-        "10222",
-        "11628",
-        "11646"
-      ],
-      "taxi": [
-        "12502",
-        "12544"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "record": "LLWLLLWLWWWWLLWWLLLWWLLWLLWW",
-        "streak": "2W"
-      },
-      "owner_id": "1129475833942372352",
-      "player_map": null,
-      "players": [
-        "11626",
-        "11834",
-        "12496",
-        "12499",
-        "12500",
-        "12545",
-        "2374",
-        "3163",
-        "4018",
-        "4098",
-        "4147",
-        "4177",
-        "4981",
-        "5022",
-        "5846",
-        "5848",
-        "5872",
-        "5892",
-        "5947",
-        "6011",
-        "6768",
-        "6806",
-        "6865",
-        "7526",
-        "7828",
-        "8126",
-        "8160",
-        "9224",
-        "9508"
-      ],
-      "reserve": [
-        "4018",
-        "4981",
-        "6806"
-      ],
-      "roster_id": 9,
-      "settings": {
-        "division": 2,
-        "fpts": 1674,
-        "fpts_against": 1613,
-        "fpts_against_decimal": 98,
-        "fpts_decimal": 48,
-        "losses": 15,
-        "ppts": 2060,
-        "ppts_decimal": 64,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 93,
-        "waiver_position": 5,
-        "wins": 13
-      },
-      "starters": [
-        "3163",
-        "5892",
-        "9224",
-        "5872",
-        "5947",
-        "5022",
-        "7526",
-        "8126",
-        "6865"
-      ],
-      "taxi": [
-        "12496",
-        "12499",
-        "12500",
-        "12545"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "p_nick_10213": "What Bowers wishes he could be ",
-        "p_nick_4943": "GEQBUS",
-        "record": "WWLLWWLLWWLLLWLLLWLLWWWLWLLL",
-        "streak": "3L"
-      },
-      "owner_id": "725577957241896960",
-      "player_map": null,
-      "players": [
-        "10213",
-        "10236",
-        "11565",
-        "11625",
-        "11630",
-        "11651",
-        "12467",
-        "12495",
-        "12775",
-        "4080",
-        "4943",
-        "4984",
-        "5844",
-        "5859",
-        "7607",
-        "8111",
-        "8134",
-        "8150",
-        "8151",
-        "8210",
-        "8228",
-        "8676",
-        "8698",
-        "8800",
-        "9753",
-        "9997"
-      ],
-      "reserve": [
-        "4080"
-      ],
-      "roster_id": 10,
-      "settings": {
-        "division": 2,
-        "fpts": 1629,
-        "fpts_against": 1761,
-        "fpts_against_decimal": 70,
-        "fpts_decimal": 10,
-        "losses": 16,
-        "ppts": 2048,
-        "ppts_decimal": 72,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 95,
-        "waiver_position": 11,
-        "wins": 12
-      },
-      "starters": [
-        "4984",
-        "8150",
-        "8151",
-        "5859",
-        "9997",
-        "8698",
-        "8134",
-        "8228",
-        "4943"
-      ],
-      "taxi": [
-        "11630",
-        "11651",
-        "12467"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "p_nick_2374": "Bald Old Man",
-        "record": "LLWLLLLLLWLLWWWLLLWLLLLLWWWW",
-        "p_nick_7600": "Friar Tuck - Jonnu\u2019s Handcuff",
-        "p_nick_9756": "Wet Reckless",
-        "p_nick_2078": "Idiot",
-        "p_nick_4082": "Washed",
-        "p_nick_12506": "2028 TE1",
-        "p_nick_12514": "Randy Moss",
-        "p_nick_10235": "Bears 2026 RB1",
-        "p_nick_1339": "Julie\u2019s Husband",
-        "p_nick_11592": "2027 TE1",
-        "p_nick_5859": "MVP of Weeks 6-18",
-        "p_nick_8154": "Shooting victim",
-        "p_nick_9757": "Kamara\u2019s 2026 Replacement",
-        "p_nick_7611": "The Final Piece\u2026",
-        "p_nick_2449": "Vikings Legend",
-        "p_nick_8142": "White",
-        "p_nick_6960": "$65",
-        "p_nick_6803": "Deadline pickup NO ONE is talking about",
-        "p_nick_3161": "Nearly MVP in 2017",
-        "p_nick_12530": "CPOY 2026",
-        "p_nick_12504": "Welcome to the CFL pal",
-        "p_nick_7002": "2025 TE1",
-        "p_nick_7083": "Pro Bowler (Derogatory)",
-        "p_nick_6770": "Untouchable",
-        "p_nick_4972": "QB2\u2026 for now. @Chris want a handcuff?",
-        "p_nick_8205": "Stompy Boy",
-        "p_nick_4454": "Bourne Supremacy",
-        "streak": "4W",
-        "p_nick_8143": "Judkins\u2019 Handcuff\u2019s Handcuff",
-        "p_nick_7568": "God",
-        "p_nick_7564": "Big Baby",
-        "p_nick_7525": "Heisman",
-        "p_nick_11596": "2026 TE1",
-        "p_nick_7527": "Worth $30+ FAAB",
-        "p_nick_9494": "Double Ass",
-        "p_nick_11834": "Better than Pat Bryant",
-        "p_nick_5870": "Vikings Legend",
-        "p_nick_7523": "Horse Girl"
-      },
-      "owner_id": "1124774814427832320",
-      "player_map": null,
-      "players": [
-        "10235",
-        "11596",
-        "11603",
-        "12471",
-        "12490",
-        "12497",
-        "12504",
-        "12506",
-        "12514",
-        "12516",
-        "12530",
-        "12547",
-        "4454",
-        "6130",
-        "6770",
-        "6803",
-        "7523",
-        "7527",
-        "7585",
-        "7600",
-        "7611",
-        "8142",
-        "8143",
-        "9220",
-        "9487",
-        "9756",
-        "9757"
-      ],
-      "reserve": [
-        "12497",
-        "12530",
-        "9757"
-      ],
-      "roster_id": 11,
-      "settings": {
-        "division": 1,
-        "fpts": 1407,
-        "fpts_against": 1647,
-        "fpts_against_decimal": 76,
-        "fpts_decimal": 16,
-        "losses": 18,
-        "ppts": 1718,
-        "ppts_decimal": 10,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 75,
-        "waiver_position": 9,
-        "wins": 10
-      },
-      "starters": [
-        "6770",
-        "9220",
-        "7611",
-        "12514",
-        "9756",
-        "12506",
-        "9487",
-        "11603",
-        "7523"
-      ],
-      "taxi": [
-        "11596",
-        "12516"
-      ]
-    },
-    {
-      "co_owners": null,
-      "keepers": null,
-      "league_id": "1180814327660371968",
-      "metadata": {
-        "record": "LLLWWWWWWWLLWWWLWWLLWLLLWWLW",
-        "p_nick_1479": "Gramps",
-        "p_nick_5848": "",
-        "p_nick_4035": "Available",
-        "p_nick_12482": "Available",
-        "p_nick_2133": "Puka Handcuff",
-        "p_nick_11783": "Available",
-        "p_nick_6786": "",
-        "allow_pn_player_injury_status": "on",
-        "p_nick_8126": "1/2 of \u201cMid Stack\u201d",
-        "p_nick_11624": "Available",
-        "p_nick_7828": "",
-        "allow_pn_scoring": "off",
-        "p_nick_8134": "Josh\u2019s favorite",
-        "p_nick_12492": "",
-        "p_nick_6130": "Little Giant",
-        "p_nick_11563": "Available",
-        "p_nick_8136": "Available",
-        "p_nick_1466": "Never gonna run around",
-        "p_nick_5987": "",
-        "p_nick_10219": "Bill\u2019s Handcuff",
-        "restrict_pn_scoring_starters_only": "on",
-        "p_nick_12670": "Available",
-        "p_nick_12455": "Available",
-        "p_nick_11635": "",
-        "p_nick_9480": "Trevor\u2019s Binky",
-        "p_nick_3161": "Not Nick Foles",
-        "p_nick_12533": "Available",
-        "p_nick_11595": "",
-        "p_nick_12489": "Available",
-        "p_nick_11604": "Available",
-        "p_nick_12521": "",
-        "p_nick_11582": "Fumblerooski",
-        "p_nick_5906": "Available",
-        "p_nick_7591": "",
-        "p_nick_12508": "",
-        "p_nick_7571": "",
-        "p_nick_9502": "",
-        "p_nick_5995": "",
-        "p_nick_4068": "Better than Lazard",
-        "allow_pn_inactive_starters": "on",
-        "p_nick_12738": "Available",
-        "streak": "1W",
-        "p_nick_12505": "",
-        "p_nick_8143": "",
-        "p_nick_4098": "Cost KC a SB in 2018",
-        "p_nick_12507": "",
-        "p_nick_1234": "Let Russ Reheat Leftovers",
-        "p_nick_9504": "Maye have something here\u2026",
-        "p_nick_3321": "Available",
-        "p_nick_6271": "Getting dropped tomorrow",
-        "p_nick_11577": "",
-        "p_nick_11618": "",
-        "p_nick_7588": "Available",
-        "p_nick_4381": "Washed",
-        "p_nick_5045": "Available",
-        "p_nick_7496": "",
-        "p_nick_9486": "Never going to be Davante Adams",
-        "p_nick_11597": "",
-        "p_nick_9494": "Available",
-        "p_nick_12457": "Available",
-        "p_nick_4018": "Never gonna let you down",
-        "p_nick_4046": "",
-        "p_nick_10229": "",
-        "p_nick_3225": "Yeahhhh Boyyyyd",
-        "p_nick_11650": ""
-      },
-      "owner_id": "1124978574760521728",
-      "player_map": null,
-      "players": [
-        "10229",
-        "11563",
-        "11597",
-        "11604",
-        "11618",
-        "11624",
-        "11783",
-        "12455",
-        "12457",
-        "12482",
-        "12489",
-        "12492",
-        "12505",
-        "12507",
-        "12508",
-        "12521",
-        "12533",
-        "12670",
-        "12738",
-        "3321",
-        "4035",
-        "4046",
-        "5045",
-        "6786",
-        "7588",
-        "8136",
-        "9494"
-      ],
-      "reserve": [
-        "12521",
-        "3321",
-        "4046"
-      ],
-      "roster_id": 12,
-      "settings": {
-        "division": 2,
-        "fpts": 1828,
-        "fpts_against": 1688,
-        "fpts_against_decimal": 78,
-        "fpts_decimal": 40,
-        "losses": 12,
-        "ppts": 2077,
-        "ppts_decimal": 88,
-        "ties": 0,
-        "total_moves": 0,
-        "waiver_budget_used": 100,
-        "waiver_position": 4,
-        "wins": 16
-      },
-      "starters": [
-        "12508",
-        "12507",
-        "7588",
-        "11624",
-        "6786",
-        "0",
-        "5045",
-        "12489",
-        "11563"
-      ],
-      "taxi": [
-        "12482",
-        "12505",
-        "12670"
-      ]
-    }
-  ],
+  "users": [],
+  "rosters": [],
   "trades": [
     {
       "status": "complete",
@@ -1504,7 +74,9 @@
           "receiver": 11,
           "sender": 2
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1543,7 +115,9 @@
         8
       ],
       "status_updated": 1763446014457,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1592,7 +166,9 @@
         9
       ],
       "status_updated": 1763440274018,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1624,7 +200,9 @@
         7
       ],
       "status_updated": 1763275020089,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1679,7 +257,9 @@
         7
       ],
       "status_updated": 1762971817297,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1722,7 +302,9 @@
         8
       ],
       "status_updated": 1762969723300,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1783,7 +365,9 @@
         11
       ],
       "status_updated": 1762969718566,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1826,7 +410,9 @@
         12
       ],
       "status_updated": 1762969754465,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1887,7 +473,9 @@
         9
       ],
       "status_updated": 1762969691857,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1943,7 +531,9 @@
           "receiver": 5,
           "sender": 2
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -1984,7 +574,9 @@
         8
       ],
       "status_updated": 1762062673388,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2033,7 +625,9 @@
         4
       ],
       "status_updated": 1762020244618,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2088,7 +682,9 @@
         12
       ],
       "status_updated": 1761629829089,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2131,7 +727,9 @@
         12
       ],
       "status_updated": 1761333284866,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2172,7 +770,9 @@
         7
       ],
       "status_updated": 1761237324890,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2243,7 +843,9 @@
         8
       ],
       "status_updated": 1761192531872,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2296,7 +898,9 @@
         9
       ],
       "status_updated": 1761192526737,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2357,7 +961,9 @@
         7
       ],
       "status_updated": 1760218611233,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2398,7 +1004,9 @@
         11
       ],
       "status_updated": 1760218605545,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2432,7 +1040,9 @@
           "receiver": 8,
           "sender": 12
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2464,7 +1074,9 @@
         12
       ],
       "status_updated": 1759876523940,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2515,7 +1127,9 @@
         5
       ],
       "status_updated": 1759382246246,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2558,7 +1172,9 @@
         7
       ],
       "status_updated": 1759382255375,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2597,7 +1213,9 @@
         8
       ],
       "status_updated": 1759287384828,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2638,7 +1256,9 @@
         12
       ],
       "status_updated": 1759251434856,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2696,7 +1316,9 @@
         5
       ],
       "status_updated": 1759285809601,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2743,7 +1365,9 @@
           "receiver": 7,
           "sender": 5
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2778,7 +1402,9 @@
           "receiver": 5,
           "sender": 2
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2816,7 +1442,9 @@
           "receiver": 5,
           "sender": 2
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2853,7 +1481,9 @@
         2
       ],
       "status_updated": 1758855992612,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2895,7 +1525,9 @@
         12
       ],
       "status_updated": 1758780743212,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -2934,7 +1566,9 @@
         12
       ],
       "status_updated": 1758060362984,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3001,7 +1635,9 @@
         9
       ],
       "status_updated": 1758060353479,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3043,7 +1679,9 @@
         11
       ],
       "status_updated": 1757830348337,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3076,7 +1714,9 @@
         5
       ],
       "status_updated": 1756015938307,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3122,7 +1762,9 @@
         8
       ],
       "status_updated": 1755843121007,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3163,7 +1805,9 @@
         7
       ],
       "status_updated": 1754778361857,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3202,7 +1846,9 @@
         5
       ],
       "status_updated": 1754701126267,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3259,7 +1905,9 @@
         7
       ],
       "status_updated": 1754701120195,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3310,7 +1958,9 @@
         6
       ],
       "status_updated": 1754590076816,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3377,7 +2027,9 @@
         9
       ],
       "status_updated": 1754590048640,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3427,7 +2079,9 @@
         10
       ],
       "status_updated": 1754460701408,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3469,7 +2123,9 @@
         12
       ],
       "status_updated": 1752732679638,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3519,7 +2175,9 @@
         12
       ],
       "status_updated": 1752732679638,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3560,7 +2218,9 @@
         11
       ],
       "status_updated": 1752069693922,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3611,7 +2271,9 @@
         7
       ],
       "status_updated": 1750862725274,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3668,7 +2330,9 @@
         7
       ],
       "status_updated": 1748820841245,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3714,7 +2378,9 @@
         12
       ],
       "status_updated": 1747894269792,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3759,7 +2425,9 @@
         12
       ],
       "status_updated": 1747782464000,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3806,7 +2474,9 @@
         12
       ],
       "status_updated": 1747260748404,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3852,7 +2522,9 @@
           "receiver": 7,
           "sender": 5
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3901,7 +2573,9 @@
         12
       ],
       "status_updated": 1746753373705,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -3950,7 +2624,9 @@
         7
       ],
       "status_updated": 1746567482056,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4001,7 +2677,9 @@
         5
       ],
       "status_updated": 1746485358952,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4048,7 +2726,9 @@
         11
       ],
       "status_updated": 1746485362879,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4099,7 +2779,9 @@
         11
       ],
       "status_updated": 1746421246799,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4169,7 +2851,9 @@
         5
       ],
       "status_updated": 1746425438376,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4201,7 +2885,9 @@
         8
       ],
       "status_updated": 1746137535235,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4250,7 +2936,9 @@
           "receiver": 9,
           "sender": 1
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4301,7 +2989,9 @@
         10
       ],
       "status_updated": 1746107660361,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4339,7 +3029,9 @@
           "receiver": 12,
           "sender": 6
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4375,7 +3067,9 @@
           "receiver": 12,
           "sender": 9
         }
-      ]
+      ],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4418,7 +3112,9 @@
         10
       ],
       "status_updated": 1746107255313,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4467,7 +3163,9 @@
         8
       ],
       "status_updated": 1746073407407,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4514,7 +3212,9 @@
         8
       ],
       "status_updated": 1746066786262,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4553,7 +3253,9 @@
         7
       ],
       "status_updated": 1746066527693,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4610,7 +3312,9 @@
         10
       ],
       "status_updated": 1746060158609,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4669,7 +3373,9 @@
         12
       ],
       "status_updated": 1746049540141,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4714,7 +3420,9 @@
         12
       ],
       "status_updated": 1746043912243,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4781,7 +3489,9 @@
         7
       ],
       "status_updated": 1746044394864,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4834,7 +3544,9 @@
         12
       ],
       "status_updated": 1746035740417,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4895,7 +3607,9 @@
         12
       ],
       "status_updated": 1745977515173,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -4956,7 +3670,9 @@
         9
       ],
       "status_updated": 1745977508876,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5013,7 +3729,9 @@
         12
       ],
       "status_updated": 1745956862029,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5070,7 +3788,9 @@
         7
       ],
       "status_updated": 1745958644973,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5127,7 +3847,9 @@
         12
       ],
       "status_updated": 1745942622363,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5189,7 +3911,9 @@
         12
       ],
       "status_updated": 1745388664804,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5240,7 +3964,9 @@
         12
       ],
       "status_updated": 1743466726585,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5345,7 +4071,9 @@
         6
       ],
       "status_updated": 1742854404125,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5406,7 +4134,9 @@
         7
       ],
       "status_updated": 1742343072239,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     },
     {
       "status": "complete",
@@ -5457,7 +4187,9 @@
         12
       ],
       "status_updated": 1742059003530,
-      "waiver_budget": []
+      "waiver_budget": [],
+      "league_id": "1180814327660371968",
+      "season": "season_2"
     }
   ]
 }
