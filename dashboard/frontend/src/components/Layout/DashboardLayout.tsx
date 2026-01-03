@@ -31,13 +31,14 @@ const DashboardLayout: React.FC = () => {
                 <p className="text-xs text-gray-400">
                   League ID:{' '}
                   <a
-                    href="https://sleeper.com/leagues/1180814327660371968"
+                    href="https://sleeper.com/leagues/1312166810505719808"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-600 hover:text-primary-700 hover:underline"
                   >
-                    1180814327660371968
+                    1312166810505719808
                   </a>
+                  {' '}(Season 3 - 2025)
                 </p>
               </div>
             </div>

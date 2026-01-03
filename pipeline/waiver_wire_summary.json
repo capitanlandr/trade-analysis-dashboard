@@ -1,22 +1,22 @@
 {
   "summary": {
-    "total_waiver_transactions": 325,
+    "total_waiver_transactions": 330,
     "total_free_agent_transactions": 0,
-    "successful_waivers": 219,
-    "failed_waivers": 106,
-    "total_waiver_bids": "2508",
-    "average_waiver_bid": 13.780219780219781
+    "successful_waivers": 223,
+    "failed_waivers": 107,
+    "total_waiver_bids": "2507",
+    "average_waiver_bid": 13.850828729281767
   },
   "manager_activity": [
     {
       "roster_id": 1,
       "team_name": "208 Ferrari Way",
-      "total_claims": 22,
-      "total_bid": 153,
-      "avg_bid": 4.5,
+      "total_claims": 25,
+      "total_bid": 152,
+      "avg_bid": 4.22,
       "max_bid": 52,
-      "successful_claims": 22,
-      "success_rate": 100.0
+      "successful_claims": 23,
+      "success_rate": 92.0
     },
     {
       "roster_id": 2,
@@ -31,11 +31,11 @@
     {
       "roster_id": 3,
       "team_name": "Bucky\u2019s Depression",
-      "total_claims": 13,
+      "total_claims": 16,
       "total_bid": 222,
-      "avg_bid": 9.65,
+      "avg_bid": 8.54,
       "max_bid": 46,
-      "successful_claims": 13,
+      "successful_claims": 16,
       "success_rate": 100.0
     },
     {
@@ -131,7 +131,7 @@
   ],
   "weekly_activity": {
     "1": {
-      "waiver": 176
+      "waiver": 181
     },
     "2": {
       "waiver": 16
@@ -183,14 +183,14 @@
     }
   },
   "contested_players": {
-    "1166": {
-      "transaction_id": 7,
-      "waiver_bid": 84,
-      "status": 1
-    },
     "6111": {
       "transaction_id": 7,
       "waiver_bid": 109,
+      "status": 1
+    },
+    "1166": {
+      "transaction_id": 7,
+      "waiver_bid": 84,
       "status": 1
     },
     "12775": {
@@ -198,35 +198,20 @@
       "waiver_bid": 51,
       "status": 3
     },
-    "8123": {
+    "6271": {
       "transaction_id": 5,
-      "waiver_bid": 43,
-      "status": 2
+      "waiver_bid": 2,
+      "status": 4
     },
     "2505": {
       "transaction_id": 5,
       "waiver_bid": 46,
       "status": 1
     },
-    "4454": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "12531": {
-      "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
-    },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
+    "8123": {
+      "transaction_id": 5,
+      "waiver_bid": 43,
       "status": 2
-    },
-    "6271": {
-      "transaction_id": 4,
-      "waiver_bid": 2,
-      "status": 3
     },
     "9497": {
       "transaction_id": 4,
@@ -238,24 +223,29 @@
       "waiver_bid": 25,
       "status": 2
     },
-    "3161": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
+    "4454": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 3
+    },
+    "8917": {
+      "transaction_id": 4,
+      "waiver_bid": 6,
       "status": 2
     },
-    "12470": {
-      "transaction_id": 3,
-      "waiver_bid": 6,
+    "12531": {
+      "transaction_id": 4,
+      "waiver_bid": 52,
       "status": 1
+    },
+    "7670": {
+      "transaction_id": 4,
+      "waiver_bid": 12,
+      "status": 2
     },
     "6011": {
       "transaction_id": 3,
       "waiver_bid": 41,
-      "status": 1
-    },
-    "12502": {
-      "transaction_id": 3,
-      "waiver_bid": 7,
       "status": 1
     },
     "11435": {
@@ -263,30 +253,40 @@
       "waiver_bid": 5,
       "status": 2
     },
-    "11650": {
+    "3161": {
       "transaction_id": 3,
       "waiver_bid": 0,
-      "status": 3
-    },
-    "11439": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
       "status": 2
     },
-    "12462": {
+    "5857": {
       "transaction_id": 3,
-      "waiver_bid": 16,
-      "status": 2
+      "waiver_bid": 8,
+      "status": 1
     },
     "8160": {
       "transaction_id": 3,
       "waiver_bid": 12,
       "status": 2
+    },
+    "827": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "12502": {
+      "transaction_id": 3,
+      "waiver_bid": 7,
+      "status": 1
+    },
+    "12470": {
+      "transaction_id": 3,
+      "waiver_bid": 6,
+      "status": 1
     }
   },
   "bidding_patterns": {
     "bid_distribution": {
-      "1": 28,
+      "1": 27,
       "2": 15,
       "5": 13,
       "10": 12,
@@ -382,13 +382,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 77.62237762237763
+    "zero_bid_success_rate": 77.85234899328859
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 10,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
