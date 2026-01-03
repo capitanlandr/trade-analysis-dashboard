@@ -137,7 +137,10 @@
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 80
+      "totalTrades": 80,
+      "seasonsIncluded": [
+        "season_2"
+      ]
     }
   }
 }
