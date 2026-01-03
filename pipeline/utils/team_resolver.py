@@ -290,6 +290,48 @@ class TeamResolver:
         except Exception as e:
             raise TeamIdentityError(f"Failed to save team mapping: {e}")
     
+    def get_by_roster_based_name(self, roster_based_name: str) -> Optional[Dict[str, str]]:
+        """
+        Get team info by roster-based name format (e.g., "Team1", "Team2").
+        
+        Args:
+            roster_based_name: Roster-based team name (e.g., "Team1")
+            
+        Returns:
+            Team info dict or None if not found
+        """
+        # Extract roster_id from "Team{roster_id}" format
+        if roster_based_name.startswith("Team") and roster_based_name[4:].isdigit():
+            roster_id = int(roster_based_name[4:])
+            return self.get_by_roster_id(roster_id)
+        return None
+    
+    def roster_based_name_to_username(self, roster_based_name: str) -> Optional[str]:
+        """
+        Convert roster-based name (e.g., "Team1") to Sleeper username.
+        
+        Args:
+            roster_based_name: Roster-based team name (e.g., "Team1")
+            
+        Returns:
+            Sleeper username or None if not found
+        """
+        team = self.get_by_roster_based_name(roster_based_name)
+        return team['sleeper_username'] if team else None
+    
+    def username_to_roster_based_name(self, username: str) -> Optional[str]:
+        """
+        Convert Sleeper username to roster-based name (e.g., "Team1").
+        
+        Args:
+            username: Sleeper username
+            
+        Returns:
+            Roster-based name or None if not found
+        """
+        team = self.get_by_username(username)
+        return f"Team{team['roster_id']}" if team else None
+
     def validate_mapping(self) -> bool:
         """
         Validate team mapping for completeness and consistency.

@@ -11,6 +11,7 @@ pyyaml==6.0.1
 # Testing framework
 pytest==7.4.4
 pytest-cov==4.1.0
+hypothesis==6.92.1
 
 # Type checking
 mypy==1.9.0

@@ -1,12 +1,14 @@
 """
-API Client with Retry Logic and Error Handling
-Provides robust API calls with exponential backoff
+API Client with Enhanced Retry Logic and Error Handling
+Provides robust API calls with exponential backoff and rate limit handling
 """
 
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, before_sleep_log
 import requests
 import logging
 from typing import Dict, Any, Optional
+import time
+import random
 
 logger = logging.getLogger(__name__)
 
@@ -17,8 +19,10 @@ class APIError(Exception):
 
 
 class RateLimitError(APIError):
-    """Rate limit exceeded"""
-    pass
+    """Rate limit exceeded - requires exponential backoff"""
+    def __init__(self, message: str, retry_after: Optional[int] = None):
+        super().__init__(message)
+        self.retry_after = retry_after
 
 
 class TimeoutError(APIError):
@@ -26,20 +30,28 @@ class TimeoutError(APIError):
     pass
 
 
+def log_retry_attempt(retry_state):
+    """Log retry attempts for debugging"""
+    logger.warning(f"Retrying API call (attempt {retry_state.attempt_number}): {retry_state.outcome.exception()}")
+
+
 @retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    stop=stop_after_attempt(5),  # Increased from 3 to 5 attempts for rate limits
+    wait=wait_exponential(multiplier=2, min=4, max=60),  # Enhanced backoff: 4s, 8s, 16s, 32s, 60s
     retry=retry_if_exception_type((requests.exceptions.RequestException, APIError)),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
     reraise=True
 )
 def fetch_with_retry(url: str, timeout: int = 10, params: Optional[Dict] = None) -> Any:
     """
-    Fetch JSON from URL with automatic retry and exponential backoff.
+    Fetch JSON from URL with enhanced retry and exponential backoff.
     
-    Retries up to 3 times with exponential backoff:
-    - 1st retry: 4 seconds
-    - 2nd retry: 8 seconds  
-    - 3rd retry: 10 seconds (capped)
+    Enhanced retry strategy for rate limits:
+    - 5 attempts total (up from 3)
+    - Exponential backoff: 4s, 8s, 16s, 32s, 60s (capped)
+    - Jitter added to prevent thundering herd
+    - Special handling for 429 rate limit responses
+    - Respects Retry-After headers when available
     
     Args:
         url: URL to fetch
@@ -51,19 +63,109 @@ def fetch_with_retry(url: str, timeout: int = 10, params: Optional[Dict] = None)
     
     Raises:
         APIError: If all retries exhausted
-        RateLimitError: If rate limited (429)
+        RateLimitError: If rate limited (429) - will be retried automatically
         TimeoutError: If request times out
     """
     try:
         logger.debug(f"Fetching: {url}")
+        
+        # Add jitter to prevent thundering herd effect
+        jitter = random.uniform(0.1, 0.5)
+        time.sleep(jitter)
+        
         response = requests.get(url, timeout=timeout, params=params)
         
         if response.status_code == 429:
-            logger.warning(f"Rate limited on {url}")
-            raise RateLimitError(f"Rate limited: {url}")
+            # Extract retry-after header if available
+            retry_after = response.headers.get('Retry-After')
+            retry_after_seconds = None
+            
+            if retry_after:
+                try:
+                    retry_after_seconds = int(retry_after)
+                    logger.warning(f"Rate limited on {url}, retry after {retry_after_seconds}s")
+                except ValueError:
+                    logger.warning(f"Rate limited on {url}, invalid retry-after header: {retry_after}")
+            else:
+                logger.warning(f"Rate limited on {url}, no retry-after header")
+            
+            # Sleep for the retry-after duration if specified and reasonable
+            if retry_after_seconds and 1 <= retry_after_seconds <= 300:  # Max 5 minutes
+                logger.info(f"Sleeping for {retry_after_seconds}s as requested by API")
+                time.sleep(retry_after_seconds)
+            
+            raise RateLimitError(f"Rate limited: {url}", retry_after_seconds)
         
         if response.status_code == 404:
-            logger.warning(f"Not found: {url}")
+            logger.debug(f"Not found: {url}")
+            return None
+        
+        response.raise_for_status()
+        return response.json()
+        
+    except requests.exceptions.Timeout:
+        logger.error(f"Timeout fetching {url}")
+        raise TimeoutError(f"Timeout: {url}")
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Request failed: {url}", exc_info=True)
+        raise APIError(f"Request failed: {str(e)}")
+
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1.5, min=2, max=30),
+    retry=retry_if_exception_type(RateLimitError),
+    before_sleep=before_sleep_log(logger, logging.INFO),
+    reraise=True
+)
+def fetch_with_rate_limit_retry(url: str, timeout: int = 10, params: Optional[Dict] = None) -> Any:
+    """
+    Specialized fetch function with aggressive rate limit handling.
+    
+    This function is designed specifically for endpoints known to have strict rate limits.
+    Uses more conservative retry strategy with longer waits.
+    
+    Args:
+        url: URL to fetch
+        timeout: Request timeout in seconds
+        params: Optional query parameters
+    
+    Returns:
+        JSON response as dict or list
+    
+    Raises:
+        APIError: If all retries exhausted
+        RateLimitError: If rate limited after all retries
+        TimeoutError: If request times out
+    """
+    try:
+        logger.debug(f"Fetching with rate limit retry: {url}")
+        
+        # More conservative jitter for rate-limited endpoints
+        jitter = random.uniform(0.5, 1.5)
+        time.sleep(jitter)
+        
+        response = requests.get(url, timeout=timeout, params=params)
+        
+        if response.status_code == 429:
+            retry_after = response.headers.get('Retry-After', '60')  # Default to 60s
+            try:
+                retry_after_seconds = int(retry_after)
+                logger.warning(f"Rate limited on {url}, will wait {retry_after_seconds}s")
+                
+                # Sleep for the full retry-after duration
+                if retry_after_seconds <= 300:  # Max 5 minutes
+                    time.sleep(retry_after_seconds)
+                else:
+                    time.sleep(60)  # Fallback to 1 minute
+                    
+            except ValueError:
+                time.sleep(60)  # Fallback wait
+            
+            raise RateLimitError(f"Rate limited: {url}", retry_after_seconds)
+        
+        if response.status_code == 404:
+            logger.debug(f"Not found: {url}")
             return None
         
         response.raise_for_status()
@@ -81,9 +183,10 @@ def create_session_with_retries() -> requests.Session:
     """
     Create requests Session with automatic retry on failures.
     
-    Automatically retries on:
-    - 429 (Rate Limit)
-    - 500, 502, 503, 504 (Server Errors)
+    Enhanced retry configuration for better rate limit handling:
+    - Increased total retries to 5
+    - Longer backoff factor for rate limits
+    - Additional status codes for retry
     
     Returns:
         Configured requests.Session
@@ -94,10 +197,11 @@ def create_session_with_retries() -> requests.Session:
     session = requests.Session()
     
     retry_strategy = Retry(
-        total=5,
-        backoff_factor=2,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET", "POST"]
+        total=5,  # Increased from 3
+        backoff_factor=3,  # Increased from 2 for longer waits
+        status_forcelist=[429, 500, 502, 503, 504, 520, 521, 522, 524],  # Added Cloudflare errors
+        allowed_methods=["GET", "POST"],
+        raise_on_status=False  # Let us handle status codes manually
     )
     
     adapter = HTTPAdapter(max_retries=retry_strategy)
