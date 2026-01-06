@@ -162,12 +162,25 @@ def load_asset_values() -> Dict[str, int]:
             asset_name = row['asset_name']
             value_current = row['value_current']
             value_at_trade = row.get('value_at_trade', value_current)
+            metadata_str = str(row.get('metadata', ''))
             
             if pd.notna(asset_name):
-                asset_values[asset_name] = {
+                asset_data = {
                     'current': int(value_current) if pd.notna(value_current) else 0,
                     'at_trade': int(value_at_trade) if pd.notna(value_at_trade) else 0
                 }
+                
+                # Parse metadata for pick position info
+                if metadata_str and metadata_str != 'nan':
+                    try:
+                        import ast
+                        metadata = ast.literal_eval(metadata_str)
+                        if isinstance(metadata, dict) and 'pick_label' in metadata:
+                            asset_data['pick_label'] = metadata['pick_label']
+                    except:
+                        pass
+                
+                asset_values[asset_name] = asset_data
         
         logger.info(f"✓ Loaded values for {len(asset_values)} assets")
         return asset_values
@@ -323,6 +336,13 @@ def process_raw_trade_to_dashboard_format(raw_trade: Dict[str, Any], players: Di
         asset_data = asset_values.get(asset_name, {})
         return asset_data.get(value_type, 0)
     
+    def get_asset_pick_label(asset_name):
+        """Get pick position label if available."""
+        if not asset_name:
+            return None
+        asset_data = asset_values.get(asset_name, {})
+        return asset_data.get('pick_label')
+    
     def format_draft_pick(pick):
         season = pick.get('season', 'Unknown')
         round_num = pick.get('round', 'Unknown')
@@ -394,6 +414,7 @@ def process_raw_trade_to_dashboard_format(raw_trade: Dict[str, Any], players: Di
         pick_name = format_draft_pick(pick)
         value_then = get_asset_value(pick_name, 'at_trade')
         value_now = get_asset_value(pick_name, 'current')
+        pick_label = get_asset_pick_label(pick_name)
         
         asset_info = {
             'name': pick_name,
@@ -401,6 +422,10 @@ def process_raw_trade_to_dashboard_format(raw_trade: Dict[str, Any], players: Di
             'value_then': value_then,
             'value_now': value_now
         }
+        
+        # Add pick position if available (for 2026 picks with finalized draft order)
+        if pick_label:
+            asset_info['pick_label'] = pick_label
         
         owner_id = pick.get('owner_id')
         if owner_id == roster_a:

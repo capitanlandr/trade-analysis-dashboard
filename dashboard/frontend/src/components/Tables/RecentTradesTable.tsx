@@ -16,7 +16,9 @@ interface Trade {
   teamB: string;
   teamAReceived: string[];
   teamBReceived: string[];
+  winnerAtTrade?: string;
   winnerCurrent: string;
+  marginAtTrade?: number;
   marginCurrent: number;
 }
 
@@ -83,11 +85,13 @@ const RecentTradesTable: React.FC = () => {
 
     // Apply filters
     filteredTrades = filteredTrades.filter(trade => {
-      const matchesSearch = 
+      const matchesSearch =
         trade.teamA.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
         trade.teamB.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
         trade.teamAReceived.some((asset: any) => asset.toLowerCase().includes(debouncedSearchTerm.toLowerCase())) ||
-        trade.teamBReceived.some((asset: any) => asset.toLowerCase().includes(debouncedSearchTerm.toLowerCase()));
+        trade.teamBReceived.some((asset: any) => asset.toLowerCase().includes(debouncedSearchTerm.toLowerCase())) ||
+        (trade.winnerAtTrade && trade.winnerAtTrade.toLowerCase().includes(debouncedSearchTerm.toLowerCase())) ||
+        trade.winnerCurrent.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
       
       const matchesTeam = !selectedTeam || trade.teamA === selectedTeam || trade.teamB === selectedTeam;
       
@@ -159,7 +163,7 @@ const RecentTradesTable: React.FC = () => {
           <div className="h-8 bg-gray-200 rounded w-40"></div>
           <div className="h-8 bg-gray-200 rounded w-24"></div>
         </div>
-        <TableSkeleton rows={6} columns={5} />
+        <TableSkeleton rows={6} columns={7} />
       </div>
     );
   }
@@ -271,8 +275,10 @@ const RecentTradesTable: React.FC = () => {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Teams
               </th>
-              <SortableHeader field="winnerCurrent" label="Winner" align="left" onSort={handleSort} getSortIcon={getSortIcon} />
-              <SortableHeader field="marginCurrent" label="Margin" align="right" onSort={handleSort} getSortIcon={getSortIcon} />
+              <SortableHeader field="winnerAtTrade" label="Winner At Trade" align="left" onSort={handleSort} getSortIcon={getSortIcon} />
+              <SortableHeader field="marginAtTrade" label="Margin At Trade" align="right" onSort={handleSort} getSortIcon={getSortIcon} />
+              <SortableHeader field="winnerCurrent" label="Current Winner" align="left" onSort={handleSort} getSortIcon={getSortIcon} />
+              <SortableHeader field="marginCurrent" label="Current Margin" align="right" onSort={handleSort} getSortIcon={getSortIcon} />
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Assets Traded
               </th>
@@ -280,8 +286,8 @@ const RecentTradesTable: React.FC = () => {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {filteredAndSortedTrades.map((trade) => (
-              <tr 
-                key={trade.tradeId} 
+              <tr
+                key={trade.tradeId}
                 className="hover:bg-gray-50 cursor-pointer transition-colors"
                 onClick={() => handleTradeClick(trade)}
               >
@@ -293,6 +299,18 @@ const RecentTradesTable: React.FC = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                   {trade.teamA} ↔ {trade.teamB}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                  {trade.winnerAtTrade ? (
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      {trade.winnerAtTrade}
+                    </span>
+                  ) : (
+                    <span className="text-gray-400 text-xs">—</span>
+                  )}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-right">
+                  {trade.marginAtTrade !== undefined ? `${Math.round(trade.marginAtTrade)} pts` : <span className="text-gray-400">—</span>}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">

@@ -4,8 +4,9 @@ import { X, Calendar, Users, TrendingUp, Award } from 'lucide-react';
 interface AssetDetail {
   name: string;
   type: string;
-  valueThen: number;
-  valueNow: number;
+  value_then: number;
+  value_now: number;
+  pick_label?: string;  // Exact pick position for 2026 picks (e.g., "1.12")
 }
 
 interface Trade {
@@ -21,7 +22,9 @@ interface Trade {
   teamAValueNow?: number;
   teamBValueThen?: number;
   teamBValueNow?: number;
+  winnerAtTrade?: string;
   winnerCurrent: string;
+  marginAtTrade?: number;
   marginCurrent: number;
 }
 
@@ -91,7 +94,7 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
         <div className="p-6 space-y-6">
           {/* Trade Overview */}
           <div className="bg-gray-50 rounded-lg p-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4 text-gray-500" />
                 <div>
@@ -103,16 +106,46 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
               <div className="flex items-center space-x-2">
                 <Award className="h-4 w-4 text-gray-500" />
                 <div>
-                  <div className="text-sm text-gray-500">Current Winner</div>
-                  <div className="font-medium text-green-600">{trade.winnerCurrent}</div>
+                  <div className="text-sm text-gray-500">Winner</div>
+                  <div className="flex items-center gap-3">
+                    {trade.winnerAtTrade && (
+                      <div className="text-sm">
+                        <span className="text-gray-500">At trade: </span>
+                        <span className="font-medium text-blue-600">{trade.winnerAtTrade}</span>
+                      </div>
+                    )}
+                    <div className="text-sm">
+                      <span className="text-gray-500">Current: </span>
+                      <span className="font-medium text-green-600">{trade.winnerCurrent}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 md:col-span-2">
                 <TrendingUp className="h-4 w-4 text-gray-500" />
-                <div>
-                  <div className="text-sm text-gray-500">Current Margin</div>
-                  <div className="font-medium">{Math.round(trade.marginCurrent)} points</div>
+                <div className="flex-1">
+                  <div className="text-sm text-gray-500 mb-1">Margin</div>
+                  <div className="flex items-center gap-4">
+                    {trade.marginAtTrade !== undefined && (
+                      <div className="flex-1">
+                        <div className="text-xs text-gray-500">At Trade</div>
+                        <div className="font-medium text-blue-600">{Math.round(trade.marginAtTrade)} pts</div>
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <div className="text-xs text-gray-500">Current</div>
+                      <div className="font-medium text-green-600">{Math.round(trade.marginCurrent)} pts</div>
+                    </div>
+                    {trade.marginAtTrade !== undefined && (
+                      <div className="flex-1">
+                        <div className="text-xs text-gray-500">Change</div>
+                        <div className={`font-medium ${(trade.marginCurrent - trade.marginAtTrade) > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {(trade.marginCurrent - trade.marginAtTrade) > 0 ? '+' : ''}{Math.round(trade.marginCurrent - trade.marginAtTrade)} pts
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,11 +164,26 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                 {trade.teamAAssets && trade.teamAAssets.length > 0 ? (
                   <ul className="space-y-2">
                     {trade.teamAAssets.map((asset, assetIndex) => (
-                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-blue-400 flex justify-between items-center">
-                        <span className="font-medium text-gray-900">{asset.name}</span>
-                        <span className="text-sm text-gray-600 font-semibold">
-                          {Math.round(asset.valueNow)}
-                        </span>
+                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-blue-400">
+                        <div className="flex justify-between items-start mb-1">
+                          <div className="flex flex-col">
+                            <span className="font-medium text-gray-900">{asset.name}</span>
+                            {asset.pick_label && (
+                              <span className="text-xs text-blue-600 font-medium mt-0.5">
+                                Pick {asset.pick_label}
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-sm text-gray-600 font-semibold ml-2">
+                            {Math.round(asset.value_now)}
+                          </span>
+                        </div>
+                        <div className="flex gap-4 text-xs text-gray-500">
+                          <span>At trade: {Math.round(asset.value_then)}</span>
+                          <span className={asset.value_now - asset.value_then > 0 ? 'text-green-600' : asset.value_now - asset.value_then < 0 ? 'text-red-600' : ''}>
+                            {asset.value_now - asset.value_then > 0 ? '+' : ''}{Math.round(asset.value_now - asset.value_then)}
+                          </span>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -148,13 +196,26 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                 )}
               </div>
               
-              <div className="mt-4 flex justify-between items-center text-sm">
-                <span className="text-blue-600">
-                  Total: {trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length} asset{(trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length) !== 1 ? 's' : ''}
-                </span>
-                <span className="text-blue-600 font-semibold">
-                  Total: {Math.round(trade.teamAValueNow || 0)}
-                </span>
+              <div className="mt-4 pt-3 border-t border-blue-200">
+                <div className="flex justify-between items-center text-sm mb-1">
+                  <span className="text-blue-600">
+                    Total: {trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length} asset{(trade.teamAAssets?.length || formatAssets(trade.teamAReceived).length) !== 1 ? 's' : ''}
+                  </span>
+                  <span className="text-blue-600 font-bold">
+                    {Math.round(trade.teamAValueNow || 0)}
+                  </span>
+                </div>
+                {trade.teamAValueThen !== undefined && (
+                  <div className="flex justify-between items-center text-xs text-gray-500">
+                    <span>At trade value:</span>
+                    <div className="flex items-center gap-2">
+                      <span>{Math.round(trade.teamAValueThen)}</span>
+                      <span className={`font-semibold ${(trade.teamAValueNow || 0) - trade.teamAValueThen > 0 ? 'text-green-600' : (trade.teamAValueNow || 0) - trade.teamAValueThen < 0 ? 'text-red-600' : ''}`}>
+                        ({(trade.teamAValueNow || 0) - trade.teamAValueThen > 0 ? '+' : ''}{Math.round((trade.teamAValueNow || 0) - trade.teamAValueThen)})
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -169,11 +230,26 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                 {trade.teamBAssets && trade.teamBAssets.length > 0 ? (
                   <ul className="space-y-2">
                     {trade.teamBAssets.map((asset, assetIndex) => (
-                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-green-400 flex justify-between items-center">
-                        <span className="font-medium text-gray-900">{asset.name}</span>
-                        <span className="text-sm text-gray-600 font-semibold">
-                          {Math.round(asset.valueNow)}
-                        </span>
+                      <li key={assetIndex} className="bg-white p-3 rounded border-l-4 border-green-400">
+                        <div className="flex justify-between items-start mb-1">
+                          <div className="flex flex-col">
+                            <span className="font-medium text-gray-900">{asset.name}</span>
+                            {asset.pick_label && (
+                              <span className="text-xs text-green-600 font-medium mt-0.5">
+                                Pick {asset.pick_label}
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-sm text-gray-600 font-semibold ml-2">
+                            {Math.round(asset.value_now)}
+                          </span>
+                        </div>
+                        <div className="flex gap-4 text-xs text-gray-500">
+                          <span>At trade: {Math.round(asset.value_then)}</span>
+                          <span className={asset.value_now - asset.value_then > 0 ? 'text-green-600' : asset.value_now - asset.value_then < 0 ? 'text-red-600' : ''}>
+                            {asset.value_now - asset.value_then > 0 ? '+' : ''}{Math.round(asset.value_now - asset.value_then)}
+                          </span>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -186,13 +262,26 @@ const TradeDetailModal: React.FC<TradeDetailModalProps> = ({ trade, isOpen, onCl
                 )}
               </div>
               
-              <div className="mt-4 flex justify-between items-center text-sm">
-                <span className="text-green-600">
-                  Total: {trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length} asset{(trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length) !== 1 ? 's' : ''}
-                </span>
-                <span className="text-green-600 font-semibold">
-                  Total: {Math.round(trade.teamBValueNow || 0)}
-                </span>
+              <div className="mt-4 pt-3 border-t border-green-200">
+                <div className="flex justify-between items-center text-sm mb-1">
+                  <span className="text-green-600">
+                    Total: {trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length} asset{(trade.teamBAssets?.length || formatAssets(trade.teamBReceived).length) !== 1 ? 's' : ''}
+                  </span>
+                  <span className="text-green-600 font-bold">
+                    {Math.round(trade.teamBValueNow || 0)}
+                  </span>
+                </div>
+                {trade.teamBValueThen !== undefined && (
+                  <div className="flex justify-between items-center text-xs text-gray-500">
+                    <span>At trade value:</span>
+                    <div className="flex items-center gap-2">
+                      <span>{Math.round(trade.teamBValueThen)}</span>
+                      <span className={`font-semibold ${(trade.teamBValueNow || 0) - trade.teamBValueThen > 0 ? 'text-green-600' : (trade.teamBValueNow || 0) - trade.teamBValueThen < 0 ? 'text-red-600' : ''}`}>
+                        ({(trade.teamBValueNow || 0) - trade.teamBValueThen > 0 ? '+' : ''}{Math.round((trade.teamBValueNow || 0) - trade.teamBValueThen)})
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

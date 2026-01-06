@@ -5,7 +5,7 @@
       {
         "tradeId": "1296312256438497280",
         "transactionId": "1296312256438497280",
-        "tradeDate": "2025-11-18",
+        "tradeDate": "2025-11-17",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -19,7 +19,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "$15 FAAB",
@@ -150,7 +151,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 513.0,
@@ -166,7 +168,7 @@
       {
         "tradeId": "1295662941210697728",
         "transactionId": "1295662941210697728",
-        "tradeDate": "2025-11-16",
+        "tradeDate": "2025-11-15",
         "season": "season_2",
         "teamA": "cjsyregelas",
         "teamAReceived": [
@@ -285,7 +287,7 @@
       {
         "tradeId": "1294198173723557888",
         "transactionId": "1294198173723557888",
-        "tradeDate": "2025-11-12",
+        "tradeDate": "2025-11-11",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -318,7 +320,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 166.0,
@@ -334,7 +337,7 @@
       {
         "tradeId": "1294189559839465472",
         "transactionId": "1294189559839465472",
-        "tradeDate": "2025-11-12",
+        "tradeDate": "2025-11-11",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -360,7 +363,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "2027 Round 4",
@@ -388,7 +392,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamBValueThen": 1623.0,
@@ -422,7 +427,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 247.0,
@@ -478,7 +484,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 679.0,
@@ -501,7 +508,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2027 Round 3",
@@ -523,7 +531,7 @@
       {
         "tradeId": "1293486502654791680",
         "transactionId": "1293486502654791680",
-        "tradeDate": "2025-11-10",
+        "tradeDate": "2025-11-09",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -541,7 +549,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 782.0,
@@ -564,7 +573,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "$1 FAAB",
@@ -586,7 +596,7 @@
       {
         "tradeId": "1290567058949427200",
         "transactionId": "1290567058949427200",
-        "tradeDate": "2025-11-02",
+        "tradeDate": "2025-11-01",
         "season": "season_2",
         "teamA": "jwalters74",
         "teamAReceived": [
@@ -824,7 +834,7 @@
       {
         "tradeId": "1286931153982361600",
         "transactionId": "1286931153982361600",
-        "tradeDate": "2025-10-23",
+        "tradeDate": "2025-10-22",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -842,7 +852,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 254.0,
@@ -900,13 +911,15 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2027 Round 1",
@@ -989,7 +1002,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 1520.0,
@@ -1061,19 +1075,22 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 4690.0,
@@ -1122,7 +1139,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 106.0,
@@ -1228,7 +1246,7 @@
       {
         "tradeId": "1278946311571251200",
         "transactionId": "1278946311571251200",
-        "tradeDate": "2025-10-01",
+        "tradeDate": "2025-09-30",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -1268,7 +1286,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 218.0,
@@ -1284,7 +1303,7 @@
       {
         "tradeId": "1278942529986764800",
         "transactionId": "1278942529986764800",
-        "tradeDate": "2025-10-01",
+        "tradeDate": "2025-09-30",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -1317,7 +1336,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 176.0,
@@ -1333,7 +1353,7 @@
       {
         "tradeId": "1278916121231106048",
         "transactionId": "1278916121231106048",
-        "tradeDate": "2025-10-01",
+        "tradeDate": "2025-09-30",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -1386,7 +1406,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 20.0,
@@ -1417,7 +1438,7 @@
       {
         "tradeId": "1278609411799027712",
         "transactionId": "1278609411799027712",
-        "tradeDate": "2025-09-30",
+        "tradeDate": "2025-09-29",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -1435,7 +1456,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 264.0,
@@ -1457,7 +1479,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 345.0,
@@ -1473,7 +1496,7 @@
       {
         "tradeId": "1278590799092658176",
         "transactionId": "1278590799092658176",
-        "tradeDate": "2025-09-30",
+        "tradeDate": "2025-09-29",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -1491,7 +1514,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 980.0,
@@ -1562,7 +1586,7 @@
       {
         "tradeId": "1277109098646605824",
         "transactionId": "1277109098646605824",
-        "tradeDate": "2025-09-26",
+        "tradeDate": "2025-09-25",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -1604,7 +1628,7 @@
       {
         "tradeId": "1276812030426251264",
         "transactionId": "1276812030426251264",
-        "tradeDate": "2025-09-25",
+        "tradeDate": "2025-09-24",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -1721,7 +1745,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamBValueThen": 20.0,
@@ -1819,7 +1844,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamBValueThen": 5404.0,
@@ -1861,7 +1887,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 622.0,
@@ -1919,7 +1946,7 @@
       {
         "tradeId": "1264067657422864384",
         "transactionId": "1264067657422864384",
-        "tradeDate": "2025-08-21",
+        "tradeDate": "2025-08-20",
         "season": "season_2",
         "teamA": "jwalters74",
         "teamAReceived": [
@@ -1966,7 +1993,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamBValueThen": 3056.0,
@@ -1982,7 +2010,7 @@
       {
         "tradeId": "1259713999834984449",
         "transactionId": "1259713999834984449",
-        "tradeDate": "2025-08-09",
+        "tradeDate": "2025-08-08",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -2008,7 +2036,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 42.0,
@@ -2050,7 +2079,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 106.0,
@@ -2084,7 +2114,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 1581.0,
@@ -2113,7 +2144,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamBValueThen": 1460.0,
@@ -2154,7 +2186,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamAValueThen": 5216.0,
@@ -2176,7 +2209,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 5299.0,
@@ -2282,7 +2316,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "2027 Round 2",
@@ -2344,7 +2379,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 2097.0,
@@ -2360,7 +2396,7 @@
       {
         "tradeId": "1251046974694637568",
         "transactionId": "1251046974694637568",
-        "tradeDate": "2025-07-16",
+        "tradeDate": "2025-07-15",
         "season": "season_2",
         "teamA": "mgaeta23",
         "teamAReceived": [
@@ -2386,7 +2422,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 65.0,
@@ -2402,7 +2439,7 @@
       {
         "tradeId": "1251038903863881728",
         "transactionId": "1251038903863881728",
-        "tradeDate": "2025-07-16",
+        "tradeDate": "2025-07-15",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -2414,13 +2451,15 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 62.0,
@@ -2484,7 +2523,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 622.0,
@@ -2525,7 +2565,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 923.0,
@@ -2547,7 +2588,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 3108.0,
@@ -2604,13 +2646,15 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 3881.0,
@@ -2666,7 +2710,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamBValueThen": 122.0,
@@ -2693,7 +2738,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamAValueThen": 20.0,
@@ -2708,7 +2754,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamBValueThen": 15.0,
@@ -2735,7 +2782,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamAValueThen": 330.0,
@@ -2757,7 +2805,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 80.0,
@@ -2773,7 +2822,7 @@
       {
         "tradeId": "1227129044529582080",
         "transactionId": "1227129044529582080",
-        "tradeDate": "2025-05-11",
+        "tradeDate": "2025-05-10",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -2800,7 +2849,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "$10 FAAB",
@@ -2822,7 +2872,7 @@
       {
         "tradeId": "1226043559040270336",
         "transactionId": "1226043559040270336",
-        "tradeDate": "2025-05-08",
+        "tradeDate": "2025-05-07",
         "season": "season_2",
         "teamA": "jakeduf",
         "teamAReceived": [
@@ -2849,13 +2899,15 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamBValueThen": 350.0,
@@ -2932,7 +2984,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 6009.0,
@@ -2988,7 +3041,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           }
         ],
         "teamBValueThen": 715.0,
@@ -3031,7 +3085,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           },
           {
             "name": "2027 Round 4",
@@ -3094,7 +3149,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "2027 Round 2",
@@ -3142,7 +3198,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2027 Round 1",
@@ -3178,7 +3235,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "2027 Round 4",
@@ -3269,7 +3327,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           },
           {
             "name": "$22 FAAB",
@@ -3324,7 +3383,8 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 29,
-            "value_now": 32
+            "value_now": 32,
+            "pick_label": "4.03"
           }
         ],
         "teamBValueThen": 48.0,
@@ -3457,7 +3517,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamBValueThen": 65.0,
@@ -3473,7 +3534,7 @@
       {
         "tradeId": "1223523595133657088",
         "transactionId": "1223523595133657088",
-        "tradeDate": "2025-05-01",
+        "tradeDate": "2025-04-30",
         "season": "season_2",
         "teamA": "jwalters74",
         "teamAReceived": [
@@ -3491,7 +3552,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 511.0,
@@ -3529,7 +3591,7 @@
       {
         "tradeId": "1223496024669028352",
         "transactionId": "1223496024669028352",
-        "tradeDate": "2025-05-01",
+        "tradeDate": "2025-04-30",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -3578,7 +3640,7 @@
       {
         "tradeId": "1223495018262581248",
         "transactionId": "1223495018262581248",
-        "tradeDate": "2025-05-01",
+        "tradeDate": "2025-04-30",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -3620,7 +3682,7 @@
       {
         "tradeId": "1223467807560183808",
         "transactionId": "1223467807560183808",
-        "tradeDate": "2025-05-01",
+        "tradeDate": "2025-04-30",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -3821,7 +3883,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2025 Round 3",
@@ -3877,7 +3940,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           },
           {
             "name": "2025 Round 3",
@@ -4025,13 +4089,15 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           }
         ],
         "teamBValueThen": 6031.0,
@@ -4072,7 +4138,8 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 65,
-            "value_now": 64
+            "value_now": 64,
+            "pick_label": "3.08"
           }
         ],
         "teamAValueThen": 7925.0,
@@ -4110,7 +4177,7 @@
       {
         "tradeId": "1222779260813459456",
         "transactionId": "1222779260813459456",
-        "tradeDate": "2025-04-29",
+        "tradeDate": "2025-04-28",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -4257,7 +4324,7 @@
       {
         "tradeId": "1220272163022438400",
         "transactionId": "1220272163022438400",
-        "tradeDate": "2025-04-22",
+        "tradeDate": "2025-04-21",
         "season": "season_2",
         "teamA": "zachlearningtogolf",
         "teamAReceived": [
@@ -4327,7 +4394,7 @@
       {
         "tradeId": "1211903239012765696",
         "transactionId": "1211903239012765696",
-        "tradeDate": "2025-03-30",
+        "tradeDate": "2025-03-29",
         "season": "season_2",
         "teamA": "gnewman4",
         "teamAReceived": [
@@ -4339,7 +4406,8 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 183,
-            "value_now": 500
+            "value_now": 500,
+            "pick_label": "2.05"
           },
           {
             "name": "2027 Round 3",
@@ -4376,7 +4444,7 @@
       {
         "tradeId": "1207589817261490176",
         "transactionId": "1207589817261490176",
-        "tradeDate": "2025-03-18",
+        "tradeDate": "2025-03-17",
         "season": "season_2",
         "teamA": "lndahayo",
         "teamAReceived": [
@@ -4395,7 +4463,8 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 1232,
-            "value_now": 1142
+            "value_now": 1142,
+            "pick_label": "1.12"
           },
           {
             "name": "2025 Round 2",
@@ -4501,11 +4570,11 @@
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-01-06T14:20:09.984518",
+      "lastUpdated": "2026-01-06T12:55:49.907629",
       "totalTrades": 80,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2025-11-18"
+        "latest": "2025-11-17"
       },
       "seasonsIncluded": [
         "season_2"
