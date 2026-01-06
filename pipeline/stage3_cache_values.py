@@ -2,8 +2,17 @@
 """
 STAGE 3: Cache Asset Values
 Fetches historical and current values for all traded assets
-Applies tiered 2025 pick valuations and 2026+ projections
+Applies tiered valuations based on draft year status:
+- 2025 picks: Exact pick values (drafted) or player values (post-draft)
+- 2026 picks: DynastyProcess exact pick values (draft order finalized)
+- 2027/2028 picks: DynastyProcess tiered values or team projections
 Uses static pick origin mapping (not Sleeper API's confused roster_id)
+
+PICK VALUATION STRATEGY:
+- 2025 picks: Use exact "2025 Pick X.YY" from Git history, then player values post-draft
+- 2026 picks: Use DynastyProcess exact values ("2026 Pick 1.01") now that standings are final
+- 2027 picks: Use DynastyProcess tiered values ("2027 Early 1st") based on team projections
+- 2028 picks: Use DynastyProcess generic values ("2028 1st") or team projections as proxy
 
 IMPROVEMENTS:
 - Structured logging
@@ -13,17 +22,20 @@ IMPROVEMENTS:
 - Automatic backups
 - Metrics collection
 - Better error handling
+- 2026 exact pick mapping using finalized draft order
 """
 
 import pandas as pd
+import json
 import time
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional
+from pathlib import Path
 import sys
 
 # Pipeline utilities
 from config import get_config
-from constants import (OutputFiles, PickTier, DRAFT_COMPLETION_DATE, 
+from constants import (OutputFiles, PickTier, DRAFT_COMPLETION_DATE,
                       FAAB_VALUE_PER_DOLLAR, ROUND_ORDINALS, SEASON_START_DATE)
 from utils.logging_config import setup_logging
 from utils.api_client import fetch_with_retry, APIError
@@ -100,6 +112,52 @@ for _, row in DRAFT_RESULTS.iterrows():
 logger.info(f"✓ Built pick lineage for {sum(len(v) for v in PICK_LINEAGE.values())} picks")
 logger.info(f"✓ {len(PICK_LINEAGE)} unique (origin, round) combinations")
 metrics.record('count.pick_lineage_entries', len(PICK_LINEAGE))
+
+
+# Load 2026 draft order for exact pick position mapping
+logger.info("Loading 2026 draft order for exact pick valuations...")
+DRAFT_ORDER_2026 = {}
+ROSTER_TO_USERNAME = {}
+
+try:
+    # Load draft order
+    draft_order_file = Path('draft_order_2026_progressive.json')
+    if draft_order_file.exists():
+        with open(draft_order_file, 'r') as f:
+            draft_order_data = json.load(f)
+        
+        # Load team mappings for roster_id → username conversion
+        teams_csv = Path('team_identity_mapping.csv')
+        if teams_csv.exists():
+            df_teams = pd.read_csv(teams_csv)
+            for _, row in df_teams.iterrows():
+                roster_id = int(row['roster_id'])
+                username = str(row['sleeper_username'])
+                ROSTER_TO_USERNAME[roster_id] = username
+        
+        # Create mapping: (username, round) → pick_label
+        for round_name, picks in draft_order_data['draft_order'].items():
+            round_num = int(round_name.split('_')[1])
+            
+            for pick in picks:
+                original_roster_id = pick['original_owner']['roster_id']
+                pick_label = pick['pick_label']
+                
+                # Convert roster_id to username
+                username = ROSTER_TO_USERNAME.get(original_roster_id, f"roster_{original_roster_id}")
+                
+                key = (username, round_num)
+                DRAFT_ORDER_2026[key] = pick_label
+        
+        logger.info(f"✓ Loaded 2026 draft order: {len(DRAFT_ORDER_2026)} pick positions mapped")
+        logger.info(f"✓ 2026 picks will use DynastyProcess exact values (e.g., '2026 Pick 1.01')")
+        metrics.record('count.draft_order_2026_mappings', len(DRAFT_ORDER_2026))
+    else:
+        logger.warning(f"2026 draft order file not found: {draft_order_file}")
+        logger.warning("Will fall back to team projection method for 2026 picks")
+except Exception as e:
+    logger.warning(f"Failed to load 2026 draft order: {e}")
+    logger.warning("Will fall back to team projection method for 2026 picks")
 
 
 def get_all_commits_since(since_date: datetime) -> Dict[str, str]:
@@ -352,7 +410,12 @@ def get_2026_plus_pick_value(
     df_values: pd.DataFrame
 ) -> Tuple[float, str, Optional[Dict]]:
     """
-    Get value for 2026+ picks with team-specific projections.
+    Get value for 2026+ picks.
+    
+    2026 picks: Use DynastyProcess exact pick values (e.g., "2026 Pick 1.01")
+                since draft order is now finalized
+    2027/2028 picks: Use DynastyProcess tiered generic values (e.g., "2027 Early 1st")
+                     or latest 2026 team projection as proxy
     
     Args:
         pick_name: Pick identifier (e.g., "2026 Round 1")
@@ -369,76 +432,133 @@ def get_2026_plus_pick_value(
     parts = pick_name.split()
     if len(parts) >= 3 and parts[1] == 'Round':
         year = parts[0]
-        round_num = parts[2]
+        round_num = int(parts[2])
     else:
         return 0, "Parse error", None
     
-    # 2026 picks with team projections (1st/2nd/3rd/4th)
+    # 2026 picks - use DynastyProcess EXACT values (draft order finalized)
     if '2026' in pick_name and origin_owner:
-        # Determine week for time-based projections (unlimited)
-        days = (trade_dt - SEASON_START_DATE).days
-        week = max(2, (days // 7) + 1)  # Remove artificial Week 7 cap
+        # Check if we have exact pick mapping from draft order
+        key = (origin_owner, round_num)
+        pick_label = DRAFT_ORDER_2026.get(key)
         
-        # Map round number to round name
-        round_name = ROUND_ORDINALS.get(int(round_num))
+        if pick_label:
+            # Use exact DynastyProcess pick value (e.g., "2026 Pick 1.01")
+            exact_pick_name = f"2026 Pick {pick_label}"
+            matches = df_values[df_values['player'] == exact_pick_name]
+            
+            if not matches.empty:
+                value = matches.iloc[0]['value_2qb']
+                metadata = {
+                    'origin': origin_owner,
+                    'round': round_num,
+                    'pick_label': pick_label,
+                    'dynastyprocess_name': exact_pick_name
+                }
+                logger.debug(f"  ✓ {origin_owner}'s 2026 Round {round_num} → {exact_pick_name} = {value:.0f}")
+                return value, f"DynastyProcess:{exact_pick_name}", metadata
+            else:
+                logger.warning(f"DynastyProcess lookup failed for {exact_pick_name}")
+        else:
+            logger.warning(f"No draft order mapping found for {origin_owner} Round {round_num}")
         
+        # Fallback to team projection method if DynastyProcess lookup failed
+        logger.debug(f"  Falling back to team projection for {origin_owner} 2026 Round {round_num}")
+        round_name = ROUND_ORDINALS.get(round_num)
         if round_name:
-            # Find team in projections using origin_owner (which is now always a username)
             team_row = PICK_PROJECTIONS[PICK_PROJECTIONS['Team'] == origin_owner]
             if not team_row.empty:
                 try:
-                    # Use dynamic column discovery to find best available week
+                    days = (trade_dt - SEASON_START_DATE).days
+                    week = max(2, (days // 7) + 1)
                     column_name, selected_week = get_best_week_column(team_row, round_name, week)
                     value = team_row.iloc[0][column_name]
                     
-                    # Enhanced metadata with target vs actual week
                     metadata = {
                         'week': selected_week,
                         'target_week': week,
                         'origin': origin_owner,
                         'round': round_name,
-                        'column_used': column_name
+                        'column_used': column_name,
+                        'fallback': 'team_projection'
                     }
                     
-                    return value, f"Projection:Week{selected_week}_{round_name}", metadata
+                    return value, f"Fallback:Projection:Week{selected_week}_{round_name}", metadata
                     
                 except ValueError as e:
-                    # Fallback if no columns found - continue to generic values
-                    logger.warning(f"No weekly columns for {origin_owner} {round_name}: {e}")
+                    logger.warning(f"Team projection fallback failed for {origin_owner} {round_name}: {e}")
                     pass
     
-    # 2027/2028+ picks - use latest available 2026 projection as proxy
+    # 2027/2028+ picks - try DynastyProcess tiered generics first, then fall back to projections
     if ('2027' in pick_name or '2028' in pick_name) and origin_owner:
-        round_name = ROUND_ORDINALS.get(int(round_num))
+        # Try DynastyProcess tiered values first (e.g., "2027 Early 1st", "2027 Late 1st")
+        round_name = ROUND_ORDINALS.get(round_num)
         
         if round_name:
-            # Find team in projections using origin_owner (which is now always a username)
+            # Try to determine tier from origin owner's projected finish
+            # Use latest 2026 projection as indicator
             team_row = PICK_PROJECTIONS[PICK_PROJECTIONS['Team'] == origin_owner]
+            
             if not team_row.empty:
                 try:
-                    # Use dynamic latest week detection for future picks
+                    # Get latest week projection to estimate tier
                     column_name, latest_week = get_latest_week_column(team_row, round_name)
-                    value = team_row.iloc[0][column_name]
+                    proj_value = team_row.iloc[0][column_name]
                     
+                    # Determine tier based on projected value
+                    # Early = bottom teams (high value), Mid = middle, Late = top teams (low value)
+                    if round_num == 1:
+                        if proj_value > 3000:
+                            tier = "Early"
+                        elif proj_value > 1500:
+                            tier = "Mid"
+                        else:
+                            tier = "Late"
+                    else:
+                        # For later rounds, simpler tier logic
+                        if proj_value > 400:
+                            tier = "Early"
+                        elif proj_value > 200:
+                            tier = "Mid"
+                        else:
+                            tier = "Late"
+                    
+                    # Try DynastyProcess tiered value
+                    dp_name = f"{year} {tier} {round_name}"
+                    matches = df_values[df_values['player'] == dp_name]
+                    
+                    if not matches.empty:
+                        value = matches.iloc[0]['value_2qb']
+                        metadata = {
+                            'origin': origin_owner,
+                            'round': round_name,
+                            'tier': tier,
+                            'dynastyprocess_name': dp_name,
+                            'projected_value_used_for_tier': proj_value
+                        }
+                        logger.debug(f"  ✓ {origin_owner}'s {year} Round {round_num} → {dp_name} = {value:.0f}")
+                        return value, f"DynastyProcess:{dp_name}", metadata
+                    
+                    # If tiered not found, use projection value directly
                     metadata = {
                         'origin': origin_owner,
                         'round': round_name,
                         'latest_week_used': latest_week,
-                        'column_used': column_name
+                        'column_used': column_name,
+                        'fallback': 'projection_as_proxy'
                     }
                     
-                    return value, f"Projection:Week{latest_week}_2026_{round_name}", metadata
+                    return proj_value, f"Projection:Week{latest_week}_2026_{round_name}", metadata
                     
                 except ValueError as e:
-                    # Fallback if no columns found - continue to generic values
-                    logger.warning(f"No weekly columns for {origin_owner} {round_name}: {e}")
+                    logger.warning(f"Failed to get projection for {origin_owner} {round_name}: {e}")
                     pass
     
-    # Fallback - generic value from DynastyProcess
-    ordinal = ROUND_ORDINALS.get(int(round_num), f'{round_num}th')
+    # Final fallback - generic value from DynastyProcess
+    ordinal = ROUND_ORDINALS.get(round_num, f'{round_num}th')
     search = f"{year} {ordinal}"
     
-    matches = df_values[df_values['player'].str.contains(search, case=False, na=False)]
+    matches = df_values[df_values['player'] == search]
     if not matches.empty:
         value = matches.iloc[0]['value_2qb']
         return value, f"Fallback:Generic:{search}", None
@@ -701,6 +821,28 @@ def main():
                     logger.info(f"    Round {round_num}: {len(round_picks)} picks | At trade: {avg_at:.0f} → Current: {avg_now:.0f}")
                     
                     metrics.record(f'count.2025_round{round_num}_picks', len(round_picks))
+        
+        # 2026 pick breakdown
+        picks_2026 = df_cache[df_cache['asset_name'].str.contains('2026 Round', na=False)]
+        if len(picks_2026) > 0:
+            logger.info("  2026 PICKS BREAKDOWN:")
+            logger.info(f"    Total: {len(picks_2026)}")
+            
+            # Count how many used DynastyProcess exact values
+            dp_exact = picks_2026[picks_2026['value_source_current'].str.contains('DynastyProcess:2026 Pick', na=False)]
+            logger.info(f"    Using DynastyProcess exact values: {len(dp_exact)} ({len(dp_exact)/len(picks_2026)*100:.1f}%)")
+            
+            # By round
+            for round_num in [1, 2, 3, 4]:
+                round_picks = picks_2026[picks_2026['asset_name'].str.contains(f'Round {round_num}', na=False)]
+                if len(round_picks) > 0:
+                    avg_at = round_picks['value_at_trade'].mean()
+                    avg_now = round_picks['value_current'].mean()
+                    dp_exact_round = round_picks[round_picks['value_source_current'].str.contains('DynastyProcess:2026 Pick', na=False)]
+                    logger.info(f"    Round {round_num}: {len(round_picks)} picks ({len(dp_exact_round)} exact) | At trade: {avg_at:.0f} → Current: {avg_now:.0f}")
+                    
+                    metrics.record(f'count.2026_round{round_num}_picks', len(round_picks))
+                    metrics.record(f'count.2026_round{round_num}_exact', len(dp_exact_round))
         
         # Record success metrics
         duration = time.time() - start_time
