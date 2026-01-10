@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_waiver_transactions": 339,
-    "total_free_agent_transactions": 0,
+    "total_free_agent_transactions": 1,
     "successful_waivers": 228,
     "failed_waivers": 111,
     "total_waiver_bids": "2507",
@@ -131,54 +131,71 @@
   ],
   "weekly_activity": {
     "1": {
+      "free_agent": 1,
       "waiver": 190
     },
     "2": {
+      "free_agent": 0,
       "waiver": 16
     },
     "3": {
+      "free_agent": 0,
       "waiver": 5
     },
     "4": {
+      "free_agent": 0,
       "waiver": 6
     },
     "5": {
+      "free_agent": 0,
       "waiver": 16
     },
     "6": {
+      "free_agent": 0,
       "waiver": 2
     },
     "7": {
+      "free_agent": 0,
       "waiver": 4
     },
     "8": {
+      "free_agent": 0,
       "waiver": 12
     },
     "9": {
+      "free_agent": 0,
       "waiver": 7
     },
     "10": {
+      "free_agent": 0,
       "waiver": 2
     },
     "11": {
+      "free_agent": 0,
       "waiver": 19
     },
     "12": {
+      "free_agent": 0,
       "waiver": 8
     },
     "13": {
+      "free_agent": 0,
       "waiver": 11
     },
     "14": {
+      "free_agent": 0,
       "waiver": 11
     },
     "15": {
+      "free_agent": 0,
       "waiver": 20
     },
     "16": {
+      "free_agent": 0,
       "waiver": 7
     },
     "17": {
+      "free_agent": 0,
       "waiver": 3
     }
   },
@@ -388,7 +405,7 @@
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 1,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
