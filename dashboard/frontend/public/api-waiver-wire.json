@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at": "2026-01-11T14:16:22.952412",
-    "total_waiver_transactions": 339,
+    "generated_at": "2026-01-12T14:22:11.610074",
+    "total_waiver_transactions": 340,
     "total_free_agent_transactions": 1,
-    "successful_waivers": 228,
+    "successful_waivers": 229,
     "failed_waivers": 111,
-    "success_rate": 67.3,
+    "success_rate": 67.4,
     "total_waiver_bids": 1658,
     "average_waiver_bid": 4.9,
     "seasonsIncluded": [
@@ -20,14 +20,14 @@
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-01-10T14:15:51.546420Z"
+        "last_fetched": "2026-01-12T14:21:48.770805Z"
       }
     },
     "schemaVersion": "2.0.0",
     "source": "cumulative_files",
     "processingInfo": {
-      "rawTransactionsProcessed": 225,
-      "processedRecordsGenerated": 340
+      "rawTransactionsProcessed": 226,
+      "processedRecordsGenerated": 341
     }
   },
   "manager_activity": [
@@ -94,11 +94,11 @@
     {
       "roster_id": 12,
       "team_name": "donewton",
-      "total_claims": 33,
-      "successful_claims": 23,
-      "success_rate": 69.7,
+      "total_claims": 34,
+      "successful_claims": 24,
+      "success_rate": 70.6,
       "total_bid": 126,
-      "avg_bid": 3.8,
+      "avg_bid": 3.7,
       "max_bid": 39
     },
     {
@@ -204,9 +204,9 @@
     {
       "roster_id": 12,
       "team_name": "donewton",
-      "total_adds": 24,
+      "total_adds": 25,
       "total_drops": 9,
-      "overall_churn_rate": 9.43,
+      "overall_churn_rate": 9.71,
       "management_style": "moderate"
     },
     {
@@ -254,6 +254,26 @@
   "hit_rate_metrics": null,
   "timing_metrics": null,
   "all_transactions": [
+    {
+      "transaction_id": "1316182493598093312",
+      "type": "waiver",
+      "action": "add",
+      "status": "complete",
+      "team_name": "donewton",
+      "roster_id": 12,
+      "player_name": "Brandin Cooks",
+      "player_id": "2197",
+      "player_value": null,
+      "waiver_bid": 0,
+      "week": 1,
+      "created_date": "2026-01-11 20:54:29",
+      "status_updated_date": "2026-01-12 08:05:09",
+      "notes": "",
+      "sequence": 0,
+      "priority": null,
+      "season": "season_3",
+      "year": 2026
+    },
     {
       "transaction_id": "1315423537497923584",
       "type": "free_agent",
@@ -3577,14 +3597,14 @@
     {
       "transaction_id": "1273431296915308544",
       "type": "waiver",
-      "action": "add",
+      "action": "drop",
       "status": "failed",
       "team_name": "zachlearningtogolf",
       "roster_id": 5,
-      "player_name": "Jake Browning",
-      "player_id": "6111",
+      "player_name": "Tanner McKee",
+      "player_id": "9230",
       "player_value": null,
-      "waiver_bid": 15,
+      "waiver_bid": 0,
       "week": 2,
       "created_date": "2025-09-15 21:36:29",
       "status_updated_date": "2025-09-17 07:05:54",
@@ -3597,14 +3617,14 @@
     {
       "transaction_id": "1273431296915308544",
       "type": "waiver",
-      "action": "drop",
+      "action": "add",
       "status": "failed",
       "team_name": "zachlearningtogolf",
       "roster_id": 5,
-      "player_name": "Tanner McKee",
-      "player_id": "9230",
+      "player_name": "Jake Browning",
+      "player_id": "6111",
       "player_value": null,
-      "waiver_bid": 0,
+      "waiver_bid": 15,
       "week": 2,
       "created_date": "2025-09-15 21:36:29",
       "status_updated_date": "2025-09-17 07:05:54",
@@ -6117,14 +6137,14 @@
     {
       "transaction_id": "1224047709019709440",
       "type": "waiver",
-      "action": "drop",
+      "action": "add",
       "status": "failed",
       "team_name": "gnewman4",
       "roster_id": 2,
-      "player_name": "Devin Singletary",
-      "player_id": "6130",
-      "player_value": null,
-      "waiver_bid": 0,
+      "player_name": "Trevor Etienne",
+      "player_id": "12531",
+      "player_value": 32,
+      "waiver_bid": 15,
       "week": 1,
       "created_date": "2025-05-02 15:03:44",
       "status_updated_date": "2025-05-03 06:05:05",
@@ -6137,14 +6157,14 @@
     {
       "transaction_id": "1224047709019709440",
       "type": "waiver",
-      "action": "add",
+      "action": "drop",
       "status": "failed",
       "team_name": "gnewman4",
       "roster_id": 2,
-      "player_name": "Trevor Etienne",
-      "player_id": "12531",
-      "player_value": 32,
-      "waiver_bid": 15,
+      "player_name": "Devin Singletary",
+      "player_id": "6130",
+      "player_value": null,
+      "waiver_bid": 0,
       "week": 1,
       "created_date": "2025-05-02 15:03:44",
       "status_updated_date": "2025-05-03 06:05:05",
@@ -6757,13 +6777,13 @@
     {
       "transaction_id": "1211434017455357952",
       "type": "waiver",
-      "action": "add",
+      "action": "drop",
       "status": "complete",
       "team_name": "cjsyregelas",
       "roster_id": 6,
-      "player_name": "Juwan Johnson",
-      "player_id": "7002",
-      "player_value": 187,
+      "player_name": "Gardner Minshew",
+      "player_id": "6011",
+      "player_value": null,
       "waiver_bid": 0,
       "week": 1,
       "created_date": "2025-03-28 19:41:26",
@@ -6777,13 +6797,13 @@
     {
       "transaction_id": "1211434017455357952",
       "type": "waiver",
-      "action": "drop",
+      "action": "add",
       "status": "complete",
       "team_name": "cjsyregelas",
       "roster_id": 6,
-      "player_name": "Gardner Minshew",
-      "player_id": "6011",
-      "player_value": null,
+      "player_name": "Juwan Johnson",
+      "player_id": "7002",
+      "player_value": 187,
       "waiver_bid": 0,
       "week": 1,
       "created_date": "2025-03-28 19:41:26",
@@ -7056,6 +7076,26 @@
     }
   ],
   "recent_activity": [
+    {
+      "transaction_id": "1316182493598093312",
+      "type": "waiver",
+      "action": "add",
+      "status": "complete",
+      "team_name": "donewton",
+      "roster_id": 12,
+      "player_name": "Brandin Cooks",
+      "player_id": "2197",
+      "player_value": null,
+      "waiver_bid": 0,
+      "week": 1,
+      "created_date": "2026-01-11 20:54:29",
+      "status_updated_date": "2026-01-12 08:05:09",
+      "notes": "",
+      "sequence": 0,
+      "priority": null,
+      "season": "season_3",
+      "year": 2026
+    },
     {
       "transaction_id": "1315423537497923584",
       "type": "free_agent",
@@ -8035,34 +8075,14 @@
       "priority": null,
       "season": "season_2",
       "year": 2025
-    },
-    {
-      "transaction_id": "1305238236884377600",
-      "type": "waiver",
-      "action": "add",
-      "status": "complete",
-      "team_name": "jwalters74",
-      "roster_id": 7,
-      "player_name": "Rashod Bateman",
-      "player_id": "7571",
-      "player_value": 186,
-      "waiver_bid": 5,
-      "week": 15,
-      "created_date": "2025-12-12 16:05:55",
-      "status_updated_date": "2025-12-13 13:25:42",
-      "notes": "",
-      "sequence": 0,
-      "priority": null,
-      "season": "season_2",
-      "year": 2025
     }
   ],
   "weekly_activity": [
     {
       "week": 1,
-      "waiver_transactions": 190,
+      "waiver_transactions": 191,
       "free_agent_transactions": 1,
-      "total_transactions": 191
+      "total_transactions": 192
     },
     {
       "week": 2,
@@ -8296,6 +8316,13 @@
       "highest_bid": 52
     },
     {
+      "player_id": "2197",
+      "player_name": "Brandin Cooks",
+      "total_claims": 4,
+      "successful_claims": 4,
+      "highest_bid": 0
+    },
+    {
       "player_id": "3161",
       "player_name": "Carson Wentz",
       "total_claims": 4,
@@ -8398,13 +8425,6 @@
       "player_name": "Elijhah Badger",
       "total_claims": 3,
       "successful_claims": 2,
-      "highest_bid": 0
-    },
-    {
-      "player_id": "2197",
-      "player_name": "Brandin Cooks",
-      "total_claims": 3,
-      "successful_claims": 3,
       "highest_bid": 0
     },
     {
@@ -8767,7 +8787,7 @@
   ],
   "bidding_patterns": {
     "distribution": {
-      "0": 226,
+      "0": 227,
       "1-5": 46,
       "6-10": 23,
       "11-20": 21,
@@ -8846,6 +8866,6 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 71.2
+    "zero_bid_success_rate": 71.4
   }
 }
