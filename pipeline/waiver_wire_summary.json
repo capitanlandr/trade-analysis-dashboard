@@ -1,9 +1,9 @@
 {
   "summary": {
-    "total_waiver_transactions": 340,
+    "total_waiver_transactions": 342,
     "total_free_agent_transactions": 1,
-    "successful_waivers": 229,
-    "failed_waivers": 111,
+    "successful_waivers": 230,
+    "failed_waivers": 112,
     "total_waiver_bids": "2507",
     "average_waiver_bid": 13.850828729281767
   },
@@ -121,18 +121,18 @@
     {
       "roster_id": 12,
       "team_name": "Paper Tigers",
-      "total_claims": 25,
+      "total_claims": 27,
       "total_bid": 150,
-      "avg_bid": 4.41,
+      "avg_bid": 4.17,
       "max_bid": 39,
-      "successful_claims": 24,
-      "success_rate": 96.0
+      "successful_claims": 25,
+      "success_rate": 92.6
     }
   ],
   "weekly_activity": {
     "1": {
       "free_agent": 1,
-      "waiver": 191
+      "waiver": 193
     },
     "2": {
       "free_agent": 0,
@@ -399,13 +399,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 76.72955974842768
+    "zero_bid_success_rate": 76.3975155279503
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 2,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
