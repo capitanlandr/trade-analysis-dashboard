@@ -14,6 +14,7 @@ interface FilterState {
   type: string[];
   action: string[];
   status: string[];
+  team: string[];
   player: string;
   bid: string;
   week: string[];
@@ -35,11 +36,12 @@ export default function WaiverWireAnalysis() {
   // Pagination state
   const [maxTransactions, setMaxTransactions] = useState<number | 'All'>(50);
   
-  // Filtering state
+  // Filtering state - default to showing only complete transactions
   const [filters, setFilters] = useState<FilterState>({
     type: [],
     action: [],
-    status: [],
+    status: ['complete'],
+    team: [],
     player: '',
     bid: '',
     week: [],
@@ -90,7 +92,10 @@ export default function WaiverWireAnalysis() {
         return false;
       }
       
-
+      // Team filter
+      if (filters.team.length > 0 && !filters.team.includes(transaction.team_name.trim())) {
+        return false;
+      }
       
       // Player filter (text search)
       if (filters.player && !transaction.player_name.toLowerCase().includes(filters.player.toLowerCase())) {
@@ -235,7 +240,8 @@ export default function WaiverWireAnalysis() {
     setFilters({
       type: [],
       action: [],
-      status: [],
+      status: ['complete'],  // Reset to default
+      team: [],
       player: '',
       bid: '',
       week: [],
@@ -270,7 +276,7 @@ export default function WaiverWireAnalysis() {
   }) => {
     if (activeColumnFilter !== field) return null;
 
-    const isMultiSelect = ['type', 'action', 'status', 'team', 'week'].includes(field);
+    const isMultiSelect = ['type', 'action', 'status', 'team_name', 'week'].includes(field);
     const isTextFilter = ['player_name', 'waiver_bid'].includes(field);
 
     return (
@@ -292,7 +298,8 @@ export default function WaiverWireAnalysis() {
           ) : isMultiSelect && fieldValues ? (
             <div className="max-h-48 overflow-y-auto space-y-2">
               {fieldValues.map(value => {
-                const filterKey = field as keyof FilterState;
+                // Map team_name field to team filter key
+                const filterKey = (field === 'team_name' ? 'team' : field) as keyof FilterState;
                 const currentValues = filters[filterKey] as string[];
                 
                 return (
@@ -300,7 +307,11 @@ export default function WaiverWireAnalysis() {
                     <input
                       type="checkbox"
                       checked={currentValues.includes(value)}
-                      onChange={() => handleMultiSelectFilter(filterKey, value)}
+                      onChange={() => {
+                        // Use the mapped filter key for the handler
+                        const handlerKey = (field === 'team_name' ? 'team' : field) as keyof FilterState;
+                        handleMultiSelectFilter(handlerKey, value);
+                      }}
                       className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
                     />
                     <span className="ml-2 text-sm text-gray-700">
@@ -321,7 +332,8 @@ export default function WaiverWireAnalysis() {
                 if (field === 'player_name') handleTextFilter('player', '');
                 else if (field === 'waiver_bid') handleTextFilter('bid', '');
                 else {
-                  const filterKey = field as keyof FilterState;
+                  // Map team_name field to team filter key
+                  const filterKey = (field === 'team_name' ? 'team' : field) as keyof FilterState;
                   setFilters(prev => ({ ...prev, [filterKey]: [] }));
                 }
               }}
@@ -627,7 +639,21 @@ export default function WaiverWireAnalysis() {
                 </span>
               ))}
               
-
+              {/* Team filters */}
+              {filters.team.map(team => (
+                <span
+                  key={`team-${team}`}
+                  className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800"
+                >
+                  Team: {team}
+                  <button
+                    onClick={() => handleMultiSelectFilter('team', team)}
+                    className="ml-1.5 inline-flex items-center justify-center w-4 h-4 rounded-full hover:bg-purple-200 focus:outline-none"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </span>
+              ))}
               
               {/* Week filters */}
               {filters.week.map(week => (
@@ -813,16 +839,27 @@ export default function WaiverWireAnalysis() {
                 </th>
 
                 {/* Team Column */}
-                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
-                       onClick={() => handleSort('team_name')}>
-                    <span>Team</span>
-                    {sortField === 'team_name' && (
-                      sortDirection === 'asc' ?
-                        <ChevronUp className="h-4 w-4" /> :
-                        <ChevronDown className="h-4 w-4" />
-                    )}
+                <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
+                         onClick={() => handleSort('team_name')}>
+                      <span>Team</span>
+                      {sortField === 'team_name' && (
+                        sortDirection === 'asc' ?
+                          <ChevronUp className="h-4 w-4" /> :
+                          <ChevronDown className="h-4 w-4" />
+                      )}
+                    </div>
+                    <button
+                      onClick={() => setActiveColumnFilter(activeColumnFilter === 'team_name' ? null : 'team_name')}
+                      className={`ml-2 p-1 rounded hover:bg-gray-200 ${
+                        filters.team.length > 0 ? 'text-primary-600' : 'text-gray-400'
+                      }`}
+                    >
+                      <Filter className="h-3 w-3" />
+                    </button>
                   </div>
+                  <ColumnFilterDropdown field="team_name" uniqueValues={uniqueValues?.teams || null} />
                 </th>
 
                 {/* Player Column */}
@@ -851,11 +888,11 @@ export default function WaiverWireAnalysis() {
                   <ColumnFilterDropdown field="player_name" uniqueValues={null} />
                 </th>
 
-                {/* Value Column */}
+                {/* Dynasty Value Column */}
                 <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
                        onClick={() => handleSort('player_value')}>
-                    <span className="hidden sm:inline">Value (at txn)</span>
+                    <span className="hidden sm:inline">Dynasty Val</span>
                     <span className="sm:hidden">Value</span>
                     {sortField === 'player_value' && (
                       sortDirection === 'asc' ?
@@ -865,17 +902,17 @@ export default function WaiverWireAnalysis() {
                   </div>
                 </th>
 
-                {/* Bid Column */}
+                {/* Bid Amount Column */}
                 <th className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative hidden sm:table-cell">
                   <div className="flex items-center justify-between">
-                    <div 
+                    <div
                       className="flex items-center space-x-1 cursor-pointer hover:text-gray-700"
                       onClick={() => handleSort('waiver_bid')}
                     >
-                      <span>Bid</span>
+                      <span>FAAB Bid</span>
                       {sortField === 'waiver_bid' && (
-                        sortDirection === 'asc' ? 
-                          <ChevronUp className="h-4 w-4" /> : 
+                        sortDirection === 'asc' ?
+                          <ChevronUp className="h-4 w-4" /> :
                           <ChevronDown className="h-4 w-4" />
                       )}
                     </div>
@@ -990,7 +1027,7 @@ export default function WaiverWireAnalysis() {
                     {transaction.player_value ? transaction.player_value.toLocaleString() : '-'}
                   </td>
                   <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900 hidden sm:table-cell">
-                    {transaction.waiver_bid > 0 ? `${transaction.waiver_bid}` : '-'}
+                    {transaction.waiver_bid > 0 ? `$${transaction.waiver_bid}` : '-'}
                   </td>
                   <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-900">
                     {transaction.week}

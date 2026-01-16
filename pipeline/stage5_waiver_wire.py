@@ -13,7 +13,7 @@ MULTI-SEASON FEATURES:
 
 import json
 import pandas as pd
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Any, Optional
 import logging
 from pathlib import Path
@@ -27,6 +27,131 @@ from utils.cumulative_file_manager import CumulativeFileManager, CumulativeFileE
 
 # Setup logging
 logger = setup_logging(__name__)
+
+def get_all_commits_since(since_date: datetime) -> Dict[str, str]:
+    """
+    Get Git commits for DynastyProcess historical values.
+    
+    Args:
+        since_date: Earliest date to fetch commits for
+        
+    Returns:
+        Dictionary mapping date strings to commit SHAs
+    """
+    url = "https://api.github.com/repos/dynastyprocess/data/commits"
+    params = {
+        'path': 'files/values.csv',
+        'since': since_date.strftime('%Y-%m-%dT00:00:00Z'),
+        'per_page': 100
+    }
+    
+    try:
+        commits = fetch_with_retry(url, timeout=30, params=params)
+        
+        if commits and isinstance(commits, list):
+            commit_map = {c['commit']['committer']['date'][:10]: c['sha'] for c in commits}
+            logger.info(f"✓ Fetched {len(commit_map)} Git commits for historical values")
+            return commit_map
+        
+        logger.warning("No commits returned from GitHub API")
+        return {}
+        
+    except Exception as e:
+        logger.warning(f"Failed to fetch Git commits: {e}")
+        return {}
+
+def get_values_from_commit(commit_sha: str, cache: Dict = {}) -> Optional[pd.DataFrame]:
+    """
+    Fetch dynasty values from Git commit with caching.
+    
+    Args:
+        commit_sha: Git commit SHA
+        cache: In-memory cache of loaded commits
+        
+    Returns:
+        DataFrame of values or None if fetch fails
+    """
+    if commit_sha in cache:
+        return cache[commit_sha]
+    
+    url = f"https://raw.githubusercontent.com/dynastyprocess/data/{commit_sha}/files/values.csv"
+    
+    try:
+        df = pd.read_csv(url)
+        cache[commit_sha] = df
+        logger.debug(f"✓ Loaded values from commit {commit_sha[:7]}")
+        return df
+    except Exception as e:
+        logger.warning(f"Failed to load values from commit {commit_sha[:7]}: {e}")
+        return None
+
+def get_player_value_at_date(
+    player_name: str,
+    transaction_date: datetime,
+    commit_cache: Dict[str, str],
+    git_df_cache: Dict[str, pd.DataFrame],
+    df_current: pd.DataFrame
+) -> tuple[Optional[int], Optional[int], str]:
+    """
+    Get player's dynasty value at transaction time and current value.
+    
+    Args:
+        player_name: Player name
+        transaction_date: Transaction datetime
+        commit_cache: Dict mapping dates to commit SHAs
+        git_df_cache: Cache of loaded Git DataFrames
+        df_current: Current dynasty values DataFrame
+        
+    Returns:
+        Tuple of (value_at_transaction, value_current, source_description)
+    """
+    if not player_name:
+        return None, None, "No player name"
+    
+    # Get current value
+    current_matches = df_current[df_current['player'].str.contains(player_name, case=False, na=False)]
+    value_current = int(current_matches.iloc[0]['value_2qb']) if not current_matches.empty else None
+    
+    # Find closest Git commit for historical value
+    txn_date_str = transaction_date.strftime('%Y-%m-%d')
+    commit_sha = commit_cache.get(txn_date_str)
+    
+    # Search backwards up to 30 days if no exact match
+    if not commit_sha:
+        for delta in range(1, 31):
+            before = (transaction_date - timedelta(days=delta)).strftime('%Y-%m-%d')
+            if before in commit_cache:
+                commit_sha = commit_cache[before]
+                break
+    
+    # Try forward if no commit found before
+    if not commit_sha:
+        for delta in range(1, 31):
+            after = (transaction_date + timedelta(days=delta)).strftime('%Y-%m-%d')
+            if after in commit_cache:
+                commit_sha = commit_cache[after]
+                break
+    
+    # Get historical value
+    value_at_transaction = None
+    source = "No Git commit"
+    
+    if commit_sha:
+        df_hist = get_values_from_commit(commit_sha, git_df_cache)
+        if df_hist is not None:
+            hist_matches = df_hist[df_hist['player'].str.contains(player_name, case=False, na=False)]
+            if not hist_matches.empty:
+                value_at_transaction = int(hist_matches.iloc[0]['value_2qb'])
+                source = f"Git:{commit_sha[:7]}"
+            else:
+                source = "Player not found in Git"
+    
+    # Fallback to current value if no historical found
+    if value_at_transaction is None and value_current is not None:
+        value_at_transaction = value_current
+        source = "Fallback to current"
+    
+    return value_at_transaction, value_current, source
 
 class WaiverWireProcessor:
     """Process waiver wire and free agent transactions with multi-season support."""
@@ -191,8 +316,21 @@ class WaiverWireProcessor:
         
         return all_transactions
     
-    def process_waiver_transactions(self, transactions: List[Dict[str, Any]]) -> pd.DataFrame:
-        """Process waiver transactions into structured data."""
+    def process_waiver_transactions(self, transactions: List[Dict[str, Any]],
+                                   commit_cache: Dict[str, str] = None,
+                                   git_df_cache: Dict = None,
+                                   df_current: pd.DataFrame = None,
+                                   players_dict: Dict = None) -> pd.DataFrame:
+        """
+        Process waiver transactions into structured data with historical values.
+        
+        Args:
+            transactions: List of waiver transactions
+            commit_cache: Optional Git commit cache for historical values
+            git_df_cache: Optional cache of loaded Git DataFrames
+            df_current: Optional current dynasty values DataFrame
+            players_dict: Optional player data for name resolution
+        """
         logger.info("Processing waiver transactions...")
         
         processed_data = []
@@ -236,6 +374,24 @@ class WaiverWireProcessor:
                             'player_id': player_id,
                             'target_roster_id': roster_id
                         })
+                        
+                        # Add player values if available
+                        if commit_cache and git_df_cache is not None and df_current is not None and players_dict:
+                            player_info = players_dict.get(str(player_id), {})
+                            if isinstance(player_info, dict):
+                                first = player_info.get('first_name', '')
+                                last = player_info.get('last_name', '')
+                                player_name = f"{first} {last}" if first and last else None
+                                
+                                if player_name:
+                                    txn_dt = datetime.fromtimestamp(base_data['created'] / 1000, tz=timezone.utc)
+                                    val_at_txn, val_current, source = get_player_value_at_date(
+                                        player_name, txn_dt, commit_cache, git_df_cache, df_current
+                                    )
+                                    row['player_value_at_transaction'] = val_at_txn
+                                    row['player_value_current'] = val_current
+                                    row['player_value_source'] = source
+                        
                         processed_data.append(row)
                 
                 if drops:
@@ -246,6 +402,24 @@ class WaiverWireProcessor:
                             'player_id': player_id,
                             'target_roster_id': roster_id
                         })
+                        
+                        # Add player values if available
+                        if commit_cache and git_df_cache is not None and df_current is not None and players_dict:
+                            player_info = players_dict.get(str(player_id), {})
+                            if isinstance(player_info, dict):
+                                first = player_info.get('first_name', '')
+                                last = player_info.get('last_name', '')
+                                player_name = f"{first} {last}" if first and last else None
+                                
+                                if player_name:
+                                    txn_dt = datetime.fromtimestamp(base_data['created'] / 1000, tz=timezone.utc)
+                                    val_at_txn, val_current, source = get_player_value_at_date(
+                                        player_name, txn_dt, commit_cache, git_df_cache, df_current
+                                    )
+                                    row['player_value_at_transaction'] = val_at_txn
+                                    row['player_value_current'] = val_current
+                                    row['player_value_source'] = source
+                        
                         processed_data.append(row)
                 
                 # If no adds/drops, still record the transaction
@@ -276,8 +450,21 @@ class WaiverWireProcessor:
         logger.info(f"Processed {len(df)} waiver transaction records")
         return df
     
-    def process_free_agent_transactions(self, transactions: List[Dict[str, Any]]) -> pd.DataFrame:
-        """Process free agent transactions into structured data."""
+    def process_free_agent_transactions(self, transactions: List[Dict[str, Any]],
+                                       commit_cache: Dict[str, str] = None,
+                                       git_df_cache: Dict = None,
+                                       df_current: pd.DataFrame = None,
+                                       players_dict: Dict = None) -> pd.DataFrame:
+        """
+        Process free agent transactions into structured data with historical values.
+        
+        Args:
+            transactions: List of free agent transactions
+            commit_cache: Optional Git commit cache for historical values
+            git_df_cache: Optional cache of loaded Git DataFrames
+            df_current: Optional current dynasty values DataFrame
+            players_dict: Optional player data for name resolution
+        """
         logger.info("Processing free agent transactions...")
         
         processed_data = []
@@ -313,6 +500,24 @@ class WaiverWireProcessor:
                             'player_id': player_id,
                             'target_roster_id': roster_id
                         })
+                        
+                        # Add player values if available
+                        if commit_cache and git_df_cache is not None and df_current is not None and players_dict:
+                            player_info = players_dict.get(str(player_id), {})
+                            if isinstance(player_info, dict):
+                                first = player_info.get('first_name', '')
+                                last = player_info.get('last_name', '')
+                                player_name = f"{first} {last}" if first and last else None
+                                
+                                if player_name:
+                                    txn_dt = datetime.fromtimestamp(base_data['created'] / 1000, tz=timezone.utc)
+                                    val_at_txn, val_current, source = get_player_value_at_date(
+                                        player_name, txn_dt, commit_cache, git_df_cache, df_current
+                                    )
+                                    row['player_value_at_transaction'] = val_at_txn
+                                    row['player_value_current'] = val_current
+                                    row['player_value_source'] = source
+                        
                         processed_data.append(row)
                 
                 if drops:
@@ -323,6 +528,24 @@ class WaiverWireProcessor:
                             'player_id': player_id,
                             'target_roster_id': roster_id
                         })
+                        
+                        # Add player values if available
+                        if commit_cache and git_df_cache is not None and df_current is not None and players_dict:
+                            player_info = players_dict.get(str(player_id), {})
+                            if isinstance(player_info, dict):
+                                first = player_info.get('first_name', '')
+                                last = player_info.get('last_name', '')
+                                player_name = f"{first} {last}" if first and last else None
+                                
+                                if player_name:
+                                    txn_dt = datetime.fromtimestamp(base_data['created'] / 1000, tz=timezone.utc)
+                                    val_at_txn, val_current, source = get_player_value_at_date(
+                                        player_name, txn_dt, commit_cache, git_df_cache, df_current
+                                    )
+                                    row['player_value_at_transaction'] = val_at_txn
+                                    row['player_value_current'] = val_current
+                                    row['player_value_source'] = source
+                        
                         processed_data.append(row)
                 
                 # If no adds/drops, still record the transaction
@@ -559,12 +782,60 @@ def process_waiver_wire_multi_season(force_full_refresh: bool = False) -> str:
                     season_info = season_config.get_season_info(first_season)
                     processor = WaiverWireProcessor(season_info.league_id, first_season)
                     
-                    waiver_df = processor.process_waiver_transactions(waiver_only)
-                    fa_df = processor.process_free_agent_transactions(fa_only)
+                    # Load dynasty values for historical lookup
+                    commit_cache = None
+                    git_df_cache = {}
+                    df_current = None
+                    players_dict = None
+                    
+                    try:
+                        logger.info("Loading current DynastyProcess values...")
+                        df_current = pd.read_csv("https://github.com/dynastyprocess/data/raw/master/files/values.csv")
+                        logger.info(f"✓ Loaded {len(df_current)} current dynasty values")
+                        
+                        # Determine earliest transaction date for Git history
+                        all_txn_created = [t.get('created', 0) for t in all_waiver_transactions if t.get('created')]
+                        if all_txn_created:
+                            earliest_ms = min(all_txn_created)
+                            earliest_dt = datetime.fromtimestamp(earliest_ms / 1000, tz=timezone.utc)
+                            logger.info(f"Earliest transaction: {earliest_dt.strftime('%Y-%m-%d')}")
+                            
+                            # Fetch Git commits for historical values
+                            commit_cache = get_all_commits_since(earliest_dt - timedelta(days=30))
+                        
+                        # Load player data for name resolution
+                        logger.info("Loading player data for value lookup...")
+                        players_url = "https://api.sleeper.app/v1/players/nfl"
+                        players_dict = fetch_with_retry(players_url, timeout=30)
+                        logger.info(f"✓ Loaded {len(players_dict)} players for name resolution")
+                        
+                    except Exception as e:
+                        logger.warning(f"Failed to load dynasty values: {e}")
+                        logger.warning("Continuing without player values...")
+                    
+                    waiver_df = processor.process_waiver_transactions(
+                        waiver_only,
+                        commit_cache=commit_cache,
+                        git_df_cache=git_df_cache,
+                        df_current=df_current,
+                        players_dict=players_dict
+                    )
+                    fa_df = processor.process_free_agent_transactions(
+                        fa_only,
+                        commit_cache=commit_cache,
+                        git_df_cache=git_df_cache,
+                        df_current=df_current,
+                        players_dict=players_dict
+                    )
                     
                     # Combine and save processed data
                     combined_df = pd.concat([waiver_df, fa_df], ignore_index=True)
                     combined_df.to_csv('waiver_wire_analysis.csv', index=False)
+                    
+                    # Log value statistics if available
+                    if 'player_value_at_transaction' in combined_df.columns:
+                        valued_txns = combined_df[combined_df['player_value_at_transaction'].notna()]
+                        logger.info(f"✓ Added historical values to {len(valued_txns)}/{len(combined_df)} transactions")
                     
                     # Generate analysis
                     analysis = processor.generate_waiver_analysis(waiver_df, fa_df)

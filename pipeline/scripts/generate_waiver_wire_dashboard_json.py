@@ -38,17 +38,15 @@ def load_asset_values() -> Dict[str, int]:
             return {}
         
         # Create mapping from player name to current value
-        # We'll use asset_name (player name) as key since that's what we have
         player_values = {}
         for _, row in player_df.iterrows():
             player_name = row['asset_name']
             value = row['value_current']
             
             if pd.notna(player_name) and pd.notna(value):
-                # Store the most recent value for each player (last occurrence wins)
                 player_values[player_name] = int(value)
         
-        logger.info(f"✓ Loaded values for {len(player_values)} players from asset_values_cache.csv")
+        logger.info(f"✓ Loaded CURRENT values for {len(player_values)} players from cache")
         return player_values
         
     except Exception as e:
@@ -614,18 +612,17 @@ def generate_waiver_wire_dashboard_data():
             
             return f"Player {player_id}"
         
-        # Helper function to get player value
-        def get_player_value(player_name):
-            """Get player value from cache, returns None if not found."""
+        # Helper function to get player value (fallback for rows without cached values)
+        def get_player_value_fallback(player_name):
+            """Get player value from cache as fallback."""
             if not player_name or player_name == 'Unknown Player':
                 return None
             
-            # Direct lookup by name
             value = player_values.get(player_name)
             if value is not None:
                 return value
             
-            # Try case-insensitive match as fallback
+            # Try case-insensitive match
             player_name_lower = player_name.lower()
             for name, val in player_values.items():
                 if name.lower() == player_name_lower:
@@ -668,7 +665,14 @@ def generate_waiver_wire_dashboard_data():
                     priority_val = None if pri == -1 else pri
                 
                 player_name = get_player_name(row['player_id'])
-                player_value = get_player_value(player_name)
+                
+                # Use historical value from CSV if available (added by Stage 5)
+                player_value = None
+                if 'player_value_at_transaction' in row.index and pd.notna(row['player_value_at_transaction']):
+                    player_value = int(row['player_value_at_transaction'])
+                else:
+                    # Fallback to current value from cache if historical not available
+                    player_value = get_player_value_fallback(player_name)
                 
                 transaction = {
                     'transaction_id': row['transaction_id'],
