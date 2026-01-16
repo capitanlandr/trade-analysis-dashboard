@@ -1,22 +1,22 @@
 {
   "summary": {
-    "total_waiver_transactions": 342,
-    "total_free_agent_transactions": 1,
-    "successful_waivers": 230,
+    "total_waiver_transactions": 346,
+    "total_free_agent_transactions": 210,
+    "successful_waivers": 234,
     "failed_waivers": 112,
-    "total_waiver_bids": "2507",
-    "average_waiver_bid": 13.850828729281767
+    "total_waiver_bids": "2508",
+    "average_waiver_bid": 13.780219780219781
   },
   "manager_activity": [
     {
       "roster_id": 1,
       "team_name": "208 Ferrari Way",
-      "total_claims": 25,
-      "total_bid": 152,
-      "avg_bid": 4.22,
+      "total_claims": 27,
+      "total_bid": 153,
+      "avg_bid": 3.92,
       "max_bid": 52,
-      "successful_claims": 23,
-      "success_rate": 92.0
+      "successful_claims": 26,
+      "success_rate": 96.3
     },
     {
       "roster_id": 2,
@@ -61,12 +61,12 @@
     {
       "roster_id": 6,
       "team_name": "Mostly Washed",
-      "total_claims": 11,
+      "total_claims": 12,
       "total_bid": 153,
-      "avg_bid": 9.56,
+      "avg_bid": 9.0,
       "max_bid": 75,
-      "successful_claims": 12,
-      "success_rate": 109.1
+      "successful_claims": 13,
+      "success_rate": 108.3
     },
     {
       "roster_id": 7,
@@ -131,94 +131,89 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 1,
-      "waiver": 193
+      "free_agent": 79,
+      "waiver": 197
     },
     "2": {
-      "free_agent": 0,
+      "free_agent": 7,
       "waiver": 16
     },
     "3": {
-      "free_agent": 0,
+      "free_agent": 6,
       "waiver": 5
     },
     "4": {
-      "free_agent": 0,
+      "free_agent": 6,
       "waiver": 6
     },
     "5": {
-      "free_agent": 0,
+      "free_agent": 14,
       "waiver": 16
     },
     "6": {
-      "free_agent": 0,
+      "free_agent": 11,
       "waiver": 2
     },
     "7": {
-      "free_agent": 0,
+      "free_agent": 3,
       "waiver": 4
     },
     "8": {
-      "free_agent": 0,
+      "free_agent": 8,
       "waiver": 12
     },
     "9": {
-      "free_agent": 0,
+      "free_agent": 15,
       "waiver": 7
     },
     "10": {
-      "free_agent": 0,
+      "free_agent": 4,
       "waiver": 2
     },
     "11": {
-      "free_agent": 0,
+      "free_agent": 15,
       "waiver": 19
     },
     "12": {
-      "free_agent": 0,
+      "free_agent": 9,
       "waiver": 8
     },
     "13": {
-      "free_agent": 0,
+      "free_agent": 6,
       "waiver": 11
     },
     "14": {
-      "free_agent": 0,
+      "free_agent": 3,
       "waiver": 11
     },
     "15": {
-      "free_agent": 0,
+      "free_agent": 8,
       "waiver": 20
     },
     "16": {
-      "free_agent": 0,
+      "free_agent": 10,
       "waiver": 7
     },
     "17": {
-      "free_agent": 0,
+      "free_agent": 6,
       "waiver": 3
     }
   },
   "contested_players": {
-    "1166": {
-      "transaction_id": 7,
-      "waiver_bid": 84,
-      "status": 1
-    },
     "6111": {
       "transaction_id": 7,
       "waiver_bid": 109,
+      "status": 1
+    },
+    "1166": {
+      "transaction_id": 7,
+      "waiver_bid": 84,
       "status": 1
     },
     "12775": {
       "transaction_id": 6,
       "waiver_bid": 51,
       "status": 3
-    },
-    "8123": {
-      "transaction_id": 5,
-      "waiver_bid": 43,
-      "status": 2
     },
     "6271": {
       "transaction_id": 5,
@@ -230,19 +225,9 @@
       "waiver_bid": 46,
       "status": 1
     },
-    "12531": {
-      "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
-    },
-    "4454": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
+    "8123": {
+      "transaction_id": 5,
+      "waiver_bid": 43,
       "status": 2
     },
     "9497": {
@@ -255,30 +240,30 @@
       "waiver_bid": 25,
       "status": 2
     },
+    "4454": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 3
+    },
     "8917": {
       "transaction_id": 4,
       "waiver_bid": 6,
       "status": 2
     },
-    "2197": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
+    "12531": {
+      "transaction_id": 4,
+      "waiver_bid": 52,
+      "status": 1
+    },
+    "7670": {
+      "transaction_id": 4,
+      "waiver_bid": 12,
+      "status": 2
     },
     "5857": {
       "transaction_id": 3,
       "waiver_bid": 8,
       "status": 1
-    },
-    "11439": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "11650": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
     },
     "11435": {
       "transaction_id": 3,
@@ -290,20 +275,35 @@
       "waiver_bid": 0,
       "status": 2
     },
+    "2197": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
     "6011": {
       "transaction_id": 3,
       "waiver_bid": 41,
       "status": 1
     },
+    "8160": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
+    },
     "12470": {
       "transaction_id": 3,
       "waiver_bid": 6,
       "status": 1
+    },
+    "11439": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
     }
   },
   "bidding_patterns": {
     "bid_distribution": {
-      "1": 27,
+      "1": 28,
       "2": 15,
       "5": 13,
       "10": 12,
@@ -399,14 +399,15 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 76.3975155279503
+    "zero_bid_success_rate": 76.82926829268293
   },
   "multi_season_metadata": {
     "processed_seasons": [
+      "season_2",
       "season_3"
     ],
-    "total_new_transactions": 2,
-    "total_duplicates": 0,
-    "fetch_mode": "incremental"
+    "total_new_transactions": 178,
+    "total_duplicates": 228,
+    "fetch_mode": "full"
   }
 }
