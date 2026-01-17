@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
+import HostingBanner from '../UI/HostingBanner';
 
 const DashboardLayout: React.FC = () => {
   // Fetch standings data to get last update time
@@ -63,6 +64,9 @@ const DashboardLayout: React.FC = () => {
           </div>
         </div>
       </header>
+
+      {/* Hosting Migration Banner */}
+      <HostingBanner />
 
       {/* Navigation */}
       <nav className="bg-white shadow-sm relative z-20">
