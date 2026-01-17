@@ -850,7 +850,7 @@ def generate_waiver_wire_dashboard_data():
         }
         
         # Save dashboard data to single source of truth
-        output_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/api-waiver-wire.json'
+        output_file = Path(__file__).parent.parent.parent / 'dashboard/frontend/public/waiver-wire-page.json'
         output_file.parent.mkdir(parents=True, exist_ok=True)
         
         def clean_nan(obj):

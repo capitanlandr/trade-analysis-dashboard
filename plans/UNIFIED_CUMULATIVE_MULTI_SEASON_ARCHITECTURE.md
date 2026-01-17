@@ -28,7 +28,7 @@ graph TD
     C -->|Static: S1, S2| E[Skip - Immutable]
     D --> F[Tag with season: season_3]
     F --> G[Append to trades.json]
-    F --> H[Append to waiver-wire.json]
+    F --> H[Append to cumulative_processed_waiver_transactions.json]
     G --> I[Deduplication Check]
     H --> I
     I --> J[Dashboard JSON Copy]
@@ -206,7 +206,7 @@ Frontend → Load api-trades.json once → Filter by season in-memory
 
 ### 2.2 Cumulative Waiver Wire Schema
 
-**FILE**: `pipeline/waiver-wire.json` (unified, all seasons)
+**FILE**: `pipeline/cumulative_processed_waiver_transactions.json` (unified, all seasons)
 
 ```json
 {
@@ -377,7 +377,7 @@ def append_to_cumulative_file(
     - Crash-safe
     
     Args:
-        filename: File to append to (trades.json or waiver-wire.json)
+        filename: File to append to (trades.json or cumulative_processed_waiver_transactions.json)
         new_records: Records to append
         season_key: Season for metadata updates (optional)
         
@@ -673,7 +673,7 @@ pipeline:
   
   cumulative_files:
     trades: "trades.json"
-    waiver_wire: "waiver-wire.json"
+    waiver_wire: "cumulative_processed_waiver_transactions.json"
   
   per_season_directories:
     standings: "standings"
@@ -916,7 +916,7 @@ print(f'✅ {backup}')
 cd pipeline
 ./scripts/backfill_historical_seasons.sh
 # Follow prompts
-# Result: trades.json and waiver-wire.json created with S2 data
+# Result: trades.json and cumulative_processed_waiver_transactions.json created with S2 data
 ```
 
 **STEP 3: Create New Files** (30 min)
@@ -1229,7 +1229,7 @@ cp -r "$BACKUP/dashboard/"* dashboard/frontend/public/
 
 # Remove cumulative files
 rm pipeline/trades.json
-rm pipeline/waiver-wire.json
+rm pipeline/cumulative_processed_waiver_transactions.json
 
 # Restore original structure
 # Dashboard will show Season 2 data only
@@ -1248,7 +1248,7 @@ python3 << 'EOF'
 import json
 from pathlib import Path
 
-for filename in ['trades.json', 'waiver-wire.json']:
+for filename in ['trades.json', 'cumulative_processed_waiver_transactions.json']:
     path = Path(f'pipeline/{filename}')
     data = json.loads(path.read_text())
     
@@ -1400,7 +1400,7 @@ def export_all_seasons_csv():
 
 **Hour 1-2: Backfill & Infrastructure**
 - Run backfill script for Season 2
-- Create cumulative files (trades.json, waiver-wire.json)
+- Create cumulative files (trades.json, cumulative_processed_waiver_transactions.json)
 - Create new utility files (cumulative_file_manager, immutability_guard)
 - Create per-season directories (standings/, playoff-scenarios/)
 
@@ -1542,7 +1542,7 @@ cp pipeline/trades.json.bak.20251231_140000 pipeline/trades.json
 ### 19.2 File Locations
 
 **Pipeline**:
-- Cumulative: `pipeline/trades.json`, `pipeline/waiver-wire.json`
+- Cumulative: `pipeline/trades.json`, `pipeline/cumulative_processed_waiver_transactions.json`
 - Per-Season: `pipeline/standings/season_{1|2|3}.json`
 - Config: `pipeline/config/seasons.yaml`
 - Backups: `pipeline/*.bak.*`
@@ -1566,7 +1566,7 @@ cp pipeline/trades.json.bak.20251231_140000 pipeline/trades.json
 
 | Term | Definition |
 |------|------------|
-| **Cumulative File** | JSON file containing records from ALL seasons (trades.json, waiver-wire.json) |
+| **Cumulative File** | JSON file containing records from ALL seasons (trades.json, cumulative_processed_waiver_transactions.json) |
 | **Season Tag** | `season` field on each record identifying which season it belongs to |
 | **Static Season** | Historical season that is immutable - never re-fetched from API |
 | **Active Season** | Current ongoing season that updates daily via incremental fetches |

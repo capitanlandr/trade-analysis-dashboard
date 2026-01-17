@@ -109,7 +109,7 @@ class HealthCheck:
             ("api-trades.json", "Trade data"),
             ("api-teams.json", "Team data"),
             ("api-standings.json", "Standings data"),
-            ("api-waiver-wire.json", "Waiver wire data"),
+            ("waiver-wire-page.json", "Waiver wire data"),
             ("api-stats-summary.json", "Stats summary"),
         ]
         

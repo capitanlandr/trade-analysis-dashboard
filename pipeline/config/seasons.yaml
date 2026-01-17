@@ -20,7 +20,7 @@ pipeline:
   allow_static_refetch: false
   cumulative_files:
     trades: trades.json
-    waiver_wire: waiver-wire.json
+    waiver_wire: cumulative_processed_waiver_transactions.json
   backup_before_append: true
   validation:
     require_league_ids: true

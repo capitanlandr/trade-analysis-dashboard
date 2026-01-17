@@ -85,7 +85,7 @@ December 15, 2025
    - Calculates percentages
    - Identifies notable hits
 
-4. **JSON Generation** → `api-waiver-wire.json`
+4. **JSON Generation** → `waiver-wire-page.json`
    - Includes `hit_rate_metrics` key
    - Manager metrics array
    - League statistics

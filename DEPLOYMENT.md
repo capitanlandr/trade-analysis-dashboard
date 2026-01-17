@@ -102,7 +102,7 @@ The pipeline workflow:
 - `dashboard/frontend/public/api-stats-summary.json` - League stats
 - `dashboard/frontend/public/api-standings.json` - Current week standings
 - `dashboard/frontend/public/api-playoff-scenarios.json` - Playoff probabilities
-- `dashboard/frontend/public/api-waiver-wire.json` - Waiver wire metrics
+- `dashboard/frontend/public/waiver-wire-page.json` - Waiver wire metrics
 - `dashboard/frontend/public/api-draft-order.json` - Draft order projections
 
 ## Verifying Deployment

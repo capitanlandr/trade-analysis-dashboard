@@ -80,7 +80,7 @@ def pipeline_config_strategy(draw, season_names: List[str]):
         active_seasons=active_seasons,
         static_seasons=static_seasons,
         allow_static_refetch=draw(st.booleans()),
-        cumulative_files={'trades': 'trades.json', 'waiver_wire': 'waiver-wire.json'},
+        cumulative_files={'trades': 'trades.json', 'waiver_wire': 'cumulative_processed_waiver_transactions.json'},
         backup_before_append=draw(st.booleans()),
         validation={
             'require_league_ids': draw(st.booleans()),

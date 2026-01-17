@@ -51,14 +51,14 @@ DASHBOARD_JSON_FILES = [
     "api-stats-summary.json",
     "api-standings.json",
     "api-playoff-scenarios.json",
-    "api-waiver-wire.json",
+    "waiver-wire-page.json",
     "api-draft-order.json"
 ]
 
 # Cumulative files that need to be copied to frontend
 CUMULATIVE_FILES = [
     "trades.json",
-    "waiver-wire.json"
+    "cumulative_processed_waiver_transactions.json"
 ]
 
 PIPELINE_STAGES = [

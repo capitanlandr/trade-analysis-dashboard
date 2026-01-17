@@ -57,7 +57,7 @@ frontend/
     ├── api-teams.json                        # Team rosters
     ├── api-standings.json                    # Current standings
     ├── api-playoff-scenarios.json            # Playoff simulations
-    ├── api-waiver-wire.json                  # Waiver wire metrics
+    ├── waiver-wire-page.json                  # Waiver wire metrics
     ├── api-draft-order.json                  # Draft order projections
     └── README.md                             # Data generation guide
 ```
@@ -136,7 +136,7 @@ pipeline/
 - `api-teams.json` - Team rosters and metadata
 - `api-standings.json` - Current standings
 - `api-playoff-scenarios.json` - Playoff simulation results
-- `api-waiver-wire.json` - Waiver wire efficiency metrics
+- `waiver-wire-page.json` - Waiver wire efficiency metrics
 - `api-draft-order.json` - Draft order projections
 
 ### Documentation

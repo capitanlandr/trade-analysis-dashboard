@@ -27,7 +27,7 @@ The Fantasy Football Trade Analysis Dashboard requires a unified cumulative mult
 #### Acceptance Criteria
 
 1. THE System SHALL store all trade transactions in a single `trades.json` file with `season` field on each record
-2. THE System SHALL store all waiver transactions in a single `waiver-wire.json` file with `season` field on each record  
+2. THE System SHALL store all waiver transactions in a single `cumulative_processed_waiver_transactions.json` file with `season` field on each record  
 3. WHEN a transaction is stored, THE System SHALL include metadata indicating which seasons are present in the file
 4. THE System SHALL maintain transaction counts per season in file metadata
 5. THE System SHALL preserve the complete original transaction structure from Sleeper_API with added season tag

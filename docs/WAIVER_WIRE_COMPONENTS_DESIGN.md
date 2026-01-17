@@ -23,7 +23,7 @@ This document outlines the design and implementation plan for 4 new UI component
 
 **Existing Components:**
 - `WaiverWireAnalysis.tsx` - Main page with transaction table
-- `api-waiver-wire.json` - Data source with 482 transactions (291 waiver + 191 FA)
+- `waiver-wire-page.json` - Data source with 482 transactions (291 waiver + 191 FA)
 
 **Current Data Structure:**
 ```typescript

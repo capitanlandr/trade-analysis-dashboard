@@ -38,7 +38,7 @@ The system consists of two main components:
 - `api-teams.json` - Team rosters and metadata
 - `api-standings.json` - Current standings
 - `api-playoff-scenarios.json` - Playoff simulations
-- `api-waiver-wire.json` - Waiver wire metrics
+- `waiver-wire-page.json` - Waiver wire metrics
 - `api-draft-order.json` - 2026 draft order projections
 
 **Weekly Data:**

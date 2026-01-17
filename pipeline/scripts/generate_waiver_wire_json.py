@@ -265,7 +265,7 @@ def main():
         waiver_data = generator.generate_json()
         
         # Save to dashboard public directory
-        output_path = "../dashboard/frontend/public/api-waiver-wire.json"
+        output_path = "../dashboard/frontend/public/waiver-wire-page.json"
         generator.save_json(waiver_data, output_path)
         
         print(f"✅ Waiver wire JSON generated successfully!")

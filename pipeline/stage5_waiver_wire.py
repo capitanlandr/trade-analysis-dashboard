@@ -662,7 +662,7 @@ def process_waiver_wire_multi_season(force_full_refresh: bool = False) -> str:
         
         # Initialize cumulative file manager
         cumulative_manager = CumulativeFileManager()
-        cumulative_file = "waiver-wire.json"  # Cumulative waiver wire file
+        cumulative_file = "cumulative_processed_waiver_transactions.json"  # Cumulative processed waiver transactions
         
         # Initialize cumulative file if it doesn't exist
         if not cumulative_manager.initialize_cumulative_file(cumulative_file, "waiver-wire"):

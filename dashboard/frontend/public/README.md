@@ -167,7 +167,7 @@ Monte Carlo simulation results showing playoff probabilities.
 }
 ```
 
-### api-waiver-wire.json
+### waiver-wire-page.json
 Waiver wire efficiency metrics for each manager.
 
 **Schema:**

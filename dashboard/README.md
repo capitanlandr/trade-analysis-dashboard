@@ -81,7 +81,7 @@ dashboard/
 │       ├── api-stats-summary.json
 │       ├── api-standings.json
 │       ├── api-playoff-scenarios.json
-│       ├── api-waiver-wire.json
+│       ├── waiver-wire-page.json
 │       └── api-draft-order.json
 └── backend.ARCHIVED/         # Legacy backend (no longer used)
 ```
@@ -138,7 +138,7 @@ This creates all 7 JSON files in `frontend/public/`.
 - Projected seeds and ranges
 - Clinch/elimination status
 
-**api-waiver-wire.json** - Waiver metrics
+**waiver-wire-page.json** - Waiver metrics
 - Hit Rate: % of claims becoming starters
 - Churn Index: Add/drop activity
 - Efficiency Score: Weighted hit rate + value

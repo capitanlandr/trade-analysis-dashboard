@@ -327,10 +327,10 @@ cd /Users/lndahayo/Documents/Commish\ Tiers/trade-analysis-dashboard-clean
 find . -name "api-*.json" -o -name "*_analysis.json" -o -name "playoff_*.json"
 
 # Expected output shows duplicates:
-# ./api-waiver-wire.json
-# ./pipeline/api-waiver-wire.json
-# ./dashboard/public/api-waiver-wire.json
-# ./dashboard/frontend/public/api-waiver-wire.json
+# ./waiver-wire-page.json
+# ./pipeline/waiver-wire-page.json
+# ./dashboard/public/waiver-wire-page.json
+# ./dashboard/frontend/public/waiver-wire-page.json
 # (plus trades, standings, teams, etc.)
 ```
 
@@ -413,7 +413,7 @@ cd dashboard/frontend/public
 # Copy current files as examples (before deleting originals)
 cp api-trades.json api-trades.example.json
 cp api-teams.json api-teams.example.json
-cp api-waiver-wire.json api-waiver-wire.example.json
+cp waiver-wire-page.json api-waiver-wire.example.json
 
 # Create README explaining data generation
 cat > README.md << 'EOF'
@@ -446,7 +446,7 @@ python pipeline/scripts/calculate_playoff_scenarios.py
 - `api-trades.json` - Trade analysis with valuations and win rates
 - `api-teams.json` - Team rosters and metadata
 - `api-standings.json` - Current standings with playoff scenarios
-- `api-waiver-wire.json` - Waiver wire acquisition metrics
+- `waiver-wire-page.json` - Waiver wire acquisition metrics
 - `api-stats-summary.json` - League-wide statistics
 - `playoff_scenarios_simulated.json` - Monte Carlo playoff simulations
 
@@ -495,7 +495,7 @@ ls -lh dashboard/frontend/public/api-*.json
 # Expected output:
 # api-trades.json (present)
 # api-teams.json (present)
-# api-waiver-wire.json (present)
+# waiver-wire-page.json (present)
 # api-standings.json (present)
 # api-stats-summary.json (present)
 
@@ -517,7 +517,7 @@ python update_dashboard.py
 # Verify all expected files present
 test -f dashboard/frontend/public/api-trades.json && echo "✓ Trades data generated"
 test -f dashboard/frontend/public/api-teams.json && echo "✓ Teams data generated"
-test -f dashboard/frontend/public/api-waiver-wire.json && echo "✓ Waiver data generated"
+test -f dashboard/frontend/public/waiver-wire-page.json && echo "✓ Waiver data generated"
 ```
 
 **Frontend Integration Test:**
@@ -863,7 +863,7 @@ import { useQuery, UseQueryResult } from '@tanstack/react-query'
 export const useWaiverWireData = (): UseQueryResult<WaiverWireData> => {
   return useQuery({
     queryKey: ['waiver-wire'],
-    queryFn: () => fetch('/api-waiver-wire.json').then(r => r.json()),
+    queryFn: () => fetch('/waiver-wire-page.json').then(r => r.json()),
     staleTime: 5 * 60 * 1000, // 5 minutes
     cacheTime: 30 * 60 * 1000, // 30 minutes
   })
@@ -900,7 +900,7 @@ const WaiverWireAnalysis: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch('/api-waiver-wire.json')
+    fetch('/waiver-wire-page.json')
       .then(res => res.json())
       .then(setData)
       .catch(err => setError(err.message))

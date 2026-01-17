@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    strictPort: false, // Allow Vite to use next available port if 5173 is busy
+    strictPort: true, // Fail if port 5173 is busy instead of using next available port
     open: true // Auto-open browser
   },
   build: {

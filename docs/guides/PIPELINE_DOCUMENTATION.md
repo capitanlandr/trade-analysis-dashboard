@@ -534,7 +534,7 @@ dashboard/frontend/public/
 ├── api-trades.json              [Stage 8]
 ├── api-teams.json               [Stage 8]
 ├── api-stats-summary.json       [Stage 8]
-├── api-waiver-wire.json         [Stage 9]
+├── waiver-wire-page.json         [Stage 9]
 ├── api-standings.json           [Stage 10]
 ├── api-playoff-scenarios.json   [Stage 11]
 └── api-draft-order.json         [Stage 7a/8]

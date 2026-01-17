@@ -91,10 +91,10 @@ The backend is demonstrably unused—the codebase already runs in production wit
 
 **Current State:**
 ```
-root/api-waiver-wire.json           # Why here?
-pipeline/api-waiver-wire.json       # Also here?
-dashboard/frontend/public/api-waiver-wire.json  # And here!
-dashboard/public/api-waiver-wire.json           # Plus here!
+root/waiver-wire-page.json           # Why here?
+pipeline/waiver-wire-page.json       # Also here?
+dashboard/frontend/public/waiver-wire-page.json  # And here!
+dashboard/public/waiver-wire-page.json           # Plus here!
 ```
 
 This pattern repeats across all data files—trades, standings, playoff scenarios. Files exist in 3-4 locations per dataset, creating confusion about source of truth and unnecessarily inflating repository size.
@@ -124,10 +124,10 @@ Python Pipeline → dashboard/frontend/public/api-*.json (ONLY)
    ```python
    # In all generate_*_dashboard_json.py scripts
    # Change output path from:
-   output_path = Path("api-waiver-wire.json")
+   output_path = Path("waiver-wire-page.json")
    
    # To:
-   output_path = Path("dashboard/frontend/public/api-waiver-wire.json")
+   output_path = Path("dashboard/frontend/public/waiver-wire-page.json")
    ```
    
    Scripts to update:
@@ -301,7 +301,7 @@ const { data, isLoading } = useQuery(['trades'], fetchTrades)
 
 // ❌ WaiverWireAnalysis.tsx - Manual fetch (inconsistent)
 useEffect(() => {
-  fetch('/api-waiver-wire.json')
+  fetch('/waiver-wire-page.json')
     .then(res => res.json())
     .then(setData)
 }, [])
@@ -313,7 +313,7 @@ Create centralized data fetching hooks in `dashboard/frontend/src/services/api.t
 ```typescript
 export const useWaiverWireData = () => {
   return useQuery(['waiver-wire'], () => 
-    fetch('/api-waiver-wire.json').then(r => r.json())
+    fetch('/waiver-wire-page.json').then(r => r.json())
   )
 }
 

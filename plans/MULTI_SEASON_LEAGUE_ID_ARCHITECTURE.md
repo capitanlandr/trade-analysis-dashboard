@@ -96,7 +96,7 @@ dashboard/frontend/public/
 export const api = {
   getTrades: async () => apiFetch('/api-trades.json'),
   getTeams: async () => apiFetch('/api-teams.json'),
-  getWaiverWireData: () => apiFetch('/api-waiver-wire.json'),
+  getWaiverWireData: () => apiFetch('/waiver-wire-page.json'),
   // NO season parameter - assumes single season
 };
 ```
@@ -986,7 +986,7 @@ dashboard/frontend/public/
 ├── api-teams.json             # Symlink/copy to active season
 ├── api-standings.json         # Symlink/copy to active season
 ├── api-playoff-scenarios.json # Symlink/copy to active season
-├── api-waiver-wire.json       # Symlink/copy to active season
+├── waiver-wire-page.json       # Symlink/copy to active season
 ├── api-draft-order.json       # Symlink/copy to active season
 ├── api-stats-summary.json     # Symlink/copy to active season
 │
@@ -1141,7 +1141,7 @@ def copy_active_season_to_root():
         'api-teams.json',
         'api-standings.json',
         'api-playoff-scenarios.json',
-        'api-waiver-wire.json',
+        'waiver-wire-page.json',
         'api-draft-order.json',
         'api-stats-summary.json'
     ]

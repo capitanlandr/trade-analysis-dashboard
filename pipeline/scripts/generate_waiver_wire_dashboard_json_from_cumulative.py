@@ -8,11 +8,11 @@ for the multi-season architecture.
 
 MULTI-SEASON ARCHITECTURE:
 ==========================
-This script reads from cumulative waiver-wire.json that contains ALL seasons' waiver data
+This script reads from cumulative_processed_waiver_transactions.json that contains ALL seasons' waiver data
 with season tags, then generates dashboard JSON files that support client-side season filtering.
 
 Key Changes from Original:
-- Reads from cumulative waiver-wire.json instead of waiver_wire_analysis.csv
+- Reads from cumulative_processed_waiver_transactions.json instead of waiver_wire_analysis.csv
 - Preserves season metadata in dashboard JSON
 - Supports multi-season data structure
 - Maintains backward compatibility with existing frontend
@@ -42,12 +42,12 @@ PIPELINE_DIR = SCRIPT_DIR.parent
 REPO_ROOT = PIPELINE_DIR.parent
 
 # Input paths - cumulative files (source of truth)
-CUMULATIVE_WAIVER_WIRE = PIPELINE_DIR / 'waiver-wire.json'
+CUMULATIVE_WAIVER_WIRE = PIPELINE_DIR / 'cumulative_processed_waiver_transactions.json'
 ASSET_VALUES_CSV = PIPELINE_DIR / 'asset_values_cache.csv'  # Still needed for player values
 
 # Output paths - dashboard JSON files
 DASHBOARD_DIR = REPO_ROOT / 'dashboard/frontend/public'
-OUTPUT_WAIVER_WIRE = DASHBOARD_DIR / 'api-waiver-wire.json'
+OUTPUT_WAIVER_WIRE = DASHBOARD_DIR / 'waiver-wire-page.json'
 
 # Optional data files for enhanced metrics
 PLAYER_STATS_FILE = PIPELINE_DIR / 'player_stats_weekly.json'
@@ -56,7 +56,7 @@ LINEUP_DATA_FILE = PIPELINE_DIR / 'lineup_data_weekly.json'
 
 def load_cumulative_waiver_wire() -> Dict[str, Any]:
     """
-    Load waiver wire data from cumulative waiver-wire.json file.
+    Load waiver wire data from cumulative_processed_waiver_transactions.json file.
     
     Returns:
         Dict containing waiver transactions and metadata from cumulative file
@@ -77,7 +77,7 @@ def load_cumulative_waiver_wire() -> Dict[str, Any]:
         # Handle different key names in cumulative file
         transactions = cumulative_data.get('transactions', [])
         if not transactions:
-            # Try alternative key name used in waiver-wire.json
+            # Try alternative key name used in cumulative file
             transactions = cumulative_data.get('waiver-wire', [])
         
         metadata = cumulative_data.get('metadata', {})

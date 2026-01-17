@@ -8,7 +8,7 @@ for the multi-season architecture.
 
 MULTI-SEASON ARCHITECTURE:
 ==========================
-This script reads from cumulative files (trades.json, waiver-wire.json) that contain
+This script reads from cumulative files (trades.json, cumulative_processed_waiver_transactions.json) that contain
 ALL seasons' data with season tags, then generates dashboard JSON files that support
 client-side season filtering.
 
@@ -41,7 +41,7 @@ REPO_ROOT = PIPELINE_DIR.parent
 
 # Input paths - cumulative files (source of truth)
 CUMULATIVE_TRADES = PIPELINE_DIR / 'trades.json'
-CUMULATIVE_WAIVER_WIRE = PIPELINE_DIR / 'waiver-wire.json'
+CUMULATIVE_WAIVER_WIRE = PIPELINE_DIR / 'cumulative_processed_waiver_transactions.json'
 TEAMS_CSV = PIPELINE_DIR / 'team_identity_mapping.csv'  # Still needed for team info
 STANDINGS_JSON = PIPELINE_DIR / 'standings_data.json'
 TRADES_ANALYSIS_CSV = PIPELINE_DIR / 'league_trades_analysis_pipeline.csv'  # For correct value_change calculations

@@ -102,7 +102,7 @@ export const api = {
   // Waiver Wire
   getWaiverWireData: () => {
     if (USE_STATIC_DATA) {
-      return apiFetch('/api-waiver-wire.json');
+      return apiFetch('/waiver-wire-page.json');
     }
     return apiFetch('/waiver-wire');
   },
@@ -119,7 +119,7 @@ export const api = {
 export const useWaiverWireData = (): UseQueryResult<WaiverWireData> => {
   return useQuery({
     queryKey: ['waiver-wire'],
-    queryFn: () => fetch('/api-waiver-wire.json').then(r => {
+    queryFn: () => fetch('/waiver-wire-page.json').then(r => {
       if (!r.ok) throw new Error('Failed to fetch waiver wire data');
       return r.json();
     }),

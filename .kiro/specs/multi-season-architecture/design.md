@@ -18,7 +18,7 @@ graph TD
     C -->|Static: S1, S2| E[Skip - Immutable]
     D --> F[Tag with season: season_3]
     F --> G[Append to trades.json]
-    F --> H[Append to waiver-wire.json]
+    F --> H[Append to cumulative_processed_waiver_transactions.json]
     G --> I[Deduplication Check]
     H --> I
     I --> J[Dashboard JSON Copy]

@@ -71,7 +71,7 @@ Dashboard JSON Files (dashboard/frontend/public/)
     ├─ api-stats-summary.json
     ├─ api-standings.json
     ├─ api-playoff-scenarios.json
-    ├─ api-waiver-wire.json
+    ├─ waiver-wire-page.json
     └─ api-draft-order.json
     ↓
 React Dashboard (Vite + React + TypeScript)
@@ -125,7 +125,7 @@ The dashboard reads from JSON files in [`dashboard/frontend/public/`](dashboard/
 - **api-stats-summary.json** - League-wide trade statistics
 - **api-standings.json** - Current week standings with division info
 - **api-playoff-scenarios.json** - Monte Carlo simulation results with playoff probabilities
-- **api-waiver-wire.json** - Waiver wire metrics (hit rate, churn, efficiency, timing)
+- **waiver-wire-page.json** - Waiver wire metrics (hit rate, churn, efficiency, timing)
 - **api-draft-order.json** - Progressive 2026 draft order projections by week
 
 See [`dashboard/frontend/public/README.md`](dashboard/frontend/public/README.md) for detailed schema documentation.
