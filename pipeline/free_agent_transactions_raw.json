@@ -4466,5 +4466,30 @@
     "waiver_budget": [],
     "league_id": "1180814327660371968",
     "season": "season_2"
+  },
+  {
+    "status": "complete",
+    "type": "free_agent",
+    "metadata": null,
+    "created": 1768637404949,
+    "settings": null,
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "867921673234632704",
+    "transaction_id": "1318164451911798784",
+    "adds": null,
+    "consenter_ids": [
+      2
+    ],
+    "drops": {
+      "827": 2
+    },
+    "roster_ids": [
+      2
+    ],
+    "status_updated": 1768637404949,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
   }
 ]
