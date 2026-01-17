@@ -1,9 +1,8 @@
 {
-  "version": 2,
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://d137gsvp1einvh.cloudfront.net/$1",
+      "source": "/:path*",
+      "destination": "https://d137gsvp1einvh.cloudfront.net/:path*",
       "permanent": true
     }
   ]
