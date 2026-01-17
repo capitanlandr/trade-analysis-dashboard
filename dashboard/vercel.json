@@ -1,9 +1,16 @@
 {
+  "version": 2,
   "redirects": [
     {
       "source": "/:path*",
       "destination": "https://d137gsvp1einvh.cloudfront.net/:path*",
       "permanent": true
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
