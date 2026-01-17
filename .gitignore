@@ -133,3 +133,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
+# AWS credentials and sensitive setup files (DO NOT COMMIT)
+AWS_ACCOUNT_SETUP_CHECKLIST.md
+DEPLOYMENT_SUMMARY.md
+GITHUB_SECRETS_SETUP.md
+AWS_SETUP_PERSONAL_ACCOUNT.md
