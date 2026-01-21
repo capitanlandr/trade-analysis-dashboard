@@ -45,8 +45,57 @@ jobs:
           # Add any environment variables/secrets here if needed
           PYTHONUNBUFFERED: 1
       
-      - name: Check if deployment succeeded
+      - name: Setup Node.js for frontend build
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'dashboard/frontend/package-lock.json'
+      
+      - name: Install frontend dependencies
+        run: |
+          cd dashboard/frontend
+          npm ci
+      
+      - name: Build production bundle
+        run: |
+          cd dashboard/frontend
+          npm run build
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      
+      - name: Deploy to AWS S3
+        run: |
+          cd dashboard/frontend
+          # Upload assets with long cache
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET }}/ \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "*.json"
+          
+          # Upload HTML and JSON with short cache
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET }}/ \
+            --exclude "*" \
+            --include "*.html" \
+            --include "*.json" \
+            --cache-control "public, max-age=3600, must-revalidate"
+      
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+      
+      - name: Deployment summary
         run: |
           echo "✅ Pipeline completed successfully!"
-          echo "Dashboard will update on Vercel in 2-3 minutes"
-          echo "Check: https://dynasuiiiianalytics.vercel.app/"
+          echo "📊 Data updated and deployed to:"
+          echo "   • Vercel: https://dynasuiiiianalytics.vercel.app (via git push)"
+          echo "   • AWS: https://d137gsvp1einvh.cloudfront.net (via S3 sync)"
+          echo "🔄 Both sites will show latest data in 3-5 minutes!"
