@@ -1,0 +1,33 @@
+seasons:
+  season_2:
+    status: static
+    league_id: '1180814327660371968'
+    year: 2024
+    description: Season 2 - Historical data (2024)
+    backfill_completed: true
+    last_incremental_fetch: '2025-12-30T19:33:46.040000+00:00'
+  season_3:
+    status: active
+    league_id: '1312166810505719808'
+    year: 2025
+    description: Season 3 - Current season (2025)
+    last_incremental_fetch: '2026-01-20T14:28:22.558090Z'
+pipeline:
+  active_seasons:
+  - season_3
+  static_seasons:
+  - season_2
+  allow_static_refetch: false
+  cumulative_files:
+    trades: trades.json
+    waiver_wire: cumulative_processed_waiver_transactions.json
+  backup_before_append: true
+  validation:
+    require_league_ids: true
+    check_season_conflicts: true
+    validate_transaction_ids: true
+metadata:
+  schema_version: 2.0.0
+  last_updated: '2026-01-20T14:28:22.558357Z'
+  created_date: '2025-12-31'
+  migration_notes: Initial multi-season configuration for Season 3 launch

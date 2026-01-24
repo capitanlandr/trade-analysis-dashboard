@@ -1,0 +1,118 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  fantasy-backend
+
+  Sample SAM Template for fantasy-backend
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 30
+
+Resources:
+  # DynamoDB Table for all dashboard data
+  DashboardDataTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: fantasy-dashboard-data
+      BillingMode: PAY_PER_REQUEST  # On-demand pricing (no capacity planning needed)
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: GSI1PK
+          AttributeType: S
+        - AttributeName: GSI1SK
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: GSI1
+          KeySchema:
+            - AttributeName: GSI1PK
+              KeyType: HASH
+            - AttributeName: GSI1SK
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      TimeToLiveSpecification:
+        AttributeName: TTL
+        Enabled: true
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      Tags:
+        - Key: Environment
+          Value: production
+        - Key: Application
+          Value: fantasy-dashboard
+
+  # Read Lambda (API Gateway endpoints)
+  DashboardApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: dashboard_api/
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - arm64
+      Timeout: 30  # Increased for API calls
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref DashboardDataTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref DashboardDataTable
+      Events:
+        # Catch-all route for all API endpoints
+        ApiProxy:
+          Type: Api
+          Properties:
+            Path: /api/{proxy+}
+            Method: ANY
+
+  # Ingestion Lambda (scheduled to run hourly)
+  IngestionFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ingestion_lambda/
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - arm64
+      Timeout: 900  # 15 minutes for backfills with matchups + NFL stats
+      MemorySize: 512  # Increased memory for faster processing
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref DashboardDataTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref DashboardDataTable
+      Events:
+        HourlySchedule:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 hour)
+            Description: Fetch Sleeper data and update DynamoDB every hour
+            Enabled: true
+
+Outputs:
+  DashboardApiUrl:
+    Description: "API Gateway endpoint URL for dashboard API"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/Prod/api/"
+  DashboardApiFunction:
+    Description: "Dashboard API Lambda Function ARN"
+    Value: !GetAtt DashboardApiFunction.Arn
+  DashboardApiFunctionIamRole:
+    Description: "IAM Role for Dashboard API function"
+    Value: !GetAtt DashboardApiFunctionRole.Arn
+  DashboardDataTableName:
+    Description: "DynamoDB table name for dashboard data"
+    Value: !Ref DashboardDataTable
+  DashboardDataTableArn:
+    Description: "DynamoDB table ARN"
+    Value: !GetAtt DashboardDataTable.Arn

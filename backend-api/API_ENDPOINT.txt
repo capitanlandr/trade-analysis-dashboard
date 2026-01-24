@@ -1,0 +1,25 @@
+# Fantasy Backend API Endpoint
+
+## Your Live Lambda Function
+
+**API URL:** https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod/hello/
+
+**Test it:**
+curl https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod/hello/
+
+**Response:**
+{"message": "hello world"}
+
+## AWS Resources Created
+
+**Lambda Function:** fantasy-backend-HelloWorldFunction-D0zwhPH2A5Zc
+**API Gateway:** aucuc2yvd4.execute-api.us-east-1.amazonaws.com
+**IAM Role:** fantasy-backend-HelloWorldFunctionRole-k19aPWU6UuJ0
+**Region:** us-east-1
+**Account:** 216571348281 (personal)
+
+## Stack Name
+fantasy-backend
+
+## To Delete Everything
+sam delete --stack-name fantasy-backend --region us-east-1
