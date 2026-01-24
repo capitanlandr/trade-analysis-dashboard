@@ -221,6 +221,29 @@ awslocal dynamodb scan --table-name fantasy-trades
 - Data updates daily (sufficient)
 - No need for real-time queries
 
+### Local Manual Deploy Scripts (Static Site)
+
+Both scripts deploy the built frontend to S3 + CloudFront, but they differ:
+
+- `deploy-to-aws.sh` (repo root)
+  - Hard-coded bucket: `dynasuiiii-website`
+  - Hard-coded distribution: `EL6SCNZ7VJGN2`
+  - Uses default AWS CLI profile (no overrides)
+  - Best for: quick deploys to the primary account without env setup
+
+- `scripts/deploy_aws.sh`
+  - Uses env vars: `AWS_S3_BUCKET`, `AWS_CLOUDFRONT_DISTRIBUTION_ID`
+  - Optional `AWS_PROFILE` and `AWS_REGION`
+  - Best for: portability across machines/accounts
+
+Example (portable):
+```bash
+export AWS_PROFILE=personal-cli-user
+export AWS_S3_BUCKET=dynasuiiii-website
+export AWS_CLOUDFRONT_DISTRIBUTION_ID=EL6SCNZ7VJGN2
+./scripts/deploy_aws.sh
+```
+
 ### Phase 2: Add Dynamic Backend (When Needed)
 
 **Use AWS SAM + Lambda + DynamoDB**

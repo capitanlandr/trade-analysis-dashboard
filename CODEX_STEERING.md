@@ -79,7 +79,9 @@ If you change the shape of any pipeline outputs, update both the JSON generators
 - Vercel:
   - Root `vercel.json` builds from `dashboard/frontend/dist`.
   - `dashboard/vercel.json` redirects to CloudFront (historical setup).
-- Local AWS deploy helper: `./scripts/deploy_aws.sh` (used by `make deploy-aws`) expects `AWS_S3_BUCKET` and `AWS_CLOUDFRONT_DISTRIBUTION_ID` and optionally `AWS_PROFILE`.
+- Local AWS deploy helpers (both exist):
+  - `./scripts/deploy_aws.sh`: flexible; reads `AWS_S3_BUCKET`, `AWS_CLOUDFRONT_DISTRIBUTION_ID`, optional `AWS_PROFILE`/`AWS_REGION`.
+  - `./deploy-to-aws.sh`: hard-coded to `dynasuiiii-website` and `EL6SCNZ7VJGN2` (no profile/env overrides).
 
 ## Local Development Commands
 Frontend:
