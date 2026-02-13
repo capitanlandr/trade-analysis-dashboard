@@ -1,33 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { PlayoffScenariosData, PlayoffScenario } from '../types/playoff-scenarios';
+import React, { useMemo } from 'react';
+import { PlayoffScenario } from '../types/playoff-scenarios';
+import { usePlayoffScenariosData } from '../services/api';
 
 const PlayoffScenarios: React.FC = () => {
-  const [data, setData] = useState<PlayoffScenariosData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data: rawData, isLoading, error } = usePlayoffScenariosData();
 
-  useEffect(() => {
-    fetch('/api-playoff-scenarios.json')
-      .then(res => res.json())
-      .then(data => {
-        // Sort by current seed (nulls at the end)
-        const sortedResults = [...data.results].sort((a, b) => {
-          if (a.current_seed === null && b.current_seed === null) return 0;
-          if (a.current_seed === null) return 1;
-          if (b.current_seed === null) return -1;
-          return a.current_seed - b.current_seed;
-        });
-        setData({ ...data, results: sortedResults });
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+  // Sort results by current seed (nulls at the end) -- derived from query data
+  const data = useMemo(() => {
+    if (!rawData) return null;
+    const sortedResults = [...rawData.results].sort((a, b) => {
+      if (a.current_seed === null && b.current_seed === null) return 0;
+      if (a.current_seed === null) return 1;
+      if (b.current_seed === null) return -1;
+      return a.current_seed - b.current_seed;
+    });
+    return { ...rawData, results: sortedResults };
+  }, [rawData]);
 
-  if (loading) return <div className="p-8">Loading playoff scenarios...</div>;
-  if (error) return <div className="p-8 text-red-600">Error: {error}</div>;
+  if (isLoading) return <div className="p-8">Loading playoff scenarios...</div>;
+  if (error) return <div className="p-8 text-red-600">Error: {error instanceof Error ? error.message : 'Unknown error'}</div>;
   if (!data) return <div className="p-8">No data available</div>;
 
   const getStatusBadge = (scenario: PlayoffScenario) => {
@@ -145,7 +136,7 @@ const PlayoffScenarios: React.FC = () => {
           <h3 className="text-sm font-semibold text-gray-900 mb-2">Simulation Methodology</h3>
           <div className="text-sm text-gray-700 space-y-2">
             <p>
-              These probabilities are calculated by running {data.num_simulations.toLocaleString()} Monte Carlo simulations 
+              These probabilities are calculated by running {data.num_simulations.toLocaleString()} Monte Carlo simulations
               of all remaining regular season games. Each simulation:
             </p>
             <ol className="list-decimal list-inside space-y-1 ml-2">
@@ -163,7 +154,7 @@ const PlayoffScenarios: React.FC = () => {
               <li>Records which teams made playoffs, won divisions, and earned byes</li>
             </ol>
             <p className="mt-2">
-              The percentages represent how often each outcome occurred across all simulations. 
+              The percentages represent how often each outcome occurred across all simulations.
               For example, a 75% playoff probability means the team made the playoffs in 75% of the simulated scenarios.
             </p>
           </div>

@@ -1,16 +1,12 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target } from 'lucide-react';
-import { useQuery } from '@tanstack/react-query';
 import HostingBanner from '../UI/HostingBanner';
+import { useStandingsData } from '../../services/api';
 
 const DashboardLayout: React.FC = () => {
-  // Fetch standings data to get last update time
-  const { data: standingsData } = useQuery({
-    queryKey: ['standings'],
-    queryFn: () => fetch('/api-standings.json').then(res => res.json()),
-    refetchInterval: 30000, // Refresh every 30 seconds
-  });
+  // Use centralized standings hook (goes through api-client.ts toggle)
+  const { data: standingsData } = useStandingsData();
 
   const lastUpdate = standingsData?.metadata?.last_updated;
 

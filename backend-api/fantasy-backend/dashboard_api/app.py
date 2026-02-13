@@ -1,44 +1,69 @@
 import json
+import os
 import urllib.request
 import urllib.error
 from datetime import datetime
 from typing import Dict, Any, List
 
+import boto3
+from boto3.dynamodb.conditions import Key
+
 # Your league configuration
 LEAGUE_ID = "1312166810505719808"
 SLEEPER_BASE_URL = "https://api.sleeper.app/v1"
 
+# DynamoDB setup
+TABLE_NAME = os.environ.get('TABLE_NAME', 'fantasy-dashboard-data')
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table(TABLE_NAME)
+
 def lambda_handler(event, context) -> Dict[str, Any]:
     """
-    Monolithic Lambda handling all dashboard API endpoints
-    
-    Routes:
-    - GET /api/trades      → Real-time trades from Sleeper
-    - GET /api/standings   → Current standings
-    - GET /api/waivers     → Waiver wire transactions
-    - GET /api/league-info → League metadata
-    
-    Returns JSON with CORS headers for frontend access
+    Dashboard API Lambda -- thin read layer over DynamoDB enriched data.
+
+    Enriched endpoints (DynamoDB GetItem, <100ms):
+    - GET /api/trades      -> ENRICHED_TRADES#LATEST       (Task 2.2)
+    - GET /api/teams       -> ENRICHED_TEAMS#LATEST        (Task 2.3)
+    - GET /api/stats       -> ENRICHED_STATS#LATEST        (Task 2.4)
+    - GET /api/standings   -> ENRICHED_STANDINGS#LATEST     (Task 3.1)
+    - GET /api/playoffs    -> ENRICHED_PLAYOFF#LATEST       (Task 3.2)
+    - GET /api/draft-order -> ENRICHED_DRAFTORDER#LATEST    (Task 3.3)
+    - GET /api/waivers     -> ENRICHED_WAIVERS#LATEST       (Task 3.4)
+
+    Legacy endpoints (direct Sleeper API):
+    - GET /api/league-info -> Sleeper API
+    - GET /api/health      -> Health check
+
+    Query params: ?season=season_2 | season_3 (default: season_3)
+    Returns JSON with CORS headers for frontend access.
     """
-    
+
     # Extract path and method
     path = event.get('path', '')
     method = event.get('httpMethod', 'GET')
-    
+
     print(f"Request: {method} {path}")
-    
+
     # Handle OPTIONS for CORS preflight
     if method == 'OPTIONS':
         return cors_response(200, {'message': 'OK'})
-    
+
     # Route to appropriate handler
     try:
         if path == '/api/trades':
-            return handle_trades()
+            return handle_trades(event)
+        elif path == '/api/teams':
+            return handle_teams(event)
+        elif path == '/api/stats':
+            return handle_stats(event)
         elif path == '/api/standings':
-            return handle_standings()
+            return handle_standings(event)
+        elif path == '/api/playoffs':
+            return handle_playoffs(event)
+        elif path == '/api/draft-order':
+            return handle_draft_order(event)
         elif path == '/api/waivers':
-            return handle_waivers()
+            return handle_waivers(event)
         elif path == '/api/league-info':
             return handle_league_info()
         elif path == '/api/health':
@@ -48,13 +73,17 @@ def lambda_handler(event, context) -> Dict[str, Any]:
                 'error': 'Endpoint not found',
                 'available_endpoints': [
                     '/api/trades',
+                    '/api/teams',
+                    '/api/stats',
                     '/api/standings',
+                    '/api/playoffs',
+                    '/api/draft-order',
                     '/api/waivers',
                     '/api/league-info',
                     '/api/health'
                 ]
             })
-    
+
     except Exception as e:
         print(f"Error: {str(e)}")
         return cors_response(500, {
@@ -63,151 +92,115 @@ def lambda_handler(event, context) -> Dict[str, Any]:
         })
 
 
-def handle_trades() -> Dict[str, Any]:
+def get_season_param(event: Dict[str, Any]) -> str:
+    """Extract season from query string parameters, defaulting to season_3."""
+    params = event.get('queryStringParameters') or {}
+    return params.get('season', 'season_3')
+
+
+def handle_trades(event: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Fetch ALL trades from Sleeper API (matches pipeline stage 1 raw fetch)
-    Loops through all weeks to get complete trade history
+    Task 2.2: Trades endpoint -- single DynamoDB GetItem for ENRICHED_TRADES#LATEST.
+    Returns enriched trade data matching api-trades.json schema.
     """
-    try:
-        # Step 1: Get league info to determine current week (like pipeline does)
-        league_url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}"
-        league = fetch_sleeper_api(league_url)
-        current_week = league.get('settings', {}).get('leg', 1)
-        season = league.get('season')
-        league_name = league.get('name')
-        
-        print(f"League: {league_name}, Season: {season}, Current Week: {current_week}")
-        
-        # Step 2: Fetch users and rosters (like pipeline does)
-        users_url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/users"
-        rosters_url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/rosters"
-        
-        users = fetch_sleeper_api(users_url)
-        rosters = fetch_sleeper_api(rosters_url)
-        
-        print(f"Fetched {len(users)} users and {len(rosters)} rosters")
-        
-        # Step 3: Loop through ALL weeks to fetch trades (MATCHING PIPELINE!)
-        all_trades = []
-        weeks_scanned = 0
-        weeks_with_trades = 0
-        
-        for week in range(1, current_week + 6):
-            try:
-                url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/transactions/{week}"
-                transactions = fetch_sleeper_api(url)
-                weeks_scanned += 1
-                
-                if transactions:
-                    # Filter to only trades
-                    trades = [t for t in transactions if t.get('type') == 'trade']
-                    if trades:
-                        all_trades.extend(trades)
-                        weeks_with_trades += 1
-                        print(f"Week {week}: {len(trades)} trade(s)")
-                        
-            except Exception as e:
-                # Week might not exist yet, continue
-                print(f"Week {week}: No data (expected for future weeks)")
-                continue
-        
-        # Sort by date (most recent first) - like pipeline does
-        all_trades.sort(key=lambda t: t.get('created', 0), reverse=True)
-        
-        print(f"Total: {len(all_trades)} trades from {weeks_with_trades} weeks")
-        
-        return cors_response(200, {
-            'success': True,
-            'source': 'real-time-sleeper-api-all-weeks',
-            'timestamp': datetime.utcnow().isoformat() + 'Z',
-            'metadata': {
-                'league_id': LEAGUE_ID,
-                'league_name': league_name,
-                'season': season,
-                'current_week': current_week,
-                'weeks_scanned': weeks_scanned,
-                'weeks_with_trades': weeks_with_trades
-            },
-            'users': users,
-            'rosters': rosters,
-            'trades': all_trades,
-            'trade_count': len(all_trades),
-            'message': f'Fetched {len(all_trades)} trades from {weeks_with_trades} weeks - MATCHES PIPELINE STAGE 1!'
-        })
-        
-    except Exception as e:
-        return cors_response(500, {
-            'error': str(e),
-            'endpoint': '/api/trades'
-        })
+    season = get_season_param(event)
+    print(f"handle_trades: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_TRADES#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched trade data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
 
 
-def handle_standings() -> Dict[str, Any]:
-    """Fetch current league standings"""
-    try:
-        # Fetch rosters
-        rosters_url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/rosters"
-        rosters = fetch_sleeper_api(rosters_url)
-        
-        # Fetch users for team names
-        users_url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/users"
-        users = fetch_sleeper_api(users_url)
-        
-        # Combine rosters with user info
-        standings = []
-        for roster in rosters:
-            user = next((u for u in users if u['user_id'] == roster['owner_id']), None)
-            settings = roster.get('settings', {})
-            standings.append({
-                'roster_id': roster['roster_id'],
-                'username': user['display_name'] if user else 'Unknown',
-                'wins': settings.get('wins', 0),
-                'losses': settings.get('losses', 0),
-                'ties': settings.get('ties', 0),
-                'points_for': settings.get('fpts', 0) + settings.get('fpts_decimal', 0) / 100,
-                'points_against': settings.get('fpts_against', 0) + settings.get('fpts_against_decimal', 0) / 100,
-            })
-        
-        # Sort by wins (descending)
-        standings.sort(key=lambda x: (-x['wins'], -x['points_for']))
-        
-        return cors_response(200, {
-            'success': True,
-            'source': 'real-time-sleeper-api',
-            'timestamp': datetime.utcnow().isoformat() + 'Z',
-            'standings': standings
-        })
-        
-    except Exception as e:
-        return cors_response(500, {
-            'error': str(e),
-            'endpoint': '/api/standings'
-        })
+def handle_teams(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 2.3: Teams endpoint -- single DynamoDB GetItem for ENRICHED_TEAMS#LATEST.
+    Returns enriched team/manager data matching api-teams.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_teams: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_TEAMS#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched team data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
 
 
-def handle_waivers() -> Dict[str, Any]:
-    """Fetch waiver wire transactions"""
-    try:
-        # Fetch transactions
-        url = f"{SLEEPER_BASE_URL}/league/{LEAGUE_ID}/transactions/1"
-        transactions = fetch_sleeper_api(url)
-        
-        # Filter to waiver/free agent adds
-        waivers = [t for t in transactions if t.get('type') in ['waiver', 'free_agent']]
-        
-        return cors_response(200, {
-            'success': True,
-            'source': 'real-time-sleeper-api',
-            'timestamp': datetime.utcnow().isoformat() + 'Z',
-            'waiver_count': len(waivers),
-            'waivers': waivers
-        })
-        
-    except Exception as e:
-        return cors_response(500, {
-            'error': str(e),
-            'endpoint': '/api/waivers'
-        })
+def handle_stats(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 2.4: Stats endpoint -- single DynamoDB GetItem for ENRICHED_STATS#LATEST.
+    Returns enriched stats summary matching api-stats-summary.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_stats: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_STATS#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched stats data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
+
+
+def handle_standings(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 3.1: Standings endpoint -- single DynamoDB GetItem for ENRICHED_STANDINGS#LATEST.
+    Returns enriched standings data matching api-standings.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_standings: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_STANDINGS#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched standings data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
+
+
+def handle_playoffs(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 3.2: Playoff scenarios endpoint -- single DynamoDB GetItem for ENRICHED_PLAYOFF#LATEST.
+    Returns enriched playoff scenario data matching api-playoff-scenarios.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_playoffs: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_PLAYOFF#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched playoff data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
+
+
+def handle_draft_order(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 3.3: Draft order endpoint -- single DynamoDB GetItem for ENRICHED_DRAFTORDER#LATEST.
+    Returns enriched draft order data matching api-draft-order.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_draft_order: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_DRAFTORDER#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched draft order data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
+
+
+def handle_waivers(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Task 3.4: Waivers endpoint -- single DynamoDB GetItem for ENRICHED_WAIVERS#LATEST.
+    Returns enriched waiver wire data matching waiver-wire-page.json schema.
+    """
+    season = get_season_param(event)
+    print(f"handle_waivers: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_WAIVERS#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched waivers data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
 
 
 def handle_league_info() -> Dict[str, Any]:
@@ -245,7 +238,11 @@ def handle_health() -> Dict[str, Any]:
         'league_id': LEAGUE_ID,
         'endpoints': [
             '/api/trades',
+            '/api/teams',
+            '/api/stats',
             '/api/standings',
+            '/api/playoffs',
+            '/api/draft-order',
             '/api/waivers',
             '/api/league-info',
             '/api/health'

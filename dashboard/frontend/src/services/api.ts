@@ -2,153 +2,134 @@ import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import type { WaiverWireData } from '../types/waiver-wire';
 import type { StandingsData } from '../types/standings';
 import type { PlayoffScenariosData } from '../types/playoff-scenarios';
+import type { ProgressiveDraftOrder } from '../types/draft-order';
+import type { TradeData, Team, LeagueStats } from '../types';
+import {
+  fetchTrades,
+  fetchTeams,
+  fetchStats,
+  fetchStandings,
+  fetchPlayoffs,
+  fetchDraftOrder,
+  fetchWaivers,
+} from './api-client';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
-const USE_STATIC_DATA = true; // Always use static JSON files (same as prod)
-console.log('API Configuration:', {
-  USE_STATIC_DATA,
-  PROD: import.meta.env.PROD,
-  API_BASE_URL
-});
-
-// Simple fetch wrapper with logging
-const apiFetch = async (url: string): Promise<any> => {
-  const fullUrl = USE_STATIC_DATA ? url : `${API_BASE_URL}${url}`;
-  console.log(`API Request: GET ${fullUrl}`);
-  
-  try {
-    const response = await fetch(fullUrl);
-    console.log(`API Response: ${response.status} ${url}`);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-    
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('API Error:', { url, error });
-    throw error;
-  }
-};
+// ---------------------------------------------------------------------------
+// Legacy API object
+//
+// These methods wrap the new api-client functions so that existing component
+// imports (`import api from './api'` or `import { api } from './api'`)
+// continue to work without changes.
+//
+// The underlying api-client respects the VITE_USE_LAMBDA_API toggle:
+//   false (default) -> static JSON from /public/*.json
+//   true            -> API Gateway Lambda endpoints
+// ---------------------------------------------------------------------------
 
 export const api = {
-  // Health and status
-  health: () => apiFetch('/health'),
-  status: () => apiFetch('/status'),
-
   // Trades
-  getTrades: async (params?: {
+  getTrades: async (_params?: {
     startDate?: string;
     endDate?: string;
     teams?: string[];
     minValue?: number;
     maxResults?: number;
   }) => {
-    if (USE_STATIC_DATA) {
-      return apiFetch('/api-trades.json');
-    }
-    
-    const searchParams = new URLSearchParams();
-    if (params?.startDate) searchParams.append('startDate', params.startDate);
-    if (params?.endDate) searchParams.append('endDate', params.endDate);
-    if (params?.teams?.length) searchParams.append('teams', params.teams.join(','));
-    if (params?.minValue) searchParams.append('minValue', params.minValue.toString());
-    if (params?.maxResults) searchParams.append('maxResults', params.maxResults.toString());
-    
-    const queryString = searchParams.toString();
-    return apiFetch(`/trades${queryString ? `?${queryString}` : ''}`);
+    const data = await fetchTrades();
+    // Return in the legacy {success, data} wrapper for backward compatibility
+    // with any code that accesses response.data or response.success
+    return { success: true, data };
   },
 
-  getTrade: (id: string) => apiFetch(`/trades/${id}`),
-
-  getBlockbusterTrades: (threshold?: number) => {
-    const params = threshold ? `?threshold=${threshold}` : '';
-    return apiFetch(`/trades/blockbuster${params}`);
-  },
-
-  // Teams
-  getTeams: async (params?: {
+  getTeams: async (_params?: {
     sortBy?: string;
     order?: 'asc' | 'desc';
   }) => {
-    if (USE_STATIC_DATA) {
-      return apiFetch('/api-teams.json');
-    }
-    
-    const searchParams = new URLSearchParams();
-    if (params?.sortBy) searchParams.append('sortBy', params.sortBy);
-    if (params?.order) searchParams.append('order', params.order);
-    
-    const queryString = searchParams.toString();
-    return apiFetch(`/teams${queryString ? `?${queryString}` : ''}`);
+    const teams = await fetchTeams();
+    return { success: true, data: { teams } };
   },
 
-  getTeam: (id: string) => apiFetch(`/teams/${id}`),
-
-  // Statistics
-  getStatsSummary: () => {
-    if (USE_STATIC_DATA) {
-      return apiFetch('/api-stats-summary.json');
-    }
-    return apiFetch('/stats/summary');
+  getStatsSummary: async () => {
+    const overview = await fetchStats();
+    return { success: true, data: { overview } };
   },
 
-  getTrends: (period?: 'week' | 'month') => {
-    const params = period ? `?period=${period}` : '';
-    return apiFetch(`/stats/trends${params}`);
+  getWaiverWireData: async () => {
+    return fetchWaivers();
   },
-
-  // Waiver Wire
-  getWaiverWireData: () => {
-    if (USE_STATIC_DATA) {
-      return apiFetch('/waiver-wire-page.json');
-    }
-    return apiFetch('/waiver-wire');
-  },
-
-  // Data management
-  loadData: () => apiFetch('/data/load'),
 };
 
-/**
- * Centralized data hooks for consistent caching and error handling
- * Uses React Query for automatic refetching, caching, and loading states
- */
+// ---------------------------------------------------------------------------
+// React Query hooks
+//
+// These provide centralized caching with consistent staleTime / gcTime.
+// All hooks now go through api-client.ts, which handles the static/Lambda
+// toggle. No more hardcoded fetch() calls to static JSON paths.
+// ---------------------------------------------------------------------------
+
+const QUERY_STALE_TIME = 5 * 60 * 1000; // 5 minutes
+const QUERY_GC_TIME = 30 * 60 * 1000; // 30 minutes
+
+export const useTradesData = (): UseQueryResult<TradeData> => {
+  return useQuery({
+    queryKey: ['trades'],
+    queryFn: () => fetchTrades(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
+  });
+};
+
+export const useTeamsData = (): UseQueryResult<Team[]> => {
+  return useQuery({
+    queryKey: ['teams'],
+    queryFn: () => fetchTeams(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
+  });
+};
+
+export const useStatsData = (): UseQueryResult<LeagueStats> => {
+  return useQuery({
+    queryKey: ['stats'],
+    queryFn: () => fetchStats(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
+  });
+};
 
 export const useWaiverWireData = (): UseQueryResult<WaiverWireData> => {
   return useQuery({
     queryKey: ['waiver-wire'],
-    queryFn: () => fetch('/waiver-wire-page.json').then(r => {
-      if (!r.ok) throw new Error('Failed to fetch waiver wire data');
-      return r.json();
-    }),
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    gcTime: 30 * 60 * 1000, // 30 minutes (formerly cacheTime)
+    queryFn: () => fetchWaivers(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
   });
 };
 
 export const useStandingsData = (): UseQueryResult<StandingsData> => {
   return useQuery({
     queryKey: ['standings'],
-    queryFn: () => fetch('/api-standings.json').then(r => {
-      if (!r.ok) throw new Error('Failed to fetch standings data');
-      return r.json();
-    }),
-    staleTime: 5 * 60 * 1000,
-    gcTime: 30 * 60 * 1000,
+    queryFn: () => fetchStandings(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
   });
 };
 
 export const usePlayoffScenariosData = (): UseQueryResult<PlayoffScenariosData> => {
   return useQuery({
     queryKey: ['playoff-scenarios'],
-    queryFn: () => fetch('/api-playoff-scenarios.json').then(r => {
-      if (!r.ok) throw new Error('Failed to fetch playoff scenarios data');
-      return r.json();
-    }),
-    staleTime: 5 * 60 * 1000,
-    gcTime: 30 * 60 * 1000,
+    queryFn: () => fetchPlayoffs(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
+  });
+};
+
+export const useDraftOrderData = (): UseQueryResult<ProgressiveDraftOrder> => {
+  return useQuery({
+    queryKey: ['draft-order'],
+    queryFn: () => fetchDraftOrder(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
   });
 };
 

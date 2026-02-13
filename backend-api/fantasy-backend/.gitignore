@@ -242,3 +242,10 @@ $RECYCLE.BIN/
 */build/*
 
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
+
+# Lambda Layer build artifacts (Task 1.6)
+layers/pandas-numpy/
+layers/pandas-numpy-layer.zip
+layers/*.zip
+# SAM build artifacts
+.aws-sam/

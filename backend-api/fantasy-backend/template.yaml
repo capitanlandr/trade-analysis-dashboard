@@ -3,20 +3,27 @@ Transform: AWS::Serverless-2016-10-31
 Description: >
   fantasy-backend
 
-  Sample SAM Template for fantasy-backend
+  Dynasuiiii Analytics - Dynasty league dashboard backend
+  Includes: DynamoDB (provisioned free tier), Dashboard API, Ingestion Lambda,
+  Enrichment Lambda with pandas/numpy layer
 
-# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
     Timeout: 30
 
 Resources:
-  # DynamoDB Table for all dashboard data
+  # ============================================================
+  # DynamoDB Table - PROVISIONED for free tier ($0/month)
+  # Task 1.1: 25 RCU + 25 WCU (free tier max)
+  # ============================================================
   DashboardDataTable:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: fantasy-dashboard-data
-      BillingMode: PAY_PER_REQUEST  # On-demand pricing (no capacity planning needed)
+      BillingMode: PROVISIONED
+      ProvisionedThroughput:
+        ReadCapacityUnits: 25
+        WriteCapacityUnits: 25
       AttributeDefinitions:
         - AttributeName: PK
           AttributeType: S
@@ -40,18 +47,39 @@ Resources:
               KeyType: RANGE
           Projection:
             ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 25
+            WriteCapacityUnits: 25
       TimeToLiveSpecification:
         AttributeName: TTL
         Enabled: true
       PointInTimeRecoverySpecification:
-        PointInTimeRecoveryEnabled: true
+        PointInTimeRecoveryEnabled: false
       Tags:
         - Key: Environment
           Value: production
         - Key: Application
           Value: fantasy-dashboard
 
-  # Read Lambda (API Gateway endpoints)
+  # ============================================================
+  # Lambda Layer: pandas + numpy (Python 3.11, arm64)
+  # Task 1.6: Build with ./build-layer.sh
+  # ============================================================
+  PandasNumpyLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: pandas-numpy-layer
+      Description: pandas and numpy for enrichment pipeline (Python 3.11, arm64)
+      ContentUri: layers/pandas-numpy-layer.zip
+      CompatibleRuntimes:
+        - python3.11
+      CompatibleArchitectures:
+        - arm64
+      RetentionPolicy: Delete
+
+  # ============================================================
+  # Dashboard API Lambda (read endpoints)
+  # ============================================================
   DashboardApiFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -60,7 +88,7 @@ Resources:
       Runtime: python3.11
       Architectures:
         - arm64
-      Timeout: 30  # Increased for API calls
+      Timeout: 30
       Environment:
         Variables:
           TABLE_NAME: !Ref DashboardDataTable
@@ -68,14 +96,15 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Ref DashboardDataTable
       Events:
-        # Catch-all route for all API endpoints
         ApiProxy:
           Type: Api
           Properties:
             Path: /api/{proxy+}
             Method: ANY
 
-  # Ingestion Lambda (scheduled to run hourly)
+  # ============================================================
+  # Ingestion Lambda (hourly, raw Sleeper data -> DynamoDB)
+  # ============================================================
   IngestionFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -84,8 +113,8 @@ Resources:
       Runtime: python3.11
       Architectures:
         - arm64
-      Timeout: 900  # 15 minutes for backfills with matchups + NFL stats
-      MemorySize: 512  # Increased memory for faster processing
+      Timeout: 900
+      MemorySize: 512
       Environment:
         Variables:
           TABLE_NAME: !Ref DashboardDataTable
@@ -99,6 +128,37 @@ Resources:
             Schedule: rate(1 hour)
             Description: Fetch Sleeper data and update DynamoDB every hour
             Enabled: true
+
+  # ============================================================
+  # Enrichment Lambda (daily cron, STUB until Task 2.1)
+  # Reads raw DynamoDB data, runs pipeline stages 2-5,
+  # writes 7 ENRICHED_*#LATEST items
+  # ============================================================
+  EnrichmentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: enrichment_lambda/
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - arm64
+      Timeout: 900
+      MemorySize: 1024
+      Layers:
+        - !Ref PandasNumpyLayer
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref DashboardDataTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref DashboardDataTable
+      Events:
+        DailyEnrichment:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 10 * * ? *)
+            Description: Run enrichment pipeline daily after ingestion
+            Enabled: false
 
 Outputs:
   DashboardApiUrl:
@@ -116,3 +176,9 @@ Outputs:
   DashboardDataTableArn:
     Description: "DynamoDB table ARN"
     Value: !GetAtt DashboardDataTable.Arn
+  EnrichmentFunctionArn:
+    Description: "Enrichment Lambda Function ARN"
+    Value: !GetAtt EnrichmentFunction.Arn
+  PandasNumpyLayerArn:
+    Description: "pandas/numpy Lambda Layer ARN"
+    Value: !Ref PandasNumpyLayer

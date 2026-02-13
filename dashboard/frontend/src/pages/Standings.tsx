@@ -1,53 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Trophy, Calendar, RefreshCw, Star, Award, CheckCircle, XCircle } from 'lucide-react';
 import DivisionTable from '../components/Tables/DivisionTable';
 import TeamScheduleModal from '../components/Modals/TeamScheduleModal';
-import { StandingsData, StandingsTeam } from '../types/standings';
-import { PlayoffScenariosData } from '../types/playoff-scenarios';
+import { StandingsTeam } from '../types/standings';
+import { useStandingsData, usePlayoffScenariosData } from '../services/api';
 
 const Standings: React.FC = () => {
-  const [standingsData, setStandingsData] = useState<StandingsData | null>(null);
-  const [playoffData, setPlayoffData] = useState<PlayoffScenariosData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const {
+    data: standingsData,
+    isLoading: standingsLoading,
+    error: standingsError,
+    refetch: refetchStandings,
+  } = useStandingsData();
+
+  const { data: playoffData } = usePlayoffScenariosData();
+
   const [selectedTeam, setSelectedTeam] = useState<StandingsTeam | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      // Load standings
-      const standingsResponse = await fetch('/api-standings.json');
-      if (!standingsResponse.ok) {
-        throw new Error('Failed to load standings data');
-      }
-      const standings: StandingsData = await standingsResponse.json();
-      setStandingsData(standings);
-
-      // Load playoff scenarios
-      try {
-        const playoffResponse = await fetch('/api-playoff-scenarios.json');
-        if (playoffResponse.ok) {
-          const playoff: PlayoffScenariosData = await playoffResponse.json();
-          setPlayoffData(playoff);
-        }
-      } catch (playoffErr) {
-        console.warn('Playoff scenarios not available:', playoffErr);
-        // Continue without playoff data
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load standings');
-      console.error('Error loading standings:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleTeamClick = (team: StandingsTeam) => {
     setSelectedTeam(team);
@@ -59,7 +28,7 @@ const Standings: React.FC = () => {
     setSelectedTeam(null);
   };
 
-  if (loading) {
+  if (standingsLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
@@ -70,15 +39,17 @@ const Standings: React.FC = () => {
     );
   }
 
-  if (error) {
+  if (standingsError) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 max-w-md">
             <p className="text-red-800 font-semibold mb-2">Error Loading Standings</p>
-            <p className="text-red-600 text-sm">{error}</p>
+            <p className="text-red-600 text-sm">
+              {standingsError instanceof Error ? standingsError.message : 'Failed to load standings'}
+            </p>
             <button
-              onClick={loadData}
+              onClick={() => refetchStandings()}
               className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
             >
               Try Again
@@ -112,7 +83,7 @@ const Standings: React.FC = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-2 text-sm ml-auto">
               <Calendar size={16} className="text-gray-500" />
               <span className="text-gray-600">
@@ -134,7 +105,7 @@ const Standings: React.FC = () => {
           <DivisionTable
             key={division.division_id}
             division={division}
-            playoffData={playoffData}
+            playoffData={playoffData ?? null}
             onTeamClick={handleTeamClick}
           />
         ))}
@@ -142,7 +113,7 @@ const Standings: React.FC = () => {
         {/* Legend */}
         <div className="bg-white rounded-lg shadow-md p-6 mt-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Legend</h3>
-          
+
           {/* Clinch Indicators */}
           {playoffData && (
             <div className="mb-6">

@@ -1,29 +1,21 @@
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
 import SeasonFilter from './SeasonFilter';
 import { useSeasonMetrics, useSeasonFilter } from '../../hooks/useSeasonMetrics';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
-import type { TradeData } from '../../types';
+import { useTradesData } from '../../services/api';
 
 /**
  * Example component demonstrating how to integrate SeasonFilter with useSeasonMetrics
  * This shows the complete pattern for season-aware data filtering
  */
 const SeasonFilterExample: React.FC = () => {
-  // Fetch trade data (using the existing API pattern)
-  const { 
-    data: tradeData, 
-    isLoading, 
-    error 
-  } = useQuery<TradeData>({
-    queryKey: ['trades'],
-    queryFn: () => fetch('/api-trades.json').then(r => {
-      if (!r.ok) throw new Error('Failed to fetch trade data');
-      return r.json();
-    }),
-    staleTime: 5 * 60 * 1000, // 5 minutes
-  });
+  // Fetch trade data using the centralized hook (goes through api-client.ts toggle)
+  const {
+    data: tradeData,
+    isLoading,
+    error
+  } = useTradesData();
 
   // Get available seasons from the data
   const availableSeasons = tradeData?.metadata?.seasons_included || [];

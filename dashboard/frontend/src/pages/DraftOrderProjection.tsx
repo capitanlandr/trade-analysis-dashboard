@@ -1,32 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-  ProgressiveDraftOrder,
   isLockedPick
 } from '../types/draft-order';
+import { useDraftOrderData } from '../services/api';
 
 const DraftOrderProjection: React.FC = () => {
-  const [data, setData] = useState<ProgressiveDraftOrder | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data, isLoading, error } = useDraftOrderData();
   const [selectedRound, setSelectedRound] = useState(1);
 
-  useEffect(() => {
-    fetch('/api-draft-order.json')
-      .then(res => {
-        if (!res.ok) throw new Error('Draft order data not available');
-        return res.json();
-      })
-      .then(data => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="p-8">
         <div className="animate-pulse space-y-4">
@@ -47,7 +29,7 @@ const DraftOrderProjection: React.FC = () => {
       <div className="p-8">
         <div className="bg-red-50 border border-red-200 rounded-lg p-4">
           <h3 className="text-red-900 font-semibold mb-2">Draft Order Not Available</h3>
-          <p className="text-red-700 text-sm">{error}</p>
+          <p className="text-red-700 text-sm">{error instanceof Error ? error.message : 'Unknown error'}</p>
           <p className="text-red-600 text-sm mt-2">
             Draft order data will be available once playoff results are processed.
           </p>
@@ -57,7 +39,7 @@ const DraftOrderProjection: React.FC = () => {
   }
 
   if (!data) return <div className="p-8">No data available</div>;
-  
+
   // Get all rounds
   const allRounds = [
     { number: 1, picks: data.draft_order.round_1 || [] },
@@ -132,7 +114,7 @@ const DraftOrderProjection: React.FC = () => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-bold text-gray-900">{pick.pick_label}</div>
                     </td>
-                    
+
                     {isLockedPick(pick) ? (
                       <>
                         <td className="px-6 py-4">
@@ -153,7 +135,7 @@ const DraftOrderProjection: React.FC = () => {
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-center">
-                            <span className="text-green-600 mr-2">✅</span>
+                            <span className="text-green-600 mr-2">&#10003;</span>
                             <span className="text-sm text-gray-900 font-medium">Locked</span>
                           </div>
                         </td>
@@ -168,7 +150,7 @@ const DraftOrderProjection: React.FC = () => {
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-start">
-                            <span className="text-yellow-600 mr-2 mt-0.5">⏳</span>
+                            <span className="text-yellow-600 mr-2 mt-0.5">&#8987;</span>
                             <div className="flex-1">
                               <div className="text-sm text-gray-900 font-medium mb-2">Pending - {pick.pending_game}</div>
                               <div className="space-y-1.5">
@@ -200,19 +182,19 @@ const DraftOrderProjection: React.FC = () => {
         <h3 className="text-sm font-semibold text-blue-900 mb-3">Legend</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
           <div className="flex items-center space-x-2">
-            <span className="text-green-600 text-lg">✅</span>
+            <span className="text-green-600 text-lg">&#10003;</span>
             <span className="text-blue-900">Locked - Pick finalized</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="text-yellow-600 text-lg">⏳</span>
+            <span className="text-yellow-600 text-lg">&#8987;</span>
             <span className="text-blue-900">Pending - Awaiting result</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="text-lg">🏆</span>
+            <span className="text-lg">&#127942;</span>
             <span className="text-blue-900">Winner scenario</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="text-lg">💔</span>
+            <span className="text-lg">&#128148;</span>
             <span className="text-blue-900">Loser scenario</span>
           </div>
         </div>
