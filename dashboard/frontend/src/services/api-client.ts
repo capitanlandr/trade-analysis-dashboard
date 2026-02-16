@@ -174,12 +174,12 @@ export async function fetchStats(baseUrl?: string): Promise<LeagueStats> {
     return wrapped.data as unknown as LeagueStats;
   }
 
-  // Static JSON -- has {success, data: {overview: {...}}} wrapper
+  // Static JSON -- has {success, data: {overview, teamRankings, ...}} wrapper
   const wrapped = await fetchJson<WrappedResponse<StatsPayload>>(
     '/api-stats-summary.json',
     'fetchStats (static)'
   );
-  return wrapped.data.overview;
+  return wrapped.data as unknown as LeagueStats;
 }
 
 /**
