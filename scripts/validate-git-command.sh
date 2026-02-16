@@ -41,7 +41,7 @@ if echo "$COMMAND" | grep -iE 'git\s+clean\s+.*-f' > /dev/null; then
 fi
 
 # Block branch -D (force delete branch)
-if echo "$COMMAND" | grep -iE 'git\s+branch\s+.*-D' > /dev/null; then
+if echo "$COMMAND" | grep -E 'git\s+branch\s+.*-D' > /dev/null; then
   echo "BLOCKED: git branch -D force-deletes branches. Use -d (safe delete) instead." >&2
   exit 2
 fi
