@@ -50,8 +50,8 @@ export const api = {
   },
 
   getStatsSummary: async () => {
-    const overview = await fetchStats();
-    return { success: true, data: { overview } };
+    const stats = await fetchStats();
+    return { success: true, data: stats };
   },
 
   getWaiverWireData: async () => {

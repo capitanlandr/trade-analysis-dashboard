@@ -169,9 +169,9 @@ export async function fetchTeams(baseUrl?: string): Promise<Team[]> {
 export async function fetchStats(baseUrl?: string): Promise<LeagueStats> {
   if (USE_LAMBDA_API) {
     const url = lambdaUrl(baseUrl || API_BASE_URL, '/api/stats');
-    // Lambda returns {success, data: {overview: {...}}} wrapper (same as static JSON)
+    // Lambda returns {success, data: {overview, teamRankings, recentActivity, ...}}
     const wrapped = await fetchJson<WrappedResponse<StatsPayload>>(url, 'fetchStats');
-    return wrapped.data.overview;
+    return wrapped.data as unknown as LeagueStats;
   }
 
   // Static JSON -- has {success, data: {overview: {...}}} wrapper
