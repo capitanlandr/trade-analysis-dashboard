@@ -4,8 +4,8 @@
   "outputDirectory": ".",
   "redirects": [
     {
-      "source": "/:path*",
-      "destination": "https://d137gsvp1einvh.cloudfront.net/:path*",
+      "source": "/(.*)",
+      "destination": "https://d137gsvp1einvh.cloudfront.net/$1",
       "permanent": true
     }
   ]
