@@ -2,13 +2,16 @@ import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target } from 'lucide-react';
 import HostingBanner from '../UI/HostingBanner';
+import ChampionBanner from '../UI/ChampionBanner';
 import { useStandingsData } from '../../services/api';
+import { activeSeason } from '../../config/seasons';
 
 const DashboardLayout: React.FC = () => {
   // Use centralized standings hook (goes through api-client.ts toggle)
   const { data: standingsData } = useStandingsData();
 
   const lastUpdate = standingsData?.metadata?.last_updated;
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,14 +31,14 @@ const DashboardLayout: React.FC = () => {
                 <p className="text-xs text-gray-400">
                   League ID:{' '}
                   <a
-                    href="https://sleeper.com/leagues/1312166810505719808"
+                    href={`https://sleeper.com/leagues/${activeSeason.leagueId}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-600 hover:text-primary-700 hover:underline"
                   >
-                    1312166810505719808
+                    {activeSeason.leagueId}
                   </a>
-                  {' '}(Season 3 - 2025)
+                  {' '}(Season {activeSeason.number} - {activeSeason.displayYear})
                 </p>
               </div>
             </div>
@@ -63,6 +66,9 @@ const DashboardLayout: React.FC = () => {
 
       {/* Hosting Migration Banner */}
       <HostingBanner />
+
+      {/* Championship Banner */}
+      <ChampionBanner />
 
       {/* Navigation */}
       <nav className="bg-white shadow-sm relative z-20">

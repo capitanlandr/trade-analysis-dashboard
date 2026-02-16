@@ -161,10 +161,12 @@ const Overview: React.FC = () => {
             <LeaderItem
               label="Trade Season"
               value={(() => {
-                const start = stats?.overview?.dateRange?.earliest;
-                const end = stats?.overview?.dateRange?.latest;
-                if (!start || !end) return 'N/A';
-                
+                const currentYear = new Date().getFullYear();
+                const earliest = stats?.overview?.dateRange?.earliest;
+                const start = (earliest && earliest.startsWith(String(currentYear)))
+                  ? earliest
+                  : `${currentYear}-01-01`;
+
                 const formatDate = (dateStr: string) => {
                   const [year, month, day] = dateStr.split('-').map(Number);
                   const date = new Date(year, month - 1, day);
@@ -175,8 +177,11 @@ const Overview: React.FC = () => {
                                  dayNum === 3 || dayNum === 23 ? 'rd' : 'th';
                   return `${monthName} ${dayNum}${suffix}, ${year}`;
                 };
-                
-                return `${formatDate(start)} to ${formatDate(end)}`;
+
+                const today = new Date();
+                const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+                return `${formatDate(start)} to ${formatDate(todayStr)}`;
               })()}
               subtitle="Active trading period"
             />
