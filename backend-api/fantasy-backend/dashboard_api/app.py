@@ -34,7 +34,7 @@ def lambda_handler(event, context) -> Dict[str, Any]:
     - GET /api/league-info -> Sleeper API
     - GET /api/health      -> Health check
 
-    Query params: ?season=season_2 | season_3 (default: season_3)
+    Query params: ?season=all | season_2 | season_3 (default: all = combined view)
     Returns JSON with CORS headers for frontend access.
     """
 
@@ -93,9 +93,9 @@ def lambda_handler(event, context) -> Dict[str, Any]:
 
 
 def get_season_param(event: Dict[str, Any]) -> str:
-    """Extract season from query string parameters, defaulting to season_3."""
+    """Extract season from query string parameters, defaulting to 'all' (combined view)."""
     params = event.get('queryStringParameters') or {}
-    return params.get('season', 'season_3')
+    return params.get('season', 'all')
 
 
 def handle_trades(event: Dict[str, Any]) -> Dict[str, Any]:

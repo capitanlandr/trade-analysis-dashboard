@@ -2283,6 +2283,13 @@ def lambda_handler(event, context):
         total_trade_count = 0
         total_waiver_count = 0
 
+        # Accumulators for combined "all seasons" output
+        all_analyzed_trades = []
+        all_raw_waivers = []
+        active_season_standings = None
+        active_season_playoff = None
+        active_season_draft_order = None
+
         for season_id in requested_seasons:
             season_info = SEASONS.get(season_id)
             if not season_info:
@@ -2366,6 +2373,11 @@ def lambda_handler(event, context):
                     ('ENRICHED_DRAFTORDER#LATEST', enriched_draft_order),
                 ])
 
+                # Save for combined output
+                active_season_standings = enriched_standings
+                active_season_playoff = enriched_playoff
+                active_season_draft_order = enriched_draft_order
+
             # Write enriched items to DynamoDB for this season
             logger.info(f"\n  Writing {len(items_to_write)} enriched items to {pk}...")
 
@@ -2400,9 +2412,85 @@ def lambda_handler(event, context):
                     logger.error(f"      {error_msg}")
                     results['errors'].append(error_msg)
 
+            all_analyzed_trades.extend(analyzed)
+            all_raw_waivers.extend(raw_waivers)
+
             total_trade_count += len(analyzed)
             total_waiver_count += len(raw_waivers)
             results['seasons_processed'].append(season_id)
+
+        # ===================================================================
+        # STEP 3: Generate and write combined "all seasons" output
+        # ===================================================================
+        # The frontend displays a single unified view across all seasons.
+        # Data is stored per-season above for granularity, but the default
+        # API response (SEASON#all) merges everything so the dashboard shows
+        # the full history of the league.
+        logger.info(f"\n{'='*60}")
+        logger.info(f"GENERATING COMBINED OUTPUT (all seasons)")
+        logger.info(f"  Total trades: {len(all_analyzed_trades)}")
+        logger.info(f"  Total waivers: {len(all_raw_waivers)}")
+        logger.info(f"{'='*60}")
+
+        all_analyzed_trades.sort(key=lambda x: x['swing_margin'], reverse=True)
+
+        combined_trades = generate_enriched_trades(all_analyzed_trades, team_info_map)
+        combined_teams = generate_enriched_teams(all_analyzed_trades, team_mapping)
+        combined_stats = generate_enriched_stats(all_analyzed_trades, combined_teams)
+        combined_waivers = generate_enriched_waivers(
+            all_raw_waivers, roster_to_username, players)
+
+        logger.info(f"  Combined trades: {len(combined_trades['data']['trades'])}")
+        logger.info(f"  Combined teams: {len(combined_teams['data']['teams'])}")
+        logger.info(f"  Combined waivers: {len(combined_waivers.get('all_transactions', []))}")
+
+        combined_pk = 'SEASON#all'
+        timestamp = datetime.now(timezone.utc).isoformat()
+
+        combined_items = [
+            ('ENRICHED_TRADES#LATEST', combined_trades),
+            ('ENRICHED_TEAMS#LATEST', combined_teams),
+            ('ENRICHED_STATS#LATEST', combined_stats),
+            ('ENRICHED_WAIVERS#LATEST', combined_waivers),
+        ]
+
+        # Standings, playoffs, draft order: use active season's data for combined view
+        if active_season_standings is not None:
+            combined_items.extend([
+                ('ENRICHED_STANDINGS#LATEST', active_season_standings),
+                ('ENRICHED_PLAYOFF#LATEST', active_season_playoff),
+                ('ENRICHED_DRAFTORDER#LATEST', active_season_draft_order),
+            ])
+
+        logger.info(f"\n  Writing {len(combined_items)} combined items to {combined_pk}...")
+
+        for sk, data in combined_items:
+            try:
+                cleaned = clean_nan(data)
+                json_str = json.dumps(cleaned, default=str)
+                size_kb = len(json_str) / 1024
+
+                logger.info(f"    Writing {sk} ({size_kb:.1f} KB)...")
+
+                throttle_safe_put_item({
+                    'PK': combined_pk,
+                    'SK': sk,
+                    'EntityType': 'enriched_data',
+                    'Season': 'all',
+                    'Data': json_str,
+                    'DataSizeKB': int(size_kb),
+                    'UpdatedAt': timestamp,
+                })
+
+                results['enriched_items_written'].append(f"all/{sk}")
+                logger.info(f"      Written successfully")
+
+                time.sleep(1)
+
+            except Exception as e:
+                error_msg = f"Failed to write {combined_pk}/{sk}: {str(e)}"
+                logger.error(f"      {error_msg}")
+                results['errors'].append(error_msg)
 
         # ===================================================================
         # STEP 5: Summary
