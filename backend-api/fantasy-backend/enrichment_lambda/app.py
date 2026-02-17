@@ -1900,6 +1900,300 @@ def generate_enriched_waivers(
     successful = [t for t in waiver_txns if t['status'] == 'complete']
     total_bids = sum(t['waiver_bid'] for t in waiver_txns)
 
+    # ------------------------------------------------------------------
+    # EFFICIENCY METRICS
+    # Measures how efficiently each manager uses FAAB budget.
+    # Without actual fantasy points we compute a budget-efficiency proxy:
+    #   raw_wwes  = successful_claims / (faab_spent + free_agent_adds)
+    # This captures "how many usable players did you get per dollar of
+    # capital deployed?"  Free-agent adds count as 1 unit of cost so
+    # managers who rely solely on $0 free agents still get a score.
+    # The result is then z-score normalised across the league.
+    # ------------------------------------------------------------------
+    efficiency_metrics = None
+    try:
+        eff_manager_metrics = []
+        # Collect per-manager add transactions
+        adds_by_roster = defaultdict(list)
+        for t in all_transactions:
+            if t['action'] == 'add' and t['status'] == 'complete':
+                adds_by_roster[t['roster_id']].append(t)
+
+        # Compute average bid per player across the league (for overpay context)
+        player_bid_totals = defaultdict(lambda: {'total': 0, 'count': 0})
+        for t in all_transactions:
+            if t['type'] == 'waiver' and t['action'] == 'add' and t['waiver_bid'] > 0:
+                player_bid_totals[t['player_id']]['total'] += t['waiver_bid']
+                player_bid_totals[t['player_id']]['count'] += 1
+
+        for roster_id in manager_stats:
+            team_name = roster_to_username.get(roster_id, f"Team {roster_id}")
+            ms = manager_stats[roster_id]
+            my_adds = adds_by_roster.get(roster_id, [])
+
+            faab_spent = ms['total_bid']
+            fa_count = sum(1 for t in my_adds if t['type'] == 'free_agent')
+            successful_claims = ms['successful_claims']
+
+            # Compute points proxy: each successful waiver add gets a value
+            # score based on relative bid competitiveness. If a manager paid
+            # less than the league average for that player, the surplus is
+            # added as bonus points. FA pickups each contribute a flat 1 point.
+            total_points = 0.0
+            for t in my_adds:
+                if t['type'] == 'waiver' and t['waiver_bid'] > 0:
+                    pid = t['player_id']
+                    avg_info = player_bid_totals.get(pid, {'total': 0, 'count': 0})
+                    avg_bid = avg_info['total'] / avg_info['count'] if avg_info['count'] > 0 else t['waiver_bid']
+                    # Base value = bid amount; bonus when underpaying the market
+                    total_points += t['waiver_bid'] + max(0, avg_bid - t['waiver_bid'])
+                elif t['type'] == 'free_agent':
+                    total_points += 1.0  # Free agents contribute minimal cost-unit value
+
+            # Cost denominator: FAAB spent + FA count (each FA = 1 unit)
+            cost_basis = faab_spent + fa_count
+            raw_wwes = round(total_points / cost_basis, 1) if cost_basis > 0 else 0.0
+
+            eff_manager_metrics.append({
+                'roster_id': roster_id,
+                'team_name': team_name,
+                'total_points_from_adds': round(total_points, 1),
+                'faab_spent': faab_spent,
+                'free_agent_count': fa_count,
+                'raw_wwes': raw_wwes,
+                'normalized_wwes': 0.0,  # placeholder, filled after z-score
+                'league_percentile': 0.0,
+            })
+
+        # Z-score normalisation
+        if eff_manager_metrics:
+            wwes_values = [m['raw_wwes'] for m in eff_manager_metrics]
+            mean_wwes = round(sum(wwes_values) / len(wwes_values), 2) if wwes_values else 0
+            variance = sum((v - mean_wwes) ** 2 for v in wwes_values) / len(wwes_values) if wwes_values else 0
+            std_dev_wwes = round(variance ** 0.5, 2)
+            sorted_vals = sorted(wwes_values)
+            median_wwes = round(sorted_vals[len(sorted_vals) // 2], 2) if sorted_vals else 0
+
+            for m in eff_manager_metrics:
+                if std_dev_wwes > 0:
+                    m['normalized_wwes'] = round((m['raw_wwes'] - mean_wwes) / std_dev_wwes, 2)
+                else:
+                    m['normalized_wwes'] = 0.0
+                # Percentile: percentage of managers this manager outperforms
+                rank_below = sum(1 for v in wwes_values if v < m['raw_wwes'])
+                m['league_percentile'] = round(rank_below / len(wwes_values) * 100, 1)
+
+            efficiency_metrics = {
+                'manager_metrics': eff_manager_metrics,
+                'league_stats': {
+                    'mean_wwes': mean_wwes,
+                    'std_dev_wwes': std_dev_wwes,
+                    'median_wwes': median_wwes,
+                },
+            }
+    except Exception as exc:
+        logger.warning(f"Failed to compute efficiency_metrics: {exc}")
+        efficiency_metrics = None
+
+    # ------------------------------------------------------------------
+    # HIT RATE METRICS
+    # Without future player performance data, we classify pickups by
+    # retention signal:
+    #   Tier 1 = Player added and never dropped by the same roster
+    #            (still rostered -- the best proxy for a "hit")
+    #   Tier 2 = Player kept at least 3 weeks before being dropped
+    #   Tier 3 = Player won in a contested claim (multiple bids)
+    #   Miss   = Dropped within 2 weeks of pickup
+    # Overall hit rate = (tier1 + tier2 + tier3) / total_adds * 100
+    # ------------------------------------------------------------------
+    hit_rate_metrics = None
+    try:
+        # Build drop lookup: (roster_id, player_id) -> earliest drop week
+        drop_map = {}  # (roster_id, player_id) -> drop_week
+        for t in all_transactions:
+            if t['action'] == 'drop' and t['status'] == 'complete':
+                key = (t['roster_id'], t['player_id'])
+                existing = drop_map.get(key)
+                if existing is None or t['week'] < existing:
+                    drop_map[key] = t['week']
+
+        # Build contested player set for tier-3 lookups
+        contested_pids = set()
+        for cp in contested_players:
+            contested_pids.add(cp['player_id'])
+
+        hr_manager_metrics = []
+        for roster_id in manager_stats:
+            team_name = roster_to_username.get(roster_id, f"Team {roster_id}")
+            my_adds = [t for t in all_transactions
+                       if t['action'] == 'add' and t['status'] == 'complete'
+                       and t['roster_id'] == roster_id]
+            if not my_adds:
+                continue
+
+            tier1_hits = 0
+            tier2_hits = 0
+            tier3_hits = 0
+            misses = 0
+            notable_hits = []
+
+            for t in my_adds:
+                pid = t['player_id']
+                add_week = t['week']
+                drop_week = drop_map.get((roster_id, pid))
+
+                if drop_week is None:
+                    # Never dropped -- still rostered, best retention signal
+                    tier1_hits += 1
+                    # Determine weeks available (from add_week to latest week in data)
+                    max_week = max((tx['week'] for tx in all_transactions), default=add_week)
+                    weeks_available = max(1, max_week - add_week + 1)
+                    notable_hits.append({
+                        'player_name': t['player_name'],
+                        'player_id': pid,
+                        'acquisition_week': add_week,
+                        'weeks_started': weeks_available,
+                        'total_weeks_available': weeks_available,
+                        'tier': 1,
+                    })
+                elif drop_week - add_week >= 3:
+                    # Kept for 3+ weeks -- decent tenure
+                    tier2_hits += 1
+                elif pid in contested_pids:
+                    # Won a contested claim, even if short tenure
+                    tier3_hits += 1
+                else:
+                    misses += 1
+
+            total_adds = len(my_adds)
+            overall_hit_rate = round(
+                (tier1_hits + tier2_hits + tier3_hits) / total_adds * 100, 1
+            ) if total_adds > 0 else 0.0
+
+            # Keep only top 5 notable hits (tier 1), sorted by tenure
+            notable_hits.sort(key=lambda x: x['weeks_started'], reverse=True)
+            notable_hits = notable_hits[:5]
+
+            hr_manager_metrics.append({
+                'roster_id': roster_id,
+                'team_name': team_name,
+                'total_adds': total_adds,
+                'tier1_hits': tier1_hits,
+                'tier2_hits': tier2_hits,
+                'tier3_hits': tier3_hits,
+                'misses': misses,
+                'overall_hit_rate': overall_hit_rate,
+                'notable_hits': notable_hits,
+            })
+
+        if hr_manager_metrics:
+            hit_rates = [m['overall_hit_rate'] for m in hr_manager_metrics]
+            avg_hr = round(sum(hit_rates) / len(hit_rates), 1) if hit_rates else 0
+            sorted_hr = sorted(hit_rates)
+            median_hr = round(sorted_hr[len(sorted_hr) // 2], 1) if sorted_hr else 0
+
+            hit_rate_metrics = {
+                'manager_metrics': hr_manager_metrics,
+                'league_stats': {
+                    'avg_hit_rate': avg_hr,
+                    'median_hit_rate': median_hr,
+                },
+            }
+    except Exception as exc:
+        logger.warning(f"Failed to compute hit_rate_metrics: {exc}")
+        hit_rate_metrics = None
+
+    # ------------------------------------------------------------------
+    # TIMING METRICS
+    # Analyses when managers are most active across the season.
+    # "Early" = first half of observed weeks; "Late" = second half.
+    # For each manager we compute:
+    #   early_week_hits / late_week_hits = successful adds per half
+    #   early_avg_points / late_avg_points = avg bid in each half
+    #     (bid amount is the best proxy for perceived player value)
+    #   timing_score = early_avg - late_avg (positive = front-loaded)
+    #   strategy_type: proactive (>+5), reactive (<-5), balanced
+    # ------------------------------------------------------------------
+    timing_metrics = None
+    try:
+        all_weeks = sorted(set(t['week'] for t in all_transactions if t['week']))
+        if all_weeks:
+            mid_week = all_weeks[len(all_weeks) // 2]
+
+            tm_manager_metrics = []
+            for roster_id in manager_stats:
+                team_name = roster_to_username.get(roster_id, f"Team {roster_id}")
+                my_adds = [t for t in all_transactions
+                           if t['action'] == 'add' and t['status'] == 'complete'
+                           and t['roster_id'] == roster_id]
+                if not my_adds:
+                    continue
+
+                early_adds = [t for t in my_adds if t['week'] <= mid_week]
+                late_adds = [t for t in my_adds if t['week'] > mid_week]
+
+                early_week_hits = len(early_adds)
+                late_week_hits = len(late_adds)
+
+                # Average bid (proxy for "points" since we lack actual stats)
+                early_bids = [t['waiver_bid'] for t in early_adds if t['type'] == 'waiver' and t['waiver_bid'] > 0]
+                late_bids = [t['waiver_bid'] for t in late_adds if t['type'] == 'waiver' and t['waiver_bid'] > 0]
+
+                early_avg = round(sum(early_bids) / len(early_bids), 1) if early_bids else 0.0
+                late_avg = round(sum(late_bids) / len(late_bids), 1) if late_bids else 0.0
+
+                timing_score = round(early_avg - late_avg, 1)
+
+                if timing_score > 5:
+                    strategy = 'proactive'
+                elif timing_score < -5:
+                    strategy = 'reactive'
+                else:
+                    strategy = 'balanced'
+
+                # Notable hits: top 3 pickups by bid in each half
+                early_sorted = sorted(early_adds, key=lambda x: x['waiver_bid'], reverse=True)
+                late_sorted = sorted(late_adds, key=lambda x: x['waiver_bid'], reverse=True)
+
+                notable_early = [
+                    {'player_name': t['player_name'], 'points': t['waiver_bid'], 'tier': 1}
+                    for t in early_sorted[:3] if t['waiver_bid'] > 0
+                ]
+                notable_late = [
+                    {'player_name': t['player_name'], 'points': t['waiver_bid'], 'tier': 1}
+                    for t in late_sorted[:3] if t['waiver_bid'] > 0
+                ]
+
+                tm_manager_metrics.append({
+                    'roster_id': roster_id,
+                    'team_name': team_name,
+                    'early_week_hits': early_week_hits,
+                    'late_week_hits': late_week_hits,
+                    'early_avg_points': early_avg,
+                    'late_avg_points': late_avg,
+                    'timing_score': timing_score,
+                    'strategy_type': strategy,
+                    'notable_early_hits': notable_early,
+                    'notable_late_hits': notable_late,
+                })
+
+            if tm_manager_metrics:
+                scores = [m['timing_score'] for m in tm_manager_metrics]
+                avg_ts = round(sum(scores) / len(scores), 1) if scores else 0
+                sorted_ts = sorted(scores)
+                median_ts = round(sorted_ts[len(sorted_ts) // 2], 1) if sorted_ts else 0
+
+                timing_metrics = {
+                    'manager_metrics': tm_manager_metrics,
+                    'league_stats': {
+                        'avg_timing_score': avg_ts,
+                        'median_timing_score': median_ts,
+                    },
+                }
+    except Exception as exc:
+        logger.warning(f"Failed to compute timing_metrics: {exc}")
+        timing_metrics = None
+
     return {
         'metadata': {
             'generated_at': datetime.now(timezone.utc).isoformat(),
@@ -1923,11 +2217,9 @@ def generate_enriched_waivers(
             'highest_bids': highest_bids,
             'zero_bid_success_rate': zero_bid_success_rate,
         },
-        # These require player stats data not available in enrichment lambda.
-        # Match static file: null when not computed.
-        'efficiency_metrics': None,
-        'hit_rate_metrics': None,
-        'timing_metrics': None,
+        'efficiency_metrics': efficiency_metrics,
+        'hit_rate_metrics': hit_rate_metrics,
+        'timing_metrics': timing_metrics,
     }
 
 
