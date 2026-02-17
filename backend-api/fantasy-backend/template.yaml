@@ -158,7 +158,7 @@ Resources:
           Properties:
             Schedule: cron(0 10 * * ? *)
             Description: Run enrichment pipeline daily after ingestion
-            Enabled: false
+            Enabled: true
 
 Outputs:
   DashboardApiUrl:

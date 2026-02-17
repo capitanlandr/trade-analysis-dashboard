@@ -1988,11 +1988,8 @@ def lambda_handler(event, context):
         # ===================================================================
         # STEP 2: Read and process each season
         # ===================================================================
-        all_trades_all_seasons = []
-        all_waivers_all_seasons = []
-        all_cached_values = []
-        all_analyzed_trades = []
-        standings_data = None
+        total_trade_count = 0
+        total_waiver_count = 0
 
         for season_id in requested_seasons:
             season_info = SEASONS.get(season_id)
@@ -2006,16 +2003,9 @@ def lambda_handler(event, context):
 
             # Read raw trades
             raw_trades = read_raw_trades(season_id)
-            all_trades_all_seasons.extend(raw_trades)
 
             # Read raw waivers
             raw_waivers = read_raw_waivers(season_id)
-            all_waivers_all_seasons.extend(raw_waivers)
-
-            # Read standings (use active season's standings)
-            if season_info['status'] == 'active':
-                standings_data = read_standings(season_id)
-                logger.info(f"  Standings: {'loaded' if standings_data else 'not found'}")
 
             # Read valuations
             valuations = read_valuations(season_id)
@@ -2031,107 +2021,110 @@ def lambda_handler(event, context):
                 asset_txns, valuations, pick_lineage,
                 draft_order_2026_map, pick_projections
             )
-            all_cached_values.extend(cached)
 
             # STAGE 4: Analyze trades
             logger.info(f"  STAGE 4: Analyzing trades...")
             analyzed = analyze_2team_trades(cached)
-            all_analyzed_trades.extend(analyzed)
 
+            # Sort analyzed trades by swing margin descending
+            analyzed.sort(key=lambda x: x['swing_margin'], reverse=True)
+
+            # ===============================================================
+            # Generate enriched outputs for THIS season
+            # ===============================================================
+            logger.info(f"\n  GENERATING ENRICHED OUTPUTS for {season_id}")
+            logger.info(f"    Trades analyzed: {len(analyzed)}")
+            logger.info(f"    Waivers: {len(raw_waivers)}")
+
+            enriched_trades = generate_enriched_trades(analyzed, team_info_map)
+            enriched_teams = generate_enriched_teams(analyzed, team_mapping)
+            enriched_stats = generate_enriched_stats(analyzed, enriched_teams)
+            enriched_waivers = generate_enriched_waivers(
+                raw_waivers, roster_to_username, players)
+
+            logger.info(f"    Enriched trades: {len(enriched_trades['data']['trades'])} trades")
+            logger.info(f"    Enriched teams: {len(enriched_teams['data']['teams'])} teams")
+            logger.info(f"    Enriched waivers: {len(enriched_waivers.get('all_transactions', []))} transactions")
+
+            # Items to write for every season
+            pk = f'SEASON#{season_id}'
+            timestamp = datetime.now(timezone.utc).isoformat()
+
+            items_to_write = [
+                ('ENRICHED_TRADES#LATEST', enriched_trades),
+                ('ENRICHED_TEAMS#LATEST', enriched_teams),
+                ('ENRICHED_STATS#LATEST', enriched_stats),
+                ('ENRICHED_WAIVERS#LATEST', enriched_waivers),
+            ]
+
+            # Standings, playoffs, and draft order only for the active season
+            if season_info['status'] == 'active':
+                standings_data = read_standings(season_id)
+                logger.info(f"    Standings: {'loaded' if standings_data else 'not found'}")
+
+                active_league_id = season_info.get('league_id', '')
+                enriched_standings = generate_enriched_standings(
+                    standings_data, active_league_id, team_mapping)
+                enriched_playoff = generate_enriched_playoff(enriched_standings)
+                enriched_draft_order = generate_enriched_draft_order(draft_order_data)
+
+                items_to_write.extend([
+                    ('ENRICHED_STANDINGS#LATEST', enriched_standings),
+                    ('ENRICHED_PLAYOFF#LATEST', enriched_playoff),
+                    ('ENRICHED_DRAFTORDER#LATEST', enriched_draft_order),
+                ])
+
+            # Write enriched items to DynamoDB for this season
+            logger.info(f"\n  Writing {len(items_to_write)} enriched items to {pk}...")
+
+            for sk, data in items_to_write:
+                try:
+                    cleaned = clean_nan(data)
+                    json_str = json.dumps(cleaned, default=str)
+                    size_kb = len(json_str) / 1024
+
+                    logger.info(f"    Writing {sk} ({size_kb:.1f} KB)...")
+
+                    # DynamoDB has a 400KB item size limit.
+                    # JSON-serialize the data attribute to stay within limits.
+                    throttle_safe_put_item({
+                        'PK': pk,
+                        'SK': sk,
+                        'EntityType': 'enriched_data',
+                        'Season': season_id,
+                        'Data': json_str,
+                        'DataSizeKB': int(size_kb),
+                        'UpdatedAt': timestamp,
+                    })
+
+                    results['enriched_items_written'].append(f"{season_id}/{sk}")
+                    logger.info(f"      Written successfully")
+
+                    # Pause between writes to stay within 25 WCU
+                    time.sleep(1)
+
+                except Exception as e:
+                    error_msg = f"Failed to write {pk}/{sk}: {str(e)}"
+                    logger.error(f"      {error_msg}")
+                    results['errors'].append(error_msg)
+
+            total_trade_count += len(analyzed)
+            total_waiver_count += len(raw_waivers)
             results['seasons_processed'].append(season_id)
-
-        # ===================================================================
-        # STEP 3: Generate enriched outputs (all seasons combined)
-        # ===================================================================
-        logger.info(f"\n{'='*60}")
-        logger.info(f"GENERATING ENRICHED OUTPUTS")
-        logger.info(f"  Total trades analyzed: {len(all_analyzed_trades)}")
-        logger.info(f"  Total waivers: {len(all_waivers_all_seasons)}")
-        logger.info(f"{'='*60}")
-
-        # Sort analyzed trades by swing margin descending (matching existing output)
-        all_analyzed_trades.sort(key=lambda x: x['swing_margin'], reverse=True)
-
-        # Generate all 7 enriched items
-        enriched_trades = generate_enriched_trades(all_analyzed_trades, team_info_map)
-        enriched_teams = generate_enriched_teams(all_analyzed_trades, team_mapping)
-        enriched_stats = generate_enriched_stats(all_analyzed_trades, enriched_teams)
-        # Use active season's league_id for live Sleeper API standings
-        active_league_id = SEASONS.get('season_3', {}).get('league_id', '')
-        enriched_standings = generate_enriched_standings(standings_data, active_league_id, team_mapping)
-        enriched_playoff = generate_enriched_playoff(enriched_standings)
-        enriched_draft_order = generate_enriched_draft_order(draft_order_data)
-        enriched_waivers = generate_enriched_waivers(
-            all_waivers_all_seasons, roster_to_username, players)
-
-        logger.info(f"  Enriched trades: {len(enriched_trades['data']['trades'])} trades")
-        logger.info(f"  Enriched teams: {len(enriched_teams['data']['teams'])} teams")
-        logger.info(f"  Enriched waivers: {len(enriched_waivers.get('all_transactions', []))} transactions")
-
-        # ===================================================================
-        # STEP 4: Write enriched items to DynamoDB
-        # ===================================================================
-        logger.info("\nSTEP 4: Writing enriched items to DynamoDB...")
-
-        # Use active season PK for enriched data
-        active_season = 'season_3'
-        pk = f'SEASON#{active_season}'
-        timestamp = datetime.now(timezone.utc).isoformat()
-
-        items_to_write = [
-            ('ENRICHED_TRADES#LATEST', enriched_trades),
-            ('ENRICHED_TEAMS#LATEST', enriched_teams),
-            ('ENRICHED_STATS#LATEST', enriched_stats),
-            ('ENRICHED_STANDINGS#LATEST', enriched_standings),
-            ('ENRICHED_PLAYOFF#LATEST', enriched_playoff),
-            ('ENRICHED_DRAFTORDER#LATEST', enriched_draft_order),
-            ('ENRICHED_WAIVERS#LATEST', enriched_waivers),
-        ]
-
-        for sk, data in items_to_write:
-            try:
-                cleaned = clean_nan(data)
-                json_str = json.dumps(cleaned, default=str)
-                size_kb = len(json_str) / 1024
-
-                logger.info(f"  Writing {sk} ({size_kb:.1f} KB)...")
-
-                # DynamoDB has a 400KB item size limit.
-                # JSON-serialize the data attribute to stay within limits.
-                throttle_safe_put_item({
-                    'PK': pk,
-                    'SK': sk,
-                    'EntityType': 'enriched_data',
-                    'Season': active_season,
-                    'Data': json_str,
-                    'DataSizeKB': int(size_kb),
-                    'UpdatedAt': timestamp,
-                })
-
-                results['enriched_items_written'].append(sk)
-                logger.info(f"    Written successfully")
-
-                # Pause between writes to stay within 25 WCU
-                time.sleep(1)
-
-            except Exception as e:
-                error_msg = f"Failed to write {sk}: {str(e)}"
-                logger.error(f"    {error_msg}")
-                results['errors'].append(error_msg)
 
         # ===================================================================
         # STEP 5: Summary
         # ===================================================================
         duration = time.time() - start_time
         results['duration_seconds'] = round(duration, 1)
-        results['trade_count'] = len(all_analyzed_trades)
-        results['waiver_count'] = len(all_waivers_all_seasons)
+        results['trade_count'] = total_trade_count
+        results['waiver_count'] = total_waiver_count
 
         logger.info(f"\n{'='*80}")
         logger.info(f"ENRICHMENT COMPLETE")
         logger.info(f"  Duration: {duration:.1f}s")
         logger.info(f"  Seasons: {results['seasons_processed']}")
-        logger.info(f"  Items written: {len(results['enriched_items_written'])}/7")
+        logger.info(f"  Items written: {len(results['enriched_items_written'])}")
         logger.info(f"  Errors: {len(results['errors'])}")
         logger.info(f"{'='*80}")
 
