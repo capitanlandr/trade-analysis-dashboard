@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "status": "complete",
+    "type": "waiver",
+    "metadata": {
+      "notes": "Your waiver claim was processed successfully!"
+    },
+    "created": 1772839651076,
+    "settings": {
+      "seq": 0,
+      "waiver_bid": 20
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1051659324998668288",
+    "transaction_id": "1335789949651267584",
+    "adds": {
+      "11729": 4
+    },
+    "drops": null,
+    "consenter_ids": [
+      4
+    ],
+    "roster_ids": [
+      4
+    ],
+    "status_updated": 1772870749403,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808"
+  }
+]

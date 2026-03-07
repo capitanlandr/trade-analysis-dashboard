@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 354,
-    "total_free_agent_transactions": 228,
-    "successful_waivers": 242,
+    "total_waiver_transactions": 355,
+    "total_free_agent_transactions": 229,
+    "successful_waivers": 243,
     "failed_waivers": 112,
-    "total_waiver_bids": "2508",
-    "average_waiver_bid": 13.780219780219781
+    "total_waiver_bids": "2528",
+    "average_waiver_bid": 13.814207650273223
   },
   "manager_activity": [
     {
@@ -41,12 +41,12 @@
     {
       "roster_id": 4,
       "team_name": "Spirit Halloween",
-      "total_claims": 10,
-      "total_bid": 105,
-      "avg_bid": 8.75,
+      "total_claims": 11,
+      "total_bid": 125,
+      "avg_bid": 9.62,
       "max_bid": 50,
-      "successful_claims": 8,
-      "success_rate": 80.0
+      "successful_claims": 9,
+      "success_rate": 81.8
     },
     {
       "roster_id": 5,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 97,
-      "waiver": 205
+      "free_agent": 98,
+      "waiver": 206
     },
     "2": {
       "free_agent": 7,
@@ -309,8 +309,8 @@
       "10": 12,
       "12": 11,
       "4": 10,
+      "20": 9,
       "7": 8,
-      "20": 8,
       "6": 8,
       "3": 7,
       "25": 7,
@@ -405,7 +405,7 @@
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 2,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
