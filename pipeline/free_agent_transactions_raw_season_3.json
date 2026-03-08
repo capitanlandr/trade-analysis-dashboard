@@ -3,23 +3,23 @@
     "status": "complete",
     "type": "free_agent",
     "metadata": null,
-    "created": 1772839631436,
+    "created": 1772911063628,
     "settings": null,
     "leg": 1,
     "draft_picks": [],
-    "creator": "1051659324998668288",
-    "transaction_id": "1335789867279347712",
+    "creator": "1129475833942372352",
+    "transaction_id": "1336089475607969792",
     "adds": null,
-    "drops": {
-      "4040": 4
-    },
     "consenter_ids": [
-      4
+      9
     ],
+    "drops": {
+      "2374": 9
+    },
     "roster_ids": [
-      4
+      9
     ],
-    "status_updated": 1772839631436,
+    "status_updated": 1772911063628,
     "waiver_budget": [],
     "league_id": "1312166810505719808"
   }
