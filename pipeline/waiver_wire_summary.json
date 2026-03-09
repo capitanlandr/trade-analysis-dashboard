@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 355,
-    "total_free_agent_transactions": 230,
-    "successful_waivers": 243,
+    "total_waiver_transactions": 356,
+    "total_free_agent_transactions": 232,
+    "successful_waivers": 244,
     "failed_waivers": 112,
     "total_waiver_bids": "2528",
     "average_waiver_bid": 13.814207650273223
@@ -51,12 +51,12 @@
     {
       "roster_id": 5,
       "team_name": "Mommy Rainier ",
-      "total_claims": 34,
+      "total_claims": 35,
       "total_bid": 271,
-      "avg_bid": 5.31,
+      "avg_bid": 5.21,
       "max_bid": 55,
-      "successful_claims": 32,
-      "success_rate": 94.1
+      "successful_claims": 33,
+      "success_rate": 94.3
     },
     {
       "roster_id": 6,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 99,
-      "waiver": 206
+      "free_agent": 101,
+      "waiver": 207
     },
     "2": {
       "free_agent": 7,
@@ -399,13 +399,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 77.90697674418605
+    "zero_bid_success_rate": 78.03468208092485
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 1,
+    "total_new_transactions": 3,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
