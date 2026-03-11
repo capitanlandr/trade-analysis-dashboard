@@ -1,15 +1,15 @@
 {
   "metadata": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-10T14:44:32.272915Z",
+    "last_updated": "2026-03-11T14:42:44.108654Z",
     "seasons_included": [
       "season_2",
       "season_3"
     ],
-    "total_waiver-wire": 438,
+    "total_waiver-wire": 440,
     "waiver-wire_by_season": {
       "season_2": 383,
-      "season_3": 55
+      "season_3": 57
     },
     "season_info": {
       "season_2": {
@@ -18,7 +18,7 @@
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-03-10T14:44:32.272915Z"
+        "last_fetched": "2026-03-11T14:42:44.108654Z"
       }
     }
   },
@@ -12478,6 +12478,63 @@
         11
       ],
       "status_updated": 1773072798225,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1773173899264,
+      "settings": {
+        "seq": 0,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "1115878936925294592",
+      "transaction_id": "1337191888167387136",
+      "adds": {
+        "11783": 8
+      },
+      "consenter_ids": [
+        8
+      ],
+      "drops": {
+        "19": 8
+      },
+      "roster_ids": [
+        8
+      ],
+      "status_updated": 1773212721211,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "free_agent",
+      "metadata": null,
+      "created": 1773237499608,
+      "settings": null,
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "865815956675538944",
+      "transaction_id": "1337458647344635904",
+      "adds": null,
+      "consenter_ids": [
+        7
+      ],
+      "drops": {
+        "8122": 7
+      },
+      "roster_ids": [
+        7
+      ],
+      "status_updated": 1773237499608,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"

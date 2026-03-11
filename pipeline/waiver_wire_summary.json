@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 356,
-    "total_free_agent_transactions": 234,
-    "successful_waivers": 244,
+    "total_waiver_transactions": 358,
+    "total_free_agent_transactions": 235,
+    "successful_waivers": 246,
     "failed_waivers": 112,
     "total_waiver_bids": "2528",
     "average_waiver_bid": 13.814207650273223
@@ -81,12 +81,12 @@
     {
       "roster_id": 8,
       "team_name": "TRIPS \ud83d\udd25",
-      "total_claims": 23,
+      "total_claims": 24,
       "total_bid": 193,
-      "avg_bid": 5.85,
+      "avg_bid": 5.51,
       "max_bid": 41,
-      "successful_claims": 22,
-      "success_rate": 95.7
+      "successful_claims": 24,
+      "success_rate": 100.0
     },
     {
       "roster_id": 9,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 103,
-      "waiver": 207
+      "free_agent": 104,
+      "waiver": 209
     },
     "2": {
       "free_agent": 7,
@@ -230,25 +230,15 @@
       "waiver_bid": 43,
       "status": 2
     },
-    "12531": {
+    "9497": {
       "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
+      "waiver_bid": 0,
+      "status": 4
     },
     "4454": {
       "transaction_id": 4,
       "waiver_bid": 25,
       "status": 3
-    },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "9497": {
-      "transaction_id": 4,
-      "waiver_bid": 0,
-      "status": 4
     },
     "8917": {
       "transaction_id": 4,
@@ -260,25 +250,20 @@
       "waiver_bid": 25,
       "status": 2
     },
-    "12502": {
-      "transaction_id": 3,
-      "waiver_bid": 7,
-      "status": 1
-    },
-    "12462": {
-      "transaction_id": 3,
-      "waiver_bid": 16,
-      "status": 2
-    },
-    "5857": {
-      "transaction_id": 3,
-      "waiver_bid": 8,
-      "status": 1
-    },
-    "11439": {
-      "transaction_id": 3,
+    "7670": {
+      "transaction_id": 4,
       "waiver_bid": 12,
       "status": 2
+    },
+    "12531": {
+      "transaction_id": 4,
+      "waiver_bid": 52,
+      "status": 1
+    },
+    "6011": {
+      "transaction_id": 3,
+      "waiver_bid": 41,
+      "status": 1
     },
     "11435": {
       "transaction_id": 3,
@@ -290,15 +275,30 @@
       "waiver_bid": 0,
       "status": 2
     },
-    "11650": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
     "2197": {
       "transaction_id": 3,
       "waiver_bid": 0,
       "status": 3
+    },
+    "5857": {
+      "transaction_id": 3,
+      "waiver_bid": 8,
+      "status": 1
+    },
+    "8160": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
+    },
+    "12502": {
+      "transaction_id": 3,
+      "waiver_bid": 7,
+      "status": 1
+    },
+    "11439": {
+      "transaction_id": 3,
+      "waiver_bid": 12,
+      "status": 2
     }
   },
   "bidding_patterns": {
@@ -399,7 +399,7 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 78.03468208092485
+    "zero_bid_success_rate": 78.28571428571428
   },
   "multi_season_metadata": {
     "processed_seasons": [
