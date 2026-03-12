@@ -11,7 +11,7 @@ seasons:
     league_id: '1312166810505719808'
     year: 2025
     description: Season 3 - Current season (2025)
-    last_incremental_fetch: '2026-03-11T14:43:40.366371Z'
+    last_incremental_fetch: '2026-03-12T14:44:48.175523Z'
 pipeline:
   active_seasons:
   - season_3
@@ -28,6 +28,6 @@ pipeline:
     validate_transaction_ids: true
 metadata:
   schema_version: 2.0.0
-  last_updated: '2026-03-11T14:43:40.366662Z'
+  last_updated: '2026-03-12T14:44:48.175761Z'
   created_date: '2025-12-31'
   migration_notes: Initial multi-season configuration for Season 3 launch
