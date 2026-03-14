@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_waiver_transactions": 358,
-    "total_free_agent_transactions": 235,
+    "total_free_agent_transactions": 236,
     "successful_waivers": 246,
     "failed_waivers": 112,
     "total_waiver_bids": "2528",
@@ -131,7 +131,7 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 104,
+      "free_agent": 105,
       "waiver": 209
     },
     "2": {
@@ -405,7 +405,7 @@
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 1,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
