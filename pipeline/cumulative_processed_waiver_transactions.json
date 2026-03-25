@@ -1,15 +1,15 @@
 {
   "metadata": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-18T14:58:19.716663Z",
+    "last_updated": "2026-03-25T14:54:50.508127Z",
     "seasons_included": [
       "season_2",
       "season_3"
     ],
-    "total_waiver-wire": 442,
+    "total_waiver-wire": 444,
     "waiver-wire_by_season": {
       "season_2": 383,
-      "season_3": 59
+      "season_3": 61
     },
     "season_info": {
       "season_2": {
@@ -18,7 +18,7 @@
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-03-18T14:58:19.716663Z"
+        "last_fetched": "2026-03-25T14:54:50.508127Z"
       }
     }
   },
@@ -12592,6 +12592,61 @@
         12
       ],
       "status_updated": 1773817529801,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1774375160954,
+      "settings": {
+        "seq": 0,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "596536664185163776",
+      "transaction_id": "1342230344874594304",
+      "adds": {
+        "10216": 3
+      },
+      "drops": null,
+      "consenter_ids": [
+        3
+      ],
+      "roster_ids": [
+        3
+      ],
+      "status_updated": 1774422311268,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "free_agent",
+      "metadata": null,
+      "created": 1774375153337,
+      "settings": null,
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "596536664185163776",
+      "transaction_id": "1342230312930787328",
+      "adds": null,
+      "drops": {
+        "8125": 3
+      },
+      "consenter_ids": [
+        3
+      ],
+      "roster_ids": [
+        3
+      ],
+      "status_updated": 1774375153337,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"

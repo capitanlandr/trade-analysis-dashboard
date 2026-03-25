@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 360,
-    "total_free_agent_transactions": 236,
-    "successful_waivers": 248,
+    "total_waiver_transactions": 361,
+    "total_free_agent_transactions": 237,
+    "successful_waivers": 249,
     "failed_waivers": 112,
     "total_waiver_bids": "2530",
     "average_waiver_bid": 13.675675675675675
@@ -31,11 +31,11 @@
     {
       "roster_id": 3,
       "team_name": "Bucky\u2019s Depression",
-      "total_claims": 17,
+      "total_claims": 18,
       "total_bid": 222,
-      "avg_bid": 8.22,
+      "avg_bid": 7.93,
       "max_bid": 46,
-      "successful_claims": 17,
+      "successful_claims": 18,
       "success_rate": 100.0
     },
     {
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 105,
-      "waiver": 211
+      "free_agent": 106,
+      "waiver": 212
     },
     "2": {
       "free_agent": 7,
@@ -399,13 +399,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 78.28571428571428
+    "zero_bid_success_rate": 78.4090909090909
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 2,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
