@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 361,
+    "total_waiver_transactions": 363,
     "total_free_agent_transactions": 238,
-    "successful_waivers": 249,
+    "successful_waivers": 251,
     "failed_waivers": 112,
     "total_waiver_bids": "2530",
     "average_waiver_bid": 13.675675675675675
@@ -51,12 +51,12 @@
     {
       "roster_id": 5,
       "team_name": "Mommy Rainier ",
-      "total_claims": 35,
+      "total_claims": 36,
       "total_bid": 271,
-      "avg_bid": 5.21,
+      "avg_bid": 5.02,
       "max_bid": 55,
-      "successful_claims": 33,
-      "success_rate": 94.3
+      "successful_claims": 35,
+      "success_rate": 97.2
     },
     {
       "roster_id": 6,
@@ -132,7 +132,7 @@
   "weekly_activity": {
     "1": {
       "free_agent": 107,
-      "waiver": 212
+      "waiver": 214
     },
     "2": {
       "free_agent": 7,
@@ -230,15 +230,25 @@
       "waiver_bid": 43,
       "status": 2
     },
-    "9497": {
+    "12531": {
       "transaction_id": 4,
-      "waiver_bid": 0,
-      "status": 4
+      "waiver_bid": 52,
+      "status": 1
     },
     "4454": {
       "transaction_id": 4,
       "waiver_bid": 25,
       "status": 3
+    },
+    "7670": {
+      "transaction_id": 4,
+      "waiver_bid": 12,
+      "status": 2
+    },
+    "9497": {
+      "transaction_id": 4,
+      "waiver_bid": 0,
+      "status": 4
     },
     "8917": {
       "transaction_id": 4,
@@ -250,19 +260,29 @@
       "waiver_bid": 25,
       "status": 2
     },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "12531": {
-      "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
+    "2197": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
     },
     "6011": {
       "transaction_id": 3,
       "waiver_bid": 41,
+      "status": 1
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
+    },
+    "11650": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "12502": {
+      "transaction_id": 3,
+      "waiver_bid": 7,
       "status": 1
     },
     "11435": {
@@ -270,32 +290,12 @@
       "waiver_bid": 5,
       "status": 2
     },
-    "3161": {
+    "12462": {
       "transaction_id": 3,
-      "waiver_bid": 0,
+      "waiver_bid": 16,
       "status": 2
-    },
-    "2197": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
-    "5857": {
-      "transaction_id": 3,
-      "waiver_bid": 8,
-      "status": 1
     },
     "8160": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "12502": {
-      "transaction_id": 3,
-      "waiver_bid": 7,
-      "status": 1
-    },
-    "11439": {
       "transaction_id": 3,
       "waiver_bid": 12,
       "status": 2
@@ -399,7 +399,7 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 78.4090909090909
+    "zero_bid_success_rate": 78.65168539325843
   },
   "multi_season_metadata": {
     "processed_seasons": [
