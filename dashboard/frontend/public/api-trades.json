@@ -2234,7 +2234,7 @@
           "David Njoku",
           "Alvin Kamara",
           "Christian Kirk",
-          "A.J. Dillon"
+          "AJ Dillon"
         ],
         "teamAAssets": [
           {
@@ -2262,15 +2262,15 @@
             "value_now": 72
           },
           {
-            "name": "A.J. Dillon",
+            "name": "AJ Dillon",
             "type": "player",
-            "value_then": 11,
-            "value_now": 3
+            "value_then": 0,
+            "value_now": 0
           }
         ],
-        "teamAValueThen": 3818.0,
-        "teamAValueNow": 970.0,
-        "teamAValueChange": -2848.0,
+        "teamAValueThen": 3807.0,
+        "teamAValueNow": 967.0,
+        "teamAValueChange": -2840.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Calvin Ridley",
@@ -2331,10 +2331,10 @@
         "teamBValueChange": 1074.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "mgaeta23",
-        "marginAtTrade": 1022.0,
-        "marginCurrent": 2900.0,
+        "marginAtTrade": 1011.0,
+        "marginCurrent": 2903.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 3922.0
+        "swingMargin": 3914.0
       },
       {
         "tradeId": "1256714512900292608",
@@ -4570,7 +4570,7 @@
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-04-03T14:40:16.422188",
+      "lastUpdated": "2026-04-04T14:31:06.381025",
       "totalTrades": 80,
       "dateRange": {
         "earliest": "2025-03-14",
