@@ -189,34 +189,32 @@ def log_season_processing_summary(active_seasons, static_seasons):
 def update_season_metadata(season_config, active_seasons):
     """
     Update season metadata after successful pipeline execution.
-    
+
+    Stage 1 (stage1_fetch_trades.py) already manages last_incremental_fetch
+    timestamps correctly by setting them to the most recent trade's created
+    timestamp when new trades are found, and leaving them unchanged otherwise.
+    This function only updates the top-level metadata timestamp and saves the
+    config that Stage 1 has already modified.
+
     Args:
         season_config: SeasonConfiguration instance
         active_seasons: List of active season names that were processed
     """
     try:
-        print("   Updating season metadata after successful pipeline run...")
-        logger.info("Updating season metadata after successful pipeline run...")
-        
-        # Update last fetch timestamps for active seasons
-        current_timestamp = datetime.utcnow().isoformat() + 'Z'
-        
-        for season_name in active_seasons:
-            season_config.update_last_fetch_timestamp(season_name, current_timestamp)
-            print(f"   Updated last fetch timestamp for {season_name}: {current_timestamp}")
-            logger.info(f"Updated last fetch timestamp for {season_name}: {current_timestamp}")
-        
-        # Save updated configuration
+        print("   Saving season metadata after successful pipeline run...")
+        logger.info("Saving season metadata after successful pipeline run...")
+
+        # Save updated configuration (Stage 1 already set per-season timestamps)
         season_config.save('pipeline/config/seasons.yaml')
-        print("   ✅ Season metadata updated successfully")
-        logger.info("Season metadata updated successfully")
-        
+        print("   ✅ Season metadata saved successfully")
+        logger.info("Season metadata saved successfully")
+
     except Exception as e:
-        print(f"   ❌ Failed to update season metadata: {e}")
-        logger.error(f"Failed to update season metadata: {e}")
+        print(f"   ❌ Failed to save season metadata: {e}")
+        logger.error(f"Failed to save season metadata: {e}")
         # Don't fail the entire pipeline for metadata update issues
-        print("   ⚠️  Continuing despite metadata update failure...")
-        logger.warning("Continuing despite metadata update failure...")
+        print("   ⚠️  Continuing despite metadata save failure...")
+        logger.warning("Continuing despite metadata save failure...")
 
 
 def copy_cumulative_files_to_frontend():
