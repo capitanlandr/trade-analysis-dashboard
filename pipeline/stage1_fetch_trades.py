@@ -213,7 +213,13 @@ def fetch_trades_for_season(season_name: str, league_id: str,
         
         # Sort by date (most recent first)
         all_trades.sort(key=lambda t: t.get('created', 0), reverse=True)
-        
+
+        # Enrich trades with league_id (Sleeper API omits this field)
+        # Required by CumulativeFileManager._validate_record
+        for trade in all_trades:
+            if not trade.get('league_id'):
+                trade['league_id'] = league_id
+
         # Create comprehensive output with season tagging
         current_timestamp = datetime.now(timezone.utc).isoformat()
         
