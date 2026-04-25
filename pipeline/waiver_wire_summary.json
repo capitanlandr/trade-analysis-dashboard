@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 368,
-    "total_free_agent_transactions": 241,
-    "successful_waivers": 256,
+    "total_waiver_transactions": 369,
+    "total_free_agent_transactions": 246,
+    "successful_waivers": 257,
     "failed_waivers": 112,
     "total_waiver_bids": "2534",
     "average_waiver_bid": 13.550802139037433
@@ -101,12 +101,12 @@
     {
       "roster_id": 10,
       "team_name": "Rashid Shaheed Truthers",
-      "total_claims": 8,
+      "total_claims": 9,
       "total_bid": 252,
-      "avg_bid": 19.38,
+      "avg_bid": 18.0,
       "max_bid": 51,
-      "successful_claims": 10,
-      "success_rate": 125.0
+      "successful_claims": 11,
+      "success_rate": 122.2
     },
     {
       "roster_id": 11,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 110,
-      "waiver": 219
+      "free_agent": 115,
+      "waiver": 220
     },
     "2": {
       "free_agent": 7,
@@ -399,14 +399,14 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 79.00552486187846
+    "zero_bid_success_rate": 79.12087912087912
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 1,
-    "total_duplicates": 4,
+    "total_new_transactions": 6,
+    "total_duplicates": 5,
     "fetch_mode": "incremental"
   }
 }
