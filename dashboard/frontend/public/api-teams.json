@@ -63,10 +63,10 @@
         "realName": "Chris",
         "sleeperUsername": "cjsyregelas",
         "nickname": "Chris",
-        "tradeCount": 5,
-        "winRate": 40.0,
-        "avgMargin": 2083.6,
-        "totalValueGained": 1045.0
+        "tradeCount": 6,
+        "winRate": 33.33333333333333,
+        "avgMargin": 1775.0,
+        "totalValueGained": 1969.0
       },
       {
         "rosterId": 7,
@@ -96,10 +96,10 @@
         "realName": "Matt",
         "sleeperUsername": "mgaeta23",
         "nickname": "Gaeta",
-        "tradeCount": 10,
-        "winRate": 70.0,
-        "avgMargin": 1648.8,
-        "totalValueGained": 11121.0
+        "tradeCount": 11,
+        "winRate": 72.72727272727273,
+        "avgMargin": 1520.0,
+        "totalValueGained": 12277.0
       },
       {
         "rosterId": 10,
@@ -137,7 +137,7 @@
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 84,
+      "totalTrades": 85,
       "seasonsIncluded": [
         "season_2",
         "season_3"

@@ -501,7 +501,7 @@
           {
             "name": "Wan'Dale Robinson",
             "type": "player",
-            "value_then": 215,
+            "value_then": 0,
             "value_now": 924
           },
           {
@@ -734,7 +734,7 @@
           {
             "name": "Wan'Dale Robinson",
             "type": "player",
-            "value_then": 215,
+            "value_then": 0,
             "value_now": 924
           },
           {
@@ -1702,7 +1702,7 @@
           {
             "name": "Wan'Dale Robinson",
             "type": "player",
-            "value_then": 215,
+            "value_then": 0,
             "value_now": 924
           }
         ],
@@ -4839,14 +4839,56 @@
         "marginCurrent": 359.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354504941384794112",
+        "transactionId": "1354504941384794112",
+        "tradeDate": "2026-04-27",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Wan'Dale Robinson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 0,
+            "value_now": 924
+          }
+        ],
+        "teamAValueThen": 0.0,
+        "teamAValueNow": 924.0,
+        "teamAValueChange": 924.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Terry McLaurin"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Terry McLaurin",
+            "type": "player",
+            "value_then": 0,
+            "value_now": 1156
+          }
+        ],
+        "teamBValueThen": 0.0,
+        "teamBValueNow": 1156.0,
+        "teamBValueChange": 1156.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": -0.0,
+        "marginCurrent": -232.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 232.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-04-26T14:40:43.677584",
-      "totalTrades": 84,
+      "lastUpdated": "2026-04-27T15:44:46.508594",
+      "totalTrades": 85,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-03-31"
+        "latest": "2026-04-27"
       },
       "seasonsIncluded": [
         "season_2",
@@ -4854,7 +4896,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 4
+        "season_3": 5
       },
       "seasonInfo": {
         "season_2": {
@@ -4863,14 +4905,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-04-26T14:39:27.250241Z"
+          "last_fetched": "2026-04-27T15:43:32.403365Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 85,
-        "dashboardTradesGenerated": 84,
+        "rawTradesProcessed": 86,
+        "dashboardTradesGenerated": 85,
         "multiTeamTradesSkipped": 1
       }
     }

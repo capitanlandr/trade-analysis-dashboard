@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 84,
-      "totalTradeValue": 435485.0,
-      "avgTradeMargin": 1454.6785714285713,
+      "totalTrades": 85,
+      "totalTradeValue": 437565.0,
+      "avgTradeMargin": 1440.2941176470588,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 27,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-03-31"
+        "latest": "2026-04-27"
       }
     },
     "teamRankings": {
@@ -82,6 +82,17 @@
           "totalValueGained": 12322.0
         },
         {
+          "rosterId": 9,
+          "teamName": "Gaeta Spur FC",
+          "realName": "Matt",
+          "sleeperUsername": "mgaeta23",
+          "nickname": "Gaeta",
+          "tradeCount": 11,
+          "winRate": 72.72727272727273,
+          "avgMargin": 1520.0,
+          "totalValueGained": 12277.0
+        },
+        {
           "rosterId": 5,
           "teamName": "Mommy Rainier ",
           "realName": "Zach",
@@ -91,17 +102,6 @@
           "winRate": 50.0,
           "avgMargin": 1657.1666666666667,
           "totalValueGained": 11990.0
-        },
-        {
-          "rosterId": 9,
-          "teamName": "Gaeta Spur FC",
-          "realName": "Matt",
-          "sleeperUsername": "mgaeta23",
-          "nickname": "Gaeta",
-          "tradeCount": 10,
-          "winRate": 70.0,
-          "avgMargin": 1648.8,
-          "totalValueGained": 11121.0
         },
         {
           "rosterId": 11,
@@ -128,6 +128,17 @@
       ],
       "byWinRate": [
         {
+          "rosterId": 9,
+          "teamName": "Gaeta Spur FC",
+          "realName": "Matt",
+          "sleeperUsername": "mgaeta23",
+          "nickname": "Gaeta",
+          "tradeCount": 11,
+          "winRate": 72.72727272727273,
+          "avgMargin": 1520.0,
+          "totalValueGained": 12277.0
+        },
+        {
           "rosterId": 10,
           "teamName": "Rashid Shaheed Truthers",
           "realName": "Jake",
@@ -137,17 +148,6 @@
           "winRate": 71.42857142857143,
           "avgMargin": 1020.2857142857143,
           "totalValueGained": 3530.0
-        },
-        {
-          "rosterId": 9,
-          "teamName": "Gaeta Spur FC",
-          "realName": "Matt",
-          "sleeperUsername": "mgaeta23",
-          "nickname": "Gaeta",
-          "tradeCount": 10,
-          "winRate": 70.0,
-          "avgMargin": 1648.8,
-          "totalValueGained": 11121.0
         },
         {
           "rosterId": 8,
@@ -306,6 +306,17 @@
           "totalValueGained": 12992.0
         },
         {
+          "rosterId": 9,
+          "teamName": "Gaeta Spur FC",
+          "realName": "Matt",
+          "sleeperUsername": "mgaeta23",
+          "nickname": "Gaeta",
+          "tradeCount": 11,
+          "winRate": 72.72727272727273,
+          "avgMargin": 1520.0,
+          "totalValueGained": 12277.0
+        },
+        {
           "rosterId": 4,
           "teamName": "Spirit Halloween",
           "realName": "Kyle",
@@ -315,17 +326,6 @@
           "winRate": 40.0,
           "avgMargin": 1608.9,
           "totalValueGained": 12322.0
-        },
-        {
-          "rosterId": 9,
-          "teamName": "Gaeta Spur FC",
-          "realName": "Matt",
-          "sleeperUsername": "mgaeta23",
-          "nickname": "Gaeta",
-          "tradeCount": 10,
-          "winRate": 70.0,
-          "avgMargin": 1648.8,
-          "totalValueGained": 11121.0
         },
         {
           "rosterId": 11,
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 4
+        "season_3": 5
       },
       "seasonInfo": {
         "season_2": {
@@ -367,95 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-04-26T14:39:27.250241Z"
+          "last_fetched": "2026-04-27T15:43:32.403365Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1222779260813459456",
-        "transactionId": "1222779260813459456",
-        "tradeDate": "2025-04-29",
-        "season": "season_2",
-        "teamA": "zachlearningtogolf",
-        "teamAReceived": [
-          "Ray Davis",
-          "Geno Smith",
-          "James Cook",
-          "2025 Round 1"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Ray Davis",
-            "type": "player",
-            "value_then": 207,
-            "value_now": 55
-          },
-          {
-            "name": "Geno Smith",
-            "type": "player",
-            "value_then": 0,
-            "value_now": 211
-          },
-          {
-            "name": "James Cook",
-            "type": "player",
-            "value_then": 3335,
-            "value_now": 5262
-          },
-          {
-            "name": "2025 Round 1",
-            "type": "draft_pick",
-            "value_then": 2904,
-            "value_now": 2154
-          }
-        ],
-        "teamAValueThen": 8814.0,
-        "teamAValueNow": 7622.0,
-        "teamAValueChange": -1192.0,
-        "teamB": "jwalters74",
-        "teamBReceived": [
-          "Christian McCaffrey",
-          "Baker Mayfield",
-          "J.K. Dobbins",
-          "2025 Round 2"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Christian McCaffrey",
-            "type": "player",
-            "value_then": 3391,
-            "value_now": 3690
-          },
-          {
-            "name": "Baker Mayfield",
-            "type": "player",
-            "value_then": 0,
-            "value_now": 3621
-          },
-          {
-            "name": "J.K. Dobbins",
-            "type": "player",
-            "value_then": 205,
-            "value_now": 174
-          },
-          {
-            "name": "2025 Round 2",
-            "type": "draft_pick",
-            "value_then": 707,
-            "value_now": 2706
-          }
-        ],
-        "teamBValueThen": 8219.0,
-        "teamBValueNow": 9125.0,
-        "teamBValueChange": 906.0,
-        "winnerAtTrade": "zachlearningtogolf",
-        "winnerCurrent": "jwalters74",
-        "marginAtTrade": 595.0,
-        "marginCurrent": 1503.0,
-        "swingWinner": "jwalters74",
-        "swingMargin": 2098.0
-      },
       {
         "tradeId": "1222706043209924608",
         "transactionId": "1222706043209924608",
@@ -1037,6 +953,48 @@
         "marginCurrent": 359.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354504941384794112",
+        "transactionId": "1354504941384794112",
+        "tradeDate": "2026-04-27",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Wan'Dale Robinson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 0,
+            "value_now": 924
+          }
+        ],
+        "teamAValueThen": 0.0,
+        "teamAValueNow": 924.0,
+        "teamAValueChange": 924.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Terry McLaurin"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Terry McLaurin",
+            "type": "player",
+            "value_then": 0,
+            "value_now": 1156
+          }
+        ],
+        "teamBValueThen": 0.0,
+        "teamBValueNow": 1156.0,
+        "teamBValueChange": 1156.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": -0.0,
+        "marginCurrent": -232.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 232.0
       }
     ]
   }
