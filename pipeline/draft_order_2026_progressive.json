@@ -3,7 +3,7 @@
   "draft_year": 2026,
   "through_week": 17,
   "determination_level": "complete",
-  "last_updated": "2026-04-27T15:44:22.176777Z",
+  "last_updated": "2026-04-28T16:06:14.975080Z",
   "summary": {
     "total_picks": 48,
     "locked_picks": 48,
@@ -108,10 +108,10 @@
           "description": "7th place (remaining team)"
         },
         "current_owner": {
-          "roster_id": 10,
-          "team_name": "Rashid Shaheed Truthers"
+          "roster_id": 11,
+          "team_name": "On To 2026"
         },
-        "traded": false
+        "traded": true
       },
       {
         "pick_number": 7,
@@ -142,8 +142,8 @@
           "description": "5th place (remaining team)"
         },
         "current_owner": {
-          "roster_id": 11,
-          "team_name": "On To 2026"
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
         },
         "traded": true
       },
@@ -257,8 +257,8 @@
           "description": "12th place (remaining team)"
         },
         "current_owner": {
-          "roster_id": 11,
-          "team_name": "On To 2026"
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
         },
         "traded": true
       },

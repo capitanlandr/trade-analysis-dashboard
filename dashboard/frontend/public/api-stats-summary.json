@@ -2,12 +2,12 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 85,
-      "totalTradeValue": 437565.0,
-      "avgTradeMargin": 1440.2941176470588,
+      "totalTrades": 86,
+      "totalTradeValue": 447686.0,
+      "avgTradeMargin": 1447.8139534883721,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
-      "blockbusterCount": 27,
+      "blockbusterCount": 28,
       "dateRange": {
         "earliest": "2025-03-14",
         "latest": "2026-04-27"
@@ -109,9 +109,9 @@
           "realName": "Will",
           "sleeperUsername": "wkerwin",
           "nickname": "Will",
-          "tradeCount": 9,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1581.0,
+          "tradeCount": 10,
+          "winRate": 40.0,
+          "avgMargin": 1631.6,
           "totalValueGained": 6029.0
         },
         {
@@ -120,13 +120,24 @@
           "realName": "Jake",
           "sleeperUsername": "jakeduf",
           "nickname": "Jake",
-          "tradeCount": 7,
-          "winRate": 71.42857142857143,
-          "avgMargin": 1020.2857142857143,
+          "tradeCount": 8,
+          "winRate": 75.0,
+          "avgMargin": 1153.625,
           "totalValueGained": 3530.0
         }
       ],
       "byWinRate": [
+        {
+          "rosterId": 10,
+          "teamName": "Rashid Shaheed Truthers",
+          "realName": "Jake",
+          "sleeperUsername": "jakeduf",
+          "nickname": "Jake",
+          "tradeCount": 8,
+          "winRate": 75.0,
+          "avgMargin": 1153.625,
+          "totalValueGained": 3530.0
+        },
         {
           "rosterId": 9,
           "teamName": "Gaeta Spur FC",
@@ -137,17 +148,6 @@
           "winRate": 72.72727272727273,
           "avgMargin": 1520.0,
           "totalValueGained": 12277.0
-        },
-        {
-          "rosterId": 10,
-          "teamName": "Rashid Shaheed Truthers",
-          "realName": "Jake",
-          "sleeperUsername": "jakeduf",
-          "nickname": "Jake",
-          "tradeCount": 7,
-          "winRate": 71.42857142857143,
-          "avgMargin": 1020.2857142857143,
-          "totalValueGained": 3530.0
         },
         {
           "rosterId": 8,
@@ -216,17 +216,6 @@
           "totalValueGained": 14541.0
         },
         {
-          "rosterId": 11,
-          "teamName": "On To 2026",
-          "realName": "Will",
-          "sleeperUsername": "wkerwin",
-          "nickname": "Will",
-          "tradeCount": 9,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1581.0,
-          "totalValueGained": 6029.0
-        },
-        {
           "rosterId": 7,
           "teamName": "2-Man Title Charge",
           "realName": "Johnny",
@@ -236,6 +225,17 @@
           "winRate": 41.37931034482759,
           "avgMargin": 1583.4137931034484,
           "totalValueGained": 21949.0
+        },
+        {
+          "rosterId": 4,
+          "teamName": "Spirit Halloween",
+          "realName": "Kyle",
+          "sleeperUsername": "thekylecasey",
+          "nickname": "Kyle",
+          "tradeCount": 10,
+          "winRate": 40.0,
+          "avgMargin": 1608.9,
+          "totalValueGained": 12322.0
         }
       ],
       "byTradeCount": [
@@ -333,9 +333,9 @@
           "realName": "Will",
           "sleeperUsername": "wkerwin",
           "nickname": "Will",
-          "tradeCount": 9,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1581.0,
+          "tradeCount": 10,
+          "winRate": 40.0,
+          "avgMargin": 1631.6,
           "totalValueGained": 6029.0
         },
         {
@@ -344,9 +344,9 @@
           "realName": "Jake",
           "sleeperUsername": "jakeduf",
           "nickname": "Jake",
-          "tradeCount": 7,
-          "winRate": 71.42857142857143,
-          "avgMargin": 1020.2857142857143,
+          "tradeCount": 8,
+          "winRate": 75.0,
+          "avgMargin": 1153.625,
           "totalValueGained": 3530.0
         }
       ]
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 5
+        "season_3": 6
       },
       "seasonInfo": {
         "season_2": {
@@ -367,74 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-04-27T15:43:32.403365Z"
+          "last_fetched": "2026-04-28T16:05:10.925172Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1222706043209924608",
-        "transactionId": "1222706043209924608",
-        "tradeDate": "2025-04-28",
-        "season": "season_2",
-        "teamA": "thekylecasey",
-        "teamAReceived": [
-          "Tank Dell",
-          "2025 Round 1"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Tank Dell",
-            "type": "player",
-            "value_then": 292,
-            "value_now": 108
-          },
-          {
-            "name": "2025 Round 1",
-            "type": "draft_pick",
-            "value_then": 2904,
-            "value_now": 2154
-          }
-        ],
-        "teamAValueThen": 1940.0,
-        "teamAValueNow": 2865.0,
-        "teamAValueChange": 925.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "Courtland Sutton",
-          "2025 Round 2",
-          "2025 Round 3"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Courtland Sutton",
-            "type": "player",
-            "value_then": 1013,
-            "value_now": 1145
-          },
-          {
-            "name": "2025 Round 2",
-            "type": "draft_pick",
-            "value_then": 707,
-            "value_now": 2706
-          },
-          {
-            "name": "2025 Round 3",
-            "type": "draft_pick",
-            "value_then": 50,
-            "value_now": 2200
-          }
-        ],
-        "teamBValueThen": 1374.0,
-        "teamBValueNow": 1686.0,
-        "teamBValueChange": 312.0,
-        "winnerAtTrade": "thekylecasey",
-        "winnerCurrent": "thekylecasey",
-        "marginAtTrade": -566.0,
-        "marginCurrent": -1179.0,
-        "swingWinner": "thekylecasey",
-        "swingMargin": 613.0
-      },
       {
         "tradeId": "1220272163022438400",
         "transactionId": "1220272163022438400",
@@ -519,9 +456,9 @@
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 2268,
-            "pick_label": "2.05"
+            "value_then": 2503,
+            "value_now": 2503,
+            "pick_label": "2.03"
           },
           {
             "name": "2027 Round 3",
@@ -576,9 +513,9 @@
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
-            "value_then": 1232,
-            "value_now": 2914,
-            "pick_label": "1.12"
+            "value_then": 3601,
+            "value_now": 3601,
+            "pick_label": "1.08"
           },
           {
             "name": "2025 Round 2",
@@ -995,6 +932,58 @@
         "marginCurrent": -232.0,
         "swingWinner": "mgaeta23",
         "swingMargin": 232.0
+      },
+      {
+        "tradeId": "1354530759280455680",
+        "transactionId": "1354530759280455680",
+        "tradeDate": "2026-04-27",
+        "season": "season_3",
+        "teamA": "jakeduf",
+        "teamAReceived": [
+          "2026 Round 1",
+          "2026 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3601,
+            "value_now": 3601,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 2503,
+            "value_now": 2503,
+            "pick_label": "2.03"
+          }
+        ],
+        "teamAValueThen": 6104.0,
+        "teamAValueNow": 6104.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3601,
+            "value_now": 3601,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 4017.0,
+        "teamBValueNow": 4017.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": -2087.0,
+        "marginCurrent": -2087.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }

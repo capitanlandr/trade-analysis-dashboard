@@ -279,18 +279,23 @@
   },
   {
     "Team": "jakeduf",
-    "Total_Picks": 6,
+    "Total_Picks": 7,
     "Round_1": 1,
-    "Round_2": 0,
+    "Round_2": 1,
     "Round_3": 4,
     "Round_4": 1,
-    "Net_Picks": 2,
-    "Estimated_Value": 2848,
+    "Net_Picks": 3,
+    "Estimated_Value": 3398,
     "Pick_Details": [
       {
         "round": 1,
-        "origin_team": "jakeduf",
-        "is_own_pick": true
+        "origin_team": "donewton",
+        "is_own_pick": false
+      },
+      {
+        "round": 2,
+        "origin_team": "thekylecasey",
+        "is_own_pick": false
       },
       {
         "round": 3,
@@ -321,13 +326,13 @@
   },
   {
     "Team": "wkerwin",
-    "Total_Picks": 7,
+    "Total_Picks": 6,
     "Round_1": 3,
-    "Round_2": 3,
+    "Round_2": 2,
     "Round_3": 1,
     "Round_4": 0,
-    "Net_Picks": 3,
-    "Estimated_Value": 10980,
+    "Net_Picks": 2,
+    "Estimated_Value": 10430,
     "Pick_Details": [
       {
         "round": 1,
@@ -336,22 +341,17 @@
       },
       {
         "round": 1,
+        "origin_team": "jakeduf",
+        "is_own_pick": false
+      },
+      {
+        "round": 1,
         "origin_team": "wkerwin",
         "is_own_pick": true
       },
       {
-        "round": 1,
-        "origin_team": "donewton",
-        "is_own_pick": false
-      },
-      {
         "round": 2,
         "origin_team": "zachlearningtogolf",
-        "is_own_pick": false
-      },
-      {
-        "round": 2,
-        "origin_team": "thekylecasey",
         "is_own_pick": false
       },
       {

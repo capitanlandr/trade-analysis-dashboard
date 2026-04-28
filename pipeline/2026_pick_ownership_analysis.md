@@ -1,6 +1,6 @@
 # 2026 Draft Pick Ownership Analysis
 
-*Generated: 2026-04-27 15:44:15*
+*Generated: 2026-04-28 16:06:06*
 
 ## Summary Table
 
@@ -8,8 +8,8 @@
 |------|-------------|-----|-----|-----|-----|-----|------------|
 | zachlearningtogolf | 7 | 0 | 4 | 3 | 0 | +3 | 1,055 |
 | mgaeta23 | 7 | 4 | 3 | 0 | 0 | +3 | 12,428 |
-| wkerwin | 7 | 3 | 3 | 1 | 0 | +3 | 10,980 |
-| jakeduf | 6 | 1 | 0 | 4 | 1 | +2 | 2,848 |
+| jakeduf | 7 | 1 | 1 | 4 | 1 | +3 | 3,398 |
+| wkerwin | 6 | 3 | 2 | 1 | 0 | +2 | 10,430 |
 | thekylecasey | 5 | 2 | 1 | 0 | 2 | +1 | 11,463 |
 | jwalters74 | 4 | 0 | 0 | 2 | 2 | 0 | 212 |
 | gnewman4 | 3 | 0 | 0 | 1 | 2 | -1 | 110 |
@@ -25,13 +25,13 @@
 
 1. **zachlearningtogolf** - 7 picks (+3 net)
 2. **mgaeta23** - 7 picks (+3 net)
-3. **wkerwin** - 7 picks (+3 net)
+3. **jakeduf** - 7 picks (+3 net)
 
 ### Most Valuable Pick Portfolios
 
 1. **mgaeta23** - 12,428 value (4 first-rounders)
 2. **thekylecasey** - 11,463 value (2 first-rounders)
-3. **wkerwin** - 10,980 value (3 first-rounders)
+3. **wkerwin** - 10,430 value (3 first-rounders)
 
 ### Most First-Round Picks
 
@@ -65,26 +65,16 @@
 - *(1 own, 2 acquired)*
 
 
-### wkerwin
+### jakeduf
 **7 total picks (+3 net)**
 
-**Round 1:** 3 pick(s)
-- Origins: lndahayo, wkerwin, donewton
-- *(1 own, 2 acquired)*
-
-**Round 2:** 3 pick(s)
-- Origins: zachlearningtogolf, thekylecasey, wkerwin
-- *(1 own, 2 acquired)*
-
-**Round 3:** 1 pick(s)
-- Origins: wkerwin
-
-
-### jakeduf
-**6 total picks (+2 net)**
-
 **Round 1:** 1 pick(s)
-- Origins: jakeduf
+- Origins: donewton
+- *(0 own, 1 acquired)*
+
+**Round 2:** 1 pick(s)
+- Origins: thekylecasey
+- *(0 own, 1 acquired)*
 
 **Round 3:** 4 pick(s)
 - Origins: brevinowens, thekylecasey, jakeduf, donewton
@@ -93,6 +83,21 @@
 **Round 4:** 1 pick(s)
 - Origins: thekylecasey
 - *(0 own, 1 acquired)*
+
+
+### wkerwin
+**6 total picks (+2 net)**
+
+**Round 1:** 3 pick(s)
+- Origins: lndahayo, jakeduf, wkerwin
+- *(1 own, 2 acquired)*
+
+**Round 2:** 2 pick(s)
+- Origins: zachlearningtogolf, wkerwin
+- *(1 own, 1 acquired)*
+
+**Round 3:** 1 pick(s)
+- Origins: wkerwin
 
 
 ### thekylecasey

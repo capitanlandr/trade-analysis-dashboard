@@ -107,9 +107,9 @@
         "realName": "Jake",
         "sleeperUsername": "jakeduf",
         "nickname": "Jake",
-        "tradeCount": 7,
-        "winRate": 71.42857142857143,
-        "avgMargin": 1020.2857142857143,
+        "tradeCount": 8,
+        "winRate": 75.0,
+        "avgMargin": 1153.625,
         "totalValueGained": 3530.0
       },
       {
@@ -118,9 +118,9 @@
         "realName": "Will",
         "sleeperUsername": "wkerwin",
         "nickname": "Will",
-        "tradeCount": 9,
-        "winRate": 44.44444444444444,
-        "avgMargin": 1581.0,
+        "tradeCount": 10,
+        "winRate": 40.0,
+        "avgMargin": 1631.6,
         "totalValueGained": 6029.0
       },
       {
@@ -137,7 +137,7 @@
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 85,
+      "totalTrades": 86,
       "seasonsIncluded": [
         "season_2",
         "season_3"
