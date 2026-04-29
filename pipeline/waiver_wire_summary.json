@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_waiver_transactions": 369,
-    "total_free_agent_transactions": 257,
+    "total_free_agent_transactions": 258,
     "successful_waivers": 257,
     "failed_waivers": 112,
     "total_waiver_bids": "2534",
@@ -131,7 +131,7 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 126,
+      "free_agent": 127,
       "waiver": 220
     },
     "2": {
@@ -200,25 +200,20 @@
     }
   },
   "contested_players": {
-    "1166": {
-      "transaction_id": 7,
-      "waiver_bid": 84,
-      "status": 1
-    },
     "6111": {
       "transaction_id": 7,
       "waiver_bid": 109,
+      "status": 1
+    },
+    "1166": {
+      "transaction_id": 7,
+      "waiver_bid": 84,
       "status": 1
     },
     "12775": {
       "transaction_id": 6,
       "waiver_bid": 51,
       "status": 3
-    },
-    "8123": {
-      "transaction_id": 5,
-      "waiver_bid": 43,
-      "status": 2
     },
     "6271": {
       "transaction_id": 5,
@@ -230,20 +225,20 @@
       "waiver_bid": 46,
       "status": 1
     },
+    "8123": {
+      "transaction_id": 5,
+      "waiver_bid": 43,
+      "status": 2
+    },
     "9497": {
       "transaction_id": 4,
       "waiver_bid": 0,
       "status": 4
     },
-    "12531": {
+    "4454": {
       "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
-    },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
-      "status": 2
+      "waiver_bid": 25,
+      "status": 3
     },
     "8917": {
       "transaction_id": 4,
@@ -255,19 +250,24 @@
       "waiver_bid": 25,
       "status": 2
     },
-    "4454": {
+    "7670": {
       "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "12462": {
-      "transaction_id": 3,
-      "waiver_bid": 16,
+      "waiver_bid": 12,
       "status": 2
     },
-    "12470": {
+    "12531": {
+      "transaction_id": 4,
+      "waiver_bid": 52,
+      "status": 1
+    },
+    "827": {
       "transaction_id": 3,
-      "waiver_bid": 6,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "6011": {
+      "transaction_id": 3,
+      "waiver_bid": 41,
       "status": 1
     },
     "3161": {
@@ -275,30 +275,30 @@
       "waiver_bid": 0,
       "status": 2
     },
+    "2197": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
     "8160": {
       "transaction_id": 3,
       "waiver_bid": 12,
       "status": 2
     },
-    "827": {
+    "12470": {
       "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
-    "5857": {
-      "transaction_id": 3,
-      "waiver_bid": 8,
+      "waiver_bid": 6,
       "status": 1
     },
-    "6011": {
+    "12462": {
       "transaction_id": 3,
-      "waiver_bid": 41,
-      "status": 1
+      "waiver_bid": 16,
+      "status": 2
     },
-    "12502": {
+    "11435": {
       "transaction_id": 3,
-      "waiver_bid": 7,
-      "status": 1
+      "waiver_bid": 5,
+      "status": 2
     }
   },
   "bidding_patterns": {
@@ -314,28 +314,28 @@
       "6": 8,
       "3": 7,
       "25": 7,
-      "9": 6,
       "15": 6,
+      "9": 6,
       "11": 5,
       "8": 5,
-      "41": 3,
       "35": 3,
-      "39": 2,
+      "41": 3,
       "31": 2,
-      "46": 2,
-      "16": 2,
       "50": 2,
-      "43": 2,
-      "52": 2,
-      "32": 2,
-      "17": 2,
       "51": 2,
       "38": 2,
-      "55": 1,
+      "43": 2,
+      "32": 2,
+      "39": 2,
+      "52": 2,
+      "16": 2,
+      "46": 2,
+      "17": 2,
       "109": 1,
       "13": 1,
-      "75": 1,
-      "84": 1
+      "55": 1,
+      "84": 1,
+      "75": 1
     },
     "highest_bids": [
       {
@@ -405,7 +405,7 @@
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 4,
+    "total_new_transactions": 1,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }

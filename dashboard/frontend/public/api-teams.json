@@ -118,10 +118,10 @@
         "realName": "Will",
         "sleeperUsername": "wkerwin",
         "nickname": "Will",
-        "tradeCount": 10,
-        "winRate": 40.0,
-        "avgMargin": 1631.6,
-        "totalValueGained": 6029.0
+        "tradeCount": 11,
+        "winRate": 36.36363636363637,
+        "avgMargin": 1626.5454545454545,
+        "totalValueGained": 7084.0
       },
       {
         "rosterId": 12,
@@ -129,15 +129,15 @@
         "realName": "Don",
         "sleeperUsername": "donewton",
         "nickname": "Don",
-        "tradeCount": 26,
-        "winRate": 46.15384615384615,
-        "avgMargin": 1055.0384615384614,
+        "tradeCount": 27,
+        "winRate": 48.148148148148145,
+        "avgMargin": 1074.3333333333333,
         "totalValueGained": 14541.0
       }
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 86,
+      "totalTrades": 87,
       "seasonsIncluded": [
         "season_2",
         "season_3"

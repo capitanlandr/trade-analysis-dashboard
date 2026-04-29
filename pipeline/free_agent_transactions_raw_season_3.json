@@ -3,95 +3,23 @@
     "status": "complete",
     "type": "free_agent",
     "metadata": null,
-    "created": 1777391925801,
+    "created": 1777473437207,
     "settings": null,
     "leg": 1,
     "draft_picks": [],
-    "creator": "1129843037888204800",
-    "transaction_id": "1354883573743644672",
+    "creator": "1112526078167375872",
+    "transaction_id": "1355225457359876096",
     "adds": null,
-    "drops": {
-      "4144": 5
-    },
     "consenter_ids": [
-      5
+      6
     ],
-    "roster_ids": [
-      5
-    ],
-    "status_updated": 1777391925801,
-    "waiver_budget": [],
-    "league_id": "1312166810505719808"
-  },
-  {
-    "status": "complete",
-    "type": "free_agent",
-    "metadata": null,
-    "created": 1777391912888,
-    "settings": null,
-    "leg": 1,
-    "draft_picks": [],
-    "creator": "1129843037888204800",
-    "transaction_id": "1354883519582568448",
-    "adds": null,
     "drops": {
-      "12048": 5
+      "7587": 6
     },
-    "consenter_ids": [
-      5
-    ],
     "roster_ids": [
-      5
+      6
     ],
-    "status_updated": 1777391912888,
-    "waiver_budget": [],
-    "league_id": "1312166810505719808"
-  },
-  {
-    "status": "complete",
-    "type": "free_agent",
-    "metadata": null,
-    "created": 1777309560804,
-    "settings": null,
-    "leg": 1,
-    "draft_picks": [],
-    "creator": "725577957241896960",
-    "transaction_id": "1354538109907251200",
-    "adds": null,
-    "drops": {
-      "8800": 10
-    },
-    "consenter_ids": [
-      10
-    ],
-    "roster_ids": [
-      10
-    ],
-    "status_updated": 1777309560804,
-    "waiver_budget": [],
-    "league_id": "1312166810505719808"
-  },
-  {
-    "status": "complete",
-    "type": "free_agent",
-    "metadata": null,
-    "created": 1777308784541,
-    "settings": null,
-    "leg": 1,
-    "draft_picks": [],
-    "creator": "1115878936925294592",
-    "transaction_id": "1354534854024269824",
-    "adds": null,
-    "drops": {
-      "11783": 8
-    },
-    "consenter_ids": [
-      8
-    ],
-    "roster_ids": [
-      8
-    ],
-    "status_updated": 1777308784541,
+    "status_updated": 1777473437207,
     "waiver_budget": [],
     "league_id": "1312166810505719808"
   }

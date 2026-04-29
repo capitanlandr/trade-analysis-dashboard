@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 86,
-      "totalTradeValue": 447686.0,
-      "avgTradeMargin": 1447.8139534883721,
+      "totalTrades": 87,
+      "totalTradeValue": 451372.0,
+      "avgTradeMargin": 1449.287356321839,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 28,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-04-27"
+        "latest": "2026-04-28"
       }
     },
     "teamRankings": {
@@ -54,9 +54,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 26,
-          "winRate": 46.15384615384615,
-          "avgMargin": 1055.0384615384614,
+          "tradeCount": 27,
+          "winRate": 48.148148148148145,
+          "avgMargin": 1074.3333333333333,
           "totalValueGained": 14541.0
         },
         {
@@ -109,10 +109,10 @@
           "realName": "Will",
           "sleeperUsername": "wkerwin",
           "nickname": "Will",
-          "tradeCount": 10,
-          "winRate": 40.0,
-          "avgMargin": 1631.6,
-          "totalValueGained": 6029.0
+          "tradeCount": 11,
+          "winRate": 36.36363636363637,
+          "avgMargin": 1626.5454545454545,
+          "totalValueGained": 7084.0
         },
         {
           "rosterId": 10,
@@ -194,6 +194,17 @@
           "totalValueGained": 11990.0
         },
         {
+          "rosterId": 12,
+          "teamName": "Paper Tigers",
+          "realName": "Don",
+          "sleeperUsername": "donewton",
+          "nickname": "Don",
+          "tradeCount": 27,
+          "winRate": 48.148148148148145,
+          "avgMargin": 1074.3333333333333,
+          "totalValueGained": 14541.0
+        },
+        {
           "rosterId": 1,
           "teamName": "208 Ferrari Way",
           "realName": "Landry",
@@ -203,17 +214,6 @@
           "winRate": 46.666666666666664,
           "avgMargin": 1194.9333333333334,
           "totalValueGained": 23435.0
-        },
-        {
-          "rosterId": 12,
-          "teamName": "Paper Tigers",
-          "realName": "Don",
-          "sleeperUsername": "donewton",
-          "nickname": "Don",
-          "tradeCount": 26,
-          "winRate": 46.15384615384615,
-          "avgMargin": 1055.0384615384614,
-          "totalValueGained": 14541.0
         },
         {
           "rosterId": 7,
@@ -256,9 +256,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 26,
-          "winRate": 46.15384615384615,
-          "avgMargin": 1055.0384615384614,
+          "tradeCount": 27,
+          "winRate": 48.148148148148145,
+          "avgMargin": 1074.3333333333333,
           "totalValueGained": 14541.0
         },
         {
@@ -317,6 +317,17 @@
           "totalValueGained": 12277.0
         },
         {
+          "rosterId": 11,
+          "teamName": "On To 2026",
+          "realName": "Will",
+          "sleeperUsername": "wkerwin",
+          "nickname": "Will",
+          "tradeCount": 11,
+          "winRate": 36.36363636363637,
+          "avgMargin": 1626.5454545454545,
+          "totalValueGained": 7084.0
+        },
+        {
           "rosterId": 4,
           "teamName": "Spirit Halloween",
           "realName": "Kyle",
@@ -326,17 +337,6 @@
           "winRate": 40.0,
           "avgMargin": 1608.9,
           "totalValueGained": 12322.0
-        },
-        {
-          "rosterId": 11,
-          "teamName": "On To 2026",
-          "realName": "Will",
-          "sleeperUsername": "wkerwin",
-          "nickname": "Will",
-          "tradeCount": 10,
-          "winRate": 40.0,
-          "avgMargin": 1631.6,
-          "totalValueGained": 6029.0
         },
         {
           "rosterId": 10,
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 6
+        "season_3": 7
       },
       "seasonInfo": {
         "season_2": {
@@ -367,81 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-04-28T16:05:10.925172Z"
+          "last_fetched": "2026-04-29T15:53:42.769639Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1220272163022438400",
-        "transactionId": "1220272163022438400",
-        "tradeDate": "2025-04-22",
-        "season": "season_2",
-        "teamA": "zachlearningtogolf",
-        "teamAReceived": [
-          "Justin Fields",
-          "Brenton Strange",
-          "2025 Round 2"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Justin Fields",
-            "type": "player",
-            "value_then": 892,
-            "value_now": 317
-          },
-          {
-            "name": "Brenton Strange",
-            "type": "player",
-            "value_then": 72,
-            "value_now": 709
-          },
-          {
-            "name": "2025 Round 2",
-            "type": "draft_pick",
-            "value_then": 707,
-            "value_now": 2706
-          }
-        ],
-        "teamAValueThen": 1375.0,
-        "teamAValueNow": 2666.0,
-        "teamAValueChange": 1291.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "Davante Adams",
-          "2025 Round 1",
-          "2025 Round 3"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Davante Adams",
-            "type": "player",
-            "value_then": 1105,
-            "value_now": 974
-          },
-          {
-            "name": "2025 Round 1",
-            "type": "draft_pick",
-            "value_then": 2904,
-            "value_now": 2154
-          },
-          {
-            "name": "2025 Round 3",
-            "type": "draft_pick",
-            "value_then": 50,
-            "value_now": 2200
-          }
-        ],
-        "teamBValueThen": 2786.0,
-        "teamBValueNow": 5931.0,
-        "teamBValueChange": 3145.0,
-        "winnerAtTrade": "donewton",
-        "winnerCurrent": "donewton",
-        "marginAtTrade": -1411.0,
-        "marginCurrent": -3265.0,
-        "swingWinner": "donewton",
-        "swingMargin": 1854.0
-      },
       {
         "tradeId": "1211903239012765696",
         "transactionId": "1211903239012765696",
@@ -456,9 +386,9 @@
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
-            "value_then": 2503,
-            "value_now": 2503,
-            "pick_label": "2.03"
+            "value_then": 2631,
+            "value_now": 2631,
+            "pick_label": "2.02"
           },
           {
             "name": "2027 Round 3",
@@ -954,9 +884,9 @@
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
-            "value_then": 2503,
-            "value_now": 2503,
-            "pick_label": "2.03"
+            "value_then": 2631,
+            "value_now": 2631,
+            "pick_label": "2.02"
           }
         ],
         "teamAValueThen": 6104.0,
@@ -984,6 +914,49 @@
         "marginCurrent": -2087.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354897993991454720",
+        "transactionId": "1354897993991454720",
+        "tradeDate": "2026-04-28",
+        "season": "season_3",
+        "teamA": "wkerwin",
+        "teamAReceived": [
+          "Xavier Worthy"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Xavier Worthy",
+            "type": "player",
+            "value_then": 0,
+            "value_now": 1055
+          }
+        ],
+        "teamAValueThen": 0.0,
+        "teamAValueNow": 1055.0,
+        "teamAValueChange": 1055.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 2631,
+            "value_now": 2631,
+            "pick_label": "2.02"
+          }
+        ],
+        "teamBValueThen": 2631.0,
+        "teamBValueNow": 2631.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 2631.0,
+        "marginCurrent": 1576.0,
+        "swingWinner": "donewton",
+        "swingMargin": 1055.0
       }
     ]
   }
