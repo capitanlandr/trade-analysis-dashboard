@@ -1,22 +1,22 @@
 # 2026 Draft Pick Ownership Analysis
 
-*Generated: 2026-04-29 15:54:23*
+*Generated: 2026-04-30 15:46:22*
 
 ## Summary Table
 
 | Team | Total Picks | 1st | 2nd | 3rd | 4th | Net | Est. Value |
 |------|-------------|-----|-----|-----|-----|-----|------------|
 | zachlearningtogolf | 7 | 0 | 4 | 3 | 0 | +3 | 1,055 |
-| mgaeta23 | 7 | 4 | 3 | 0 | 0 | +3 | 12,428 |
-| jakeduf | 7 | 1 | 1 | 4 | 1 | +3 | 3,398 |
+| mgaeta23 | 6 | 4 | 2 | 0 | 0 | +2 | 12,278 |
+| jakeduf | 6 | 1 | 1 | 3 | 1 | +2 | 3,343 |
 | thekylecasey | 5 | 2 | 1 | 0 | 2 | +1 | 11,463 |
-| wkerwin | 5 | 3 | 1 | 1 | 0 | +1 | 9,880 |
-| jwalters74 | 4 | 0 | 0 | 2 | 2 | 0 | 212 |
+| jwalters74 | 5 | 0 | 1 | 2 | 2 | +1 | 362 |
+| tylerpilgrim | 4 | 1 | 0 | 1 | 2 | 0 | 1,347 |
+| wkerwin | 4 | 3 | 1 | 0 | 0 | 0 | 9,770 |
 | gnewman4 | 3 | 0 | 0 | 1 | 2 | -1 | 110 |
-| tylerpilgrim | 3 | 1 | 0 | 0 | 2 | -1 | 1,292 |
+| donewton | 3 | 0 | 1 | 1 | 1 | -1 | 672 |
 | brevinowens | 2 | 1 | 0 | 0 | 1 | -2 | 1,244 |
 | cjsyregelas | 2 | 0 | 1 | 0 | 1 | -2 | 168 |
-| donewton | 2 | 0 | 1 | 0 | 1 | -2 | 562 |
 | lndahayo | 1 | 0 | 0 | 1 | 0 | -3 | 110 |
 
 ## Key Insights
@@ -24,14 +24,14 @@
 ### Most Picks Owned
 
 1. **zachlearningtogolf** - 7 picks (+3 net)
-2. **mgaeta23** - 7 picks (+3 net)
-3. **jakeduf** - 7 picks (+3 net)
+2. **mgaeta23** - 6 picks (+2 net)
+3. **jakeduf** - 6 picks (+2 net)
 
 ### Most Valuable Pick Portfolios
 
-1. **mgaeta23** - 12,428 value (4 first-rounders)
+1. **mgaeta23** - 12,278 value (4 first-rounders)
 2. **thekylecasey** - 11,463 value (2 first-rounders)
-3. **wkerwin** - 9,880 value (3 first-rounders)
+3. **wkerwin** - 9,770 value (3 first-rounders)
 
 ### Most First-Round Picks
 
@@ -54,19 +54,19 @@
 
 
 ### mgaeta23
-**7 total picks (+3 net)**
+**6 total picks (+2 net)**
 
 **Round 1:** 4 pick(s)
 - Origins: gnewman4, zachlearningtogolf, jwalters74, mgaeta23
 - *(1 own, 3 acquired)*
 
-**Round 2:** 3 pick(s)
-- Origins: brevinowens, mgaeta23, donewton
-- *(1 own, 2 acquired)*
+**Round 2:** 2 pick(s)
+- Origins: mgaeta23, donewton
+- *(1 own, 1 acquired)*
 
 
 ### jakeduf
-**7 total picks (+3 net)**
+**6 total picks (+2 net)**
 
 **Round 1:** 1 pick(s)
 - Origins: donewton
@@ -76,9 +76,9 @@
 - Origins: thekylecasey
 - *(0 own, 1 acquired)*
 
-**Round 3:** 4 pick(s)
-- Origins: brevinowens, thekylecasey, jakeduf, donewton
-- *(1 own, 3 acquired)*
+**Round 3:** 3 pick(s)
+- Origins: brevinowens, thekylecasey, donewton
+- *(0 own, 3 acquired)*
 
 **Round 4:** 1 pick(s)
 - Origins: thekylecasey
@@ -101,22 +101,12 @@
 - *(0 own, 2 acquired)*
 
 
-### wkerwin
+### jwalters74
 **5 total picks (+1 net)**
 
-**Round 1:** 3 pick(s)
-- Origins: lndahayo, jakeduf, wkerwin
-- *(1 own, 2 acquired)*
-
 **Round 2:** 1 pick(s)
-- Origins: wkerwin
-
-**Round 3:** 1 pick(s)
-- Origins: wkerwin
-
-
-### jwalters74
-**4 total picks (0 net)**
+- Origins: brevinowens
+- *(0 own, 1 acquired)*
 
 **Round 3:** 2 pick(s)
 - Origins: tylerpilgrim, mgaeta23
@@ -125,6 +115,33 @@
 **Round 4:** 2 pick(s)
 - Origins: lndahayo, wkerwin
 - *(0 own, 2 acquired)*
+
+
+### tylerpilgrim
+**4 total picks (0 net)**
+
+**Round 1:** 1 pick(s)
+- Origins: cjsyregelas
+- *(0 own, 1 acquired)*
+
+**Round 3:** 1 pick(s)
+- Origins: jakeduf
+- *(0 own, 1 acquired)*
+
+**Round 4:** 2 pick(s)
+- Origins: gnewman4, tylerpilgrim
+- *(1 own, 1 acquired)*
+
+
+### wkerwin
+**4 total picks (0 net)**
+
+**Round 1:** 3 pick(s)
+- Origins: lndahayo, jakeduf, wkerwin
+- *(1 own, 2 acquired)*
+
+**Round 2:** 1 pick(s)
+- Origins: wkerwin
 
 
 ### gnewman4
@@ -138,16 +155,20 @@
 - *(0 own, 2 acquired)*
 
 
-### tylerpilgrim
+### donewton
 **3 total picks (-1 net)**
 
-**Round 1:** 1 pick(s)
-- Origins: cjsyregelas
+**Round 2:** 1 pick(s)
+- Origins: zachlearningtogolf
 - *(0 own, 1 acquired)*
 
-**Round 4:** 2 pick(s)
-- Origins: gnewman4, tylerpilgrim
-- *(1 own, 1 acquired)*
+**Round 3:** 1 pick(s)
+- Origins: wkerwin
+- *(0 own, 1 acquired)*
+
+**Round 4:** 1 pick(s)
+- Origins: cjsyregelas
+- *(0 own, 1 acquired)*
 
 
 ### brevinowens
@@ -169,18 +190,6 @@
 
 **Round 4:** 1 pick(s)
 - Origins: donewton
-- *(0 own, 1 acquired)*
-
-
-### donewton
-**2 total picks (-2 net)**
-
-**Round 2:** 1 pick(s)
-- Origins: zachlearningtogolf
-- *(0 own, 1 acquired)*
-
-**Round 4:** 1 pick(s)
-- Origins: cjsyregelas
 - *(0 own, 1 acquired)*
 
 

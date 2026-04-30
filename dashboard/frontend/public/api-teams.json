@@ -9,9 +9,9 @@
         "sleeperUsername": "lndahayo",
         "nickname": "Landry",
         "tradeCount": 15,
-        "winRate": 46.666666666666664,
-        "avgMargin": 1194.9333333333334,
-        "totalValueGained": 23435.0
+        "winRate": 73.33333333333333,
+        "avgMargin": 831.6666666666666,
+        "totalValueGained": 13197.0
       },
       {
         "rosterId": 2,
@@ -20,9 +20,9 @@
         "sleeperUsername": "gnewman4",
         "nickname": "Grant",
         "tradeCount": 17,
-        "winRate": 52.94117647058824,
-        "avgMargin": 1452.6470588235295,
-        "totalValueGained": 15724.0
+        "winRate": 47.05882352941176,
+        "avgMargin": 1109.5294117647059,
+        "totalValueGained": 3220.0
       },
       {
         "rosterId": 3,
@@ -31,9 +31,9 @@
         "sleeperUsername": "brevinowens",
         "nickname": "Brevin",
         "tradeCount": 2,
-        "winRate": 50.0,
-        "avgMargin": 1582.0,
-        "totalValueGained": 436.0
+        "winRate": 100.0,
+        "avgMargin": 156.0,
+        "totalValueGained": -1121.0
       },
       {
         "rosterId": 4,
@@ -43,8 +43,8 @@
         "nickname": "Kyle",
         "tradeCount": 10,
         "winRate": 40.0,
-        "avgMargin": 1608.9,
-        "totalValueGained": 12322.0
+        "avgMargin": 1517.1,
+        "totalValueGained": 6770.0
       },
       {
         "rosterId": 5,
@@ -52,10 +52,10 @@
         "realName": "Zach",
         "sleeperUsername": "zachlearningtogolf",
         "nickname": "Zach",
-        "tradeCount": 24,
-        "winRate": 50.0,
-        "avgMargin": 1657.1666666666667,
-        "totalValueGained": 11990.0
+        "tradeCount": 25,
+        "winRate": 44.0,
+        "avgMargin": 1100.6,
+        "totalValueGained": -8609.0
       },
       {
         "rosterId": 6,
@@ -63,10 +63,10 @@
         "realName": "Chris",
         "sleeperUsername": "cjsyregelas",
         "nickname": "Chris",
-        "tradeCount": 6,
-        "winRate": 33.33333333333333,
-        "avgMargin": 1775.0,
-        "totalValueGained": 1969.0
+        "tradeCount": 7,
+        "winRate": 42.857142857142854,
+        "avgMargin": 1512.857142857143,
+        "totalValueGained": -2075.0
       },
       {
         "rosterId": 7,
@@ -74,10 +74,10 @@
         "realName": "Johnny",
         "sleeperUsername": "jwalters74",
         "nickname": "Johnny",
-        "tradeCount": 29,
-        "winRate": 41.37931034482759,
-        "avgMargin": 1583.4137931034484,
-        "totalValueGained": 21949.0
+        "tradeCount": 30,
+        "winRate": 43.333333333333336,
+        "avgMargin": 1227.8,
+        "totalValueGained": 2504.0
       },
       {
         "rosterId": 8,
@@ -85,10 +85,10 @@
         "realName": "Tyler",
         "sleeperUsername": "tylerpilgrim",
         "nickname": "Tyler",
-        "tradeCount": 14,
-        "winRate": 64.28571428571429,
-        "avgMargin": 1508.2142857142858,
-        "totalValueGained": 12992.0
+        "tradeCount": 15,
+        "winRate": 60.0,
+        "avgMargin": 1077.8666666666666,
+        "totalValueGained": 6865.0
       },
       {
         "rosterId": 9,
@@ -96,10 +96,10 @@
         "realName": "Matt",
         "sleeperUsername": "mgaeta23",
         "nickname": "Gaeta",
-        "tradeCount": 11,
-        "winRate": 72.72727272727273,
-        "avgMargin": 1520.0,
-        "totalValueGained": 12277.0
+        "tradeCount": 12,
+        "winRate": 58.333333333333336,
+        "avgMargin": 715.5833333333334,
+        "totalValueGained": -1157.0
       },
       {
         "rosterId": 10,
@@ -107,10 +107,10 @@
         "realName": "Jake",
         "sleeperUsername": "jakeduf",
         "nickname": "Jake",
-        "tradeCount": 8,
-        "winRate": 75.0,
-        "avgMargin": 1153.625,
-        "totalValueGained": 3530.0
+        "tradeCount": 9,
+        "winRate": 44.44444444444444,
+        "avgMargin": 313.22222222222223,
+        "totalValueGained": -1543.0
       },
       {
         "rosterId": 11,
@@ -118,10 +118,10 @@
         "realName": "Will",
         "sleeperUsername": "wkerwin",
         "nickname": "Will",
-        "tradeCount": 11,
-        "winRate": 36.36363636363637,
-        "avgMargin": 1626.5454545454545,
-        "totalValueGained": 7084.0
+        "tradeCount": 12,
+        "winRate": 41.66666666666667,
+        "avgMargin": 468.25,
+        "totalValueGained": -3930.0
       },
       {
         "rosterId": 12,
@@ -129,15 +129,15 @@
         "realName": "Don",
         "sleeperUsername": "donewton",
         "nickname": "Don",
-        "tradeCount": 27,
-        "winRate": 48.148148148148145,
-        "avgMargin": 1074.3333333333333,
-        "totalValueGained": 14541.0
+        "tradeCount": 28,
+        "winRate": 50.0,
+        "avgMargin": 825.8571428571429,
+        "totalValueGained": 4035.0
       }
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 87,
+      "totalTrades": 91,
       "seasonsIncluded": [
         "season_2",
         "season_3"
