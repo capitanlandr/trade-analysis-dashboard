@@ -9,9 +9,9 @@
         "sleeperUsername": "lndahayo",
         "nickname": "Landry",
         "tradeCount": 15,
-        "winRate": 73.33333333333333,
-        "avgMargin": 831.6666666666666,
-        "totalValueGained": 13197.0
+        "winRate": 66.66666666666666,
+        "avgMargin": 803.8666666666667,
+        "totalValueGained": 12467.0
       },
       {
         "rosterId": 2,
@@ -19,10 +19,10 @@
         "realName": "Grant",
         "sleeperUsername": "gnewman4",
         "nickname": "Grant",
-        "tradeCount": 17,
-        "winRate": 47.05882352941176,
-        "avgMargin": 1109.5294117647059,
-        "totalValueGained": 3220.0
+        "tradeCount": 18,
+        "winRate": 50.0,
+        "avgMargin": 1182.3333333333333,
+        "totalValueGained": 2703.0
       },
       {
         "rosterId": 3,
@@ -32,8 +32,8 @@
         "nickname": "Brevin",
         "tradeCount": 2,
         "winRate": 100.0,
-        "avgMargin": 156.0,
-        "totalValueGained": -1121.0
+        "avgMargin": 185.0,
+        "totalValueGained": -1144.0
       },
       {
         "rosterId": 4,
@@ -43,8 +43,8 @@
         "nickname": "Kyle",
         "tradeCount": 10,
         "winRate": 40.0,
-        "avgMargin": 1517.1,
-        "totalValueGained": 6770.0
+        "avgMargin": 1516.0,
+        "totalValueGained": 5895.0
       },
       {
         "rosterId": 5,
@@ -53,9 +53,9 @@
         "sleeperUsername": "zachlearningtogolf",
         "nickname": "Zach",
         "tradeCount": 25,
-        "winRate": 44.0,
-        "avgMargin": 1100.6,
-        "totalValueGained": -8609.0
+        "winRate": 40.0,
+        "avgMargin": 1220.36,
+        "totalValueGained": -9845.0
       },
       {
         "rosterId": 6,
@@ -65,8 +65,8 @@
         "nickname": "Chris",
         "tradeCount": 7,
         "winRate": 42.857142857142854,
-        "avgMargin": 1512.857142857143,
-        "totalValueGained": -2075.0
+        "avgMargin": 1612.857142857143,
+        "totalValueGained": -2241.0
       },
       {
         "rosterId": 7,
@@ -76,8 +76,8 @@
         "nickname": "Johnny",
         "tradeCount": 30,
         "winRate": 43.333333333333336,
-        "avgMargin": 1227.8,
-        "totalValueGained": 2504.0
+        "avgMargin": 1284.0666666666666,
+        "totalValueGained": 1146.0
       },
       {
         "rosterId": 8,
@@ -86,9 +86,9 @@
         "sleeperUsername": "tylerpilgrim",
         "nickname": "Tyler",
         "tradeCount": 15,
-        "winRate": 60.0,
-        "avgMargin": 1077.8666666666666,
-        "totalValueGained": 6865.0
+        "winRate": 66.66666666666666,
+        "avgMargin": 1144.8666666666666,
+        "totalValueGained": 6633.0
       },
       {
         "rosterId": 9,
@@ -96,10 +96,10 @@
         "realName": "Matt",
         "sleeperUsername": "mgaeta23",
         "nickname": "Gaeta",
-        "tradeCount": 12,
-        "winRate": 58.333333333333336,
-        "avgMargin": 715.5833333333334,
-        "totalValueGained": -1157.0
+        "tradeCount": 13,
+        "winRate": 53.84615384615385,
+        "avgMargin": 747.6923076923077,
+        "totalValueGained": -1636.0
       },
       {
         "rosterId": 10,
@@ -109,8 +109,8 @@
         "nickname": "Jake",
         "tradeCount": 9,
         "winRate": 44.44444444444444,
-        "avgMargin": 313.22222222222223,
-        "totalValueGained": -1543.0
+        "avgMargin": 303.0,
+        "totalValueGained": -1709.0
       },
       {
         "rosterId": 11,
@@ -120,8 +120,8 @@
         "nickname": "Will",
         "tradeCount": 12,
         "winRate": 41.66666666666667,
-        "avgMargin": 468.25,
-        "totalValueGained": -3930.0
+        "avgMargin": 628.75,
+        "totalValueGained": -5478.0
       },
       {
         "rosterId": 12,
@@ -130,14 +130,14 @@
         "sleeperUsername": "donewton",
         "nickname": "Don",
         "tradeCount": 28,
-        "winRate": 50.0,
-        "avgMargin": 825.8571428571429,
-        "totalValueGained": 4035.0
+        "winRate": 53.57142857142857,
+        "avgMargin": 902.9285714285714,
+        "totalValueGained": 3794.0
       }
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 91,
+      "totalTrades": 92,
       "seasonsIncluded": [
         "season_2",
         "season_3"
