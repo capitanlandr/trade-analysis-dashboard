@@ -5,6 +5,35 @@
     "metadata": {
       "notes": "Your waiver claim was processed successfully!"
     },
+    "created": 1777853623651,
+    "settings": {
+      "seq": 0,
+      "waiver_bid": 0
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1112526078167375872",
+    "transaction_id": "1356820074878500864",
+    "adds": {
+      "13300": 6
+    },
+    "drops": null,
+    "consenter_ids": [
+      6
+    ],
+    "roster_ids": [
+      6
+    ],
+    "status_updated": 1777878366758,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808"
+  },
+  {
+    "status": "complete",
+    "type": "waiver",
+    "metadata": {
+      "notes": "Your waiver claim was processed successfully!"
+    },
     "created": 1777788762665,
     "settings": {
       "seq": 1,
@@ -17,12 +46,12 @@
     "adds": {
       "13306": 7
     },
-    "consenter_ids": [
-      7
-    ],
     "drops": {
       "11557": 7
     },
+    "consenter_ids": [
+      7
+    ],
     "roster_ids": [
       7
     ],
@@ -48,12 +77,12 @@
     "adds": {
       "13335": 12
     },
-    "consenter_ids": [
-      12
-    ],
     "drops": {
       "9494": 12
     },
+    "consenter_ids": [
+      12
+    ],
     "roster_ids": [
       12
     ],
@@ -79,12 +108,12 @@
     "adds": {
       "13411": 12
     },
-    "consenter_ids": [
-      12
-    ],
     "drops": {
       "12482": 12
     },
+    "consenter_ids": [
+      12
+    ],
     "roster_ids": [
       12
     ],
@@ -110,12 +139,12 @@
     "adds": {
       "13413": 12
     },
-    "consenter_ids": [
-      12
-    ],
     "drops": {
       "8117": 12
     },
+    "consenter_ids": [
+      12
+    ],
     "roster_ids": [
       12
     ],
@@ -141,10 +170,10 @@
     "adds": {
       "13306": 6
     },
+    "drops": null,
     "consenter_ids": [
       6
     ],
-    "drops": null,
     "roster_ids": [
       6
     ],
@@ -170,10 +199,10 @@
     "adds": {
       "13411": 6
     },
+    "drops": null,
     "consenter_ids": [
       6
     ],
-    "drops": null,
     "roster_ids": [
       6
     ],
