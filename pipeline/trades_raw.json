@@ -4,8 +4,8 @@
     "league_name": "Multi-Season (season_3)",
     "season": 2025,
     "current_week": 1,
-    "fetch_timestamp": "2026-05-05T15:50:12.865466",
-    "total_trades": 0,
+    "fetch_timestamp": "2026-05-06T15:59:58.689776",
+    "total_trades": 2,
     "incremental_mode": true,
     "processed_seasons": [
       "season_3"
@@ -4744,6 +4744,100 @@
         9
       ],
       "status_updated": 1777568393916,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1357507780172324864",
+        "veto_msg_id": "1357507780252041216"
+      },
+      "created": 1778017524860,
+      "settings": {
+        "expires_at": 1778043599
+      },
+      "leg": 1,
+      "draft_picks": [
+        {
+          "round": 3,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 2,
+          "owner_id": 7,
+          "previous_owner_id": 2
+        },
+        {
+          "round": 4,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 7,
+          "owner_id": 2,
+          "previous_owner_id": 7
+        }
+      ],
+      "creator": "867921673234632704",
+      "transaction_id": "1357507526374998016",
+      "adds": {
+        "13420": 7,
+        "2449": 2
+      },
+      "drops": {
+        "13420": 2,
+        "2449": 7
+      },
+      "consenter_ids": [
+        2,
+        7
+      ],
+      "roster_ids": [
+        2,
+        7
+      ],
+      "status_updated": 1778081845565,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1357398805057650688",
+        "veto_msg_id": "1357398805120557056"
+      },
+      "created": 1777864853699,
+      "settings": null,
+      "leg": 1,
+      "draft_picks": [
+        {
+          "round": 4,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 10,
+          "owner_id": 7,
+          "previous_owner_id": 10
+        }
+      ],
+      "creator": "865815956675538944",
+      "transaction_id": "1356867177117937664",
+      "adds": {
+        "4199": 10
+      },
+      "drops": {
+        "4199": 7
+      },
+      "consenter_ids": [
+        7,
+        10
+      ],
+      "roster_ids": [
+        7,
+        10
+      ],
+      "status_updated": 1778081841603,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"

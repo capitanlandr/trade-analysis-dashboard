@@ -242,13 +242,13 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -264,7 +264,7 @@
           {
             "name": "Aaron Jones",
             "type": "player",
-            "value_then": 365,
+            "value_then": 98,
             "value_now": 98
           },
           {
@@ -514,7 +514,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -613,7 +613,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -960,7 +960,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -1031,7 +1031,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -1800,7 +1800,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -3018,7 +3018,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -3119,7 +3119,7 @@
           {
             "name": "Stefon Diggs",
             "type": "player",
-            "value_then": 357,
+            "value_then": 236,
             "value_now": 236
           },
           {
@@ -4412,7 +4412,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 65,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -5204,14 +5204,112 @@
         "marginCurrent": -782.0,
         "swingWinner": "gnewman4",
         "swingMargin": 85.0
+      },
+      {
+        "tradeId": "1357507526374998016",
+        "transactionId": "1357507526374998016",
+        "tradeDate": "2026-05-05",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Stefon Diggs",
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Stefon Diggs",
+            "type": "player",
+            "value_then": 236,
+            "value_now": 236
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 11,
+            "value_now": 11
+          }
+        ],
+        "teamAValueThen": 247.0,
+        "teamAValueNow": 247.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Bryce Lance",
+          "2027 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Bryce Lance",
+            "type": "player",
+            "value_then": 50,
+            "value_now": 50
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 30,
+            "value_now": 30
+          }
+        ],
+        "teamBValueThen": 80.0,
+        "teamBValueNow": 80.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": -167.0,
+        "marginCurrent": -167.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1356867177117937664",
+        "transactionId": "1356867177117937664",
+        "tradeDate": "2026-05-04",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 11,
+            "value_now": 11
+          }
+        ],
+        "teamAValueThen": 11.0,
+        "teamAValueNow": 11.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Aaron Jones"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Aaron Jones",
+            "type": "player",
+            "value_then": 98,
+            "value_now": 98
+          }
+        ],
+        "teamBValueThen": 98.0,
+        "teamBValueNow": 98.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": -87.0,
+        "marginCurrent": -87.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-05-05T15:51:23.274779",
-      "totalTrades": 92,
+      "lastUpdated": "2026-05-06T16:01:20.926869",
+      "totalTrades": 94,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-04-30"
+        "latest": "2026-05-05"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5219,7 +5317,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 12
+        "season_3": 14
       },
       "seasonInfo": {
         "season_2": {
@@ -5228,14 +5326,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-05-05T15:50:12.854374Z"
+          "last_fetched": "2026-05-06T15:59:58.678290Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 93,
-        "dashboardTradesGenerated": 92,
+        "rawTradesProcessed": 95,
+        "dashboardTradesGenerated": 94,
         "multiTeamTradesSkipped": 1
       }
     }

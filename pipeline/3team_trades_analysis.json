@@ -15,6 +15,17 @@
         "value_now": 12744.0
       },
       {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12391.0
+      },
+      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -28,17 +39,6 @@
         ],
         "value_then": 12552.0,
         "value_now": 15502.0
-      },
-      {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12391.0
       }
     ]
   }
