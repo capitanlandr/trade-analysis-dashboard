@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 383,
+    "total_waiver_transactions": 386,
     "total_free_agent_transactions": 275,
-    "successful_waivers": 269,
+    "successful_waivers": 272,
     "failed_waivers": 114,
-    "total_waiver_bids": "2668",
-    "average_waiver_bid": 13.612244897959183
+    "total_waiver_bids": "2694",
+    "average_waiver_bid": 13.606060606060606
   },
   "manager_activity": [
     {
@@ -71,12 +71,12 @@
     {
       "roster_id": 7,
       "team_name": "2-Man Title Charge",
-      "total_claims": 26,
+      "total_claims": 27,
       "total_bid": 272,
-      "avg_bid": 6.33,
+      "avg_bid": 6.18,
       "max_bid": 109,
-      "successful_claims": 33,
-      "success_rate": 126.9
+      "successful_claims": 34,
+      "success_rate": 125.9
     },
     {
       "roster_id": 8,
@@ -121,18 +121,18 @@
     {
       "roster_id": 12,
       "team_name": "Paper Tigers",
-      "total_claims": 34,
-      "total_bid": 248,
-      "avg_bid": 5.17,
+      "total_claims": 35,
+      "total_bid": 274,
+      "avg_bid": 5.48,
       "max_bid": 39,
-      "successful_claims": 37,
-      "success_rate": 108.8
+      "successful_claims": 39,
+      "success_rate": 111.4
     }
   ],
   "weekly_activity": {
     "1": {
       "free_agent": 144,
-      "waiver": 234
+      "waiver": 237
     },
     "2": {
       "free_agent": 7,
@@ -320,10 +320,11 @@
       "8": 5,
       "35": 3,
       "41": 3,
-      "17": 2,
-      "51": 2,
+      "13": 3,
       "50": 2,
+      "51": 2,
       "38": 2,
+      "17": 2,
       "43": 2,
       "16": 2,
       "32": 2,
@@ -333,7 +334,6 @@
       "46": 2,
       "24": 2,
       "109": 1,
-      "13": 1,
       "55": 1,
       "84": 1,
       "75": 1
@@ -400,13 +400,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 79.14438502673798
+    "zero_bid_success_rate": 79.25531914893617
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 2,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
