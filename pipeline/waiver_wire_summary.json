@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 386,
-    "total_free_agent_transactions": 275,
-    "successful_waivers": 272,
+    "total_waiver_transactions": 387,
+    "total_free_agent_transactions": 276,
+    "successful_waivers": 273,
     "failed_waivers": 114,
     "total_waiver_bids": "2694",
     "average_waiver_bid": 13.606060606060606
@@ -61,12 +61,12 @@
     {
       "roster_id": 6,
       "team_name": "Mostly Washed",
-      "total_claims": 16,
+      "total_claims": 17,
       "total_bid": 155,
-      "avg_bid": 7.38,
+      "avg_bid": 7.05,
       "max_bid": 75,
-      "successful_claims": 15,
-      "success_rate": 93.8
+      "successful_claims": 16,
+      "success_rate": 94.1
     },
     {
       "roster_id": 7,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 144,
-      "waiver": 237
+      "free_agent": 145,
+      "waiver": 238
     },
     "2": {
       "free_agent": 7,
@@ -400,13 +400,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 79.25531914893617
+    "zero_bid_success_rate": 79.36507936507937
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
+    "total_new_transactions": 2,
     "total_duplicates": 2,
     "fetch_mode": "incremental"
   }
