@@ -215,39 +215,19 @@
       "waiver_bid": 51,
       "status": 3
     },
-    "6271": {
-      "transaction_id": 5,
-      "waiver_bid": 2,
-      "status": 4
-    },
     "2505": {
       "transaction_id": 5,
       "waiver_bid": 46,
       "status": 1
     },
+    "6271": {
+      "transaction_id": 5,
+      "waiver_bid": 2,
+      "status": 4
+    },
     "8123": {
       "transaction_id": 5,
       "waiver_bid": 43,
-      "status": 2
-    },
-    "9497": {
-      "transaction_id": 4,
-      "waiver_bid": 0,
-      "status": 4
-    },
-    "12531": {
-      "transaction_id": 4,
-      "waiver_bid": 52,
-      "status": 1
-    },
-    "4454": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "11834": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
       "status": 2
     },
     "7670": {
@@ -260,15 +240,50 @@
       "waiver_bid": 6,
       "status": 2
     },
-    "6011": {
-      "transaction_id": 3,
-      "waiver_bid": 41,
+    "9497": {
+      "transaction_id": 4,
+      "waiver_bid": 0,
+      "status": 4
+    },
+    "4454": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 3
+    },
+    "11834": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 2
+    },
+    "12531": {
+      "transaction_id": 4,
+      "waiver_bid": 52,
       "status": 1
     },
-    "5857": {
+    "11650": {
       "transaction_id": 3,
-      "waiver_bid": 8,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "12462": {
+      "transaction_id": 3,
+      "waiver_bid": 16,
+      "status": 2
+    },
+    "12470": {
+      "transaction_id": 3,
+      "waiver_bid": 6,
       "status": 1
+    },
+    "12502": {
+      "transaction_id": 3,
+      "waiver_bid": 7,
+      "status": 1
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
     },
     "8160": {
       "transaction_id": 3,
@@ -280,25 +295,10 @@
       "waiver_bid": 0,
       "status": 3
     },
-    "2197": {
+    "5857": {
       "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
-    "3161": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 2
-    },
-    "11650": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
-    "11439": {
-      "transaction_id": 3,
-      "waiver_bid": 12,
-      "status": 2
+      "waiver_bid": 8,
+      "status": 1
     }
   },
   "bidding_patterns": {
@@ -311,28 +311,28 @@
       "12": 11,
       "4": 10,
       "11": 9,
-      "7": 8,
       "6": 8,
-      "3": 7,
+      "7": 8,
       "25": 7,
-      "9": 6,
+      "3": 7,
       "15": 6,
+      "9": 6,
       "8": 5,
       "35": 3,
-      "41": 3,
       "13": 3,
-      "50": 2,
-      "51": 2,
-      "38": 2,
-      "17": 2,
-      "43": 2,
+      "41": 3,
       "16": 2,
-      "32": 2,
-      "52": 2,
       "39": 2,
-      "31": 2,
       "46": 2,
+      "31": 2,
+      "50": 2,
+      "32": 2,
+      "43": 2,
+      "52": 2,
       "24": 2,
+      "17": 2,
+      "38": 2,
+      "51": 2,
       "109": 1,
       "55": 1,
       "84": 1,
