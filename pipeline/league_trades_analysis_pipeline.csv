@@ -67,8 +67,8 @@ trade_date,transaction_id,team_a,team_a_received,team_a_value_then,team_a_value_
 2025-10-10,1282507621953204224,wkerwin,Kyle Williams,163,83,-80,lndahayo,2026 Round 3,106,111,5,wkerwin,lndahayo,57,28,lndahayo,85
 2026-04-30,1355614830769217536,mgaeta23,Kirk Cousins | 2026 Round 3,93,81,-12,gnewman4,Tua Tagovailoa,960,870,-90,gnewman4,gnewman4,867,789,gnewman4,78
 2025-05-05,1225135748596899840,zachlearningtogolf,Tyjae Spears,195,117,-78,wkerwin,2026 Round 3 | 2027 Round 4,135,122,-13,zachlearningtogolf,wkerwin,60,5,wkerwin,65
-2025-09-25,1276812030426251264,gnewman4,MarShawn Lloyd,4,19,15,lndahayo,Taysom Hill | Noah Fant,58,20,-38,lndahayo,lndahayo,54,1,lndahayo,53
 2025-05-13,1228149347338698753,donewton,Brashard Smith | 2026 Round 3,80,61,-19,lndahayo,2026 Round 2,330,364,34,lndahayo,lndahayo,250,303,lndahayo,53
+2025-09-25,1276812030426251264,gnewman4,MarShawn Lloyd,4,19,15,lndahayo,Taysom Hill | Noah Fant,58,20,-38,lndahayo,lndahayo,54,1,lndahayo,53
 2025-05-01,1223664469255671808,cjsyregelas,Will Shipley | Justice Hill,78,28,-50,donewton,$5 FAAB,5,5,0,cjsyregelas,cjsyregelas,73,23,cjsyregelas,50
 2025-10-01,1278946311571251200,zachlearningtogolf,Trevor Etienne | 2026 Round 2,218,444,226,lndahayo,Matthew Stafford | 2027 Round 4,953,1129,176,lndahayo,lndahayo,735,685,lndahayo,50
 2026-04-29,1355265411066634240,mgaeta23,Mark Andrews,252,296,44,jwalters74,2026 Round 2,174,170,-4,mgaeta23,mgaeta23,78,126,mgaeta23,48
@@ -77,8 +77,8 @@ trade_date,transaction_id,team_a,team_a_received,team_a_value_then,team_a_value_
 2025-11-10,1293486502654791680,zachlearningtogolf,Geno Smith | 2026 Round 2 | $1 FAAB,967,445,-522,gnewman4,Justin Fields | 2026 Round 3,782,219,-563,zachlearningtogolf,zachlearningtogolf,185,226,zachlearningtogolf,41
 2025-11-12,1294198173723557888,tylerpilgrim,DeAndre Hopkins | 2026 Round 3,166,91,-75,gnewman4,Chuba Hubbard,495,388,-107,gnewman4,gnewman4,329,297,gnewman4,32
 2026-05-05,1357507526374998016,jwalters74,Bryce Lance | 2027 Round 3,80,96,16,gnewman4,Stefon Diggs | 2027 Round 4,247,235,-12,gnewman4,gnewman4,167,139,gnewman4,28
-2025-10-23,1287157631126876160,donewton,Pat Bryant | 2027 Round 4,165,154,-11,tylerpilgrim,Kayshon Boutte,128,136,8,donewton,donewton,37,18,donewton,19
 2026-04-27,1354530759280455680,wkerwin,2026 Round 1,3283,3170,-113,jakeduf,2026 Round 1 | 2026 Round 2,2829,2735,-94,wkerwin,wkerwin,454,435,wkerwin,19
+2025-10-23,1287157631126876160,donewton,Pat Bryant | 2027 Round 4,165,154,-11,tylerpilgrim,Kayshon Boutte,128,136,8,donewton,donewton,37,18,donewton,19
 2025-09-26,1277109098646605824,gnewman4,Marcus Mariota,0,17,17,zachlearningtogolf,$20 FAAB,20,20,0,zachlearningtogolf,zachlearningtogolf,20,3,zachlearningtogolf,17
 2026-04-30,1355578317075406848,jakeduf,Jordan Mason,148,161,13,tylerpilgrim,2026 Round 3,67,66,-1,jakeduf,jakeduf,81,95,jakeduf,14
 2026-04-29,1355347137491124224,wkerwin,Pat Bryant | 2027 Round 4,143,154,11,donewton,2026 Round 3,130,128,-2,wkerwin,wkerwin,13,26,wkerwin,13
@@ -89,7 +89,7 @@ trade_date,transaction_id,team_a,team_a_received,team_a_value_then,team_a_value_
 2026-03-31,1344753356916146176,zachlearningtogolf,Jordan James | Ollie Gordon | Chig Okonkwo,0,305,305,jakeduf,Chimere Dike | Geno Smith | 2026 Round 3,97,405,308,jakeduf,jakeduf,97,100,jakeduf,3
 2025-05-01,1223711584585531392,mgaeta23,2026 Round 4 | $22 FAAB,37,37,0,lndahayo,2025 Round 4,18,16,-2,mgaeta23,mgaeta23,19,21,mgaeta23,2
 2025-05-01,1223496024669028352,gnewman4,Tyler Allgeier | 2025 Round 4,160,226,66,tylerpilgrim,2025 Round 3,126,194,68,gnewman4,gnewman4,34,32,gnewman4,2
-2026-04-29,1355348943742988288,cjsyregelas,Ray Davis,43,44,1,zachlearningtogolf,$20 FAAB,20,20,0,cjsyregelas,cjsyregelas,23,24,cjsyregelas,1
 2025-05-01,1223663647079792640,mgaeta23,Zach Wilson,3,2,-1,donewton,$1 FAAB,1,1,0,mgaeta23,mgaeta23,2,1,mgaeta23,1
-2025-09-26,1277318767591825408,zachlearningtogolf,$2 FAAB,2,2,0,gnewman4,,0,0,0,zachlearningtogolf,zachlearningtogolf,2,2,Tie,0
+2026-04-29,1355348943742988288,cjsyregelas,Ray Davis,43,44,1,zachlearningtogolf,$20 FAAB,20,20,0,cjsyregelas,cjsyregelas,23,24,cjsyregelas,1
 2025-10-07,1281385171571974144,tylerpilgrim,$11 FAAB,11,11,0,donewton,,0,0,0,tylerpilgrim,tylerpilgrim,11,11,Tie,0
+2025-09-26,1277318767591825408,zachlearningtogolf,$2 FAAB,2,2,0,gnewman4,,0,0,0,zachlearningtogolf,zachlearningtogolf,2,2,Tie,0
