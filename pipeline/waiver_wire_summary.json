@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_waiver_transactions": 395,
-    "total_free_agent_transactions": 278,
+    "total_free_agent_transactions": 279,
     "successful_waivers": 281,
     "failed_waivers": 114,
     "total_waiver_bids": "2698",
@@ -131,7 +131,7 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 147,
+      "free_agent": 148,
       "waiver": 246
     },
     "2": {
@@ -200,14 +200,14 @@
     }
   },
   "contested_players": {
-    "1166": {
-      "transaction_id": 7,
-      "waiver_bid": 84,
-      "status": 1
-    },
     "6111": {
       "transaction_id": 7,
       "waiver_bid": 109,
+      "status": 1
+    },
+    "1166": {
+      "transaction_id": 7,
+      "waiver_bid": 84,
       "status": 1
     },
     "12775": {
@@ -215,40 +215,20 @@
       "waiver_bid": 51,
       "status": 3
     },
-    "6271": {
+    "2505": {
       "transaction_id": 5,
-      "waiver_bid": 2,
-      "status": 4
+      "waiver_bid": 46,
+      "status": 1
     },
     "8123": {
       "transaction_id": 5,
       "waiver_bid": 43,
       "status": 2
     },
-    "2505": {
+    "6271": {
       "transaction_id": 5,
-      "waiver_bid": 46,
-      "status": 1
-    },
-    "11834": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 2
-    },
-    "4454": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "7670": {
-      "transaction_id": 4,
-      "waiver_bid": 12,
-      "status": 2
-    },
-    "8917": {
-      "transaction_id": 4,
-      "waiver_bid": 6,
-      "status": 2
+      "waiver_bid": 2,
+      "status": 4
     },
     "9497": {
       "transaction_id": 4,
@@ -260,32 +240,27 @@
       "waiver_bid": 52,
       "status": 1
     },
-    "12470": {
-      "transaction_id": 3,
-      "waiver_bid": 6,
-      "status": 1
-    },
-    "12462": {
-      "transaction_id": 3,
-      "waiver_bid": 16,
-      "status": 2
-    },
-    "11650": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
+    "4454": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
       "status": 3
     },
-    "3161": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
+    "11834": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
       "status": 2
     },
-    "12502": {
-      "transaction_id": 3,
-      "waiver_bid": 7,
-      "status": 1
+    "7670": {
+      "transaction_id": 4,
+      "waiver_bid": 12,
+      "status": 2
     },
-    "11439": {
+    "8917": {
+      "transaction_id": 4,
+      "waiver_bid": 6,
+      "status": 2
+    },
+    "8160": {
       "transaction_id": 3,
       "waiver_bid": 12,
       "status": 2
@@ -295,7 +270,32 @@
       "waiver_bid": 41,
       "status": 1
     },
+    "5857": {
+      "transaction_id": 3,
+      "waiver_bid": 8,
+      "status": 1
+    },
+    "8172": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
     "827": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "2197": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
+    },
+    "11650": {
       "transaction_id": 3,
       "waiver_bid": 0,
       "status": 3
@@ -311,28 +311,28 @@
       "12": 11,
       "4": 10,
       "11": 9,
-      "6": 8,
       "7": 8,
-      "25": 7,
+      "6": 8,
       "3": 7,
-      "15": 6,
+      "25": 7,
       "9": 6,
+      "15": 6,
       "8": 5,
       "35": 3,
-      "13": 3,
       "41": 3,
-      "16": 2,
-      "39": 2,
-      "46": 2,
-      "31": 2,
+      "13": 3,
       "50": 2,
-      "32": 2,
-      "43": 2,
-      "52": 2,
-      "24": 2,
-      "17": 2,
-      "38": 2,
       "51": 2,
+      "38": 2,
+      "17": 2,
+      "43": 2,
+      "16": 2,
+      "32": 2,
+      "52": 2,
+      "39": 2,
+      "31": 2,
+      "46": 2,
+      "24": 2,
       "109": 1,
       "55": 1,
       "84": 1,
@@ -407,7 +407,7 @@
       "season_3"
     ],
     "total_new_transactions": 1,
-    "total_duplicates": 10,
+    "total_duplicates": 11,
     "fetch_mode": "incremental"
   }
 }
