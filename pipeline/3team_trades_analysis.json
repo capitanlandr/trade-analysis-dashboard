@@ -4,6 +4,28 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12551.0
+      },
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 11120.0
+      },
+      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -16,29 +38,7 @@
           "2026 Round 1"
         ],
         "value_then": 12552.0,
-        "value_now": 15468.0
-      },
-      {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12475.0
-      },
-      {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 11479.0
+        "value_now": 15328.0
       }
     ]
   }
