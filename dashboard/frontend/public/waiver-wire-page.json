@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-24T16:14:40.107386",
+    "generated_at": "2026-06-25T16:20:26.113732",
     "total_waiver_transactions": 395,
     "total_free_agent_transactions": 280,
     "successful_waivers": 281,
@@ -20,7 +20,7 @@
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-06-24T16:14:09.380703Z"
+        "last_fetched": "2026-06-25T16:19:48.963792Z"
       }
     },
     "schemaVersion": "2.0.0",
@@ -9301,9 +9301,9 @@
       "status": "complete",
       "team_name": "tylerpilgrim",
       "roster_id": 8,
-      "player_name": "Kenneth Gainwell",
+      "player_name": "Kenny Gainwell",
       "player_id": "7567",
-      "player_value": 15,
+      "player_value": null,
       "waiver_bid": 2,
       "week": 1,
       "created_date": "2025-09-02 17:13:11",
@@ -11321,9 +11321,9 @@
       "status": "complete",
       "team_name": "zachlearningtogolf",
       "roster_id": 5,
-      "player_name": "Kenneth Gainwell",
+      "player_name": "Kenny Gainwell",
       "player_id": "7567",
-      "player_value": 19,
+      "player_value": null,
       "waiver_bid": 0,
       "week": 1,
       "created_date": "2025-05-05 14:13:42",
@@ -15935,7 +15935,7 @@
     },
     {
       "player_id": "7567",
-      "player_name": "Kenneth Gainwell",
+      "player_name": "Kenny Gainwell",
       "total_claims": 2,
       "successful_claims": 2,
       "highest_bid": 2
