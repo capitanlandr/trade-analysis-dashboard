@@ -1,6 +1,6 @@
 import React, { useState, useMemo, memo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Search, Filter, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
+import { Search, Filter, ArrowUpDown, ArrowUp, ArrowDown, Info } from 'lucide-react';
 import { api } from '../../services/api';
 
 import ErrorMessage from '../UI/ErrorMessage';
@@ -21,31 +21,47 @@ const SimpleManagerRankingsTable: React.FC = () => {
   // Debounce search term to avoid excessive filtering
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
-  const { 
-    data: teamsData, 
-    isLoading, 
+  const {
+    data: teamsData,
+    isLoading,
     error,
-    refetch 
+    refetch
   } = useQuery({
     queryKey: ['teams'],
     queryFn: () => api.getTeams(),
   });
 
+  const {
+    data: tradeMetrics,
+  } = useQuery({
+    queryKey: ['trade-metrics'],
+    queryFn: async () => {
+      const response = await fetch('/api-trade-metrics.json');
+      if (!response.ok) return null;
+      return response.json();
+    },
+  });
+
   // Safely extract and validate teams data
-  // Both dev and prod now return: { success: true, data: { teams: [...] } }
   const rawTeams = teamsData?.data?.teams || [];
-  
-  // Safely normalize team data with proper type checking
-  // MUST be called before any early returns to maintain hook order
+
+  // Merge net advantage from trade metrics into teams
   const teams: Team[] = useMemo(() => {
+    const metricsMap: Record<string, number> = {};
+    if (tradeMetrics?.managers) {
+      for (const m of tradeMetrics.managers) {
+        metricsMap[m.username] = m.net_advantage;
+      }
+    }
+
     return rawTeams.map((team: any): Team => ({
       sleeperUsername: String(team?.sleeperUsername || ''),
       realName: String(team?.realName || 'Unknown'),
       tradeCount: Number(team?.tradeCount) || 0,
-      totalValueGained: Number(team?.totalValueGained) || 0,
+      totalValueGained: metricsMap[team?.sleeperUsername] ?? (Number(team?.totalValueGained) || 0),
       winRate: Number(team?.winRate) || 0,
     }));
-  }, [rawTeams]);
+  }, [rawTeams, tradeMetrics]);
 
   // Safe filtering and sorting with proper error handling
   // MUST be called before any early returns to maintain hook order
@@ -225,12 +241,20 @@ const SimpleManagerRankingsTable: React.FC = () => {
                   {getSortIcon('tradeCount')}
                 </div>
               </th>
-              <th 
+              <th
                 className="px-3 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
                 onClick={() => handleSort('totalValueGained')}
               >
                 <div className="flex items-center justify-between">
-                  <span>Total Score</span>
+                  <span className="flex items-center gap-1">
+                    Net Advantage
+                    <span className="relative group">
+                      <Info className="h-3 w-3 text-gray-400" />
+                      <span className="absolute z-10 hidden group-hover:block w-56 p-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg -top-1 right-5 leading-relaxed">
+                        How much more your side of trades is worth compared to what you gave up, summed across all trades. Positive means you've accumulated more dynasty value than your trade partners. Zero-sum across the league.
+                      </span>
+                    </span>
+                  </span>
                   {getSortIcon('totalValueGained')}
                 </div>
               </th>

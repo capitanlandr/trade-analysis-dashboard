@@ -8,6 +8,8 @@ import SimpleManagerRankingsTable from '../components/Tables/SimpleManagerRankin
 import RecentTradesTable from '../components/Tables/RecentTradesTable';
 import { ComponentErrorBoundary } from '../components/ErrorBoundary';
 import { MetricCardSkeleton, CardSkeleton } from '../components/UI/SkeletonLoader';
+import { SharpeRatioCard } from '../components/TradeMetrics/SharpeRatioCard';
+import { OpponentAdjustedCard } from '../components/TradeMetrics/OpponentAdjustedCard';
 
 const Overview: React.FC = () => {
   const { 
@@ -32,11 +34,23 @@ const Overview: React.FC = () => {
     retryDelay: 1000,
   });
 
-  const { 
+  const {
     isLoading: tradesLoading
   } = useQuery({
     queryKey: ['trades', 'recent'],
     queryFn: () => api.getTrades({ maxResults: 10 }),
+  });
+
+  const {
+    data: tradeMetrics,
+    isLoading: metricsLoading
+  } = useQuery({
+    queryKey: ['trade-metrics'],
+    queryFn: async () => {
+      const response = await fetch('/api-trade-metrics.json');
+      if (!response.ok) throw new Error('Failed to load trade metrics');
+      return response.json();
+    },
   });
 
 
@@ -145,8 +159,41 @@ const Overview: React.FC = () => {
         />
       </div>
 
-      {/* League Leaders */}
+      {/* Advanced Trade Metrics */}
+      {!metricsLoading && tradeMetrics?.managers && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <ComponentErrorBoundary componentName="Sharpe Ratio">
+            <SharpeRatioCard managers={tradeMetrics.managers} />
+          </ComponentErrorBoundary>
+          <ComponentErrorBoundary componentName="Opponent Adjusted">
+            <OpponentAdjustedCard managers={tradeMetrics.managers} />
+          </ComponentErrorBoundary>
+        </div>
+      )}
+
+      {/* Top Performers */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="card">
+          <h2 className="text-xl font-semibold mb-4 flex items-center">
+            <TrendingUp className="h-5 w-5 mr-2 text-green-600" />
+            Top Performers (Net Advantage)
+          </h2>
+          <div className="space-y-3">
+            {tradeMetrics?.managers?.slice(0, 3).map((mgr: any, index: number) => (
+              <TopPerformerItem key={mgr.username} team={{
+                realName: mgr.real_name,
+                tradeCount: mgr.trades,
+                totalValueGained: mgr.net_advantage,
+                winRate: mgr.significance?.win_rate || 0
+              }} rank={index + 1} />
+            )) || stats?.teamRankings?.byValueGained?.slice(0, 3).map((team: any, index: number) => (
+              <TopPerformerItem key={team.realName} team={team} rank={index + 1} />
+            )) || (
+              <p className="text-gray-500 text-center py-8">Loading top performers...</p>
+            )}
+          </div>
+        </div>
+
         <div className="card">
           <h2 className="text-xl font-semibold mb-4 flex items-center">
             <Users className="h-5 w-5 mr-2 text-primary-600" />
@@ -159,46 +206,10 @@ const Overview: React.FC = () => {
               subtitle={`${stats?.teamRankings?.byTradeCount?.[0]?.tradeCount || 0} trades`}
             />
             <LeaderItem
-              label="Trade Season"
-              value={(() => {
-                const currentYear = new Date().getFullYear();
-                const earliest = stats?.overview?.dateRange?.earliest;
-                const start = (earliest && earliest.startsWith(String(currentYear)))
-                  ? earliest
-                  : `${currentYear}-01-01`;
-
-                const formatDate = (dateStr: string) => {
-                  const [year, month, day] = dateStr.split('-').map(Number);
-                  const date = new Date(year, month - 1, day);
-                  const monthName = date.toLocaleDateString('en-US', { month: 'long' });
-                  const dayNum = date.getDate();
-                  const suffix = dayNum === 1 || dayNum === 21 || dayNum === 31 ? 'st' :
-                                 dayNum === 2 || dayNum === 22 ? 'nd' :
-                                 dayNum === 3 || dayNum === 23 ? 'rd' : 'th';
-                  return `${monthName} ${dayNum}${suffix}, ${year}`;
-                };
-
-                const today = new Date();
-                const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-
-                return `${formatDate(start)} to ${formatDate(todayStr)}`;
-              })()}
-              subtitle="Active trading period"
+              label="Biggest Value Extractor"
+              value={tradeMetrics?.managers?.[0]?.real_name || 'N/A'}
+              subtitle={`+${Math.round(tradeMetrics?.managers?.[0]?.net_advantage || 0).toLocaleString()} net advantage`}
             />
-          </div>
-        </div>
-
-        <div className="card">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <TrendingUp className="h-5 w-5 mr-2 text-green-600" />
-            Top Performers
-          </h2>
-          <div className="space-y-3">
-            {stats?.teamRankings?.byValueGained?.slice(0, 3).map((team: any, index: number) => (
-              <TopPerformerItem key={team.realName} team={team} rank={index + 1} />
-            )) || (
-              <p className="text-gray-500 text-center py-8">Loading top performers...</p>
-            )}
           </div>
         </div>
       </div>

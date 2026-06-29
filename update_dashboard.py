@@ -74,6 +74,7 @@ PIPELINE_STAGES = [
     ("Stage 7: Generate Playoff Bracket", "python3 generate_playoff_bracket.py"),
     ("Stage 7a: Calculate Progressive Draft Order", "python3 scripts/calculate_progressive_draft_order.py"),
     ("Stage 8: Generate Dashboard JSON from Cumulative Files", "python3 scripts/generate_dashboard_json_from_cumulative.py"),
+    ("Stage 8a: Generate Trade Metrics", "python3 scripts/generate_trade_metrics.py"),
     ("Stage 9: Generate Waiver Wire JSON from Cumulative Files", "python3 scripts/generate_waiver_wire_dashboard_json_from_cumulative.py"),
     ("Stage 10: Fetch Current Standings", "python3 scripts/fetch_standings.py"),
     ("Stage 11: Run Playoff Simulations", "python3 scripts/simulate_playoff_scenarios.py"),

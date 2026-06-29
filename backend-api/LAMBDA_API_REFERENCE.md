@@ -1,5 +1,7 @@
 # Dashboard API - Lambda Function Reference
 
+> **STATUS (June 2026):** Lambda API is deployed and functional but the frontend is NOT wired to it in production. Production uses static JSON from the pipeline. Lambda data has diverged from pipeline output. See `.env.production` for toggle details.
+
 ## 🎉 Your Live Serverless API
 
 **Base URL:** https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod/api/

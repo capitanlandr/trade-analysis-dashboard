@@ -40,7 +40,8 @@ Defined in `update_dashboard.py`:
 If you change the shape of any pipeline outputs, update both the JSON generators and the frontend types/components.
 
 ## Frontend Data Contract
-- **Static JSON is always used** in `dashboard/frontend/src/services/api.ts` (`USE_STATIC_DATA = true`).
+- **Static JSON is the production data source.** Controlled by `VITE_USE_LAMBDA_API=false` in `.env` and `.env.production`.
+- A Lambda API exists (`api-client.ts` supports it) but the migration is **paused** — Lambda data diverges from pipeline output. Do not enable in prod without verifying data parity.
 - Expected files in `dashboard/frontend/public/`:
   - `api-trades.json`
   - `api-teams.json`
@@ -68,7 +69,8 @@ If you change the shape of any pipeline outputs, update both the JSON generators
 ## Important Config and Environment Variables
 - Frontend optional env:
   - `VITE_DRIVE_FOLDER_ID` (enables Commish Tiers archive embed)
-- `VITE_API_BASE_URL` exists but is unused while `USE_STATIC_DATA = true`.
+- `VITE_USE_LAMBDA_API` controls data source: `false` = static JSON (production default), `true` = Lambda API (paused migration).
+- `VITE_API_BASE_URL` is only used when `VITE_USE_LAMBDA_API=true`.
 - Pipeline configs:
   - `pipeline/config/default.yaml` (general settings)
   - `pipeline/config/current_week.json` (auto-updated)

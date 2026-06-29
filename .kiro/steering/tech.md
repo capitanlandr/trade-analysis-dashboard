@@ -160,11 +160,12 @@ rm -rf dashboard/frontend/node_modules/
 - Client-side routing with React Router
 - Deployed as Jamstack application on Vercel
 
-### Data Flow
+### Data Flow (Production)
 1. Python pipeline generates JSON files → `dashboard/frontend/public/`
 2. Vite build includes public files in distribution
-3. React app fetches JSON files at runtime
-4. No API server, database, or real-time connections needed
+3. React app fetches JSON files at runtime (`VITE_USE_LAMBDA_API=false`)
+4. No API server, database, or real-time connections needed in production
+5. A Lambda API exists but is paused — do not enable without verifying data parity
 
 ### Key Benefits
 - **Simple Deployment**: Single static site, no server management

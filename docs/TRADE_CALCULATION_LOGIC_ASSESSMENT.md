@@ -132,15 +132,33 @@ The margin and winner logic in Stage 4 is mathematically sound. The issue is not
 
 ---
 
+## Important Framing: Value Is Not Skill
+
+Net Advantage measures **dynasty capital accumulation** — who has gained the most asset value through trades. It does NOT measure who is the "best" trader in a holistic sense.
+
+In dynasty fantasy football, the "right" trade depends on team context:
+
+- **Rebuilding teams** accumulate value by trading productive veterans for picks and young players. These trades look like "wins" in this metric because picks and young players appreciate.
+- **Contending teams** intentionally sell value for production. Trading a high-value 22-year-old for a cheaper productive veteran who helps win a championship looks like a "loss" in this metric, but it may be the smartest trade in the league.
+
+Therefore, Net Advantage should be interpreted as: **who has accumulated the most dynasty currency through trades** — who has gotten richer in asset value over time. A contender who dominates the league but consistently shows negative net advantage might simply be executing a correct win-now strategy at the expense of future value.
+
+The metric is most useful for identifying:
+- Managers who consistently leave value on the table (large negative, suggesting they are being outmaneuvered)
+- Managers who extract maximum value regardless of context (large positive with consistency)
+- Whether a rebuild or contention strategy is being executed through trades
+
+---
+
 ## Recommendation
 
 The underlying valuation pipeline (Stages 2-3) and per-trade scoring (Stage 4) are well-built. The issue is at the aggregation layer: what metric ranks managers.
 
 **Option A (Recommended):** Show both metrics side by side:
 - "Asset Appreciation" (current `totalValueGained`) — shows who acquired assets that grew in value.
-- "Net Trade Advantage" (zero-sum) — shows who consistently gets the better side of trades.
+- "Net Trade Advantage" (zero-sum) — shows who consistently gets the better side in value terms.
 
-The combination tells the full story: appreciation shows portfolio growth from trades, while net advantage shows relative trade skill.
+The combination tells the full story: appreciation shows portfolio growth from trades, while net advantage shows relative value extraction. Neither alone captures "trade skill" because skill is context-dependent (contending vs rebuilding).
 
 **Option B:** Replace `totalValueGained` with net advantage as the primary ranking metric.
 

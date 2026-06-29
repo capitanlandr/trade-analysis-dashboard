@@ -1,0 +1,860 @@
+{
+  "manager_rankings": [
+    {
+      "manager": "gnewman4",
+      "net_advantage": 11470.0,
+      "trades": 19,
+      "avg_advantage_per_trade": 603.6842,
+      "wins": 11,
+      "win_rate": 0.5789
+    },
+    {
+      "manager": "lndahayo",
+      "net_advantage": 7801.0,
+      "trades": 15,
+      "avg_advantage_per_trade": 520.0667,
+      "wins": 10,
+      "win_rate": 0.6667
+    },
+    {
+      "manager": "donewton",
+      "net_advantage": 5643.0,
+      "trades": 28,
+      "avg_advantage_per_trade": 201.5357,
+      "wins": 15,
+      "win_rate": 0.5357
+    },
+    {
+      "manager": "mgaeta23",
+      "net_advantage": 4525.0,
+      "trades": 13,
+      "avg_advantage_per_trade": 348.0769,
+      "wins": 7,
+      "win_rate": 0.5385
+    },
+    {
+      "manager": "thekylecasey",
+      "net_advantage": 2838.0,
+      "trades": 10,
+      "avg_advantage_per_trade": 283.8,
+      "wins": 4,
+      "win_rate": 0.4
+    },
+    {
+      "manager": "tylerpilgrim",
+      "net_advantage": 756.0,
+      "trades": 15,
+      "avg_advantage_per_trade": 50.4,
+      "wins": 10,
+      "win_rate": 0.6667
+    },
+    {
+      "manager": "brevinowens",
+      "net_advantage": 449.0,
+      "trades": 2,
+      "avg_advantage_per_trade": 224.5,
+      "wins": 2,
+      "win_rate": 1.0
+    },
+    {
+      "manager": "jakeduf",
+      "net_advantage": -707.0,
+      "trades": 10,
+      "avg_advantage_per_trade": -70.7,
+      "wins": 5,
+      "win_rate": 0.5
+    },
+    {
+      "manager": "wkerwin",
+      "net_advantage": -3935.0,
+      "trades": 12,
+      "avg_advantage_per_trade": -327.9167,
+      "wins": 4,
+      "win_rate": 0.3333
+    },
+    {
+      "manager": "cjsyregelas",
+      "net_advantage": -5353.0,
+      "trades": 7,
+      "avg_advantage_per_trade": -764.7143,
+      "wins": 3,
+      "win_rate": 0.4286
+    },
+    {
+      "manager": "jwalters74",
+      "net_advantage": -6588.0,
+      "trades": 32,
+      "avg_advantage_per_trade": -205.875,
+      "wins": 14,
+      "win_rate": 0.4375
+    },
+    {
+      "manager": "zachlearningtogolf",
+      "net_advantage": -16899.0,
+      "trades": 25,
+      "avg_advantage_per_trade": -675.96,
+      "wins": 9,
+      "win_rate": 0.36
+    }
+  ],
+  "trade_details": [
+    {
+      "trade_date": "2025-10-22",
+      "team_a": "tylerpilgrim",
+      "team_b": "thekylecasey",
+      "team_a_value_now": 8507.0,
+      "team_b_value_now": 15468.0,
+      "advantage_for_a": -6961.0
+    },
+    {
+      "trade_date": "2025-04-30",
+      "team_a": "donewton",
+      "team_b": "wkerwin",
+      "team_a_value_now": 6016.0,
+      "team_b_value_now": 4312.0,
+      "advantage_for_a": 1704.0
+    },
+    {
+      "trade_date": "2025-08-21",
+      "team_a": "tylerpilgrim",
+      "team_b": "jwalters74",
+      "team_a_value_now": 8704.0,
+      "team_b_value_now": 4626.0,
+      "advantage_for_a": 4078.0
+    },
+    {
+      "trade_date": "2025-04-29",
+      "team_a": "mgaeta23",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 8614.0,
+      "team_b_value_now": 3105.0,
+      "advantage_for_a": 5509.0
+    },
+    {
+      "trade_date": "2025-05-06",
+      "team_a": "cjsyregelas",
+      "team_b": "jwalters74",
+      "team_a_value_now": 3830.0,
+      "team_b_value_now": 8733.0,
+      "advantage_for_a": -4903.0
+    },
+    {
+      "trade_date": "2025-05-03",
+      "team_a": "gnewman4",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 8951.0,
+      "team_b_value_now": 2002.0,
+      "advantage_for_a": 6949.0
+    },
+    {
+      "trade_date": "2025-03-18",
+      "team_a": "jwalters74",
+      "team_b": "lndahayo",
+      "team_a_value_now": 9687.0,
+      "team_b_value_now": 12145.0,
+      "advantage_for_a": -2458.0
+    },
+    {
+      "trade_date": "2025-03-14",
+      "team_a": "donewton",
+      "team_b": "gnewman4",
+      "team_a_value_now": 2211.0,
+      "team_b_value_now": 4549.0,
+      "advantage_for_a": -2338.0
+    },
+    {
+      "trade_date": "2025-08-07",
+      "team_a": "lndahayo",
+      "team_b": "cjsyregelas",
+      "team_a_value_now": 7205.0,
+      "team_b_value_now": 4681.0,
+      "advantage_for_a": 2524.0
+    },
+    {
+      "trade_date": "2025-04-22",
+      "team_a": "donewton",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 6161.0,
+      "team_b_value_now": 2146.0,
+      "advantage_for_a": 4015.0
+    },
+    {
+      "trade_date": "2025-11-16",
+      "team_a": "jwalters74",
+      "team_b": "cjsyregelas",
+      "team_a_value_now": 2434.0,
+      "team_b_value_now": 4997.0,
+      "advantage_for_a": -2563.0
+    },
+    {
+      "trade_date": "2026-03-10",
+      "team_a": "jwalters74",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 964.0,
+      "team_b_value_now": 2959.0,
+      "advantage_for_a": -1995.0
+    },
+    {
+      "trade_date": "2025-08-07",
+      "team_a": "lndahayo",
+      "team_b": "jwalters74",
+      "team_a_value_now": 2242.0,
+      "team_b_value_now": 4084.0,
+      "advantage_for_a": -1842.0
+    },
+    {
+      "trade_date": "2025-04-30",
+      "team_a": "donewton",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 686.0,
+      "team_b_value_now": 645.0,
+      "advantage_for_a": 41.0
+    },
+    {
+      "trade_date": "2025-09-30",
+      "team_a": "donewton",
+      "team_b": "jwalters74",
+      "team_a_value_now": 436.0,
+      "team_b_value_now": 14.0,
+      "advantage_for_a": 422.0
+    },
+    {
+      "trade_date": "2025-06-24",
+      "team_a": "thekylecasey",
+      "team_b": "jwalters74",
+      "team_a_value_now": 310.0,
+      "team_b_value_now": 1014.0,
+      "advantage_for_a": -704.0
+    },
+    {
+      "trade_date": "2025-05-11",
+      "team_a": "zachlearningtogolf",
+      "team_b": "jwalters74",
+      "team_a_value_now": 1664.0,
+      "team_b_value_now": 35.0,
+      "advantage_for_a": 1629.0
+    },
+    {
+      "trade_date": "2025-07-16",
+      "team_a": "donewton",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 1668.0,
+      "team_b_value_now": 56.0,
+      "advantage_for_a": 1612.0
+    },
+    {
+      "trade_date": "2025-04-29",
+      "team_a": "jwalters74",
+      "team_b": "donewton",
+      "team_a_value_now": 5906.0,
+      "team_b_value_now": 8432.0,
+      "advantage_for_a": -2526.0
+    },
+    {
+      "trade_date": "2025-07-31",
+      "team_a": "brevinowens",
+      "team_b": "jakeduf",
+      "team_a_value_now": 321.0,
+      "team_b_value_now": 221.0,
+      "advantage_for_a": 100.0
+    },
+    {
+      "trade_date": "2025-10-11",
+      "team_a": "zachlearningtogolf",
+      "team_b": "jwalters74",
+      "team_a_value_now": 3384.0,
+      "team_b_value_now": 5094.0,
+      "advantage_for_a": -1710.0
+    },
+    {
+      "trade_date": "2025-08-07",
+      "team_a": "zachlearningtogolf",
+      "team_b": "mgaeta23",
+      "team_a_value_now": 1035.0,
+      "team_b_value_now": 1340.0,
+      "advantage_for_a": -305.0
+    },
+    {
+      "trade_date": "2025-04-29",
+      "team_a": "zachlearningtogolf",
+      "team_b": "jwalters74",
+      "team_a_value_now": 7825.0,
+      "team_b_value_now": 8535.0,
+      "advantage_for_a": -710.0
+    },
+    {
+      "trade_date": "2025-03-30",
+      "team_a": "donewton",
+      "team_b": "gnewman4",
+      "team_a_value_now": 1576.0,
+      "team_b_value_now": 282.0,
+      "advantage_for_a": 1294.0
+    },
+    {
+      "trade_date": "2026-03-06",
+      "team_a": "thekylecasey",
+      "team_b": "donewton",
+      "team_a_value_now": 411.0,
+      "team_b_value_now": 1279.0,
+      "advantage_for_a": -868.0
+    },
+    {
+      "trade_date": "2025-04-30",
+      "team_a": "gnewman4",
+      "team_b": "jwalters74",
+      "team_a_value_now": 1823.0,
+      "team_b_value_now": 3002.0,
+      "advantage_for_a": -1179.0
+    },
+    {
+      "trade_date": "2025-10-26",
+      "team_a": "donewton",
+      "team_b": "gnewman4",
+      "team_a_value_now": 3088.0,
+      "team_b_value_now": 6508.0,
+      "advantage_for_a": -3420.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "gnewman4",
+      "team_b": "jwalters74",
+      "team_a_value_now": 2180.0,
+      "team_b_value_now": 109.0,
+      "advantage_for_a": 2071.0
+    },
+    {
+      "trade_date": "2025-05-20",
+      "team_a": "zachlearningtogolf",
+      "team_b": "donewton",
+      "team_a_value_now": 37.0,
+      "team_b_value_now": 430.0,
+      "advantage_for_a": -393.0
+    },
+    {
+      "trade_date": "2025-04-30",
+      "team_a": "lndahayo",
+      "team_b": "donewton",
+      "team_a_value_now": 1086.0,
+      "team_b_value_now": 85.0,
+      "advantage_for_a": 1001.0
+    },
+    {
+      "trade_date": "2025-04-29",
+      "team_a": "donewton",
+      "team_b": "wkerwin",
+      "team_a_value_now": 5873.0,
+      "team_b_value_now": 4649.0,
+      "advantage_for_a": 1224.0
+    },
+    {
+      "trade_date": "2025-04-28",
+      "team_a": "donewton",
+      "team_b": "thekylecasey",
+      "team_a_value_now": 1706.0,
+      "team_b_value_now": 3212.0,
+      "advantage_for_a": -1506.0
+    },
+    {
+      "trade_date": "2025-08-22",
+      "team_a": "thekylecasey",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 2356.0,
+      "team_b_value_now": 4756.0,
+      "advantage_for_a": -2400.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "jwalters74",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 140.0,
+      "team_b_value_now": 252.0,
+      "advantage_for_a": -112.0
+    },
+    {
+      "trade_date": "2025-11-17",
+      "team_a": "tylerpilgrim",
+      "team_b": "thekylecasey",
+      "team_a_value_now": 830.0,
+      "team_b_value_now": 106.0,
+      "advantage_for_a": 724.0
+    },
+    {
+      "trade_date": "2025-11-01",
+      "team_a": "thekylecasey",
+      "team_b": "lndahayo",
+      "team_a_value_now": 1331.0,
+      "team_b_value_now": 1151.0,
+      "advantage_for_a": 180.0
+    },
+    {
+      "trade_date": "2025-05-04",
+      "team_a": "jwalters74",
+      "team_b": "wkerwin",
+      "team_a_value_now": 263.0,
+      "team_b_value_now": 245.0,
+      "advantage_for_a": 18.0
+    },
+    {
+      "trade_date": "2025-05-05",
+      "team_a": "zachlearningtogolf",
+      "team_b": "gnewman4",
+      "team_a_value_now": 708.0,
+      "team_b_value_now": 347.0,
+      "advantage_for_a": 361.0
+    },
+    {
+      "trade_date": "2025-09-12",
+      "team_a": "zachlearningtogolf",
+      "team_b": "wkerwin",
+      "team_a_value_now": 1116.0,
+      "team_b_value_now": 690.0,
+      "advantage_for_a": 426.0
+    },
+    {
+      "trade_date": "2025-09-23",
+      "team_a": "donewton",
+      "team_b": "jakeduf",
+      "team_a_value_now": 779.0,
+      "team_b_value_now": 257.0,
+      "advantage_for_a": 522.0
+    },
+    {
+      "trade_date": "2025-10-23",
+      "team_a": "zachlearningtogolf",
+      "team_b": "jwalters74",
+      "team_a_value_now": 50.0,
+      "team_b_value_now": 74.0,
+      "advantage_for_a": -24.0
+    },
+    {
+      "trade_date": "2025-11-02",
+      "team_a": "jwalters74",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 266.0,
+      "team_b_value_now": 74.0,
+      "advantage_for_a": 192.0
+    },
+    {
+      "trade_date": "2025-07-08",
+      "team_a": "jwalters74",
+      "team_b": "wkerwin",
+      "team_a_value_now": 100.0,
+      "team_b_value_now": 578.0,
+      "advantage_for_a": -478.0
+    },
+    {
+      "trade_date": "2026-03-28",
+      "team_a": "jwalters74",
+      "team_b": "lndahayo",
+      "team_a_value_now": 2595.0,
+      "team_b_value_now": 3135.0,
+      "advantage_for_a": -540.0
+    },
+    {
+      "trade_date": "2025-09-30",
+      "team_a": "jwalters74",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 843.0,
+      "team_b_value_now": 1283.0,
+      "advantage_for_a": -440.0
+    },
+    {
+      "trade_date": "2025-05-08",
+      "team_a": "jakeduf",
+      "team_b": "donewton",
+      "team_a_value_now": 423.0,
+      "team_b_value_now": 366.0,
+      "advantage_for_a": 57.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "jakeduf",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 544.0,
+      "team_b_value_now": 52.0,
+      "advantage_for_a": 492.0
+    },
+    {
+      "trade_date": "2025-09-16",
+      "team_a": "mgaeta23",
+      "team_b": "jwalters74",
+      "team_a_value_now": 3395.0,
+      "team_b_value_now": 4372.0,
+      "advantage_for_a": -977.0
+    },
+    {
+      "trade_date": "2025-11-17",
+      "team_a": "brevinowens",
+      "team_b": "mgaeta23",
+      "team_a_value_now": 766.0,
+      "team_b_value_now": 417.0,
+      "advantage_for_a": 349.0
+    },
+    {
+      "trade_date": "2025-11-11",
+      "team_a": "donewton",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 74.0,
+      "team_b_value_now": 112.0,
+      "advantage_for_a": -38.0
+    },
+    {
+      "trade_date": "2025-10-21",
+      "team_a": "mgaeta23",
+      "team_b": "jwalters74",
+      "team_a_value_now": 342.0,
+      "team_b_value_now": 802.0,
+      "advantage_for_a": -460.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "jakeduf",
+      "team_b": "thekylecasey",
+      "team_a_value_now": 48.0,
+      "team_b_value_now": 429.0,
+      "advantage_for_a": -381.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "jwalters74",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 25.0,
+      "team_b_value_now": 462.0,
+      "advantage_for_a": -437.0
+    },
+    {
+      "trade_date": "2025-10-01",
+      "team_a": "gnewman4",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 462.0,
+      "team_b_value_now": 1052.0,
+      "advantage_for_a": -590.0
+    },
+    {
+      "trade_date": "2025-11-11",
+      "team_a": "gnewman4",
+      "team_b": "mgaeta23",
+      "team_a_value_now": 410.0,
+      "team_b_value_now": 1061.0,
+      "advantage_for_a": -651.0
+    },
+    {
+      "trade_date": "2025-05-31",
+      "team_a": "gnewman4",
+      "team_b": "jwalters74",
+      "team_a_value_now": 2322.0,
+      "team_b_value_now": 2606.0,
+      "advantage_for_a": -284.0
+    },
+    {
+      "trade_date": "2026-04-28",
+      "team_a": "wkerwin",
+      "team_b": "donewton",
+      "team_a_value_now": 697.0,
+      "team_b_value_now": 690.0,
+      "advantage_for_a": 7.0
+    },
+    {
+      "trade_date": "2025-10-01",
+      "team_a": "lndahayo",
+      "team_b": "jwalters74",
+      "team_a_value_now": 886.0,
+      "team_b_value_now": 112.0,
+      "advantage_for_a": 774.0
+    },
+    {
+      "trade_date": "2025-09-30",
+      "team_a": "lndahayo",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 61.0,
+      "team_b_value_now": 358.0,
+      "advantage_for_a": -297.0
+    },
+    {
+      "trade_date": "2025-07-16",
+      "team_a": "mgaeta23",
+      "team_b": "donewton",
+      "team_a_value_now": 0.0,
+      "team_b_value_now": 54.0,
+      "advantage_for_a": -54.0
+    },
+    {
+      "trade_date": "2025-10-07",
+      "team_a": "donewton",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 64.0,
+      "team_b_value_now": 416.0,
+      "advantage_for_a": -352.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "jwalters74",
+      "team_b": "jakeduf",
+      "team_a_value_now": 181.0,
+      "team_b_value_now": 48.0,
+      "advantage_for_a": 133.0
+    },
+    {
+      "trade_date": "2025-08-07",
+      "team_a": "thekylecasey",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 18.0,
+      "team_b_value_now": 91.0,
+      "advantage_for_a": -73.0
+    },
+    {
+      "trade_date": "2025-11-18",
+      "team_a": "wkerwin",
+      "team_b": "gnewman4",
+      "team_a_value_now": 17.0,
+      "team_b_value_now": 37.0,
+      "advantage_for_a": -20.0
+    },
+    {
+      "trade_date": "2025-11-10",
+      "team_a": "zachlearningtogolf",
+      "team_b": "gnewman4",
+      "team_a_value_now": 535.0,
+      "team_b_value_now": 234.0,
+      "advantage_for_a": 301.0
+    },
+    {
+      "trade_date": "2026-04-27",
+      "team_a": "mgaeta23",
+      "team_b": "cjsyregelas",
+      "team_a_value_now": 1297.0,
+      "team_b_value_now": 779.0,
+      "advantage_for_a": 518.0
+    },
+    {
+      "trade_date": "2025-10-01",
+      "team_a": "zachlearningtogolf",
+      "team_b": "lndahayo",
+      "team_a_value_now": 424.0,
+      "team_b_value_now": 1262.0,
+      "advantage_for_a": -838.0
+    },
+    {
+      "trade_date": "2026-04-29",
+      "team_a": "mgaeta23",
+      "team_b": "jwalters74",
+      "team_a_value_now": 332.0,
+      "team_b_value_now": 160.0,
+      "advantage_for_a": 172.0
+    },
+    {
+      "trade_date": "2025-10-10",
+      "team_a": "wkerwin",
+      "team_b": "lndahayo",
+      "team_a_value_now": 78.0,
+      "team_b_value_now": 104.0,
+      "advantage_for_a": -26.0
+    },
+    {
+      "trade_date": "2026-03-31",
+      "team_a": "zachlearningtogolf",
+      "team_b": "jakeduf",
+      "team_a_value_now": 326.0,
+      "team_b_value_now": 498.0,
+      "advantage_for_a": -172.0
+    },
+    {
+      "trade_date": "2025-05-05",
+      "team_a": "zachlearningtogolf",
+      "team_b": "wkerwin",
+      "team_a_value_now": 95.0,
+      "team_b_value_now": 114.0,
+      "advantage_for_a": -19.0
+    },
+    {
+      "trade_date": "2025-09-25",
+      "team_a": "gnewman4",
+      "team_b": "lndahayo",
+      "team_a_value_now": 27.0,
+      "team_b_value_now": 10.0,
+      "advantage_for_a": 17.0
+    },
+    {
+      "trade_date": "2026-04-30",
+      "team_a": "mgaeta23",
+      "team_b": "gnewman4",
+      "team_a_value_now": 124.0,
+      "team_b_value_now": 929.0,
+      "advantage_for_a": -805.0
+    },
+    {
+      "trade_date": "2025-10-23",
+      "team_a": "donewton",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 98.0,
+      "team_b_value_now": 121.0,
+      "advantage_for_a": -23.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "cjsyregelas",
+      "team_b": "donewton",
+      "team_a_value_now": 23.0,
+      "team_b_value_now": 5.0,
+      "advantage_for_a": 18.0
+    },
+    {
+      "trade_date": "2025-08-09",
+      "team_a": "lndahayo",
+      "team_b": "jwalters74",
+      "team_a_value_now": 250.0,
+      "team_b_value_now": 31.0,
+      "advantage_for_a": 219.0
+    },
+    {
+      "trade_date": "2025-05-13",
+      "team_a": "donewton",
+      "team_b": "lndahayo",
+      "team_a_value_now": 53.0,
+      "team_b_value_now": 348.0,
+      "advantage_for_a": -295.0
+    },
+    {
+      "trade_date": "2025-09-26",
+      "team_a": "gnewman4",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 44.0,
+      "team_b_value_now": 20.0,
+      "advantage_for_a": 24.0
+    },
+    {
+      "trade_date": "2026-05-05",
+      "team_a": "jwalters74",
+      "team_b": "gnewman4",
+      "team_a_value_now": 72.0,
+      "team_b_value_now": 199.0,
+      "advantage_for_a": -127.0
+    },
+    {
+      "trade_date": "2026-04-29",
+      "team_a": "wkerwin",
+      "team_b": "donewton",
+      "team_a_value_now": 98.0,
+      "team_b_value_now": 120.0,
+      "advantage_for_a": -22.0
+    },
+    {
+      "trade_date": "2026-04-27",
+      "team_a": "wkerwin",
+      "team_b": "jakeduf",
+      "team_a_value_now": 3196.0,
+      "team_b_value_now": 2710.0,
+      "advantage_for_a": 486.0
+    },
+    {
+      "trade_date": "2025-11-12",
+      "team_a": "tylerpilgrim",
+      "team_b": "gnewman4",
+      "team_a_value_now": 84.0,
+      "team_b_value_now": 388.0,
+      "advantage_for_a": -304.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "gnewman4",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 218.0,
+      "team_b_value_now": 161.0,
+      "advantage_for_a": 57.0
+    },
+    {
+      "trade_date": "2026-05-04",
+      "team_a": "jakeduf",
+      "team_b": "jwalters74",
+      "team_a_value_now": 114.0,
+      "team_b_value_now": 10.0,
+      "advantage_for_a": 104.0
+    },
+    {
+      "trade_date": "2025-11-12",
+      "team_a": "wkerwin",
+      "team_b": "lndahayo",
+      "team_a_value_now": 2359.0,
+      "team_b_value_now": 3844.0,
+      "advantage_for_a": -1485.0
+    },
+    {
+      "trade_date": "2026-04-30",
+      "team_a": "jakeduf",
+      "team_b": "tylerpilgrim",
+      "team_a_value_now": 151.0,
+      "team_b_value_now": 61.0,
+      "advantage_for_a": 90.0
+    },
+    {
+      "trade_date": "2025-05-19",
+      "team_a": "cjsyregelas",
+      "team_b": "donewton",
+      "team_a_value_now": 15.0,
+      "team_b_value_now": 19.0,
+      "advantage_for_a": -4.0
+    },
+    {
+      "trade_date": "2026-04-29",
+      "team_a": "cjsyregelas",
+      "team_b": "zachlearningtogolf",
+      "team_a_value_now": 35.0,
+      "team_b_value_now": 20.0,
+      "advantage_for_a": 15.0
+    },
+    {
+      "trade_date": "2025-09-16",
+      "team_a": "mgaeta23",
+      "team_b": "donewton",
+      "team_a_value_now": 8.0,
+      "team_b_value_now": 18.0,
+      "advantage_for_a": -10.0
+    },
+    {
+      "trade_date": "2025-11-12",
+      "team_a": "thekylecasey",
+      "team_b": "jwalters74",
+      "team_a_value_now": 3449.0,
+      "team_b_value_now": 4870.0,
+      "advantage_for_a": -1421.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "mgaeta23",
+      "team_b": "lndahayo",
+      "team_a_value_now": 35.0,
+      "team_b_value_now": 12.0,
+      "advantage_for_a": 23.0
+    },
+    {
+      "trade_date": "2025-05-01",
+      "team_a": "mgaeta23",
+      "team_b": "donewton",
+      "team_a_value_now": 3.0,
+      "team_b_value_now": 1.0,
+      "advantage_for_a": 2.0
+    },
+    {
+      "trade_date": "2025-10-07",
+      "team_a": "tylerpilgrim",
+      "team_b": "donewton",
+      "team_a_value_now": 11.0,
+      "team_b_value_now": 0.0,
+      "advantage_for_a": 11.0
+    },
+    {
+      "trade_date": "2025-09-26",
+      "team_a": "zachlearningtogolf",
+      "team_b": "gnewman4",
+      "team_a_value_now": 2.0,
+      "team_b_value_now": 0.0,
+      "advantage_for_a": 2.0
+    }
+  ],
+  "metadata": {
+    "total_trades": 94,
+    "analysis_date": "2026-06-28",
+    "sum_check": 0.0,
+    "description": "Net Trade Advantage is a zero-sum metric. For each trade, advantage_for_team_a = team_a_value_now - team_b_value_now. Team A receives that value; Team B receives its negative. Each manager's net_advantage is the sum of their per-trade advantages across every trade they participated in. Because the metric is zero-sum, the sum across all managers equals 0. A positive net_advantage means a manager extracted more present-day asset value from trades than they gave up; a negative value means the opposite. wins counts trades where the manager's side is currently worth more; win_rate is wins / trades."
+  }
+}
