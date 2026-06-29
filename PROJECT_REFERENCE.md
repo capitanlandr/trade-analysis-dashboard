@@ -72,10 +72,9 @@ Managed in: `pipeline/config/seasons.yaml`
 
 | File | Purpose |
 |---|---|
-| `update_dashboard.py` | **Master orchestrator.** Runs all 13 pipeline stages, copies JSON to frontend, git commits + pushes. Supports `--dry-run` and `--skip-git`. |
+| `update_dashboard.py` | **Master orchestrator.** Runs all pipeline stages, copies JSON to frontend, git commits + pushes. Supports `--dry-run` and `--skip-git`. |
 | `update_weekly_standings.py` | Standalone script to update standings data only. |
 | `refresh_local_data.py` | Quick local data refresh for development. |
-| `debug_json_generation.py` | Debug utility for JSON output issues. |
 | `deploy-to-aws.sh` | Manual AWS deploy: builds frontend, syncs to S3 (`dynasuiiii-website`), invalidates CloudFront (`EL6SCNZ7VJGN2`). |
 | `dev.sh` | Starts local dev server on port 5173. Checks for port conflicts. |
 | `setup.sh` | Initial project setup (install deps). |
@@ -87,22 +86,10 @@ Managed in: `pipeline/config/seasons.yaml`
 | `cloudfront-config.json` | CloudFront distribution configuration snapshot. |
 | `cloudfront-details.txt` | CloudFront resource IDs quick reference. |
 | `payload.json` | Test payload for Lambda invocations. |
-| `.gitignore` | Ignores: `node_modules`, build output, `.env`, pipeline intermediates (`backups/`, `logs/`, `metrics/`, `__pycache__`), generated dashboard JSON (`api-*.json`), and sensitive docs (`AWS_ACCOUNT_SETUP_CHECKLIST.md`, `DEPLOYMENT_SUMMARY.md`, `GITHUB_SECRETS_SETUP.md`). |
+| `.gitignore` | Ignores: `node_modules`, build output, `.env`, pipeline intermediates (`backups/`, `logs/`, `metrics/`, `__pycache__`), generated dashboard JSON (`api-*.json`), root-level data duplicates, and sensitive docs. |
 | `LICENSE` | MIT license. |
 
-### Root Data Files
-
-| File | Purpose |
-|---|---|
-| `league_trades_analysis_pipeline.csv` | Final trade analysis output (copied from pipeline). |
-| `team_identity_mapping.csv` | Roster ID -> username/real name mapping. |
-| `waiver_wire_analysis.csv` | Waiver wire analysis output. |
-| `waiver_wire_summary.json` | Waiver wire summary stats. |
-| `waiver_transactions_raw.json` | Raw waiver transaction data from Sleeper. |
-| `free_agent_transactions_raw.json` | Raw free agent transaction data. |
-| `test_waiver_wire.json` | Test fixture for waiver wire processing. |
-| `waiver_wire_stats.json` | Aggregated waiver wire statistics. |
-| `verify_archive_implementation.js` | Node script to verify archive feature works. |
+Note: Root-level data files (CSVs, JSONs) were removed in June 2026. Canonical copies live in `pipeline/`. Debug/test scripts moved to `scripts/`.
 
 ---
 
@@ -478,6 +465,9 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 |---|---|
 | `bulletproof_rename_template.sh` | Safe find-and-replace template for bulk file renames. |
 | `rename_waiver_files.sh` | Renames waiver wire output files to standardized names. |
+| `deploy_aws.sh` | Portable AWS deploy script (uses env vars for bucket/distribution). |
+| `debug_json_generation.py` | Debug utility for JSON output issues. |
+| `verify_archive_implementation.js` | Node script to verify archive feature works. |
 | `SAFE_FIND_REPLACE_GUIDE.md` | Guide for safely doing find/replace across the codebase. |
 
 ---
@@ -509,37 +499,51 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 
 ---
 
-## Root-Level Markdown Docs
+## Markdown Documentation
+
+**Root (active docs):**
 
 | File | Purpose |
 |---|---|
 | `README.md` | Project overview, features, setup instructions, architecture diagram. |
 | `QUICK_START.md` | Quick setup guide for new developers. |
 | `CONTRIBUTING.md` | Contribution guidelines. |
-| `IMPLEMENTATION_PLAN.md` | Original implementation plan for the dashboard. |
-| `IMPLEMENTATION_2026_EXACT_PICKS.md` | Implementation details for exact 2026 pick valuations. |
-| `MIGRATION_GUIDE.md` | Guide for migrating between versions/architectures. |
-| `AWS_MIGRATION_GUIDE.md` | Guide for the Vercel -> AWS migration. |
-| `AWS_LOCAL_DEVELOPMENT_GUIDE.md` | How to develop and test the Lambda backend locally. |
+| `CODEX_STEERING.md` | AI agent steering document. |
+| `PROJECT_REFERENCE.md` | This file. Complete project reference. |
+| `DEPLOYMENT.md` | Deployment procedures and environments. |
+| `WEEKLY_UPDATE_GUIDE.md` | Guide for running weekly data updates. |
 | `LAMBDA_ARCHITECTURE_GUIDE.md` | Architecture guide for the Lambda-based backend. |
 | `DYNAMODB_SCHEMA_DESIGN.md` | DynamoDB table design with PK/SK patterns, GSI strategy, TTL, and access patterns. |
 | `METRICS_DESIGN_PATTERN.md` | Design pattern for the metrics collection system. |
 | `PLAYER_VALUE_CACHE_DESIGN.md` | Design for the player value caching layer. |
 | `SLEEPER_API_AUDIT.md` | Audit of all Sleeper API usage across the codebase. |
 | `REAL_TIME_DASHBOARD_ROADMAP.md` | Roadmap for real-time features (WebSockets, live updates). |
-| `URL_REFERENCE.md` | Quick reference for all production URLs and AWS resource IDs. |
-| `DEPLOYMENT.md` | Deployment procedures and environments. |
+| `PRINCIPAL_ENGINEER_RECOMMENDATIONS.md` | Architecture recommendations and best practices. |
+
+**`docs/setup/` (setup and configuration references):**
+
+| File | Purpose |
+|---|---|
+| `AWS_LOCAL_DEVELOPMENT_GUIDE.md` | How to develop and test the Lambda backend locally. |
+| `AWS_MIGRATION_GUIDE.md` | Guide for the Vercel -> AWS migration. |
+| `GITHUB_ACTIONS_SETUP.md` | GitHub Actions setup guide. |
+| `GITHUB_ACTIONS_FIX.md` | Fix documentation for GitHub Actions issues. |
 | `CUSTOM_DOMAIN_OPTIONS.md` | Options for custom domain setup. |
 | `VERCEL_DOMAIN_OPTIONS.md` | Vercel-specific domain configuration. |
-| `WEEKLY_UPDATE_GUIDE.md` | Guide for running weekly data updates. |
 | `TEST_SETUP.md` | Test environment setup instructions. |
-| `COMMISH_TIERS_ARCHIVE_TESTING_GUIDE.md` | Testing guide for the archive feature. |
-| `ARCHIVE_DEPLOYMENT_CHECKLIST.md` | Deployment checklist for archive feature. |
-| `ARCHIVE_LOADING_FIX.md` | Fix documentation for archive loading issues. |
-| `GITHUB_ACTIONS_FIX.md` | Fix documentation for GitHub Actions issues. |
-| `GITHUB_ACTIONS_SETUP.md` | GitHub Actions setup guide. |
-| `FILE_SAFETY_GUIDE.txt` | Guide for safe file operations in the project. |
-| `PRINCIPAL_ENGINEER_RECOMMENDATIONS.md` | Architecture recommendations and best practices. |
+| `URL_REFERENCE.md` | Quick reference for all production URLs and AWS resource IDs. |
+
+**`docs/archive/` (historical, completed, or paused work):**
+
+| File | Purpose |
+|---|---|
+| `IMPLEMENTATION_PLAN.md` | Original implementation plan for the dashboard (completed). |
+| `IMPLEMENTATION_2026_EXACT_PICKS.md` | Implementation details for exact 2026 pick valuations (completed). |
+| `MIGRATION_GUIDE.md` | Guide for migrating between versions/architectures (completed). |
+| `SPRINT_1_EXECUTION_LOG.md` | Lambda migration sprint (paused). |
+| `ARCHIVE_DEPLOYMENT_CHECKLIST.md` | Commish Tiers archive feature deployment (completed). |
+| `ARCHIVE_LOADING_FIX.md` | Archive loading fix documentation (completed). |
+| `COMMISH_TIERS_ARCHIVE_TESTING_GUIDE.md` | Archive feature testing guide (completed). |
 
 ---
 

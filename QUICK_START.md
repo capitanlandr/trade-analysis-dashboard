@@ -110,4 +110,4 @@ Actions tab shows:
 
 Your dashboard now updates automatically every day. No more manual work!
 
-**Questions?** See `GITHUB_ACTIONS_SETUP.md` for detailed docs.
+**Questions?** See `docs/setup/GITHUB_ACTIONS_SETUP.md` for detailed docs.
