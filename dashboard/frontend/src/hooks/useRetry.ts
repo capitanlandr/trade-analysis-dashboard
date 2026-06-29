@@ -48,7 +48,6 @@ export function useRetry<T = any>(options: UseRetryOptions = {}): UseRetryReturn
         setIsRetrying(true);
         const delay = retryDelay * Math.pow(backoffMultiplier, currentRetry - 1);
         
-        console.log(`Retry attempt ${currentRetry}/${maxRetries} in ${delay}ms...`);
         await sleep(delay);
       }
     }

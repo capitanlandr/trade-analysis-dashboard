@@ -19,17 +19,7 @@ const Overview: React.FC = () => {
     refetch: refetchStats 
   } = useQuery({
     queryKey: ['stats', 'summary'],
-    queryFn: async () => {
-      console.log('Fetching stats summary...');
-      try {
-        const result = await api.getStatsSummary();
-        console.log('Stats API result:', result);
-        return result;
-      } catch (error) {
-        console.error('Stats API error:', error);
-        throw error;
-      }
-    },
+    queryFn: () => api.getStatsSummary(),
     retry: 3,
     retryDelay: 1000,
   });
@@ -52,17 +42,6 @@ const Overview: React.FC = () => {
       return response.json();
     },
   });
-
-
-
-  // Enhanced logging
-  console.log('Overview state:', {
-    statsLoading,
-    tradesLoading,
-    statsError: statsError?.message,
-    hasStatsData: !!statsData
-  });
-
   if (statsLoading || tradesLoading) {
     return (
       <div className="space-y-8">
@@ -106,18 +85,7 @@ const Overview: React.FC = () => {
     );
   }
 
-  // Extract stats - now consistent between dev and prod
-  // Both return: { success: true, data: { overview: {...} } }
   const stats = (statsData as any)?.data;
-  
-  // Debug logging
-  console.log('Overview Debug:', {
-    statsData,
-    stats,
-    totalTrades: stats?.overview?.totalTrades,
-    totalValue: stats?.overview?.totalTradeValue,
-    mostActive: stats?.overview?.mostActiveTrader
-  });
 
   return (
     <div className="space-y-8">

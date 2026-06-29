@@ -74,8 +74,6 @@ export default function WaiverWireAnalysis() {
   const filteredAndSorted = useMemo(() => {
     if (!data?.all_transactions) return [];
     
-    console.log('Processing data with filters:', filters, 'sort:', sortField, sortDirection);
-    
     let filtered = data.all_transactions.filter(transaction => {
       // Type filter
       if (filters.type.length > 0 && !filters.type.includes(transaction.type)) {
@@ -187,8 +185,6 @@ export default function WaiverWireAnalysis() {
       return 0;
     });
     
-    console.log('Processed data length:', sorted.length, 'First few items:', sorted.slice(0, 3).map(t => ({ id: t.transaction_id, player: t.player_name, date: t.created_date })));
-    
     return sorted;
   }, [data, filters, sortField, sortDirection]);
 
@@ -202,15 +198,11 @@ export default function WaiverWireAnalysis() {
 
   // Sorting handler
   const handleSort = (field: SortField) => {
-    console.log('Sorting by:', field, 'Current direction:', sortDirection);
     if (sortField === field) {
-      const newDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      setSortDirection(newDirection);
-      console.log('Toggled direction to:', newDirection);
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
       setSortField(field);
       setSortDirection('asc');
-      console.log('New field:', field, 'Direction: asc');
     }
   };
 
