@@ -36,9 +36,22 @@ pnpm-debug.log*
 ehthumbs.db
 Thumbs.db
 
-# Logs
+# Logs and backups
 logs/
+backups/
 *.log
+
+# Root-level pipeline data duplicates (canonical copies live in pipeline/)
+/league_trades_analysis_pipeline.csv
+/team_identity_mapping.csv
+/waiver_transactions_raw.json
+/free_agent_transactions_raw.json
+/waiver_wire_analysis.csv
+/waiver_wire_stats.json
+/waiver_wire_summary.json
+/test_waiver_wire.json
+/dashboard/league_trades_analysis_pipeline.csv
+/dashboard/team_identity_mapping.csv
 
 # Runtime data
 pids/
