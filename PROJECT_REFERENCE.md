@@ -663,9 +663,14 @@ CloudFront (1 TB/mo transfer) and S3 (~2 MB in `dynasuiiii-website`) are nowhere
 ### Known open items
 
 - **Python 3.11 runtime is end-of-life.** All three Lambdas use `python3.11`, deprecated 2026-06-30. Function *creation* was disabled 2026-07-31 and **function updates are disabled after 2026-08-31**. Migrate to `python3.14` before that date or the stack becomes undeployable. `sam validate --lint` flags this (W2531) at template lines 83, 108, 139.
-- **Cost Explorer is not enabled** for the `personal-cli-user` IAM user, so `aws ce get-cost-and-usage` returns `AccessDeniedException`. The audit relied on the Free Tier API and the Pricing API instead. Enable it in the Billing console for direct spend visibility.
-- **CloudWatch log groups have no retention policy** (all four show `Retention: None` = retain forever). The ingestion Lambda's group is ~16 MB. Harmless today at 0.2% of the 5 GB free tier, but unbounded. Suggested: `aws logs put-retention-policy --retention-in-days 30`.
-- **Undocumented resources in the account:** a second CloudFront distribution `E31NFGUDZK6AUK` (`d31ehxmgiph3gd.cloudfront.net`), an S3 bucket `sts2-dashboard-216571348281-20260419-154335` (1,031 objects / ~172 MB), and the leftover `HelloWorldFunction`. All free at current size but unidentified; worth confirming what they are or removing them.
+- **Cost Explorer requires a one-time console activation** -- it CANNOT be enabled via API or CLI. `aws ce get-cost-and-usage` returns `AccessDeniedException: User not enabled for cost explorer access` even though `personal-cli-user` holds `AdministratorAccess`, so this is an account-level service activation, not an IAM permissions gap. To enable: sign in to the AWS console as the account root or an admin, open **Billing and Cost Management -> Cost Explorer**, and click through the activation. Data becomes available within ~24 hours and cannot be backfilled beyond that point. Until then, use the Free Tier API and Pricing API (see "Re-running this audit" above). Note the **AWS Budgets API works today** (`aws budgets describe-budgets --account-id 216571348281`, currently returns no budgets), so a zero-spend budget alert can be configured without Cost Explorer.
+- **CloudWatch log retention: RESOLVED 2026-07-27.** All four Lambda log groups were set to retain forever (`Retention: None`); now set to **30 days**. Applied via CLI, not CloudFormation -- SAM does not manage these implicitly-created log groups, so the setting persists across deploys but will NOT apply to any newly created function's log group. If a new Lambda is added, set its retention explicitly:
+  ```bash
+  aws logs put-retention-policy --log-group-name /aws/lambda/<fn> \
+    --retention-in-days 30 --profile personal --region us-east-1
+  ```
+- **`sts2-dashboard-216571348281-20260419-154335`** (1,031 objects / ~172 MB) is a **separate side project**, not part of this dashboard. Intentional; leave it alone.
+- **Still unidentified:** a second CloudFront distribution `E31NFGUDZK6AUK` (`d31ehxmgiph3gd.cloudfront.net`) -- possibly serving the `sts2-dashboard` project -- and the leftover `fantasy-backend-HelloWorldFunction-*` from the SAM scaffold. Both free at current size.
 - Both CloudFront distributions use `PriceClass_All`. `PriceClass_100` would be cheaper above the free transfer tier, but at this traffic level it is cosmetic.
 
 ### Re-running this audit
