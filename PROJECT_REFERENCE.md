@@ -37,7 +37,8 @@ A **fantasy football dynasty league analytics platform** called **Dynasuiiii Ana
           +--------------+--------------+
           |                             |
    Python Pipeline               Ingestion Lambda
-   (Stages 0-12)                (Hourly, -> DynamoDB)
+   (Stages 0-12)               (Hourly -> DynamoDB;
+                                 DISABLED 2026-07-27)
           |                             |
    Static JSON Files            Dashboard API Lambda
           |                        (5 endpoints)
@@ -382,20 +383,31 @@ Built with **AWS SAM** (Serverless Application Model). Defines infrastructure in
 ### Infrastructure (`backend-api/fantasy-backend/template.yaml`)
 
 **DynamoDB Table: `fantasy-dashboard-data`**
-- Billing: Pay-per-request (on-demand).
+- Billing: **On-demand (`PAY_PER_REQUEST`)** as of 2026-07-27. See "Cost Posture" below -- it was previously provisioned and was costing ~$14/month.
 - Primary key: `PK` (partition) + `SK` (sort).
-- GSI1: Global secondary index for flexible queries.
-- TTL enabled. Point-in-time recovery enabled.
+- GSI1: Global secondary index for flexible queries. Projection: ALL.
+- TTL enabled (attribute `TTL`). Point-in-time recovery **disabled**.
+- Current size: ~692 items / ~8 MB (well inside the 25 GB always-free storage tier).
 
 **DashboardApiFunction (Lambda):**
-- Runtime: Python 3.11, arm64.
+- Runtime: Python 3.11, arm64. 128 MB memory.
 - Timeout: 30s.
 - Trigger: API Gateway `ANY /api/{proxy+}`.
 
 **IngestionFunction (Lambda):**
 - Runtime: Python 3.11, arm64.
 - Timeout: 900s (15 min), 512 MB memory.
-- Trigger: CloudWatch schedule `rate(1 hour)`.
+- Trigger: EventBridge schedule `rate(1 hour)` -- **currently DISABLED** (see "Cost Posture").
+
+**EnrichmentFunction (Lambda):**
+- Runtime: Python 3.11, arm64. 1024 MB memory, 900s timeout.
+- Uses the `PandasNumpyLayer` (pandas + numpy, built via `./build-layer.sh` -> `layers/pandas-numpy-layer.zip`).
+- Reads raw DynamoDB data, runs pipeline stages 2-5, writes `ENRICHED_*#LATEST` items.
+- Trigger: EventBridge schedule `cron(0 10 * * ? *)` (daily 10:00 UTC) -- **currently DISABLED**.
+
+**PandasNumpyLayer:** `AWS::Serverless::LayerVersion`, ContentUri `layers/pandas-numpy-layer.zip`, python3.11 / arm64.
+
+Note: a leftover `fantasy-backend-HelloWorldFunction-*` from the original SAM scaffold still exists in the account but is not referenced in `template.yaml`.
 
 ### `backend-api/fantasy-backend/dashboard_api/app.py` - API Lambda
 
@@ -593,7 +605,6 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 **What exists and works:**
 - S3 + CloudFront static site hosting (primary production).
 - SAM-based Lambda + API Gateway + DynamoDB infrastructure deployed.
-- Ingestion Lambda runs hourly, writing to DynamoDB.
 - Dashboard API Lambda serves 5 endpoints with live Sleeper data.
 
 **Current production approach (as of June 2026):**
@@ -605,8 +616,69 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 - The frontend code supports Lambda (`api-client.ts` has the toggle) but it is disabled in production.
 - Lambda/DynamoDB data has diverged from pipeline output (different valuations, different trade counts).
 - Do not enable `VITE_USE_LAMBDA_API=true` in production until Lambda data parity with the pipeline is verified.
+- **The ingestion and enrichment schedules are now DISABLED**, so DynamoDB data is frozen as of 2026-07-27 and will go stale. Resuming the migration requires re-enabling both schedules and backfilling.
 - `socket.io-client` is installed for future real-time features.
 - `REAL_TIME_DASHBOARD_ROADMAP.md` outlines WebSocket plans.
+
+---
+
+## Cost Posture (audited 2026-07-27)
+
+AWS account `216571348281`. The site is intended to run at $0/month. An audit on 2026-07-27 found one real charge and corrected it.
+
+### The problem: provisioned DynamoDB capacity
+
+`template.yaml` declared the table as `BillingMode: PROVISIONED` with 25 RCU / 25 WCU, **and** declared a second 25 RCU / 25 WCU on the `GSI1` index. The DynamoDB free tier covers **25 RCU + 25 WCU per account, not per table or per index**. The base table consumed the entire free allowance, so the GSI's capacity was fully billable:
+
+| Item | Math | Cost |
+|---|---|---|
+| GSI1 reads | 25 RCU x 730 hrs x $0.00013 | ~$2.37/mo |
+| GSI1 writes | 25 WCU x 730 hrs x $0.00065 | ~$11.86/mo |
+| **Total** | | **~$14/mo (~$170/yr)** |
+
+This was being paid on a table holding ~692 items / ~8 MB that **nothing reads** (the frontend uses static JSON).
+
+### The fix
+
+1. `BillingMode` changed to `PAY_PER_REQUEST` (on-demand) in `template.yaml`; both `ProvisionedThroughput` blocks removed. On-demand bills per request, and actual volume is ~453 Lambda requests/month, which rounds to $0.
+2. Both EventBridge schedules set to `Enabled: false` in `template.yaml` (hourly ingestion, daily enrichment), since nothing consumes the table while the migration is paused.
+
+Applied live on 2026-07-27 via CLI (`aws dynamodb update-table --billing-mode PAY_PER_REQUEST` and `aws events disable-rule` on both rules) because a full `sam deploy` would have rebuilt all three Lambdas plus the pandas/numpy layer for what is a config-only change. **The template was updated first**, so the next `sam deploy` reinforces this state rather than reverting it. CloudFormation's cached stack state will lag live state until that next deploy; this is harmless.
+
+### Verified free-tier usage at time of audit
+
+All line items reported by `aws freetier get-free-tier-usage` were **"Always Free"** type -- nothing here depends on the expiring 12-month tier.
+
+| Service | Used | Limit | % |
+|---|---|---|---|
+| Lambda compute | 14,283 GB-sec | 400,000 | 3.6% |
+| Lambda requests | 453 | 1,000,000 | 0.0% |
+| DynamoDB storage | 0.01 GB | 25 GB | 0.0% |
+| CloudWatch log storage | 0.01 GB | 5 GB | 0.2% |
+| KMS requests | 4 | 20,000 | 0.0% |
+| Glue catalog requests | 67 | 1,000,000 | 0.0% |
+
+CloudFront (1 TB/mo transfer) and S3 (~2 MB in `dynasuiiii-website`) are nowhere near any limit.
+
+### Known open items
+
+- **Python 3.11 runtime is end-of-life.** All three Lambdas use `python3.11`, deprecated 2026-06-30. Function *creation* was disabled 2026-07-31 and **function updates are disabled after 2026-08-31**. Migrate to `python3.14` before that date or the stack becomes undeployable. `sam validate --lint` flags this (W2531) at template lines 83, 108, 139.
+- **Cost Explorer is not enabled** for the `personal-cli-user` IAM user, so `aws ce get-cost-and-usage` returns `AccessDeniedException`. The audit relied on the Free Tier API and the Pricing API instead. Enable it in the Billing console for direct spend visibility.
+- **CloudWatch log groups have no retention policy** (all four show `Retention: None` = retain forever). The ingestion Lambda's group is ~16 MB. Harmless today at 0.2% of the 5 GB free tier, but unbounded. Suggested: `aws logs put-retention-policy --retention-in-days 30`.
+- **Undocumented resources in the account:** a second CloudFront distribution `E31NFGUDZK6AUK` (`d31ehxmgiph3gd.cloudfront.net`), an S3 bucket `sts2-dashboard-216571348281-20260419-154335` (1,031 objects / ~172 MB), and the leftover `HelloWorldFunction`. All free at current size but unidentified; worth confirming what they are or removing them.
+- Both CloudFront distributions use `PriceClass_All`. `PriceClass_100` would be cheaper above the free transfer tier, but at this traffic level it is cosmetic.
+
+### Re-running this audit
+
+```bash
+aws sts get-caller-identity --profile personal            # expect account 216571348281
+aws freetier get-free-tier-usage --profile personal --region us-east-1
+aws dynamodb describe-table --profile personal --region us-east-1 \
+  --table-name fantasy-dashboard-data \
+  --query 'Table.{Billing:BillingModeSummary.BillingMode,RCU:ProvisionedThroughput.ReadCapacityUnits}'
+aws events list-rules --profile personal --region us-east-1 \
+  --query 'Rules[].{Name:Name,State:State}' --output table
+```
 
 ---
 

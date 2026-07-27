@@ -486,15 +486,30 @@ with dynamodb.batch_writer() as batch:
 
 ### Read/Write Cost
 
-**Daily ingestion (1x/day):**
-- Write 100 items = 100 WCU
-- Monthly: 3,000 WCU = $0.00 (free tier: 25 WCU)
+> **Corrected 2026-07-27.** The original estimate below compared a monthly *count* of
+> capacity units against the free tier's *provisioned rate* (25 RCU/WCU sustained), which
+> are different units. Provisioned capacity bills per **unit-hour** whether or not you use
+> it -- 25 WCU provisioned for a 730-hour month is 18,250 WCU-hours, and the free tier
+> covers exactly that much for the account **in total, not per table and not per index**.
+>
+> This mistake led to the table AND its `GSI1` index each being provisioned at 25/25. The
+> base table absorbed the whole free allowance, so the GSI was fully billable at roughly
+> **$14/month**. The table is now `PAY_PER_REQUEST` (on-demand). See the "Cost Posture"
+> section of `PROJECT_REFERENCE.md` for the full audit.
 
-**User requests (100 users/day):**
-- Read 1 season = 1 RCU
-- Monthly: 3,000 RCU = $0.00 (free tier: 25 RCU)
+**Actual cost under on-demand (current):**
+- Measured volume: ~453 Lambda requests/month against this table.
+- On-demand write pricing: $0.625 per million write request units.
+- Storage: ~8 MB, inside the 25 GB always-free tier.
+- **Total: effectively $0.00/month** (fractions of a cent, rounds to zero on the bill).
 
-**Total DynamoDB cost:** $0.00/month (within free tier!)
+**Original (incorrect) estimate, kept for context:**
+- ~~Daily ingestion: 3,000 WCU/month = $0.00 (free tier: 25 WCU)~~
+- ~~User requests: 3,000 RCU/month = $0.00 (free tier: 25 RCU)~~
+
+**Lesson:** with provisioned capacity, cost is driven by what you *reserve*, not what you
+*use*, and every GSI reserves its own capacity on top of the table's. For spiky or
+near-zero traffic, on-demand is both cheaper and simpler to reason about.
 
 ---
 

@@ -4,8 +4,10 @@ Description: >
   fantasy-backend
 
   Dynasuiiii Analytics - Dynasty league dashboard backend
-  Includes: DynamoDB (provisioned free tier), Dashboard API, Ingestion Lambda,
-  Enrichment Lambda with pandas/numpy layer
+  Includes: DynamoDB (on-demand), Dashboard API, Ingestion Lambda,
+  Enrichment Lambda with pandas/numpy layer.
+  Ingestion and enrichment schedules are disabled while the Lambda
+  migration is paused.
 
 Globals:
   Function:
@@ -13,17 +15,18 @@ Globals:
 
 Resources:
   # ============================================================
-  # DynamoDB Table - PROVISIONED for free tier ($0/month)
-  # Task 1.1: 25 RCU + 25 WCU (free tier max)
+  # DynamoDB Table - ON-DEMAND (PAY_PER_REQUEST)
+  # Provisioned 25 RCU/WCU was free for the table, but the GSI1
+  # index consumed a second 25/25 that the free tier does NOT
+  # cover (25 total per account, not per index) -- roughly
+  # $14/month. On-demand bills per request instead; at current
+  # volume (~453 requests/month) that rounds to $0.
   # ============================================================
   DashboardDataTable:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: fantasy-dashboard-data
-      BillingMode: PROVISIONED
-      ProvisionedThroughput:
-        ReadCapacityUnits: 25
-        WriteCapacityUnits: 25
+      BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
         - AttributeName: PK
           AttributeType: S
@@ -47,9 +50,6 @@ Resources:
               KeyType: RANGE
           Projection:
             ProjectionType: ALL
-          ProvisionedThroughput:
-            ReadCapacityUnits: 25
-            WriteCapacityUnits: 25
       TimeToLiveSpecification:
         AttributeName: TTL
         Enabled: true
@@ -127,7 +127,9 @@ Resources:
           Properties:
             Schedule: rate(1 hour)
             Description: Fetch Sleeper data and update DynamoDB every hour
-            Enabled: true
+            # Disabled: Lambda migration is paused (VITE_USE_LAMBDA_API=false)
+            # and nothing reads this table. Flip to true to resume ingestion.
+            Enabled: false
 
   # ============================================================
   # Enrichment Lambda (daily cron, STUB until Task 2.1)
@@ -158,7 +160,8 @@ Resources:
           Properties:
             Schedule: cron(0 10 * * ? *)
             Description: Run enrichment pipeline daily after ingestion
-            Enabled: true
+            # Disabled alongside the hourly ingestion schedule above.
+            Enabled: false
 
 Outputs:
   DashboardApiUrl:
