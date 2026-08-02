@@ -1,95 +1,100 @@
 trade_date,transaction_id,team_a,team_a_received,team_a_value_then,team_a_value_now,team_a_value_change,team_b,team_b_received,team_b_value_then,team_b_value_now,team_b_value_change,winner_at_trade,winner_current,margin_at_trade,margin_current,swing_winner,swing_margin
-2025-10-22,1286819210667765760,tylerpilgrim,Travis Kelce | Justin Jefferson | Jordan Mason | 2027 Round 3,10238,8507,-1731,thekylecasey,Jerry Jeudy | George Pickens | 2026 Round 1 | 2026 Round 2 | 2027 Round 1,10687,15468,4781,thekylecasey,thekylecasey,449,6961,thekylecasey,6512
-2025-04-30,1223365523358621696,donewton,2025 Round 2,807,6016,5209,wkerwin,2026 Round 1 | 2025 Round 3,5476,4312,-1164,wkerwin,donewton,4669,1704,donewton,6373
-2025-08-21,1264067657422864384,tylerpilgrim,LeQuint Allen | George Pickens | 2026 Round 1,3056,8704,5648,jwalters74,Joshua Palmer | Breece Hall,5347,4626,-721,jwalters74,tylerpilgrim,2291,4078,tylerpilgrim,6369
-2025-04-29,1223058419775193088,mgaeta23,Joe Mixon | Deebo Samuel | 2026 Round 1 | 2026 Round 1,6031,8614,2583,zachlearningtogolf,Tony Pollard | Khalil Shakir | 2025 Round 1,5511,3105,-2406,mgaeta23,mgaeta23,520,5509,mgaeta23,4989
-2025-05-06,1225522406177652736,cjsyregelas,Ladd McConkey | Mason Taylor | Brian Robinson,5953,3830,-2123,jwalters74,Tyler Warren | Josh Jacobs | George Pickens | 2026 Round 3,6009,8733,2724,jwalters74,jwalters74,56,4903,jwalters74,4847
-2025-05-03,1224449044198203392,gnewman4,Rashee Rice | Will Howard | 2026 Round 2 | 2027 Round 1,9062,8951,-111,zachlearningtogolf,Brian Thomas | Will Levis | 2026 Round 4 | 2027 Round 4,6905,2002,-4903,gnewman4,gnewman4,2157,6949,gnewman4,4792
-2025-03-18,1207589817261490176,jwalters74,Ray Davis | James Cook | Tucker Kraft | 2025 Round 1,8790,9687,897,lndahayo,Jaxon Smith-Njigba | 2026 Round 1 | 2025 Round 2,6780,12145,5365,jwalters74,lndahayo,2010,2458,lndahayo,4468
-2025-03-14,1206314724464001024,donewton,2025 Round 1,2904,2211,-693,gnewman4,2025 Round 2 | 2025 Round 2,1143,4549,3406,donewton,gnewman4,1761,2338,gnewman4,4099
-2025-08-07,1259211370491023360,lndahayo,Rome Odunze | Brian Robinson | 2026 Round 1,5216,7205,1989,cjsyregelas,Nico Collins | 2026 Round 2,5299,4681,-618,cjsyregelas,lndahayo,83,2524,lndahayo,2607
-2025-04-22,1220272163022438400,donewton,Davante Adams | 2025 Round 1 | 2025 Round 3,2786,6161,3375,zachlearningtogolf,Justin Fields | Brenton Strange | 2025 Round 2,1375,2146,771,donewton,donewton,1411,4015,donewton,2604
-2025-11-16,1295662941210697728,jwalters74,Saquon Barkley,4756,2434,-2322,cjsyregelas,James Cook,4756,4997,241,cjsyregelas,cjsyregelas,0,2563,cjsyregelas,2563
-2026-03-10,1337134442841378816,jwalters74,Michael Wilson | 2026 Round 3 | 2026 Round 3,134,964,830,tylerpilgrim,Baker Mayfield | 2026 Round 4,14,2959,2945,jwalters74,tylerpilgrim,120,1995,tylerpilgrim,2115
-2025-08-07,1259245972907622400,lndahayo,Quinshon Judkins | 2026 Round 3,1581,2242,661,jwalters74,Tahj Brooks | 2027 Round 2 | 2026 Round 1,1460,4084,2624,lndahayo,jwalters74,121,1842,jwalters74,1963
-2025-04-30,1223400000990486528,donewton,Jalen McMillan | Jonnu Smith | Khalil Shakir,2490,686,-1804,zachlearningtogolf,Noah Gray | 2025 Round 2,558,645,87,donewton,donewton,1932,41,donewton,1891
-2025-09-30,1278793259467935744,donewton,Tyreek Hill,2175,436,-1739,jwalters74,2026 Round 4,20,14,-6,donewton,donewton,2155,422,donewton,1733
-2025-06-24,1243355152602103808,thekylecasey,Jack Bech | Jauan Jennings | 2026 Round 4,923,310,-613,jwalters74,Tyreek Hill | 2026 Round 2,3108,1014,-2094,jwalters74,jwalters74,2185,704,jwalters74,1481
-2025-05-11,1227129044529582080,zachlearningtogolf,Javonte Williams,207,1664,1457,jwalters74,2026 Round 4 | $10 FAAB,39,35,-4,zachlearningtogolf,zachlearningtogolf,168,1629,zachlearningtogolf,1461
-2025-07-16,1251038903863881728,donewton,Phil Mafah | Javonte Williams,225,1668,1443,zachlearningtogolf,2026 Round 3 | 2026 Round 4,62,56,-6,donewton,donewton,163,1612,donewton,1449
-2025-04-29,1223003680916123648,jwalters74,Ladd McConkey | 2025 Round 1 | 2026 Round 3,7925,5906,-2019,donewton,CeeDee Lamb | 2025 Round 2,9005,8432,-573,donewton,donewton,1080,2526,donewton,1446
-2025-07-31,1256714512900292608,brevinowens,Keon Coleman | 2027 Round 2,835,321,-514,jakeduf,T.J. Hockenson | 2026 Round 3,2097,221,-1876,jakeduf,brevinowens,1262,100,brevinowens,1362
-2025-10-11,1282804334102343680,zachlearningtogolf,Trey Benson | Tee Higgins | 2026 Round 3 | 2026 Round 2 | 2026 Round 3,4690,3384,-1306,jwalters74,David Njoku | James Cook,5047,5094,47,jwalters74,jwalters74,357,1710,jwalters74,1353
-2025-08-07,1259206111249039360,zachlearningtogolf,Mike Evans | David Njoku | Alvin Kamara | Christian Kirk | AJ Dillon,3807,1035,-2772,mgaeta23,Calvin Ridley | Dallas Goedert | Tony Pollard | Noah Gray | Tyjae Spears | 2026 Round 4 | 2027 Round 2,2796,1340,-1456,zachlearningtogolf,mgaeta23,1011,305,mgaeta23,1316
-2025-04-29,1222779260813459456,zachlearningtogolf,Ray Davis | Geno Smith | James Cook | 2025 Round 1,8814,7825,-989,jwalters74,Christian McCaffrey | Baker Mayfield | J.K. Dobbins | 2025 Round 2,8219,8535,316,zachlearningtogolf,jwalters74,595,710,jwalters74,1305
-2025-03-30,1211903239012765696,donewton,2025 Round 2,420,1576,1156,gnewman4,2026 Round 2 | 2027 Round 3,395,282,-113,donewton,donewton,25,1294,donewton,1269
-2026-03-06,1335782944433790976,thekylecasey,Jacory Croskey-Merritt | Rachaad White | 2026 Round 4,1217,411,-806,donewton,DJ Moore,858,1279,421,thekylecasey,donewton,359,868,donewton,1227
-2025-04-30,1223398803554451456,gnewman4,2025 Round 2 | 2026 Round 2 | 2025 Round 3,742,1823,1081,jwalters74,2025 Round 3 | 2025 Round 2,717,3002,2285,gnewman4,jwalters74,25,1179,jwalters74,1204
-2025-10-26,1288261486111641600,donewton,Rashee Rice | Rashod Bateman,4797,3088,-1709,gnewman4,Davante Adams | Wan'Dale Robinson | 2027 Round 1 | 2028 Round 1,7041,6508,-533,gnewman4,gnewman4,2244,3420,gnewman4,1176
-2025-05-01,1223495018262581248,gnewman4,Tucker Kraft,1090,2180,1090,jwalters74,2025 Round 3,145,109,-36,gnewman4,gnewman4,945,2071,gnewman4,1126
-2025-05-20,1230670926694076416,zachlearningtogolf,Keenan Allen | Jonnu Smith,740,37,-703,donewton,Brenton Strange | 2026 Round 4,122,430,308,zachlearningtogolf,donewton,618,393,donewton,1011
-2025-04-30,1223423845638090752,lndahayo,2025 Round 4 | 2025 Round 2,325,1086,761,donewton,2025 Round 2 | 2025 Round 3,307,85,-222,lndahayo,lndahayo,18,1001,lndahayo,983
-2025-04-29,1223059650442706944,donewton,2025 Round 1 | 2025 Round 1,9116,5873,-3243,wkerwin,2025 Round 1 | 2025 Round 1,8874,4649,-4225,donewton,donewton,242,1224,donewton,982
-2025-04-28,1222706043209924608,donewton,Courtland Sutton | 2025 Round 2 | 2025 Round 3,1374,1706,332,thekylecasey,Tank Dell | 2025 Round 1,1940,3212,1272,thekylecasey,thekylecasey,566,1506,thekylecasey,940
-2025-08-22,1264650342717472768,thekylecasey,TreVeyon Henderson,2897,2356,-541,zachlearningtogolf,De'Von Achane,4443,4756,313,zachlearningtogolf,zachlearningtogolf,1546,2400,zachlearningtogolf,854
-2025-05-01,1223523595133657088,jwalters74,Trey Benson | 2026 Round 3,511,140,-371,tylerpilgrim,Jerry Jeudy | 2025 Round 4,1472,252,-1220,tylerpilgrim,tylerpilgrim,961,112,tylerpilgrim,849
-2025-11-17,1296287239650684928,tylerpilgrim,Michael Wilson,106,830,724,thekylecasey,2028 Round 3,106,106,0,thekylecasey,tylerpilgrim,0,724,tylerpilgrim,724
-2025-11-01,1290362815730708480,thekylecasey,Cedric Tillman | Shedeur Sanders | 2027 Round 1,1965,1331,-634,lndahayo,Tyrone Tracy | Kyle Monangai | Chris Godwin,1088,1151,63,thekylecasey,thekylecasey,877,180,thekylecasey,697
-2025-05-04,1224849692341309440,jwalters74,Stefon Diggs | Brian Robinson,1088,263,-825,wkerwin,Tyjae Spears | 2026 Round 4 | 2027 Round 2,393,245,-148,jwalters74,jwalters74,695,18,jwalters74,677
-2025-05-05,1225160597755142144,zachlearningtogolf,Will Howard | 2026 Round 2,715,708,-7,gnewman4,Geno Smith | 2027 Round 3,1013,347,-666,gnewman4,zachlearningtogolf,298,361,zachlearningtogolf,659
-2025-09-12,1272244641206398976,zachlearningtogolf,Daniel Jones,404,1116,712,wkerwin,2026 Round 2,622,690,68,wkerwin,zachlearningtogolf,218,426,zachlearningtogolf,644
-2025-09-23,1276246071017742336,donewton,Wan'Dale Robinson,215,779,564,jakeduf,2027 Round 2,330,257,-73,jakeduf,donewton,115,522,donewton,637
-2025-10-23,1286931153982361600,zachlearningtogolf,Dont'e Thornton | 2026 Round 3,254,50,-204,jwalters74,Alvin Kamara,912,74,-838,jwalters74,jwalters74,658,24,jwalters74,634
-2025-11-02,1290567058949427200,jwalters74,Jonathon Brooks | 2027 Round 3,168,266,98,tylerpilgrim,Alvin Kamara,608,74,-534,tylerpilgrim,jwalters74,440,192,jwalters74,632
-2025-07-08,1248286928684462080,jwalters74,Isiah Pacheco,716,100,-616,wkerwin,2026 Round 2,622,578,-44,jwalters74,wkerwin,94,478,wkerwin,572
-2026-03-28,1343720269935558656,jwalters74,Kyle Monangai | Matthew Stafford | D'Andre Swift | 2026 Round 4,28,2595,2567,lndahayo,Tahj Brooks | Saquon Barkley | Michael Pittman,0,3135,3135,jwalters74,lndahayo,28,540,lndahayo,568
-2025-09-30,1278590799092658176,jwalters74,Mike Evans | $19 FAAB,1049,843,-206,zachlearningtogolf,Matthew Stafford | 2026 Round 3,980,1283,303,jwalters74,zachlearningtogolf,69,440,zachlearningtogolf,509
-2025-05-08,1226043559040270336,jakeduf,Khalil Shakir,899,423,-476,donewton,2026 Round 2 | 2026 Round 4,350,366,16,jakeduf,jakeduf,549,57,jakeduf,492
-2025-05-01,1223467807560183808,jakeduf,Adonai Mitchell | Tutu Atwell | 2025 Round 4,233,544,311,zachlearningtogolf,2025 Round 2 | 2025 Round 4,209,52,-157,jakeduf,jakeduf,24,492,jakeduf,468
-2025-09-16,1273723036767371264,mgaeta23,David Montgomery | Michael Pittman | Isiah Pacheco | 2027 Round 2 | 2026 Round 1,5404,3395,-2009,jwalters74,Tony Pollard | D'Andre Swift | Tee Higgins | Tyjae Spears | 2027 Round 3,5962,4372,-1590,jwalters74,jwalters74,558,977,jwalters74,419
-2025-11-17,1296216363412516864,brevinowens,George Kittle,1276,766,-510,mgaeta23,2027 Round 2 | 2026 Round 2,513,417,-96,brevinowens,brevinowens,763,349,brevinowens,414
-2025-11-11,1294076505202098176,donewton,Alvin Kamara,621,74,-547,tylerpilgrim,Dontayvion Wicks | 2026 Round 3,247,112,-135,donewton,tylerpilgrim,374,38,tylerpilgrim,412
-2025-10-21,1286504609589776384,mgaeta23,J.K. Dobbins | Tyjae Spears | 2027 Round 3,649,342,-307,jwalters74,Michael Pittman | Isiah Pacheco | 2026 Round 4,1520,802,-718,jwalters74,jwalters74,871,460,jwalters74,411
-2025-05-01,1223665024673783808,jakeduf,2025 Round 4 | 2026 Round 4,48,48,0,thekylecasey,2025 Round 4,28,429,401,jakeduf,thekylecasey,20,381,thekylecasey,401
-2025-05-01,1223771077000306688,jwalters74,DeMario Douglas,112,25,-87,tylerpilgrim,Quentin Johnston,232,462,230,tylerpilgrim,tylerpilgrim,120,437,tylerpilgrim,317
-2025-10-01,1278916121231106048,gnewman4,Quentin Johnston,330,462,132,tylerpilgrim,2027 Round 1,1232,1052,-180,tylerpilgrim,tylerpilgrim,902,590,tylerpilgrim,312
-2025-11-11,1294061216544587776,gnewman4,Cooper Kupp | Rico Dowdle | 2026 Round 4,679,410,-269,mgaeta23,Wan'Dale Robinson | 2026 Round 2 | 2027 Round 3,1051,1061,10,mgaeta23,mgaeta23,372,651,mgaeta23,279
-2025-05-31,1234547168593858560,gnewman4,Josh Jacobs | 2027 Round 1,3844,2322,-1522,jwalters74,David Montgomery | 2026 Round 1 | 2026 Round 2,3881,2606,-1275,jwalters74,jwalters74,37,284,jwalters74,247
-2026-04-28,1354897993991454720,wkerwin,Xavier Worthy,976,697,-279,donewton,2026 Round 2,733,690,-43,wkerwin,wkerwin,243,7,wkerwin,236
-2025-10-01,1278942529986764800,lndahayo,D'Andre Swift,734,886,152,jwalters74,Brian Robinson | 2026 Round 3,176,112,-64,lndahayo,lndahayo,558,774,lndahayo,216
-2025-09-30,1278609411799027712,lndahayo,Keenan Allen | 2026 Round 3,264,61,-203,zachlearningtogolf,2027 Round 4 | 2026 Round 2,345,358,13,zachlearningtogolf,zachlearningtogolf,81,297,zachlearningtogolf,216
-2025-07-16,1251046974694637568,mgaeta23,Marquise Brown,185,0,-185,donewton,2026 Round 3,65,54,-11,mgaeta23,donewton,120,54,donewton,174
-2025-10-07,1281334172710883328,donewton,Theo Johnson,87,64,-23,tylerpilgrim,Brenton Strange,269,416,147,tylerpilgrim,tylerpilgrim,182,352,tylerpilgrim,170
-2025-05-01,1223657978725400576,jwalters74,2025 Round 4,31,181,150,jakeduf,2026 Round 3,65,48,-17,jakeduf,jwalters74,34,133,jwalters74,167
-2025-08-07,1259296297278525440,thekylecasey,Will Howard,170,18,-152,zachlearningtogolf,2026 Round 3,106,91,-15,thekylecasey,zachlearningtogolf,64,73,zachlearningtogolf,137
-2025-11-18,1296312256438497280,wkerwin,DJ Giddens | $1 FAAB,140,17,-123,gnewman4,2026 Round 4 | $15 FAAB | $2 FAAB | $8 FAAB,40,37,-3,wkerwin,gnewman4,100,20,gnewman4,120
-2025-11-10,1293486502654791680,zachlearningtogolf,Geno Smith | 2026 Round 2 | $1 FAAB,967,535,-432,gnewman4,Justin Fields | 2026 Round 3,782,234,-548,zachlearningtogolf,zachlearningtogolf,185,301,zachlearningtogolf,116
-2026-04-27,1354504941384794112,mgaeta23,Terry McLaurin,1158,1297,139,cjsyregelas,Wan'Dale Robinson,750,779,29,mgaeta23,mgaeta23,408,518,mgaeta23,110
-2025-10-01,1278946311571251200,zachlearningtogolf,Trevor Etienne | 2026 Round 2,218,424,206,lndahayo,Matthew Stafford | 2027 Round 4,953,1262,309,lndahayo,lndahayo,735,838,lndahayo,103
-2026-04-29,1355265411066634240,mgaeta23,Mark Andrews,252,332,80,jwalters74,2026 Round 2,174,160,-14,mgaeta23,mgaeta23,78,172,mgaeta23,94
-2025-10-10,1282507621953204224,wkerwin,Kyle Williams,163,78,-85,lndahayo,2026 Round 3,106,104,-2,wkerwin,lndahayo,57,26,lndahayo,83
-2026-03-31,1344753356916146176,zachlearningtogolf,Jordan James | Ollie Gordon | Chig Okonkwo,0,326,326,jakeduf,Chimere Dike | Geno Smith | 2026 Round 3,91,498,407,jakeduf,jakeduf,91,172,jakeduf,81
-2025-05-05,1225135748596899840,zachlearningtogolf,Tyjae Spears,195,95,-100,wkerwin,2026 Round 3 | 2027 Round 4,135,114,-21,zachlearningtogolf,wkerwin,60,19,wkerwin,79
-2025-09-25,1276812030426251264,gnewman4,MarShawn Lloyd,4,27,23,lndahayo,Taysom Hill | Noah Fant,58,10,-48,lndahayo,gnewman4,54,17,gnewman4,71
-2026-04-30,1355614830769217536,mgaeta23,Kirk Cousins | 2026 Round 3,93,124,31,gnewman4,Tua Tagovailoa,960,929,-31,gnewman4,gnewman4,867,805,gnewman4,62
-2025-10-23,1287157631126876160,donewton,Pat Bryant | 2027 Round 4,165,98,-67,tylerpilgrim,Kayshon Boutte,128,121,-7,donewton,tylerpilgrim,37,23,tylerpilgrim,60
+2025-04-30,1223365523358621696,donewton,2025 Round 2,807,5876,5069,wkerwin,2026 Round 1 | 2025 Round 3,5476,3977,-1499,wkerwin,donewton,4669,1899,donewton,6568
+2025-08-21,1264067657422864384,tylerpilgrim,LeQuint Allen | George Pickens | 2026 Round 1,3056,7734,4678,jwalters74,Joshua Palmer | Breece Hall,5347,4731,-616,jwalters74,tylerpilgrim,2291,3003,tylerpilgrim,5294
+2025-05-06,1225522406177652736,cjsyregelas,Ladd McConkey | Mason Taylor | Brian Robinson,5953,3889,-2064,jwalters74,Tyler Warren | Josh Jacobs | George Pickens | 2026 Round 3,6009,8473,2464,jwalters74,jwalters74,56,4584,jwalters74,4528
+2025-03-14,1206314724464001024,donewton,2025 Round 1,2904,2475,-429,gnewman4,2025 Round 2 | 2025 Round 2,1143,5138,3995,donewton,gnewman4,1761,2663,gnewman4,4424
+2025-10-22,1286819210667765760,tylerpilgrim,Travis Kelce | Justin Jefferson | Jordan Mason | 2027 Round 3,10238,8452,-1786,thekylecasey,Jerry Jeudy | George Pickens | 2026 Round 1 | 2026 Round 2 | 2027 Round 1,10687,13269,2582,thekylecasey,thekylecasey,449,4817,thekylecasey,4368
+2025-03-18,1207589817261490176,jwalters74,Ray Davis | James Cook | Tucker Kraft | 2025 Round 1,8790,9769,979,lndahayo,Jaxon Smith-Njigba | 2026 Round 1 | 2025 Round 2,6780,12118,5338,jwalters74,lndahayo,2010,2349,lndahayo,4359
+2025-05-03,1224449044198203392,gnewman4,Rashee Rice | Will Howard | 2026 Round 2 | 2027 Round 1,9062,7664,-1398,zachlearningtogolf,Brian Thomas | Will Levis | 2026 Round 4 | 2027 Round 4,6905,2073,-4832,gnewman4,gnewman4,2157,5591,gnewman4,3434
+2025-04-29,1223058419775193088,mgaeta23,Joe Mixon | Deebo Samuel | 2026 Round 1 | 2026 Round 1,6031,6862,831,zachlearningtogolf,Tony Pollard | Khalil Shakir | 2025 Round 1,5511,3248,-2263,mgaeta23,mgaeta23,520,3614,mgaeta23,3094
+2025-04-22,1220272163022438400,donewton,Davante Adams | 2025 Round 1 | 2025 Round 3,2786,6404,3618,zachlearningtogolf,Justin Fields | Brenton Strange | 2025 Round 2,1375,2344,969,donewton,donewton,1411,4060,donewton,2649
+2025-11-16,1295662941210697728,jwalters74,Saquon Barkley,4756,2350,-2406,cjsyregelas,James Cook,4756,4962,206,cjsyregelas,cjsyregelas,0,2612,cjsyregelas,2612
+2025-04-30,1223400000990486528,donewton,Jalen McMillan | Jonnu Smith | Khalil Shakir,2490,669,-1821,zachlearningtogolf,Noah Gray | 2025 Round 2,558,821,263,donewton,zachlearningtogolf,1932,152,zachlearningtogolf,2084
+2025-08-07,1259211370491023360,lndahayo,Rome Odunze | Brian Robinson | 2026 Round 1,5216,6526,1310,cjsyregelas,Nico Collins | 2026 Round 2,5299,4651,-648,cjsyregelas,lndahayo,83,1875,lndahayo,1958
+2025-09-30,1278793259467935744,donewton,Tyreek Hill,2175,335,-1840,jwalters74,2026 Round 4,20,14,-6,donewton,donewton,2155,321,donewton,1834
+2025-06-24,1243355152602103808,thekylecasey,Jack Bech | Jauan Jennings | 2026 Round 4,923,334,-589,jwalters74,Tyreek Hill | 2026 Round 2,3108,864,-2244,jwalters74,jwalters74,2185,530,jwalters74,1655
+2026-03-10,1337134442841378816,jwalters74,Michael Wilson | 2026 Round 3 | 2026 Round 3,128,1046,918,tylerpilgrim,Baker Mayfield | 2026 Round 4,14,2578,2564,jwalters74,tylerpilgrim,114,1532,tylerpilgrim,1646
+2025-04-30,1223398803554451456,gnewman4,2025 Round 2 | 2026 Round 2 | 2025 Round 3,742,1906,1164,jwalters74,2025 Round 3 | 2025 Round 2,717,3471,2754,gnewman4,jwalters74,25,1565,jwalters74,1590
+2025-10-11,1282804334102343680,zachlearningtogolf,Trey Benson | Tee Higgins | 2026 Round 3 | 2026 Round 2 | 2026 Round 3,4690,3132,-1558,jwalters74,David Njoku | James Cook,5047,5036,-11,jwalters74,jwalters74,357,1904,jwalters74,1547
+2025-03-30,1211903239012765696,donewton,2025 Round 2,420,1691,1271,gnewman4,2026 Round 2 | 2027 Round 3,395,267,-128,donewton,donewton,25,1424,donewton,1399
+2025-05-11,1227129044529582080,zachlearningtogolf,Javonte Williams,207,1558,1351,jwalters74,2026 Round 4 | $10 FAAB,39,34,-5,zachlearningtogolf,zachlearningtogolf,168,1524,zachlearningtogolf,1356
+2025-07-16,1251038903863881728,donewton,Phil Mafah | Javonte Williams,225,1561,1336,zachlearningtogolf,2026 Round 3 | 2026 Round 4,62,54,-8,donewton,donewton,163,1507,donewton,1344
+2025-07-31,1256714512900292608,brevinowens,Keon Coleman | 2027 Round 2,835,294,-541,jakeduf,T.J. Hockenson | 2026 Round 3,2097,218,-1879,jakeduf,brevinowens,1262,76,brevinowens,1338
+2025-08-07,1259206111249039360,zachlearningtogolf,Mike Evans | David Njoku | Alvin Kamara | Christian Kirk | AJ Dillon,3807,935,-2872,mgaeta23,Calvin Ridley | Dallas Goedert | Tony Pollard | Noah Gray | Tyjae Spears | 2026 Round 4 | 2027 Round 2,2796,1241,-1555,zachlearningtogolf,mgaeta23,1011,306,mgaeta23,1317
+2025-05-01,1223495018262581248,gnewman4,Tucker Kraft,1090,2295,1205,jwalters74,2025 Round 3,145,83,-62,gnewman4,gnewman4,945,2212,gnewman4,1267
+2026-03-06,1335782944433790976,thekylecasey,Jacory Croskey-Merritt | Rachaad White | 2026 Round 4,1217,438,-779,donewton,DJ Moore,858,1318,460,thekylecasey,donewton,359,880,donewton,1239
+2025-04-30,1223423845638090752,lndahayo,2025 Round 4 | 2025 Round 2,325,1313,988,donewton,2025 Round 2 | 2025 Round 3,307,83,-224,lndahayo,lndahayo,18,1230,lndahayo,1212
+2025-05-20,1230670926694076416,zachlearningtogolf,Keenan Allen | Jonnu Smith,740,25,-715,donewton,Brenton Strange | 2026 Round 4,122,573,451,zachlearningtogolf,donewton,618,548,donewton,1166
+2025-10-26,1288261486111641600,donewton,Rashee Rice | Rashod Bateman,4797,2807,-1990,gnewman4,Davante Adams | Wan'Dale Robinson | 2027 Round 1 | 2028 Round 1,7041,6181,-860,gnewman4,gnewman4,2244,3374,gnewman4,1130
+2025-04-28,1222706043209924608,donewton,Courtland Sutton | 2025 Round 2 | 2025 Round 3,1374,1876,502,thekylecasey,Tank Dell | 2025 Round 1,1940,3511,1571,thekylecasey,thekylecasey,566,1635,thekylecasey,1069
+2025-04-29,1223003680916123648,jwalters74,Ladd McConkey | 2025 Round 1 | 2026 Round 3,7925,6263,-1662,donewton,CeeDee Lamb | 2025 Round 2,9005,8370,-635,donewton,donewton,1080,2107,donewton,1027
+2025-08-07,1259245972907622400,lndahayo,Quinshon Judkins | 2026 Round 3,1581,2505,924,jwalters74,Tahj Brooks | 2027 Round 2 | 2026 Round 1,1460,3373,1913,lndahayo,jwalters74,121,868,jwalters74,989
+2025-11-12,1294350847387398144,thekylecasey,Jonathon Brooks | Terrance Ferguson | Luther Burden | 2027 Round 3 | 2027 Round 3,1301,4113,2812,jwalters74,Aaron Jones | George Pickens,2715,4603,1888,jwalters74,jwalters74,1414,490,jwalters74,924
+2025-11-01,1290362815730708480,thekylecasey,Cedric Tillman | Shedeur Sanders | 2027 Round 1,1965,1213,-752,lndahayo,Tyrone Tracy | Kyle Monangai | Chris Godwin,1088,1216,128,thekylecasey,lndahayo,877,3,lndahayo,880
+2025-04-29,1223059650442706944,donewton,2025 Round 1 | 2025 Round 1,9116,6216,-2900,wkerwin,2025 Round 1 | 2025 Round 1,8874,5128,-3746,donewton,donewton,242,1088,donewton,846
+2025-11-17,1296287239650684928,tylerpilgrim,Michael Wilson,106,918,812,thekylecasey,2028 Round 3,106,106,0,thekylecasey,tylerpilgrim,0,812,tylerpilgrim,812
+2025-05-01,1223523595133657088,jwalters74,Trey Benson | 2026 Round 3,511,110,-401,tylerpilgrim,Jerry Jeudy | 2025 Round 4,1472,263,-1209,tylerpilgrim,tylerpilgrim,961,153,tylerpilgrim,808
+2025-11-02,1290567058949427200,jwalters74,Jonathon Brooks | 2027 Round 3,168,418,250,tylerpilgrim,Alvin Kamara,608,55,-553,tylerpilgrim,jwalters74,440,363,jwalters74,803
+2025-09-23,1276246071017742336,donewton,Wan'Dale Robinson,215,874,659,jakeduf,2027 Round 2,330,241,-89,jakeduf,donewton,115,633,donewton,748
+2025-04-29,1222779260813459456,zachlearningtogolf,Ray Davis | Geno Smith | James Cook | 2025 Round 1,8814,7721,-1093,jwalters74,Christian McCaffrey | Baker Mayfield | J.K. Dobbins | 2025 Round 2,8219,7842,-377,zachlearningtogolf,jwalters74,595,121,jwalters74,716
+2025-09-12,1272244641206398976,zachlearningtogolf,Daniel Jones,404,1095,691,wkerwin,2026 Round 2,622,626,4,wkerwin,zachlearningtogolf,218,469,zachlearningtogolf,687
+2025-05-04,1224849692341309440,jwalters74,Stefon Diggs | Brian Robinson,1088,242,-846,wkerwin,Tyjae Spears | 2026 Round 4 | 2027 Round 2,393,232,-161,jwalters74,jwalters74,695,10,jwalters74,685
+2025-05-05,1225160597755142144,zachlearningtogolf,Will Howard | 2026 Round 2,715,644,-71,gnewman4,Geno Smith | 2027 Round 3,1013,275,-738,gnewman4,zachlearningtogolf,298,369,zachlearningtogolf,667
+2025-10-23,1286931153982361600,zachlearningtogolf,Dont'e Thornton | 2026 Round 3,254,47,-207,jwalters74,Alvin Kamara,912,55,-857,jwalters74,jwalters74,658,8,jwalters74,650
+2025-08-22,1264650342717472768,thekylecasey,TreVeyon Henderson,2897,2551,-346,zachlearningtogolf,De'Von Achane,4443,4734,291,zachlearningtogolf,zachlearningtogolf,1546,2183,zachlearningtogolf,637
+2025-10-01,1278916121231106048,gnewman4,Quentin Johnston,330,613,283,tylerpilgrim,2027 Round 1,1232,922,-310,tylerpilgrim,tylerpilgrim,902,309,tylerpilgrim,593
+2025-05-01,1223467807560183808,jakeduf,Adonai Mitchell | Tutu Atwell | 2025 Round 4,233,621,388,zachlearningtogolf,2025 Round 2 | 2025 Round 4,209,34,-175,jakeduf,jakeduf,24,587,jakeduf,563
+2025-07-08,1248286928684462080,jwalters74,Isiah Pacheco,716,70,-646,wkerwin,2026 Round 2,622,529,-93,jwalters74,wkerwin,94,459,wkerwin,553
+2026-03-28,1343720269935558656,jwalters74,Kyle Monangai | Matthew Stafford | D'Andre Swift | 2026 Round 4,27,2617,2590,lndahayo,Tahj Brooks | Saquon Barkley | Michael Pittman,0,3139,3139,jwalters74,lndahayo,27,522,lndahayo,549
+2025-05-08,1226043559040270336,jakeduf,Khalil Shakir,899,394,-505,donewton,2026 Round 2 | 2026 Round 4,350,342,-8,jakeduf,jakeduf,549,52,jakeduf,497
+2025-09-30,1278590799092658176,jwalters74,Mike Evans | $19 FAAB,1049,796,-253,zachlearningtogolf,Matthew Stafford | 2026 Round 3,980,1222,242,jwalters74,zachlearningtogolf,69,426,zachlearningtogolf,495
+2025-11-17,1296216363412516864,brevinowens,George Kittle,1276,662,-614,mgaeta23,2027 Round 2 | 2026 Round 2,513,394,-119,brevinowens,brevinowens,763,268,brevinowens,495
+2025-05-01,1223771077000306688,jwalters74,DeMario Douglas,112,27,-85,tylerpilgrim,Quentin Johnston,232,613,381,tylerpilgrim,tylerpilgrim,120,586,tylerpilgrim,466
+2025-05-01,1223665024673783808,jakeduf,2025 Round 4 | 2026 Round 4,48,45,-3,thekylecasey,2025 Round 4,28,469,441,jakeduf,thekylecasey,20,424,thekylecasey,444
+2025-11-11,1294076505202098176,donewton,Alvin Kamara,621,55,-566,tylerpilgrim,Dontayvion Wicks | 2026 Round 3,247,123,-124,donewton,tylerpilgrim,374,68,tylerpilgrim,442
+2025-11-11,1294061216544587776,gnewman4,Cooper Kupp | Rico Dowdle | 2026 Round 4,679,365,-314,mgaeta23,Wan'Dale Robinson | 2026 Round 2 | 2027 Round 3,1051,1141,90,mgaeta23,mgaeta23,372,776,mgaeta23,404
+2025-10-21,1286504609589776384,mgaeta23,J.K. Dobbins | Tyjae Spears | 2027 Round 3,649,361,-288,jwalters74,Michael Pittman | Isiah Pacheco | 2026 Round 4,1520,858,-662,jwalters74,jwalters74,871,497,jwalters74,374
+2025-05-31,1234547168593858560,gnewman4,Josh Jacobs | 2027 Round 1,3844,2056,-1788,jwalters74,David Montgomery | 2026 Round 1 | 2026 Round 2,3881,2448,-1433,jwalters74,jwalters74,37,392,jwalters74,355
+2025-10-07,1281334172710883328,donewton,Theo Johnson,87,44,-43,tylerpilgrim,Brenton Strange,269,559,290,tylerpilgrim,tylerpilgrim,182,515,tylerpilgrim,333
+2025-09-16,1273723036767371264,mgaeta23,David Montgomery | Michael Pittman | Isiah Pacheco | 2027 Round 2 | 2026 Round 1,5404,3293,-2111,jwalters74,Tony Pollard | D'Andre Swift | Tee Higgins | Tyjae Spears | 2027 Round 3,5962,4172,-1790,jwalters74,jwalters74,558,879,jwalters74,321
+2025-10-01,1278942529986764800,lndahayo,D'Andre Swift,734,929,195,jwalters74,Brian Robinson | 2026 Round 3,176,101,-75,lndahayo,lndahayo,558,828,lndahayo,270
+2025-05-01,1223657978725400576,jwalters74,2025 Round 4,31,220,189,jakeduf,2026 Round 3,65,46,-19,jakeduf,jwalters74,34,174,jwalters74,208
+2025-09-30,1278609411799027712,lndahayo,Keenan Allen | 2026 Round 3,264,51,-213,zachlearningtogolf,2027 Round 4 | 2026 Round 2,345,335,-10,zachlearningtogolf,zachlearningtogolf,81,284,zachlearningtogolf,203
+2026-04-28,1354897993991454720,wkerwin,Xavier Worthy,976,683,-293,donewton,2026 Round 2,733,626,-107,wkerwin,wkerwin,243,57,wkerwin,186
+2025-07-16,1251046974694637568,mgaeta23,Marquise Brown,185,0,-185,donewton,2026 Round 3,65,52,-13,mgaeta23,donewton,120,52,donewton,172
+2026-04-27,1354530759280455680,wkerwin,2026 Round 1,3283,2658,-625,jakeduf,2026 Round 1 | 2026 Round 2,2829,2347,-482,wkerwin,wkerwin,454,311,wkerwin,143
+2025-08-07,1259296297278525440,thekylecasey,Will Howard,170,18,-152,zachlearningtogolf,2026 Round 3,106,87,-19,thekylecasey,zachlearningtogolf,64,69,zachlearningtogolf,133
+2026-04-27,1354504941384794112,mgaeta23,Terry McLaurin,1158,1405,247,cjsyregelas,Wan'Dale Robinson,750,874,124,mgaeta23,mgaeta23,408,531,mgaeta23,123
+2025-11-18,1296312256438497280,wkerwin,DJ Giddens | $1 FAAB,140,19,-121,gnewman4,2026 Round 4 | $15 FAAB | $2 FAAB | $8 FAAB,40,36,-4,wkerwin,gnewman4,100,17,gnewman4,117
+2026-03-31,1344753356916146176,zachlearningtogolf,Jordan James | Ollie Gordon | Chig Okonkwo,0,432,432,jakeduf,Chimere Dike | Geno Smith | 2026 Round 3,87,409,322,jakeduf,zachlearningtogolf,87,23,zachlearningtogolf,110
+2026-04-29,1355265411066634240,mgaeta23,Mark Andrews,252,333,81,jwalters74,2026 Round 2,174,153,-21,mgaeta23,mgaeta23,78,180,mgaeta23,102
+2025-10-10,1282507621953204224,wkerwin,Kyle Williams,163,58,-105,lndahayo,2026 Round 3,106,100,-6,wkerwin,lndahayo,57,42,lndahayo,99
+2025-11-10,1293486502654791680,zachlearningtogolf,Geno Smith | 2026 Round 2 | $1 FAAB,967,453,-514,gnewman4,Justin Fields | 2026 Round 3,782,170,-612,zachlearningtogolf,zachlearningtogolf,185,283,zachlearningtogolf,98
+2025-11-12,1294189559839465472,wkerwin,Bhayshul Tuten | 2026 Round 1,1623,2393,770,lndahayo,Juwan Johnson | DeVonta Smith | 2026 Round 4 | 2027 Round 4,3094,3948,854,lndahayo,lndahayo,1471,1555,lndahayo,84
+2025-05-05,1225135748596899840,zachlearningtogolf,Tyjae Spears,195,89,-106,wkerwin,2026 Round 3 | 2027 Round 4,135,110,-25,zachlearningtogolf,wkerwin,60,21,wkerwin,81
+2025-09-25,1276812030426251264,gnewman4,MarShawn Lloyd,4,35,31,lndahayo,Taysom Hill | Noah Fant,58,11,-47,lndahayo,gnewman4,54,24,gnewman4,78
+2026-07-30,1388605639894249472,tylerpilgrim,Dylan Sampson | Woody Marks | Quinshon Judkins | Dak Prescott,7583,7602,19,lndahayo,Baker Mayfield | Jonathan Taylor | Sean Tucker,7223,7167,-56,tylerpilgrim,tylerpilgrim,360,435,tylerpilgrim,75
+2025-10-01,1278946311571251200,zachlearningtogolf,Trevor Etienne | 2026 Round 2,218,395,177,lndahayo,Matthew Stafford | 2027 Round 4,953,1202,249,lndahayo,lndahayo,735,807,lndahayo,72
+2026-05-05,1357507526374998016,jwalters74,Bryce Lance | 2027 Round 3,80,90,10,gnewman4,Stefon Diggs | 2027 Round 4,247,188,-59,gnewman4,gnewman4,167,98,gnewman4,69
+2025-05-01,1223496024669028352,gnewman4,Tyler Allgeier | 2025 Round 4,160,202,42,tylerpilgrim,2025 Round 3,126,228,102,gnewman4,tylerpilgrim,34,26,tylerpilgrim,60
 2025-05-01,1223664469255671808,cjsyregelas,Will Shipley | Justice Hill,78,23,-55,donewton,$5 FAAB,5,5,0,cjsyregelas,cjsyregelas,73,18,cjsyregelas,55
-2025-08-09,1259713999834984449,lndahayo,Shedeur Sanders,306,250,-56,jwalters74,2026 Round 3,42,31,-11,lndahayo,lndahayo,264,219,lndahayo,45
-2025-05-13,1228149347338698753,donewton,Brashard Smith | 2026 Round 3,80,53,-27,lndahayo,2026 Round 2,330,348,18,lndahayo,lndahayo,250,295,lndahayo,45
-2025-09-26,1277109098646605824,gnewman4,Marcus Mariota,0,44,44,zachlearningtogolf,$20 FAAB,20,20,0,zachlearningtogolf,gnewman4,20,24,gnewman4,44
-2026-05-05,1357507526374998016,jwalters74,Bryce Lance | 2027 Round 3,80,72,-8,gnewman4,Stefon Diggs | 2027 Round 4,247,199,-48,gnewman4,gnewman4,167,127,gnewman4,40
-2026-04-29,1355347137491124224,wkerwin,Pat Bryant | 2027 Round 4,143,98,-45,donewton,2026 Round 3,130,120,-10,wkerwin,donewton,13,22,donewton,35
-2026-04-27,1354530759280455680,wkerwin,2026 Round 1,3283,3196,-87,jakeduf,2026 Round 1 | 2026 Round 2,2829,2710,-119,wkerwin,wkerwin,454,486,wkerwin,32
-2025-11-12,1294198173723557888,tylerpilgrim,DeAndre Hopkins | 2026 Round 3,166,84,-82,gnewman4,Chuba Hubbard,495,388,-107,gnewman4,gnewman4,329,304,gnewman4,25
-2025-05-01,1223496024669028352,gnewman4,Tyler Allgeier | 2025 Round 4,160,218,58,tylerpilgrim,2025 Round 3,126,161,35,gnewman4,gnewman4,34,57,gnewman4,23
-2026-05-04,1356867177117937664,jakeduf,Aaron Jones,98,114,16,jwalters74,2027 Round 4,11,10,-1,jakeduf,jakeduf,87,104,jakeduf,17
-2025-11-12,1294189559839465472,wkerwin,Bhayshul Tuten | 2026 Round 1,1623,2359,736,lndahayo,Juwan Johnson | DeVonta Smith | 2026 Round 4 | 2027 Round 4,3094,3844,750,lndahayo,lndahayo,1471,1485,lndahayo,14
-2026-04-30,1355578317075406848,jakeduf,Jordan Mason,148,151,3,tylerpilgrim,2026 Round 3,67,61,-6,jakeduf,jakeduf,81,90,jakeduf,9
+2026-04-30,1355614830769217536,mgaeta23,Kirk Cousins | 2026 Round 3,93,110,17,gnewman4,Tua Tagovailoa,960,940,-20,gnewman4,gnewman4,867,830,gnewman4,37
+2025-10-23,1287157631126876160,donewton,Pat Bryant | 2027 Round 4,165,133,-32,tylerpilgrim,Kayshon Boutte,128,129,1,donewton,donewton,37,4,donewton,33
+2025-08-09,1259713999834984449,lndahayo,Shedeur Sanders,306,269,-37,jwalters74,2026 Round 3,42,30,-12,lndahayo,lndahayo,264,239,lndahayo,25
+2025-05-13,1228149347338698753,donewton,Brashard Smith | 2026 Round 3,80,52,-28,lndahayo,2026 Round 2,330,325,-5,lndahayo,lndahayo,250,273,lndahayo,23
+2026-07-30,1388374053886099456,brevinowens,Marvin Harrison | Kenny Gainwell,4057,4108,51,tylerpilgrim,Jonathan Taylor,4538,4570,32,tylerpilgrim,tylerpilgrim,481,462,tylerpilgrim,19
+2025-09-26,1277109098646605824,gnewman4,Marcus Mariota,0,15,15,zachlearningtogolf,$20 FAAB,20,20,0,zachlearningtogolf,zachlearningtogolf,20,5,zachlearningtogolf,15
+2025-09-16,1273767222258454528,mgaeta23,Kareem Hunt,18,3,-15,donewton,2026 Round 4,20,17,-3,donewton,donewton,2,14,donewton,12
+2026-05-04,1356867177117937664,jakeduf,Aaron Jones,98,108,10,jwalters74,2027 Round 4,11,10,-1,jakeduf,jakeduf,87,98,jakeduf,11
+2026-04-30,1355578317075406848,jakeduf,Jordan Mason,148,150,2,tylerpilgrim,2026 Round 3,67,59,-8,jakeduf,jakeduf,81,91,jakeduf,10
+2025-11-12,1294198173723557888,tylerpilgrim,DeAndre Hopkins | 2026 Round 3,166,79,-87,gnewman4,Chuba Hubbard,495,417,-78,gnewman4,gnewman4,329,338,gnewman4,9
 2025-05-19,1230259367983456256,cjsyregelas,2026 Round 4,20,15,-5,donewton,2026 Round 4,15,19,4,cjsyregelas,donewton,5,4,donewton,9
-2026-04-29,1355348943742988288,cjsyregelas,Ray Davis,43,35,-8,zachlearningtogolf,$20 FAAB,20,20,0,cjsyregelas,cjsyregelas,23,15,cjsyregelas,8
-2025-09-16,1273767222258454528,mgaeta23,Kareem Hunt,18,8,-10,donewton,2026 Round 4,20,18,-2,donewton,donewton,2,10,donewton,8
-2025-11-12,1294350847387398144,thekylecasey,Jonathon Brooks | Terrance Ferguson | Luther Burden | 2027 Round 3 | 2027 Round 3,1301,3449,2148,jwalters74,Aaron Jones | George Pickens,2715,4870,2155,jwalters74,jwalters74,1414,1421,jwalters74,7
-2025-05-01,1223711584585531392,mgaeta23,2026 Round 4 | $22 FAAB,37,35,-2,lndahayo,2025 Round 4,18,12,-6,mgaeta23,mgaeta23,19,23,mgaeta23,4
-2025-05-01,1223663647079792640,mgaeta23,Zach Wilson,3,3,0,donewton,$1 FAAB,1,1,0,mgaeta23,mgaeta23,2,2,Tie,0
-2025-10-07,1281385171571974144,tylerpilgrim,$11 FAAB,11,11,0,donewton,,0,0,0,tylerpilgrim,tylerpilgrim,11,11,Tie,0
+2026-04-29,1355348943742988288,cjsyregelas,Ray Davis,43,37,-6,zachlearningtogolf,$20 FAAB,20,20,0,cjsyregelas,cjsyregelas,23,17,cjsyregelas,6
+2026-04-29,1355347137491124224,wkerwin,Pat Bryant | 2027 Round 4,143,133,-10,donewton,2026 Round 3,130,115,-15,wkerwin,wkerwin,13,18,wkerwin,5
+2025-05-01,1223711584585531392,mgaeta23,2026 Round 4 | $22 FAAB,37,35,-2,lndahayo,2025 Round 4,18,14,-4,mgaeta23,mgaeta23,19,21,mgaeta23,2
+2025-05-01,1223663647079792640,mgaeta23,Zach Wilson,3,2,-1,donewton,$1 FAAB,1,1,0,mgaeta23,mgaeta23,2,1,mgaeta23,1
+2026-07-31,1388760077904650240,tylerpilgrim,D'Andre Swift | George Pickens | 2027 Round 4,5434,5434,0,jwalters74,Garrett Wilson | 2027 Round 2 | 2027 Round 3,5313,5313,0,tylerpilgrim,tylerpilgrim,121,121,Tie,0
+2026-07-30,1388678727138840576,donewton,Jameis Winston,15,15,0,tylerpilgrim,$21 FAAB,21,21,0,tylerpilgrim,tylerpilgrim,6,6,Tie,0
 2025-09-26,1277318767591825408,zachlearningtogolf,$2 FAAB,2,2,0,gnewman4,,0,0,0,zachlearningtogolf,zachlearningtogolf,2,2,Tie,0
+2025-10-07,1281385171571974144,tylerpilgrim,$11 FAAB,11,11,0,donewton,,0,0,0,tylerpilgrim,tylerpilgrim,11,11,Tie,0
+2026-07-30,1388633217661145088,brevinowens,Tank Dell,80,80,0,thekylecasey,2028 Round 3,42,42,0,brevinowens,brevinowens,38,38,Tie,0

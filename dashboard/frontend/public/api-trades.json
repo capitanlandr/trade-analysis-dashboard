@@ -19,7 +19,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
@@ -42,8 +42,8 @@
           }
         ],
         "teamAValueThen": 40.0,
-        "teamAValueNow": 37.0,
-        "teamAValueChange": -3.0,
+        "teamAValueNow": 36.0,
+        "teamAValueChange": -4.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "DJ Giddens",
@@ -54,7 +54,7 @@
             "name": "DJ Giddens",
             "type": "player",
             "value_then": 139,
-            "value_now": 16
+            "value_now": 18
           },
           {
             "name": "$1 FAAB",
@@ -64,14 +64,14 @@
           }
         ],
         "teamBValueThen": 140.0,
-        "teamBValueNow": 17.0,
-        "teamBValueChange": -123.0,
+        "teamBValueNow": 19.0,
+        "teamBValueChange": -121.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -100.0,
-        "marginCurrent": -20.0,
+        "marginCurrent": -17.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 120.0
+        "swingMargin": 117.0
       },
       {
         "tradeId": "1296287239650684928",
@@ -86,8 +86,8 @@
           {
             "name": "2028 Round 3",
             "type": "draft_pick",
-            "value_then": 106,
-            "value_now": 106
+            "value_then": 42,
+            "value_now": 42
           }
         ],
         "teamAValueThen": 106.0,
@@ -102,18 +102,18 @@
             "name": "Michael Wilson",
             "type": "player",
             "value_then": 0,
-            "value_now": 830
+            "value_now": 918
           }
         ],
         "teamBValueThen": 106.0,
-        "teamBValueNow": 830.0,
-        "teamBValueChange": 724.0,
+        "teamBValueNow": 918.0,
+        "teamBValueChange": 812.0,
         "winnerAtTrade": "thekylecasey",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": -0.0,
-        "marginCurrent": -724.0,
+        "marginCurrent": -812.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 724.0
+        "swingMargin": 812.0
       },
       {
         "tradeId": "1296216363412516864",
@@ -129,12 +129,12 @@
             "name": "George Kittle",
             "type": "player",
             "value_then": 1276,
-            "value_now": 766
+            "value_now": 662
           }
         ],
         "teamAValueThen": 1276.0,
-        "teamAValueNow": 766.0,
-        "teamAValueChange": -510.0,
+        "teamAValueNow": 662.0,
+        "teamAValueChange": -614.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "2027 Round 2",
@@ -144,26 +144,26 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 513.0,
-        "teamBValueNow": 417.0,
-        "teamBValueChange": -96.0,
+        "teamBValueNow": 394.0,
+        "teamBValueChange": -119.0,
         "winnerAtTrade": "brevinowens",
         "winnerCurrent": "brevinowens",
         "marginAtTrade": 763.0,
-        "marginCurrent": 349.0,
+        "marginCurrent": 268.0,
         "swingWinner": "brevinowens",
-        "swingMargin": 414.0
+        "swingMargin": 495.0
       },
       {
         "tradeId": "1295662941210697728",
@@ -179,12 +179,12 @@
             "name": "James Cook",
             "type": "player",
             "value_then": 3335,
-            "value_now": 4997
+            "value_now": 4962
           }
         ],
         "teamAValueThen": 4756.0,
-        "teamAValueNow": 4997.0,
-        "teamAValueChange": 241.0,
+        "teamAValueNow": 4962.0,
+        "teamAValueChange": 206.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Saquon Barkley"
@@ -194,18 +194,18 @@
             "name": "Saquon Barkley",
             "type": "player",
             "value_then": 0,
-            "value_now": 2434
+            "value_now": 2350
           }
         ],
         "teamBValueThen": 4756.0,
-        "teamBValueNow": 2434.0,
-        "teamBValueChange": -2322.0,
+        "teamBValueNow": 2350.0,
+        "teamBValueChange": -2406.0,
         "winnerAtTrade": "cjsyregelas",
         "winnerCurrent": "cjsyregelas",
         "marginAtTrade": -0.0,
-        "marginCurrent": -2563.0,
+        "marginCurrent": -2612.0,
         "swingWinner": "cjsyregelas",
-        "swingMargin": 2563.0
+        "swingMargin": 2612.0
       },
       {
         "tradeId": "1294350847387398144",
@@ -225,36 +225,36 @@
             "name": "Jonathon Brooks",
             "type": "player",
             "value_then": 62,
-            "value_now": 237
+            "value_now": 390
           },
           {
             "name": "Terrance Ferguson",
             "type": "player",
             "value_then": 137,
-            "value_now": 181
+            "value_now": 220
           },
           {
             "name": "Luther Burden",
             "type": "player",
             "value_then": 962,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamAValueThen": 1301.0,
-        "teamAValueNow": 3449.0,
-        "teamAValueChange": 2148.0,
+        "teamAValueNow": 4113.0,
+        "teamAValueChange": 2812.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Aaron Jones",
@@ -265,24 +265,24 @@
             "name": "Aaron Jones",
             "type": "player",
             "value_then": 98,
-            "value_now": 114
+            "value_now": 108
           },
           {
             "name": "George Pickens",
             "type": "player",
-            "value_then": 1372,
-            "value_now": 4756
+            "value_then": 4495,
+            "value_now": 4495
           }
         ],
         "teamBValueThen": 2715.0,
-        "teamBValueNow": 4870.0,
-        "teamBValueChange": 2155.0,
+        "teamBValueNow": 4603.0,
+        "teamBValueChange": 1888.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 1414.0,
-        "marginCurrent": 1421.0,
+        "marginCurrent": 490.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 7.0
+        "swingMargin": 924.0
       },
       {
         "tradeId": "1294198173723557888",
@@ -298,12 +298,12 @@
             "name": "Chuba Hubbard",
             "type": "player",
             "value_then": 495,
-            "value_now": 388
+            "value_now": 417
           }
         ],
         "teamAValueThen": 495.0,
-        "teamAValueNow": 388.0,
-        "teamAValueChange": -107.0,
+        "teamAValueNow": 417.0,
+        "teamAValueChange": -78.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "DeAndre Hopkins",
@@ -314,25 +314,25 @@
             "name": "DeAndre Hopkins",
             "type": "player",
             "value_then": 60,
-            "value_now": 4
+            "value_now": 3
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 166.0,
-        "teamBValueNow": 84.0,
-        "teamBValueChange": -82.0,
+        "teamBValueNow": 79.0,
+        "teamBValueChange": -87.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -329.0,
-        "marginCurrent": -304.0,
+        "marginCurrent": -338.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 25.0
+        "swingMargin": 9.0
       },
       {
         "tradeId": "1294189559839465472",
@@ -351,31 +351,31 @@
             "name": "Juwan Johnson",
             "type": "player",
             "value_then": 84,
-            "value_now": 176
+            "value_now": 204
           },
           {
             "name": "DeVonta Smith",
             "type": "player",
             "value_then": 2952,
-            "value_now": 3630
+            "value_now": 3707
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamAValueThen": 3094.0,
-        "teamAValueNow": 3844.0,
-        "teamAValueChange": 750.0,
+        "teamAValueNow": 3948.0,
+        "teamAValueChange": 854.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "Bhayshul Tuten",
@@ -386,25 +386,25 @@
             "name": "Bhayshul Tuten",
             "type": "player",
             "value_then": 391,
-            "value_now": 916
+            "value_now": 1134
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 1623.0,
-        "teamBValueNow": 2359.0,
-        "teamBValueChange": 736.0,
+        "teamBValueNow": 2393.0,
+        "teamBValueChange": 770.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": -1471.0,
-        "marginCurrent": -1485.0,
+        "marginCurrent": -1555.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 14.0
+        "swingMargin": 84.0
       },
       {
         "tradeId": "1294076505202098176",
@@ -421,19 +421,19 @@
             "name": "Dontayvion Wicks",
             "type": "player",
             "value_then": 182,
-            "value_now": 58
+            "value_now": 71
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 247.0,
-        "teamAValueNow": 112.0,
-        "teamAValueChange": -135.0,
+        "teamAValueNow": 123.0,
+        "teamAValueChange": -124.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Alvin Kamara"
@@ -443,18 +443,18 @@
             "name": "Alvin Kamara",
             "type": "player",
             "value_then": 969,
-            "value_now": 74
+            "value_now": 55
           }
         ],
         "teamBValueThen": 621.0,
-        "teamBValueNow": 74.0,
-        "teamBValueChange": -547.0,
+        "teamBValueNow": 55.0,
+        "teamBValueChange": -566.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": -374.0,
-        "marginCurrent": -38.0,
+        "marginCurrent": -68.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 412.0
+        "swingMargin": 442.0
       },
       {
         "tradeId": "1294061216544587776",
@@ -472,25 +472,25 @@
             "name": "Cooper Kupp",
             "type": "player",
             "value_then": 190,
-            "value_now": 26
+            "value_now": 21
           },
           {
             "name": "Rico Dowdle",
             "type": "player",
             "value_then": 469,
-            "value_now": 367
+            "value_now": 328
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamAValueThen": 679.0,
-        "teamAValueNow": 410.0,
-        "teamAValueChange": -269.0,
+        "teamAValueNow": 365.0,
+        "teamAValueChange": -314.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Wan'Dale Robinson",
@@ -502,31 +502,31 @@
             "name": "Wan'Dale Robinson",
             "type": "player",
             "value_then": 750,
-            "value_now": 779
+            "value_now": 874
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamBValueThen": 1051.0,
-        "teamBValueNow": 1061.0,
-        "teamBValueChange": 10.0,
+        "teamBValueNow": 1141.0,
+        "teamBValueChange": 90.0,
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": 372.0,
-        "marginCurrent": 651.0,
+        "marginCurrent": 776.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 279.0
+        "swingMargin": 404.0
       },
       {
         "tradeId": "1293486502654791680",
@@ -543,19 +543,19 @@
             "name": "Justin Fields",
             "type": "player",
             "value_then": 892,
-            "value_now": 154
+            "value_now": 94
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 782.0,
-        "teamAValueNow": 234.0,
-        "teamAValueChange": -548.0,
+        "teamAValueNow": 170.0,
+        "teamAValueChange": -612.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "Geno Smith",
@@ -567,13 +567,13 @@
             "name": "Geno Smith",
             "type": "player",
             "value_then": 0,
-            "value_now": 318
+            "value_now": 247
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
@@ -584,14 +584,14 @@
           }
         ],
         "teamBValueThen": 967.0,
-        "teamBValueNow": 535.0,
-        "teamBValueChange": -432.0,
+        "teamBValueNow": 453.0,
+        "teamBValueChange": -514.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": -185.0,
-        "marginCurrent": -301.0,
+        "marginCurrent": -283.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 116.0
+        "swingMargin": 98.0
       },
       {
         "tradeId": "1290567058949427200",
@@ -608,18 +608,18 @@
             "name": "Jonathon Brooks",
             "type": "player",
             "value_then": 62,
-            "value_now": 237
+            "value_now": 390
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamAValueThen": 168.0,
-        "teamAValueNow": 266.0,
-        "teamAValueChange": 98.0,
+        "teamAValueNow": 418.0,
+        "teamAValueChange": 250.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "Alvin Kamara"
@@ -629,18 +629,18 @@
             "name": "Alvin Kamara",
             "type": "player",
             "value_then": 969,
-            "value_now": 74
+            "value_now": 55
           }
         ],
         "teamBValueThen": 608.0,
-        "teamBValueNow": 74.0,
-        "teamBValueChange": -534.0,
+        "teamBValueNow": 55.0,
+        "teamBValueChange": -553.0,
         "winnerAtTrade": "tylerpilgrim",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 440.0,
-        "marginCurrent": 192.0,
+        "marginCurrent": 363.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 632.0
+        "swingMargin": 803.0
       },
       {
         "tradeId": "1290362815730708480",
@@ -658,24 +658,24 @@
             "name": "Tyrone Tracy",
             "type": "player",
             "value_then": 366,
-            "value_now": 212
+            "value_now": 168
           },
           {
             "name": "Kyle Monangai",
             "type": "player",
             "value_then": 0,
-            "value_now": 429
+            "value_now": 469
           },
           {
             "name": "Chris Godwin",
             "type": "player",
             "value_then": 536,
-            "value_now": 510
+            "value_now": 579
           }
         ],
         "teamAValueThen": 1088.0,
-        "teamAValueNow": 1151.0,
-        "teamAValueChange": 63.0,
+        "teamAValueNow": 1216.0,
+        "teamAValueChange": 128.0,
         "teamB": "thekylecasey",
         "teamBReceived": [
           "Cedric Tillman",
@@ -687,30 +687,30 @@
             "name": "Cedric Tillman",
             "type": "player",
             "value_then": 220,
-            "value_now": 29
+            "value_now": 22
           },
           {
             "name": "Shedeur Sanders",
             "type": "player",
             "value_then": 306,
-            "value_now": 250
+            "value_now": 269
           },
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           }
         ],
         "teamBValueThen": 1965.0,
-        "teamBValueNow": 1331.0,
-        "teamBValueChange": -634.0,
+        "teamBValueNow": 1213.0,
+        "teamBValueChange": -752.0,
         "winnerAtTrade": "thekylecasey",
-        "winnerCurrent": "thekylecasey",
+        "winnerCurrent": "lndahayo",
         "marginAtTrade": -877.0,
-        "marginCurrent": -180.0,
-        "swingWinner": "thekylecasey",
-        "swingMargin": 697.0
+        "marginCurrent": -3.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 880.0
       },
       {
         "tradeId": "1288261486111641600",
@@ -729,19 +729,19 @@
             "name": "Davante Adams",
             "type": "player",
             "value_then": 1105,
-            "value_now": 858
+            "value_now": 814
           },
           {
             "name": "Wan'Dale Robinson",
             "type": "player",
             "value_then": 750,
-            "value_now": 779
+            "value_now": 874
           },
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           },
           {
             "name": "2028 Round 1",
@@ -751,8 +751,8 @@
           }
         ],
         "teamAValueThen": 7041.0,
-        "teamAValueNow": 6508.0,
-        "teamAValueChange": -533.0,
+        "teamAValueNow": 6181.0,
+        "teamAValueChange": -860.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Rashee Rice",
@@ -763,24 +763,24 @@
             "name": "Rashee Rice",
             "type": "player",
             "value_then": 3488,
-            "value_now": 3043
+            "value_now": 2764
           },
           {
             "name": "Rashod Bateman",
             "type": "player",
             "value_then": 238,
-            "value_now": 45
+            "value_now": 43
           }
         ],
         "teamBValueThen": 4797.0,
-        "teamBValueNow": 3088.0,
-        "teamBValueChange": -1709.0,
+        "teamBValueNow": 2807.0,
+        "teamBValueChange": -1990.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -2244.0,
-        "marginCurrent": -3420.0,
+        "marginCurrent": -3374.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 1176.0
+        "swingMargin": 1130.0
       },
       {
         "tradeId": "1287157631126876160",
@@ -796,12 +796,12 @@
             "name": "Kayshon Boutte",
             "type": "player",
             "value_then": 128,
-            "value_now": 121
+            "value_now": 129
           }
         ],
         "teamAValueThen": 128.0,
-        "teamAValueNow": 121.0,
-        "teamAValueChange": -7.0,
+        "teamAValueNow": 129.0,
+        "teamAValueChange": 1.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Pat Bryant",
@@ -812,24 +812,24 @@
             "name": "Pat Bryant",
             "type": "player",
             "value_then": 132,
-            "value_now": 88
+            "value_now": 123
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamBValueThen": 165.0,
-        "teamBValueNow": 98.0,
-        "teamBValueChange": -67.0,
+        "teamBValueNow": 133.0,
+        "teamBValueChange": -32.0,
         "winnerAtTrade": "donewton",
-        "winnerCurrent": "tylerpilgrim",
+        "winnerCurrent": "donewton",
         "marginAtTrade": -37.0,
-        "marginCurrent": -23.0,
-        "swingWinner": "tylerpilgrim",
-        "swingMargin": 60.0
+        "marginCurrent": -4.0,
+        "swingWinner": "donewton",
+        "swingMargin": 33.0
       },
       {
         "tradeId": "1286931153982361600",
@@ -846,19 +846,19 @@
             "name": "Dont'e Thornton",
             "type": "player",
             "value_then": 212,
-            "value_now": 12
+            "value_now": 10
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 254.0,
-        "teamAValueNow": 50.0,
-        "teamAValueChange": -204.0,
+        "teamAValueNow": 47.0,
+        "teamAValueChange": -207.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Alvin Kamara"
@@ -868,18 +868,18 @@
             "name": "Alvin Kamara",
             "type": "player",
             "value_then": 969,
-            "value_now": 74
+            "value_now": 55
           }
         ],
         "teamBValueThen": 912.0,
-        "teamBValueNow": 74.0,
-        "teamBValueChange": -838.0,
+        "teamBValueNow": 55.0,
+        "teamBValueChange": -857.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 658.0,
-        "marginCurrent": 24.0,
+        "marginCurrent": 8.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 634.0
+        "swingMargin": 650.0
       },
       {
         "tradeId": "1286819210667765760",
@@ -899,38 +899,38 @@
             "name": "Jerry Jeudy",
             "type": "player",
             "value_then": 1448,
-            "value_now": 164
+            "value_now": 140
           },
           {
             "name": "George Pickens",
             "type": "player",
-            "value_then": 1372,
-            "value_now": 4756
+            "value_then": 4495,
+            "value_now": 4495
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           }
         ],
         "teamAValueThen": 10687.0,
-        "teamAValueNow": 15468.0,
-        "teamAValueChange": 4781.0,
+        "teamAValueNow": 13269.0,
+        "teamAValueChange": 2582.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "Travis Kelce",
@@ -943,36 +943,36 @@
             "name": "Travis Kelce",
             "type": "player",
             "value_then": 382,
-            "value_now": 219
+            "value_now": 223
           },
           {
             "name": "Justin Jefferson",
             "type": "player",
             "value_then": 9513,
-            "value_now": 8108
+            "value_now": 8051
           },
           {
             "name": "Jordan Mason",
             "type": "player",
             "value_then": 148,
-            "value_now": 151
+            "value_now": 150
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamBValueThen": 10238.0,
-        "teamBValueNow": 8507.0,
-        "teamBValueChange": -1731.0,
+        "teamBValueNow": 8452.0,
+        "teamBValueChange": -1786.0,
         "winnerAtTrade": "thekylecasey",
         "winnerCurrent": "thekylecasey",
         "marginAtTrade": -449.0,
-        "marginCurrent": -6961.0,
+        "marginCurrent": -4817.0,
         "swingWinner": "thekylecasey",
-        "swingMargin": 6512.0
+        "swingMargin": 4368.0
       },
       {
         "tradeId": "1286504609589776384",
@@ -990,25 +990,25 @@
             "name": "Michael Pittman",
             "type": "player",
             "value_then": 0,
-            "value_now": 689
+            "value_now": 775
           },
           {
             "name": "Isiah Pacheco",
             "type": "player",
             "value_then": 716,
-            "value_now": 100
+            "value_now": 70
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamAValueThen": 1520.0,
-        "teamAValueNow": 802.0,
-        "teamAValueChange": -718.0,
+        "teamAValueNow": 858.0,
+        "teamAValueChange": -662.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "J.K. Dobbins",
@@ -1020,30 +1020,30 @@
             "name": "J.K. Dobbins",
             "type": "player",
             "value_then": 205,
-            "value_now": 218
+            "value_now": 244
           },
           {
             "name": "Tyjae Spears",
             "type": "player",
             "value_then": 195,
-            "value_now": 95
+            "value_now": 89
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamBValueThen": 649.0,
-        "teamBValueNow": 342.0,
-        "teamBValueChange": -307.0,
+        "teamBValueNow": 361.0,
+        "teamBValueChange": -288.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": -871.0,
-        "marginCurrent": -460.0,
+        "marginCurrent": -497.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 411.0
+        "swingMargin": 374.0
       },
       {
         "tradeId": "1282804334102343680",
@@ -1063,39 +1063,39 @@
             "name": "Trey Benson",
             "type": "player",
             "value_then": 405,
-            "value_now": 60
+            "value_now": 34
           },
           {
             "name": "Tee Higgins",
             "type": "player",
             "value_then": 3913,
-            "value_now": 3036
+            "value_now": 2823
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 4690.0,
-        "teamAValueNow": 3384.0,
-        "teamAValueChange": -1306.0,
+        "teamAValueNow": 3132.0,
+        "teamAValueChange": -1558.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "David Njoku",
@@ -1106,24 +1106,24 @@
             "name": "David Njoku",
             "type": "player",
             "value_then": 1252,
-            "value_now": 97
+            "value_now": 74
           },
           {
             "name": "James Cook",
             "type": "player",
             "value_then": 3335,
-            "value_now": 4997
+            "value_now": 4962
           }
         ],
         "teamBValueThen": 5047.0,
-        "teamBValueNow": 5094.0,
-        "teamBValueChange": 47.0,
+        "teamBValueNow": 5036.0,
+        "teamBValueChange": -11.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 357.0,
-        "marginCurrent": 1710.0,
+        "marginCurrent": 1904.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 1353.0
+        "swingMargin": 1547.0
       },
       {
         "tradeId": "1282507621953204224",
@@ -1139,13 +1139,13 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 106.0,
-        "teamAValueNow": 104.0,
-        "teamAValueChange": -2.0,
+        "teamAValueNow": 100.0,
+        "teamAValueChange": -6.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "Kyle Williams"
@@ -1155,18 +1155,18 @@
             "name": "Kyle Williams",
             "type": "player",
             "value_then": 163,
-            "value_now": 78
+            "value_now": 58
           }
         ],
         "teamBValueThen": 163.0,
-        "teamBValueNow": 78.0,
-        "teamBValueChange": -85.0,
+        "teamBValueNow": 58.0,
+        "teamBValueChange": -105.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": -57.0,
-        "marginCurrent": -26.0,
+        "marginCurrent": -42.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 83.0
+        "swingMargin": 99.0
       },
       {
         "tradeId": "1281385171571974144",
@@ -1215,12 +1215,12 @@
             "name": "Brenton Strange",
             "type": "player",
             "value_then": 72,
-            "value_now": 416
+            "value_now": 559
           }
         ],
         "teamAValueThen": 269.0,
-        "teamAValueNow": 416.0,
-        "teamAValueChange": 147.0,
+        "teamAValueNow": 559.0,
+        "teamAValueChange": 290.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Theo Johnson"
@@ -1230,18 +1230,18 @@
             "name": "Theo Johnson",
             "type": "player",
             "value_then": 87,
-            "value_now": 64
+            "value_now": 44
           }
         ],
         "teamBValueThen": 87.0,
-        "teamBValueNow": 64.0,
-        "teamBValueChange": -23.0,
+        "teamBValueNow": 44.0,
+        "teamBValueChange": -43.0,
         "winnerAtTrade": "tylerpilgrim",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": -182.0,
-        "marginCurrent": -352.0,
+        "marginCurrent": -515.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 170.0
+        "swingMargin": 333.0
       },
       {
         "tradeId": "1278946311571251200",
@@ -1258,18 +1258,18 @@
             "name": "Matthew Stafford",
             "type": "player",
             "value_then": 0,
-            "value_now": 1252
+            "value_now": 1192
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamAValueThen": 953.0,
-        "teamAValueNow": 1262.0,
-        "teamAValueChange": 309.0,
+        "teamAValueNow": 1202.0,
+        "teamAValueChange": 249.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "Trevor Etienne",
@@ -1280,25 +1280,25 @@
             "name": "Trevor Etienne",
             "type": "player",
             "value_then": 35,
-            "value_now": 13
+            "value_now": 14
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 218.0,
-        "teamBValueNow": 424.0,
-        "teamBValueChange": 206.0,
+        "teamBValueNow": 395.0,
+        "teamBValueChange": 177.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": -735.0,
-        "marginCurrent": -838.0,
+        "marginCurrent": -807.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 103.0
+        "swingMargin": 72.0
       },
       {
         "tradeId": "1278942529986764800",
@@ -1313,13 +1313,13 @@
           {
             "name": "D'Andre Swift",
             "type": "player",
-            "value_then": 0,
-            "value_now": 886
+            "value_then": 929,
+            "value_now": 929
           }
         ],
         "teamAValueThen": 734.0,
-        "teamAValueNow": 886.0,
-        "teamAValueChange": 152.0,
+        "teamAValueNow": 929.0,
+        "teamAValueChange": 195.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Brian Robinson",
@@ -1330,25 +1330,25 @@
             "name": "Brian Robinson",
             "type": "player",
             "value_then": 731,
-            "value_now": 74
+            "value_now": 64
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 176.0,
-        "teamBValueNow": 112.0,
-        "teamBValueChange": -64.0,
+        "teamBValueNow": 101.0,
+        "teamBValueChange": -75.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": 558.0,
-        "marginCurrent": 774.0,
+        "marginCurrent": 828.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 216.0
+        "swingMargin": 270.0
       },
       {
         "tradeId": "1278916121231106048",
@@ -1364,12 +1364,12 @@
             "name": "Quentin Johnston",
             "type": "player",
             "value_then": 232,
-            "value_now": 462
+            "value_now": 613
           }
         ],
         "teamAValueThen": 330.0,
-        "teamAValueNow": 462.0,
-        "teamAValueChange": 132.0,
+        "teamAValueNow": 613.0,
+        "teamAValueChange": 283.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "2027 Round 1"
@@ -1379,18 +1379,18 @@
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           }
         ],
         "teamBValueThen": 1232.0,
-        "teamBValueNow": 1052.0,
-        "teamBValueChange": -180.0,
+        "teamBValueNow": 922.0,
+        "teamBValueChange": -310.0,
         "winnerAtTrade": "tylerpilgrim",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": 902.0,
-        "marginCurrent": 590.0,
+        "marginCurrent": 309.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 312.0
+        "swingMargin": 593.0
       },
       {
         "tradeId": "1278793259467935744",
@@ -1406,7 +1406,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
@@ -1422,18 +1422,18 @@
             "name": "Tyreek Hill",
             "type": "player",
             "value_then": 2486,
-            "value_now": 436
+            "value_now": 335
           }
         ],
         "teamBValueThen": 2175.0,
-        "teamBValueNow": 436.0,
-        "teamBValueChange": -1739.0,
+        "teamBValueNow": 335.0,
+        "teamBValueChange": -1840.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": -2155.0,
-        "marginCurrent": -422.0,
+        "marginCurrent": -321.0,
         "swingWinner": "donewton",
-        "swingMargin": 1733.0
+        "swingMargin": 1834.0
       },
       {
         "tradeId": "1278609411799027712",
@@ -1450,19 +1450,19 @@
             "name": "Keenan Allen",
             "type": "player",
             "value_then": 158,
-            "value_now": 23
+            "value_now": 14
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 264.0,
-        "teamAValueNow": 61.0,
-        "teamAValueChange": -203.0,
+        "teamAValueNow": 51.0,
+        "teamAValueChange": -213.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "2027 Round 4",
@@ -1472,26 +1472,26 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 345.0,
-        "teamBValueNow": 358.0,
-        "teamBValueChange": 13.0,
+        "teamBValueNow": 335.0,
+        "teamBValueChange": -10.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 81.0,
-        "marginCurrent": 297.0,
+        "marginCurrent": 284.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 216.0
+        "swingMargin": 203.0
       },
       {
         "tradeId": "1278590799092658176",
@@ -1508,19 +1508,19 @@
             "name": "Matthew Stafford",
             "type": "player",
             "value_then": 0,
-            "value_now": 1252
+            "value_now": 1192
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 980.0,
-        "teamAValueNow": 1283.0,
-        "teamAValueChange": 303.0,
+        "teamAValueNow": 1222.0,
+        "teamAValueChange": 242.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Mike Evans",
@@ -1531,7 +1531,7 @@
             "name": "Mike Evans",
             "type": "player",
             "value_then": 1297,
-            "value_now": 824
+            "value_now": 777
           },
           {
             "name": "$19 FAAB",
@@ -1541,14 +1541,14 @@
           }
         ],
         "teamBValueThen": 1049.0,
-        "teamBValueNow": 843.0,
-        "teamBValueChange": -206.0,
+        "teamBValueNow": 796.0,
+        "teamBValueChange": -253.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": -69.0,
-        "marginCurrent": -440.0,
+        "marginCurrent": -426.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 509.0
+        "swingMargin": 495.0
       },
       {
         "tradeId": "1277318767591825408",
@@ -1597,12 +1597,12 @@
             "name": "Marcus Mariota",
             "type": "player",
             "value_then": 0,
-            "value_now": 44
+            "value_now": 15
           }
         ],
         "teamAValueThen": 0.0,
-        "teamAValueNow": 44.0,
-        "teamAValueChange": 44.0,
+        "teamAValueNow": 15.0,
+        "teamAValueChange": 15.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "$20 FAAB"
@@ -1619,11 +1619,11 @@
         "teamBValueNow": 20.0,
         "teamBValueChange": 0.0,
         "winnerAtTrade": "zachlearningtogolf",
-        "winnerCurrent": "gnewman4",
+        "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 20.0,
-        "marginCurrent": 24.0,
-        "swingWinner": "gnewman4",
-        "swingMargin": 44.0
+        "marginCurrent": 5.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 15.0
       },
       {
         "tradeId": "1276812030426251264",
@@ -1640,18 +1640,18 @@
             "name": "Taysom Hill",
             "type": "player",
             "value_then": 0,
-            "value_now": 2
+            "value_now": 4
           },
           {
             "name": "Noah Fant",
             "type": "player",
             "value_then": 58,
-            "value_now": 8
+            "value_now": 7
           }
         ],
         "teamAValueThen": 58.0,
-        "teamAValueNow": 10.0,
-        "teamAValueChange": -48.0,
+        "teamAValueNow": 11.0,
+        "teamAValueChange": -47.0,
         "teamB": "gnewman4",
         "teamBReceived": [
           "MarShawn Lloyd"
@@ -1661,18 +1661,18 @@
             "name": "MarShawn Lloyd",
             "type": "player",
             "value_then": 4,
-            "value_now": 27
+            "value_now": 35
           }
         ],
         "teamBValueThen": 4.0,
-        "teamBValueNow": 27.0,
-        "teamBValueChange": 23.0,
+        "teamBValueNow": 35.0,
+        "teamBValueChange": 31.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -54.0,
-        "marginCurrent": -17.0,
+        "marginCurrent": -24.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 71.0
+        "swingMargin": 78.0
       },
       {
         "tradeId": "1276246071017742336",
@@ -1687,13 +1687,13 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           }
         ],
         "teamAValueThen": 330.0,
-        "teamAValueNow": 257.0,
-        "teamAValueChange": -73.0,
+        "teamAValueNow": 241.0,
+        "teamAValueChange": -89.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Wan'Dale Robinson"
@@ -1703,18 +1703,18 @@
             "name": "Wan'Dale Robinson",
             "type": "player",
             "value_then": 750,
-            "value_now": 779
+            "value_now": 874
           }
         ],
         "teamBValueThen": 215.0,
-        "teamBValueNow": 779.0,
-        "teamBValueChange": 564.0,
+        "teamBValueNow": 874.0,
+        "teamBValueChange": 659.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "donewton",
         "marginAtTrade": -115.0,
-        "marginCurrent": -522.0,
+        "marginCurrent": -633.0,
         "swingWinner": "donewton",
-        "swingMargin": 637.0
+        "swingMargin": 748.0
       },
       {
         "tradeId": "1273767222258454528",
@@ -1730,12 +1730,12 @@
             "name": "Kareem Hunt",
             "type": "player",
             "value_then": 18,
-            "value_now": 8
+            "value_now": 3
           }
         ],
         "teamAValueThen": 18.0,
-        "teamAValueNow": 8.0,
-        "teamAValueChange": -10.0,
+        "teamAValueNow": 3.0,
+        "teamAValueChange": -15.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2026 Round 4"
@@ -1745,19 +1745,19 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamBValueThen": 20.0,
-        "teamBValueNow": 18.0,
-        "teamBValueChange": -2.0,
+        "teamBValueNow": 17.0,
+        "teamBValueChange": -3.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": 2.0,
-        "marginCurrent": 10.0,
+        "marginCurrent": 14.0,
         "swingWinner": "donewton",
-        "swingMargin": 8.0
+        "swingMargin": 12.0
       },
       {
         "tradeId": "1273723036767371264",
@@ -1777,36 +1777,36 @@
             "name": "Tony Pollard",
             "type": "player",
             "value_then": 901,
-            "value_now": 326
+            "value_now": 303
           },
           {
             "name": "D'Andre Swift",
             "type": "player",
-            "value_then": 0,
-            "value_now": 886
+            "value_then": 929,
+            "value_now": 929
           },
           {
             "name": "Tee Higgins",
             "type": "player",
             "value_then": 3913,
-            "value_now": 3036
+            "value_now": 2823
           },
           {
             "name": "Tyjae Spears",
             "type": "player",
             "value_then": 195,
-            "value_now": 95
+            "value_now": 89
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamAValueThen": 5962.0,
-        "teamAValueNow": 4372.0,
-        "teamAValueChange": -1590.0,
+        "teamAValueNow": 4172.0,
+        "teamAValueChange": -1790.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "David Montgomery",
@@ -1820,43 +1820,43 @@
             "name": "David Montgomery",
             "type": "player",
             "value_then": 1140,
-            "value_now": 717
+            "value_now": 805
           },
           {
             "name": "Michael Pittman",
             "type": "player",
             "value_then": 0,
-            "value_now": 689
+            "value_now": 775
           },
           {
             "name": "Isiah Pacheco",
             "type": "player",
             "value_then": 716,
-            "value_now": 100
+            "value_now": 70
           },
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 5404.0,
-        "teamBValueNow": 3395.0,
-        "teamBValueChange": -2009.0,
+        "teamBValueNow": 3293.0,
+        "teamBValueChange": -2111.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": -558.0,
-        "marginCurrent": -977.0,
+        "marginCurrent": -879.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 419.0
+        "swingMargin": 321.0
       },
       {
         "tradeId": "1272244641206398976",
@@ -1872,12 +1872,12 @@
             "name": "Daniel Jones",
             "type": "player",
             "value_then": 404,
-            "value_now": 1116
+            "value_now": 1095
           }
         ],
         "teamAValueThen": 404.0,
-        "teamAValueNow": 1116.0,
-        "teamAValueChange": 712.0,
+        "teamAValueNow": 1095.0,
+        "teamAValueChange": 691.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "2026 Round 2"
@@ -1887,19 +1887,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 622.0,
-        "teamBValueNow": 690.0,
-        "teamBValueChange": 68.0,
+        "teamBValueNow": 626.0,
+        "teamBValueChange": 4.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 218.0,
-        "marginCurrent": 426.0,
+        "marginCurrent": 469.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 644.0
+        "swingMargin": 687.0
       },
       {
         "tradeId": "1264650342717472768",
@@ -1915,12 +1915,12 @@
             "name": "TreVeyon Henderson",
             "type": "player",
             "value_then": 2897,
-            "value_now": 2356
+            "value_now": 2551
           }
         ],
         "teamAValueThen": 2897.0,
-        "teamAValueNow": 2356.0,
-        "teamAValueChange": -541.0,
+        "teamAValueNow": 2551.0,
+        "teamAValueChange": -346.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "De'Von Achane"
@@ -1930,18 +1930,18 @@
             "name": "De'Von Achane",
             "type": "player",
             "value_then": 4443,
-            "value_now": 4756
+            "value_now": 4734
           }
         ],
         "teamBValueThen": 4443.0,
-        "teamBValueNow": 4756.0,
-        "teamBValueChange": 313.0,
+        "teamBValueNow": 4734.0,
+        "teamBValueChange": 291.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 1546.0,
-        "marginCurrent": 2400.0,
+        "marginCurrent": 2183.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 854.0
+        "swingMargin": 637.0
       },
       {
         "tradeId": "1264067657422864384",
@@ -1958,18 +1958,18 @@
             "name": "Joshua Palmer",
             "type": "player",
             "value_then": 171,
-            "value_now": 13
+            "value_now": 8
           },
           {
             "name": "Breece Hall",
             "type": "player",
             "value_then": 5176,
-            "value_now": 4613
+            "value_now": 4723
           }
         ],
         "teamAValueThen": 5347.0,
-        "teamAValueNow": 4626.0,
-        "teamAValueChange": -721.0,
+        "teamAValueNow": 4731.0,
+        "teamAValueChange": -616.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "LeQuint Allen",
@@ -1981,31 +1981,31 @@
             "name": "LeQuint Allen",
             "type": "player",
             "value_then": 30,
-            "value_now": 14
+            "value_now": 12
           },
           {
             "name": "George Pickens",
             "type": "player",
-            "value_then": 1372,
-            "value_now": 4756
+            "value_then": 4495,
+            "value_now": 4495
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 3056.0,
-        "teamBValueNow": 8704.0,
-        "teamBValueChange": 5648.0,
+        "teamBValueNow": 7734.0,
+        "teamBValueChange": 4678.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": -2291.0,
-        "marginCurrent": -4078.0,
+        "marginCurrent": -3003.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 6369.0
+        "swingMargin": 5294.0
       },
       {
         "tradeId": "1259713999834984449",
@@ -2021,12 +2021,12 @@
             "name": "Shedeur Sanders",
             "type": "player",
             "value_then": 306,
-            "value_now": 250
+            "value_now": 269
           }
         ],
         "teamAValueThen": 306.0,
-        "teamAValueNow": 250.0,
-        "teamAValueChange": -56.0,
+        "teamAValueNow": 269.0,
+        "teamAValueChange": -37.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "2026 Round 3"
@@ -2036,19 +2036,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 42.0,
-        "teamBValueNow": 31.0,
-        "teamBValueChange": -11.0,
+        "teamBValueNow": 30.0,
+        "teamBValueChange": -12.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": 264.0,
-        "marginCurrent": 219.0,
+        "marginCurrent": 239.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 45.0
+        "swingMargin": 25.0
       },
       {
         "tradeId": "1259296297278525440",
@@ -2079,19 +2079,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 106.0,
-        "teamBValueNow": 91.0,
-        "teamBValueChange": -15.0,
+        "teamBValueNow": 87.0,
+        "teamBValueChange": -19.0,
         "winnerAtTrade": "thekylecasey",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 64.0,
-        "marginCurrent": 73.0,
+        "marginCurrent": 69.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 137.0
+        "swingMargin": 133.0
       },
       {
         "tradeId": "1259245972907622400",
@@ -2107,20 +2107,20 @@
           {
             "name": "Quinshon Judkins",
             "type": "player",
-            "value_then": 1539,
-            "value_now": 2211
+            "value_then": 2412,
+            "value_now": 2475
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 1581.0,
-        "teamAValueNow": 2242.0,
-        "teamAValueChange": 661.0,
+        "teamAValueNow": 2505.0,
+        "teamAValueChange": 924.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Tahj Brooks",
@@ -2132,31 +2132,31 @@
             "name": "Tahj Brooks",
             "type": "player",
             "value_then": 0,
-            "value_now": 12
+            "value_now": 14
           },
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 1460.0,
-        "teamBValueNow": 4084.0,
-        "teamBValueChange": 2624.0,
+        "teamBValueNow": 3373.0,
+        "teamBValueChange": 1913.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 121.0,
-        "marginCurrent": 1842.0,
+        "marginCurrent": 868.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 1963.0
+        "swingMargin": 989.0
       },
       {
         "tradeId": "1259211370491023360",
@@ -2174,25 +2174,25 @@
             "name": "Rome Odunze",
             "type": "player",
             "value_then": 3335,
-            "value_now": 3197
+            "value_now": 3235
           },
           {
             "name": "Brian Robinson",
             "type": "player",
             "value_then": 731,
-            "value_now": 74
+            "value_now": 64
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamAValueThen": 5216.0,
-        "teamAValueNow": 7205.0,
-        "teamAValueChange": 1989.0,
+        "teamAValueNow": 6526.0,
+        "teamAValueChange": 1310.0,
         "teamB": "cjsyregelas",
         "teamBReceived": [
           "Nico Collins",
@@ -2203,25 +2203,25 @@
             "name": "Nico Collins",
             "type": "player",
             "value_then": 5362,
-            "value_now": 4495
+            "value_now": 4474
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 5299.0,
-        "teamBValueNow": 4681.0,
-        "teamBValueChange": -618.0,
+        "teamBValueNow": 4651.0,
+        "teamBValueChange": -648.0,
         "winnerAtTrade": "cjsyregelas",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": 83.0,
-        "marginCurrent": 2524.0,
+        "marginCurrent": 1875.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 2607.0
+        "swingMargin": 1958.0
       },
       {
         "tradeId": "1259206111249039360",
@@ -2241,36 +2241,36 @@
             "name": "Mike Evans",
             "type": "player",
             "value_then": 1297,
-            "value_now": 824
+            "value_now": 777
           },
           {
             "name": "David Njoku",
             "type": "player",
             "value_then": 1252,
-            "value_now": 97
+            "value_now": 74
           },
           {
             "name": "Alvin Kamara",
             "type": "player",
             "value_then": 969,
-            "value_now": 74
+            "value_now": 55
           },
           {
             "name": "Christian Kirk",
             "type": "player",
             "value_then": 289,
-            "value_now": 37
+            "value_now": 27
           },
           {
             "name": "AJ Dillon",
             "type": "player",
             "value_then": 0,
-            "value_now": 3
+            "value_now": 2
           }
         ],
         "teamAValueThen": 3807.0,
-        "teamAValueNow": 1035.0,
-        "teamAValueChange": -2772.0,
+        "teamAValueNow": 935.0,
+        "teamAValueChange": -2872.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Calvin Ridley",
@@ -2286,55 +2286,55 @@
             "name": "Calvin Ridley",
             "type": "player",
             "value_then": 676,
-            "value_now": 65
+            "value_now": 53
           },
           {
             "name": "Dallas Goedert",
             "type": "player",
             "value_then": 399,
-            "value_now": 326
+            "value_now": 311
           },
           {
             "name": "Tony Pollard",
             "type": "player",
             "value_then": 901,
-            "value_now": 326
+            "value_now": 303
           },
           {
             "name": "Noah Gray",
             "type": "player",
             "value_then": 71,
-            "value_now": 4
+            "value_now": 7
           },
           {
             "name": "Tyjae Spears",
             "type": "player",
             "value_then": 195,
-            "value_now": 95
+            "value_now": 89
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           }
         ],
         "teamBValueThen": 2796.0,
-        "teamBValueNow": 1340.0,
-        "teamBValueChange": -1456.0,
+        "teamBValueNow": 1241.0,
+        "teamBValueChange": -1555.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": 1011.0,
-        "marginCurrent": 305.0,
+        "marginCurrent": 306.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 1316.0
+        "swingMargin": 1317.0
       },
       {
         "tradeId": "1256714512900292608",
@@ -2351,18 +2351,18 @@
             "name": "Keon Coleman",
             "type": "player",
             "value_then": 505,
-            "value_now": 64
+            "value_now": 53
           },
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           }
         ],
         "teamAValueThen": 835.0,
-        "teamAValueNow": 321.0,
-        "teamAValueChange": -514.0,
+        "teamAValueNow": 294.0,
+        "teamAValueChange": -541.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "T.J. Hockenson",
@@ -2373,25 +2373,25 @@
             "name": "T.J. Hockenson",
             "type": "player",
             "value_then": 2055,
-            "value_now": 187
+            "value_now": 185
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 2097.0,
-        "teamBValueNow": 221.0,
-        "teamBValueChange": -1876.0,
+        "teamBValueNow": 218.0,
+        "teamBValueChange": -1879.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "brevinowens",
         "marginAtTrade": 1262.0,
-        "marginCurrent": 100.0,
+        "marginCurrent": 76.0,
         "swingWinner": "brevinowens",
-        "swingMargin": 1362.0
+        "swingMargin": 1338.0
       },
       {
         "tradeId": "1251046974694637568",
@@ -2422,19 +2422,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 65.0,
-        "teamBValueNow": 54.0,
-        "teamBValueChange": -11.0,
+        "teamBValueNow": 52.0,
+        "teamBValueChange": -13.0,
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "donewton",
         "marginAtTrade": 120.0,
-        "marginCurrent": 54.0,
+        "marginCurrent": 52.0,
         "swingWinner": "donewton",
-        "swingMargin": 174.0
+        "swingMargin": 172.0
       },
       {
         "tradeId": "1251038903863881728",
@@ -2451,20 +2451,20 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamAValueThen": 62.0,
-        "teamAValueNow": 56.0,
-        "teamAValueChange": -6.0,
+        "teamAValueNow": 54.0,
+        "teamAValueChange": -8.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Phil Mafah",
@@ -2475,24 +2475,24 @@
             "name": "Phil Mafah",
             "type": "player",
             "value_then": 18,
-            "value_now": 4
+            "value_now": 3
           },
           {
             "name": "Javonte Williams",
             "type": "player",
             "value_then": 207,
-            "value_now": 1664
+            "value_now": 1558
           }
         ],
         "teamBValueThen": 225.0,
-        "teamBValueNow": 1668.0,
-        "teamBValueChange": 1443.0,
+        "teamBValueNow": 1561.0,
+        "teamBValueChange": 1336.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": -163.0,
-        "marginCurrent": -1612.0,
+        "marginCurrent": -1507.0,
         "swingWinner": "donewton",
-        "swingMargin": 1449.0
+        "swingMargin": 1344.0
       },
       {
         "tradeId": "1248286928684462080",
@@ -2508,12 +2508,12 @@
             "name": "Isiah Pacheco",
             "type": "player",
             "value_then": 716,
-            "value_now": 100
+            "value_now": 70
           }
         ],
         "teamAValueThen": 716.0,
-        "teamAValueNow": 100.0,
-        "teamAValueChange": -616.0,
+        "teamAValueNow": 70.0,
+        "teamAValueChange": -646.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "2026 Round 2"
@@ -2523,19 +2523,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 622.0,
-        "teamBValueNow": 578.0,
-        "teamBValueChange": -44.0,
+        "teamBValueNow": 529.0,
+        "teamBValueChange": -93.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "wkerwin",
         "marginAtTrade": 94.0,
-        "marginCurrent": 478.0,
+        "marginCurrent": 459.0,
         "swingWinner": "wkerwin",
-        "swingMargin": 572.0
+        "swingMargin": 553.0
       },
       {
         "tradeId": "1243355152602103808",
@@ -2553,25 +2553,25 @@
             "name": "Jack Bech",
             "type": "player",
             "value_then": 323,
-            "value_now": 72
+            "value_now": 91
           },
           {
             "name": "Jauan Jennings",
             "type": "player",
             "value_then": 571,
-            "value_now": 213
+            "value_now": 219
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamAValueThen": 923.0,
-        "teamAValueNow": 310.0,
-        "teamAValueChange": -613.0,
+        "teamAValueNow": 334.0,
+        "teamAValueChange": -589.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Tyreek Hill",
@@ -2582,25 +2582,25 @@
             "name": "Tyreek Hill",
             "type": "player",
             "value_then": 2486,
-            "value_now": 436
+            "value_now": 335
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 3108.0,
-        "teamBValueNow": 1014.0,
-        "teamBValueChange": -2094.0,
+        "teamBValueNow": 864.0,
+        "teamBValueChange": -2244.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 2185.0,
-        "marginCurrent": 704.0,
+        "marginCurrent": 530.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 1481.0
+        "swingMargin": 1655.0
       },
       {
         "tradeId": "1234547168593858560",
@@ -2617,18 +2617,18 @@
             "name": "Josh Jacobs",
             "type": "player",
             "value_then": 3266,
-            "value_now": 1270
+            "value_now": 1134
           },
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           }
         ],
         "teamAValueThen": 3844.0,
-        "teamAValueNow": 2322.0,
-        "teamAValueChange": -1522.0,
+        "teamAValueNow": 2056.0,
+        "teamAValueChange": -1788.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "David Montgomery",
@@ -2640,32 +2640,32 @@
             "name": "David Montgomery",
             "type": "player",
             "value_then": 1140,
-            "value_now": 717
+            "value_now": 805
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 3881.0,
-        "teamBValueNow": 2606.0,
-        "teamBValueChange": -1275.0,
+        "teamBValueNow": 2448.0,
+        "teamBValueChange": -1433.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 37.0,
-        "marginCurrent": 284.0,
+        "marginCurrent": 392.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 247.0
+        "swingMargin": 355.0
       },
       {
         "tradeId": "1230670926694076416",
@@ -2682,18 +2682,18 @@
             "name": "Keenan Allen",
             "type": "player",
             "value_then": 158,
-            "value_now": 23
+            "value_now": 14
           },
           {
             "name": "Jonnu Smith",
             "type": "player",
             "value_then": 592,
-            "value_now": 14
+            "value_now": 11
           }
         ],
         "teamAValueThen": 740.0,
-        "teamAValueNow": 37.0,
-        "teamAValueChange": -703.0,
+        "teamAValueNow": 25.0,
+        "teamAValueChange": -715.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Brenton Strange",
@@ -2704,25 +2704,25 @@
             "name": "Brenton Strange",
             "type": "player",
             "value_then": 72,
-            "value_now": 416
+            "value_now": 559
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamBValueThen": 122.0,
-        "teamBValueNow": 430.0,
-        "teamBValueChange": 308.0,
+        "teamBValueNow": 573.0,
+        "teamBValueChange": 451.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "donewton",
         "marginAtTrade": 618.0,
-        "marginCurrent": 393.0,
+        "marginCurrent": 548.0,
         "swingWinner": "donewton",
-        "swingMargin": 1011.0
+        "swingMargin": 1166.0
       },
       {
         "tradeId": "1230259367983456256",
@@ -2738,7 +2738,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
@@ -2754,7 +2754,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
@@ -2782,13 +2782,13 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamAValueThen": 330.0,
-        "teamAValueNow": 348.0,
-        "teamAValueChange": 18.0,
+        "teamAValueNow": 325.0,
+        "teamAValueChange": -5.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Brashard Smith",
@@ -2805,19 +2805,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 80.0,
-        "teamBValueNow": 53.0,
-        "teamBValueChange": -27.0,
+        "teamBValueNow": 52.0,
+        "teamBValueChange": -28.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": -250.0,
-        "marginCurrent": -295.0,
+        "marginCurrent": -273.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 45.0
+        "swingMargin": 23.0
       },
       {
         "tradeId": "1227129044529582080",
@@ -2833,12 +2833,12 @@
             "name": "Javonte Williams",
             "type": "player",
             "value_then": 207,
-            "value_now": 1664
+            "value_now": 1558
           }
         ],
         "teamAValueThen": 207.0,
-        "teamAValueNow": 1664.0,
-        "teamAValueChange": 1457.0,
+        "teamAValueNow": 1558.0,
+        "teamAValueChange": 1351.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "2026 Round 4",
@@ -2849,7 +2849,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
@@ -2860,14 +2860,14 @@
           }
         ],
         "teamBValueThen": 39.0,
-        "teamBValueNow": 35.0,
-        "teamBValueChange": -4.0,
+        "teamBValueNow": 34.0,
+        "teamBValueChange": -5.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": 168.0,
-        "marginCurrent": 1629.0,
+        "marginCurrent": 1524.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 1461.0
+        "swingMargin": 1356.0
       },
       {
         "tradeId": "1226043559040270336",
@@ -2883,12 +2883,12 @@
             "name": "Khalil Shakir",
             "type": "player",
             "value_then": 1072,
-            "value_now": 423
+            "value_now": 394
           }
         ],
         "teamAValueThen": 899.0,
-        "teamAValueNow": 423.0,
-        "teamAValueChange": -476.0,
+        "teamAValueNow": 394.0,
+        "teamAValueChange": -505.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2026 Round 2",
@@ -2899,26 +2899,26 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamBValueThen": 350.0,
-        "teamBValueNow": 366.0,
-        "teamBValueChange": 16.0,
+        "teamBValueNow": 342.0,
+        "teamBValueChange": -8.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "jakeduf",
         "marginAtTrade": 549.0,
-        "marginCurrent": 57.0,
+        "marginCurrent": 52.0,
         "swingWinner": "jakeduf",
-        "swingMargin": 492.0
+        "swingMargin": 497.0
       },
       {
         "tradeId": "1225522406177652736",
@@ -2936,24 +2936,24 @@
             "name": "Ladd McConkey",
             "type": "player",
             "value_then": 4950,
-            "value_now": 3647
+            "value_now": 3742
           },
           {
             "name": "Mason Taylor",
             "type": "player",
             "value_then": 272,
-            "value_now": 109
+            "value_now": 83
           },
           {
             "name": "Brian Robinson",
             "type": "player",
             "value_then": 731,
-            "value_now": 74
+            "value_now": 64
           }
         ],
         "teamAValueThen": 5953.0,
-        "teamAValueNow": 3830.0,
-        "teamAValueChange": -2123.0,
+        "teamAValueNow": 3889.0,
+        "teamAValueChange": -2064.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Tyler Warren",
@@ -2966,37 +2966,37 @@
             "name": "Tyler Warren",
             "type": "player",
             "value_then": 1719,
-            "value_now": 2637
+            "value_now": 2777
           },
           {
             "name": "Josh Jacobs",
             "type": "player",
             "value_then": 3266,
-            "value_now": 1270
+            "value_now": 1134
           },
           {
             "name": "George Pickens",
             "type": "player",
-            "value_then": 1372,
-            "value_now": 4756
+            "value_then": 4495,
+            "value_now": 4495
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 6009.0,
-        "teamBValueNow": 8733.0,
-        "teamBValueChange": 2724.0,
+        "teamBValueNow": 8473.0,
+        "teamBValueChange": 2464.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 56.0,
-        "marginCurrent": 4903.0,
+        "marginCurrent": 4584.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 4847.0
+        "swingMargin": 4528.0
       },
       {
         "tradeId": "1225160597755142144",
@@ -3013,18 +3013,18 @@
             "name": "Geno Smith",
             "type": "player",
             "value_then": 0,
-            "value_now": 318
+            "value_now": 247
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamAValueThen": 1013.0,
-        "teamAValueNow": 347.0,
-        "teamAValueChange": -666.0,
+        "teamAValueNow": 275.0,
+        "teamAValueChange": -738.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "Will Howard",
@@ -3041,19 +3041,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 715.0,
-        "teamBValueNow": 708.0,
-        "teamBValueChange": -7.0,
+        "teamBValueNow": 644.0,
+        "teamBValueChange": -71.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": -298.0,
-        "marginCurrent": -361.0,
+        "marginCurrent": -369.0,
         "swingWinner": "zachlearningtogolf",
-        "swingMargin": 659.0
+        "swingMargin": 667.0
       },
       {
         "tradeId": "1225135748596899840",
@@ -3069,12 +3069,12 @@
             "name": "Tyjae Spears",
             "type": "player",
             "value_then": 195,
-            "value_now": 95
+            "value_now": 89
           }
         ],
         "teamAValueThen": 195.0,
-        "teamAValueNow": 95.0,
-        "teamAValueChange": -100.0,
+        "teamAValueNow": 89.0,
+        "teamAValueChange": -106.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "2026 Round 3",
@@ -3085,25 +3085,25 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamBValueThen": 135.0,
-        "teamBValueNow": 114.0,
-        "teamBValueChange": -21.0,
+        "teamBValueNow": 110.0,
+        "teamBValueChange": -25.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "wkerwin",
         "marginAtTrade": 60.0,
-        "marginCurrent": 19.0,
+        "marginCurrent": 21.0,
         "swingWinner": "wkerwin",
-        "swingMargin": 79.0
+        "swingMargin": 81.0
       },
       {
         "tradeId": "1224849692341309440",
@@ -3120,18 +3120,18 @@
             "name": "Stefon Diggs",
             "type": "player",
             "value_then": 236,
-            "value_now": 189
+            "value_now": 178
           },
           {
             "name": "Brian Robinson",
             "type": "player",
             "value_then": 731,
-            "value_now": 74
+            "value_now": 64
           }
         ],
         "teamAValueThen": 1088.0,
-        "teamAValueNow": 263.0,
-        "teamAValueChange": -825.0,
+        "teamAValueNow": 242.0,
+        "teamAValueChange": -846.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "Tyjae Spears",
@@ -3143,31 +3143,31 @@
             "name": "Tyjae Spears",
             "type": "player",
             "value_then": 195,
-            "value_now": 95
+            "value_now": 89
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 183,
-            "value_now": 138
+            "value_then": 461,
+            "value_now": 461
           }
         ],
         "teamBValueThen": 393.0,
-        "teamBValueNow": 245.0,
-        "teamBValueChange": -148.0,
+        "teamBValueNow": 232.0,
+        "teamBValueChange": -161.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 695.0,
-        "marginCurrent": 18.0,
+        "marginCurrent": 10.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 677.0
+        "swingMargin": 685.0
       },
       {
         "tradeId": "1224449044198203392",
@@ -3186,7 +3186,7 @@
             "name": "Rashee Rice",
             "type": "player",
             "value_then": 3488,
-            "value_now": 3043
+            "value_now": 2764
           },
           {
             "name": "Will Howard",
@@ -3198,19 +3198,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
             "value_then": 5430,
-            "value_now": 5200
+            "value_now": 4256
           }
         ],
         "teamAValueThen": 9062.0,
-        "teamAValueNow": 8951.0,
-        "teamAValueChange": -111.0,
+        "teamAValueNow": 7664.0,
+        "teamAValueChange": -1398.0,
         "teamB": "zachlearningtogolf",
         "teamBReceived": [
           "Brian Thomas",
@@ -3223,7 +3223,7 @@
             "name": "Brian Thomas",
             "type": "player",
             "value_then": 6782,
-            "value_now": 1975
+            "value_now": 2046
           },
           {
             "name": "Will Levis",
@@ -3235,25 +3235,25 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamBValueThen": 6905.0,
-        "teamBValueNow": 2002.0,
-        "teamBValueChange": -4903.0,
+        "teamBValueNow": 2073.0,
+        "teamBValueChange": -4832.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": 2157.0,
-        "marginCurrent": 6949.0,
+        "marginCurrent": 5591.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 4792.0
+        "swingMargin": 3434.0
       },
       {
         "tradeId": "1223771077000306688",
@@ -3269,12 +3269,12 @@
             "name": "DeMario Douglas",
             "type": "player",
             "value_then": 112,
-            "value_now": 25
+            "value_now": 27
           }
         ],
         "teamAValueThen": 112.0,
-        "teamAValueNow": 25.0,
-        "teamAValueChange": -87.0,
+        "teamAValueNow": 27.0,
+        "teamAValueChange": -85.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "Quentin Johnston"
@@ -3284,18 +3284,18 @@
             "name": "Quentin Johnston",
             "type": "player",
             "value_then": 232,
-            "value_now": 462
+            "value_now": 613
           }
         ],
         "teamBValueThen": 232.0,
-        "teamBValueNow": 462.0,
-        "teamBValueChange": 230.0,
+        "teamBValueNow": 613.0,
+        "teamBValueChange": 381.0,
         "winnerAtTrade": "tylerpilgrim",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": 120.0,
-        "marginCurrent": 437.0,
+        "marginCurrent": 586.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 317.0
+        "swingMargin": 466.0
       },
       {
         "tradeId": "1223711584585531392",
@@ -3311,12 +3311,12 @@
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamAValueThen": 18.0,
-        "teamAValueNow": 12.0,
-        "teamAValueChange": -6.0,
+        "teamAValueNow": 14.0,
+        "teamAValueChange": -4.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "2026 Round 4",
@@ -3327,7 +3327,7 @@
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           },
           {
@@ -3343,9 +3343,9 @@
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": -19.0,
-        "marginCurrent": -23.0,
+        "marginCurrent": -21.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 4.0
+        "swingMargin": 2.0
       },
       {
         "tradeId": "1223665024673783808",
@@ -3361,12 +3361,12 @@
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamAValueThen": 28.0,
-        "teamAValueNow": 429.0,
-        "teamAValueChange": 401.0,
+        "teamAValueNow": 469.0,
+        "teamAValueChange": 441.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "2025 Round 4",
@@ -3377,25 +3377,25 @@
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamBValueThen": 48.0,
-        "teamBValueNow": 48.0,
-        "teamBValueChange": 0.0,
+        "teamBValueNow": 45.0,
+        "teamBValueChange": -3.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "thekylecasey",
         "marginAtTrade": -20.0,
-        "marginCurrent": -381.0,
+        "marginCurrent": -424.0,
         "swingWinner": "thekylecasey",
-        "swingMargin": 401.0
+        "swingMargin": 444.0
       },
       {
         "tradeId": "1223664469255671808",
@@ -3412,13 +3412,13 @@
             "name": "Will Shipley",
             "type": "player",
             "value_then": 35,
-            "value_now": 11
+            "value_now": 12
           },
           {
             "name": "Justice Hill",
             "type": "player",
             "value_then": 43,
-            "value_now": 12
+            "value_now": 11
           }
         ],
         "teamAValueThen": 78.0,
@@ -3460,12 +3460,12 @@
             "name": "Zach Wilson",
             "type": "player",
             "value_then": 3,
-            "value_now": 3
+            "value_now": 2
           }
         ],
         "teamAValueThen": 3.0,
-        "teamAValueNow": 3.0,
-        "teamAValueChange": 0.0,
+        "teamAValueNow": 2.0,
+        "teamAValueChange": -1.0,
         "teamB": "donewton",
         "teamBReceived": [
           "$1 FAAB"
@@ -3484,9 +3484,9 @@
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": 2.0,
-        "marginCurrent": 2.0,
-        "swingWinner": "Tie",
-        "swingMargin": 0.0
+        "marginCurrent": 1.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 1.0
       },
       {
         "tradeId": "1223657978725400576",
@@ -3502,12 +3502,12 @@
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamAValueThen": 31.0,
-        "teamAValueNow": 181.0,
-        "teamAValueChange": 150.0,
+        "teamAValueNow": 220.0,
+        "teamAValueChange": 189.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "2026 Round 3"
@@ -3517,19 +3517,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 65.0,
-        "teamBValueNow": 48.0,
-        "teamBValueChange": -17.0,
+        "teamBValueNow": 46.0,
+        "teamBValueChange": -19.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 34.0,
-        "marginCurrent": 133.0,
+        "marginCurrent": 174.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 167.0
+        "swingMargin": 208.0
       },
       {
         "tradeId": "1223523595133657088",
@@ -3546,19 +3546,19 @@
             "name": "Trey Benson",
             "type": "player",
             "value_then": 405,
-            "value_now": 60
+            "value_now": 34
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 511.0,
-        "teamAValueNow": 140.0,
-        "teamAValueChange": -371.0,
+        "teamAValueNow": 110.0,
+        "teamAValueChange": -401.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "Jerry Jeudy",
@@ -3569,24 +3569,24 @@
             "name": "Jerry Jeudy",
             "type": "player",
             "value_then": 1448,
-            "value_now": 164
+            "value_now": 140
           },
           {
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamBValueThen": 1472.0,
-        "teamBValueNow": 252.0,
-        "teamBValueChange": -1220.0,
+        "teamBValueNow": 263.0,
+        "teamBValueChange": -1209.0,
         "winnerAtTrade": "tylerpilgrim",
         "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": 961.0,
-        "marginCurrent": 112.0,
+        "marginCurrent": 153.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 849.0
+        "swingMargin": 808.0
       },
       {
         "tradeId": "1223496024669028352",
@@ -3603,18 +3603,18 @@
             "name": "Tyler Allgeier",
             "type": "player",
             "value_then": 126,
-            "value_now": 202
+            "value_now": 184
           },
           {
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamAValueThen": 160.0,
-        "teamAValueNow": 218.0,
-        "teamAValueChange": 58.0,
+        "teamAValueNow": 202.0,
+        "teamAValueChange": 42.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "2025 Round 3"
@@ -3624,18 +3624,18 @@
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamBValueThen": 126.0,
-        "teamBValueNow": 161.0,
-        "teamBValueChange": 35.0,
+        "teamBValueNow": 228.0,
+        "teamBValueChange": 102.0,
         "winnerAtTrade": "gnewman4",
-        "winnerCurrent": "gnewman4",
+        "winnerCurrent": "tylerpilgrim",
         "marginAtTrade": 34.0,
-        "marginCurrent": 57.0,
-        "swingWinner": "gnewman4",
-        "swingMargin": 23.0
+        "marginCurrent": 26.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 60.0
       },
       {
         "tradeId": "1223495018262581248",
@@ -3651,12 +3651,12 @@
             "name": "Tucker Kraft",
             "type": "player",
             "value_then": 994,
-            "value_now": 2180
+            "value_now": 2295
           }
         ],
         "teamAValueThen": 1090.0,
-        "teamAValueNow": 2180.0,
-        "teamAValueChange": 1090.0,
+        "teamAValueNow": 2295.0,
+        "teamAValueChange": 1205.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "2025 Round 3"
@@ -3666,18 +3666,18 @@
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamBValueThen": 145.0,
-        "teamBValueNow": 109.0,
-        "teamBValueChange": -36.0,
+        "teamBValueNow": 83.0,
+        "teamBValueChange": -62.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": 945.0,
-        "marginCurrent": 2071.0,
+        "marginCurrent": 2212.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 1126.0
+        "swingMargin": 1267.0
       },
       {
         "tradeId": "1223467807560183808",
@@ -3694,18 +3694,18 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamAValueThen": 209.0,
-        "teamAValueNow": 52.0,
-        "teamAValueChange": -157.0,
+        "teamAValueNow": 34.0,
+        "teamAValueChange": -175.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "Adonai Mitchell",
@@ -3717,30 +3717,30 @@
             "name": "Adonai Mitchell",
             "type": "player",
             "value_then": 169,
-            "value_now": 111
+            "value_now": 141
           },
           {
             "name": "Tutu Atwell",
             "type": "player",
             "value_then": 22,
-            "value_now": 4
+            "value_now": 11
           },
           {
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           }
         ],
         "teamBValueThen": 233.0,
-        "teamBValueNow": 544.0,
-        "teamBValueChange": 311.0,
+        "teamBValueNow": 621.0,
+        "teamBValueChange": 388.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "jakeduf",
         "marginAtTrade": -24.0,
-        "marginCurrent": -492.0,
+        "marginCurrent": -587.0,
         "swingWinner": "jakeduf",
-        "swingMargin": 468.0
+        "swingMargin": 563.0
       },
       {
         "tradeId": "1223423845638090752",
@@ -3757,18 +3757,18 @@
             "name": "2025 Round 4",
             "type": "draft_pick",
             "value_then": 18,
-            "value_now": 6
+            "value_now": 2
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamAValueThen": 325.0,
-        "teamAValueNow": 1086.0,
-        "teamAValueChange": 761.0,
+        "teamAValueNow": 1313.0,
+        "teamAValueChange": 988.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2025 Round 2",
@@ -3779,24 +3779,24 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamBValueThen": 307.0,
-        "teamBValueNow": 85.0,
-        "teamBValueChange": -222.0,
+        "teamBValueNow": 83.0,
+        "teamBValueChange": -224.0,
         "winnerAtTrade": "lndahayo",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": 18.0,
-        "marginCurrent": 1001.0,
+        "marginCurrent": 1230.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 983.0
+        "swingMargin": 1212.0
       },
       {
         "tradeId": "1223400000990486528",
@@ -3813,18 +3813,18 @@
             "name": "Noah Gray",
             "type": "player",
             "value_then": 71,
-            "value_now": 4
+            "value_now": 7
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamAValueThen": 558.0,
-        "teamAValueNow": 645.0,
-        "teamAValueChange": 87.0,
+        "teamAValueNow": 821.0,
+        "teamAValueChange": 263.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Jalen McMillan",
@@ -3836,30 +3836,30 @@
             "name": "Jalen McMillan",
             "type": "player",
             "value_then": 826,
-            "value_now": 249
+            "value_now": 264
           },
           {
             "name": "Jonnu Smith",
             "type": "player",
             "value_then": 592,
-            "value_now": 14
+            "value_now": 11
           },
           {
             "name": "Khalil Shakir",
             "type": "player",
             "value_then": 1072,
-            "value_now": 423
+            "value_now": 394
           }
         ],
         "teamBValueThen": 2490.0,
-        "teamBValueNow": 686.0,
-        "teamBValueChange": -1804.0,
+        "teamBValueNow": 669.0,
+        "teamBValueChange": -1821.0,
         "winnerAtTrade": "donewton",
-        "winnerCurrent": "donewton",
+        "winnerCurrent": "zachlearningtogolf",
         "marginAtTrade": -1932.0,
-        "marginCurrent": -41.0,
-        "swingWinner": "donewton",
-        "swingMargin": 1891.0
+        "marginCurrent": -152.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 2084.0
       },
       {
         "tradeId": "1223398803554451456",
@@ -3877,25 +3877,25 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamAValueThen": 742.0,
-        "teamAValueNow": 1823.0,
-        "teamAValueChange": 1081.0,
+        "teamAValueNow": 1906.0,
+        "teamAValueChange": 1164.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "2025 Round 3",
@@ -3906,24 +3906,24 @@
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamBValueThen": 717.0,
-        "teamBValueNow": 3002.0,
-        "teamBValueChange": 2285.0,
+        "teamBValueNow": 3471.0,
+        "teamBValueChange": 2754.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 25.0,
-        "marginCurrent": 1179.0,
+        "marginCurrent": 1565.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 1204.0
+        "swingMargin": 1590.0
       },
       {
         "tradeId": "1223365523358621696",
@@ -3940,19 +3940,19 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamAValueThen": 5476.0,
-        "teamAValueNow": 4312.0,
-        "teamAValueChange": -1164.0,
+        "teamAValueNow": 3977.0,
+        "teamAValueChange": -1499.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2025 Round 2"
@@ -3962,18 +3962,18 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamBValueThen": 807.0,
-        "teamBValueNow": 6016.0,
-        "teamBValueChange": 5209.0,
+        "teamBValueNow": 5876.0,
+        "teamBValueChange": 5069.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "donewton",
         "marginAtTrade": -4669.0,
-        "marginCurrent": -1704.0,
+        "marginCurrent": -1899.0,
         "swingWinner": "donewton",
-        "swingMargin": 6373.0
+        "swingMargin": 6568.0
       },
       {
         "tradeId": "1223059650442706944",
@@ -3990,18 +3990,18 @@
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamAValueThen": 8874.0,
-        "teamAValueNow": 4649.0,
-        "teamAValueChange": -4225.0,
+        "teamAValueNow": 5128.0,
+        "teamAValueChange": -3746.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2025 Round 1",
@@ -4012,24 +4012,24 @@
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamBValueThen": 9116.0,
-        "teamBValueNow": 5873.0,
-        "teamBValueChange": -3243.0,
+        "teamBValueNow": 6216.0,
+        "teamBValueChange": -2900.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": -242.0,
-        "marginCurrent": -1224.0,
+        "marginCurrent": -1088.0,
         "swingWinner": "donewton",
-        "swingMargin": 982.0
+        "swingMargin": 846.0
       },
       {
         "tradeId": "1223058419775193088",
@@ -4047,24 +4047,24 @@
             "name": "Tony Pollard",
             "type": "player",
             "value_then": 901,
-            "value_now": 326
+            "value_now": 303
           },
           {
             "name": "Khalil Shakir",
             "type": "player",
             "value_then": 1072,
-            "value_now": 423
+            "value_now": 394
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamAValueThen": 5511.0,
-        "teamAValueNow": 3105.0,
-        "teamAValueChange": -2406.0,
+        "teamAValueNow": 3248.0,
+        "teamAValueChange": -2263.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Joe Mixon",
@@ -4077,38 +4077,38 @@
             "name": "Joe Mixon",
             "type": "player",
             "value_then": 1514,
-            "value_now": 8
+            "value_now": 11
           },
           {
             "name": "Deebo Samuel",
             "type": "player",
             "value_then": 727,
-            "value_now": 114
+            "value_now": 91
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 6031.0,
-        "teamBValueNow": 8614.0,
-        "teamBValueChange": 2583.0,
+        "teamBValueNow": 6862.0,
+        "teamBValueChange": 831.0,
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": -520.0,
-        "marginCurrent": -5509.0,
+        "marginCurrent": -3614.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 4989.0
+        "swingMargin": 3094.0
       },
       {
         "tradeId": "1223003680916123648",
@@ -4126,25 +4126,25 @@
             "name": "Ladd McConkey",
             "type": "player",
             "value_then": 4950,
-            "value_now": 3647
+            "value_now": 3742
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 7925.0,
-        "teamAValueNow": 5906.0,
-        "teamAValueChange": -2019.0,
+        "teamAValueNow": 6263.0,
+        "teamAValueChange": -1662.0,
         "teamB": "donewton",
         "teamBReceived": [
           "CeeDee Lamb",
@@ -4155,24 +4155,24 @@
             "name": "CeeDee Lamb",
             "type": "player",
             "value_then": 8518,
-            "value_now": 7791
+            "value_now": 7556
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamBValueThen": 9005.0,
-        "teamBValueNow": 8432.0,
-        "teamBValueChange": -573.0,
+        "teamBValueNow": 8370.0,
+        "teamBValueChange": -635.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": 1080.0,
-        "marginCurrent": 2526.0,
+        "marginCurrent": 2107.0,
         "swingWinner": "donewton",
-        "swingMargin": 1446.0
+        "swingMargin": 1027.0
       },
       {
         "tradeId": "1222779260813459456",
@@ -4191,30 +4191,30 @@
             "name": "Ray Davis",
             "type": "player",
             "value_then": 43,
-            "value_now": 35
+            "value_now": 37
           },
           {
             "name": "Geno Smith",
             "type": "player",
             "value_then": 0,
-            "value_now": 318
+            "value_now": 247
           },
           {
             "name": "James Cook",
             "type": "player",
             "value_then": 3335,
-            "value_now": 4997
+            "value_now": 4962
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamAValueThen": 8814.0,
-        "teamAValueNow": 7825.0,
-        "teamAValueChange": -989.0,
+        "teamAValueNow": 7721.0,
+        "teamAValueChange": -1093.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Christian McCaffrey",
@@ -4227,36 +4227,36 @@
             "name": "Christian McCaffrey",
             "type": "player",
             "value_then": 3391,
-            "value_now": 3796
+            "value_now": 3343
           },
           {
             "name": "Baker Mayfield",
             "type": "player",
-            "value_then": 0,
-            "value_now": 2945
+            "value_then": 2655,
+            "value_now": 2564
           },
           {
             "name": "J.K. Dobbins",
             "type": "player",
             "value_then": 205,
-            "value_now": 218
+            "value_now": 244
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamBValueThen": 8219.0,
-        "teamBValueNow": 8535.0,
-        "teamBValueChange": 316.0,
+        "teamBValueNow": 7842.0,
+        "teamBValueChange": -377.0,
         "winnerAtTrade": "zachlearningtogolf",
         "winnerCurrent": "jwalters74",
         "marginAtTrade": 595.0,
-        "marginCurrent": 710.0,
+        "marginCurrent": 121.0,
         "swingWinner": "jwalters74",
-        "swingMargin": 1305.0
+        "swingMargin": 716.0
       },
       {
         "tradeId": "1222706043209924608",
@@ -4272,19 +4272,19 @@
           {
             "name": "Tank Dell",
             "type": "player",
-            "value_then": 292,
-            "value_now": 89
+            "value_then": 80,
+            "value_now": 80
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamAValueThen": 1940.0,
-        "teamAValueNow": 3212.0,
-        "teamAValueChange": 1272.0,
+        "teamAValueNow": 3511.0,
+        "teamAValueChange": 1571.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Courtland Sutton",
@@ -4296,30 +4296,30 @@
             "name": "Courtland Sutton",
             "type": "player",
             "value_then": 1013,
-            "value_now": 764
+            "value_now": 716
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamBValueThen": 1374.0,
-        "teamBValueNow": 1706.0,
-        "teamBValueChange": 332.0,
+        "teamBValueNow": 1876.0,
+        "teamBValueChange": 502.0,
         "winnerAtTrade": "thekylecasey",
         "winnerCurrent": "thekylecasey",
         "marginAtTrade": -566.0,
-        "marginCurrent": -1506.0,
+        "marginCurrent": -1635.0,
         "swingWinner": "thekylecasey",
-        "swingMargin": 940.0
+        "swingMargin": 1069.0
       },
       {
         "tradeId": "1220272163022438400",
@@ -4337,24 +4337,24 @@
             "name": "Justin Fields",
             "type": "player",
             "value_then": 892,
-            "value_now": 154
+            "value_now": 94
           },
           {
             "name": "Brenton Strange",
             "type": "player",
             "value_then": 72,
-            "value_now": 416
+            "value_now": 559
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamAValueThen": 1375.0,
-        "teamAValueNow": 2146.0,
-        "teamAValueChange": 771.0,
+        "teamAValueNow": 2344.0,
+        "teamAValueChange": 969.0,
         "teamB": "donewton",
         "teamBReceived": [
           "Davante Adams",
@@ -4366,30 +4366,30 @@
             "name": "Davante Adams",
             "type": "player",
             "value_then": 1105,
-            "value_now": 858
+            "value_now": 814
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           },
           {
             "name": "2025 Round 3",
             "type": "draft_pick",
             "value_then": 50,
-            "value_now": 2180
+            "value_now": 2159
           }
         ],
         "teamBValueThen": 2786.0,
-        "teamBValueNow": 6161.0,
-        "teamBValueChange": 3375.0,
+        "teamBValueNow": 6404.0,
+        "teamBValueChange": 3618.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": -1411.0,
-        "marginCurrent": -4015.0,
+        "marginCurrent": -4060.0,
         "swingWinner": "donewton",
-        "swingMargin": 2604.0
+        "swingMargin": 2649.0
       },
       {
         "tradeId": "1211903239012765696",
@@ -4406,19 +4406,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamAValueThen": 395.0,
-        "teamAValueNow": 282.0,
-        "teamAValueChange": -113.0,
+        "teamAValueNow": 267.0,
+        "teamAValueChange": -128.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2025 Round 2"
@@ -4428,18 +4428,18 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamBValueThen": 420.0,
-        "teamBValueNow": 1576.0,
-        "teamBValueChange": 1156.0,
+        "teamBValueNow": 1691.0,
+        "teamBValueChange": 1271.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "donewton",
         "marginAtTrade": -25.0,
-        "marginCurrent": -1294.0,
+        "marginCurrent": -1424.0,
         "swingWinner": "donewton",
-        "swingMargin": 1269.0
+        "swingMargin": 1399.0
       },
       {
         "tradeId": "1207589817261490176",
@@ -4457,25 +4457,25 @@
             "name": "Jaxon Smith-Njigba",
             "type": "player",
             "value_then": 4559,
-            "value_now": 8518
+            "value_now": 8459
           },
           {
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamAValueThen": 6780.0,
-        "teamAValueNow": 12145.0,
-        "teamAValueChange": 5365.0,
+        "teamAValueNow": 12118.0,
+        "teamAValueChange": 5338.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Ray Davis",
@@ -4488,36 +4488,36 @@
             "name": "Ray Davis",
             "type": "player",
             "value_then": 43,
-            "value_now": 35
+            "value_now": 37
           },
           {
             "name": "James Cook",
             "type": "player",
             "value_then": 3335,
-            "value_now": 4997
+            "value_now": 4962
           },
           {
             "name": "Tucker Kraft",
             "type": "player",
             "value_then": 994,
-            "value_now": 2180
+            "value_now": 2295
           },
           {
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamBValueThen": 8790.0,
-        "teamBValueNow": 9687.0,
-        "teamBValueChange": 897.0,
+        "teamBValueNow": 9769.0,
+        "teamBValueChange": 979.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "lndahayo",
         "marginAtTrade": -2010.0,
-        "marginCurrent": -2458.0,
+        "marginCurrent": -2349.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 4468.0
+        "swingMargin": 4359.0
       },
       {
         "tradeId": "1206314724464001024",
@@ -4534,18 +4534,18 @@
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           },
           {
             "name": "2025 Round 2",
             "type": "draft_pick",
             "value_then": 707,
-            "value_now": 2973
+            "value_now": 3447
           }
         ],
         "teamAValueThen": 1143.0,
-        "teamAValueNow": 4549.0,
-        "teamAValueChange": 3406.0,
+        "teamAValueNow": 5138.0,
+        "teamAValueChange": 3995.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2025 Round 1"
@@ -4555,18 +4555,18 @@
             "name": "2025 Round 1",
             "type": "draft_pick",
             "value_then": 2904,
-            "value_now": 2211
+            "value_now": 2475
           }
         ],
         "teamBValueThen": 2904.0,
-        "teamBValueNow": 2211.0,
-        "teamBValueChange": -693.0,
+        "teamBValueNow": 2475.0,
+        "teamBValueChange": -429.0,
         "winnerAtTrade": "donewton",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -1761.0,
-        "marginCurrent": -2338.0,
+        "marginCurrent": -2663.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 4099.0
+        "swingMargin": 4424.0
       },
       {
         "tradeId": "1344753356916146176",
@@ -4584,24 +4584,24 @@
             "name": "Jordan James",
             "type": "player",
             "value_then": 0,
-            "value_now": 25
+            "value_now": 23
           },
           {
             "name": "Ollie Gordon",
             "type": "player",
             "value_then": 0,
-            "value_now": 37
+            "value_now": 38
           },
           {
             "name": "Chig Okonkwo",
             "type": "player",
             "value_then": 0,
-            "value_now": 264
+            "value_now": 371
           }
         ],
         "teamAValueThen": 0.0,
-        "teamAValueNow": 326.0,
-        "teamAValueChange": 326.0,
+        "teamAValueNow": 432.0,
+        "teamAValueChange": 432.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "Chimere Dike",
@@ -4613,31 +4613,31 @@
             "name": "Chimere Dike",
             "type": "player",
             "value_then": 0,
-            "value_now": 89
+            "value_now": 75
           },
           {
             "name": "Geno Smith",
             "type": "player",
             "value_then": 0,
-            "value_now": 318
+            "value_now": 247
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
-        "teamBValueThen": 91.0,
-        "teamBValueNow": 498.0,
-        "teamBValueChange": 407.0,
+        "teamBValueThen": 87.0,
+        "teamBValueNow": 409.0,
+        "teamBValueChange": 322.0,
         "winnerAtTrade": "jakeduf",
-        "winnerCurrent": "jakeduf",
-        "marginAtTrade": 91.0,
-        "marginCurrent": 172.0,
-        "swingWinner": "jakeduf",
-        "swingMargin": 81.0
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 87.0,
+        "marginCurrent": 23.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 110.0
       },
       {
         "tradeId": "1343720269935558656",
@@ -4655,24 +4655,24 @@
             "name": "Tahj Brooks",
             "type": "player",
             "value_then": 0,
-            "value_now": 12
+            "value_now": 14
           },
           {
             "name": "Saquon Barkley",
             "type": "player",
             "value_then": 0,
-            "value_now": 2434
+            "value_now": 2350
           },
           {
             "name": "Michael Pittman",
             "type": "player",
             "value_then": 0,
-            "value_now": 689
+            "value_now": 775
           }
         ],
         "teamAValueThen": 0.0,
-        "teamAValueNow": 3135.0,
-        "teamAValueChange": 3135.0,
+        "teamAValueNow": 3139.0,
+        "teamAValueChange": 3139.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Kyle Monangai",
@@ -4685,37 +4685,37 @@
             "name": "Kyle Monangai",
             "type": "player",
             "value_then": 0,
-            "value_now": 429
+            "value_now": 469
           },
           {
             "name": "Matthew Stafford",
             "type": "player",
             "value_then": 0,
-            "value_now": 1252
+            "value_now": 1192
           },
           {
             "name": "D'Andre Swift",
             "type": "player",
-            "value_then": 0,
-            "value_now": 886
+            "value_then": 929,
+            "value_now": 929
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
-        "teamBValueThen": 28.0,
-        "teamBValueNow": 2595.0,
-        "teamBValueChange": 2567.0,
+        "teamBValueThen": 27.0,
+        "teamBValueNow": 2617.0,
+        "teamBValueChange": 2590.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "lndahayo",
-        "marginAtTrade": -28.0,
-        "marginCurrent": -540.0,
+        "marginAtTrade": -27.0,
+        "marginCurrent": -522.0,
         "swingWinner": "lndahayo",
-        "swingMargin": 568.0
+        "swingMargin": 549.0
       },
       {
         "tradeId": "1337134442841378816",
@@ -4733,26 +4733,26 @@
             "name": "Michael Wilson",
             "type": "player",
             "value_then": 0,
-            "value_now": 830
+            "value_now": 918
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
-        "teamAValueThen": 134.0,
-        "teamAValueNow": 964.0,
-        "teamAValueChange": 830.0,
+        "teamAValueThen": 128.0,
+        "teamAValueNow": 1046.0,
+        "teamAValueChange": 918.0,
         "teamB": "tylerpilgrim",
         "teamBReceived": [
           "Baker Mayfield",
@@ -4762,26 +4762,26 @@
           {
             "name": "Baker Mayfield",
             "type": "player",
-            "value_then": 0,
-            "value_now": 2945
+            "value_then": 2655,
+            "value_now": 2564
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamBValueThen": 14.0,
-        "teamBValueNow": 2959.0,
-        "teamBValueChange": 2945.0,
+        "teamBValueNow": 2578.0,
+        "teamBValueChange": 2564.0,
         "winnerAtTrade": "jwalters74",
         "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": 120.0,
-        "marginCurrent": 1995.0,
+        "marginAtTrade": 114.0,
+        "marginCurrent": 1532.0,
         "swingWinner": "tylerpilgrim",
-        "swingMargin": 2115.0
+        "swingMargin": 1646.0
       },
       {
         "tradeId": "1335782944433790976",
@@ -4799,25 +4799,25 @@
             "name": "Jacory Croskey-Merritt",
             "type": "player",
             "value_then": 240,
-            "value_now": 204
+            "value_now": 222
           },
           {
             "name": "Rachaad White",
             "type": "player",
             "value_then": 110,
-            "value_now": 189
+            "value_now": 199
           },
           {
             "name": "2026 Round 4",
             "type": "draft_pick",
             "value_then": 867,
-            "value_now": 18,
+            "value_now": 17,
             "pick_label": "4.06"
           }
         ],
         "teamAValueThen": 1217.0,
-        "teamAValueNow": 411.0,
-        "teamAValueChange": -806.0,
+        "teamAValueNow": 438.0,
+        "teamAValueChange": -779.0,
         "teamB": "donewton",
         "teamBReceived": [
           "DJ Moore"
@@ -4827,18 +4827,18 @@
             "name": "DJ Moore",
             "type": "player",
             "value_then": 858,
-            "value_now": 1279
+            "value_now": 1318
           }
         ],
         "teamBValueThen": 858.0,
-        "teamBValueNow": 1279.0,
-        "teamBValueChange": 421.0,
+        "teamBValueNow": 1318.0,
+        "teamBValueChange": 460.0,
         "winnerAtTrade": "thekylecasey",
         "winnerCurrent": "donewton",
         "marginAtTrade": 359.0,
-        "marginCurrent": 868.0,
+        "marginCurrent": 880.0,
         "swingWinner": "donewton",
-        "swingMargin": 1227.0
+        "swingMargin": 1239.0
       },
       {
         "tradeId": "1354504941384794112",
@@ -4854,12 +4854,12 @@
             "name": "Wan'Dale Robinson",
             "type": "player",
             "value_then": 750,
-            "value_now": 779
+            "value_now": 874
           }
         ],
         "teamAValueThen": 750.0,
-        "teamAValueNow": 779.0,
-        "teamAValueChange": 29.0,
+        "teamAValueNow": 874.0,
+        "teamAValueChange": 124.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Terry McLaurin"
@@ -4869,18 +4869,18 @@
             "name": "Terry McLaurin",
             "type": "player",
             "value_then": 1158,
-            "value_now": 1297
+            "value_now": 1405
           }
         ],
         "teamBValueThen": 1158.0,
-        "teamBValueNow": 1297.0,
-        "teamBValueChange": 139.0,
+        "teamBValueNow": 1405.0,
+        "teamBValueChange": 247.0,
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": -408.0,
-        "marginCurrent": -518.0,
+        "marginCurrent": -531.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 110.0
+        "swingMargin": 123.0
       },
       {
         "tradeId": "1354530759280455680",
@@ -4897,20 +4897,20 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           },
           {
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamAValueThen": 2829.0,
-        "teamAValueNow": 2710.0,
-        "teamAValueChange": -119.0,
+        "teamAValueNow": 2347.0,
+        "teamAValueChange": -482.0,
         "teamB": "wkerwin",
         "teamBReceived": [
           "2026 Round 1"
@@ -4920,19 +4920,19 @@
             "name": "2026 Round 1",
             "type": "draft_pick",
             "value_then": 2212,
-            "value_now": 2132,
+            "value_now": 1818,
             "pick_label": "1.08"
           }
         ],
         "teamBValueThen": 3283.0,
-        "teamBValueNow": 3196.0,
-        "teamBValueChange": -87.0,
+        "teamBValueNow": 2658.0,
+        "teamBValueChange": -625.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "wkerwin",
         "marginAtTrade": -454.0,
-        "marginCurrent": -486.0,
+        "marginCurrent": -311.0,
         "swingWinner": "wkerwin",
-        "swingMargin": 32.0
+        "swingMargin": 143.0
       },
       {
         "tradeId": "1354897993991454720",
@@ -4948,12 +4948,12 @@
             "name": "Xavier Worthy",
             "type": "player",
             "value_then": 976,
-            "value_now": 697
+            "value_now": 683
           }
         ],
         "teamAValueThen": 976.0,
-        "teamAValueNow": 697.0,
-        "teamAValueChange": -279.0,
+        "teamAValueNow": 683.0,
+        "teamAValueChange": -293.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2026 Round 2"
@@ -4963,19 +4963,19 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamBValueThen": 733.0,
-        "teamBValueNow": 690.0,
-        "teamBValueChange": -43.0,
+        "teamBValueNow": 626.0,
+        "teamBValueChange": -107.0,
         "winnerAtTrade": "wkerwin",
         "winnerCurrent": "wkerwin",
         "marginAtTrade": 243.0,
-        "marginCurrent": 7.0,
+        "marginCurrent": 57.0,
         "swingWinner": "wkerwin",
-        "swingMargin": 236.0
+        "swingMargin": 186.0
       },
       {
         "tradeId": "1355578317075406848",
@@ -4991,13 +4991,13 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamAValueThen": 67.0,
-        "teamAValueNow": 61.0,
-        "teamAValueChange": -6.0,
+        "teamAValueNow": 59.0,
+        "teamAValueChange": -8.0,
         "teamB": "jakeduf",
         "teamBReceived": [
           "Jordan Mason"
@@ -5007,18 +5007,18 @@
             "name": "Jordan Mason",
             "type": "player",
             "value_then": 148,
-            "value_now": 151
+            "value_now": 150
           }
         ],
         "teamBValueThen": 148.0,
-        "teamBValueNow": 151.0,
-        "teamBValueChange": 3.0,
+        "teamBValueNow": 150.0,
+        "teamBValueChange": 2.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "jakeduf",
         "marginAtTrade": -81.0,
-        "marginCurrent": -90.0,
+        "marginCurrent": -91.0,
         "swingWinner": "jakeduf",
-        "swingMargin": 9.0
+        "swingMargin": 10.0
       },
       {
         "tradeId": "1355348943742988288",
@@ -5049,18 +5049,18 @@
             "name": "Ray Davis",
             "type": "player",
             "value_then": 43,
-            "value_now": 35
+            "value_now": 37
           }
         ],
         "teamBValueThen": 43.0,
-        "teamBValueNow": 35.0,
-        "teamBValueChange": -8.0,
+        "teamBValueNow": 37.0,
+        "teamBValueChange": -6.0,
         "winnerAtTrade": "cjsyregelas",
         "winnerCurrent": "cjsyregelas",
         "marginAtTrade": -23.0,
-        "marginCurrent": -15.0,
+        "marginCurrent": -17.0,
         "swingWinner": "cjsyregelas",
-        "swingMargin": 8.0
+        "swingMargin": 6.0
       },
       {
         "tradeId": "1355347137491124224",
@@ -5077,18 +5077,18 @@
             "name": "Pat Bryant",
             "type": "player",
             "value_then": 132,
-            "value_now": 88
+            "value_now": 123
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamAValueThen": 143.0,
-        "teamAValueNow": 98.0,
-        "teamAValueChange": -45.0,
+        "teamAValueNow": 133.0,
+        "teamAValueChange": -10.0,
         "teamB": "donewton",
         "teamBReceived": [
           "2026 Round 3"
@@ -5098,19 +5098,19 @@
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 130.0,
-        "teamBValueNow": 120.0,
-        "teamBValueChange": -10.0,
+        "teamBValueNow": 115.0,
+        "teamBValueChange": -15.0,
         "winnerAtTrade": "wkerwin",
-        "winnerCurrent": "donewton",
+        "winnerCurrent": "wkerwin",
         "marginAtTrade": 13.0,
-        "marginCurrent": 22.0,
-        "swingWinner": "donewton",
-        "swingMargin": 35.0
+        "marginCurrent": 18.0,
+        "swingWinner": "wkerwin",
+        "swingMargin": 5.0
       },
       {
         "tradeId": "1355265411066634240",
@@ -5126,13 +5126,13 @@
             "name": "2026 Round 2",
             "type": "draft_pick",
             "value_then": 174,
-            "value_now": 160,
+            "value_now": 153,
             "pick_label": "2.11"
           }
         ],
         "teamAValueThen": 174.0,
-        "teamAValueNow": 160.0,
-        "teamAValueChange": -14.0,
+        "teamAValueNow": 153.0,
+        "teamAValueChange": -21.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Mark Andrews"
@@ -5142,18 +5142,18 @@
             "name": "Mark Andrews",
             "type": "player",
             "value_then": 252,
-            "value_now": 332
+            "value_now": 333
           }
         ],
         "teamBValueThen": 252.0,
-        "teamBValueNow": 332.0,
-        "teamBValueChange": 80.0,
+        "teamBValueNow": 333.0,
+        "teamBValueChange": 81.0,
         "winnerAtTrade": "mgaeta23",
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": -78.0,
-        "marginCurrent": -172.0,
+        "marginCurrent": -180.0,
         "swingWinner": "mgaeta23",
-        "swingMargin": 94.0
+        "swingMargin": 102.0
       },
       {
         "tradeId": "1355614830769217536",
@@ -5169,12 +5169,12 @@
             "name": "Tua Tagovailoa",
             "type": "player",
             "value_then": 960,
-            "value_now": 929
+            "value_now": 940
           }
         ],
         "teamAValueThen": 960.0,
-        "teamAValueNow": 929.0,
-        "teamAValueChange": -31.0,
+        "teamAValueNow": 940.0,
+        "teamAValueChange": -20.0,
         "teamB": "mgaeta23",
         "teamBReceived": [
           "Kirk Cousins",
@@ -5185,25 +5185,25 @@
             "name": "Kirk Cousins",
             "type": "player",
             "value_then": 46,
-            "value_now": 81
+            "value_now": 69
           },
           {
             "name": "2026 Round 3",
             "type": "draft_pick",
             "value_then": 47,
-            "value_now": 43,
+            "value_now": 41,
             "pick_label": "3.09"
           }
         ],
         "teamBValueThen": 93.0,
-        "teamBValueNow": 124.0,
-        "teamBValueChange": 31.0,
+        "teamBValueNow": 110.0,
+        "teamBValueChange": 17.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -867.0,
-        "marginCurrent": -805.0,
+        "marginCurrent": -830.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 62.0
+        "swingMargin": 37.0
       },
       {
         "tradeId": "1357507526374998016",
@@ -5220,18 +5220,18 @@
             "name": "Stefon Diggs",
             "type": "player",
             "value_then": 236,
-            "value_now": 189
+            "value_now": 178
           },
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
         "teamAValueThen": 247.0,
-        "teamAValueNow": 199.0,
-        "teamAValueChange": -48.0,
+        "teamAValueNow": 188.0,
+        "teamAValueChange": -59.0,
         "teamB": "jwalters74",
         "teamBReceived": [
           "Bryce Lance",
@@ -5242,24 +5242,24 @@
             "name": "Bryce Lance",
             "type": "player",
             "value_then": 50,
-            "value_now": 43
+            "value_now": 62
           },
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 30,
-            "value_now": 29
+            "value_then": 28,
+            "value_now": 28
           }
         ],
         "teamBValueThen": 80.0,
-        "teamBValueNow": 72.0,
-        "teamBValueChange": -8.0,
+        "teamBValueNow": 90.0,
+        "teamBValueChange": 10.0,
         "winnerAtTrade": "gnewman4",
         "winnerCurrent": "gnewman4",
         "marginAtTrade": -167.0,
-        "marginCurrent": -127.0,
+        "marginCurrent": -98.0,
         "swingWinner": "gnewman4",
-        "swingMargin": 40.0
+        "swingMargin": 69.0
       },
       {
         "tradeId": "1356867177117937664",
@@ -5274,7 +5274,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 10,
             "value_now": 10
           }
         ],
@@ -5290,26 +5290,306 @@
             "name": "Aaron Jones",
             "type": "player",
             "value_then": 98,
-            "value_now": 114
+            "value_now": 108
           }
         ],
         "teamBValueThen": 98.0,
-        "teamBValueNow": 114.0,
-        "teamBValueChange": 16.0,
+        "teamBValueNow": 108.0,
+        "teamBValueChange": 10.0,
         "winnerAtTrade": "jakeduf",
         "winnerCurrent": "jakeduf",
         "marginAtTrade": -87.0,
-        "marginCurrent": -104.0,
+        "marginCurrent": -98.0,
         "swingWinner": "jakeduf",
-        "swingMargin": 17.0
+        "swingMargin": 11.0
+      },
+      {
+        "tradeId": "1388760077904650240",
+        "transactionId": "1388760077904650240",
+        "tradeDate": "2026-07-31",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Garrett Wilson",
+          "2027 Round 2",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Garrett Wilson",
+            "type": "player",
+            "value_then": 4824,
+            "value_now": 4824
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 461,
+            "value_now": 461
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 28,
+            "value_now": 28
+          }
+        ],
+        "teamAValueThen": 5313.0,
+        "teamAValueNow": 5313.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "D'Andre Swift",
+          "George Pickens",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 929,
+            "value_now": 929
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4495,
+            "value_now": 4495
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 10,
+            "value_now": 10
+          }
+        ],
+        "teamBValueThen": 5434.0,
+        "teamBValueNow": 5434.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": -121.0,
+        "marginCurrent": -121.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388678727138840576",
+        "transactionId": "1388678727138840576",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "$21 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "$21 FAAB",
+            "type": "faab",
+            "value_then": 21,
+            "value_now": 21
+          }
+        ],
+        "teamAValueThen": 21.0,
+        "teamAValueNow": 21.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Jameis Winston"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jameis Winston",
+            "type": "player",
+            "value_then": 15,
+            "value_now": 15
+          }
+        ],
+        "teamBValueThen": 15.0,
+        "teamBValueNow": 15.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": -6.0,
+        "marginCurrent": -6.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388633217661145088",
+        "transactionId": "1388633217661145088",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Tank Dell"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tank Dell",
+            "type": "player",
+            "value_then": 80,
+            "value_now": 80
+          }
+        ],
+        "teamAValueThen": 80.0,
+        "teamAValueNow": 80.0,
+        "teamAValueChange": 0.0,
+        "teamB": "thekylecasey",
+        "teamBReceived": [
+          "2028 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 42,
+            "value_now": 42
+          }
+        ],
+        "teamBValueThen": 42.0,
+        "teamBValueNow": 42.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "brevinowens",
+        "winnerCurrent": "brevinowens",
+        "marginAtTrade": 38.0,
+        "marginCurrent": 38.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388605639894249472",
+        "transactionId": "1388605639894249472",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Baker Mayfield",
+          "Jonathan Taylor",
+          "Sean Tucker"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Baker Mayfield",
+            "type": "player",
+            "value_then": 2655,
+            "value_now": 2564
+          },
+          {
+            "name": "Jonathan Taylor",
+            "type": "player",
+            "value_then": 4538,
+            "value_now": 4570
+          },
+          {
+            "name": "Sean Tucker",
+            "type": "player",
+            "value_then": 30,
+            "value_now": 33
+          }
+        ],
+        "teamAValueThen": 7223.0,
+        "teamAValueNow": 7167.0,
+        "teamAValueChange": -56.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Dylan Sampson",
+          "Woody Marks",
+          "Quinshon Judkins",
+          "Dak Prescott"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Dylan Sampson",
+            "type": "player",
+            "value_then": 134,
+            "value_now": 136
+          },
+          {
+            "name": "Woody Marks",
+            "type": "player",
+            "value_then": 179,
+            "value_now": 179
+          },
+          {
+            "name": "Quinshon Judkins",
+            "type": "player",
+            "value_then": 2412,
+            "value_now": 2475
+          },
+          {
+            "name": "Dak Prescott",
+            "type": "player",
+            "value_then": 4858,
+            "value_now": 4812
+          }
+        ],
+        "teamBValueThen": 7583.0,
+        "teamBValueNow": 7602.0,
+        "teamBValueChange": 19.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": -360.0,
+        "marginCurrent": -435.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 75.0
+      },
+      {
+        "tradeId": "1388374053886099456",
+        "transactionId": "1388374053886099456",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Marvin Harrison",
+          "Kenny Gainwell"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Marvin Harrison",
+            "type": "player",
+            "value_then": 3804,
+            "value_now": 3849
+          },
+          {
+            "name": "Kenny Gainwell",
+            "type": "player",
+            "value_then": 253,
+            "value_now": 259
+          }
+        ],
+        "teamAValueThen": 4057.0,
+        "teamAValueNow": 4108.0,
+        "teamAValueChange": 51.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Jonathan Taylor"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jonathan Taylor",
+            "type": "player",
+            "value_then": 4538,
+            "value_now": 4570
+          }
+        ],
+        "teamBValueThen": 4538.0,
+        "teamBValueNow": 4570.0,
+        "teamBValueChange": 32.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 481.0,
+        "marginCurrent": 462.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 19.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-06-28T15:15:45.469486",
-      "totalTrades": 94,
+      "lastUpdated": "2026-08-02T20:59:56.059220",
+      "totalTrades": 99,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-05-05"
+        "latest": "2026-07-31"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5317,7 +5597,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 14
+        "season_3": 19
       },
       "seasonInfo": {
         "season_2": {
@@ -5326,14 +5606,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-06-28T15:14:12.041628Z"
+          "last_fetched": "2026-08-02T20:58:32.217227Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 95,
-        "dashboardTradesGenerated": 94,
+        "rawTradesProcessed": 100,
+        "dashboardTradesGenerated": 99,
         "multiTeamTradesSkipped": 1
       }
     }
