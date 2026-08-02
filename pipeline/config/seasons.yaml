@@ -2,15 +2,15 @@ seasons:
   season_2:
     status: static
     league_id: '1180814327660371968'
-    year: 2024
-    description: Season 2 - Historical data (2024)
+    year: 2025
+    description: Season 2 - Historical data (2025)
     backfill_completed: true
     last_incremental_fetch: '2025-12-30T19:33:46.040000+00:00'
   season_3:
     status: active
     league_id: '1312166810505719808'
-    year: 2025
-    description: Season 3 - Current season (2025)
+    year: 2026
+    description: Season 3 - Current season (2026)
     last_incremental_fetch: '2026-03-01T00:00:00Z'
 pipeline:
   active_seasons:
