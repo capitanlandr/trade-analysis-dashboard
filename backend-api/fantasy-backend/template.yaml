@@ -63,11 +63,17 @@ Resources:
 
   # ============================================================
   # Lambda Layer: pandas + numpy (Python 3.14, arm64)
-  # Task 1.6: Build with ./build-layer.sh
-  # The zip MUST be rebuilt whenever the runtime changes: pandas
-  # and numpy ship compiled extensions tagged to one CPython ABI
-  # (cpython-314-aarch64-linux-gnu), so a 3.11-built zip cannot
-  # be imported by a 3.14 function.
+  # Build with ./build-layer.sh -- consumed only by EnrichmentFunction.
+  #
+  # The zip MUST be rebuilt whenever the runtime changes: pandas and
+  # numpy ship compiled extensions tagged to one CPython ABI
+  # (cpython-314-aarch64-linux-gnu), so a 3.11-built zip cannot be
+  # imported by a 3.14 function.
+  #
+  # `sam build` does NOT rebuild this -- it passes the zip through by
+  # ContentUri reference, so a green build proves nothing about the
+  # layer. Run ./build-layer.sh separately, and on every fresh clone
+  # since layers/*.zip is gitignored.
   # ============================================================
   PandasNumpyLayer:
     Type: AWS::Serverless::LayerVersion

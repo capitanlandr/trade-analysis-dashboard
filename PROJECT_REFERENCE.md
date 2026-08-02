@@ -616,9 +616,11 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 - The frontend code supports Lambda (`api-client.ts` has the toggle) but it is disabled in production.
 - Lambda/DynamoDB data has diverged from pipeline output (different valuations, different trade counts).
 - Do not enable `VITE_USE_LAMBDA_API=true` in production until Lambda data parity with the pipeline is verified.
-- **The ingestion and enrichment schedules are now DISABLED**, so DynamoDB data is frozen as of 2026-07-27 and will go stale. Resuming the migration requires re-enabling both schedules and backfilling.
+- **The ingestion and enrichment schedules are now DISABLED**, so DynamoDB data is frozen and will go stale. Resuming the migration requires re-enabling both schedules and backfilling. Note the manual invocation on 2026-08-02 (below) refreshed the `ENRICHED_*#LATEST` items, so those are current as of that date; the raw items behind them are not.
 - `socket.io-client` is installed for future real-time features.
 - `REAL_TIME_DASHBOARD_ROADMAP.md` outlines WebSocket plans.
+
+**Runtime: python3.14, deployed 2026-08-02.** All three Lambdas plus the pandas/numpy layer moved off `python3.11`. See "Lambda Runtime (python3.14, migrated 2026-08-02)" below for what shipped and what it proved.
 
 ---
 
@@ -662,17 +664,9 @@ CloudFront (1 TB/mo transfer) and S3 (~2 MB in `dynasuiiii-website`) are nowhere
 
 ### Known open items
 
-- **Python 3.11 runtime should be migrated to `python3.14` (corrected 2026-08-02; migration staged, not yet deployed).**
+- **Python 3.11 -> 3.14 runtime migration: DONE, deployed and verified 2026-08-02.** Kept here rather than deleted because the findings recur on every future runtime change. Full detail in the section "Lambda Runtime (python3.14, migrated 2026-08-02)" below.
 
-  **The dates in the original version of this entry were wrong.** It claimed deprecation 2026-06-30, block-create 2026-07-31, and block-update 2026-08-31. Verified against the live AWS docs on 2026-08-02: `python3.11` is listed in the **Supported runtimes** table (not Deprecated), with **deprecation Jun 30 2027, block-create Jul 31 2027, block-update Aug 31 2027**. The bad dates came from cfn-lint's bundled `LmbdRuntimeLifecycle.json` inside the local SAM CLI install, which carries stale data derived from Amazon Linux 2's EOL and lists python3.10 and python3.11 with byte-identical dates. Live evidence agreed with the docs, not cfn-lint: all three functions were `State: Active` / `LastUpdateStatus: Successful` well past the supposed block-create date. **Do not re-derive runtime deadlines from local cfn-lint data; read the AWS docs table.**
-
-  **The real reason to migrate is the operating system, not the block date.** `python3.11` runs on **Amazon Linux 2, which reached end of life 2026-06-30**. Per the AWS runtimes page, AL2-based runtimes now receive patches only for *critical and selected important* AL2 security issues plus language patches, until the 2027 deprecation date. AL2023-based `python3.14` is fully supported (deprecation Jun 30 2029).
-
-  Note that `sam validate --lint` reported this as **`E2531` (error, non-zero exit)**, not `W2531` (warning) as originally recorded here, so the template was failing lint outright.
-
-  **Status:** migration completed locally on 2026-08-02 and validated (`sam validate --lint` clean, `sam build` succeeded, layer rebuilt with verified `cpython-314-aarch64-linux-gnu` ABI tags, 56 pipeline tests pass on 3.14). **Not deployed and not committed.** Key finding: the `PandasNumpyLayer` required both a version bump (pandas 2.3.2 / numpy 2.2.6 have **no cp314 wheels**; cp314 starts at 2.3.3 for both) and a platform-tag change (`manylinux2014_aarch64` resolves to nothing on cp314; must be `manylinux_2_28_aarch64`, satisfied by AL2023's glibc 2.34). `sam build` does **not** rebuild the layer -- it passes the zip through by `ContentUri` reference, so a green build says nothing about layer correctness; `./build-layer.sh` must be run separately, and on every fresh clone since `layers/*.zip` is gitignored. Remaining risk: the rebuilt layer has never been imported on real Lambda arm64 (no container engine available locally), so an import failure would surface only at first invocation -- smoke-test `EnrichmentFunction` immediately after deploying, as it is the only function that loads the layer.
-
-  **Out of scope, still open:** `pipeline/requirements.txt` pins `pandas==2.2.0`, which **cannot install on Python 3.14**, and `.github/workflows/update-dashboard.yml` pins `python-version: '3.11'`. That workflow runs the ETL pipeline, which is the live production data path (`VITE_USE_LAMBDA_API=false`), so bumping it is a riskier change than the Lambda migration and is deliberately separate. Encouraging signal: all 56 pipeline tests pass on 3.14 with pandas 2.3.3.
+  Residual, low priority: `pipeline/requirements.txt` pins `pandas==2.2.0`, which **cannot install on Python 3.14**, and `.github/workflows/update-dashboard.yml` pins `python-version: '3.11'`. That workflow runs the ETL pipeline, which is the live production data path (`VITE_USE_LAMBDA_API=false`), so bumping it is riskier than the Lambda work was and is deliberately separate. Encouraging signal: all 56 pipeline tests pass on 3.14 with pandas 2.3.3.
 - **Cost Explorer requires a one-time console activation** -- it CANNOT be enabled via API or CLI. `aws ce get-cost-and-usage` returns `AccessDeniedException: User not enabled for cost explorer access` even though `personal-cli-user` holds `AdministratorAccess`, so this is an account-level service activation, not an IAM permissions gap. To enable: sign in to the AWS console as the account root or an admin, open **Billing and Cost Management -> Cost Explorer**, and click through the activation. Data becomes available within ~24 hours and cannot be backfilled beyond that point. Until then, use the Free Tier API and Pricing API (see "Re-running this audit" above). Note the **AWS Budgets API works today** (`aws budgets describe-budgets --account-id 216571348281`, currently returns no budgets), so a zero-spend budget alert can be configured without Cost Explorer.
 - **CloudWatch log retention: RESOLVED 2026-07-27.** All four Lambda log groups were set to retain forever (`Retention: None`); now set to **30 days**. Applied via CLI, not CloudFormation -- SAM does not manage these implicitly-created log groups, so the setting persists across deploys but will NOT apply to any newly created function's log group. If a new Lambda is added, set its retention explicitly:
   ```bash
@@ -683,7 +677,7 @@ CloudFront (1 TB/mo transfer) and S3 (~2 MB in `dynasuiiii-website`) are nowhere
 - **Still unidentified:** a second CloudFront distribution `E31NFGUDZK6AUK` (`d31ehxmgiph3gd.cloudfront.net`) -- possibly serving the `sts2-dashboard` project -- and the leftover `fantasy-backend-HelloWorldFunction-*` from the SAM scaffold. Both free at current size.
 - Both CloudFront distributions use `PriceClass_All`. `PriceClass_100` would be cheaper above the free transfer tier, but at this traffic level it is cosmetic.
 
-### Re-running this audit
+### Re-running this cost audit
 
 ```bash
 aws sts get-caller-identity --profile personal            # expect account 216571348281
@@ -693,6 +687,59 @@ aws dynamodb describe-table --profile personal --region us-east-1 \
   --query 'Table.{Billing:BillingModeSummary.BillingMode,RCU:ProvisionedThroughput.ReadCapacityUnits}'
 aws events list-rules --profile personal --region us-east-1 \
   --query 'Rules[].{Name:Name,State:State}' --output table
+```
+
+---
+
+## Lambda Runtime (python3.14, migrated 2026-08-02)
+
+All three Lambdas and the pandas/numpy layer run **`python3.14` on arm64**, deployed and verified 2026-08-02. Previously `python3.11`.
+
+### Why
+
+Not the deprecation deadline. `python3.11` is still in the AWS **Supported runtimes** table (deprecation Jun 30 2027, block-create Jul 31 2027, block-update Aug 31 2027). The reason is the OS: **`python3.11` runs on Amazon Linux 2, which reached end of life 2026-06-30**, so it receives only *critical and selected important* AL2 patches plus language patches until 2027. `python3.14` is AL2023-based and supported through Jun 30 2029.
+
+**A prior version of this document recorded the deadline as 2026-08-31 -- roughly 29 days out.** That was wrong, and it came from cfn-lint's bundled `LmbdRuntimeLifecycle.json` inside the local SAM CLI install, which carries stale dates derived from AL2's EOL and lists python3.10 and python3.11 with byte-identical dates. Live evidence agreed with the AWS docs, not cfn-lint: all three functions were `State: Active` / `LastUpdateStatus: Successful` past the supposedly-blocking date. **Read runtime deadlines from the AWS docs table, never from local cfn-lint data.**
+
+`sam validate --lint` was reporting this as **`E2531` (error, non-zero exit)**, not a warning, so the template was failing lint outright before the migration.
+
+### The layer is the hard part of any runtime change
+
+`PandasNumpyLayer` needed two independent fixes, both mandatory:
+
+1. **Version floor.** pandas 2.3.2 and numpy 2.2.6 have **no cp314 wheels at all**. cp314 support starts at **2.3.3 for both**. The old pins simply cannot build for this runtime.
+2. **Platform tag.** `--platform manylinux2014_aarch64` resolves to **nothing** on cp314 (`ERROR: Could not find a version that satisfies the requirement pandas (from versions: none)`). The cp314 wheels publish as `manylinux_2_28_aarch64`. AL2023 ships glibc 2.34, so 2.28 is satisfied.
+
+Three things about this layer that are easy to get wrong:
+
+- **`sam build` does NOT rebuild the layer.** It passes the zip through by `ContentUri` reference; there is no `PandasNumpyLayer` directory under `.aws-sam/build/`. A green build proves nothing about layer correctness. Run `./build-layer.sh` separately.
+- **`layers/*.zip` is gitignored**, so the artifact is absent from a fresh clone and must be rebuilt there.
+- **`EnrichmentFunction` is the only consumer.** It is where a bad layer surfaces, and the only thing worth smoke-testing after a layer change.
+
+`build-layer.sh` now strips `__pycache__` and **hard-fails if any `.so` carries a non-`cpython-314` ABI tag**, so a wrong-ABI build cannot reach a deploy silently.
+
+### Deletion policy is read from the DEPLOYED stack, not the new template
+
+Worth internalizing, because it cost a rollback path here. The migration changeset contained `Remove: arn:...layer:pandas-numpy-layer:1`. Setting `RetentionPolicy: Retain` in `template.yaml` did **not** prevent that: CloudFormation reads deletion policy from the **currently deployed** stack, where the old layer resource carried `DeletionPolicy: Delete` from its 2026-02-13 creation. `Retain` protects layer versions published *from now on*; it cannot retroactively protect one already deployed under `Delete`.
+
+Consequence: v1 was deleted on deploy. Before executing, the real v1 content was pulled from AWS via `lambda get-layer-version` and confirmed **byte-identical** to the local archive (sha256 `712fbcdc…`, 42,670,499 bytes), and the recovery procedure was written to `backups/LAYER_V1_ROLLBACK.md`. Both v1 (py3.11) and the deployed v2 (py3.14, verified against AWS `CodeSha256`) are archived in `backups/`, which is gitignored and therefore **local-only -- it will not survive a fresh clone or disk loss**.
+
+### What the deploy verified
+
+`sam deploy` was run as `--no-execute-changeset` first, the changeset was read, then executed explicitly. Result `UPDATE_COMPLETE`.
+
+- **The layer imports on real Lambda arm64.** This was the one thing that could not be verified locally -- macOS cannot execute Linux aarch64 `.so` files and no container engine was available, so only ABI tags had been checked. `EnrichmentFunction` returned `StatusCode: 200`, ran 25.6s, and wrote 18 `ENRICHED_*#LATEST` items across both seasons (94 trades, 522 waivers, empty `errors`). This was also that function's **first complete production run**.
+- **The `datetime.utcnow()` fix is correct live.** `/api/health` returns `...T17:10:13.048143Z`. Note the naive fix is wrong: `isoformat()` on an aware datetime already ends in `+00:00`, so appending `'Z'` yields `+00:00Z`. `dashboard_api/app.py` uses a `utc_timestamp()` helper with `.replace('+00:00','Z')`.
+- **Cost settings survived the drift reconciliation.** This deploy also reconciled the CloudFormation drift left by the 2026-07-27 CLI cost fix. Confirmed after: `BillingMode: PAY_PER_REQUEST`, RCU 0, both EventBridge rules `DISABLED`.
+
+### Checking runtime state
+
+```bash
+aws lambda list-functions --profile personal --region us-east-1 \
+  --query "Functions[?contains(FunctionName,'fantasy-backend')].{Name:FunctionName,Runtime:Runtime,Layers:Layers[].Arn}"
+aws lambda list-layer-versions --layer-name pandas-numpy-layer \
+  --profile personal --region us-east-1 \
+  --query 'LayerVersions[].{V:Version,Runtimes:CompatibleRuntimes}'
 ```
 
 ---
