@@ -154,3 +154,12 @@ AWS_ACCOUNT_SETUP_CHECKLIST.md
 DEPLOYMENT_SUMMARY.md
 GITHUB_SECRETS_SETUP.md
 AWS_SETUP_PERSONAL_ACCOUNT.md
+
+# Preseason poll: credentials and personal links stay local.
+# token.json holds a live OAuth refresh token; prefill_links.csv and
+# responses_raw.json contain league members' identities and picks.
+poll/.venv/
+poll/token.json
+poll/prefill_links.csv
+poll/responses_raw.json
+poll/__pycache__/
