@@ -81,6 +81,19 @@ class TradeStatus(Enum):
 DRAFT_COMPLETION_DATE = datetime(2025, 5, 5)
 SEASON_START_DATE = datetime(2025, 9, 3)
 
+# Date DynastyProcess switched 2026 picks from tier generics ("2026 Early 1st")
+# to exact per-slot entries ("2026 Pick 1.01"), once the 2026 draft order was
+# determined. Verified by binary search over dynastyprocess/data commit history:
+# the 2026-01-01 snapshot of files/values.csv carries 0 exact entries, 2026-01-02
+# carries 60.
+#
+# Stage 3 values each asset from the DynastyProcess snapshot matching its TRADE
+# date, so an exact-slot lookup cannot succeed for a 2026 pick traded before this
+# date -- the string did not exist yet. Those trades fall back to team
+# projections, which is the more faithful valuation anyway, since the draft order
+# was still unknown at the time of the trade.
+DYNASTYPROCESS_2026_EXACT_PICKS_DATE = datetime(2026, 1, 2)
+
 # FAAB conversion rate
 FAAB_VALUE_PER_DOLLAR = 1
 

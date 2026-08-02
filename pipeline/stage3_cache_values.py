@@ -36,7 +36,8 @@ import sys
 # Pipeline utilities
 from config import get_config
 from constants import (OutputFiles, PickTier, DRAFT_COMPLETION_DATE,
-                      FAAB_VALUE_PER_DOLLAR, ROUND_ORDINALS, SEASON_START_DATE)
+                      FAAB_VALUE_PER_DOLLAR, ROUND_ORDINALS, SEASON_START_DATE,
+                      DYNASTYPROCESS_2026_EXACT_PICKS_DATE)
 from utils.logging_config import setup_logging
 from utils.api_client import fetch_with_retry, APIError
 from utils.validators import StageValidator, ValidationError
@@ -413,7 +414,10 @@ def get_2026_plus_pick_value(
     Get value for 2026+ picks.
     
     2026 picks: Use DynastyProcess exact pick values (e.g., "2026 Pick 1.01")
-                since draft order is now finalized
+                since draft order is now finalized. Trades predating the
+                2026-01-02 DynastyProcess format cutover fall back to team
+                projections, because exact-slot entries did not exist in the
+                values snapshot for those trade dates.
     2027/2028 picks: Use DynastyProcess tiered generic values (e.g., "2027 Early 1st")
                      or latest 2026 team projection as proxy
     
@@ -458,7 +462,18 @@ def get_2026_plus_pick_value(
                 logger.debug(f"  ✓ {origin_owner}'s 2026 Round {round_num} → {exact_pick_name} = {value:.0f}")
                 return value, f"DynastyProcess:{exact_pick_name}", metadata
             else:
-                logger.warning(f"DynastyProcess lookup failed for {exact_pick_name}")
+                # A miss is EXPECTED for trades predating the DynastyProcess format
+                # cutover: the values snapshot for that trade date only carried tier
+                # generics, so no exact-slot string could match. Log at debug and let
+                # the projection fallback below handle it. Only a miss on a
+                # post-cutover trade indicates a real problem worth surfacing.
+                if trade_dt < DYNASTYPROCESS_2026_EXACT_PICKS_DATE:
+                    logger.debug(
+                        f"  {exact_pick_name} not in pre-{DYNASTYPROCESS_2026_EXACT_PICKS_DATE:%Y-%m-%d} "
+                        f"values (tier generics only); using projection fallback"
+                    )
+                else:
+                    logger.warning(f"DynastyProcess lookup failed for {exact_pick_name}")
         else:
             logger.warning(f"No draft order mapping found for {origin_owner} Round {round_num}")
         
