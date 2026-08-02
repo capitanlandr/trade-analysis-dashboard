@@ -79,7 +79,14 @@ Resources:
         - python3.14
       CompatibleArchitectures:
         - arm64
-      RetentionPolicy: Delete
+      # Retain, not Delete: a runtime change publishes a NEW layer version and
+      # repoints the functions at it. Delete would let CloudFormation remove
+      # the previous (python3.11) version, destroying the only rollback path.
+      # Retain keeps v1 alive so functions can be pointed back at it if the
+      # 3.14 layer fails to import on real arm64. Cost of keeping it: ~41 MB
+      # against the 75 GB account code-storage limit, i.e. negligible. Prune
+      # old versions manually once 3.14 is confirmed working in production.
+      RetentionPolicy: Retain
 
   # ============================================================
   # Dashboard API Lambda (read endpoints)
