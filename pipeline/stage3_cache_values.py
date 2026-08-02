@@ -52,7 +52,7 @@ metrics = LocalMetrics()
 
 # Initialize team resolver for name mapping
 try:
-    team_resolver = TeamResolver("../team_identity_mapping.csv")
+    team_resolver = TeamResolver(OutputFiles.TEAM_IDENTITY_MAPPING.value)
     logger.info("✓ Loaded team resolver for roster-based name mapping")
 except Exception as e:
     logger.error(f"Failed to load team resolver: {e}")
