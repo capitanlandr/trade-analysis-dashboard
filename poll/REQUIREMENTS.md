@@ -1,8 +1,9 @@
 # Preseason Poll — Requirements
 
-**Status:** Draft, pending approval
+**Status:** Mechanism approved. Question format pending mobile testing.
 **Author:** Landry Ndahayo
 **Date:** 2026-08-02
+**Last revised:** 2026-08-02
 **Season:** 2026 (season_4)
 
 ---
@@ -15,14 +16,24 @@ predictions are scored against actual results to answer two questions: who read
 the league best, and who was most delusional about their own team.
 
 This revision expands the original scope from eight simple-choice questions to
-include ordered placement predictions (division finish and full league finish),
-which changes the collection mechanism materially. The change is not
-incremental. It requires a decision documented in Section 3 before any
-implementation begins.
+include ordered placement predictions, which changed the collection mechanism
+materially.
+
+**Approved 2026-08-02:** the poll is a custom form on the dashboard writing to
+DynamoDB (Option B, Section 3). Google Forms is not used. Section 2 records why
+that constraint drove the decision and is retained as rationale rather than an
+open question.
+
+The primary respondent device is a phone, and the heaviest task is ordering
+three divisions of four managers each. **The interaction pattern for that task
+is not yet decided and will be settled by building the candidates and testing
+them on a real phone, not by argument.** See Section 3.4 and OD-7.
 
 ---
 
-## 2. The blocking constraint
+## 2. Why Google Forms was ruled out
+
+Retained as rationale. The decision in Section 3 rests on this finding.
 
 **Google Forms has no ranking or drag-and-drop question type. This is a hard
 limitation, not a difficulty.**
@@ -59,7 +70,120 @@ than prevented at entry.
 
 ---
 
-## 3. Decision required: collection mechanism
+## 3. Collection mechanism — APPROVED
+
+**Decision, 2026-08-02: Option B. Custom form on the dashboard, writing to
+DynamoDB.**
+
+The respondent never leaves the dashboard. One URL goes to the group chat, the
+respondent picks their identity, answers, and submits. Submission POSTs to a new
+route on the already-deployed API and persists to the existing
+`fantasy-dashboard-data` table.
+
+Options A and B are retained below as the record of what was weighed.
+
+### 3.1 Google Forms submission was investigated and rejected
+
+An intermediate design was considered: keep the custom form on the dashboard for
+the interface, but have it submit *into* a Google Form so responses land in a
+Google Sheet.
+
+**This is not possible.** Verified against the live Forms v1 discovery document:
+`forms.responses` exposes only `get` and `list`. **There is no `create`,
+`insert`, or `batchCreate` method.** The API reads responses and builds forms;
+it cannot write a response. Google does not permit injecting ballots into a
+form's response set.
+
+The known workaround is to POST directly to a form's undocumented
+`/formResponse` endpoint using scraped `entry.<id>` field names. **Rejected.**
+It is an internal endpoint with no compatibility guarantee, it fails silently
+rather than erroring, and the failure would surface during the one week twelve
+people are actually submitting. Not an acceptable dependency for the critical
+path.
+
+### 3.2 Google Sheets as a direct write target was also rejected
+
+Writing straight to a Sheet via `sheets.spreadsheets.values.append` *is*
+supported and would work. It was rejected for the submission path on two
+grounds:
+
+1. **It puts a live external dependency in the submit path.** The Lambda would
+   hold a Google OAuth refresh token, which expires, can be revoked, and needs
+   re-consent. If it lapses, **submissions fail** — during the exact window the
+   poll is open. DynamoDB has no external dependency; the Lambda already holds
+   an IAM policy for the table.
+2. **The available scopes are too broad.** `values.append` requires `drive`,
+   `drive.file`, or `spreadsheets`. Even the narrowest grants more than
+   "append to this one sheet," which is disproportionate for a league poll.
+
+### 3.3 Sheet export deferred, not cancelled
+
+A Sheet remains useful as a private working view for the commissioner. It is
+implemented as a **separate, manually-run export script reading from DynamoDB**,
+never as part of the submit path. If the export breaks, it is re-run; no ballot
+is ever at risk. It runs from the commissioner's machine with existing
+credentials, so no Google token is deployed to a Lambda.
+
+**Out of scope for v1** (Section 3.5). The commissioner's need to inspect
+ballots is met in v1 by a CLI flag. The Sheet is added only if that proves
+insufficient, since league-facing results are served by the results page rather
+than a spreadsheet.
+
+### 3.4 Open: the ordering interaction pattern
+
+Mechanism is settled; **the interaction for ordering a division is not.** This
+is the highest-usage, highest-risk interaction in the poll: three separate
+four-manager orderings, on a phone, by respondents with no patience for a
+fiddly interface.
+
+Candidates, all viable now that the form is custom:
+
+| Pattern | Taps to order one division | Notes |
+|---|---|---|
+| Drag to reorder | 1-3 drags | Most direct. Touch drag is the least reliable interaction on mobile and needs a touch-capable library; HTML5 native DnD does not fire touch events. |
+| Up/down buttons per row | 1-6 taps | Large, unambiguous targets. No drag. Tedious for a full reversal. |
+| Tap-in-order selection | Exactly 4 taps | Respondent taps managers 1st through 4th; list builds as they go. No dragging, no ambiguity, and progress is self-evident. |
+| Single dropdown, 24 orderings | 1 tap | Every option is a complete valid ordering, so an invalid ballot is impossible. Native phone dropdown. Requires reading option strings rather than manipulating a list. |
+| 4x4 grid | 4 taps | Familiar, but wide on a narrow screen and permits contradictory answers. |
+
+A four-manager division has only **24 possible complete orderings**, which is
+what makes the single-dropdown option viable at all. It does not generalize:
+twelve managers have 479,001,600 permutations, so any full-league ordering
+question needs a different pattern (see OD-8).
+
+**This will be decided by testing, not discussion.** Section 10 sequences a
+prototype of the leading candidates, deployed to a real URL, opened on an actual
+phone, and judged on tap count and whether ordering three divisions feels like a
+chore. Recorded as OD-7.
+
+### 3.5 Version scope
+
+Defined because "v1" was previously used without definition.
+
+**v1 — collection.** Everything required for twelve managers to submit ballots
+and for the commissioner to read them.
+
+In scope: poll page at a single shareable URL; identity picker; the approved
+question set; submit to DynamoDB; resubmit pre-loading prior answers; the
+server-enforced lock; a CLI that prints every ballot.
+
+Out of scope: Sheet export; public results page; end-of-season scoring;
+`season_4` configuration in `seasons.yaml`.
+
+Done when: a link posted to the group chat results in twelve ballots submitted
+from phones, and the commissioner can read them.
+
+**v2 — results page.** The league-facing aggregated view on the dashboard.
+Published once at lock. Static thereafter by design: locked ballots do not
+change, so a daily refresh would render identical numbers for four months.
+
+**v3 — scoring.** Predictions against actual results. This is the component that
+genuinely warrants a daily refresh, since accuracy shifts as real standings
+move. Two leaderboards: accuracy of each manager's read on the league, and the
+gap between self-prediction and actual finish.
+
+Only the FR-21 schema commitment is in v1 scope, so v3 is a comparison rather
+than a migration.
 
 ### Option A — Google Forms with grid questions
 
@@ -77,7 +201,7 @@ requirement; contradictory rankings are possible and must be discarded after the
 fact; resubmitting still starts from a blank form because pre-filled links
 cannot restore prior answers; the respondent leaves the dashboard.
 
-### Option B — Custom form on the dashboard (recommended)
+### Option B — Custom form on the dashboard (APPROVED)
 
 Build the poll as a dashboard page with real drag-to-reorder lists. Submissions
 POST to a new API endpoint and persist to the existing DynamoDB table.
@@ -105,7 +229,7 @@ aggregation rewrite.
 - Requires a `sam deploy`, which is a manual step outside the existing GitHub
   Actions workflow.
 
-### Recommendation
+### Rationale for the approved decision
 
 **Option B.** The determining factor is that Option A cannot satisfy the
 requirement as stated, so choosing it means cutting full league placement rather
@@ -126,7 +250,8 @@ Three points reduce the apparent risk:
 3. **Cost is immaterial.** Twelve managers submitting a handful of times each is
    a few hundred write units against on-demand pricing, which rounds to zero.
 
-Everything below assumes Option B. Section 9 records what changes under Option A.
+Everything below assumes Option B, which is now approved. Section 9 is retained
+only as a record of the rejected fallback.
 
 ---
 
@@ -276,10 +401,10 @@ and their actual finish.
 | # | Question | Type | Options | Required |
 |---|---|---|---|---|
 | Q1 | Who are you? | Identity picker | 12 managers | Yes |
-| Q2 | Order the Chicago division, 1st to 4th | Reorder | Chris, Will, Tyler, Kyle | Yes |
-| Q3 | Order the Wisconsin division, 1st to 4th | Reorder | Brevin, Don, Matt, Jake | Yes |
-| Q4 | Order the American division, 1st to 4th | Reorder | Johnny, Landry, Grant, Zach | Yes |
-| Q5 | Order the entire league, 1st to 12th | Reorder | All 12 | Yes |
+| Q2 | Order the Chicago division, 1st to 4th | Ordering, pattern per OD-7 | Chris, Will, Tyler, Kyle | Yes |
+| Q3 | Order the Wisconsin division, 1st to 4th | Ordering, pattern per OD-7 | Brevin, Don, Matt, Jake | Yes |
+| Q4 | Order the American division, 1st to 4th | Ordering, pattern per OD-7 | Johnny, Landry, Grant, Zach | Yes |
+| Q5 | Order the entire league, 1st to 12th | **Not asked.** Derived per OD-8 | All 12 | n/a |
 | Q6 | Who are the four real contenders? | Multi-select, exactly 4 | All 12 | Yes |
 | Q7 | Who wins the league? | Single select | All 12 | Yes |
 | Q8 | Who takes the loser punishment? | Single select | All 12 | Yes |
@@ -291,15 +416,24 @@ and their actual finish.
 
 ### Notes on specific questions
 
-**Q2 through Q5, ordering.** Each renders as a reorderable list, pre-populated
-in a neutral default order. Default order should be 2025 finish, so the
-respondent expresses change from last season rather than building from nothing,
-which also makes an unedited ballot detectable.
+**Q2 through Q4, division ordering.** The interaction pattern is open (OD-7),
+but two things are fixed regardless of which pattern wins. Whatever is submitted
+has exactly one manager per position by construction, so invalid orderings are
+unreachable rather than filtered later. And where the pattern involves a
+pre-populated starting order, that default is **2025 division finish**, so the
+respondent expresses change from last season rather than building from a blank
+list. A useful side effect: an unedited ballot is detectable, since it exactly
+matches last year.
 
-**Q5 relationship to Q2 through Q4.** Full league placement and division
-placement can disagree: someone may rank Chris first in Chicago in Q2 and place
-him below Will in Q5. Resolution options are to auto-sync them, to warn, or to
-allow the inconsistency. See OD-2.
+**Q5, full league ordering, is no longer asked.** Twelve managers have
+479,001,600 possible orderings, so no single-question pattern captures it, and a
+twelve-item ordering exercise on a phone is precisely the fatigue NFR-2 exists to
+prevent. It is derived instead: the three division orderings from Q2 through Q4
+already rank all twelve managers, and Q6 through Q8 supply the cross-division
+tiebreak. Deriving it also eliminates the inconsistency problem that an
+independent Q5 would have created, where a respondent could rank Chris first in
+Chicago and then place him below Will league-wide. See OD-8, which supersedes
+OD-2.
 
 **Q6, contenders.** Exactly four, enforced at entry. The submit action stays
 disabled until precisely four are selected, which is the requirement that
@@ -323,17 +457,34 @@ against final standings, and cut Q9 and Q10. See OD-1.
 
 ## 7. Non-functional requirements
 
-**NFR-1.** The full flow is usable one-handed on a phone. Reordering must work
-by touch. HTML5 native drag-and-drop does not fire touch events, so a
-touch-capable library is required.
+**NFR-1.** Mobile is the primary target, not a supported secondary. The full
+flow is usable one-handed on a phone, in portrait, without zooming. Any pattern
+that only works well with a mouse is disqualified regardless of how it reads on
+a desktop.
 
-**NFR-2.** Every reorderable list also offers explicit up and down controls per
-row. Dragging item 12 to position 1 on a screen showing six items requires
-drag-while-scrolling, which is unreliable on mobile. Buttons are the dependable
-path and match the original description of dragging up or down.
+**NFR-2.** The ordering interaction is selected by testing candidates on a real
+phone rather than by reasoning about them (OD-7). Selection criteria, in
+priority order:
+
+1. **No ambiguity about current state.** The respondent can tell at a glance
+   what order they have selected.
+2. **No invalid state reachable.** Whatever the interaction, a submitted
+   ordering has exactly one manager per position by construction.
+3. **Tap or gesture count** to order one four-manager division.
+4. **Reliability under real conditions:** a moving thumb, a scrolling page, a
+   mid-sized phone.
+5. **Fatigue across repetition.** The pattern is used three times in a row. A
+   pattern that is pleasant once and tiresome by the third division fails.
+
+**NFR-2a.** If drag is selected, it must be touch-capable, since HTML5 native
+drag-and-drop does not fire touch events, and it must be paired with per-row
+up/down controls. Dragging an item across a list taller than the viewport
+requires drag-while-scrolling, which is unreliable on touch; the buttons are the
+dependable fallback and match the original "drag up or down" description.
 
 **NFR-3.** Time to complete is under four minutes for a respondent who knows
-their answers.
+their answers. Ordering all three divisions accounts for no more than half of
+that.
 
 **NFR-4.** Answers survive accidental navigation away before submit, via local
 draft state.
@@ -350,17 +501,29 @@ losing a ballot.
 | ID | Decision | Options | Recommendation |
 |---|---|---|---|
 | OD-1 | Keep all four transition questions, Q9 through Q12? | All four / cut Q9+Q10 / cut Q11+Q12 | Cut Q9 and Q10. Q11 and Q12 are cleanly verifiable and cover the same ground. |
-| OD-2 | Reconcile Q5 against Q2 through Q4? | Auto-sync / warn only / allow | Warn only. Auto-sync fights the respondent; silent inconsistency corrupts scoring. |
+| ~~OD-2~~ | ~~Reconcile Q5 against Q2 through Q4?~~ | Superseded by OD-8 | Moot. Deriving league order from the division answers makes the two structurally incapable of disagreeing. |
 | OD-3 | Candidate pool size for Q9 and Q10 if retained | Top and bottom 3 / 4 / 6 | Four, if retained at all. |
 | OD-4 | Does any question need the actual 2025 champion? | Yes, re-pull / no, seeding suffices | No. Every question above depends only on seeding. |
 | OD-5 | Lock date | Week 1 kickoff / before rookie draft / other | Week 1 kickoff. Latest point that still precedes real information. |
 | OD-6 | Publish results before the lock, or only after? | Live / after lock | After lock. Live results let late respondents anchor on the consensus. |
+| OD-7 | Ordering interaction pattern | Drag / up-down buttons / tap-in-order / 24-option dropdown / grid | **Decide by phone testing, not discussion.** Prototype the leading candidates and open them on a real device. |
+| OD-8 | Full 12-team league ordering | Derive from division answers / ask top 3 + bottom 3 / drop | Derive it. The three division orderings already rank all twelve, so no extra question is needed and the result cannot contradict their division picks. |
+
+### Closed decisions
+
+| ID | Decision | Resolution | Date |
+|---|---|---|---|
+| OD-M1 | Collection mechanism | Custom dashboard form writing to DynamoDB (Option B) | 2026-08-02 |
+| OD-M2 | Submit into a Google Form so responses land in a Sheet | Not possible. `forms.responses` has no create method; the `/formResponse` workaround was rejected as an unguaranteed internal endpoint on the critical path. | 2026-08-02 |
+| OD-M3 | Write directly to a Google Sheet | Rejected. Puts an expiring OAuth token in the submit path and requires disproportionately broad Drive scopes. | 2026-08-02 |
+| OD-M4 | Sheet as commissioner working view | Deferred past v1. Manual export script reading from DynamoDB, never in the submit path. v1 inspection is served by a CLI flag. | 2026-08-02 |
 
 ---
 
-## 9. What changes under Option A
+## 9. What Option A would have meant
 
-Recorded so the fallback is a known quantity rather than a re-design.
+**Not applicable.** Option B was approved 2026-08-02. Retained as the record of
+the rejected fallback.
 
 - Q5, full league placement, is cut. A 12x12 grid is not viable on mobile.
 - Q2 through Q4 become 4x4 grids; contradictory ballots become possible and
@@ -373,26 +536,49 @@ Recorded so the fallback is a known quantity rather than a re-design.
 
 ---
 
-## 10. Sequencing, on approval
+## 10. Sequencing
 
-1. Confirm Option A or B, and close OD-1 through OD-6.
-2. Build the identity picker page and route. Shared by either option.
-3. Option B only: `POST /api/poll` route, ballot schema, `sam deploy`.
-4. Option B only: poll page with touch reordering and draft persistence.
-5. Rewrite aggregation for the revised question set.
-6. Results page, gated on OD-6.
-7. Configure season_4 in `pipeline/config/seasons.yaml`, currently absent.
-8. Lock script, scheduled per OD-5.
+### Immediate next step: ordering prototype (OD-7)
 
-Scoring against final results is deliberately excluded from this phase. Only
-the schema commitment in FR-21 is in scope now.
+Mechanism is approved, so the one thing blocking the build is the ordering
+interaction. Resolving it by testing costs a few hours and de-risks the most
+used interaction in the poll.
+
+1. Build the leading candidates as a throwaway prototype page: one real
+   division, four real managers, no submit path.
+2. Deploy to a real URL. Testing mobile interaction in a desktop browser's
+   responsive mode is not a substitute; touch behaviour differs.
+3. Open on an actual phone and order all three divisions with each pattern.
+4. Judge against the NFR-2 criteria. Pick one. Record in OD-7.
+5. Discard the prototype.
+
+### Then, v1
+
+6. Identity picker page and route.
+7. Ballot schema, `POST /api/poll` and `GET /api/poll/{roster_id}` on the
+   existing Lambda, then `sam deploy`.
+8. Poll page using the pattern selected in step 4, with draft persistence and
+   prior-answer pre-loading.
+9. CLI to read all ballots.
+10. Lock enforcement, per OD-5.
+
+### Then, v2 and v3
+
+11. Aggregation rewrite for the approved question set.
+12. Results page, published at lock, per OD-6.
+13. `season_4` in `pipeline/config/seasons.yaml`, currently absent.
+14. Scoring against final standings. December.
+
+Optional, any time after v1: Sheet export script (OD-M4).
 
 ---
 
 ## 11. Approval
 
-| Item | Approver | Status |
-|---|---|---|
-| Collection mechanism, Section 3 | Landry | Pending |
-| Question set, Section 6 | Landry | Pending |
-| Open decisions, Section 8 | Landry | Pending |
+| Item | Approver | Status | Date |
+|---|---|---|---|
+| Collection mechanism, Section 3 | Landry | **Approved** | 2026-08-02 |
+| Version scope, Section 3.5 | Landry | **Approved** | 2026-08-02 |
+| Ordering interaction, OD-7 | Landry | Pending phone testing | |
+| Question set, Section 6 | Landry | Pending | |
+| Open decisions OD-1 through OD-6, OD-8 | Landry | Pending | |
