@@ -81,27 +81,82 @@ PIPELINE_STAGES = [
     ("Stage 12: Update Dashboard JSON with Playoff Data", "python3 scripts/generate_dashboard_json_from_cumulative.py")
 ]
 
+# Lines of captured output to echo per stream when a stage SUCCEEDS. Full output
+# is always echoed on failure. Kept generous enough to show per-week fetch counts
+# and dedupe summaries, which are what actually reveal a silently-wrong run.
+SUCCESS_OUTPUT_TAIL_LINES = 40
+
+# Substrings that promote a line out of the success tail and into the run summary.
+# The June 2026 outage hid for 35 days because a caught, logged error scrolled
+# into discarded stdout; these patterns make that class of failure visible even
+# when the stage exits 0.
+WARNING_MARKERS = ("ERROR", "CRITICAL", "Traceback", "WARNING", "non-critical", "failed", "Failed")
+
+
+def _echo_stream(label, text, tail_lines=None):
+    """Print a captured stream, optionally only its last `tail_lines` lines."""
+    if not text or not text.strip():
+        return
+    lines = text.strip().splitlines()
+    truncated = tail_lines is not None and len(lines) > tail_lines
+    shown = lines[-tail_lines:] if truncated else lines
+
+    if truncated:
+        print(f"   ── {label} (last {tail_lines} of {len(lines)} lines) ──")
+    else:
+        print(f"   ── {label} ──")
+    for line in shown:
+        print(f"   │ {line}")
+
+
+def _collect_warnings(*streams):
+    """Return lines from the given streams that look like suppressed problems."""
+    hits = []
+    for text in streams:
+        if not text:
+            continue
+        for line in text.splitlines():
+            if any(marker in line for marker in WARNING_MARKERS):
+                hits.append(line.strip())
+    return hits
+
+
 def run_command(cmd, description="", dry_run=False, cwd=None):
-    """Run a shell command with error handling."""
+    """Run a shell command with error handling.
+
+    Captures stdout and stderr so the caller can inspect them, but ALWAYS echoes
+    them onward. Pipeline stages log through the `logging` module, which writes to
+    stderr, so discarding stderr on success hides every caught-and-logged error
+    the stages emit. Returns (ok, warnings) where warnings are lines that look
+    like suppressed failures inside an otherwise-successful stage.
+    """
     print(f"🔄 {description}")
     if cwd:
         print(f"   Working directory: {cwd}")
     print(f"   Command: {cmd}")
-    
+
     if dry_run:
         print("   [DRY RUN - Not executed]")
-        return True
-    
+        return True, []
+
     try:
         result = subprocess.run(cmd, shell=True, check=True, capture_output=True, text=True, cwd=cwd)
-        if result.stdout:
-            print(f"   ✅ {result.stdout.strip()}")
-        return True
+        _echo_stream("stdout", result.stdout, tail_lines=SUCCESS_OUTPUT_TAIL_LINES)
+        _echo_stream("stderr", result.stderr, tail_lines=SUCCESS_OUTPUT_TAIL_LINES)
+
+        warnings = _collect_warnings(result.stdout, result.stderr)
+        if warnings:
+            print(f"   ⚠️  Completed with {len(warnings)} warning line(s) - see run summary")
+        else:
+            print("   ✅ Completed cleanly")
+        return True, warnings
+
     except subprocess.CalledProcessError as e:
         print(f"   ❌ Error: {e}")
-        if e.stderr:
-            print(f"   Error details: {e.stderr}")
-        return False
+        # Full output on failure, never truncated.
+        _echo_stream("stdout", e.stdout)
+        _echo_stream("stderr", e.stderr)
+        return False, _collect_warnings(e.stdout, e.stderr)
 
 
 def validate_season_configuration():
@@ -366,7 +421,8 @@ def git_deploy(dry_run=False):
     ]
     
     for cmd, desc in commands:
-        if not run_command(cmd, desc, dry_run):
+        ok, _ = run_command(cmd, desc, dry_run)
+        if not ok:
             return False
     
     if not dry_run:
@@ -422,22 +478,41 @@ def main():
     
     pipeline_start_time = time.time()
     processed_stages = []
-    
+    stage_warnings = []
+
     for stage_name, command in PIPELINE_STAGES:
         stage_start_time = time.time()
-        
-        if not run_command(command, stage_name, args.dry_run, cwd=PIPELINE_DIR):
+
+        ok, warnings = run_command(command, stage_name, args.dry_run, cwd=PIPELINE_DIR)
+        if not ok:
             stage_duration = time.time() - stage_start_time
             logger.error(f"Pipeline failed at: {stage_name} after {stage_duration:.2f}s")
             print(f"\n❌ Pipeline failed at: {stage_name}")
             sys.exit(1)
-        
+
+        if warnings:
+            stage_warnings.append((stage_name, warnings))
+
         stage_duration = time.time() - stage_start_time
         processed_stages.append(stage_name)
         logger.info(f"✓ Completed {stage_name} in {stage_duration:.2f}s")
-    
+
     pipeline_duration = time.time() - pipeline_start_time
     logger.info(f"✓ All {len(processed_stages)} pipeline stages completed in {pipeline_duration:.2f}s")
+
+    # Surface warnings from stages that exited 0. A stage can succeed while
+    # silently skipping its real work, which is how the June 2026 breakage stayed
+    # invisible for 35 days. These do not fail the run; they make it inspectable.
+    if stage_warnings:
+        print(f"\n⚠️  Run summary: {len(stage_warnings)} stage(s) logged warnings")
+        for stage_name, warnings in stage_warnings:
+            print(f"\n   {stage_name}")
+            for line in warnings[:10]:
+                print(f"     • {line}")
+            if len(warnings) > 10:
+                print(f"     … {len(warnings) - 10} more")
+    else:
+        print("\n✅ Run summary: no stage warnings")
     
     # Step 3: Copy cumulative files to frontend (Requirement 12.3)
     print(f"\n📁 Copying cumulative files to frontend...")

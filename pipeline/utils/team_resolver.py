@@ -233,35 +233,59 @@ class TeamResolver:
             Number of team names updated
         """
         updates = 0
-        
-        # Create mapping of owner_id to user data for quick lookup
-        user_map = {user['user_id']: user for user in users}
-        
-        for roster in rosters:
-            roster_id = roster['roster_id']
+        skipped = 0
+
+        # Create mapping of owner_id to user data for quick lookup.
+        # Sleeper occasionally returns entries without a user_id (orphaned/co-owner
+        # records), so skip those rather than raising a KeyError on the whole sync.
+        user_map = {user['user_id']: user for user in users or [] if user.get('user_id')}
+
+        for roster in rosters or []:
+            roster_id = roster.get('roster_id')
+            if roster_id is None:
+                skipped += 1
+                logger.warning("Skipping roster with no roster_id in Sleeper payload")
+                continue
+
             owner_id = roster.get('owner_id')
-            
-            # Try to get team name from multiple sources (in priority order)
+
+            # Try to get team name from multiple sources (in priority order).
+            #
+            # dict.get('metadata', {}) is NOT safe here: Sleeper returns
+            # "metadata": null for rosters that have never set a team name (seen
+            # on pre-draft rosters), and an explicit null means get() returns None
+            # rather than the {} default. Coerce with `or {}` so a null metadata
+            # block falls through to the next source instead of raising
+            # AttributeError and aborting the sync for all twelve teams.
             team_name = None
-            
-            # 1. Check roster metadata (less common but takes precedence if present)
-            team_name = roster.get('metadata', {}).get('team_name')
-            
-            # 2. Check user metadata (primary source for team names)
-            if not team_name and owner_id and owner_id in user_map:
-                team_name = user_map[owner_id].get('metadata', {}).get('team_name')
-            
+
+            try:
+                # 1. Check roster metadata (less common but takes precedence if present)
+                team_name = (roster.get('metadata') or {}).get('team_name')
+
+                # 2. Check user metadata (primary source for team names)
+                if not team_name and owner_id and owner_id in user_map:
+                    team_name = (user_map[owner_id].get('metadata') or {}).get('team_name')
+            except AttributeError as e:
+                # Defensive: metadata present but not a dict at all.
+                skipped += 1
+                logger.warning(f"Unexpected metadata shape for roster {roster_id}: {e}")
+                continue
+
             # Skip if no team name found
             if not team_name:
                 continue
-            
+
             # Check if this is actually a change
             current_name = self.get_current_team_name(roster_id)
             if current_name != team_name:
                 if self.update_team_name(roster_id, team_name):
                     updates += 1
                     logger.info(f"Synced team name for roster {roster_id}: {current_name} → {team_name}")
-        
+
+        if skipped:
+            logger.warning(f"Skipped {skipped} roster(s) with unusable Sleeper metadata")
+
         if updates > 0:
             logger.info(f"Synced {updates} team name changes from Sleeper data")
         else:
