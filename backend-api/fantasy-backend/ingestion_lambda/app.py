@@ -97,19 +97,29 @@ def _write_batch_chunk_with_retry(chunk: list, retries: int = MAX_RETRIES) -> No
 
 SLEEPER_BASE_URL = "https://api.sleeper.app/v1"
 
-# Season configuration (embedded - matches pipeline/config/seasons.yaml)
+# Season configuration.
+#
+# This dict is the ONLY season config this function reads. seasons.yaml is
+# bundled alongside it but never loaded (no yaml.safe_load anywhere in the
+# lambdas), so correcting the YAML alone has no runtime effect -- these literals
+# must be edited too, and kept in sync with pipeline/config/seasons.yaml by hand.
+#
+# `year` is the NFL season year used to build Sleeper stats URLs
+# (/stats/nfl/{type}/{year}/{week}) and as part of the DynamoDB partition key
+# NFL_STATS#{year}. It was previously one year behind Sleeper reality: the
+# league's first season was 2024, making season_2 = 2025 and season_3 = 2026.
 SEASONS = {
     'season_2': {
         'status': 'static',
         'league_id': '1180814327660371968',
-        'year': 2024,
-        'description': 'Season 2 - Historical (2024)'
+        'year': 2025,
+        'description': 'Season 2 - Historical (2025)'
     },
     'season_3': {
         'status': 'active',
         'league_id': '1312166810505719808',
-        'year': 2025,
-        'description': 'Season 3 - Current (2025/2026)'
+        'year': 2026,
+        'description': 'Season 3 - Current (2026)'
     }
 }
 
