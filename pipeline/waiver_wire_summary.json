@@ -30,7 +30,7 @@
     },
     {
       "roster_id": 3,
-      "team_name": "Bucky\u2019s Depression",
+      "team_name": "Golden Hour",
       "total_claims": 20,
       "total_bid": 222,
       "avg_bid": 7.4,
@@ -40,7 +40,7 @@
     },
     {
       "roster_id": 4,
-      "team_name": "Spirit Halloween",
+      "team_name": "Lisan al-Caleb",
       "total_claims": 12,
       "total_bid": 125,
       "avg_bid": 8.33,
@@ -70,7 +70,7 @@
     },
     {
       "roster_id": 7,
-      "team_name": "2-Man Title Charge",
+      "team_name": "C\u00e1rtel de Breece y Puka",
       "total_claims": 31,
       "total_bid": 272,
       "avg_bid": 5.44,
@@ -80,7 +80,7 @@
     },
     {
       "roster_id": 8,
-      "team_name": "TRIPS \ud83d\udd25",
+      "team_name": "Loading\u2026",
       "total_claims": 26,
       "total_bid": 193,
       "avg_bid": 5.22,
@@ -110,7 +110,7 @@
     },
     {
       "roster_id": 11,
-      "team_name": "On To 2026",
+      "team_name": "All You Need Is LOVE",
       "total_claims": 23,
       "total_bid": 292,
       "avg_bid": 7.89,
@@ -120,7 +120,7 @@
     },
     {
       "roster_id": 12,
-      "team_name": "Paper Tigers",
+      "team_name": "Bo Nix",
       "total_claims": 36,
       "total_bid": 278,
       "avg_bid": 5.35,
@@ -200,14 +200,14 @@
     }
   },
   "contested_players": {
-    "6111": {
-      "transaction_id": 7,
-      "waiver_bid": 109,
-      "status": 1
-    },
     "1166": {
       "transaction_id": 7,
       "waiver_bid": 84,
+      "status": 1
+    },
+    "6111": {
+      "transaction_id": 7,
+      "waiver_bid": 109,
       "status": 1
     },
     "12775": {
@@ -215,29 +215,19 @@
       "waiver_bid": 51,
       "status": 3
     },
-    "2505": {
-      "transaction_id": 5,
-      "waiver_bid": 46,
-      "status": 1
-    },
     "6271": {
       "transaction_id": 5,
       "waiver_bid": 2,
       "status": 4
     },
+    "2505": {
+      "transaction_id": 5,
+      "waiver_bid": 46,
+      "status": 1
+    },
     "8123": {
       "transaction_id": 5,
       "waiver_bid": 43,
-      "status": 2
-    },
-    "9497": {
-      "transaction_id": 4,
-      "waiver_bid": 0,
-      "status": 4
-    },
-    "8917": {
-      "transaction_id": 4,
-      "waiver_bid": 6,
       "status": 2
     },
     "4454": {
@@ -250,30 +240,25 @@
       "waiver_bid": 25,
       "status": 2
     },
+    "9497": {
+      "transaction_id": 4,
+      "waiver_bid": 0,
+      "status": 4
+    },
     "7670": {
       "transaction_id": 4,
       "waiver_bid": 12,
+      "status": 2
+    },
+    "8917": {
+      "transaction_id": 4,
+      "waiver_bid": 6,
       "status": 2
     },
     "12531": {
       "transaction_id": 4,
       "waiver_bid": 52,
       "status": 1
-    },
-    "6011": {
-      "transaction_id": 3,
-      "waiver_bid": 41,
-      "status": 1
-    },
-    "3161": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 2
-    },
-    "2197": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
     },
     "8160": {
       "transaction_id": 3,
@@ -285,9 +270,9 @@
       "waiver_bid": 0,
       "status": 3
     },
-    "12502": {
+    "6011": {
       "transaction_id": 3,
-      "waiver_bid": 7,
+      "waiver_bid": 41,
       "status": 1
     },
     "5857": {
@@ -299,6 +284,21 @@
       "transaction_id": 3,
       "waiver_bid": 0,
       "status": 3
+    },
+    "2197": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "3161": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 2
+    },
+    "12470": {
+      "transaction_id": 3,
+      "waiver_bid": 6,
+      "status": 1
     }
   },
   "bidding_patterns": {
@@ -311,28 +311,28 @@
       "12": 11,
       "4": 10,
       "11": 9,
-      "6": 8,
       "7": 8,
-      "25": 7,
+      "6": 8,
       "3": 7,
-      "15": 6,
+      "25": 7,
       "9": 6,
+      "15": 6,
       "8": 5,
       "35": 3,
-      "13": 3,
       "41": 3,
-      "16": 2,
-      "39": 2,
-      "46": 2,
-      "31": 2,
+      "13": 3,
       "50": 2,
-      "32": 2,
-      "43": 2,
-      "52": 2,
-      "24": 2,
-      "17": 2,
-      "38": 2,
       "51": 2,
+      "38": 2,
+      "17": 2,
+      "43": 2,
+      "16": 2,
+      "32": 2,
+      "52": 2,
+      "39": 2,
+      "31": 2,
+      "46": 2,
+      "24": 2,
       "109": 1,
       "55": 1,
       "84": 1,
@@ -342,7 +342,7 @@
       {
         "player_id": "6111",
         "waiver_bid": 109,
-        "team_name": "2-Man Title Charge",
+        "team_name": "C\u00e1rtel de Breece y Puka",
         "status": "complete"
       },
       {
@@ -390,13 +390,13 @@
       {
         "player_id": "6111",
         "waiver_bid": 50,
-        "team_name": "On To 2026",
+        "team_name": "All You Need Is LOVE",
         "status": "failed"
       },
       {
         "player_id": "331",
         "waiver_bid": 50,
-        "team_name": "Spirit Halloween",
+        "team_name": "Lisan al-Caleb",
         "status": "complete"
       }
     ],
@@ -406,8 +406,8 @@
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 7,
-    "total_duplicates": 0,
+    "total_new_transactions": 0,
+    "total_duplicates": 7,
     "fetch_mode": "incremental"
   }
 }
