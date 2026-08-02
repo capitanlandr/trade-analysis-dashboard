@@ -2,7 +2,7 @@ import json
 import os
 import urllib.request
 import urllib.error
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List
 
 import boto3
@@ -90,6 +90,17 @@ def lambda_handler(event, context) -> Dict[str, Any]:
             'error': 'Internal server error',
             'message': str(e)
         })
+
+
+def utc_timestamp() -> str:
+    """Current UTC time as an ISO-8601 string ending in 'Z'.
+
+    datetime.utcnow() is deprecated from Python 3.12 onward, so this builds
+    the timestamp from a timezone-aware value instead. The trailing '+00:00'
+    is replaced with 'Z' to keep the wire format byte-identical to what the
+    utcnow().isoformat() + 'Z' pattern produced.
+    """
+    return datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
 
 
 def get_season_param(event: Dict[str, Any]) -> str:
@@ -212,7 +223,7 @@ def handle_league_info() -> Dict[str, Any]:
         return cors_response(200, {
             'success': True,
             'source': 'real-time-sleeper-api',
-            'timestamp': datetime.utcnow().isoformat() + 'Z',
+            'timestamp': utc_timestamp(),
             'league': {
                 'name': league.get('name'),
                 'season': league.get('season'),
@@ -234,7 +245,7 @@ def handle_health() -> Dict[str, Any]:
     return cors_response(200, {
         'status': 'healthy',
         'lambda': 'dashboard_api',
-        'timestamp': datetime.utcnow().isoformat() + 'Z',
+        'timestamp': utc_timestamp(),
         'league_id': LEAGUE_ID,
         'endpoints': [
             '/api/trades',

@@ -7,7 +7,7 @@ Ports pipeline stages 2-5 into a single Lambda that:
 4. Writes 7 ENRICHED_*#LATEST items to DynamoDB
 
 Schedule: Daily at 10 AM UTC (after ingestion)
-Runtime: Python 3.11 + pandas/numpy Lambda Layer
+Runtime: Python 3.14 + pandas/numpy Lambda Layer
 """
 
 import json

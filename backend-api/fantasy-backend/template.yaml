@@ -62,17 +62,21 @@ Resources:
           Value: fantasy-dashboard
 
   # ============================================================
-  # Lambda Layer: pandas + numpy (Python 3.11, arm64)
+  # Lambda Layer: pandas + numpy (Python 3.14, arm64)
   # Task 1.6: Build with ./build-layer.sh
+  # The zip MUST be rebuilt whenever the runtime changes: pandas
+  # and numpy ship compiled extensions tagged to one CPython ABI
+  # (cpython-314-aarch64-linux-gnu), so a 3.11-built zip cannot
+  # be imported by a 3.14 function.
   # ============================================================
   PandasNumpyLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
       LayerName: pandas-numpy-layer
-      Description: pandas and numpy for enrichment pipeline (Python 3.11, arm64)
+      Description: pandas and numpy for enrichment pipeline (Python 3.14, arm64)
       ContentUri: layers/pandas-numpy-layer.zip
       CompatibleRuntimes:
-        - python3.11
+        - python3.14
       CompatibleArchitectures:
         - arm64
       RetentionPolicy: Delete
@@ -85,7 +89,7 @@ Resources:
     Properties:
       CodeUri: dashboard_api/
       Handler: app.lambda_handler
-      Runtime: python3.11
+      Runtime: python3.14
       Architectures:
         - arm64
       Timeout: 30
@@ -110,7 +114,7 @@ Resources:
     Properties:
       CodeUri: ingestion_lambda/
       Handler: app.lambda_handler
-      Runtime: python3.11
+      Runtime: python3.14
       Architectures:
         - arm64
       Timeout: 900
@@ -141,7 +145,7 @@ Resources:
     Properties:
       CodeUri: enrichment_lambda/
       Handler: app.lambda_handler
-      Runtime: python3.11
+      Runtime: python3.14
       Architectures:
         - arm64
       Timeout: 900
