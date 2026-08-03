@@ -304,14 +304,30 @@ def fetch_sleeper_api(url: str, timeout: int = 10) -> Any:
 
 
 def cors_response(status_code: int, body: Dict[str, Any]) -> Dict[str, Any]:
-    """Create response with CORS headers"""
+    """Create response with CORS headers.
+
+    Successful (2xx) responses carry Cache-Control so the EDGE API Gateway's
+    managed CloudFront layer can serve repeat loads without re-invoking the
+    Lambda or re-reading DynamoDB. max-age=3600 is safe because the pipeline
+    refreshes DynamoDB at most once daily, so an hour of edge staleness is
+    invisible to users; s-maxage pins the shared-cache lifetime explicitly.
+
+    Errors (4xx/5xx) are sent no-store: a 404 during a mid-publish window or a
+    transient 500 must not be cached and served back after the data recovers.
+    """
+    headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        'Access-Control-Allow-Methods': 'GET,OPTIONS'
+    }
+    if 200 <= status_code < 300:
+        headers['Cache-Control'] = 'public, max-age=3600, s-maxage=3600'
+    else:
+        headers['Cache-Control'] = 'no-store'
+
     return {
         'statusCode': status_code,
-        'headers': {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-            'Access-Control-Allow-Methods': 'GET,OPTIONS'
-        },
+        'headers': headers,
         'body': json.dumps(body, default=str)
     }

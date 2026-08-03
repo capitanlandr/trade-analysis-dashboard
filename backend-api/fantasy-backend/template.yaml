@@ -12,6 +12,12 @@ Description: >
 Globals:
   Function:
     Timeout: 30
+  Api:
+    # gzip any response over 1KB. Every dashboard payload compresses ~90%
+    # (the 331KB waivers response goes to ~30KB on the wire). This was first
+    # set live via `aws apigateway update-rest-api` on the implicit API; it is
+    # declared here so a future `sam deploy` does not silently revert it.
+    MinimumCompressionSize: 1024
 
 Resources:
   # ============================================================
