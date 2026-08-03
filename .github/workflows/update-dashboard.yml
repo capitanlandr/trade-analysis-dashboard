@@ -86,6 +86,43 @@ jobs:
             --include "*.json" \
             --cache-control "public, max-age=3600, must-revalidate"
       
+      # Publishes the dashboard JSON to DynamoDB so the Lambda API can serve it.
+      #
+      # A separate step rather than folded into "Run pipeline and update dashboard"
+      # because that step runs BEFORE aws-actions/configure-aws-credentials, so a
+      # DynamoDB write inside it would have no credentials. Being separate also
+      # makes the publish re-runnable without re-running the whole pipeline.
+      #
+      # Calls stage13 directly rather than `update_dashboard.py --publish-dynamodb`
+      # because that would re-execute all 17 pipeline stages. The artifacts in
+      # dashboard/frontend/public/ were already produced and gated by
+      # verify_dashboard_files() in the earlier step, which is the same
+      # completeness guarantee the --publish-dynamodb path provides -- so calling
+      # the stage directly here is equivalent, minus the duplicate work. That
+      # ordering dependency is why this step must stay after the pipeline step.
+      #
+      # DISABLED BY DEFAULT: set the repo variable PUBLISH_DYNAMODB to 'true' to
+      # enable. Until then the wiring is in place but dormant, so merging this
+      # changes nothing about the daily run.
+      #
+      # Non-fatal on purpose: production is still served from the static JSON
+      # synced to S3 above, so a failed publish to a table nothing reads yet must
+      # not block the dashboard from updating. WHEN VITE_USE_LAMBDA_API BECOMES
+      # 'true' IN PRODUCTION, remove the `|| echo` fallback and the
+      # continue-on-error so a stale table fails the workflow loudly.
+      - name: Publish data to DynamoDB
+        if: vars.PUBLISH_DYNAMODB == 'true'
+        continue-on-error: true
+        run: |
+          cd pipeline
+          if python3 stage13_publish_dynamodb.py; then
+            echo "✅ DynamoDB publish succeeded"
+          else
+            echo "::warning title=DynamoDB publish failed::The DynamoDB table is now stale relative to the deployed static files. The live static site is unaffected. Re-run with: cd pipeline && python3 stage13_publish_dynamodb.py"
+          fi
+        env:
+          PYTHONUNBUFFERED: 1
+
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \

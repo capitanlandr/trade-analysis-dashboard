@@ -44,7 +44,16 @@ REQUIRED_FILES = [
     "3team_trades_analysis.json"
 ]
 
-# JSON files generated directly to dashboard/frontend/public/ by scripts
+# JSON files generated directly to dashboard/frontend/public/ by scripts.
+#
+# verify_dashboard_files() turns this list into a hard gate: a missing file exits
+# non-zero before git_deploy() runs. api-trade-metrics.json was absent from this
+# list from its introduction in June 2026 until August 2026, which mattered
+# because Stage 8a returns bare (not sys.exit) when the trades CSV comes back
+# empty -- so the stage exits 0, never writes the file, and nothing downstream
+# objected. The dashboard would then deploy with Net Advantage silently falling
+# back to the teams payload's totalValueGained, a different number rather than a
+# visible blank. Anything a page reads belongs in this list.
 DASHBOARD_JSON_FILES = [
     "api-trades.json",
     "api-teams.json",
@@ -52,7 +61,8 @@ DASHBOARD_JSON_FILES = [
     "api-standings.json",
     "api-playoff-scenarios.json",
     "waiver-wire-page.json",
-    "api-draft-order.json"
+    "api-draft-order.json",
+    "api-trade-metrics.json"
 ]
 
 # Cumulative files that need to be copied to frontend
@@ -401,6 +411,49 @@ def verify_dashboard_files(dry_run=False):
     
     return all_verified
 
+def publish_to_dynamodb(dry_run=False):
+    """Run Stage 13 to publish dashboard JSON to DynamoDB.
+
+    Deliberately NOT a member of PIPELINE_STAGES. Stage 13 reads whatever sits in
+    dashboard/frontend/public/ and its read_artifact() skips a missing file with a
+    warning rather than failing, so running it inside the stage loop would let it
+    publish a partial dataset on a run where an artifact never got generated --
+    the static files and DynamoDB would then disagree, which is the exact
+    split-brain the stage's own design rule exists to prevent. Calling it here,
+    after verify_dashboard_files() has already gated on all eight artifacts being
+    present, means it only ever publishes a set known to be complete.
+
+    Returns True on success, False on failure. The caller treats False as a
+    warning and proceeds, because production is still served from static JSON:
+    a stale DynamoDB table nobody reads should not block the dashboard from
+    updating. THAT CALCULUS INVERTS once VITE_USE_LAMBDA_API is 'true' in
+    production -- at that point a failed publish means a stale live dashboard,
+    and this should become a hard failure that blocks the deploy. Change the
+    caller at the "publish failure is non-fatal" comment when you flip the flag.
+    """
+    print(f"\n☁️  Publishing dashboard JSON to DynamoDB (Stage 13)...")
+
+    ok, _ = run_command(
+        "python3 stage13_publish_dynamodb.py",
+        "Stage 13: Publish to DynamoDB",
+        dry_run,
+        cwd=PIPELINE_DIR,
+    )
+
+    if ok:
+        logger.info("Stage 13: published dashboard JSON to DynamoDB successfully")
+    else:
+        # Logged at ERROR so it lands in logs/pipeline_{date}.json and the
+        # human log, and so WARNING_MARKERS surfaces it in the run summary.
+        logger.error(
+            "Stage 13 DynamoDB publish FAILED. Static JSON deploy will continue; "
+            "the DynamoDB table is now STALE relative to the deployed static files. "
+            "Re-run manually: cd pipeline && python3 stage13_publish_dynamodb.py"
+        )
+
+    return ok
+
+
 def git_deploy(dry_run=False):
     """Commit and push changes to trigger Vercel deployment."""
     print(f"\n🚀 Deploying to GitHub/Vercel...")
@@ -434,6 +487,9 @@ def main():
     parser = argparse.ArgumentParser(description="Update Trade Analysis Dashboard")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be done without executing")
     parser.add_argument("--skip-git", action="store_true", help="Run pipeline but don't commit/push")
+    parser.add_argument("--publish-dynamodb", action="store_true",
+                        help="After verification passes, publish dashboard JSON to DynamoDB "
+                             "(Stage 13). Requires AWS credentials. Failures warn, not fail.")
     args = parser.parse_args()
     
     print("🏈 Trade Analysis Dashboard Update Script")
@@ -539,7 +595,21 @@ def main():
     # Step 6: Update season metadata after successful execution (Requirement 3.5)
     if not args.dry_run:
         update_season_metadata(season_config, active_seasons)
-    
+
+    # Step 6a: Publish to DynamoDB (opt-in). Runs only after the verification gate
+    # above has confirmed all eight artifacts exist, so a partial set can never
+    # reach the table. A publish failure is non-fatal by design -- see
+    # publish_to_dynamodb() for why, and for when to make it fatal.
+    dynamodb_published = None
+    if args.publish_dynamodb:
+        dynamodb_published = publish_to_dynamodb(args.dry_run)
+        if not dynamodb_published:
+            print("\n⚠️  DynamoDB publish failed - continuing with static deploy")
+            print("   The DynamoDB table is STALE relative to what is about to deploy.")
+            print("   Re-run: cd pipeline && python3 stage13_publish_dynamodb.py")
+    else:
+        print("\n⏭️  Skipping DynamoDB publish (pass --publish-dynamodb to enable)")
+
     # Step 7: Deploy (unless skipped)
     if not args.skip_git:
         if not git_deploy(args.dry_run):
@@ -560,6 +630,10 @@ def main():
         print("🎉 MULTI-SEASON DASHBOARD UPDATE COMPLETE!")
         print(f"   Processed active seasons: {', '.join(active_seasons)}")
         print(f"   Skipped static seasons: {', '.join(static_seasons)}")
+        if dynamodb_published is False:
+            print("   ⚠️  DynamoDB: PUBLISH FAILED - table is stale, static deploy went out")
+        elif dynamodb_published:
+            print("   ☁️  DynamoDB: published")
         print("   Your dashboard should update in 2-3 minutes")
         print("   Check: https://dynasuiiiianalytics.vercel.app/")
     
