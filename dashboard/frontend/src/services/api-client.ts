@@ -25,6 +25,7 @@ import type { StandingsData } from '../types/standings';
 import type { PlayoffScenariosData } from '../types/playoff-scenarios';
 import type { ProgressiveDraftOrder } from '../types/draft-order';
 import type { WaiverWireData } from '../types/waiver-wire';
+import type { TradeMetricsData } from '../types/trade-metrics';
 
 // ---------------------------------------------------------------------------
 // Configuration
@@ -257,5 +258,32 @@ export async function fetchWaivers(
   return fetchJson<WaiverWireData>(
     '/waiver-wire-page.json',
     'fetchWaivers (static)'
+  );
+}
+
+/**
+ * Fetch advanced trade metrics (Sharpe ratio, opponent-adjusted performance).
+ *
+ * Static mode: reads /api-trade-metrics.json (raw, no wrapper).
+ * Lambda mode: calls GET /api/metrics.
+ *
+ * This artifact was added in June 2026, five months after the Lambda API's
+ * original seven routes, and its two consumers called fetch() directly instead
+ * of going through this client. Because VITE_USE_LAMBDA_API is only read here,
+ * those two components kept hitting static JSON even in Lambda mode -- they
+ * were the only raw .json fetches left in the app. Routing them through this
+ * function is what actually makes the toggle cover the whole dashboard.
+ */
+export async function fetchTradeMetrics(
+  baseUrl?: string
+): Promise<TradeMetricsData> {
+  if (USE_LAMBDA_API) {
+    const url = lambdaUrl(baseUrl || API_BASE_URL, '/api/metrics');
+    return fetchJson<TradeMetricsData>(url, 'fetchTradeMetrics');
+  }
+
+  return fetchJson<TradeMetricsData>(
+    '/api-trade-metrics.json',
+    'fetchTradeMetrics (static)'
   );
 }

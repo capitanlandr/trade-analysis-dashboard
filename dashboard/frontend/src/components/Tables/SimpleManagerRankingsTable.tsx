@@ -31,15 +31,19 @@ const SimpleManagerRankingsTable: React.FC = () => {
     queryFn: () => api.getTeams(),
   });
 
+  // Routed through api.getTradeMetrics() so VITE_USE_LAMBDA_API applies; the raw
+  // fetch this replaced bypassed api-client.ts and stayed static in Lambda mode.
+  //
+  // Metrics are enrichment here, not required data: net_advantage is merged into
+  // the teams rows below, and the table renders fine without it. The original
+  // fetch returned null instead of throwing to keep a metrics outage from taking
+  // down the whole table, so this catch preserves that behaviour -- getTradeMetrics
+  // throws on a non-OK response like every other client call.
   const {
     data: tradeMetrics,
   } = useQuery({
     queryKey: ['trade-metrics'],
-    queryFn: async () => {
-      const response = await fetch('/api-trade-metrics.json');
-      if (!response.ok) return null;
-      return response.json();
-    },
+    queryFn: () => api.getTradeMetrics().catch(() => null),
   });
 
   // Safely extract and validate teams data

@@ -29,6 +29,7 @@ def lambda_handler(event, context) -> Dict[str, Any]:
     - GET /api/playoffs    -> ENRICHED_PLAYOFF#LATEST       (Task 3.2)
     - GET /api/draft-order -> ENRICHED_DRAFTORDER#LATEST    (Task 3.3)
     - GET /api/waivers     -> ENRICHED_WAIVERS#LATEST       (Task 3.4)
+    - GET /api/metrics     -> ENRICHED_METRICS#LATEST
 
     Legacy endpoints (direct Sleeper API):
     - GET /api/league-info -> Sleeper API
@@ -64,6 +65,8 @@ def lambda_handler(event, context) -> Dict[str, Any]:
             return handle_draft_order(event)
         elif path == '/api/waivers':
             return handle_waivers(event)
+        elif path == '/api/metrics':
+            return handle_metrics(event)
         elif path == '/api/league-info':
             return handle_league_info()
         elif path == '/api/health':
@@ -79,6 +82,7 @@ def lambda_handler(event, context) -> Dict[str, Any]:
                     '/api/playoffs',
                     '/api/draft-order',
                     '/api/waivers',
+                    '/api/metrics',
                     '/api/league-info',
                     '/api/health'
                 ]
@@ -214,6 +218,28 @@ def handle_waivers(event: Dict[str, Any]) -> Dict[str, Any]:
     return cors_response(200, json.loads(item['Data']))
 
 
+def handle_metrics(event: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Trade metrics endpoint -- single DynamoDB GetItem for ENRICHED_METRICS#LATEST.
+    Returns advanced trade metrics matching api-trade-metrics.json schema
+    (Sharpe ratio, significance test, opponent-adjusted performance per manager).
+
+    Only PK=SEASON#all is published: the payload is 12 pre-aggregated manager rows
+    with no per-record season tag, so a per-season view has to come from
+    generate_trade_metrics.py emitting a per-season file, not from splitting an
+    already-aggregated body. A ?season=season_N request therefore 404s by design
+    rather than silently returning combined figures labelled as one season.
+    """
+    season = get_season_param(event)
+    print(f"handle_metrics: season={season}")
+
+    result = table.get_item(Key={'PK': f'SEASON#{season}', 'SK': 'ENRICHED_METRICS#LATEST'})
+    item = result.get('Item')
+    if not item:
+        return cors_response(404, {'error': 'No enriched metrics data found', 'season': season})
+    return cors_response(200, json.loads(item['Data']))
+
+
 def handle_league_info() -> Dict[str, Any]:
     """Fetch league metadata"""
     try:
@@ -255,6 +281,7 @@ def handle_health() -> Dict[str, Any]:
             '/api/playoffs',
             '/api/draft-order',
             '/api/waivers',
+            '/api/metrics',
             '/api/league-info',
             '/api/health'
         ]

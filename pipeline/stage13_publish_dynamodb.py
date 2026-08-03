@@ -110,6 +110,11 @@ ARTIFACTS: List[Tuple[str, str, str]] = [
     ("ENRICHED_PLAYOFF", "api-playoff-scenarios.json", "snapshot"),
     ("ENRICHED_DRAFTORDER", "api-draft-order.json", "snapshot"),
     ("ENRICHED_WAIVERS", "waiver-wire-page.json", "all"),
+    # Added June 2026, five months after the Lambda's original seven routes, and
+    # consumed by a raw fetch() that bypassed api-client.ts -- so it was invisible
+    # to VITE_USE_LAMBDA_API and stayed static even in Lambda mode. Publishing it
+    # here plus routing it through the client closes the last static fetch.
+    ("ENRICHED_METRICS", "api-trade-metrics.json", "all"),
 ]
 
 

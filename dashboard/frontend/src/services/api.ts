@@ -4,6 +4,7 @@ import type { StandingsData } from '../types/standings';
 import type { PlayoffScenariosData } from '../types/playoff-scenarios';
 import type { ProgressiveDraftOrder } from '../types/draft-order';
 import type { TradeData, Team, LeagueStats } from '../types';
+import type { TradeMetricsData } from '../types/trade-metrics';
 import {
   fetchTrades,
   fetchTeams,
@@ -12,6 +13,7 @@ import {
   fetchPlayoffs,
   fetchDraftOrder,
   fetchWaivers,
+  fetchTradeMetrics,
 } from './api-client';
 
 // ---------------------------------------------------------------------------
@@ -56,6 +58,10 @@ export const api = {
 
   getWaiverWireData: async () => {
     return fetchWaivers();
+  },
+
+  getTradeMetrics: async (): Promise<TradeMetricsData> => {
+    return fetchTradeMetrics();
   },
 };
 
@@ -119,6 +125,15 @@ export const usePlayoffScenariosData = (): UseQueryResult<PlayoffScenariosData> 
   return useQuery({
     queryKey: ['playoff-scenarios'],
     queryFn: () => fetchPlayoffs(),
+    staleTime: QUERY_STALE_TIME,
+    gcTime: QUERY_GC_TIME,
+  });
+};
+
+export const useTradeMetricsData = (): UseQueryResult<TradeMetricsData> => {
+  return useQuery({
+    queryKey: ['trade-metrics'],
+    queryFn: () => fetchTradeMetrics(),
     staleTime: QUERY_STALE_TIME,
     gcTime: QUERY_GC_TIME,
   });

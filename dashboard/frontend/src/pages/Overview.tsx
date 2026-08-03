@@ -31,16 +31,16 @@ const Overview: React.FC = () => {
     queryFn: () => api.getTrades({ maxResults: 10 }),
   });
 
+  // Goes through api.getTradeMetrics() rather than fetch('/api-trade-metrics.json')
+  // so the VITE_USE_LAMBDA_API toggle applies here too. The raw fetch this
+  // replaced bypassed api-client.ts, which is the only place that reads the
+  // toggle, so this card stayed on static JSON even in Lambda mode.
   const {
     data: tradeMetrics,
     isLoading: metricsLoading
   } = useQuery({
     queryKey: ['trade-metrics'],
-    queryFn: async () => {
-      const response = await fetch('/api-trade-metrics.json');
-      if (!response.ok) throw new Error('Failed to load trade metrics');
-      return response.json();
-    },
+    queryFn: () => api.getTradeMetrics(),
   });
   if (statsLoading || tradesLoading) {
     return (
