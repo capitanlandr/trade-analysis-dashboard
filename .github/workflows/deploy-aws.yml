@@ -34,8 +34,17 @@ jobs:
           cd dashboard/frontend
           npm run build
         env:
-          VITE_USE_LAMBDA_API: 'true'
-          VITE_API_BASE_URL: 'https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod'
+          # Static JSON is the production data source; the Lambda migration is PAUSED
+          # (Lambda data does not yet match pipeline output -- fewer trades, stale team
+          # names). Keep this 'false' until parity is verified.
+          #
+          # Do NOT delete this block and rely on .env.production instead: in Vite, shell
+          # env vars take precedence over .env files, so this line -- not the committed
+          # default -- decides the deployed mode. Pinning it explicitly keeps this
+          # workflow consistent with update-dashboard.yml, which builds the same bundle
+          # with no VITE_* overrides.
+          VITE_USE_LAMBDA_API: 'false'
+          # VITE_API_BASE_URL: 'https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod'
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
