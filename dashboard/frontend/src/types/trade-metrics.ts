@@ -28,9 +28,18 @@ export interface SharpeMetrics {
   verdict: string;
 }
 
-/** Statistical significance of a manager's net advantage. */
+/** Statistical significance of a manager's net advantage.
+ *
+ * Field names confirmed against the deployed GET /api/metrics response rather
+ * than inferred. Overview.tsx reads significance.win_rate, so the index
+ * signature this replaced would have let a rename pass typechecking silently.
+ */
 export interface SignificanceMetrics {
-  [key: string]: unknown;
+  wins: number;
+  win_rate: number;
+  p_value: number;
+  direction: string;
+  verdict: string;
 }
 
 export interface OpponentAdjustedMetrics {
