@@ -12,9 +12,17 @@ export interface SeasonConfig {
   leagueId: string;
   /** Season display number */
   number: number;
-  /** Sleeper/NFL season year */
+  /** Sleeper/NFL season year, as reported by the Sleeper API's `season` field */
   year: number;
-  /** Calendar display year (year + 1 for offseason context) */
+  /**
+   * Calendar year shown in the UI. Equal to `year` -- a Sleeper season labelled 2026
+   * runs during calendar 2026.
+   *
+   * This was previously documented as "year + 1 for offseason context", which was a
+   * workaround for `year` being off by one rather than a real convention. Both values
+   * were wrong in a way that cancelled out: season_3 had year 2025 + 1 = 2026, which
+   * rendered correctly by accident. Keep these equal.
+   */
   displayYear: number;
   /** Season status */
   status: 'active' | 'static';
@@ -27,19 +35,19 @@ export const seasons: Record<string, SeasonConfig> = {
     key: 'season_2',
     leagueId: '1180814327660371968',
     number: 2,
-    year: 2024,
+    year: 2025,
     displayYear: 2025,
     status: 'static',
-    description: 'Season 2 - Historical data (2024)',
+    description: 'Season 2 - Historical data (2025)',
   },
   season_3: {
     key: 'season_3',
     leagueId: '1312166810505719808',
     number: 3,
-    year: 2025,
+    year: 2026,
     displayYear: 2026,
     status: 'active',
-    description: 'Season 3 - Current season (2025)',
+    description: 'Season 3 - Current season (2026)',
   },
 };
 
