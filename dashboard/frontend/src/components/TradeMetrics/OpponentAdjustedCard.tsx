@@ -34,12 +34,13 @@ export const OpponentAdjustedCard: React.FC<OpponentAdjustedCardProps> = ({ mana
   const sorted = [...managers].sort((a, b) => b.net_advantage - a.net_advantage);
   const selected = sorted.find(m => m.username === selectedManager) || sorted[0];
 
+  // `card relative` anchors the info tooltip to the card, not the small button.
   return (
-    <div className="card">
+    <div className="card relative">
       <div className="flex items-center mb-4">
         <Users className="h-5 w-5 text-emerald-600 mr-2" />
         <h3 className="text-lg font-semibold">Opponent Breakdown</h3>
-        <div className="relative ml-2">
+        <div className="ml-2">
           <button
             onClick={() => setShowInfo(!showInfo)}
             onMouseEnter={() => setShowInfo(true)}
@@ -48,16 +49,17 @@ export const OpponentAdjustedCard: React.FC<OpponentAdjustedCardProps> = ({ mana
           >
             <Info className="h-4 w-4" />
           </button>
+          {/* Inset to the card's width; see SharpeRatioCard for why the original
+              left-0/sm:right-0 pair ran off-screen at both breakpoints. */}
           {showInfo && (
-            <div className="absolute z-10 w-72 sm:w-80 p-3 bg-gray-900 text-white text-xs sm:text-sm rounded-lg shadow-lg top-6 left-0 sm:left-auto sm:right-0">
+            <div className="absolute z-20 left-4 right-4 top-12 p-3 bg-gray-900 text-white text-xs sm:text-sm rounded-lg shadow-lg sm:left-auto sm:right-4 sm:w-80">
               <p className="leading-relaxed mb-2">
                 Shows who you're winning and losing value against when you trade.
                 Are you extracting value from many different opponents, or is your edge really
                 just coming from one person you keep fleecing?
               </p>
               <p className="leading-relaxed"><strong>Top opponent = X% of total:</strong> What percentage of your overall advantage (or losses) comes from trades with a single person. If one opponent accounts for most of your gains, your success depends on that matchup more than your own skill.</p>
-              <div className="hidden sm:block absolute -top-2 right-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
-              <div className="sm:hidden absolute -top-2 left-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+              <div className="absolute -top-1 left-6 sm:left-auto sm:right-6 w-2 h-2 bg-gray-900 transform rotate-45"></div>
             </div>
           )}
         </div>

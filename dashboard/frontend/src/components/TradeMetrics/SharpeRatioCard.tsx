@@ -36,12 +36,15 @@ export const SharpeRatioCard: React.FC<SharpeRatioCardProps> = ({ managers }) =>
   const sorted = [...managers].sort((a, b) => b.sharpe.value - a.sharpe.value);
   const selected = sorted.find(m => m.username === selectedManager) || sorted[0];
 
+  // `card relative` makes the card the positioning context for the info tooltip below,
+  // rather than the small info button. The card is always fully on-screen, so a tooltip
+  // inset from the card's edges cannot run off the viewport at any width.
   return (
-    <div className="card">
+    <div className="card relative">
       <div className="flex items-center mb-4">
         <TrendingUp className="h-5 w-5 text-blue-600 mr-2" />
         <h3 className="text-lg font-semibold">Sharpe Ratio</h3>
-        <div className="relative ml-2">
+        <div className="ml-2">
           <button
             onClick={() => setShowInfo(!showInfo)}
             onMouseEnter={() => setShowInfo(true)}
@@ -50,8 +53,16 @@ export const SharpeRatioCard: React.FC<SharpeRatioCardProps> = ({ managers }) =>
           >
             <Info className="h-4 w-4" />
           </button>
+          {/* Spans the card's inner width instead of being anchored to the info button.
+              The original "left-0 sm:left-auto sm:right-0" ran off-screen at BOTH
+              breakpoints: sm:right-0 extended 320px leftward from a button near the
+              page's left edge (measured -23px at 1440w), and left-0 extended 288px
+              rightward on mobile (+83px past 390w). Centering on the button was still
+              wrong at <=390w, because the button itself sits far from the viewport
+              centre. Insetting to the card is width-independent: verified on screen at
+              320/390/768/1024/1440. */}
           {showInfo && (
-            <div className="absolute z-10 w-72 sm:w-80 p-3 bg-gray-900 text-white text-xs sm:text-sm rounded-lg shadow-lg top-6 left-0 sm:left-auto sm:right-0">
+            <div className="absolute z-20 left-4 right-4 top-12 p-3 bg-gray-900 text-white text-xs sm:text-sm rounded-lg shadow-lg sm:left-auto sm:right-4 sm:w-80">
               <p className="leading-relaxed mb-2">
                 How much value you gain per trade relative to how wildly your results swing.
                 A high Sharpe means you're consistently extracting value without big gambles.
@@ -59,8 +70,8 @@ export const SharpeRatioCard: React.FC<SharpeRatioCardProps> = ({ managers }) =>
               </p>
               <p className="leading-relaxed mb-1"><strong>Avg Advantage:</strong> On a typical trade, how many more dynasty points your side is worth compared to what you gave up.</p>
               <p className="leading-relaxed"><strong>Volatility:</strong> How much your trade outcomes vary. High volatility means some trades are huge wins and others are big losses.</p>
-              <div className="hidden sm:block absolute -top-2 right-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
-              <div className="sm:hidden absolute -top-2 left-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+              {/* Arrow sits near the left edge, roughly under the info trigger. */}
+              <div className="absolute -top-1 left-6 sm:left-auto sm:right-6 w-2 h-2 bg-gray-900 transform rotate-45"></div>
             </div>
           )}
         </div>
