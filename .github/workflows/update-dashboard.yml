@@ -57,11 +57,24 @@ jobs:
           cd dashboard/frontend
           npm ci
       
+      # VITE_USE_LAMBDA_API is injected here, NOT read from .env.production --
+      # that file is gitignored (dashboard/.gitignore) and was never committed,
+      # so it does not exist in CI and Vite would silently default the flag to
+      # false. Vite inlines VITE_-prefixed env vars at build time, so exporting
+      # them for `npm run build` bakes them into the bundle.
+      #
+      # Controlled by the repo variable USE_LAMBDA_API (set to 'true' on
+      # 2026-08-03 after 8/8 route parity was verified against live AWS). Set it
+      # back to 'false' and re-run to revert to static JSON -- the pipeline still
+      # writes /public/*.json every run, so the fallback stays warm.
       - name: Build production bundle
         run: |
           cd dashboard/frontend
           npm run build
-      
+        env:
+          VITE_USE_LAMBDA_API: ${{ vars.USE_LAMBDA_API }}
+          VITE_API_BASE_URL: https://aucuc2yvd4.execute-api.us-east-1.amazonaws.com/Prod
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
