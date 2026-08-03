@@ -1,10 +1,38 @@
 name: CI/CD Pipeline
 
+# MANUAL ONLY -- this workflow no longer runs on push.
+#
+# It was failing on every single push, which is worse than having no CI at all: a
+# permanently-red check is invisible, and it is what let a real pipeline failure sit
+# unnoticed for 35 days in June 2026.
+#
+# Six of its seven jobs test code that no longer exists or scripts that were never
+# defined:
+#   Test Backend / Dependency Check  -> working-directory: dashboard/backend
+#                                       (archived as dashboard/backend.ARCHIVED)
+#   Test Frontend                    -> npm run lint, npm test  (no such scripts)
+#   Code Quality                     -> npm run format:check     (no such script)
+#                                       tsc --noEmit is already enforced by the local
+#                                       .git/hooks/pre-commit hook
+#   Integration Tests / Deploy Preview -> skipped (need the above, or are stubs that
+#                                       just echo a fake preview URL)
+#
+# The seventh, Security Scan, DID work -- Trivy scanned the tree successfully and only
+# the SARIF upload failed ("Resource not accessible by integration"), which needs GitHub
+# code scanning enabled on the repo. Since this repo is public, that job is the one piece
+# with real value (dependency CVEs + secret scanning), so it is kept below and now runs
+# on push with the upload made non-fatal.
+#
+# Real deployment safety lives in the two workflows that actually run:
+#   deploy-aws.yml       -- builds the frontend (npx tsc && vite build) and deploys
+#   update-dashboard.yml -- runs the data pipeline and surfaces stage warnings
+#
+# To run the legacy jobs by hand: Actions -> CI/CD Pipeline -> Run workflow.
+# To revive them properly: restore dashboard/backend.ARCHIVED, or delete those jobs and
+# add lint/test/format:check scripts to dashboard/frontend/package.json.
+
 on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test-backend:
@@ -75,27 +103,8 @@ jobs:
         name: frontend-build
         path: dashboard/frontend/dist/
 
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@master
-      with:
-        scan-type: 'fs'
-        scan-ref: '.'
-        format: 'sarif'
-        output: 'trivy-results.sarif'
-        
-    - name: Upload Trivy scan results
-      uses: github/codeql-action/upload-sarif@v3
-      if: always()
-      with:
-        sarif_file: 'trivy-results.sarif'
+  # security-scan job moved to .github/workflows/security-scan.yml so it keeps running
+  # on push (it was the only job here that did real work). Do not re-add it here.
 
   dependency-check:
     name: Dependency Check

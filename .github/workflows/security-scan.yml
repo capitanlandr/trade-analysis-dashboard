@@ -1,0 +1,91 @@
+name: Security Scan
+
+# Split out of ci.yml, which was disabled because six of its seven jobs referenced
+# deleted directories or undefined npm scripts and so failed on every push.
+#
+# This job was the exception: Trivy scanned the tree successfully and only the SARIF
+# upload step failed with "Resource not accessible by integration", which requires GitHub
+# code scanning to be enabled on the repo. This repo is PUBLIC, so dependency-CVE and
+# secret scanning are worth keeping on every push.
+#
+# The upload is now `continue-on-error: true`, so a missing code-scanning setup no longer
+# turns the whole check red. Findings are also written to the step summary and uploaded as
+# an artifact, so they stay visible either way.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  trivy:
+    name: Trivy Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # skip-files: pipeline/player_stats_weekly.json is ~13MB of generated data and
+      # Trivy warns about high memory consumption on it. It is pipeline output, not
+      # source, so there is nothing meaningful to scan.
+      - name: Run Trivy vulnerability scanner (SARIF)
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'HIGH,CRITICAL'
+          skip-files: 'pipeline/player_stats_weekly.json'
+
+      - name: Upload SARIF to code scanning
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        continue-on-error: true
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+      - name: Archive SARIF as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trivy-results
+          path: trivy-results.sarif
+          if-no-files-found: warn
+
+      # Human-readable summary so findings are visible without code scanning enabled.
+      # Does not fail the build -- this is a personal project and a new upstream CVE
+      # should not block an unrelated push. Review the summary instead.
+      - name: Summarize findings
+        if: always()
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          severity: 'HIGH,CRITICAL'
+          skip-files: 'pipeline/player_stats_weekly.json'
+          output: 'trivy-table.txt'
+          exit-code: '0'
+
+      - name: Print findings to step summary
+        if: always()
+        run: |
+          {
+            echo "## Trivy scan (HIGH, CRITICAL)"
+            echo ""
+            if [ -s trivy-table.txt ]; then
+              echo '```'
+              cat trivy-table.txt
+              echo '```'
+            else
+              echo "No HIGH or CRITICAL findings."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
