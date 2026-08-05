@@ -663,7 +663,7 @@
           {
             "name": "Kyle Monangai",
             "type": "player",
-            "value_then": 0,
+            "value_then": 469,
             "value_now": 469
           },
           {
@@ -4684,7 +4684,7 @@
           {
             "name": "Kyle Monangai",
             "type": "player",
-            "value_then": 0,
+            "value_then": 469,
             "value_now": 469
           },
           {
@@ -5582,14 +5582,63 @@
         "marginCurrent": 462.0,
         "swingWinner": "tylerpilgrim",
         "swingMargin": 19.0
+      },
+      {
+        "tradeId": "1390130079702487040",
+        "transactionId": "1390130079702487040",
+        "tradeDate": "2026-08-03",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Kyle Monangai",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Kyle Monangai",
+            "type": "player",
+            "value_then": 469,
+            "value_now": 469
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 28,
+            "value_now": 28
+          }
+        ],
+        "teamAValueThen": 497.0,
+        "teamAValueNow": 497.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Derrick Henry"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Derrick Henry",
+            "type": "player",
+            "value_then": 1192,
+            "value_now": 1192
+          }
+        ],
+        "teamBValueThen": 1192.0,
+        "teamBValueNow": 1192.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 695.0,
+        "marginCurrent": 695.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-04T16:10:14.432895",
-      "totalTrades": 99,
+      "lastUpdated": "2026-08-05T16:00:17.980352",
+      "totalTrades": 100,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-07-31"
+        "latest": "2026-08-03"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5597,7 +5646,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 19
+        "season_3": 20
       },
       "seasonInfo": {
         "season_2": {
@@ -5606,14 +5655,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-04T16:08:56.615760Z"
+          "last_fetched": "2026-08-05T15:58:57.559191Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 100,
-        "dashboardTradesGenerated": 99,
+        "rawTradesProcessed": 101,
+        "dashboardTradesGenerated": 100,
         "multiTeamTradesSkipped": 1
       }
     }

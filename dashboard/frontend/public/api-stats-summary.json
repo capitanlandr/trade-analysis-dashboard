@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 99,
-      "totalTradeValue": 341716.0,
-      "avgTradeMargin": 834.8686868686868,
+      "totalTrades": 100,
+      "totalTradeValue": 343405.0,
+      "avgTradeMargin": 833.47,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 28,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-07-31"
+        "latest": "2026-08-03"
       }
     },
     "teamRankings": {
@@ -76,9 +76,9 @@
           "realName": "Johnny",
           "sleeperUsername": "jwalters74",
           "nickname": "Johnny",
-          "tradeCount": 33,
-          "winRate": 42.42424242424242,
-          "avgMargin": 962.2727272727273,
+          "tradeCount": 34,
+          "winRate": 44.11764705882353,
+          "avgMargin": 954.4117647058823,
           "totalValueGained": -516.0
         },
         {
@@ -109,9 +109,9 @@
           "realName": "Chris",
           "sleeperUsername": "cjsyregelas",
           "nickname": "Chris",
-          "tradeCount": 7,
-          "winRate": 42.857142857142854,
-          "avgMargin": 1377.2857142857142,
+          "tradeCount": 8,
+          "winRate": 37.5,
+          "avgMargin": 1292.0,
           "totalValueGained": -2448.0
         },
         {
@@ -205,25 +205,14 @@
           "totalValueGained": 736.0
         },
         {
-          "rosterId": 6,
-          "teamName": "Mostly Washed",
-          "realName": "Chris",
-          "sleeperUsername": "cjsyregelas",
-          "nickname": "Chris",
-          "tradeCount": 7,
-          "winRate": 42.857142857142854,
-          "avgMargin": 1377.2857142857142,
-          "totalValueGained": -2448.0
-        },
-        {
           "rosterId": 7,
           "teamName": "Cártel de Breece y Puka",
           "realName": "Johnny",
           "sleeperUsername": "jwalters74",
           "nickname": "Johnny",
-          "tradeCount": 33,
-          "winRate": 42.42424242424242,
-          "avgMargin": 962.2727272727273,
+          "tradeCount": 34,
+          "winRate": 44.11764705882353,
+          "avgMargin": 954.4117647058823,
           "totalValueGained": -516.0
         },
         {
@@ -236,6 +225,17 @@
           "winRate": 41.66666666666667,
           "avgMargin": 495.5,
           "totalValueGained": -5904.0
+        },
+        {
+          "rosterId": 10,
+          "teamName": "Rashid Shaheed Truthers",
+          "realName": "Jake",
+          "sleeperUsername": "jakeduf",
+          "nickname": "Jake",
+          "tradeCount": 10,
+          "winRate": 40.0,
+          "avgMargin": 246.9,
+          "totalValueGained": -2255.0
         }
       ],
       "byTradeCount": [
@@ -245,9 +245,9 @@
           "realName": "Johnny",
           "sleeperUsername": "jwalters74",
           "nickname": "Johnny",
-          "tradeCount": 33,
-          "winRate": 42.42424242424242,
-          "avgMargin": 962.2727272727273,
+          "tradeCount": 34,
+          "winRate": 44.11764705882353,
+          "avgMargin": 954.4117647058823,
           "totalValueGained": -516.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 19
+        "season_3": 20
       },
       "seasonInfo": {
         "season_2": {
@@ -367,61 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-04T16:08:56.615760Z"
+          "last_fetched": "2026-08-05T15:58:57.559191Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1355347137491124224",
-        "transactionId": "1355347137491124224",
-        "tradeDate": "2026-04-29",
-        "season": "season_3",
-        "teamA": "wkerwin",
-        "teamAReceived": [
-          "Pat Bryant",
-          "2027 Round 4"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Pat Bryant",
-            "type": "player",
-            "value_then": 132,
-            "value_now": 123
-          },
-          {
-            "name": "2027 Round 4",
-            "type": "draft_pick",
-            "value_then": 10,
-            "value_now": 10
-          }
-        ],
-        "teamAValueThen": 143.0,
-        "teamAValueNow": 133.0,
-        "teamAValueChange": -10.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "2026 Round 3"
-        ],
-        "teamBAssets": [
-          {
-            "name": "2026 Round 3",
-            "type": "draft_pick",
-            "value_then": 47,
-            "value_now": 41,
-            "pick_label": "3.09"
-          }
-        ],
-        "teamBValueThen": 130.0,
-        "teamBValueNow": 115.0,
-        "teamBValueChange": -15.0,
-        "winnerAtTrade": "wkerwin",
-        "winnerCurrent": "wkerwin",
-        "marginAtTrade": 13.0,
-        "marginCurrent": 18.0,
-        "swingWinner": "wkerwin",
-        "swingMargin": 5.0
-      },
       {
         "tradeId": "1355265411066634240",
         "transactionId": "1355265411066634240",
@@ -892,6 +842,55 @@
         "marginCurrent": 462.0,
         "swingWinner": "tylerpilgrim",
         "swingMargin": 19.0
+      },
+      {
+        "tradeId": "1390130079702487040",
+        "transactionId": "1390130079702487040",
+        "tradeDate": "2026-08-03",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Kyle Monangai",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Kyle Monangai",
+            "type": "player",
+            "value_then": 469,
+            "value_now": 469
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 28,
+            "value_now": 28
+          }
+        ],
+        "teamAValueThen": 497.0,
+        "teamAValueNow": 497.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Derrick Henry"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Derrick Henry",
+            "type": "player",
+            "value_then": 1192,
+            "value_now": 1192
+          }
+        ],
+        "teamBValueThen": 1192.0,
+        "teamBValueNow": 1192.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 695.0,
+        "marginCurrent": 695.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }

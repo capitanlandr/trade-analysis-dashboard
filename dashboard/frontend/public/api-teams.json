@@ -63,9 +63,9 @@
         "realName": "Chris",
         "sleeperUsername": "cjsyregelas",
         "nickname": "Chris",
-        "tradeCount": 7,
-        "winRate": 42.857142857142854,
-        "avgMargin": 1377.2857142857142,
+        "tradeCount": 8,
+        "winRate": 37.5,
+        "avgMargin": 1292.0,
         "totalValueGained": -2448.0
       },
       {
@@ -74,9 +74,9 @@
         "realName": "Johnny",
         "sleeperUsername": "jwalters74",
         "nickname": "Johnny",
-        "tradeCount": 33,
-        "winRate": 42.42424242424242,
-        "avgMargin": 962.2727272727273,
+        "tradeCount": 34,
+        "winRate": 44.11764705882353,
+        "avgMargin": 954.4117647058823,
         "totalValueGained": -516.0
       },
       {
@@ -137,7 +137,7 @@
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 99,
+      "totalTrades": 100,
       "seasonsIncluded": [
         "season_2",
         "season_3"
