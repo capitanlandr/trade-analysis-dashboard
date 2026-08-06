@@ -1,5 +1,8 @@
 # AWS Migration Sprint Plan v2 -- Path A: Backend Enrichment (Pre-Computed)
 
+> ⚠️ **STATUS: COMPLETED / PARTIALLY SUPERSEDED — historical design record, do not follow verbatim.**
+> The pre-computed-enrichment architecture in this plan was implemented and shipped; the static-JSON → Lambda/DynamoDB migration completed 2026-08-03/04 (both live sites serve 8 Lambda / 0 static). Two things here are now out of date: (1) **Task 1.1 calls for PROVISIONED DynamoDB (25/25 RCU/WCU)** — the 2026-07-27 cost audit reversed this to **PAY_PER_REQUEST** after finding the GSI's provisioned capacity was billing ~$14/mo; (2) the daily publish to DynamoDB is now done by the **pipeline's Stage 13**, not the standalone EnrichmentFunction (which remains deployed but DISABLED as a rollback path). For current-state truth, see `PROJECT_REFERENCE.md` ("AWS Migration Status — COMPLETE", "Lambda Migration (COMPLETE, 2026-08-03/04)", and "Cost Posture"). Retained as a record of the design and the SDM-conditions process.
+
 **Status:** REVISED -- Addressing SDM Conditions
 **Author:** TPM (Technical Program Manager)
 **Date:** 2026-02-12

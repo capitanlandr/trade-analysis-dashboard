@@ -2,7 +2,7 @@
 
 ## What This Project Is
 
-A **fantasy football dynasty league analytics platform** called **Dynasuiiii Analytics**. It pulls data from the Sleeper API, runs it through a multi-stage Python ETL pipeline, generates static JSON files, and serves them via a React/TypeScript dashboard. The league has 12 teams across 2 seasons (Season 2 = 2024 historical, Season 3 = 2025 active).
+A **fantasy football dynasty league analytics platform** called **Dynasuiiii Analytics**. It pulls data from the Sleeper API, runs it through a multi-stage Python ETL pipeline, publishes the results to DynamoDB, and serves them to a React/TypeScript dashboard through a Lambda + API Gateway backend. The pipeline still writes the same JSON files to `dashboard/frontend/public/`, which remain as a warm static fallback. The league has 12 teams across 2 seasons (Season 2 = 2024 historical, Season 3 = 2025 active).
 
 **GitHub repo:** `github.com/capitanlandr/trade-analysis-dashboard`
 
@@ -34,23 +34,24 @@ A **fantasy football dynasty league analytics platform** called **Dynasuiiii Ana
 ```
                      Sleeper API
                          |
+                  Python Pipeline
+                  (Stages 0-12, daily via GitHub Actions)
+                         |
           +--------------+--------------+
           |                             |
-   Python Pipeline               Ingestion Lambda
-   (Stages 0-12)               (Hourly -> DynamoDB;
-                                 DISABLED 2026-07-27)
+   Static JSON Files            Stage 13: publish
+   (public/, warm fallback)     to DynamoDB (step 6a)
           |                             |
-   Static JSON Files            Dashboard API Lambda
-          |                        (5 endpoints)
-   Vite Build (dist/)                  |
-          |                     [Future: frontend
-   +------+------+              reads from API]
-   |             |
-  S3/CF        Vercel
-  (Primary)    (Backup)
+   Vite Build (dist/)             fantasy-dashboard-data
+          |                             |
+   +------+------+              Dashboard API Lambda
+   |             |              (8 endpoints, GetItem)
+  S3/CF        Vercel                   |
+  (Primary)    (Backup) <---- frontend fetches via API Gateway
+                              when VITE_USE_LAMBDA_API=true
 ```
 
-**Current state:** The frontend reads from static JSON files baked into the Vite build at `dashboard/frontend/public/`. The backend-api Lambda + DynamoDB layer exists but the frontend does not consume it yet -- that's the AWS migration in progress.
+**Current state (migration COMPLETE, 2026-08-03/04):** Both live sites (CloudFront and Vercel) serve **8 Lambda-backed endpoints, 0 static fetches**. The frontend reads from DynamoDB through the Dashboard API Lambda; the pipeline's Stage 13 publishes the same pipeline output to DynamoDB on every daily run, and the static JSON files in `dashboard/frontend/public/` remain as a warm fallback. Instant rollback is `USE_LAMBDA_API=false` (repo variable) plus a rebuild -- no data migration. See "Lambda Migration (COMPLETE, 2026-08-03/04)" below for the full cutover record.
 
 ---
 
@@ -195,7 +196,7 @@ Note: Root-level data files (CSVs, JSONs) were removed in June 2026. Canonical c
 
 | File | Purpose |
 |---|---|
-| `api.ts` | Centralized data layer. `USE_STATIC_DATA = true` means it fetches from `/api-*.json` and `/waiver-wire-page.json` in `public/`. Exports: `api` object with `getTrades()`, `getTeams()`, `getStatsSummary()`, etc. Also exports React Query hooks: `useWaiverWireData()`, `useStandingsData()`, `usePlayoffScenariosData()`. Query config: 5-min stale time, 30-min GC time. |
+| `api.ts` / `api-client.ts` | Centralized data layer. The `VITE_USE_LAMBDA_API` flag (injected at build time from the CI repo variable `USE_LAMBDA_API`, **not** from the gitignored `.env.production`) selects the source: `true` (production) fetches from the API Gateway base URL; `false` falls back to `/api-*.json` and `/waiver-wire-page.json` in `public/`. Exports: `api` object with `getTrades()`, `getTeams()`, `getStatsSummary()`, etc., plus React Query hooks: `useWaiverWireData()`, `useStandingsData()`, `usePlayoffScenariosData()`. Query config: 5-min stale time, 30-min GC time. |
 
 #### `src/hooks/`
 
@@ -376,7 +377,7 @@ Output: `league_trades_analysis_pipeline.csv`, `3team_trades_analysis.json`
 
 ---
 
-## `backend-api/` - AWS Serverless Backend (Migration In Progress)
+## `backend-api/` - AWS Serverless Backend (LIVE — serves production)
 
 Built with **AWS SAM** (Serverless Application Model). Defines infrastructure in `template.yaml`.
 
@@ -411,17 +412,21 @@ Note: a leftover `fantasy-backend-HelloWorldFunction-*` from the original SAM sc
 
 ### `backend-api/fantasy-backend/dashboard_api/app.py` - API Lambda
 
-5 endpoints, all fetch live from Sleeper API (no DynamoDB reads yet):
+**This is the live production read path.** All data routes are thin `GetItem` reads against DynamoDB (`PK=SEASON#all`, `SK=ENRICHED_*#LATEST`) — no live Sleeper calls. `/api/{proxy+}` with `Method: ANY` routes everything to this Lambda, so new routes need only a code change, not an API Gateway change.
 
 | Endpoint | What It Returns |
 |---|---|
 | `GET /api/health` | Status, lambda name, timestamp, available endpoints. |
-| `GET /api/trades` | All trades across all weeks. Fetches users, rosters, trades from Sleeper. Sorted by date (newest first). |
-| `GET /api/standings` | Current roster standings. Sorted by wins then points_for. |
-| `GET /api/waivers` | Waiver + free agent transactions from week 1. |
-| `GET /api/league-info` | League metadata: name, season, status, total_rosters. |
+| `GET /api/trades` | Enriched trades (`ENRICHED_TRADES#LATEST`). |
+| `GET /api/teams` | Team/manager rankings (`ENRICHED_TEAMS#LATEST`). |
+| `GET /api/stats` | League stats summary (`ENRICHED_STATS#LATEST`). |
+| `GET /api/standings` | Division standings (`ENRICHED_STANDINGS#LATEST`). |
+| `GET /api/playoffs` | Monte Carlo playoff scenarios (`ENRICHED_PLAYOFF#LATEST`). |
+| `GET /api/draft-order` | 2026 draft order projection (`ENRICHED_DRAFTORDER#LATEST`). |
+| `GET /api/waivers` | Waiver wire analysis (`ENRICHED_WAIVERS#LATEST`). |
+| `GET /api/metrics` | Trade metrics (`ENRICHED_METRICS#LATEST`) — powers Net Advantage. |
 
-CORS enabled (all origins, GET + OPTIONS).
+That is the **8 data routes** the frontend census counts (health is a probe, not a data fetch). CORS enabled (all origins, GET + OPTIONS). Responses carry `Cache-Control: public, max-age=3600` on 2xx and `no-store` on errors; note the managed CloudFront layer in front of the edge-optimized API Gateway does NOT honor these for shared edge caching (both hits show `x-cache: Miss`), so the benefit lands browser-side only.
 
 ### `backend-api/fantasy-backend/ingestion_lambda/app.py` - Ingestion Lambda
 
@@ -501,6 +506,7 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 
 | File | Purpose |
 |---|---|
+| `AWS_MIGRATION_SPRINT_PLAN_V2.md` | **COMPLETED / partially superseded.** Feb 2026 sprint plan for the pre-computed-enrichment architecture the Lambda migration implemented (see "Lambda Migration (COMPLETE, 2026-08-03/04)" above). Its Task 1.1 (PROVISIONED DynamoDB) was reversed by the 2026-07-27 cost audit (now PAY_PER_REQUEST). Retained as a design-history record. |
 | `MULTI_SEASON_LEAGUE_ID_ARCHITECTURE.md` | Complete multi-season architecture spec (84KB). Covers cumulative file management, season tagging, immutability guards, and backward compatibility. |
 | `UNIFIED_CUMULATIVE_MULTI_SEASON_ARCHITECTURE.md` | Unified approach to cumulative file handling across seasons (51KB). |
 | `DRAFT_ORDER_SPECIFICATION.md` | Full spec for progressive draft order tracking (45KB). |
@@ -537,7 +543,7 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 | File | Purpose |
 |---|---|
 | `AWS_LOCAL_DEVELOPMENT_GUIDE.md` | How to develop and test the Lambda backend locally. |
-| `AWS_MIGRATION_GUIDE.md` | Guide for the Vercel -> AWS migration. |
+| `AWS_MIGRATION_GUIDE.md` | **COMPLETED / reference only.** Generic step-by-step for the S3 + CloudFront static-hosting layer (still live). Not the record of the Lambda cutover — see "Lambda Migration (COMPLETE, 2026-08-03/04)" above. |
 | `GITHUB_ACTIONS_SETUP.md` | GitHub Actions setup guide. |
 | `GITHUB_ACTIONS_FIX.md` | Fix documentation for GitHub Actions issues. |
 | `CUSTOM_DOMAIN_OPTIONS.md` | Options for custom domain setup. |
@@ -600,25 +606,27 @@ SAM deploy config: stack name `fantasy-backend`, region `us-east-1`, cached para
 
 ---
 
-## AWS Migration Status
+## AWS Migration Status — COMPLETE (2026-08-03/04)
 
 **What exists and works:**
-- S3 + CloudFront static site hosting (primary production).
+- S3 + CloudFront static site hosting (primary production) plus Vercel (backup).
 - SAM-based Lambda + API Gateway + DynamoDB infrastructure deployed.
-- Dashboard API Lambda serves 5 endpoints with live Sleeper data.
+- Dashboard API Lambda serves **8 endpoints** reading from DynamoDB (`GetItem` on `SEASON#all` / `ENRICHED_*#LATEST`), no live Sleeper calls on those routes.
 
-**Current production approach (as of June 2026):**
-- Frontend reads **static JSON files** generated by the Python pipeline. This is the stable, daily-updated data path.
-- Controlled by `VITE_USE_LAMBDA_API=false` in `.env` and `.env.production`.
-- GitHub Actions runs the pipeline daily, builds the frontend, and deploys `dist/` to S3/CloudFront.
+**Current production approach (as of 2026-08-04):**
+- The frontend reads from **DynamoDB via the Lambda API** on both live sites. A live-bundle inspection confirmed the API Gateway URL is baked into the deployed JS, and a route census returned **8 Lambda / 0 static** with 0 console errors on CloudFront and Vercel.
+- The Python pipeline runs daily via GitHub Actions, and **Stage 13 publishes pipeline output to DynamoDB** on every run (step 6a, after `verify_dashboard_files()` gates a complete artifact set). It still writes the JSON files to `dashboard/frontend/public/`, which remain a warm fallback.
+- Instant rollback: set the repo variable `USE_LAMBDA_API=false` and rebuild. No data migration.
 
-**Lambda migration — PAUSED:**
-- The frontend code supports Lambda (`api-client.ts` has the toggle) but it is disabled in production.
-- Lambda/DynamoDB data has diverged from pipeline output (different valuations, different trade counts).
-- Do not enable `VITE_USE_LAMBDA_API=true` in production until Lambda data parity with the pipeline is verified.
-- **The ingestion and enrichment schedules are now DISABLED**, so DynamoDB data is frozen and will go stale. Resuming the migration requires re-enabling both schedules and backfilling. Note the manual invocation on 2026-08-02 (below) refreshed the `ENRICHED_*#LATEST` items, so those are current as of that date; the raw items behind them are not.
-- `socket.io-client` is installed for future real-time features.
-- `REAL_TIME_DASHBOARD_ROADMAP.md` outlines WebSocket plans.
+**How the flag is wired (important — a real gotcha here):**
+- `dashboard/frontend/.env.production` is **gitignored and never reaches CI**, so editing it changes nothing in production. `Vite` was defaulting the flag to `false` on every deployed build regardless of that file.
+- The flag is instead injected at build time in `.github/workflows/update-dashboard.yml` via `VITE_USE_LAMBDA_API: ${{ vars.USE_LAMBDA_API }}` (repo variable set to `'true'`), mirroring how `PUBLISH_DYNAMODB` gates the Stage 13 publish step. To change the production data path, change the **repo variable**, not the `.env` file.
+
+**Data-staleness coupling closed:** Because the live site now reads DynamoDB, a stale table would freeze it. The daily pipeline refreshes DynamoDB every run (`PUBLISH_DYNAMODB=true`) and still writes `public/*.json`, so the static path stays a warm fallback.
+
+**Held for a separate explicit go-ahead — do NOT delete without one:**
+- `IngestionFunction` and `EnrichmentFunction` (with the pandas/numpy layer) still exist; their EventBridge schedules remain `DISABLED`. They are retained as the rollback path for the enrichment approach. The live read path does not use them — Stage 13 in the pipeline now does the publishing. Recommend leaving them in place for several days of live Lambda traffic before considering removal.
+- `socket.io-client` is installed for future real-time features; `REAL_TIME_DASHBOARD_ROADMAP.md` outlines WebSocket plans.
 
 **Runtime: python3.14, deployed 2026-08-02.** All three Lambdas plus the pandas/numpy layer moved off `python3.11`. See "Lambda Runtime (python3.14, migrated 2026-08-02)" below for what shipped and what it proved.
 
@@ -741,6 +749,39 @@ aws lambda list-layer-versions --layer-name pandas-numpy-layer \
   --profile personal --region us-east-1 \
   --query 'LayerVersions[].{V:Version,Runtimes:CompatibleRuntimes}'
 ```
+
+---
+
+## Lambda Migration (COMPLETE, 2026-08-03/04)
+
+The static-JSON → Lambda/DynamoDB cutover finished over the weekend of 2026-08-03/04 and is verified live on both sites. This section is the record of what shipped, kept because the mechanisms recur on any future backend change.
+
+### What shipped
+
+- **Trade metrics routed through Lambda.** A 4-step fix closed the last static fetch; a route census confirmed 8 Lambda / 0 static.
+- **Stage 13 wired into the pipeline.** `api-trade-metrics.json` was added to `DASHBOARD_JSON_FILES` (so `verify_dashboard_files()` gates the deploy on it — Stage 8a returns bare rather than `sys.exit` on an empty trades CSV, the same class of caught-and-logged bug behind the June 2026 outage). Stage 13 (`stage13_publish_dynamodb.py`) runs as **step 6a**, deliberately NOT in `PIPELINE_STAGES`, so it publishes only after `verify_dashboard_files()` confirms a complete artifact set. Behind `--publish-dynamodb`; failures warn-and-continue (log at ERROR, surfaced in the run summary) so a stale table never blocks the dashboard update.
+- **`/api/metrics` route deployed** via the Docker-less surgical Lambda deploy (swap only `app.py`, preserve the Linux-ARM binaries).
+- **Production DynamoDB write done.** The 18 `ENRICHED_*` items Stage 13 overwrites were backed up to a local file first, because point-in-time recovery is disabled on the table (no snapshot to roll back to).
+- **gzip compression + `Cache-Control` deployed** on the API Lambda.
+- **Flag flipped via CI repo variable** (`USE_LAMBDA_API=true`), after discovering `.env.production` is gitignored and never reached CI.
+
+### The `.env.production` gotcha (root cause worth remembering)
+
+`dashboard/frontend/.env.production` is gitignored (`dashboard/.gitignore:14`), so it never reaches GitHub Actions. Vite therefore defaulted `VITE_USE_LAMBDA_API` to `false` on every deployed build no matter what that file said. The fix injects the flag into the build step from the repo variable `USE_LAMBDA_API` (see `update-dashboard.yml`), matching how `PUBLISH_DYNAMODB` works. **To change the production data path, set the repo variable — editing `.env.production` does nothing in CI.**
+
+### Live verification (2026-08-04)
+
+- Downloaded the deployed CloudFront bundle and decompiled it: the API Gateway URL is a hardcoded constant in the shipped JS.
+- Route census across all 8 data endpoints on both CloudFront and Vercel: **8 Lambda / 0 static, 0 console errors**. The one remaining console error is a pre-existing Google Drive 401 embed on the Commish Tiers tab, unrelated to the migration.
+- Edge-caching correction: the managed CloudFront layer in front of the edge-optimized API Gateway does not cache origin responses (`x-cache: Miss` on repeat hits). `Cache-Control` helps the browser only; shared edge caching would require an own CloudFront distribution, not worth it at ~117 requests/month.
+
+### Held for explicit go-ahead
+
+`IngestionFunction` and `EnrichmentFunction` (plus the pandas/numpy layer) remain deployed with schedules `DISABLED`, retained as the rollback path. No deletion without a separate explicit authorization; recommend several days of live Lambda traffic first.
+
+### Related design docs (historical)
+
+`plans/AWS_MIGRATION_SPRINT_PLAN_V2.md` is the Feb 2026 sprint plan whose pre-computed-enrichment architecture this migration implemented — now **completed**, and partially superseded (its Task 1.1 called for PROVISIONED DynamoDB; the 2026-07-27 cost audit switched to PAY_PER_REQUEST). `docs/setup/AWS_MIGRATION_GUIDE.md` is the generic S3 + CloudFront static-hosting tutorial for the still-live hosting layer — completed, retained as reference.
 
 ---
 

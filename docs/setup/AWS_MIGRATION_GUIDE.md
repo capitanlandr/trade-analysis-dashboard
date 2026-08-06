@@ -1,5 +1,8 @@
 # AWS Migration Guide: Vercel → AWS
 
+> ⚠️ **STATUS: COMPLETED — reference only (do not follow as an active plan).**
+> This is a generic step-by-step for standing up the **S3 + CloudFront static-hosting layer**, which was done and is still the live hosting layer. It does **not** describe the later static-JSON → Lambda/DynamoDB backend cutover (completed 2026-08-03/04). For the current architecture and that cutover, see the "Lambda Migration (COMPLETE, 2026-08-03/04)" and "AWS Migration Status — COMPLETE" sections in `PROJECT_REFERENCE.md`. Kept because the S3/CloudFront/GitHub Actions how-to remains a useful reference.
+
 > **Target Audience:** Technical Product Managers and developers new to AWS deployments
 > 
 > **Goal:** Migrate your static React dashboard from Vercel to AWS using S3 + CloudFront
