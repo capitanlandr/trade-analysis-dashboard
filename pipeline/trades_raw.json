@@ -4,8 +4,8 @@
     "league_name": "Multi-Season (season_3)",
     "season": 2026,
     "current_week": 1,
-    "fetch_timestamp": "2026-08-05T15:58:57.571039",
-    "total_trades": 1,
+    "fetch_timestamp": "2026-08-07T14:48:43.750890",
+    "total_trades": 3,
     "incremental_mode": true,
     "processed_seasons": [
       "season_3"
@@ -5105,6 +5105,132 @@
         7
       ],
       "status_updated": 1785897084224,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1391184538054459392",
+        "veto_msg_id": "1391184538142511104"
+      },
+      "created": 1786045405193,
+      "settings": null,
+      "leg": 1,
+      "draft_picks": [
+        {
+          "round": 1,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 10,
+          "owner_id": 5,
+          "previous_owner_id": 10
+        }
+      ],
+      "creator": "1129843037888204800",
+      "transaction_id": "1391178896967229440",
+      "adds": {
+        "6801": 10
+      },
+      "drops": {
+        "6801": 5
+      },
+      "consenter_ids": [
+        5,
+        10
+      ],
+      "roster_ids": [
+        5,
+        10
+      ],
+      "status_updated": 1786049014891,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1390797558342750208",
+        "veto_msg_id": "1390797558409871360"
+      },
+      "created": 1785954120826,
+      "settings": {
+        "expires_at": 1785957720
+      },
+      "leg": 1,
+      "draft_picks": [
+        {
+          "round": 1,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 5,
+          "owner_id": 5,
+          "previous_owner_id": 2
+        }
+      ],
+      "creator": "1129843037888204800",
+      "transaction_id": "1390796022585774080",
+      "adds": {
+        "12484": 2,
+        "9225": 5,
+        "9226": 2
+      },
+      "drops": {
+        "12484": 5,
+        "9225": 2,
+        "9226": 5
+      },
+      "consenter_ids": [
+        2,
+        5
+      ],
+      "roster_ids": [
+        2,
+        5
+      ],
+      "status_updated": 1785972825182,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1390805749726191616",
+        "veto_msg_id": "1390805749831069696"
+      },
+      "created": 1785945521275,
+      "settings": {
+        "expires_at": 1785992399
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "1124978574760521728",
+      "transaction_id": "1390759953450414080",
+      "adds": {
+        "11563": 6,
+        "13402": 6,
+        "8138": 12
+      },
+      "drops": {
+        "11563": 12,
+        "13402": 12,
+        "8138": 6
+      },
+      "consenter_ids": [
+        6,
+        12
+      ],
+      "roster_ids": [
+        6,
+        12
+      ],
+      "status_updated": 1785972849632,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"

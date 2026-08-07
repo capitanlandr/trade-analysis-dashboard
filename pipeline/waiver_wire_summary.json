@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_waiver_transactions": 399,
-    "total_free_agent_transactions": 284,
-    "successful_waivers": 285,
+    "total_waiver_transactions": 401,
+    "total_free_agent_transactions": 289,
+    "successful_waivers": 287,
     "failed_waivers": 114,
-    "total_waiver_bids": "2698",
-    "average_waiver_bid": 13.49
+    "total_waiver_bids": "2700",
+    "average_waiver_bid": 13.432835820895523
   },
   "manager_activity": [
     {
@@ -41,12 +41,12 @@
     {
       "roster_id": 4,
       "team_name": "Lisan al-Caleb",
-      "total_claims": 12,
+      "total_claims": 13,
       "total_bid": 125,
-      "avg_bid": 8.33,
+      "avg_bid": 7.81,
       "max_bid": 50,
-      "successful_claims": 11,
-      "success_rate": 91.7
+      "successful_claims": 12,
+      "success_rate": 92.3
     },
     {
       "roster_id": 5,
@@ -81,11 +81,11 @@
     {
       "roster_id": 8,
       "team_name": "Loading\u2026",
-      "total_claims": 26,
-      "total_bid": 193,
-      "avg_bid": 5.22,
+      "total_claims": 27,
+      "total_bid": 195,
+      "avg_bid": 5.13,
       "max_bid": 41,
-      "successful_claims": 26,
+      "successful_claims": 27,
       "success_rate": 100.0
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "roster_id": 12,
-      "team_name": "Bo Nix",
+      "team_name": "Omar Comin",
       "total_claims": 36,
       "total_bid": 278,
       "avg_bid": 5.35,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 153,
-      "waiver": 250
+      "free_agent": 158,
+      "waiver": 252
     },
     "2": {
       "free_agent": 7,
@@ -304,7 +304,7 @@
   "bidding_patterns": {
     "bid_distribution": {
       "1": 30,
-      "2": 20,
+      "2": 21,
       "5": 13,
       "10": 12,
       "20": 11,
@@ -400,13 +400,13 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 80.40201005025126
+    "zero_bid_success_rate": 80.5
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 1,
+    "total_new_transactions": 7,
     "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
