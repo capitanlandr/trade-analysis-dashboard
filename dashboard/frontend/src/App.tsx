@@ -7,6 +7,7 @@ import PlayoffScenarios from './pages/PlayoffScenarios'
 import DraftOrderProjection from './pages/DraftOrderProjection'
 import CommishTiersArchive from './pages/CommishTiersArchive'
 import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
+import SurveyResults from './pages/SurveyResults'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
 const queryClient = new QueryClient({
@@ -54,6 +55,7 @@ function App() {
                 <Route path="draft-order" element={<DraftOrderProjection />} />
                 <Route path="commish-tiers" element={<CommishTiersArchive />} />
                 <Route path="waiver-wire" element={<WaiverWireAnalysis />} />
+                <Route path="survey-results" element={<SurveyResults />} />
               </Route>
             </Routes>
           </ErrorBoundary>
