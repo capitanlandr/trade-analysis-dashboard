@@ -86,8 +86,8 @@
           {
             "name": "2028 Round 3",
             "type": "draft_pick",
-            "value_then": 42,
-            "value_now": 42
+            "value_then": 65,
+            "value_now": 65
           }
         ],
         "teamAValueThen": 106.0,
@@ -4190,7 +4190,7 @@
           {
             "name": "Ray Davis",
             "type": "player",
-            "value_then": 43,
+            "value_then": 36,
             "value_now": 36
           },
           {
@@ -4487,7 +4487,7 @@
           {
             "name": "Ray Davis",
             "type": "player",
-            "value_then": 43,
+            "value_then": 36,
             "value_now": 36
           },
           {
@@ -5048,7 +5048,7 @@
           {
             "name": "Ray Davis",
             "type": "player",
-            "value_then": 43,
+            "value_then": 36,
             "value_now": 36
           }
         ],
@@ -5443,8 +5443,8 @@
           {
             "name": "2028 Round 3",
             "type": "draft_pick",
-            "value_then": 42,
-            "value_now": 42
+            "value_then": 65,
+            "value_now": 65
           }
         ],
         "teamBValueThen": 42.0,
@@ -5778,14 +5778,63 @@
         "marginCurrent": 1030.0,
         "swingWinner": "cjsyregelas",
         "swingMargin": 382.0
+      },
+      {
+        "tradeId": "1391287814628311040",
+        "transactionId": "1391287814628311040",
+        "tradeDate": "2026-08-07",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Roman Wilson",
+          "2028 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Roman Wilson",
+            "type": "player",
+            "value_then": 3,
+            "value_now": 3
+          },
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 65,
+            "value_now": 65
+          }
+        ],
+        "teamAValueThen": 68.0,
+        "teamAValueNow": 68.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Ray Davis"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 36,
+            "value_now": 36
+          }
+        ],
+        "teamBValueThen": 36.0,
+        "teamBValueNow": 36.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": -32.0,
+        "marginCurrent": -32.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-07T14:49:58.158316",
-      "totalTrades": 103,
+      "lastUpdated": "2026-08-08T14:27:44.776706",
+      "totalTrades": 104,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-06"
+        "latest": "2026-08-07"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5793,7 +5842,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 23
+        "season_3": 24
       },
       "seasonInfo": {
         "season_2": {
@@ -5802,14 +5851,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-07T14:48:43.738873Z"
+          "last_fetched": "2026-08-08T14:26:34.736597Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 104,
-        "dashboardTradesGenerated": 103,
+        "rawTradesProcessed": 105,
+        "dashboardTradesGenerated": 104,
         "multiTeamTradesSkipped": 1
       }
     }

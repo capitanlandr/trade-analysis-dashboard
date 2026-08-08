@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 103,
-      "totalTradeValue": 368043.0,
-      "avgTradeMargin": 856.7669902912621,
+      "totalTrades": 104,
+      "totalTradeValue": 368147.0,
+      "avgTradeMargin": 848.8365384615385,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 30,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-06"
+        "latest": "2026-08-07"
       }
     },
     "teamRankings": {
@@ -54,9 +54,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 30,
-          "winRate": 43.333333333333336,
-          "avgMargin": 862.6333333333333,
+          "tradeCount": 31,
+          "winRate": 41.935483870967744,
+          "avgMargin": 835.8387096774194,
           "totalValueGained": 2279.0
         },
         {
@@ -98,9 +98,9 @@
           "realName": "Chris",
           "sleeperUsername": "cjsyregelas",
           "nickname": "Chris",
-          "tradeCount": 9,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1246.6666666666667,
+          "tradeCount": 10,
+          "winRate": 50.0,
+          "avgMargin": 1125.2,
           "totalValueGained": -2101.0
         },
         {
@@ -183,6 +183,17 @@
           "totalValueGained": -3039.0
         },
         {
+          "rosterId": 6,
+          "teamName": "Mostly Washed",
+          "realName": "Chris",
+          "sleeperUsername": "cjsyregelas",
+          "nickname": "Chris",
+          "tradeCount": 10,
+          "winRate": 50.0,
+          "avgMargin": 1125.2,
+          "totalValueGained": -2101.0
+        },
+        {
           "rosterId": 10,
           "teamName": "Rashid Shaheed Truthers",
           "realName": "Jake",
@@ -205,17 +216,6 @@
           "totalValueGained": -10368.0
         },
         {
-          "rosterId": 6,
-          "teamName": "Mostly Washed",
-          "realName": "Chris",
-          "sleeperUsername": "cjsyregelas",
-          "nickname": "Chris",
-          "tradeCount": 9,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1246.6666666666667,
-          "totalValueGained": -2101.0
-        },
-        {
           "rosterId": 7,
           "teamName": "Cártel de Breece y Puka",
           "realName": "Johnny",
@@ -232,9 +232,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 30,
-          "winRate": 43.333333333333336,
-          "avgMargin": 862.6333333333333,
+          "tradeCount": 31,
+          "winRate": 41.935483870967744,
+          "avgMargin": 835.8387096774194,
           "totalValueGained": 2279.0
         }
       ],
@@ -256,9 +256,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 30,
-          "winRate": 43.333333333333336,
-          "avgMargin": 862.6333333333333,
+          "tradeCount": 31,
+          "winRate": 41.935483870967744,
+          "avgMargin": 835.8387096774194,
           "totalValueGained": 2279.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 23
+        "season_3": 24
       },
       "seasonInfo": {
         "season_2": {
@@ -367,53 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-07T14:48:43.738873Z"
+          "last_fetched": "2026-08-08T14:26:34.736597Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1356867177117937664",
-        "transactionId": "1356867177117937664",
-        "tradeDate": "2026-05-04",
-        "season": "season_3",
-        "teamA": "jwalters74",
-        "teamAReceived": [
-          "2027 Round 4"
-        ],
-        "teamAAssets": [
-          {
-            "name": "2027 Round 4",
-            "type": "draft_pick",
-            "value_then": 10,
-            "value_now": 10
-          }
-        ],
-        "teamAValueThen": 11.0,
-        "teamAValueNow": 10.0,
-        "teamAValueChange": -1.0,
-        "teamB": "jakeduf",
-        "teamBReceived": [
-          "Aaron Jones"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Aaron Jones",
-            "type": "player",
-            "value_then": 98,
-            "value_now": 99
-          }
-        ],
-        "teamBValueThen": 98.0,
-        "teamBValueNow": 99.0,
-        "teamBValueChange": 1.0,
-        "winnerAtTrade": "jakeduf",
-        "winnerCurrent": "jakeduf",
-        "marginAtTrade": -87.0,
-        "marginCurrent": -89.0,
-        "swingWinner": "jakeduf",
-        "swingMargin": 2.0
-      },
       {
         "tradeId": "1388760077904650240",
         "transactionId": "1388760077904650240",
@@ -554,8 +512,8 @@
           {
             "name": "2028 Round 3",
             "type": "draft_pick",
-            "value_then": 42,
-            "value_now": 42
+            "value_then": 65,
+            "value_now": 65
           }
         ],
         "teamBValueThen": 42.0,
@@ -889,6 +847,55 @@
         "marginCurrent": 1030.0,
         "swingWinner": "cjsyregelas",
         "swingMargin": 382.0
+      },
+      {
+        "tradeId": "1391287814628311040",
+        "transactionId": "1391287814628311040",
+        "tradeDate": "2026-08-07",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Roman Wilson",
+          "2028 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Roman Wilson",
+            "type": "player",
+            "value_then": 3,
+            "value_now": 3
+          },
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 65,
+            "value_now": 65
+          }
+        ],
+        "teamAValueThen": 68.0,
+        "teamAValueNow": 68.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Ray Davis"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 36,
+            "value_now": 36
+          }
+        ],
+        "teamBValueThen": 36.0,
+        "teamBValueNow": 36.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": -32.0,
+        "marginCurrent": -32.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }

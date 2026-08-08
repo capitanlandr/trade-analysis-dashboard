@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-08-07 14:49:34",
-    "total_trades": 103,
+    "generated": "2026-08-08 14:27:19",
+    "total_trades": 104,
     "description": "Advanced trade metrics: Sharpe Ratio, Significance Test, Opponent-Adjusted Performance"
   },
   "managers": [
@@ -172,25 +172,25 @@
     {
       "username": "donewton",
       "real_name": "Don",
-      "trades": 30,
-      "net_advantage": 3391.0,
+      "trades": 31,
+      "net_advantage": 3359.0,
       "sharpe": {
-        "value": 0.082,
-        "mean": 113.0,
-        "std_dev": 1374.3,
+        "value": 0.08,
+        "mean": 108.4,
+        "std_dev": 1352.2,
         "verdict": "positive_noisy"
       },
       "significance": {
         "wins": 13,
-        "win_rate": 43.3,
-        "p_value": 0.2923,
+        "win_rate": 41.9,
+        "p_value": 0.2366,
         "direction": "losing",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 10,
         "positive_matchups": 5,
-        "top_opponent_concentration_pct": 173.4,
+        "top_opponent_concentration_pct": 175.1,
         "opponents": [
           {
             "opponent": "zachlearningtogolf",
@@ -244,9 +244,9 @@
           {
             "opponent": "cjsyregelas",
             "opponent_name": "Chris",
-            "net_advantage": -1043.0,
-            "trade_count": 3,
-            "avg_per_trade": -347.7
+            "net_advantage": -1075.0,
+            "trade_count": 4,
+            "avg_per_trade": -268.8
           },
           {
             "opponent": "lndahayo",
@@ -622,32 +622,32 @@
     {
       "username": "cjsyregelas",
       "real_name": "Chris",
-      "trades": 9,
-      "net_advantage": -3876.0,
+      "trades": 10,
+      "net_advantage": -3844.0,
       "sharpe": {
-        "value": -0.232,
-        "mean": -430.7,
-        "std_dev": 1854.1,
+        "value": -0.218,
+        "mean": -384.4,
+        "std_dev": 1764.4,
         "verdict": "losing"
       },
       "significance": {
-        "wins": 4,
-        "win_rate": 44.4,
-        "p_value": 0.5,
-        "direction": "losing",
+        "wins": 5,
+        "win_rate": 50.0,
+        "p_value": 0.623,
+        "direction": "winning",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 5,
         "positive_matchups": 2,
-        "top_opponent_concentration_pct": -26.9,
+        "top_opponent_concentration_pct": -28.0,
         "opponents": [
           {
             "opponent": "donewton",
             "opponent_name": "Don",
-            "net_advantage": 1043.0,
-            "trade_count": 3,
-            "avg_per_trade": 347.7
+            "net_advantage": 1075.0,
+            "trade_count": 4,
+            "avg_per_trade": 268.8
           },
           {
             "opponent": "zachlearningtogolf",
