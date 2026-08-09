@@ -1,8 +1,8 @@
 {
   "summary": {
-    "total_waiver_transactions": 401,
+    "total_waiver_transactions": 403,
     "total_free_agent_transactions": 290,
-    "successful_waivers": 287,
+    "successful_waivers": 289,
     "failed_waivers": 114,
     "total_waiver_bids": "2700",
     "average_waiver_bid": 13.432835820895523
@@ -71,12 +71,12 @@
     {
       "roster_id": 7,
       "team_name": "C\u00e1rtel de Breece y Puka",
-      "total_claims": 31,
+      "total_claims": 32,
       "total_bid": 272,
-      "avg_bid": 5.44,
+      "avg_bid": 5.23,
       "max_bid": 109,
-      "successful_claims": 40,
-      "success_rate": 129.0
+      "successful_claims": 42,
+      "success_rate": 131.2
     },
     {
       "roster_id": 8,
@@ -132,7 +132,7 @@
   "weekly_activity": {
     "1": {
       "free_agent": 159,
-      "waiver": 252
+      "waiver": 254
     },
     "2": {
       "free_agent": 7,
@@ -200,14 +200,14 @@
     }
   },
   "contested_players": {
-    "1166": {
-      "transaction_id": 7,
-      "waiver_bid": 84,
-      "status": 1
-    },
     "6111": {
       "transaction_id": 7,
       "waiver_bid": 109,
+      "status": 1
+    },
+    "1166": {
+      "transaction_id": 7,
+      "waiver_bid": 84,
       "status": 1
     },
     "12775": {
@@ -215,40 +215,35 @@
       "waiver_bid": 51,
       "status": 3
     },
-    "6271": {
+    "8123": {
       "transaction_id": 5,
-      "waiver_bid": 2,
-      "status": 4
+      "waiver_bid": 43,
+      "status": 2
     },
     "2505": {
       "transaction_id": 5,
       "waiver_bid": 46,
       "status": 1
     },
-    "8123": {
+    "6271": {
       "transaction_id": 5,
-      "waiver_bid": 43,
-      "status": 2
-    },
-    "4454": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 3
-    },
-    "11834": {
-      "transaction_id": 4,
-      "waiver_bid": 25,
-      "status": 2
-    },
-    "9497": {
-      "transaction_id": 4,
-      "waiver_bid": 0,
+      "waiver_bid": 2,
       "status": 4
     },
     "7670": {
       "transaction_id": 4,
       "waiver_bid": 12,
       "status": 2
+    },
+    "11834": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 2
+    },
+    "4454": {
+      "transaction_id": 4,
+      "waiver_bid": 25,
+      "status": 3
     },
     "8917": {
       "transaction_id": 4,
@@ -260,12 +255,27 @@
       "waiver_bid": 52,
       "status": 1
     },
+    "9497": {
+      "transaction_id": 4,
+      "waiver_bid": 0,
+      "status": 4
+    },
     "8160": {
       "transaction_id": 3,
       "waiver_bid": 12,
       "status": 2
     },
     "8172": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "12544": {
+      "transaction_id": 3,
+      "waiver_bid": 0,
+      "status": 3
+    },
+    "827": {
       "transaction_id": 3,
       "waiver_bid": 0,
       "status": 3
@@ -280,11 +290,6 @@
       "waiver_bid": 8,
       "status": 1
     },
-    "827": {
-      "transaction_id": 3,
-      "waiver_bid": 0,
-      "status": 3
-    },
     "2197": {
       "transaction_id": 3,
       "waiver_bid": 0,
@@ -294,11 +299,6 @@
       "transaction_id": 3,
       "waiver_bid": 0,
       "status": 2
-    },
-    "12470": {
-      "transaction_id": 3,
-      "waiver_bid": 6,
-      "status": 1
     }
   },
   "bidding_patterns": {
@@ -400,14 +400,14 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 80.5
+    "zero_bid_success_rate": 80.6930693069307
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
     "total_new_transactions": 1,
-    "total_duplicates": 1,
+    "total_duplicates": 2,
     "fetch_mode": "incremental"
   }
 }
