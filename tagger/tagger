@@ -1,0 +1,349 @@
+#!/usr/bin/env python3
+"""
+tagger -- pull a Moxfield deck and emit a Moxfield-import-ready CSV where every
+card carries its Scryfall Tagger *functional* tags (the card's own oracle tags
+plus all inherited/ancestor oracle tags).
+
+Usage:
+    tagger <moxfield-deck-url-or-id> [options]
+
+Examples:
+    tagger https://moxfield.com/decks/FStnnI53C0ej6tMd5eEPAg
+    tagger FStnnI53C0ej6tMd5eEPAg -o twincasters.csv
+    tagger <url> --all-boards --include-art
+    tagger <url> --tag-format name --sep comma
+
+Data sources (public, no auth):
+    - Moxfield deck API:  https://api.moxfield.com/v2/decks/all/<id>
+    - Scryfall Tagger:    https://tagger.scryfall.com/graphql  (CSRF + session cookie)
+    - Scryfall REST:      https://api.scryfall.com  (printing fallback)
+"""
+import argparse
+import csv
+import http.cookiejar
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+
+MOXFIELD_API = "https://api.moxfield.com/v2/decks/all/{}"
+TAGGER_ROOT = "https://tagger.scryfall.com/"
+TAGGER_GQL = "https://tagger.scryfall.com/graphql"
+SCRYFALL_NAMED = "https://api.scryfall.com/cards/named"
+
+# Boards that make up the actual deck by default.
+DEFAULT_BOARDS = ["commanders", "mainboard", "companions", "signatureSpells"]
+ALL_BOARDS = DEFAULT_BOARDS + ["sideboard", "maybeboard", "attractions", "stickers"]
+
+# Moxfield deck-CSV export header (import maps against these column names).
+CSV_HEADER = ["Count", "Tradelist Count", "Name", "Edition", "Condition",
+              "Language", "Foil", "Tags", "Last Modified", "Collector Number",
+              "Alter", "Proxy", "Purchase Price"]
+
+GQL_QUERY = (
+    "query FetchCard($set:String!,$number:String!,$back:Boolean=false){"
+    "card:cardBySet(set:$set,number:$number,back:$back){"
+    "name taggings{tag{name slug type ancestorTags{name slug type}}}}}"
+)
+
+
+def log(msg, quiet=False):
+    if not quiet:
+        print(msg, file=sys.stderr, flush=True)
+
+
+def parse_deck_id(arg):
+    """Accept a full Moxfield URL or a bare public id."""
+    arg = arg.strip()
+    m = re.search(r"/decks/(?:all/)?([A-Za-z0-9_-]+)", arg)
+    if m:
+        return m.group(1)
+    return arg.rstrip("/").split("/")[-1]
+
+
+def http_json(url, data=None, headers=None, opener=None, timeout=25):
+    h = {"User-Agent": UA, "Accept": "application/json"}
+    if headers:
+        h.update(headers)
+    body = json.dumps(data).encode() if data is not None else None
+    req = urllib.request.Request(url, data=body, headers=h,
+                                 method="POST" if body else "GET")
+    fn = opener.open if opener else urllib.request.urlopen
+    raw = fn(req, timeout=timeout).read().decode("utf-8", "replace")
+    return json.loads(raw)
+
+
+class TransportError(Exception):
+    """Raised when a Tagger query fails at the HTTP/network layer after retries."""
+
+
+class Tagger:
+    """Holds a Tagger session (CSRF token + cookie) and fetches functional tags.
+
+    A query has three outcomes:
+      * card dict  -> printing exists in Tagger (may still have 0 functional tags)
+      * None       -> valid response, but this printing is not in Tagger's DB
+      * TransportError -> HTTP/network failure that survived all retries
+    Only the first two are cacheable; transport errors trigger a Scryfall
+    printing fallback and, failing that, a final retry sweep.
+    """
+
+    MAX_RETRIES = 4
+
+    def __init__(self, include_art=False, delay=0.1, quiet=False):
+        self.include_art = include_art
+        self.delay = delay
+        self.quiet = quiet
+        self.cache = {}
+        self.cj = http.cookiejar.CookieJar()
+        self.opener = urllib.request.build_opener(
+            urllib.request.HTTPCookieProcessor(self.cj))
+        self.csrf = None
+        self._refresh()
+
+    def _refresh(self):
+        req = urllib.request.Request(TAGGER_ROOT, headers={"User-Agent": UA})
+        html = self.opener.open(req, timeout=25).read().decode("utf-8", "replace")
+        m = re.search(r'<meta name="csrf-token" content="([^"]+)"', html)
+        if not m:
+            raise RuntimeError("Could not scrape Tagger CSRF token")
+        self.csrf = m.group(1)
+
+    def _query(self, set_code, number, back=False):
+        """Return a card dict, or None if the printing is absent.
+
+        Retries transient failures (429/5xx/network) with exponential backoff
+        and refreshes the CSRF token on auth-style rejections. Raises
+        TransportError only if every attempt fails.
+        """
+        payload = {"operationName": "FetchCard",
+                   "variables": {"set": set_code, "number": str(number), "back": back},
+                   "query": GQL_QUERY}
+        headers = {"Content-Type": "application/json",
+                   "X-CSRF-Token": self.csrf,
+                   "Referer": f"https://tagger.scryfall.com/card/{set_code}/{number}"}
+        last = None
+        for attempt in range(self.MAX_RETRIES):
+            try:
+                d = http_json(TAGGER_GQL, data=payload, headers=headers,
+                              opener=self.opener)
+                return d.get("data", {}).get("card")
+            except urllib.error.HTTPError as e:
+                last = e
+                if e.code in (401, 403, 419, 422):
+                    self._refresh()
+                    headers["X-CSRF-Token"] = self.csrf
+                elif e.code not in (429, 500, 502, 503, 504):
+                    raise TransportError(f"HTTP {e.code}") from e
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+                last = e
+            time.sleep(0.4 * (2 ** attempt))  # 0.4s, 0.8s, 1.6s backoff
+        raise TransportError(str(last))
+
+    def _extract(self, card):
+        """Collect tag slugs/names, filtering to functional (oracle) tags."""
+        keep_types = {"ORACLE_CARD_TAG"}
+        if self.include_art:
+            keep_types |= {"ILLUSTRATION_TAG", "PRINTING_TAG"}
+        slugs, names = set(), set()
+        for tagging in card.get("taggings", []):
+            tag = tagging.get("tag") or {}
+            chain = [tag] + (tag.get("ancestorTags") or [])
+            for t in chain:
+                if t.get("type") in keep_types:
+                    if t.get("slug"):
+                        slugs.add(t["slug"])
+                    if t.get("name"):
+                        names.add(t["name"])
+        return sorted(slugs), sorted(names)
+
+    def tags_for(self, set_code, number, name=None):
+        """Return (slugs, names). Raises TransportError if Tagger could not be
+        reached for this card (caller should retry it in a later sweep)."""
+        key = (set_code, str(number))
+        if key in self.cache:
+            return self.cache[key]
+        card = self._query(set_code, number)  # may raise TransportError
+        # Printing genuinely absent from Tagger -> resolve one via Scryfall.
+        if card is None and name:
+            alt = self._scryfall_printing(name)
+            if alt and alt[0] and alt[1] and alt != key:
+                card = self._query(*alt)
+        result = ([], []) if not card else self._extract(card)
+        self.cache[key] = result
+        return result
+
+    def _scryfall_printing(self, name):
+        try:
+            time.sleep(self.delay)
+            d = http_json(SCRYFALL_NAMED + "?" +
+                          urllib.parse.urlencode({"exact": name}),
+                          headers={"Accept": "application/json"})
+            return (d.get("set"), str(d.get("collector_number")))
+        except Exception:  # noqa: BLE001
+            return None
+
+
+def fetch_moxfield_deck(deck_id, quiet=False):
+    """Fetch a Moxfield deck JSON. Moxfield sits behind Cloudflare; a browser
+    User-Agent is enough from many networks, but residential IPs get a JS
+    challenge -> fall back to the optional `cloudscraper` package."""
+    url = MOXFIELD_API.format(deck_id)
+    headers = {"User-Agent": UA,
+               "Accept": "application/json, text/plain, */*",
+               "Accept-Language": "en-US,en;q=0.9",
+               "Referer": "https://www.moxfield.com/",
+               "Origin": "https://www.moxfield.com"}
+    try:
+        return http_json(url, headers=headers)
+    except urllib.error.HTTPError as e:
+        if e.code not in (403, 429, 503):
+            raise
+    # Cloudflare challenge -> try cloudscraper.
+    try:
+        import cloudscraper  # type: ignore
+    except ImportError:
+        raise RuntimeError(
+            "Moxfield returned a Cloudflare challenge from this network and "
+            "cloudscraper is not installed. Install it with:\n"
+            "    pip3 install --user cloudscraper")
+    log("Moxfield hit a Cloudflare challenge; retrying via cloudscraper ...", quiet)
+    scraper = cloudscraper.create_scraper()
+    r = scraper.get(url, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def iter_cards(deck, boards):
+    seen = set()
+    for bkey in boards:
+        board = deck.get(bkey) or {}
+        for entry_name, entry in board.items():
+            card = entry.get("card") or {}
+            set_code = card.get("set")
+            cn = card.get("cn")
+            name = card.get("name") or entry_name
+            if not set_code or cn is None:
+                continue
+            key = (name, set_code, str(cn))
+            if key in seen:
+                continue
+            seen.add(key)
+            yield {"name": name, "set": set_code, "cn": str(cn),
+                   "qty": entry.get("quantity", 1), "layout": card.get("layout")}
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(
+        prog="tagger",
+        description="Moxfield deck -> Moxfield-import CSV with Scryfall Tagger "
+                    "functional tags (card + inherited).")
+    ap.add_argument("deck", help="Moxfield deck URL or public id")
+    ap.add_argument("-o", "--output", help="output CSV path (default: <deck-name>.csv)")
+    ap.add_argument("--boards", help="comma-separated board list to include "
+                    f"(default: {','.join(DEFAULT_BOARDS)})")
+    ap.add_argument("--all-boards", action="store_true",
+                    help="include every board (mainboard, maybeboard, sideboard, ...)")
+    ap.add_argument("--include-art", action="store_true",
+                    help="also include artwork/printing tags (default: functional only)")
+    ap.add_argument("--tag-format", choices=["slug", "name"], default="slug",
+                    help="emit tag slugs (hyphenated, default) or display names")
+    ap.add_argument("--sep", choices=["space", "comma"], default="space",
+                    help="tag delimiter inside the Tags column (default: space)")
+    ap.add_argument("--delay", type=float, default=0.1,
+                    help="seconds between Tagger requests (default: 0.1)")
+    ap.add_argument("-q", "--quiet", action="store_true", help="suppress progress")
+    args = ap.parse_args(argv)
+
+    deck_id = parse_deck_id(args.deck)
+    log(f"Fetching Moxfield deck {deck_id} ...", args.quiet)
+    try:
+        deck = fetch_moxfield_deck(deck_id, quiet=args.quiet)
+    except urllib.error.HTTPError as e:
+        log(f"ERROR: Moxfield returned HTTP {e.code} for deck {deck_id}", False)
+        return 2
+    except RuntimeError as e:
+        log(f"ERROR: {e}", False)
+        return 2
+
+    deck_name = deck.get("name", deck_id)
+    if args.boards:
+        boards = [b.strip() for b in args.boards.split(",") if b.strip()]
+    elif args.all_boards:
+        boards = ALL_BOARDS
+    else:
+        boards = DEFAULT_BOARDS
+
+    cards = list(iter_cards(deck, boards))
+    log(f'Deck "{deck_name}" -- {len(cards)} unique cards from boards: '
+        f'{", ".join(boards)}', args.quiet)
+
+    tagger = Tagger(include_art=args.include_art, delay=args.delay, quiet=args.quiet)
+    sep = " " if args.sep == "space" else ","
+
+    rows = []
+    failures = []  # cards whose Tagger fetch hit a transport error
+    for i, c in enumerate(cards, 1):
+        time.sleep(args.delay)
+        try:
+            slugs, names = tagger.tags_for(c["set"], c["cn"], name=c["name"])
+        except TransportError:
+            failures.append(c)
+            slugs, names = [], []
+            log(f"  [{i}/{len(cards)}] {c['name']} ({c['set']}/{c['cn']}): "
+                f"deferred (transient)", args.quiet)
+        else:
+            chosen0 = slugs if args.tag_format == "slug" else names
+            log(f"  [{i}/{len(cards)}] {c['name']} ({c['set']}/{c['cn']}): "
+                f"{len(chosen0)} tags", args.quiet)
+        chosen = slugs if args.tag_format == "slug" else names
+        rows.append({
+            "Count": c["qty"], "Tradelist Count": 0, "Name": c["name"],
+            "Edition": c["set"], "Condition": "", "Language": "", "Foil": "",
+            "Tags": sep.join(chosen), "Last Modified": "",
+            "Collector Number": c["cn"], "Alter": "False", "Proxy": "False",
+            "Purchase Price": "",
+        })
+
+    # Retry sweeps for transient failures (Tagger throttling under burst).
+    row_by_key = {(r["Name"], r["Edition"], r["Collector Number"]): r for r in rows}
+    sweep = 1
+    while failures and sweep <= 3:
+        log(f"\nRetry sweep {sweep}: {len(failures)} card(s) ...", args.quiet)
+        still = []
+        for c in failures:
+            time.sleep(max(args.delay, 0.3) * sweep)
+            try:
+                slugs, names = tagger.tags_for(c["set"], c["cn"], name=c["name"])
+            except TransportError:
+                still.append(c)
+                continue
+            chosen = slugs if args.tag_format == "slug" else names
+            row_by_key[(c["name"], c["set"], c["cn"])]["Tags"] = sep.join(chosen)
+            log(f"  recovered {c['name']}: {len(chosen)} tags", args.quiet)
+        failures = still
+        sweep += 1
+    if failures:
+        names = ", ".join(c["name"] for c in failures)
+        log(f"\nWARNING: {len(failures)} card(s) could not be reached and were "
+            f"left untagged: {names}", False)
+
+    out_path = args.output or (re.sub(r"[^\w.-]+", "_", deck_name).strip("_") + ".csv")
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CSV_HEADER, quoting=csv.QUOTE_ALL)
+        w.writeheader()
+        w.writerows(rows)
+
+    tagged = sum(1 for r in rows if r["Tags"])
+    log(f"\nWrote {len(rows)} cards ({tagged} tagged) -> {out_path}", args.quiet)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
