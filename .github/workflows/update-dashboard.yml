@@ -44,7 +44,19 @@ jobs:
         env:
           # Add any environment variables/secrets here if needed
           PYTHONUNBUFFERED: 1
-      
+
+      # Refresh the NFL Top 100 list + roster cross-reference. Idempotent and
+      # stdlib-only (no extra pip deps). In CI the data/ cache is not committed,
+      # so the script fetches rosters/players from the Sleeper API automatically.
+      # On an unreachable/unparseable source it preserves the last good JSON
+      # (committed at dashboard/frontend/public/nfl-top-100.json) rather than
+      # overwriting it, so a bad fetch never blanks the tab.
+      - name: Refresh NFL Top 100 data
+        run: |
+          python3 scripts/generate_nfl_top100.py
+        env:
+          PYTHONUNBUFFERED: 1
+
       - name: Setup Node.js for frontend build
         uses: actions/setup-node@v3
         with:
