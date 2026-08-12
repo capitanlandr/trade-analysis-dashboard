@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target, ClipboardList, DollarSign, ListOrdered } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target, ClipboardList, ListOrdered } from 'lucide-react';
 import HostingBanner from '../UI/HostingBanner';
 import ChampionBanner from '../UI/ChampionBanner';
 import { useStandingsData } from '../../services/api';
@@ -80,7 +80,6 @@ const DashboardLayout: React.FC = () => {
             <NavItem icon={Target} label="Draft Order" mobileLabel="Draft" href="/draft-order" />
             <NavItem icon={FileText} label="Commish Tiers" mobileLabel="Tiers" href="/commish-tiers" />
             <NavItem icon={Users} label="Waiver Wire" mobileLabel="Waivers" href="/waiver-wire" />
-            <NavItem icon={DollarSign} label="FAAB Market" mobileLabel="FAAB" href="/faab-market" />
             <NavItem icon={ClipboardList} label="Survey Results" mobileLabel="Survey" href="/survey-results" />
             <NavItem icon={ListOrdered} label="NFL Top 100" mobileLabel="Top 100" href="/nfl-top-100" />
           </div>

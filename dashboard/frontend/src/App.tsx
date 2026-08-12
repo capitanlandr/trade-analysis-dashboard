@@ -7,7 +7,6 @@ import PlayoffScenarios from './pages/PlayoffScenarios'
 import DraftOrderProjection from './pages/DraftOrderProjection'
 import CommishTiersArchive from './pages/CommishTiersArchive'
 import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
-import FaabMarket from './pages/FaabMarket'
 import SurveyResults from './pages/SurveyResults'
 import NflTop100 from './pages/NflTop100'
 import { ErrorBoundary } from './components/ErrorBoundary'
@@ -57,7 +56,6 @@ function App() {
                 <Route path="draft-order" element={<DraftOrderProjection />} />
                 <Route path="commish-tiers" element={<CommishTiersArchive />} />
                 <Route path="waiver-wire" element={<WaiverWireAnalysis />} />
-                <Route path="faab-market" element={<FaabMarket />} />
                 <Route path="survey-results" element={<SurveyResults />} />
                 <Route path="nfl-top-100" element={<NflTop100 />} />
               </Route>
