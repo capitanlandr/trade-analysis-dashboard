@@ -224,7 +224,7 @@
           {
             "name": "Jonathon Brooks",
             "type": "player",
-            "value_then": 62,
+            "value_then": 439,
             "value_now": 439
           },
           {
@@ -607,7 +607,7 @@
           {
             "name": "Jonathon Brooks",
             "type": "player",
-            "value_then": 62,
+            "value_then": 439,
             "value_now": 439
           },
           {
@@ -698,7 +698,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -740,7 +740,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           },
           {
@@ -924,7 +924,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -1378,7 +1378,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -1871,7 +1871,7 @@
           {
             "name": "Daniel Jones",
             "type": "player",
-            "value_then": 404,
+            "value_then": 1113,
             "value_now": 1113
           }
         ],
@@ -2622,7 +2622,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -3204,7 +3204,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -5168,7 +5168,7 @@
           {
             "name": "Tua Tagovailoa",
             "type": "player",
-            "value_then": 960,
+            "value_then": 944,
             "value_now": 944
           }
         ],
@@ -5645,7 +5645,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -5688,7 +5688,7 @@
           {
             "name": "Jayden Higgins",
             "type": "player",
-            "value_then": 814,
+            "value_then": 799,
             "value_now": 799
           },
           {
@@ -5716,7 +5716,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -5827,14 +5827,168 @@
         "marginCurrent": -32.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1393125900987428864",
+        "transactionId": "1393125900987428864",
+        "tradeDate": "2026-08-12",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Ted Hurst",
+          "Daniel Jones"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Ted Hurst",
+            "type": "player",
+            "value_then": 195,
+            "value_now": 195
+          },
+          {
+            "name": "Daniel Jones",
+            "type": "player",
+            "value_then": 1113,
+            "value_now": 1113
+          }
+        ],
+        "teamAValueThen": 1308.0,
+        "teamAValueNow": 1308.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Jayden Higgins",
+          "Tua Tagovailoa",
+          "2028 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jayden Higgins",
+            "type": "player",
+            "value_then": 799,
+            "value_now": 799
+          },
+          {
+            "name": "Tua Tagovailoa",
+            "type": "player",
+            "value_then": 944,
+            "value_now": 944
+          },
+          {
+            "name": "2028 Round 4",
+            "type": "draft_pick",
+            "value_then": 20,
+            "value_now": 20
+          }
+        ],
+        "teamBValueThen": 1763.0,
+        "teamBValueNow": 1763.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": -455.0,
+        "marginCurrent": -455.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1393100662849441792",
+        "transactionId": "1393100662849441792",
+        "tradeDate": "2026-08-12",
+        "season": "season_3",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Oronde Gadsden",
+          "Cam Ward",
+          "Elijah Sarratt",
+          "Antonio Williams",
+          "2028 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Oronde Gadsden",
+            "type": "player",
+            "value_then": 884,
+            "value_now": 884
+          },
+          {
+            "name": "Cam Ward",
+            "type": "player",
+            "value_then": 2457,
+            "value_now": 2457
+          },
+          {
+            "name": "Elijah Sarratt",
+            "type": "player",
+            "value_then": 177,
+            "value_now": 177
+          },
+          {
+            "name": "Antonio Williams",
+            "type": "player",
+            "value_then": 462,
+            "value_now": 462
+          },
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 622,
+            "value_now": 622
+          }
+        ],
+        "teamAValueThen": 4602.0,
+        "teamAValueNow": 4602.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Jonathon Brooks",
+          "Malik Washington",
+          "Kyler Murray",
+          "2027 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jonathon Brooks",
+            "type": "player",
+            "value_then": 439,
+            "value_now": 439
+          },
+          {
+            "name": "Malik Washington",
+            "type": "player",
+            "value_then": 53,
+            "value_now": 53
+          },
+          {
+            "name": "Kyler Murray",
+            "type": "player",
+            "value_then": 3029,
+            "value_now": 3029
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 4278,
+            "value_now": 4278
+          }
+        ],
+        "teamBValueThen": 7799.0,
+        "teamBValueNow": 7799.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": -3197.0,
+        "marginCurrent": -3197.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-12T14:53:35.358431",
-      "totalTrades": 104,
+      "lastUpdated": "2026-08-13T14:53:29.171654",
+      "totalTrades": 106,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-07"
+        "latest": "2026-08-12"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5842,7 +5996,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 24
+        "season_3": 26
       },
       "seasonInfo": {
         "season_2": {
@@ -5851,14 +6005,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-12T14:52:15.833580Z"
+          "last_fetched": "2026-08-13T14:52:01.806414Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 105,
-        "dashboardTradesGenerated": 104,
+        "rawTradesProcessed": 107,
+        "dashboardTradesGenerated": 106,
         "multiTeamTradesSkipped": 1
       }
     }

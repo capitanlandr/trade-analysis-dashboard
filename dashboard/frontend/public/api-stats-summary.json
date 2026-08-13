@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 104,
-      "totalTradeValue": 368147.0,
-      "avgTradeMargin": 848.8365384615385,
+      "totalTrades": 106,
+      "totalTradeValue": 383619.0,
+      "avgTradeMargin": 867.2735849056604,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
-      "blockbusterCount": 30,
+      "blockbusterCount": 31,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-07"
+        "latest": "2026-08-12"
       }
     },
     "teamRankings": {
@@ -43,9 +43,9 @@
           "realName": "Kyle",
           "sleeperUsername": "thekylecasey",
           "nickname": "Kyle",
-          "tradeCount": 11,
-          "winRate": 27.27272727272727,
-          "avgMargin": 1093.2727272727273,
+          "tradeCount": 12,
+          "winRate": 25.0,
+          "avgMargin": 1268.5833333333333,
           "totalValueGained": 4936.0
         },
         {
@@ -65,9 +65,9 @@
           "realName": "Grant",
           "sleeperUsername": "gnewman4",
           "nickname": "Grant",
-          "tradeCount": 20,
-          "winRate": 55.00000000000001,
-          "avgMargin": 1104.7,
+          "tradeCount": 21,
+          "winRate": 52.38095238095239,
+          "avgMargin": 1073.7619047619048,
           "totalValueGained": 680.0
         },
         {
@@ -161,17 +161,6 @@
           "totalValueGained": 12756.0
         },
         {
-          "rosterId": 2,
-          "teamName": "The Federal Reserve",
-          "realName": "Grant",
-          "sleeperUsername": "gnewman4",
-          "nickname": "Grant",
-          "tradeCount": 20,
-          "winRate": 55.00000000000001,
-          "avgMargin": 1104.7,
-          "totalValueGained": 680.0
-        },
-        {
           "rosterId": 9,
           "teamName": "Gaeta Spur FC",
           "realName": "Matt",
@@ -181,6 +170,17 @@
           "winRate": 53.84615384615385,
           "avgMargin": 623.8461538461538,
           "totalValueGained": -3039.0
+        },
+        {
+          "rosterId": 2,
+          "teamName": "The Federal Reserve",
+          "realName": "Grant",
+          "sleeperUsername": "gnewman4",
+          "nickname": "Grant",
+          "tradeCount": 21,
+          "winRate": 52.38095238095239,
+          "avgMargin": 1073.7619047619048,
+          "totalValueGained": 680.0
         },
         {
           "rosterId": 6,
@@ -194,6 +194,17 @@
           "totalValueGained": -2101.0
         },
         {
+          "rosterId": 5,
+          "teamName": "Mommy Rainier ",
+          "realName": "Zach",
+          "sleeperUsername": "zachlearningtogolf",
+          "nickname": "Zach",
+          "tradeCount": 29,
+          "winRate": 48.275862068965516,
+          "avgMargin": 1075.5172413793102,
+          "totalValueGained": -10368.0
+        },
+        {
           "rosterId": 10,
           "teamName": "Rashid Shaheed Truthers",
           "realName": "Jake",
@@ -203,17 +214,6 @@
           "winRate": 45.45454545454545,
           "avgMargin": 308.8181818181818,
           "totalValueGained": -2211.0
-        },
-        {
-          "rosterId": 5,
-          "teamName": "Mommy Rainier ",
-          "realName": "Zach",
-          "sleeperUsername": "zachlearningtogolf",
-          "nickname": "Zach",
-          "tradeCount": 27,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1019.925925925926,
-          "totalValueGained": -10368.0
         },
         {
           "rosterId": 7,
@@ -267,9 +267,9 @@
           "realName": "Zach",
           "sleeperUsername": "zachlearningtogolf",
           "nickname": "Zach",
-          "tradeCount": 27,
-          "winRate": 44.44444444444444,
-          "avgMargin": 1019.925925925926,
+          "tradeCount": 29,
+          "winRate": 48.275862068965516,
+          "avgMargin": 1075.5172413793102,
           "totalValueGained": -10368.0
         },
         {
@@ -278,9 +278,9 @@
           "realName": "Grant",
           "sleeperUsername": "gnewman4",
           "nickname": "Grant",
-          "tradeCount": 20,
-          "winRate": 55.00000000000001,
-          "avgMargin": 1104.7,
+          "tradeCount": 21,
+          "winRate": 52.38095238095239,
+          "avgMargin": 1073.7619047619048,
           "totalValueGained": 680.0
         },
         {
@@ -317,6 +317,17 @@
           "totalValueGained": -3039.0
         },
         {
+          "rosterId": 4,
+          "teamName": "Lisan al-Caleb",
+          "realName": "Kyle",
+          "sleeperUsername": "thekylecasey",
+          "nickname": "Kyle",
+          "tradeCount": 12,
+          "winRate": 25.0,
+          "avgMargin": 1268.5833333333333,
+          "totalValueGained": 4936.0
+        },
+        {
           "rosterId": 11,
           "teamName": "All You Need Is LOVE",
           "realName": "Will",
@@ -326,17 +337,6 @@
           "winRate": 41.66666666666667,
           "avgMargin": 503.5,
           "totalValueGained": -6008.0
-        },
-        {
-          "rosterId": 4,
-          "teamName": "Lisan al-Caleb",
-          "realName": "Kyle",
-          "sleeperUsername": "thekylecasey",
-          "nickname": "Kyle",
-          "tradeCount": 11,
-          "winRate": 27.27272727272727,
-          "avgMargin": 1093.2727272727273,
-          "totalValueGained": 4936.0
         },
         {
           "rosterId": 10,
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 24
+        "season_3": 26
       },
       "seasonInfo": {
         "season_2": {
@@ -367,123 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-12T14:52:15.833580Z"
+          "last_fetched": "2026-08-13T14:52:01.806414Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1388760077904650240",
-        "transactionId": "1388760077904650240",
-        "tradeDate": "2026-07-31",
-        "season": "season_3",
-        "teamA": "jwalters74",
-        "teamAReceived": [
-          "Garrett Wilson",
-          "2027 Round 2",
-          "2027 Round 3"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Garrett Wilson",
-            "type": "player",
-            "value_then": 4824,
-            "value_now": 4790
-          },
-          {
-            "name": "2027 Round 2",
-            "type": "draft_pick",
-            "value_then": 461,
-            "value_now": 458
-          },
-          {
-            "name": "2027 Round 3",
-            "type": "draft_pick",
-            "value_then": 28,
-            "value_now": 27
-          }
-        ],
-        "teamAValueThen": 5313.0,
-        "teamAValueNow": 5275.0,
-        "teamAValueChange": -38.0,
-        "teamB": "tylerpilgrim",
-        "teamBReceived": [
-          "D'Andre Swift",
-          "George Pickens",
-          "2027 Round 4"
-        ],
-        "teamBAssets": [
-          {
-            "name": "D'Andre Swift",
-            "type": "player",
-            "value_then": 929,
-            "value_now": 942
-          },
-          {
-            "name": "George Pickens",
-            "type": "player",
-            "value_then": 4495,
-            "value_now": 4613
-          },
-          {
-            "name": "2027 Round 4",
-            "type": "draft_pick",
-            "value_then": 10,
-            "value_now": 10
-          }
-        ],
-        "teamBValueThen": 5434.0,
-        "teamBValueNow": 5565.0,
-        "teamBValueChange": 131.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": -121.0,
-        "marginCurrent": -290.0,
-        "swingWinner": "tylerpilgrim",
-        "swingMargin": 169.0
-      },
-      {
-        "tradeId": "1388678727138840576",
-        "transactionId": "1388678727138840576",
-        "tradeDate": "2026-07-30",
-        "season": "season_3",
-        "teamA": "tylerpilgrim",
-        "teamAReceived": [
-          "$21 FAAB"
-        ],
-        "teamAAssets": [
-          {
-            "name": "$21 FAAB",
-            "type": "faab",
-            "value_then": 21,
-            "value_now": 21
-          }
-        ],
-        "teamAValueThen": 21.0,
-        "teamAValueNow": 21.0,
-        "teamAValueChange": 0.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "Jameis Winston"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Jameis Winston",
-            "type": "player",
-            "value_then": 15,
-            "value_now": 15
-          }
-        ],
-        "teamBValueThen": 15.0,
-        "teamBValueNow": 15.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": -6.0,
-        "marginCurrent": -6.0,
-        "swingWinner": "Tie",
-        "swingMargin": 0.0
-      },
       {
         "tradeId": "1388633217661145088",
         "transactionId": "1388633217661145088",
@@ -714,7 +602,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -757,7 +645,7 @@
           {
             "name": "Jayden Higgins",
             "type": "player",
-            "value_then": 814,
+            "value_then": 799,
             "value_now": 799
           },
           {
@@ -785,7 +673,7 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4256,
+            "value_then": 4278,
             "value_now": 4278
           }
         ],
@@ -894,6 +782,160 @@
         "winnerCurrent": "cjsyregelas",
         "marginAtTrade": -32.0,
         "marginCurrent": -32.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1393125900987428864",
+        "transactionId": "1393125900987428864",
+        "tradeDate": "2026-08-12",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Ted Hurst",
+          "Daniel Jones"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Ted Hurst",
+            "type": "player",
+            "value_then": 195,
+            "value_now": 195
+          },
+          {
+            "name": "Daniel Jones",
+            "type": "player",
+            "value_then": 1113,
+            "value_now": 1113
+          }
+        ],
+        "teamAValueThen": 1308.0,
+        "teamAValueNow": 1308.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Jayden Higgins",
+          "Tua Tagovailoa",
+          "2028 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jayden Higgins",
+            "type": "player",
+            "value_then": 799,
+            "value_now": 799
+          },
+          {
+            "name": "Tua Tagovailoa",
+            "type": "player",
+            "value_then": 944,
+            "value_now": 944
+          },
+          {
+            "name": "2028 Round 4",
+            "type": "draft_pick",
+            "value_then": 20,
+            "value_now": 20
+          }
+        ],
+        "teamBValueThen": 1763.0,
+        "teamBValueNow": 1763.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": -455.0,
+        "marginCurrent": -455.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1393100662849441792",
+        "transactionId": "1393100662849441792",
+        "tradeDate": "2026-08-12",
+        "season": "season_3",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Oronde Gadsden",
+          "Cam Ward",
+          "Elijah Sarratt",
+          "Antonio Williams",
+          "2028 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Oronde Gadsden",
+            "type": "player",
+            "value_then": 884,
+            "value_now": 884
+          },
+          {
+            "name": "Cam Ward",
+            "type": "player",
+            "value_then": 2457,
+            "value_now": 2457
+          },
+          {
+            "name": "Elijah Sarratt",
+            "type": "player",
+            "value_then": 177,
+            "value_now": 177
+          },
+          {
+            "name": "Antonio Williams",
+            "type": "player",
+            "value_then": 462,
+            "value_now": 462
+          },
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 622,
+            "value_now": 622
+          }
+        ],
+        "teamAValueThen": 4602.0,
+        "teamAValueNow": 4602.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Jonathon Brooks",
+          "Malik Washington",
+          "Kyler Murray",
+          "2027 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jonathon Brooks",
+            "type": "player",
+            "value_then": 439,
+            "value_now": 439
+          },
+          {
+            "name": "Malik Washington",
+            "type": "player",
+            "value_then": 53,
+            "value_now": 53
+          },
+          {
+            "name": "Kyler Murray",
+            "type": "player",
+            "value_then": 3029,
+            "value_now": 3029
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 4278,
+            "value_now": 4278
+          }
+        ],
+        "teamBValueThen": 7799.0,
+        "teamBValueNow": 7799.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": -3197.0,
+        "marginCurrent": -3197.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
       }
