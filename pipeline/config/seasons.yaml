@@ -28,6 +28,6 @@ pipeline:
     validate_transaction_ids: true
 metadata:
   schema_version: 2.0.0
-  last_updated: '2026-08-15T14:17:55.034379Z'
+  last_updated: '2026-08-16T14:18:15.693921Z'
   created_date: '2025-12-31'
   migration_notes: Initial multi-season configuration for Season 3 launch
