@@ -369,7 +369,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -442,7 +442,7 @@
           {
             "name": "Alvin Kamara",
             "type": "player",
-            "value_then": 969,
+            "value_then": 58,
             "value_now": 58
           }
         ],
@@ -628,7 +628,7 @@
           {
             "name": "Alvin Kamara",
             "type": "player",
-            "value_then": 969,
+            "value_then": 58,
             "value_now": 58
           }
         ],
@@ -817,7 +817,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -867,7 +867,7 @@
           {
             "name": "Alvin Kamara",
             "type": "player",
-            "value_then": 969,
+            "value_then": 58,
             "value_now": 58
           }
         ],
@@ -1263,7 +1263,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -1472,7 +1472,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           },
           {
@@ -2252,7 +2252,7 @@
           {
             "name": "Alvin Kamara",
             "type": "player",
-            "value_then": 969,
+            "value_then": 58,
             "value_now": 58
           },
           {
@@ -3091,7 +3091,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -3241,7 +3241,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -5082,7 +5082,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -5225,7 +5225,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -5274,7 +5274,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -5359,7 +5359,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 10,
+            "value_then": 11,
             "value_now": 11
           }
         ],
@@ -5932,8 +5932,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 622,
-            "value_now": 622
+            "value_then": 330,
+            "value_now": 330
           }
         ],
         "teamAValueThen": 4602.0,
@@ -5981,14 +5981,84 @@
         "marginCurrent": -3820.0,
         "swingWinner": "zachlearningtogolf",
         "swingMargin": 623.0
+      },
+      {
+        "tradeId": "1394346210826928128",
+        "transactionId": "1394346210826928128",
+        "tradeDate": "2026-08-15",
+        "season": "season_3",
+        "teamA": "mgaeta23",
+        "teamAReceived": [
+          "Jalen Royals",
+          "Alvin Kamara",
+          "2028 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jalen Royals",
+            "type": "player",
+            "value_then": 23,
+            "value_now": 23
+          },
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 58,
+            "value_now": 58
+          },
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 330,
+            "value_now": 330
+          }
+        ],
+        "teamAValueThen": 411.0,
+        "teamAValueNow": 411.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Elic Ayomanor",
+          "Malachi Fields",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Elic Ayomanor",
+            "type": "player",
+            "value_then": 88,
+            "value_now": 88
+          },
+          {
+            "name": "Malachi Fields",
+            "type": "player",
+            "value_then": 103,
+            "value_now": 103
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 11,
+            "value_now": 11
+          }
+        ],
+        "teamBValueThen": 202.0,
+        "teamBValueNow": 202.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": -209.0,
+        "marginCurrent": -209.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-16T21:42:03.647172",
-      "totalTrades": 106,
+      "lastUpdated": "2026-08-18T14:28:58.847540",
+      "totalTrades": 107,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-12"
+        "latest": "2026-08-15"
       },
       "seasonsIncluded": [
         "season_2",
@@ -5996,7 +6066,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 26
+        "season_3": 27
       },
       "seasonInfo": {
         "season_2": {
@@ -6005,14 +6075,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-16T21:40:54.672382Z"
+          "last_fetched": "2026-08-18T14:27:33.362832Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 107,
-        "dashboardTradesGenerated": 106,
+        "rawTradesProcessed": 108,
+        "dashboardTradesGenerated": 107,
         "multiTeamTradesSkipped": 1
       }
     }

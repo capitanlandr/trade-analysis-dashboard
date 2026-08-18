@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 106,
-      "totalTradeValue": 391946.0,
-      "avgTradeMargin": 910.5849056603773,
+      "totalTrades": 107,
+      "totalTradeValue": 392559.0,
+      "avgTradeMargin": 904.0280373831775,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 32,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-12"
+        "latest": "2026-08-15"
       }
     },
     "teamRankings": {
@@ -54,9 +54,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 31,
-          "winRate": 45.16129032258064,
-          "avgMargin": 838.6129032258065,
+          "tradeCount": 32,
+          "winRate": 43.75,
+          "avgMargin": 818.9375,
           "totalValueGained": 2495.0
         },
         {
@@ -120,9 +120,9 @@
           "realName": "Matt",
           "sleeperUsername": "mgaeta23",
           "nickname": "Gaeta",
-          "tradeCount": 13,
-          "winRate": 53.84615384615385,
-          "avgMargin": 707.3076923076923,
+          "tradeCount": 14,
+          "winRate": 57.14285714285714,
+          "avgMargin": 671.7142857142857,
           "totalValueGained": -2001.0
         }
       ],
@@ -161,6 +161,17 @@
           "totalValueGained": 13274.0
         },
         {
+          "rosterId": 9,
+          "teamName": "Gaeta Spur FC",
+          "realName": "Matt",
+          "sleeperUsername": "mgaeta23",
+          "nickname": "Gaeta",
+          "tradeCount": 14,
+          "winRate": 57.14285714285714,
+          "avgMargin": 671.7142857142857,
+          "totalValueGained": -2001.0
+        },
+        {
           "rosterId": 10,
           "teamName": "Rashid Shaheed Truthers",
           "realName": "Jake",
@@ -170,17 +181,6 @@
           "winRate": 54.54545454545454,
           "avgMargin": 320.54545454545456,
           "totalValueGained": -1798.0
-        },
-        {
-          "rosterId": 9,
-          "teamName": "Gaeta Spur FC",
-          "realName": "Matt",
-          "sleeperUsername": "mgaeta23",
-          "nickname": "Gaeta",
-          "tradeCount": 13,
-          "winRate": 53.84615384615385,
-          "avgMargin": 707.3076923076923,
-          "totalValueGained": -2001.0
         },
         {
           "rosterId": 2,
@@ -205,17 +205,6 @@
           "totalValueGained": -1500.0
         },
         {
-          "rosterId": 12,
-          "teamName": "Omar Comin",
-          "realName": "Don",
-          "sleeperUsername": "donewton",
-          "nickname": "Don",
-          "tradeCount": 31,
-          "winRate": 45.16129032258064,
-          "avgMargin": 838.6129032258065,
-          "totalValueGained": 2495.0
-        },
-        {
           "rosterId": 5,
           "teamName": "Mommy Rainier ",
           "realName": "Zach",
@@ -236,6 +225,17 @@
           "winRate": 44.11764705882353,
           "avgMargin": 1027.0294117647059,
           "totalValueGained": 157.0
+        },
+        {
+          "rosterId": 12,
+          "teamName": "Omar Comin",
+          "realName": "Don",
+          "sleeperUsername": "donewton",
+          "nickname": "Don",
+          "tradeCount": 32,
+          "winRate": 43.75,
+          "avgMargin": 818.9375,
+          "totalValueGained": 2495.0
         }
       ],
       "byTradeCount": [
@@ -256,9 +256,9 @@
           "realName": "Don",
           "sleeperUsername": "donewton",
           "nickname": "Don",
-          "tradeCount": 31,
-          "winRate": 45.16129032258064,
-          "avgMargin": 838.6129032258065,
+          "tradeCount": 32,
+          "winRate": 43.75,
+          "avgMargin": 818.9375,
           "totalValueGained": 2495.0
         },
         {
@@ -311,9 +311,9 @@
           "realName": "Matt",
           "sleeperUsername": "mgaeta23",
           "nickname": "Gaeta",
-          "tradeCount": 13,
-          "winRate": 53.84615384615385,
-          "avgMargin": 707.3076923076923,
+          "tradeCount": 14,
+          "winRate": 57.14285714285714,
+          "avgMargin": 671.7142857142857,
           "totalValueGained": -2001.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 26
+        "season_3": 27
       },
       "seasonInfo": {
         "season_2": {
@@ -367,53 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-16T21:40:54.672382Z"
+          "last_fetched": "2026-08-18T14:27:33.362832Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1388633217661145088",
-        "transactionId": "1388633217661145088",
-        "tradeDate": "2026-07-30",
-        "season": "season_3",
-        "teamA": "brevinowens",
-        "teamAReceived": [
-          "Tank Dell"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Tank Dell",
-            "type": "player",
-            "value_then": 80,
-            "value_now": 73
-          }
-        ],
-        "teamAValueThen": 80.0,
-        "teamAValueNow": 73.0,
-        "teamAValueChange": -7.0,
-        "teamB": "thekylecasey",
-        "teamBReceived": [
-          "2028 Round 3"
-        ],
-        "teamBAssets": [
-          {
-            "name": "2028 Round 3",
-            "type": "draft_pick",
-            "value_then": 65,
-            "value_now": 65
-          }
-        ],
-        "teamBValueThen": 42.0,
-        "teamBValueNow": 42.0,
-        "teamBValueChange": 0.0,
-        "winnerAtTrade": "brevinowens",
-        "winnerCurrent": "brevinowens",
-        "marginAtTrade": 38.0,
-        "marginCurrent": 31.0,
-        "swingWinner": "brevinowens",
-        "swingMargin": 7.0
-      },
       {
         "tradeId": "1388605639894249472",
         "transactionId": "1388605639894249472",
@@ -889,8 +847,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 622,
-            "value_now": 622
+            "value_then": 330,
+            "value_now": 330
           }
         ],
         "teamAValueThen": 4602.0,
@@ -938,6 +896,76 @@
         "marginCurrent": -3820.0,
         "swingWinner": "zachlearningtogolf",
         "swingMargin": 623.0
+      },
+      {
+        "tradeId": "1394346210826928128",
+        "transactionId": "1394346210826928128",
+        "tradeDate": "2026-08-15",
+        "season": "season_3",
+        "teamA": "mgaeta23",
+        "teamAReceived": [
+          "Jalen Royals",
+          "Alvin Kamara",
+          "2028 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jalen Royals",
+            "type": "player",
+            "value_then": 23,
+            "value_now": 23
+          },
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 58,
+            "value_now": 58
+          },
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 330,
+            "value_now": 330
+          }
+        ],
+        "teamAValueThen": 411.0,
+        "teamAValueNow": 411.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Elic Ayomanor",
+          "Malachi Fields",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Elic Ayomanor",
+            "type": "player",
+            "value_then": 88,
+            "value_now": 88
+          },
+          {
+            "name": "Malachi Fields",
+            "type": "player",
+            "value_then": 103,
+            "value_now": 103
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 11,
+            "value_now": 11
+          }
+        ],
+        "teamBValueThen": 202.0,
+        "teamBValueNow": 202.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": -209.0,
+        "marginCurrent": -209.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }

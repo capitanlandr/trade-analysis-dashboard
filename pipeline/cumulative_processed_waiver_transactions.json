@@ -1,15 +1,15 @@
 {
   "metadata": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-08-16T21:41:14.790259Z",
+    "last_updated": "2026-08-18T14:27:57.495639Z",
     "seasons_included": [
       "season_2",
       "season_3"
     ],
-    "total_waiver-wire": 528,
+    "total_waiver-wire": 529,
     "waiver-wire_by_season": {
       "season_2": 383,
-      "season_3": 145
+      "season_3": 146
     },
     "season_info": {
       "season_2": {
@@ -18,7 +18,7 @@
       },
       "season_3": {
         "status": "active",
-        "last_fetched": "2026-08-16T21:41:14.790259Z"
+        "last_fetched": "2026-08-18T14:27:57.495639Z"
       }
     }
   },
@@ -14918,6 +14918,36 @@
         2
       ],
       "status_updated": 1786512071886,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "waiver",
+      "metadata": {
+        "notes": "Your waiver claim was processed successfully!"
+      },
+      "created": 1787026293711,
+      "settings": {
+        "seq": 0,
+        "waiver_bid": 0
+      },
+      "leg": 1,
+      "draft_picks": [],
+      "creator": "1129843037888204800",
+      "transaction_id": "1395293041601830912",
+      "adds": {
+        "7528": 5
+      },
+      "drops": null,
+      "consenter_ids": [
+        5
+      ],
+      "roster_ids": [
+        5
+      ],
+      "status_updated": 1787036882009,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"
