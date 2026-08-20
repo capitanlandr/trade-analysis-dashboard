@@ -3,26 +3,70 @@
   "data": {
     "teams": [
       {
-        "rosterId": 1,
-        "teamName": "208 Ferrari Way",
-        "realName": "Landry",
-        "sleeperUsername": "lndahayo",
-        "nickname": "Landry",
-        "tradeCount": 16,
-        "winRate": 68.75,
-        "avgMargin": 715.875,
-        "totalValueGained": 12756.0
-      },
-      {
         "rosterId": 2,
         "teamName": "The Federal Reserve",
         "realName": "Grant",
         "sleeperUsername": "gnewman4",
         "nickname": "Grant",
         "tradeCount": 20,
-        "winRate": 55.00000000000001,
-        "avgMargin": 1104.7,
-        "totalValueGained": 680.0
+        "winRate": 60.0,
+        "avgMargin": 1292.05,
+        "totalValueGained": 25841.0
+      },
+      {
+        "rosterId": 4,
+        "teamName": "Lisan al-Caleb",
+        "realName": "Kyle",
+        "sleeperUsername": "thekylecasey",
+        "nickname": "Kyle",
+        "tradeCount": 11,
+        "winRate": 45.45,
+        "avgMargin": 1333.818,
+        "totalValueGained": 14672.0
+      },
+      {
+        "rosterId": 9,
+        "teamName": "Gaeta Spur FC",
+        "realName": "Matt",
+        "sleeperUsername": "mgaeta23",
+        "nickname": "Gaeta",
+        "tradeCount": 13,
+        "winRate": 76.92,
+        "avgMargin": 1064.538,
+        "totalValueGained": 13839.0
+      },
+      {
+        "rosterId": 11,
+        "teamName": "All You Need Is LOVE",
+        "realName": "Will",
+        "sleeperUsername": "wkerwin",
+        "nickname": "Will",
+        "tradeCount": 12,
+        "winRate": 58.33,
+        "avgMargin": 348.167,
+        "totalValueGained": 4178.0
+      },
+      {
+        "rosterId": 10,
+        "teamName": "Rashid Shaheed Truthers",
+        "realName": "Jake",
+        "sleeperUsername": "jakeduf",
+        "nickname": "Jake",
+        "tradeCount": 11,
+        "winRate": 45.45,
+        "avgMargin": 144.0,
+        "totalValueGained": 1584.0
+      },
+      {
+        "rosterId": 6,
+        "teamName": "Mostly Washed",
+        "realName": "Chris",
+        "sleeperUsername": "cjsyregelas",
+        "nickname": "Chris",
+        "tradeCount": 10,
+        "winRate": 60.0,
+        "avgMargin": -0.8,
+        "totalValueGained": -8.0
       },
       {
         "rosterId": 3,
@@ -32,52 +76,8 @@
         "nickname": "Brevin",
         "tradeCount": 4,
         "winRate": 75.0,
-        "avgMargin": 212.0,
-        "totalValueGained": -1176.0
-      },
-      {
-        "rosterId": 4,
-        "teamName": "Lisan al-Caleb",
-        "realName": "Kyle",
-        "sleeperUsername": "thekylecasey",
-        "nickname": "Kyle",
-        "tradeCount": 11,
-        "winRate": 27.27272727272727,
-        "avgMargin": 1093.2727272727273,
-        "totalValueGained": 4936.0
-      },
-      {
-        "rosterId": 5,
-        "teamName": "Mommy Rainier ",
-        "realName": "Zach",
-        "sleeperUsername": "zachlearningtogolf",
-        "nickname": "Zach",
-        "tradeCount": 27,
-        "winRate": 44.44444444444444,
-        "avgMargin": 1019.925925925926,
-        "totalValueGained": -10368.0
-      },
-      {
-        "rosterId": 6,
-        "teamName": "Mostly Washed",
-        "realName": "Chris",
-        "sleeperUsername": "cjsyregelas",
-        "nickname": "Chris",
-        "tradeCount": 10,
-        "winRate": 50.0,
-        "avgMargin": 1125.2,
-        "totalValueGained": -2101.0
-      },
-      {
-        "rosterId": 7,
-        "teamName": "C\u00e1rtel de Breece y Puka",
-        "realName": "Johnny",
-        "sleeperUsername": "jwalters74",
-        "nickname": "Johnny",
-        "tradeCount": 34,
-        "winRate": 44.11764705882353,
-        "avgMargin": 992.0588235294117,
-        "totalValueGained": -805.0
+        "avgMargin": -44.5,
+        "totalValueGained": -178.0
       },
       {
         "rosterId": 8,
@@ -86,42 +86,31 @@
         "sleeperUsername": "tylerpilgrim",
         "nickname": "Tyler",
         "tradeCount": 19,
-        "winRate": 73.68421052631578,
-        "avgMargin": 745.0526315789474,
-        "totalValueGained": 5017.0
+        "winRate": 52.63,
+        "avgMargin": -86.842,
+        "totalValueGained": -1650.0
       },
       {
-        "rosterId": 9,
-        "teamName": "Gaeta Spur FC",
-        "realName": "Matt",
-        "sleeperUsername": "mgaeta23",
-        "nickname": "Gaeta",
-        "tradeCount": 13,
-        "winRate": 53.84615384615385,
-        "avgMargin": 623.8461538461538,
-        "totalValueGained": -3039.0
+        "rosterId": 1,
+        "teamName": "208 Ferrari Way",
+        "realName": "Landry",
+        "sleeperUsername": "lndahayo",
+        "nickname": "Landry",
+        "tradeCount": 16,
+        "winRate": 43.75,
+        "avgMargin": -280.25,
+        "totalValueGained": -4484.0
       },
       {
-        "rosterId": 10,
-        "teamName": "Rashid Shaheed Truthers",
-        "realName": "Jake",
-        "sleeperUsername": "jakeduf",
-        "nickname": "Jake",
-        "tradeCount": 11,
-        "winRate": 45.45454545454545,
-        "avgMargin": 308.8181818181818,
-        "totalValueGained": -2211.0
-      },
-      {
-        "rosterId": 11,
-        "teamName": "All You Need Is LOVE",
-        "realName": "Will",
-        "sleeperUsername": "wkerwin",
-        "nickname": "Will",
-        "tradeCount": 12,
-        "winRate": 41.66666666666667,
-        "avgMargin": 503.5,
-        "totalValueGained": -6008.0
+        "rosterId": 5,
+        "teamName": "Mommy Rainier ",
+        "realName": "Zach",
+        "sleeperUsername": "zachlearningtogolf",
+        "nickname": "Zach",
+        "tradeCount": 27,
+        "winRate": 48.15,
+        "avgMargin": -514.778,
+        "totalValueGained": -13899.0
       },
       {
         "rosterId": 12,
@@ -130,9 +119,20 @@
         "sleeperUsername": "donewton",
         "nickname": "Don",
         "tradeCount": 31,
-        "winRate": 41.935483870967744,
-        "avgMargin": 835.8387096774194,
-        "totalValueGained": 2279.0
+        "winRate": 38.71,
+        "avgMargin": -595.129,
+        "totalValueGained": -18449.0
+      },
+      {
+        "rosterId": 7,
+        "teamName": "C\u00e1rtel de Breece y Puka",
+        "realName": "Johnny",
+        "sleeperUsername": "jwalters74",
+        "nickname": "Johnny",
+        "tradeCount": 34,
+        "winRate": 35.29,
+        "avgMargin": -630.765,
+        "totalValueGained": -21446.0
       }
     ],
     "summary": {

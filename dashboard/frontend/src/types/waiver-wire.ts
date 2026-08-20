@@ -109,10 +109,112 @@ export interface TimingData {
   };
 }
 
+export interface ContestedPlayer {
+  player_id: string;
+  player_name: string;
+  total_claims: number;
+  successful_claims: number;
+  highest_bid: number;
+}
+
+export interface BiddingPatterns {
+  distribution: Record<string, number>;
+  highest_bids: {
+    player_id: string;
+    player_name: string;
+    waiver_bid: number;
+    team_name: string;
+    status: string;
+  }[];
+  zero_bid_success_rate?: number;
+}
+
+export interface WeeklyActivity {
+  week: number;
+  waiver_transactions: number;
+  free_agent_transactions: number;
+  total_transactions: number;
+}
+
+export interface ManagerActivity {
+  roster_id: number;
+  team_name: string;
+  total_claims: number;
+  successful_claims: number;
+  success_rate: number;
+  total_bid: number;
+  avg_bid: number;
+  max_bid: number;
+}
+
+export interface WaiverMetadata {
+  generated_at?: string;
+  total_waiver_transactions?: number;
+  total_free_agent_transactions?: number;
+  successful_waivers?: number;
+  failed_waivers?: number;
+  success_rate?: number;
+  total_waiver_bids?: number;
+  average_waiver_bid?: number;
+  seasonsIncluded?: string[];
+}
+
 export interface WaiverWireData {
   all_transactions: WaiverWireTransaction[];
+  metadata?: WaiverMetadata;
   churn_metrics?: ChurnMetric[];
-  efficiency_metrics?: EfficiencyData;
-  hit_rate_metrics?: HitRateData;
-  timing_metrics?: TimingData;
+  efficiency_metrics?: EfficiencyData | null;
+  hit_rate_metrics?: HitRateData | null;
+  timing_metrics?: TimingData | null;
+  manager_activity?: ManagerActivity[];
+  contested_players?: ContestedPlayer[];
+  bidding_patterns?: BiddingPatterns;
+  weekly_activity?: WeeklyActivity[];
+}
+
+// ---------------------------------------------------------------------------
+// Client-derived dynasty waiver metrics
+//
+// The production /api/waivers response returns efficiency_metrics,
+// hit_rate_metrics, and timing_metrics as null (they require post-acquisition
+// weekly scoring the backend does not yet emit). These three metrics are
+// instead derived on the client from fields that DO exist -- most importantly
+// `player_value`, which is each player's DYNASTY trade value (long-term worth),
+// not a weekly box score. That makes them dynasty-specific by construction.
+// ---------------------------------------------------------------------------
+
+/** Net long-term dynasty asset value a manager added vs. shed on the wire. */
+export interface DynastyValueMetric {
+  roster_id: number;
+  team_name: string;
+  add_value: number;
+  drop_value: number;
+  net_value: number;
+  add_count: number;
+  /** Net value per completed add -- separates "value builder" from "active churner". */
+  avg_per_add: number;
+}
+
+/** Share of a manager's completed adds that were genuine high-value assets. */
+export interface BlueChipMetric {
+  roster_id: number;
+  team_name: string;
+  blue_chip_adds: number;
+  total_adds: number;
+  rate: number;
+}
+
+/** How often a manager won CONTESTED, high-value (blue-chip) players. */
+export interface ContestedWinMetric {
+  roster_id: number;
+  team_name: string;
+  won: number;
+  attempts: number;
+  rate: number;
+}
+
+export interface DerivedDynastyMetrics {
+  dynastyValue: DynastyValueMetric[];
+  blueChip: { threshold: number; managers: BlueChipMetric[] };
+  contested: { contestedCount: number; valueThreshold: number; managers: ContestedWinMetric[] };
 }

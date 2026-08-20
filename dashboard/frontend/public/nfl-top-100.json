@@ -1,13 +1,23 @@
 {
   "title": "NFL Top 100 Players of 2026",
   "subtitle": "Top-100 players cross-referenced against league fantasy rosters",
-  "generatedAt": "2026-08-12T19:58:57.891882+00:00",
+  "generatedAt": "2026-08-20T09:30:02.236750+00:00",
   "source": "wikipedia",
   "sourceUrl": "https://en.wikipedia.org/wiki/NFL_Top_100_Players_of_2026",
   "totalRanks": 100,
-  "revealedCount": 76,
-  "pendingCount": 24,
+  "revealedCount": 86,
+  "pendingCount": 14,
   "revealedRanks": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
     25,
     26,
     27,
@@ -99,20 +109,70 @@
     11,
     12,
     13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24
+    14
   ],
   "leagueId": "1312166810505719808",
   "players": [
+    {
+      "rank": 15,
+      "name": "Derrick Henry",
+      "position": "RB",
+      "nflTeam": "Baltimore Ravens"
+    },
+    {
+      "rank": 16,
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "nflTeam": "Cincinnati Bengals"
+    },
+    {
+      "rank": 17,
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "nflTeam": "Indianapolis Colts"
+    },
+    {
+      "rank": 18,
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "nflTeam": "Kansas City Chiefs"
+    },
+    {
+      "rank": 19,
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "nflTeam": "Minnesota Vikings"
+    },
+    {
+      "rank": 20,
+      "name": "James Cook",
+      "position": "RB",
+      "nflTeam": "Buffalo Bills"
+    },
+    {
+      "rank": 21,
+      "name": "Sam Darnold",
+      "position": "QB",
+      "nflTeam": "Seattle Seahawks"
+    },
+    {
+      "rank": 22,
+      "name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "nflTeam": "Detriot Lions"
+    },
+    {
+      "rank": 23,
+      "name": "Danielle Hunter",
+      "position": "DE",
+      "nflTeam": "Houston Texans"
+    },
+    {
+      "rank": 24,
+      "name": "Maxx Crosby",
+      "position": "DE",
+      "nflTeam": "Las Vegas Raiders"
+    },
     {
       "rank": 25,
       "name": "Derek Stingley Jr.",
@@ -572,6 +632,78 @@
   ],
   "rostered": [
     {
+      "rank": 15,
+      "name": "Derrick Henry",
+      "position": "RB",
+      "nflTeam": "Baltimore Ravens",
+      "fantasyTeam": "Cártel de Breece y Puka",
+      "manager": "Johnny",
+      "rosterId": 7
+    },
+    {
+      "rank": 16,
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "nflTeam": "Cincinnati Bengals",
+      "fantasyTeam": "The Federal Reserve",
+      "manager": "Grant",
+      "rosterId": 2
+    },
+    {
+      "rank": 17,
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "nflTeam": "Indianapolis Colts",
+      "fantasyTeam": "208 Ferrari Way",
+      "manager": "Landry",
+      "rosterId": 1
+    },
+    {
+      "rank": 18,
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "nflTeam": "Kansas City Chiefs",
+      "fantasyTeam": "Omar Comin",
+      "manager": "Don",
+      "rosterId": 12
+    },
+    {
+      "rank": 19,
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "nflTeam": "Minnesota Vikings",
+      "fantasyTeam": "Loading…",
+      "manager": "Tyler",
+      "rosterId": 8
+    },
+    {
+      "rank": 20,
+      "name": "James Cook",
+      "position": "RB",
+      "nflTeam": "Buffalo Bills",
+      "fantasyTeam": "Omar Comin",
+      "manager": "Don",
+      "rosterId": 12
+    },
+    {
+      "rank": 21,
+      "name": "Sam Darnold",
+      "position": "QB",
+      "nflTeam": "Seattle Seahawks",
+      "fantasyTeam": "Rashid Shaheed Truthers",
+      "manager": "Jake",
+      "rosterId": 10
+    },
+    {
+      "rank": 22,
+      "name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "nflTeam": "Detriot Lions",
+      "fantasyTeam": "208 Ferrari Way",
+      "manager": "Landry",
+      "rosterId": 1
+    },
+    {
       "rank": 26,
       "name": "De'Von Achane",
       "position": "RB",
@@ -852,6 +984,20 @@
     }
   ],
   "unmatched": [
+    {
+      "rank": 23,
+      "name": "Danielle Hunter",
+      "position": "DE",
+      "nflTeam": "Houston Texans",
+      "reason": "not on any fantasy roster (free agent / undrafted in this league)"
+    },
+    {
+      "rank": 24,
+      "name": "Maxx Crosby",
+      "position": "DE",
+      "nflTeam": "Las Vegas Raiders",
+      "reason": "not on any fantasy roster (free agent / undrafted in this league)"
+    },
     {
       "rank": 25,
       "name": "Derek Stingley Jr.",
@@ -1170,28 +1316,40 @@
   ],
   "teamCounts": [
     {
+      "rosterId": 2,
+      "fantasyTeam": "The Federal Reserve",
+      "manager": "Grant",
+      "top100Count": 6
+    },
+    {
+      "rosterId": 1,
+      "fantasyTeam": "208 Ferrari Way",
+      "manager": "Landry",
+      "top100Count": 5
+    },
+    {
       "rosterId": 3,
       "fantasyTeam": "Golden Hour",
       "manager": "Brevin",
       "top100Count": 5
     },
     {
-      "rosterId": 2,
-      "fantasyTeam": "The Federal Reserve",
-      "manager": "Grant",
-      "top100Count": 5
-    },
-    {
       "rosterId": 8,
       "fantasyTeam": "Loading…",
       "manager": "Tyler",
-      "top100Count": 4
+      "top100Count": 5
     },
     {
-      "rosterId": 1,
-      "fantasyTeam": "208 Ferrari Way",
-      "manager": "Landry",
-      "top100Count": 3
+      "rosterId": 12,
+      "fantasyTeam": "Omar Comin",
+      "manager": "Don",
+      "top100Count": 5
+    },
+    {
+      "rosterId": 10,
+      "fantasyTeam": "Rashid Shaheed Truthers",
+      "manager": "Jake",
+      "top100Count": 4
     },
     {
       "rosterId": 6,
@@ -1200,22 +1358,16 @@
       "top100Count": 3
     },
     {
-      "rosterId": 12,
-      "fantasyTeam": "Omar Comin",
-      "manager": "Don",
-      "top100Count": 3
-    },
-    {
-      "rosterId": 10,
-      "fantasyTeam": "Rashid Shaheed Truthers",
-      "manager": "Jake",
-      "top100Count": 3
-    },
-    {
       "rosterId": 11,
       "fantasyTeam": "All You Need Is LOVE",
       "manager": "Will",
       "top100Count": 2
+    },
+    {
+      "rosterId": 7,
+      "fantasyTeam": "Cártel de Breece y Puka",
+      "manager": "Johnny",
+      "top100Count": 1
     },
     {
       "rosterId": 9,
@@ -1234,14 +1386,8 @@
       "fantasyTeam": "Mommy Rainier ",
       "manager": "Zach",
       "top100Count": 1
-    },
-    {
-      "rosterId": 7,
-      "fantasyTeam": "Cártel de Breece y Puka",
-      "manager": "Johnny",
-      "top100Count": 0
     }
   ],
-  "rosteredCount": 31,
-  "unmatchedCount": 45
+  "rosteredCount": 39,
+  "unmatchedCount": 47
 }
