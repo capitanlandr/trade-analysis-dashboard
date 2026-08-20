@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { BarChart3, Users, TrendingUp, Trophy, Calendar, DollarSign } from 'lucide-react';
+import { BarChart3, Users, TrendingUp, Trophy, Calendar, DollarSign, Flame } from 'lucide-react';
 import { api } from '../services/api';
 
 import ErrorMessage from '../components/UI/ErrorMessage';
@@ -106,17 +106,18 @@ const Overview: React.FC = () => {
           color="blue"
         />
         <MetricCard
-          title="Placeholder 1"
-          value="TBD"
+          title="Total Value Traded"
+          value={Math.round(stats?.overview?.totalTradeValue || 0).toLocaleString()}
           icon={DollarSign}
           color="green"
+          subtitle="Dynasty value across all trades"
         />
         <MetricCard
-          title="Placeholder 2"
-          value="TBD"
-          icon={Users}
+          title="Blockbuster Trades"
+          value={stats?.overview?.blockbusterCount || 0}
+          icon={Flame}
           color="yellow"
-
+          subtitle={`${Math.round(((stats?.overview?.blockbusterCount || 0) / (stats?.overview?.totalTrades || 1)) * 100)}% of all trades`}
         />
         <MetricCard
           title="Avg Margin"

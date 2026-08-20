@@ -1,0 +1,5868 @@
+{
+  "success": true,
+  "data": {
+    "trades": [
+      {
+        "tradeId": "1296312256438497280",
+        "transactionId": "1296312256438497280",
+        "tradeDate": "2025-11-18",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "2026 Round 4",
+          "$15 FAAB",
+          "$2 FAAB",
+          "$8 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "$15 FAAB",
+            "type": "faab",
+            "value_then": 15.0,
+            "value_now": 15.0
+          },
+          {
+            "name": "$2 FAAB",
+            "type": "faab",
+            "value_then": 2.0,
+            "value_now": 2.0
+          },
+          {
+            "name": "$8 FAAB",
+            "type": "faab",
+            "value_then": 8.0,
+            "value_now": 8.0
+          }
+        ],
+        "teamAValueThen": 865.0,
+        "teamAValueNow": 865.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "DJ Giddens",
+          "$1 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "DJ Giddens",
+            "type": "player",
+            "value_then": 574.0,
+            "value_now": 574.0
+          },
+          {
+            "name": "$1 FAAB",
+            "type": "faab",
+            "value_then": 1.0,
+            "value_now": 1.0
+          }
+        ],
+        "teamBValueThen": 575.0,
+        "teamBValueNow": 575.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 290.0,
+        "marginCurrent": 290.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1296287239650684928",
+        "transactionId": "1296287239650684928",
+        "tradeDate": "2025-11-17",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "2028 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 959.0,
+            "value_now": 959.0
+          }
+        ],
+        "teamAValueThen": 959.0,
+        "teamAValueNow": 959.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Michael Wilson"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Michael Wilson",
+            "type": "player",
+            "value_then": 2114.0,
+            "value_now": 2114.0
+          }
+        ],
+        "teamBValueThen": 2114.0,
+        "teamBValueNow": 2114.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 1155.0,
+        "marginCurrent": 1155.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1296216363412516864",
+        "transactionId": "1296216363412516864",
+        "tradeDate": "2025-11-17",
+        "season": "season_2",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "George Kittle"
+        ],
+        "teamAAssets": [
+          {
+            "name": "George Kittle",
+            "type": "player",
+            "value_then": 2121.0,
+            "value_now": 2121.0
+          }
+        ],
+        "teamAValueThen": 2121.0,
+        "teamAValueNow": 2121.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "2027 Round 2",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 3188.0,
+        "teamBValueNow": 3188.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 1067.0,
+        "marginCurrent": 1067.0,
+        "swingWinner": "brevinowens",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1295662941210697728",
+        "transactionId": "1295662941210697728",
+        "tradeDate": "2025-11-16",
+        "season": "season_2",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "James Cook"
+        ],
+        "teamAAssets": [
+          {
+            "name": "James Cook",
+            "type": "player",
+            "value_then": 4980.0,
+            "value_now": 4980.0
+          }
+        ],
+        "teamAValueThen": 4980.0,
+        "teamAValueNow": 4980.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Saquon Barkley"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Saquon Barkley",
+            "type": "player",
+            "value_then": 3818.0,
+            "value_now": 3818.0
+          }
+        ],
+        "teamBValueThen": 3818.0,
+        "teamBValueNow": 3818.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 1162.0,
+        "marginCurrent": 1162.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1294350847387398144",
+        "transactionId": "1294350847387398144",
+        "tradeDate": "2025-11-12",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Jonathon Brooks",
+          "Terrance Ferguson",
+          "Luther Burden",
+          "2027 Round 3",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jonathon Brooks",
+            "type": "player",
+            "value_then": 1939.0,
+            "value_now": 1939.0
+          },
+          {
+            "name": "Terrance Ferguson",
+            "type": "player",
+            "value_then": 1565.0,
+            "value_now": 1565.0
+          },
+          {
+            "name": "Luther Burden",
+            "type": "player",
+            "value_then": 3638.0,
+            "value_now": 3638.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 9240.0,
+        "teamAValueNow": 9240.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Aaron Jones",
+          "George Pickens"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Aaron Jones",
+            "type": "player",
+            "value_then": 1216.0,
+            "value_now": 1216.0
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4783.0,
+            "value_now": 4783.0
+          }
+        ],
+        "teamBValueThen": 5999.0,
+        "teamBValueNow": 5999.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 3241.0,
+        "marginCurrent": 3241.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1294198173723557888",
+        "transactionId": "1294198173723557888",
+        "tradeDate": "2025-11-12",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Chuba Hubbard"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Chuba Hubbard",
+            "type": "player",
+            "value_then": 1864.0,
+            "value_now": 1864.0
+          }
+        ],
+        "teamAValueThen": 1864.0,
+        "teamAValueNow": 1864.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "DeAndre Hopkins",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "DeAndre Hopkins",
+            "type": "player",
+            "value_then": 3.0,
+            "value_now": 3.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1118.0,
+        "teamBValueNow": 1118.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 746.0,
+        "marginCurrent": 746.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1294189559839465472",
+        "transactionId": "1294189559839465472",
+        "tradeDate": "2025-11-12",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Juwan Johnson",
+          "DeVonta Smith",
+          "2026 Round 4",
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Juwan Johnson",
+            "type": "player",
+            "value_then": 1384.0,
+            "value_now": 1384.0
+          },
+          {
+            "name": "DeVonta Smith",
+            "type": "player",
+            "value_then": 3618.0,
+            "value_now": 3618.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamAValueThen": 6664.0,
+        "teamAValueNow": 6664.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "Bhayshul Tuten",
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Bhayshul Tuten",
+            "type": "player",
+            "value_then": 2510.0,
+            "value_now": 2510.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 5661.0,
+        "teamBValueNow": 5661.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 1003.0,
+        "marginCurrent": 1003.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1294076505202098176",
+        "transactionId": "1294076505202098176",
+        "tradeDate": "2025-11-11",
+        "season": "season_2",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "Dontayvion Wicks",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Dontayvion Wicks",
+            "type": "player",
+            "value_then": 1165.0,
+            "value_now": 1165.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 2280.0,
+        "teamAValueNow": 2280.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Alvin Kamara"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 1192.0,
+            "value_now": 1192.0
+          }
+        ],
+        "teamBValueThen": 1192.0,
+        "teamBValueNow": 1192.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 1088.0,
+        "marginCurrent": 1088.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1294061216544587776",
+        "transactionId": "1294061216544587776",
+        "tradeDate": "2025-11-11",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Cooper Kupp",
+          "Rico Dowdle",
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Cooper Kupp",
+            "type": "player",
+            "value_then": 693.0,
+            "value_now": 693.0
+          },
+          {
+            "name": "Rico Dowdle",
+            "type": "player",
+            "value_then": 1730.0,
+            "value_now": 1730.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 3263.0,
+        "teamAValueNow": 3263.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Wan'Dale Robinson",
+          "2026 Round 2",
+          "2027 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 1781.0,
+            "value_now": 1781.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamBValueThen": 4488.0,
+        "teamBValueNow": 4488.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 1225.0,
+        "marginCurrent": 1225.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1293486502654791680",
+        "transactionId": "1293486502654791680",
+        "tradeDate": "2025-11-10",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Justin Fields",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Justin Fields",
+            "type": "player",
+            "value_then": 765.0,
+            "value_now": 765.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1880.0,
+        "teamAValueNow": 1880.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Geno Smith",
+          "2026 Round 2",
+          "$1 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Geno Smith",
+            "type": "player",
+            "value_then": 1414.0,
+            "value_now": 1414.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "$1 FAAB",
+            "type": "faab",
+            "value_then": 1.0,
+            "value_now": 1.0
+          }
+        ],
+        "teamBValueThen": 3073.0,
+        "teamBValueNow": 3073.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 1193.0,
+        "marginCurrent": 1193.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1290567058949427200",
+        "transactionId": "1290567058949427200",
+        "tradeDate": "2025-11-02",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Jonathon Brooks",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jonathon Brooks",
+            "type": "player",
+            "value_then": 1939.0,
+            "value_now": 1939.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 2988.0,
+        "teamAValueNow": 2988.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Alvin Kamara"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 1192.0,
+            "value_now": 1192.0
+          }
+        ],
+        "teamBValueThen": 1192.0,
+        "teamBValueNow": 1192.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 1796.0,
+        "marginCurrent": 1796.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1290362815730708480",
+        "transactionId": "1290362815730708480",
+        "tradeDate": "2025-11-01",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Tyrone Tracy",
+          "Kyle Monangai",
+          "Chris Godwin"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tyrone Tracy",
+            "type": "player",
+            "value_then": 1399.0,
+            "value_now": 1399.0
+          },
+          {
+            "name": "Kyle Monangai",
+            "type": "player",
+            "value_then": 1692.0,
+            "value_now": 1692.0
+          },
+          {
+            "name": "Chris Godwin",
+            "type": "player",
+            "value_then": 1526.0,
+            "value_now": 1526.0
+          }
+        ],
+        "teamAValueThen": 4617.0,
+        "teamAValueNow": 4617.0,
+        "teamAValueChange": 0.0,
+        "teamB": "thekylecasey",
+        "teamBReceived": [
+          "Cedric Tillman",
+          "Shedeur Sanders",
+          "2027 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Cedric Tillman",
+            "type": "player",
+            "value_then": 140.0,
+            "value_now": 140.0
+          },
+          {
+            "name": "Shedeur Sanders",
+            "type": "player",
+            "value_then": 1812.0,
+            "value_now": 1812.0
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamBValueThen": 4912.0,
+        "teamBValueNow": 4912.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 295.0,
+        "marginCurrent": 295.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1288261486111641600",
+        "transactionId": "1288261486111641600",
+        "tradeDate": "2025-10-26",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Davante Adams",
+          "Wan'Dale Robinson",
+          "2027 Round 1",
+          "2028 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Davante Adams",
+            "type": "player",
+            "value_then": 2093.0,
+            "value_now": 2093.0
+          },
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 1781.0,
+            "value_now": 1781.0
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          },
+          {
+            "name": "2028 Round 1",
+            "type": "draft_pick",
+            "value_then": 2041.0,
+            "value_now": 2041.0
+          }
+        ],
+        "teamAValueThen": 8875.0,
+        "teamAValueNow": 8875.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Rashee Rice",
+          "Rashod Bateman"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Rashee Rice",
+            "type": "player",
+            "value_then": 3650.0,
+            "value_now": 3650.0
+          },
+          {
+            "name": "Rashod Bateman",
+            "type": "player",
+            "value_then": 557.0,
+            "value_now": 557.0
+          }
+        ],
+        "teamBValueThen": 4207.0,
+        "teamBValueNow": 4207.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 4668.0,
+        "marginCurrent": 4668.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1287157631126876160",
+        "transactionId": "1287157631126876160",
+        "tradeDate": "2025-10-23",
+        "season": "season_2",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "Kayshon Boutte"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Kayshon Boutte",
+            "type": "player",
+            "value_then": 1158.0,
+            "value_now": 1158.0
+          }
+        ],
+        "teamAValueThen": 1158.0,
+        "teamAValueNow": 1158.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Pat Bryant",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Pat Bryant",
+            "type": "player",
+            "value_then": 1396.0,
+            "value_now": 1396.0
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamBValueThen": 2218.0,
+        "teamBValueNow": 2218.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 1060.0,
+        "marginCurrent": 1060.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1286931153982361600",
+        "transactionId": "1286931153982361600",
+        "tradeDate": "2025-10-23",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Dont'e Thornton",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Dont'e Thornton",
+            "type": "player",
+            "value_then": 351.0,
+            "value_now": 351.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1466.0,
+        "teamAValueNow": 1466.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Alvin Kamara"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 1192.0,
+            "value_now": 1192.0
+          }
+        ],
+        "teamBValueThen": 1192.0,
+        "teamBValueNow": 1192.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 274.0,
+        "marginCurrent": 274.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1286819210667765760",
+        "transactionId": "1286819210667765760",
+        "tradeDate": "2025-10-22",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Jerry Jeudy",
+          "George Pickens",
+          "2026 Round 1",
+          "2026 Round 2",
+          "2027 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jerry Jeudy",
+            "type": "player",
+            "value_then": 1173.0,
+            "value_now": 1173.0
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4783.0,
+            "value_now": 4783.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamAValueThen": 13725.0,
+        "teamAValueNow": 13725.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Travis Kelce",
+          "Justin Jefferson",
+          "Jordan Mason",
+          "2027 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Travis Kelce",
+            "type": "player",
+            "value_then": 1593.0,
+            "value_now": 1593.0
+          },
+          {
+            "name": "Justin Jefferson",
+            "type": "player",
+            "value_then": 6897.0,
+            "value_now": 6897.0
+          },
+          {
+            "name": "Jordan Mason",
+            "type": "player",
+            "value_then": 1479.0,
+            "value_now": 1479.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamBValueThen": 11018.0,
+        "teamBValueNow": 11018.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 2707.0,
+        "marginCurrent": 2707.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1286504609589776384",
+        "transactionId": "1286504609589776384",
+        "tradeDate": "2025-10-21",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Michael Pittman",
+          "Isiah Pacheco",
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Michael Pittman",
+            "type": "player",
+            "value_then": 1801.0,
+            "value_now": 1801.0
+          },
+          {
+            "name": "Isiah Pacheco",
+            "type": "player",
+            "value_then": 1177.0,
+            "value_now": 1177.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 3818.0,
+        "teamAValueNow": 3818.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "J.K. Dobbins",
+          "Tyjae Spears",
+          "2027 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "J.K. Dobbins",
+            "type": "player",
+            "value_then": 1598.0,
+            "value_now": 1598.0
+          },
+          {
+            "name": "Tyjae Spears",
+            "type": "player",
+            "value_then": 1140.0,
+            "value_now": 1140.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamBValueThen": 3787.0,
+        "teamBValueNow": 3787.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 31.0,
+        "marginCurrent": 31.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1282804334102343680",
+        "transactionId": "1282804334102343680",
+        "tradeDate": "2025-10-11",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Trey Benson",
+          "Tee Higgins",
+          "2026 Round 3",
+          "2026 Round 2",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Trey Benson",
+            "type": "player",
+            "value_then": 680.0,
+            "value_now": 680.0
+          },
+          {
+            "name": "Tee Higgins",
+            "type": "player",
+            "value_then": 3307.0,
+            "value_now": 3307.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 7875.0,
+        "teamAValueNow": 7875.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "David Njoku",
+          "James Cook"
+        ],
+        "teamBAssets": [
+          {
+            "name": "David Njoku",
+            "type": "player",
+            "value_then": 962.0,
+            "value_now": 962.0
+          },
+          {
+            "name": "James Cook",
+            "type": "player",
+            "value_then": 4980.0,
+            "value_now": 4980.0
+          }
+        ],
+        "teamBValueThen": 5942.0,
+        "teamBValueNow": 5942.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 1933.0,
+        "marginCurrent": 1933.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1282507621953204224",
+        "transactionId": "1282507621953204224",
+        "tradeDate": "2025-10-10",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1115.0,
+        "teamAValueNow": 1115.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "Kyle Williams"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Kyle Williams",
+            "type": "player",
+            "value_then": 607.0,
+            "value_now": 607.0
+          }
+        ],
+        "teamBValueThen": 607.0,
+        "teamBValueNow": 607.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 508.0,
+        "marginCurrent": 508.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1281385171571974144",
+        "transactionId": "1281385171571974144",
+        "tradeDate": "2025-10-07",
+        "season": "season_2",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "$11 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "$11 FAAB",
+            "type": "faab",
+            "value_then": 11.0,
+            "value_now": 11.0
+          }
+        ],
+        "teamAValueThen": 11.0,
+        "teamAValueNow": 11.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [],
+        "teamBAssets": [],
+        "teamBValueThen": 0,
+        "teamBValueNow": 0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 11.0,
+        "marginCurrent": 11.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1281334172710883328",
+        "transactionId": "1281334172710883328",
+        "tradeDate": "2025-10-07",
+        "season": "season_2",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "Brenton Strange"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Brenton Strange",
+            "type": "player",
+            "value_then": 1569.0,
+            "value_now": 1569.0
+          }
+        ],
+        "teamAValueThen": 1569.0,
+        "teamAValueNow": 1569.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Theo Johnson"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Theo Johnson",
+            "type": "player",
+            "value_then": 821.0,
+            "value_now": 821.0
+          }
+        ],
+        "teamBValueThen": 821.0,
+        "teamBValueNow": 821.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 748.0,
+        "marginCurrent": 748.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278946311571251200",
+        "transactionId": "1278946311571251200",
+        "tradeDate": "2025-10-01",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Matthew Stafford",
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Matthew Stafford",
+            "type": "player",
+            "value_then": 2839.0,
+            "value_now": 2839.0
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamAValueThen": 3661.0,
+        "teamAValueNow": 3661.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Trevor Etienne",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Trevor Etienne",
+            "type": "player",
+            "value_then": 300.0,
+            "value_now": 300.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 1958.0,
+        "teamBValueNow": 1958.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 1703.0,
+        "marginCurrent": 1703.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278942529986764800",
+        "transactionId": "1278942529986764800",
+        "tradeDate": "2025-10-01",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "D'Andre Swift"
+        ],
+        "teamAAssets": [
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 2287.0,
+            "value_now": 2287.0
+          }
+        ],
+        "teamAValueThen": 2287.0,
+        "teamAValueNow": 2287.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Brian Robinson",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Brian Robinson",
+            "type": "player",
+            "value_then": 1170.0,
+            "value_now": 1170.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 2285.0,
+        "teamBValueNow": 2285.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 2.0,
+        "marginCurrent": 2.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278916121231106048",
+        "transactionId": "1278916121231106048",
+        "tradeDate": "2025-10-01",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Quentin Johnston"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Quentin Johnston",
+            "type": "player",
+            "value_then": 2014.0,
+            "value_now": 2014.0
+          }
+        ],
+        "teamAValueThen": 2014.0,
+        "teamAValueNow": 2014.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "2027 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamBValueThen": 2960.0,
+        "teamBValueNow": 2960.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 946.0,
+        "marginCurrent": 946.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278793259467935744",
+        "transactionId": "1278793259467935744",
+        "tradeDate": "2025-09-30",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 840.0,
+        "teamAValueNow": 840.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Tyreek Hill"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tyreek Hill",
+            "type": "player",
+            "value_then": 817.0,
+            "value_now": 817.0
+          }
+        ],
+        "teamBValueThen": 817.0,
+        "teamBValueNow": 817.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 23.0,
+        "marginCurrent": 23.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278609411799027712",
+        "transactionId": "1278609411799027712",
+        "tradeDate": "2025-09-30",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Keenan Allen",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Keenan Allen",
+            "type": "player",
+            "value_then": 270.0,
+            "value_now": 270.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1385.0,
+        "teamAValueNow": 1385.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "2027 Round 4",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 2480.0,
+        "teamBValueNow": 2480.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 1095.0,
+        "marginCurrent": 1095.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1278590799092658176",
+        "transactionId": "1278590799092658176",
+        "tradeDate": "2025-09-30",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Matthew Stafford",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Matthew Stafford",
+            "type": "player",
+            "value_then": 2839.0,
+            "value_now": 2839.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 3954.0,
+        "teamAValueNow": 3954.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Mike Evans",
+          "$19 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Mike Evans",
+            "type": "player",
+            "value_then": 1874.0,
+            "value_now": 1874.0
+          },
+          {
+            "name": "$19 FAAB",
+            "type": "faab",
+            "value_then": 19.0,
+            "value_now": 19.0
+          }
+        ],
+        "teamBValueThen": 1893.0,
+        "teamBValueNow": 1893.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 2061.0,
+        "marginCurrent": 2061.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1277318767591825408",
+        "transactionId": "1277318767591825408",
+        "tradeDate": "2025-09-26",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [],
+        "teamAAssets": [],
+        "teamAValueThen": 0,
+        "teamAValueNow": 0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "$2 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$2 FAAB",
+            "type": "faab",
+            "value_then": 2.0,
+            "value_now": 2.0
+          }
+        ],
+        "teamBValueThen": 2.0,
+        "teamBValueNow": 2.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 2.0,
+        "marginCurrent": 2.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1277109098646605824",
+        "transactionId": "1277109098646605824",
+        "tradeDate": "2025-09-26",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Marcus Mariota"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Marcus Mariota",
+            "type": "player",
+            "value_then": 252.0,
+            "value_now": 252.0
+          }
+        ],
+        "teamAValueThen": 252.0,
+        "teamAValueNow": 252.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "$20 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$20 FAAB",
+            "type": "faab",
+            "value_then": 20.0,
+            "value_now": 20.0
+          }
+        ],
+        "teamBValueThen": 20.0,
+        "teamBValueNow": 20.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 232.0,
+        "marginCurrent": 232.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1276812030426251264",
+        "transactionId": "1276812030426251264",
+        "tradeDate": "2025-09-25",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Taysom Hill",
+          "Noah Fant"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Taysom Hill",
+            "type": "player",
+            "value_then": 3.0,
+            "value_now": 3.0
+          },
+          {
+            "name": "Noah Fant",
+            "type": "player",
+            "value_then": 107.0,
+            "value_now": 107.0
+          }
+        ],
+        "teamAValueThen": 110.0,
+        "teamAValueNow": 110.0,
+        "teamAValueChange": 0.0,
+        "teamB": "gnewman4",
+        "teamBReceived": [
+          "MarShawn Lloyd"
+        ],
+        "teamBAssets": [
+          {
+            "name": "MarShawn Lloyd",
+            "type": "player",
+            "value_then": 1119.0,
+            "value_now": 1119.0
+          }
+        ],
+        "teamBValueThen": 1119.0,
+        "teamBValueNow": 1119.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 1009.0,
+        "marginCurrent": 1009.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1276246071017742336",
+        "transactionId": "1276246071017742336",
+        "tradeDate": "2025-09-23",
+        "season": "season_2",
+        "teamA": "jakeduf",
+        "teamAReceived": [
+          "2027 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          }
+        ],
+        "teamAValueThen": 1530.0,
+        "teamAValueNow": 1530.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Wan'Dale Robinson"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 1781.0,
+            "value_now": 1781.0
+          }
+        ],
+        "teamBValueThen": 1781.0,
+        "teamBValueNow": 1781.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 251.0,
+        "marginCurrent": 251.0,
+        "swingWinner": "jakeduf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1273767222258454528",
+        "transactionId": "1273767222258454528",
+        "tradeDate": "2025-09-16",
+        "season": "season_2",
+        "teamA": "mgaeta23",
+        "teamAReceived": [
+          "Kareem Hunt"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Kareem Hunt",
+            "type": "player",
+            "value_then": 122.0,
+            "value_now": 122.0
+          }
+        ],
+        "teamAValueThen": 122.0,
+        "teamAValueNow": 122.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 840.0,
+        "teamBValueNow": 840.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 718.0,
+        "marginCurrent": 718.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1273723036767371264",
+        "transactionId": "1273723036767371264",
+        "tradeDate": "2025-09-16",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Tony Pollard",
+          "D'Andre Swift",
+          "Tee Higgins",
+          "Tyjae Spears",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tony Pollard",
+            "type": "player",
+            "value_then": 1503.0,
+            "value_now": 1503.0
+          },
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 2287.0,
+            "value_now": 2287.0
+          },
+          {
+            "name": "Tee Higgins",
+            "type": "player",
+            "value_then": 3307.0,
+            "value_now": 3307.0
+          },
+          {
+            "name": "Tyjae Spears",
+            "type": "player",
+            "value_then": 1140.0,
+            "value_now": 1140.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 9286.0,
+        "teamAValueNow": 9286.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "David Montgomery",
+          "Michael Pittman",
+          "Isiah Pacheco",
+          "2027 Round 2",
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "David Montgomery",
+            "type": "player",
+            "value_then": 2076.0,
+            "value_now": 2076.0
+          },
+          {
+            "name": "Michael Pittman",
+            "type": "player",
+            "value_then": 1801.0,
+            "value_now": 1801.0
+          },
+          {
+            "name": "Isiah Pacheco",
+            "type": "player",
+            "value_then": 1177.0,
+            "value_now": 1177.0
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 9735.0,
+        "teamBValueNow": 9735.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 449.0,
+        "marginCurrent": 449.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1272244641206398976",
+        "transactionId": "1272244641206398976",
+        "tradeDate": "2025-09-12",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Daniel Jones"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Daniel Jones",
+            "type": "player",
+            "value_then": 2410.0,
+            "value_now": 2410.0
+          }
+        ],
+        "teamAValueThen": 2410.0,
+        "teamAValueNow": 2410.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 1658.0,
+        "teamBValueNow": 1658.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 752.0,
+        "marginCurrent": 752.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1264650342717472768",
+        "transactionId": "1264650342717472768",
+        "tradeDate": "2025-08-22",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "TreVeyon Henderson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "TreVeyon Henderson",
+            "type": "player",
+            "value_then": 3539.0,
+            "value_now": 3539.0
+          }
+        ],
+        "teamAValueThen": 3539.0,
+        "teamAValueNow": 3539.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "De'Von Achane"
+        ],
+        "teamBAssets": [
+          {
+            "name": "De'Von Achane",
+            "type": "player",
+            "value_then": 5771.0,
+            "value_now": 5771.0
+          }
+        ],
+        "teamBValueThen": 5771.0,
+        "teamBValueNow": 5771.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 2232.0,
+        "marginCurrent": 2232.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1264067657422864384",
+        "transactionId": "1264067657422864384",
+        "tradeDate": "2025-08-21",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Joshua Palmer",
+          "Breece Hall"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Joshua Palmer",
+            "type": "player",
+            "value_then": 33.0,
+            "value_now": 33.0
+          },
+          {
+            "name": "Breece Hall",
+            "type": "player",
+            "value_then": 3743.0,
+            "value_now": 3743.0
+          }
+        ],
+        "teamAValueThen": 3776.0,
+        "teamAValueNow": 3776.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "LeQuint Allen",
+          "George Pickens",
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "LeQuint Allen",
+            "type": "player",
+            "value_then": 475.0,
+            "value_now": 475.0
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4783.0,
+            "value_now": 4783.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 8409.0,
+        "teamBValueNow": 8409.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 4633.0,
+        "marginCurrent": 4633.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1259713999834984449",
+        "transactionId": "1259713999834984449",
+        "tradeDate": "2025-08-09",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Shedeur Sanders"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Shedeur Sanders",
+            "type": "player",
+            "value_then": 1812.0,
+            "value_now": 1812.0
+          }
+        ],
+        "teamAValueThen": 1812.0,
+        "teamAValueNow": 1812.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1115.0,
+        "teamBValueNow": 1115.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 697.0,
+        "marginCurrent": 697.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1259296297278525440",
+        "transactionId": "1259296297278525440",
+        "tradeDate": "2025-08-07",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Will Howard"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Will Howard",
+            "type": "player",
+            "value_then": 290.0,
+            "value_now": 290.0
+          }
+        ],
+        "teamAValueThen": 290.0,
+        "teamAValueNow": 290.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1115.0,
+        "teamBValueNow": 1115.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 825.0,
+        "marginCurrent": 825.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1259245972907622400",
+        "transactionId": "1259245972907622400",
+        "tradeDate": "2025-08-07",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Quinshon Judkins",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Quinshon Judkins",
+            "type": "player",
+            "value_then": 3742.0,
+            "value_now": 3742.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 4857.0,
+        "teamAValueNow": 4857.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Tahj Brooks",
+          "2027 Round 2",
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tahj Brooks",
+            "type": "player",
+            "value_then": 243.0,
+            "value_now": 243.0
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 4924.0,
+        "teamBValueNow": 4924.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 67.0,
+        "marginCurrent": 67.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1259211370491023360",
+        "transactionId": "1259211370491023360",
+        "tradeDate": "2025-08-07",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Rome Odunze",
+          "Brian Robinson",
+          "2026 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Rome Odunze",
+            "type": "player",
+            "value_then": 3389.0,
+            "value_now": 3389.0
+          },
+          {
+            "name": "Brian Robinson",
+            "type": "player",
+            "value_then": 1170.0,
+            "value_now": 1170.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamAValueThen": 7710.0,
+        "teamAValueNow": 7710.0,
+        "teamAValueChange": 0.0,
+        "teamB": "cjsyregelas",
+        "teamBReceived": [
+          "Nico Collins",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Nico Collins",
+            "type": "player",
+            "value_then": 4251.0,
+            "value_now": 4251.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 5909.0,
+        "teamBValueNow": 5909.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 1801.0,
+        "marginCurrent": 1801.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1259206111249039360",
+        "transactionId": "1259206111249039360",
+        "tradeDate": "2025-08-07",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Mike Evans",
+          "David Njoku",
+          "Alvin Kamara",
+          "Christian Kirk",
+          "AJ Dillon"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Mike Evans",
+            "type": "player",
+            "value_then": 1874.0,
+            "value_now": 1874.0
+          },
+          {
+            "name": "David Njoku",
+            "type": "player",
+            "value_then": 962.0,
+            "value_now": 962.0
+          },
+          {
+            "name": "Alvin Kamara",
+            "type": "player",
+            "value_then": 1192.0,
+            "value_now": 1192.0
+          },
+          {
+            "name": "Christian Kirk",
+            "type": "player",
+            "value_then": 388.0,
+            "value_now": 388.0
+          },
+          {
+            "name": "AJ Dillon",
+            "type": "player",
+            "value_then": 34.0,
+            "value_now": 34.0
+          }
+        ],
+        "teamAValueThen": 4450.0,
+        "teamAValueNow": 4450.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Calvin Ridley",
+          "Dallas Goedert",
+          "Tony Pollard",
+          "Noah Gray",
+          "Tyjae Spears",
+          "2026 Round 4",
+          "2027 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Calvin Ridley",
+            "type": "player",
+            "value_then": 614.0,
+            "value_now": 614.0
+          },
+          {
+            "name": "Dallas Goedert",
+            "type": "player",
+            "value_then": 1459.0,
+            "value_now": 1459.0
+          },
+          {
+            "name": "Tony Pollard",
+            "type": "player",
+            "value_then": 1503.0,
+            "value_now": 1503.0
+          },
+          {
+            "name": "Noah Gray",
+            "type": "player",
+            "value_then": 180.0,
+            "value_now": 180.0
+          },
+          {
+            "name": "Tyjae Spears",
+            "type": "player",
+            "value_then": 1140.0,
+            "value_now": 1140.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          }
+        ],
+        "teamBValueThen": 7266.0,
+        "teamBValueNow": 7266.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 2816.0,
+        "marginCurrent": 2816.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1256714512900292608",
+        "transactionId": "1256714512900292608",
+        "tradeDate": "2025-07-31",
+        "season": "season_2",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Keon Coleman",
+          "2027 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Keon Coleman",
+            "type": "player",
+            "value_then": 1175.0,
+            "value_now": 1175.0
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          }
+        ],
+        "teamAValueThen": 2705.0,
+        "teamAValueNow": 2705.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "T.J. Hockenson",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "T.J. Hockenson",
+            "type": "player",
+            "value_then": 1462.0,
+            "value_now": 1462.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 2577.0,
+        "teamBValueNow": 2577.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "brevinowens",
+        "winnerCurrent": "brevinowens",
+        "marginAtTrade": 128.0,
+        "marginCurrent": 128.0,
+        "swingWinner": "brevinowens",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1251046974694637568",
+        "transactionId": "1251046974694637568",
+        "tradeDate": "2025-07-16",
+        "season": "season_2",
+        "teamA": "mgaeta23",
+        "teamAReceived": [
+          "Marquise Brown"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Marquise Brown",
+            "type": "player",
+            "value_then": 199.0,
+            "value_now": 199.0
+          }
+        ],
+        "teamAValueThen": 199.0,
+        "teamAValueNow": 199.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1115.0,
+        "teamBValueNow": 1115.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 916.0,
+        "marginCurrent": 916.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1251038903863881728",
+        "transactionId": "1251038903863881728",
+        "tradeDate": "2025-07-16",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "2026 Round 3",
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 1955.0,
+        "teamAValueNow": 1955.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Phil Mafah",
+          "Javonte Williams"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Phil Mafah",
+            "type": "player",
+            "value_then": 62.0,
+            "value_now": 62.0
+          },
+          {
+            "name": "Javonte Williams",
+            "type": "player",
+            "value_then": 3060.0,
+            "value_now": 3060.0
+          }
+        ],
+        "teamBValueThen": 3122.0,
+        "teamBValueNow": 3122.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 1167.0,
+        "marginCurrent": 1167.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1248286928684462080",
+        "transactionId": "1248286928684462080",
+        "tradeDate": "2025-07-08",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Isiah Pacheco"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Isiah Pacheco",
+            "type": "player",
+            "value_then": 1177.0,
+            "value_now": 1177.0
+          }
+        ],
+        "teamAValueThen": 1177.0,
+        "teamAValueNow": 1177.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 1658.0,
+        "teamBValueNow": 1658.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 481.0,
+        "marginCurrent": 481.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1243355152602103808",
+        "transactionId": "1243355152602103808",
+        "tradeDate": "2025-06-24",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Jack Bech",
+          "Jauan Jennings",
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jack Bech",
+            "type": "player",
+            "value_then": 861.0,
+            "value_now": 861.0
+          },
+          {
+            "name": "Jauan Jennings",
+            "type": "player",
+            "value_then": 1084.0,
+            "value_now": 1084.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 2785.0,
+        "teamAValueNow": 2785.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Tyreek Hill",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tyreek Hill",
+            "type": "player",
+            "value_then": 817.0,
+            "value_now": 817.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 2475.0,
+        "teamBValueNow": 2475.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 310.0,
+        "marginCurrent": 310.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1234547168593858560",
+        "transactionId": "1234547168593858560",
+        "tradeDate": "2025-05-31",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Josh Jacobs",
+          "2027 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Josh Jacobs",
+            "type": "player",
+            "value_then": 2734.0,
+            "value_now": 2734.0
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamAValueThen": 5694.0,
+        "teamAValueNow": 5694.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "David Montgomery",
+          "2026 Round 1",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "David Montgomery",
+            "type": "player",
+            "value_then": 2076.0,
+            "value_now": 2076.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 6885.0,
+        "teamBValueNow": 6885.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 1191.0,
+        "marginCurrent": 1191.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1230670926694076416",
+        "transactionId": "1230670926694076416",
+        "tradeDate": "2025-05-20",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Keenan Allen",
+          "Jonnu Smith"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Keenan Allen",
+            "type": "player",
+            "value_then": 270.0,
+            "value_now": 270.0
+          },
+          {
+            "name": "Jonnu Smith",
+            "type": "player",
+            "value_then": 16.0,
+            "value_now": 16.0
+          }
+        ],
+        "teamAValueThen": 286.0,
+        "teamAValueNow": 286.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Brenton Strange",
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Brenton Strange",
+            "type": "player",
+            "value_then": 1569.0,
+            "value_now": 1569.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 2409.0,
+        "teamBValueNow": 2409.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 2123.0,
+        "marginCurrent": 2123.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1230259367983456256",
+        "transactionId": "1230259367983456256",
+        "tradeDate": "2025-05-19",
+        "season": "season_2",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 840.0,
+        "teamAValueNow": 840.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 840.0,
+        "teamBValueNow": 840.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 0.0,
+        "marginCurrent": 0.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1228149347338698753",
+        "transactionId": "1228149347338698753",
+        "tradeDate": "2025-05-13",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "2026 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamAValueThen": 1658.0,
+        "teamAValueNow": 1658.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Brashard Smith",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Brashard Smith",
+            "type": "player",
+            "value_then": 250.0,
+            "value_now": 250.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1365.0,
+        "teamBValueNow": 1365.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 293.0,
+        "marginCurrent": 293.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1227129044529582080",
+        "transactionId": "1227129044529582080",
+        "tradeDate": "2025-05-11",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Javonte Williams"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Javonte Williams",
+            "type": "player",
+            "value_then": 3060.0,
+            "value_now": 3060.0
+          }
+        ],
+        "teamAValueThen": 3060.0,
+        "teamAValueNow": 3060.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2026 Round 4",
+          "$10 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "$10 FAAB",
+            "type": "faab",
+            "value_then": 10.0,
+            "value_now": 10.0
+          }
+        ],
+        "teamBValueThen": 850.0,
+        "teamBValueNow": 850.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "zachlearningtogolf",
+        "winnerCurrent": "zachlearningtogolf",
+        "marginAtTrade": 2210.0,
+        "marginCurrent": 2210.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1226043559040270336",
+        "transactionId": "1226043559040270336",
+        "tradeDate": "2025-05-08",
+        "season": "season_2",
+        "teamA": "jakeduf",
+        "teamAReceived": [
+          "Khalil Shakir"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Khalil Shakir",
+            "type": "player",
+            "value_then": 1483.0,
+            "value_now": 1483.0
+          }
+        ],
+        "teamAValueThen": 1483.0,
+        "teamAValueNow": 1483.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 2",
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 2498.0,
+        "teamBValueNow": 2498.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 1015.0,
+        "marginCurrent": 1015.0,
+        "swingWinner": "jakeduf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1225522406177652736",
+        "transactionId": "1225522406177652736",
+        "tradeDate": "2025-05-06",
+        "season": "season_2",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Ladd McConkey",
+          "Mason Taylor",
+          "Brian Robinson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Ladd McConkey",
+            "type": "player",
+            "value_then": 3928.0,
+            "value_now": 3928.0
+          },
+          {
+            "name": "Mason Taylor",
+            "type": "player",
+            "value_then": 870.0,
+            "value_now": 870.0
+          },
+          {
+            "name": "Brian Robinson",
+            "type": "player",
+            "value_then": 1170.0,
+            "value_now": 1170.0
+          }
+        ],
+        "teamAValueThen": 5968.0,
+        "teamAValueNow": 5968.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Tyler Warren",
+          "Josh Jacobs",
+          "George Pickens",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tyler Warren",
+            "type": "player",
+            "value_then": 4955.0,
+            "value_now": 4955.0
+          },
+          {
+            "name": "Josh Jacobs",
+            "type": "player",
+            "value_then": 2734.0,
+            "value_now": 2734.0
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4783.0,
+            "value_now": 4783.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 13587.0,
+        "teamBValueNow": 13587.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 7619.0,
+        "marginCurrent": 7619.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1225160597755142144",
+        "transactionId": "1225160597755142144",
+        "tradeDate": "2025-05-05",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Geno Smith",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Geno Smith",
+            "type": "player",
+            "value_then": 1414.0,
+            "value_now": 1414.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 2463.0,
+        "teamAValueNow": 2463.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Will Howard",
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Will Howard",
+            "type": "player",
+            "value_then": 290.0,
+            "value_now": 290.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 1948.0,
+        "teamBValueNow": 1948.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 515.0,
+        "marginCurrent": 515.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1225135748596899840",
+        "transactionId": "1225135748596899840",
+        "tradeDate": "2025-05-05",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Tyjae Spears"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tyjae Spears",
+            "type": "player",
+            "value_then": 1140.0,
+            "value_now": 1140.0
+          }
+        ],
+        "teamAValueThen": 1140.0,
+        "teamAValueNow": 1140.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "2026 Round 3",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamBValueThen": 1937.0,
+        "teamBValueNow": 1937.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 797.0,
+        "marginCurrent": 797.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1224849692341309440",
+        "transactionId": "1224849692341309440",
+        "tradeDate": "2025-05-04",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Stefon Diggs",
+          "Brian Robinson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Stefon Diggs",
+            "type": "player",
+            "value_then": 1501.0,
+            "value_now": 1501.0
+          },
+          {
+            "name": "Brian Robinson",
+            "type": "player",
+            "value_then": 1170.0,
+            "value_now": 1170.0
+          }
+        ],
+        "teamAValueThen": 2671.0,
+        "teamAValueNow": 2671.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "Tyjae Spears",
+          "2026 Round 4",
+          "2027 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tyjae Spears",
+            "type": "player",
+            "value_then": 1140.0,
+            "value_now": 1140.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          }
+        ],
+        "teamBValueThen": 3510.0,
+        "teamBValueNow": 3510.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 839.0,
+        "marginCurrent": 839.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1224449044198203392",
+        "transactionId": "1224449044198203392",
+        "tradeDate": "2025-05-03",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Rashee Rice",
+          "Will Howard",
+          "2026 Round 2",
+          "2027 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Rashee Rice",
+            "type": "player",
+            "value_then": 3650.0,
+            "value_now": 3650.0
+          },
+          {
+            "name": "Will Howard",
+            "type": "player",
+            "value_then": 290.0,
+            "value_now": 290.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamAValueThen": 8558.0,
+        "teamAValueNow": 8558.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Brian Thomas",
+          "Will Levis",
+          "2026 Round 4",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Brian Thomas",
+            "type": "player",
+            "value_then": 3080.0,
+            "value_now": 3080.0
+          },
+          {
+            "name": "Will Levis",
+            "type": "player",
+            "value_then": 135.0,
+            "value_now": 135.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamBValueThen": 4877.0,
+        "teamBValueNow": 4877.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 3681.0,
+        "marginCurrent": 3681.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223771077000306688",
+        "transactionId": "1223771077000306688",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "DeMario Douglas"
+        ],
+        "teamAAssets": [
+          {
+            "name": "DeMario Douglas",
+            "type": "player",
+            "value_then": 217.0,
+            "value_now": 217.0
+          }
+        ],
+        "teamAValueThen": 217.0,
+        "teamAValueNow": 217.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Quentin Johnston"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Quentin Johnston",
+            "type": "player",
+            "value_then": 2014.0,
+            "value_now": 2014.0
+          }
+        ],
+        "teamBValueThen": 2014.0,
+        "teamBValueNow": 2014.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 1797.0,
+        "marginCurrent": 1797.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223711584585531392",
+        "transactionId": "1223711584585531392",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "2025 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 243.0,
+            "value_now": 243.0
+          }
+        ],
+        "teamAValueThen": 243.0,
+        "teamAValueNow": 243.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "2026 Round 4",
+          "$22 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          },
+          {
+            "name": "$22 FAAB",
+            "type": "faab",
+            "value_then": 22.0,
+            "value_now": 22.0
+          }
+        ],
+        "teamBValueThen": 862.0,
+        "teamBValueNow": 862.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 619.0,
+        "marginCurrent": 619.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223665024673783808",
+        "transactionId": "1223665024673783808",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "2025 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 620.0,
+            "value_now": 620.0
+          }
+        ],
+        "teamAValueThen": 620.0,
+        "teamAValueNow": 620.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "2025 Round 4",
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 620.0,
+            "value_now": 620.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 1460.0,
+        "teamBValueNow": 1460.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 840.0,
+        "marginCurrent": 840.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223664469255671808",
+        "transactionId": "1223664469255671808",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Will Shipley",
+          "Justice Hill"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Will Shipley",
+            "type": "player",
+            "value_then": 72.0,
+            "value_now": 72.0
+          },
+          {
+            "name": "Justice Hill",
+            "type": "player",
+            "value_then": 285.0,
+            "value_now": 285.0
+          }
+        ],
+        "teamAValueThen": 357.0,
+        "teamAValueNow": 357.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "$5 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$5 FAAB",
+            "type": "faab",
+            "value_then": 5.0,
+            "value_now": 5.0
+          }
+        ],
+        "teamBValueThen": 5.0,
+        "teamBValueNow": 5.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 352.0,
+        "marginCurrent": 352.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223663647079792640",
+        "transactionId": "1223663647079792640",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "mgaeta23",
+        "teamAReceived": [
+          "Zach Wilson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Zach Wilson",
+            "type": "player",
+            "value_then": 2.0,
+            "value_now": 2.0
+          }
+        ],
+        "teamAValueThen": 2.0,
+        "teamAValueNow": 2.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "$1 FAAB"
+        ],
+        "teamBAssets": [
+          {
+            "name": "$1 FAAB",
+            "type": "faab",
+            "value_then": 1.0,
+            "value_now": 1.0
+          }
+        ],
+        "teamBValueThen": 1.0,
+        "teamBValueNow": 1.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 1.0,
+        "marginCurrent": 1.0,
+        "swingWinner": "mgaeta23",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223657978725400576",
+        "transactionId": "1223657978725400576",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "2025 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 1565.0,
+            "value_now": 1565.0
+          }
+        ],
+        "teamAValueThen": 1565.0,
+        "teamAValueNow": 1565.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1115.0,
+        "teamBValueNow": 1115.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 450.0,
+        "marginCurrent": 450.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223523595133657088",
+        "transactionId": "1223523595133657088",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Trey Benson",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Trey Benson",
+            "type": "player",
+            "value_then": 680.0,
+            "value_now": 680.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1795.0,
+        "teamAValueNow": 1795.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Jerry Jeudy",
+          "2025 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jerry Jeudy",
+            "type": "player",
+            "value_then": 1173.0,
+            "value_now": 1173.0
+          },
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 1396.0,
+            "value_now": 1396.0
+          }
+        ],
+        "teamBValueThen": 2569.0,
+        "teamBValueNow": 2569.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 774.0,
+        "marginCurrent": 774.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223496024669028352",
+        "transactionId": "1223496024669028352",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Tyler Allgeier",
+          "2025 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tyler Allgeier",
+            "type": "player",
+            "value_then": 1329.0,
+            "value_now": 1329.0
+          },
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 574.0,
+            "value_now": 574.0
+          }
+        ],
+        "teamAValueThen": 1903.0,
+        "teamAValueNow": 1903.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "2025 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 940.0,
+            "value_now": 940.0
+          }
+        ],
+        "teamBValueThen": 940.0,
+        "teamBValueNow": 940.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 963.0,
+        "marginCurrent": 963.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223495018262581248",
+        "transactionId": "1223495018262581248",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Tucker Kraft"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tucker Kraft",
+            "type": "player",
+            "value_then": 3381.0,
+            "value_now": 3381.0
+          }
+        ],
+        "teamAValueThen": 3381.0,
+        "teamAValueNow": 3381.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2025 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 870.0,
+            "value_now": 870.0
+          }
+        ],
+        "teamBValueThen": 870.0,
+        "teamBValueNow": 870.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 2511.0,
+        "marginCurrent": 2511.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223467807560183808",
+        "transactionId": "1223467807560183808",
+        "tradeDate": "2025-05-01",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "2025 Round 2",
+          "2025 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 689.0,
+            "value_now": 689.0
+          },
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 290.0,
+            "value_now": 290.0
+          }
+        ],
+        "teamAValueThen": 979.0,
+        "teamAValueNow": 979.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Adonai Mitchell",
+          "Tutu Atwell",
+          "2025 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Adonai Mitchell",
+            "type": "player",
+            "value_then": 1210.0,
+            "value_now": 1210.0
+          },
+          {
+            "name": "Tutu Atwell",
+            "type": "player",
+            "value_then": 79.0,
+            "value_now": 79.0
+          },
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 290.0,
+            "value_now": 290.0
+          }
+        ],
+        "teamBValueThen": 1579.0,
+        "teamBValueNow": 1579.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 600.0,
+        "marginCurrent": 600.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223423845638090752",
+        "transactionId": "1223423845638090752",
+        "tradeDate": "2025-04-30",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "2025 Round 4",
+          "2025 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 4",
+            "type": "draft_pick",
+            "value_then": 1348.0,
+            "value_now": 1348.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 2510.0,
+            "value_now": 2510.0
+          }
+        ],
+        "teamAValueThen": 3858.0,
+        "teamAValueNow": 3858.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2025 Round 2",
+          "2025 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 2510.0,
+            "value_now": 2510.0
+          },
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 846.0,
+            "value_now": 846.0
+          }
+        ],
+        "teamBValueThen": 3356.0,
+        "teamBValueNow": 3356.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 502.0,
+        "marginCurrent": 502.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223400000990486528",
+        "transactionId": "1223400000990486528",
+        "tradeDate": "2025-04-30",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Noah Gray",
+          "2025 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Noah Gray",
+            "type": "player",
+            "value_then": 180.0,
+            "value_now": 180.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 1813.0,
+            "value_now": 1813.0
+          }
+        ],
+        "teamAValueThen": 1993.0,
+        "teamAValueNow": 1993.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Jalen McMillan",
+          "Jonnu Smith",
+          "Khalil Shakir"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jalen McMillan",
+            "type": "player",
+            "value_then": 1433.0,
+            "value_now": 1433.0
+          },
+          {
+            "name": "Jonnu Smith",
+            "type": "player",
+            "value_then": 16.0,
+            "value_now": 16.0
+          },
+          {
+            "name": "Khalil Shakir",
+            "type": "player",
+            "value_then": 1483.0,
+            "value_now": 1483.0
+          }
+        ],
+        "teamBValueThen": 2932.0,
+        "teamBValueNow": 2932.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 939.0,
+        "marginCurrent": 939.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223398803554451456",
+        "transactionId": "1223398803554451456",
+        "tradeDate": "2025-04-30",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "2025 Round 2",
+          "2026 Round 2",
+          "2025 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 305.0,
+            "value_now": 305.0
+          }
+        ],
+        "teamAValueThen": 5305.0,
+        "teamAValueNow": 5305.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2025 Round 3",
+          "2025 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 305.0,
+            "value_now": 305.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          }
+        ],
+        "teamBValueThen": 3647.0,
+        "teamBValueNow": 3647.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 1658.0,
+        "marginCurrent": 1658.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223365523358621696",
+        "transactionId": "1223365523358621696",
+        "tradeDate": "2025-04-30",
+        "season": "season_2",
+        "teamA": "wkerwin",
+        "teamAReceived": [
+          "2026 Round 1",
+          "2025 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 3210.0,
+            "value_now": 3210.0
+          }
+        ],
+        "teamAValueThen": 6361.0,
+        "teamAValueNow": 6361.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2025 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 5289.0,
+            "value_now": 5289.0
+          }
+        ],
+        "teamBValueThen": 5289.0,
+        "teamBValueNow": 5289.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 1072.0,
+        "marginCurrent": 1072.0,
+        "swingWinner": "wkerwin",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223059650442706944",
+        "transactionId": "1223059650442706944",
+        "tradeDate": "2025-04-29",
+        "season": "season_2",
+        "teamA": "wkerwin",
+        "teamAReceived": [
+          "2025 Round 1",
+          "2025 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5892.0,
+            "value_now": 5892.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5892.0,
+            "value_now": 5892.0
+          }
+        ],
+        "teamAValueThen": 11784.0,
+        "teamAValueNow": 11784.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2025 Round 1",
+          "2025 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5892.0,
+            "value_now": 5892.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5892.0,
+            "value_now": 5892.0
+          }
+        ],
+        "teamBValueThen": 11784.0,
+        "teamBValueNow": 11784.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 0.0,
+        "marginCurrent": 0.0,
+        "swingWinner": "wkerwin",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223058419775193088",
+        "transactionId": "1223058419775193088",
+        "tradeDate": "2025-04-29",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Tony Pollard",
+          "Khalil Shakir",
+          "2025 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tony Pollard",
+            "type": "player",
+            "value_then": 1503.0,
+            "value_now": 1503.0
+          },
+          {
+            "name": "Khalil Shakir",
+            "type": "player",
+            "value_then": 1483.0,
+            "value_now": 1483.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 3539.0,
+            "value_now": 3539.0
+          }
+        ],
+        "teamAValueThen": 6525.0,
+        "teamAValueNow": 6525.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Joe Mixon",
+          "Deebo Samuel",
+          "2026 Round 1",
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Joe Mixon",
+            "type": "player",
+            "value_then": 163.0,
+            "value_now": 163.0
+          },
+          {
+            "name": "Deebo Samuel",
+            "type": "player",
+            "value_then": 1400.0,
+            "value_now": 1400.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 7865.0,
+        "teamBValueNow": 7865.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 1340.0,
+        "marginCurrent": 1340.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1223003680916123648",
+        "transactionId": "1223003680916123648",
+        "tradeDate": "2025-04-29",
+        "season": "season_2",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Ladd McConkey",
+          "2025 Round 1",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Ladd McConkey",
+            "type": "player",
+            "value_then": 3928.0,
+            "value_now": 3928.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 3742.0,
+            "value_now": 3742.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 8785.0,
+        "teamAValueNow": 8785.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "CeeDee Lamb",
+          "2025 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "CeeDee Lamb",
+            "type": "player",
+            "value_then": 6537.0,
+            "value_now": 6537.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 1813.0,
+            "value_now": 1813.0
+          }
+        ],
+        "teamBValueThen": 8350.0,
+        "teamBValueNow": 8350.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 435.0,
+        "marginCurrent": 435.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1222779260813459456",
+        "transactionId": "1222779260813459456",
+        "tradeDate": "2025-04-29",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Ray Davis",
+          "Geno Smith",
+          "James Cook",
+          "2025 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 756.0,
+            "value_now": 756.0
+          },
+          {
+            "name": "Geno Smith",
+            "type": "player",
+            "value_then": 1414.0,
+            "value_now": 1414.0
+          },
+          {
+            "name": "James Cook",
+            "type": "player",
+            "value_then": 4980.0,
+            "value_now": 4980.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 3918.0,
+            "value_now": 3918.0
+          }
+        ],
+        "teamAValueThen": 11068.0,
+        "teamAValueNow": 11068.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Christian McCaffrey",
+          "Baker Mayfield",
+          "J.K. Dobbins",
+          "2025 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Christian McCaffrey",
+            "type": "player",
+            "value_then": 4349.0,
+            "value_now": 4349.0
+          },
+          {
+            "name": "Baker Mayfield",
+            "type": "player",
+            "value_then": 3401.0,
+            "value_now": 3401.0
+          },
+          {
+            "name": "J.K. Dobbins",
+            "type": "player",
+            "value_then": 1598.0,
+            "value_now": 1598.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          }
+        ],
+        "teamBValueThen": 12690.0,
+        "teamBValueNow": 12690.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 1622.0,
+        "marginCurrent": 1622.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1222706043209924608",
+        "transactionId": "1222706043209924608",
+        "tradeDate": "2025-04-28",
+        "season": "season_2",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Tank Dell",
+          "2025 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tank Dell",
+            "type": "player",
+            "value_then": 1336.0,
+            "value_now": 1336.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5368.0,
+            "value_now": 5368.0
+          }
+        ],
+        "teamAValueThen": 6704.0,
+        "teamAValueNow": 6704.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Courtland Sutton",
+          "2025 Round 2",
+          "2025 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Courtland Sutton",
+            "type": "player",
+            "value_then": 1768.0,
+            "value_now": 1768.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 2510.0,
+            "value_now": 2510.0
+          },
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 1088.0,
+            "value_now": 1088.0
+          }
+        ],
+        "teamBValueThen": 5366.0,
+        "teamBValueNow": 5366.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 1338.0,
+        "marginCurrent": 1338.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1220272163022438400",
+        "transactionId": "1220272163022438400",
+        "tradeDate": "2025-04-22",
+        "season": "season_2",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Justin Fields",
+          "Brenton Strange",
+          "2025 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Justin Fields",
+            "type": "player",
+            "value_then": 765.0,
+            "value_now": 765.0
+          },
+          {
+            "name": "Brenton Strange",
+            "type": "player",
+            "value_then": 1569.0,
+            "value_now": 1569.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          }
+        ],
+        "teamAValueThen": 5676.0,
+        "teamAValueNow": 5676.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Davante Adams",
+          "2025 Round 1",
+          "2025 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Davante Adams",
+            "type": "player",
+            "value_then": 2093.0,
+            "value_now": 2093.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 5368.0,
+            "value_now": 5368.0
+          },
+          {
+            "name": "2025 Round 3",
+            "type": "draft_pick",
+            "value_then": 3210.0,
+            "value_now": 3210.0
+          }
+        ],
+        "teamBValueThen": 10671.0,
+        "teamBValueNow": 10671.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 4995.0,
+        "marginCurrent": 4995.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1211903239012765696",
+        "transactionId": "1211903239012765696",
+        "tradeDate": "2025-03-30",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "2026 Round 2",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 2707.0,
+        "teamAValueNow": 2707.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2025 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          }
+        ],
+        "teamBValueThen": 3342.0,
+        "teamBValueNow": 3342.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 635.0,
+        "marginCurrent": 635.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1207589817261490176",
+        "transactionId": "1207589817261490176",
+        "tradeDate": "2025-03-18",
+        "season": "season_2",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Jaxon Smith-Njigba",
+          "2026 Round 1",
+          "2025 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jaxon Smith-Njigba",
+            "type": "player",
+            "value_then": 8838.0,
+            "value_now": 8838.0
+          },
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 4955.0,
+            "value_now": 4955.0
+          }
+        ],
+        "teamAValueThen": 16944.0,
+        "teamAValueNow": 16944.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Ray Davis",
+          "James Cook",
+          "Tucker Kraft",
+          "2025 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 756.0,
+            "value_now": 756.0
+          },
+          {
+            "name": "James Cook",
+            "type": "player",
+            "value_then": 4980.0,
+            "value_now": 4980.0
+          },
+          {
+            "name": "Tucker Kraft",
+            "type": "player",
+            "value_then": 3381.0,
+            "value_now": 3381.0
+          },
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 3918.0,
+            "value_now": 3918.0
+          }
+        ],
+        "teamBValueThen": 13035.0,
+        "teamBValueNow": 13035.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 3909.0,
+        "marginCurrent": 3909.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1206314724464001024",
+        "transactionId": "1206314724464001024",
+        "tradeDate": "2025-03-14",
+        "season": "season_2",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "2025 Round 2",
+          "2025 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          },
+          {
+            "name": "2025 Round 2",
+            "type": "draft_pick",
+            "value_then": 3342.0,
+            "value_now": 3342.0
+          }
+        ],
+        "teamAValueThen": 6684.0,
+        "teamAValueNow": 6684.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2025 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2025 Round 1",
+            "type": "draft_pick",
+            "value_then": 3742.0,
+            "value_now": 3742.0
+          }
+        ],
+        "teamBValueThen": 3742.0,
+        "teamBValueNow": 3742.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 2942.0,
+        "marginCurrent": 2942.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1344753356916146176",
+        "transactionId": "1344753356916146176",
+        "tradeDate": "2026-03-31",
+        "season": "season_3",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "Jordan James",
+          "Ollie Gordon",
+          "Chig Okonkwo"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jordan James",
+            "type": "player",
+            "value_then": 620.0,
+            "value_now": 620.0
+          },
+          {
+            "name": "Ollie Gordon",
+            "type": "player",
+            "value_then": 903.0,
+            "value_now": 903.0
+          },
+          {
+            "name": "Chig Okonkwo",
+            "type": "player",
+            "value_then": 1603.0,
+            "value_now": 1603.0
+          }
+        ],
+        "teamAValueThen": 3126.0,
+        "teamAValueNow": 3126.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Chimere Dike",
+          "Geno Smith",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Chimere Dike",
+            "type": "player",
+            "value_then": 677.0,
+            "value_now": 677.0
+          },
+          {
+            "name": "Geno Smith",
+            "type": "player",
+            "value_then": 1414.0,
+            "value_now": 1414.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 3206.0,
+        "teamBValueNow": 3206.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 80.0,
+        "marginCurrent": 80.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1343720269935558656",
+        "transactionId": "1343720269935558656",
+        "tradeDate": "2026-03-28",
+        "season": "season_3",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Tahj Brooks",
+          "Saquon Barkley",
+          "Michael Pittman"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tahj Brooks",
+            "type": "player",
+            "value_then": 243.0,
+            "value_now": 243.0
+          },
+          {
+            "name": "Saquon Barkley",
+            "type": "player",
+            "value_then": 3818.0,
+            "value_now": 3818.0
+          },
+          {
+            "name": "Michael Pittman",
+            "type": "player",
+            "value_then": 1801.0,
+            "value_now": 1801.0
+          }
+        ],
+        "teamAValueThen": 5862.0,
+        "teamAValueNow": 5862.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Kyle Monangai",
+          "Matthew Stafford",
+          "D'Andre Swift",
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Kyle Monangai",
+            "type": "player",
+            "value_then": 1692.0,
+            "value_now": 1692.0
+          },
+          {
+            "name": "Matthew Stafford",
+            "type": "player",
+            "value_then": 2839.0,
+            "value_now": 2839.0
+          },
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 2287.0,
+            "value_now": 2287.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 7658.0,
+        "teamBValueNow": 7658.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 1796.0,
+        "marginCurrent": 1796.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1337134442841378816",
+        "transactionId": "1337134442841378816",
+        "tradeDate": "2026-03-10",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Michael Wilson",
+          "2026 Round 3",
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Michael Wilson",
+            "type": "player",
+            "value_then": 2114.0,
+            "value_now": 2114.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 4344.0,
+        "teamAValueNow": 4344.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Baker Mayfield",
+          "2026 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Baker Mayfield",
+            "type": "player",
+            "value_then": 3401.0,
+            "value_now": 3401.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamBValueThen": 4241.0,
+        "teamBValueNow": 4241.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 103.0,
+        "marginCurrent": 103.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1335782944433790976",
+        "transactionId": "1335782944433790976",
+        "tradeDate": "2026-03-06",
+        "season": "season_3",
+        "teamA": "thekylecasey",
+        "teamAReceived": [
+          "Jacory Croskey-Merritt",
+          "Rachaad White",
+          "2026 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jacory Croskey-Merritt",
+            "type": "player",
+            "value_then": 1786.0,
+            "value_now": 1786.0
+          },
+          {
+            "name": "Rachaad White",
+            "type": "player",
+            "value_then": 1417.0,
+            "value_now": 1417.0
+          },
+          {
+            "name": "2026 Round 4",
+            "type": "draft_pick",
+            "value_then": 840.0,
+            "value_now": 840.0,
+            "pick_label": "4.06"
+          }
+        ],
+        "teamAValueThen": 4043.0,
+        "teamAValueNow": 4043.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "DJ Moore"
+        ],
+        "teamBAssets": [
+          {
+            "name": "DJ Moore",
+            "type": "player",
+            "value_then": 2401.0,
+            "value_now": 2401.0
+          }
+        ],
+        "teamBValueThen": 2401.0,
+        "teamBValueNow": 2401.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "thekylecasey",
+        "winnerCurrent": "thekylecasey",
+        "marginAtTrade": 1642.0,
+        "marginCurrent": 1642.0,
+        "swingWinner": "thekylecasey",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354504941384794112",
+        "transactionId": "1354504941384794112",
+        "tradeDate": "2026-04-27",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Wan'Dale Robinson"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Wan'Dale Robinson",
+            "type": "player",
+            "value_then": 1781.0,
+            "value_now": 1781.0
+          }
+        ],
+        "teamAValueThen": 1781.0,
+        "teamAValueNow": 1781.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Terry McLaurin"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Terry McLaurin",
+            "type": "player",
+            "value_then": 2109.0,
+            "value_now": 2109.0
+          }
+        ],
+        "teamBValueThen": 2109.0,
+        "teamBValueNow": 2109.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 328.0,
+        "marginCurrent": 328.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354530759280455680",
+        "transactionId": "1354530759280455680",
+        "tradeDate": "2026-04-27",
+        "season": "season_3",
+        "teamA": "jakeduf",
+        "teamAReceived": [
+          "2026 Round 1",
+          "2026 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          },
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamAValueThen": 4809.0,
+        "teamAValueNow": 4809.0,
+        "teamAValueChange": 0.0,
+        "teamB": "wkerwin",
+        "teamBReceived": [
+          "2026 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 1",
+            "type": "draft_pick",
+            "value_then": 3151.0,
+            "value_now": 3151.0,
+            "pick_label": "1.08"
+          }
+        ],
+        "teamBValueThen": 3151.0,
+        "teamBValueNow": 3151.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 1658.0,
+        "marginCurrent": 1658.0,
+        "swingWinner": "jakeduf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1354897993991454720",
+        "transactionId": "1354897993991454720",
+        "tradeDate": "2026-04-28",
+        "season": "season_3",
+        "teamA": "wkerwin",
+        "teamAReceived": [
+          "Xavier Worthy"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Xavier Worthy",
+            "type": "player",
+            "value_then": 1743.0,
+            "value_now": 1743.0
+          }
+        ],
+        "teamAValueThen": 1743.0,
+        "teamAValueNow": 1743.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamBValueThen": 1658.0,
+        "teamBValueNow": 1658.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 85.0,
+        "marginCurrent": 85.0,
+        "swingWinner": "wkerwin",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1355578317075406848",
+        "transactionId": "1355578317075406848",
+        "tradeDate": "2026-04-30",
+        "season": "season_3",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "2026 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamAValueThen": 1115.0,
+        "teamAValueNow": 1115.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Jordan Mason"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jordan Mason",
+            "type": "player",
+            "value_then": 1479.0,
+            "value_now": 1479.0
+          }
+        ],
+        "teamBValueThen": 1479.0,
+        "teamBValueNow": 1479.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 364.0,
+        "marginCurrent": 364.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1355348943742988288",
+        "transactionId": "1355348943742988288",
+        "tradeDate": "2026-04-29",
+        "season": "season_3",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "$20 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "$20 FAAB",
+            "type": "faab",
+            "value_then": 20.0,
+            "value_now": 20.0
+          }
+        ],
+        "teamAValueThen": 20.0,
+        "teamAValueNow": 20.0,
+        "teamAValueChange": 0.0,
+        "teamB": "cjsyregelas",
+        "teamBReceived": [
+          "Ray Davis"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 756.0,
+            "value_now": 756.0
+          }
+        ],
+        "teamBValueThen": 756.0,
+        "teamBValueNow": 756.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 736.0,
+        "marginCurrent": 736.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1355347137491124224",
+        "transactionId": "1355347137491124224",
+        "tradeDate": "2026-04-29",
+        "season": "season_3",
+        "teamA": "wkerwin",
+        "teamAReceived": [
+          "Pat Bryant",
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Pat Bryant",
+            "type": "player",
+            "value_then": 1396.0,
+            "value_now": 1396.0
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamAValueThen": 2218.0,
+        "teamAValueNow": 2218.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 1115.0,
+        "teamBValueNow": 1115.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "wkerwin",
+        "winnerCurrent": "wkerwin",
+        "marginAtTrade": 1103.0,
+        "marginCurrent": 1103.0,
+        "swingWinner": "wkerwin",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1355265411066634240",
+        "transactionId": "1355265411066634240",
+        "tradeDate": "2026-04-29",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "2026 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2026 Round 2",
+            "type": "draft_pick",
+            "value_then": 1658.0,
+            "value_now": 1658.0,
+            "pick_label": "2.11"
+          }
+        ],
+        "teamAValueThen": 1658.0,
+        "teamAValueNow": 1658.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Mark Andrews"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Mark Andrews",
+            "type": "player",
+            "value_then": 1586.0,
+            "value_now": 1586.0
+          }
+        ],
+        "teamBValueThen": 1586.0,
+        "teamBValueNow": 1586.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 72.0,
+        "marginCurrent": 72.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1355614830769217536",
+        "transactionId": "1355614830769217536",
+        "tradeDate": "2026-04-30",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Tua Tagovailoa"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tua Tagovailoa",
+            "type": "player",
+            "value_then": 1692.0,
+            "value_now": 1692.0
+          }
+        ],
+        "teamAValueThen": 1692.0,
+        "teamAValueNow": 1692.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Kirk Cousins",
+          "2026 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Kirk Cousins",
+            "type": "player",
+            "value_then": 1276.0,
+            "value_now": 1276.0
+          },
+          {
+            "name": "2026 Round 3",
+            "type": "draft_pick",
+            "value_then": 1115.0,
+            "value_now": 1115.0,
+            "pick_label": "3.09"
+          }
+        ],
+        "teamBValueThen": 2391.0,
+        "teamBValueNow": 2391.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "mgaeta23",
+        "winnerCurrent": "mgaeta23",
+        "marginAtTrade": 699.0,
+        "marginCurrent": 699.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1357507526374998016",
+        "transactionId": "1357507526374998016",
+        "tradeDate": "2026-05-05",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Stefon Diggs",
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Stefon Diggs",
+            "type": "player",
+            "value_then": 1501.0,
+            "value_now": 1501.0
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamAValueThen": 2323.0,
+        "teamAValueNow": 2323.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Bryce Lance",
+          "2027 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Bryce Lance",
+            "type": "player",
+            "value_then": 430.0,
+            "value_now": 430.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamBValueThen": 1479.0,
+        "teamBValueNow": 1479.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 844.0,
+        "marginCurrent": 844.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1356867177117937664",
+        "transactionId": "1356867177117937664",
+        "tradeDate": "2026-05-04",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "2027 Round 4"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamAValueThen": 822.0,
+        "teamAValueNow": 822.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Aaron Jones"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Aaron Jones",
+            "type": "player",
+            "value_then": 1216.0,
+            "value_now": 1216.0
+          }
+        ],
+        "teamBValueThen": 1216.0,
+        "teamBValueNow": 1216.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 394.0,
+        "marginCurrent": 394.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388760077904650240",
+        "transactionId": "1388760077904650240",
+        "tradeDate": "2026-07-31",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "Garrett Wilson",
+          "2027 Round 2",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Garrett Wilson",
+            "type": "player",
+            "value_then": 4010.0,
+            "value_now": 4010.0
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 1530.0,
+            "value_now": 1530.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 6589.0,
+        "teamAValueNow": 6589.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "D'Andre Swift",
+          "George Pickens",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 2287.0,
+            "value_now": 2287.0
+          },
+          {
+            "name": "George Pickens",
+            "type": "player",
+            "value_then": 4783.0,
+            "value_now": 4783.0
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 822.0,
+            "value_now": 822.0
+          }
+        ],
+        "teamBValueThen": 7892.0,
+        "teamBValueNow": 7892.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 1303.0,
+        "marginCurrent": 1303.0,
+        "swingWinner": "jwalters74",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388678727138840576",
+        "transactionId": "1388678727138840576",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "$21 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "$21 FAAB",
+            "type": "faab",
+            "value_then": 21.0,
+            "value_now": 21.0
+          }
+        ],
+        "teamAValueThen": 21.0,
+        "teamAValueNow": 21.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Jameis Winston"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jameis Winston",
+            "type": "player",
+            "value_then": 237.0,
+            "value_now": 237.0
+          }
+        ],
+        "teamBValueThen": 237.0,
+        "teamBValueNow": 237.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "donewton",
+        "winnerCurrent": "donewton",
+        "marginAtTrade": 216.0,
+        "marginCurrent": 216.0,
+        "swingWinner": "tylerpilgrim",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388633217661145088",
+        "transactionId": "1388633217661145088",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Tank Dell"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Tank Dell",
+            "type": "player",
+            "value_then": 1336.0,
+            "value_now": 1336.0
+          }
+        ],
+        "teamAValueThen": 1336.0,
+        "teamAValueNow": 1336.0,
+        "teamAValueChange": 0.0,
+        "teamB": "thekylecasey",
+        "teamBReceived": [
+          "2028 Round 3"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 959.0,
+            "value_now": 959.0
+          }
+        ],
+        "teamBValueThen": 959.0,
+        "teamBValueNow": 959.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "brevinowens",
+        "winnerCurrent": "brevinowens",
+        "marginAtTrade": 377.0,
+        "marginCurrent": 377.0,
+        "swingWinner": "brevinowens",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388605639894249472",
+        "transactionId": "1388605639894249472",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Baker Mayfield",
+          "Jonathan Taylor",
+          "Sean Tucker"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Baker Mayfield",
+            "type": "player",
+            "value_then": 3401.0,
+            "value_now": 3401.0
+          },
+          {
+            "name": "Jonathan Taylor",
+            "type": "player",
+            "value_then": 5290.0,
+            "value_now": 5290.0
+          },
+          {
+            "name": "Sean Tucker",
+            "type": "player",
+            "value_then": 548.0,
+            "value_now": 548.0
+          }
+        ],
+        "teamAValueThen": 9239.0,
+        "teamAValueNow": 9239.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Dylan Sampson",
+          "Woody Marks",
+          "Quinshon Judkins",
+          "Dak Prescott"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Dylan Sampson",
+            "type": "player",
+            "value_then": 1177.0,
+            "value_now": 1177.0
+          },
+          {
+            "name": "Woody Marks",
+            "type": "player",
+            "value_then": 1348.0,
+            "value_now": 1348.0
+          },
+          {
+            "name": "Quinshon Judkins",
+            "type": "player",
+            "value_then": 3742.0,
+            "value_now": 3742.0
+          },
+          {
+            "name": "Dak Prescott",
+            "type": "player",
+            "value_then": 4049.0,
+            "value_now": 4049.0
+          }
+        ],
+        "teamBValueThen": 10316.0,
+        "teamBValueNow": 10316.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 1077.0,
+        "marginCurrent": 1077.0,
+        "swingWinner": "lndahayo",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1388374053886099456",
+        "transactionId": "1388374053886099456",
+        "tradeDate": "2026-07-30",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Marvin Harrison",
+          "Kenny Gainwell"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Marvin Harrison",
+            "type": "player",
+            "value_then": 3180.0,
+            "value_now": 3180.0
+          },
+          {
+            "name": "Kenny Gainwell",
+            "type": "player",
+            "value_then": 1633.0,
+            "value_now": 1633.0
+          }
+        ],
+        "teamAValueThen": 4813.0,
+        "teamAValueNow": 4813.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Jonathan Taylor"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jonathan Taylor",
+            "type": "player",
+            "value_then": 5290.0,
+            "value_now": 5290.0
+          }
+        ],
+        "teamBValueThen": 5290.0,
+        "teamBValueNow": 5290.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": 477.0,
+        "marginCurrent": 477.0,
+        "swingWinner": "brevinowens",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1390130079702487040",
+        "transactionId": "1390130079702487040",
+        "tradeDate": "2026-08-03",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Kyle Monangai",
+          "2027 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Kyle Monangai",
+            "type": "player",
+            "value_then": 1692.0,
+            "value_now": 1692.0
+          },
+          {
+            "name": "2027 Round 3",
+            "type": "draft_pick",
+            "value_then": 1049.0,
+            "value_now": 1049.0
+          }
+        ],
+        "teamAValueThen": 2741.0,
+        "teamAValueNow": 2741.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "Derrick Henry"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Derrick Henry",
+            "type": "player",
+            "value_then": 3032.0,
+            "value_now": 3032.0
+          }
+        ],
+        "teamBValueThen": 3032.0,
+        "teamBValueNow": 3032.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": 291.0,
+        "marginCurrent": 291.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1391178896967229440",
+        "transactionId": "1391178896967229440",
+        "tradeDate": "2026-08-06",
+        "season": "season_3",
+        "teamA": "zachlearningtogolf",
+        "teamAReceived": [
+          "2027 Round 1"
+        ],
+        "teamAAssets": [
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamAValueThen": 2960.0,
+        "teamAValueNow": 2960.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jakeduf",
+        "teamBReceived": [
+          "Tee Higgins"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tee Higgins",
+            "type": "player",
+            "value_then": 3307.0,
+            "value_now": 3307.0
+          }
+        ],
+        "teamBValueThen": 3307.0,
+        "teamBValueNow": 3307.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jakeduf",
+        "winnerCurrent": "jakeduf",
+        "marginAtTrade": 347.0,
+        "marginCurrent": 347.0,
+        "swingWinner": "zachlearningtogolf",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1390796022585774080",
+        "transactionId": "1390796022585774080",
+        "tradeDate": "2026-08-05",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Jayden Higgins",
+          "De'Von Achane"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jayden Higgins",
+            "type": "player",
+            "value_then": 1813.0,
+            "value_now": 1813.0
+          },
+          {
+            "name": "De'Von Achane",
+            "type": "player",
+            "value_then": 5771.0,
+            "value_now": 5771.0
+          }
+        ],
+        "teamAValueThen": 7584.0,
+        "teamAValueNow": 7584.0,
+        "teamAValueChange": 0.0,
+        "teamB": "zachlearningtogolf",
+        "teamBReceived": [
+          "Tank Bigsby",
+          "2027 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Tank Bigsby",
+            "type": "player",
+            "value_then": 1329.0,
+            "value_now": 1329.0
+          },
+          {
+            "name": "2027 Round 1",
+            "type": "draft_pick",
+            "value_then": 2960.0,
+            "value_now": 2960.0
+          }
+        ],
+        "teamBValueThen": 4289.0,
+        "teamBValueNow": 4289.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 3295.0,
+        "marginCurrent": 3295.0,
+        "swingWinner": "gnewman4",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1390759953450414080",
+        "transactionId": "1390759953450414080",
+        "tradeDate": "2026-08-05",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Bo Nix",
+          "Skyler Bell"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Bo Nix",
+            "type": "player",
+            "value_then": 4689.0,
+            "value_now": 4689.0
+          },
+          {
+            "name": "Skyler Bell",
+            "type": "player",
+            "value_then": 848.0,
+            "value_now": 848.0
+          }
+        ],
+        "teamAValueThen": 5537.0,
+        "teamAValueNow": 5537.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "James Cook"
+        ],
+        "teamBAssets": [
+          {
+            "name": "James Cook",
+            "type": "player",
+            "value_then": 4980.0,
+            "value_now": 4980.0
+          }
+        ],
+        "teamBValueThen": 4980.0,
+        "teamBValueNow": 4980.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 557.0,
+        "marginCurrent": 557.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1391287814628311040",
+        "transactionId": "1391287814628311040",
+        "tradeDate": "2026-08-07",
+        "season": "season_3",
+        "teamA": "cjsyregelas",
+        "teamAReceived": [
+          "Roman Wilson",
+          "2028 Round 3"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Roman Wilson",
+            "type": "player",
+            "value_then": 235.0,
+            "value_now": 235.0
+          },
+          {
+            "name": "2028 Round 3",
+            "type": "draft_pick",
+            "value_then": 959.0,
+            "value_now": 959.0
+          }
+        ],
+        "teamAValueThen": 1194.0,
+        "teamAValueNow": 1194.0,
+        "teamAValueChange": 0.0,
+        "teamB": "donewton",
+        "teamBReceived": [
+          "Ray Davis"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Ray Davis",
+            "type": "player",
+            "value_then": 756.0,
+            "value_now": 756.0
+          }
+        ],
+        "teamBValueThen": 756.0,
+        "teamBValueNow": 756.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "cjsyregelas",
+        "winnerCurrent": "cjsyregelas",
+        "marginAtTrade": 438.0,
+        "marginCurrent": 438.0,
+        "swingWinner": "cjsyregelas",
+        "swingMargin": 0.0
+      }
+    ],
+    "metadata": {
+      "lastUpdated": "2026-08-08T14:27:44.776706",
+      "totalTrades": 104,
+      "dateRange": {
+        "earliest": "2025-03-14",
+        "latest": "2026-08-07"
+      },
+      "seasonsIncluded": [
+        "season_2",
+        "season_3"
+      ],
+      "tradesBySeason": {
+        "season_2": 81,
+        "season_3": 24
+      },
+      "seasonInfo": {
+        "season_2": {
+          "status": "active",
+          "last_fetched": "2025-12-31T22:21:51.557876Z"
+        },
+        "season_3": {
+          "status": "active",
+          "last_fetched": "2026-08-08T14:26:34.736597Z"
+        }
+      },
+      "schemaVersion": "2.0.0",
+      "source": "FantasyCalc dynasty SF values (revealed preference; ~1M+ real trades)",
+      "processingInfo": {
+        "rawTradesProcessed": 105,
+        "dashboardTradesGenerated": 104,
+        "multiTeamTradesSkipped": 1
+      },
+      "valueModel": "players & drafted picks = current FC value; undrafted picks = FC Mid-tier pseudo-player; FAAB = $",
+      "note": "FantasyCalc has no historical series; at-trade (\"then\") values use current FC value for every asset. Winners/margins recomputed on current FC values. FC scale is uncapped (~10k top); no 9999 cap applied."
+    }
+  }
+}

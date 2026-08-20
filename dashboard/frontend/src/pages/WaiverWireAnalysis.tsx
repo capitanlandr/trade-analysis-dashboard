@@ -6,6 +6,10 @@ import { ChurnIndexCard } from '../components/WaiverWire/ChurnIndexCard';
 import { EfficiencyScoreCard } from '../components/WaiverWire/EfficiencyScoreCard';
 import { HitRateCard } from '../components/WaiverWire/HitRateCard';
 import { TimingScoreCard } from '../components/WaiverWire/TimingScoreCard';
+import { DynastyValueAddedCard } from '../components/WaiverWire/DynastyValueAddedCard';
+import { BlueChipRateCard } from '../components/WaiverWire/BlueChipRateCard';
+import { ContestedWinRateCard } from '../components/WaiverWire/ContestedWinRateCard';
+import { computeDynastyWaiverMetrics } from '../utils/dynastyWaiverMetrics';
 
 type SortField = keyof WaiverWireTransaction;
 type SortDirection = 'asc' | 'desc';
@@ -28,7 +32,13 @@ interface FilterState {
 export default function WaiverWireAnalysis() {
   // Use centralized React Query hook for consistent caching
   const { data, isLoading, error } = useWaiverWireData();
-  
+
+  // Derive three dynasty waiver metrics on the client. The backend serves
+  // efficiency/hit_rate/timing as null, so instead of "coming soon" tiles we
+  // compute value-aware metrics from fields the payload does return
+  // (player_value = dynasty trade value, contested_players, etc.).
+  const derivedMetrics = useMemo(() => computeDynastyWaiverMetrics(data), [data]);
+
   // Sorting state
   const [sortField, setSortField] = useState<SortField>('created_date');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
@@ -447,34 +457,49 @@ export default function WaiverWireAnalysis() {
               data={data.efficiency_metrics}
               currentTeamId={5}
             />
+          ) : derivedMetrics && derivedMetrics.dynastyValue.length > 0 ? (
+            <DynastyValueAddedCard
+              metrics={derivedMetrics.dynastyValue}
+              currentTeamId={5}
+            />
           ) : (
             <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
               <div className="text-sm">More metrics coming soon...</div>
-              <div className="text-xs mt-2">Efficiency Score</div>
+              <div className="text-xs mt-2">Dynasty Value Added</div>
             </div>
           )}
-          
+
           {data?.hit_rate_metrics ? (
             <HitRateCard
               data={data.hit_rate_metrics}
               currentTeamId={5}
             />
-          ) : (
-            <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
-              <div className="text-sm">More metrics coming soon...</div>
-              <div className="text-xs mt-2">Waiver Hit Rate</div>
-            </div>
-          )}
-          
-          {data?.timing_metrics ? (
-            <TimingScoreCard
-              data={data.timing_metrics}
+          ) : derivedMetrics && derivedMetrics.blueChip.managers.length > 0 ? (
+            <BlueChipRateCard
+              data={derivedMetrics.blueChip}
               currentTeamId={5}
             />
           ) : (
             <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
               <div className="text-sm">More metrics coming soon...</div>
-              <div className="text-xs mt-2">Timing Score</div>
+              <div className="text-xs mt-2">Blue-Chip Target Rate</div>
+            </div>
+          )}
+
+          {data?.timing_metrics ? (
+            <TimingScoreCard
+              data={data.timing_metrics}
+              currentTeamId={5}
+            />
+          ) : derivedMetrics && derivedMetrics.contested.managers.length > 0 ? (
+            <ContestedWinRateCard
+              data={derivedMetrics.contested}
+              currentTeamId={5}
+            />
+          ) : (
+            <div className="card p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
+              <div className="text-sm">More metrics coming soon...</div>
+              <div className="text-xs mt-2">Contested Blue-Chip Win Rate</div>
             </div>
           )}
         </div>

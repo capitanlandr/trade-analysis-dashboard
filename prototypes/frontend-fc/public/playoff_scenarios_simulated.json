@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "current_week": 12,
+    "last_updated": "2025-11-25T11:48:49.627613",
+    "season": 2025
+  },
+  "num_simulations": 20000,
+  "results": [
+    {
+      "team_name": "Bucky\u2019s Depression",
+      "division": "Wisconsin",
+      "current_record": "18-6",
+      "playoff_probability": 100.0,
+      "division_winner_probability": 100.0,
+      "bye_week_probability": 100.0,
+      "seed_probabilities": {
+        "1": 44.5,
+        "2": 55.5
+      },
+      "playoff_count": 20000,
+      "division_winner_count": 20000,
+      "bye_week_count": 20000,
+      "clinched_playoff": true,
+      "clinched_division": true,
+      "clinched_bye": true,
+      "eliminated": false,
+      "most_likely_seed": 2,
+      "projected_seed": 2
+    },
+    {
+      "team_name": "Breece Lightning",
+      "division": "American",
+      "current_record": "18-6",
+      "playoff_probability": 100.0,
+      "division_winner_probability": 63.5,
+      "bye_week_probability": 63.5,
+      "seed_probabilities": {
+        "2": 29.2,
+        "1": 34.3,
+        "4": 35.8,
+        "5": 0.7
+      },
+      "playoff_count": 20000,
+      "division_winner_count": 12705,
+      "bye_week_count": 12705,
+      "clinched_playoff": true,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": 4,
+      "projected_seed": 4
+    },
+    {
+      "team_name": "208 Ferrari Way",
+      "division": "American",
+      "current_record": "17-7",
+      "playoff_probability": 100.0,
+      "division_winner_probability": 36.1,
+      "bye_week_probability": 36.1,
+      "seed_probabilities": {
+        "4": 58.9,
+        "1": 21.2,
+        "5": 5.0,
+        "2": 14.9
+      },
+      "playoff_count": 20000,
+      "division_winner_count": 7224,
+      "bye_week_count": 7224,
+      "clinched_playoff": true,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": 4,
+      "projected_seed": 4
+    },
+    {
+      "team_name": "Like a Good Naber",
+      "division": "American",
+      "current_record": "14-10",
+      "playoff_probability": 93.9,
+      "division_winner_probability": 0.4,
+      "bye_week_probability": 0.4,
+      "seed_probabilities": {
+        "5": 65.7,
+        "6": 22.5,
+        "4": 5.3,
+        "1": 0.0,
+        "2": 0.3
+      },
+      "playoff_count": 18782,
+      "division_winner_count": 71,
+      "bye_week_count": 71,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": 5,
+      "projected_seed": 5
+    },
+    {
+      "team_name": "Paper Tigers",
+      "division": "Wisconsin",
+      "current_record": "13-11",
+      "playoff_probability": 70.8,
+      "division_winner_probability": 0.0,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "6": 47.5,
+        "5": 23.4
+      },
+      "playoff_count": 14168,
+      "division_winner_count": 0,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": 6,
+      "projected_seed": 6
+    },
+    {
+      "team_name": "TRIPS \ud83d\udd25",
+      "division": "Chicago",
+      "current_record": "9-15",
+      "playoff_probability": 49.5,
+      "division_winner_probability": 49.5,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "3": 49.5
+      },
+      "playoff_count": 9906,
+      "division_winner_count": 9906,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": 3,
+      "projected_seed": 3
+    },
+    {
+      "team_name": "Washed",
+      "division": "Chicago",
+      "current_record": "9-15",
+      "playoff_probability": 46.9,
+      "division_winner_probability": 46.9,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "3": 46.9
+      },
+      "playoff_count": 9372,
+      "division_winner_count": 9372,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    },
+    {
+      "team_name": "Gaeta Spur FC",
+      "division": "Wisconsin",
+      "current_record": "11-13",
+      "playoff_probability": 13.8,
+      "division_winner_probability": 0.0,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "6": 11.7,
+        "5": 2.1
+      },
+      "playoff_count": 2761,
+      "division_winner_count": 0,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    },
+    {
+      "team_name": "Rashid Shaheed Truthers",
+      "division": "Wisconsin",
+      "current_record": "11-13",
+      "playoff_probability": 12.9,
+      "division_winner_probability": 0.0,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "6": 11.1,
+        "5": 1.8
+      },
+      "playoff_count": 2586,
+      "division_winner_count": 0,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    },
+    {
+      "team_name": "Mommy Rainier ",
+      "division": "American",
+      "current_record": "11-13",
+      "playoff_probability": 8.5,
+      "division_winner_probability": 0.0,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "6": 7.3,
+        "5": 1.3
+      },
+      "playoff_count": 1703,
+      "division_winner_count": 0,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    },
+    {
+      "team_name": "Spirit Halloween",
+      "division": "Chicago",
+      "current_record": "7-17",
+      "playoff_probability": 3.4,
+      "division_winner_probability": 3.4,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "3": 3.4
+      },
+      "playoff_count": 671,
+      "division_winner_count": 671,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    },
+    {
+      "team_name": "On To 2026",
+      "division": "Chicago",
+      "current_record": "6-18",
+      "playoff_probability": 0.3,
+      "division_winner_probability": 0.3,
+      "bye_week_probability": 0.0,
+      "seed_probabilities": {
+        "3": 0.3
+      },
+      "playoff_count": 51,
+      "division_winner_count": 51,
+      "bye_week_count": 0,
+      "clinched_playoff": false,
+      "clinched_division": false,
+      "clinched_bye": false,
+      "eliminated": false,
+      "most_likely_seed": null,
+      "projected_seed": null
+    }
+  ]
+}

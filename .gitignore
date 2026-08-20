@@ -163,3 +163,7 @@ poll/token.json
 poll/prefill_links.csv
 poll/responses_raw.json
 poll/__pycache__/
+
+# Prototype scrape cache (regenerable KTC/Sleeper HTML) — kept locally, excluded from git.
+# See PROTOTYPES.md track 2.
+prototypes/data/ktc_history/raw/

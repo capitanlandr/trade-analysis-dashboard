@@ -1,0 +1,16 @@
+section,label,dp_value,dp_rank_or_pctile,ktc_value,ktc_rank_or_pctile,fc_value,fc_rank_or_pctile
+position_premium_deltaRanks,QB,5.8,57.9,-10.6,53.1,4.9,57.6
+position_premium_deltaRanks,RB,-5.6,45.6,4.0,48.4,1.6,47.7
+position_premium_deltaRanks,WR,1.5,50.6,2.3,50.9,-3.7,49.1
+position_premium_deltaRanks,TE,0.3,47.7,-1.7,47.1,1.4,48.0
+pick_tier,2027 Early 1st,4278,43,7128,20,4496,38
+pick_tier,2027 Mid 1st,1936,84,5488,47,2960,86
+pick_tier,2027 Late 1st,919,119,4875,70,2286,109
+pick_tier,2027 Early 2nd,458,153,3728,105,1839,142
+pick_tier,2027 Mid 2nd,239,187,3400,125,1530,178
+pick_tier,2027 Late 2nd,130,222,3127,143,1326,216
+pick_tier,2028 1st,1574,92,4583,83,2041,124
+pick_tier,2028 2nd,194,201,2928,160,1284,221
+curve,DP,10232,1.32,0.281,31,2.7,
+curve,KTC,9999,1.27,0.264,62,1.85,
+curve,FC,10456,1.44,0.294,30,2.61,

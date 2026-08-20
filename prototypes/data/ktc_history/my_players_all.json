@@ -1,0 +1,3823 @@
+[
+  {
+    "sleeper_id": "10213",
+    "name": "Tre Tucker",
+    "position": "WR",
+    "team": "LV",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tretucker"
+  },
+  {
+    "sleeper_id": "10218",
+    "name": "Xavier Hutchinson",
+    "position": "WR",
+    "team": "HOU",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "xavierhutchinson"
+  },
+  {
+    "sleeper_id": "10219",
+    "name": "Chris Rodriguez",
+    "position": "RB",
+    "team": "JAX",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "chrisrodriguez"
+  },
+  {
+    "sleeper_id": "10222",
+    "name": "Jayden Reed",
+    "position": "WR",
+    "team": "GB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaydenreed"
+  },
+  {
+    "sleeper_id": "10226",
+    "name": "Andrei Iosivas",
+    "position": "WR",
+    "team": "CIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "andreiiosivas"
+  },
+  {
+    "sleeper_id": "10229",
+    "name": "Rashee Rice",
+    "position": "WR",
+    "team": "KC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "rasheerice"
+  },
+  {
+    "sleeper_id": "10232",
+    "name": "Michael Wilson",
+    "position": "WR",
+    "team": "ARI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "michaelwilson"
+  },
+  {
+    "sleeper_id": "10235",
+    "name": "Roschon Johnson",
+    "position": "RB",
+    "team": "CHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "roschonjohnson"
+  },
+  {
+    "sleeper_id": "10236",
+    "name": "Dalton Kincaid",
+    "position": "TE",
+    "team": "BUF",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "daltonkincaid"
+  },
+  {
+    "sleeper_id": "10444",
+    "name": "Cedric Tillman",
+    "position": "WR",
+    "team": "CLE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "cedrictillman"
+  },
+  {
+    "sleeper_id": "10859",
+    "name": "Sam LaPorta",
+    "position": "TE",
+    "team": "DET",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "samlaporta"
+  },
+  {
+    "sleeper_id": "11199",
+    "name": "Emari Demercado",
+    "position": "RB",
+    "team": "KC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "emaridemercado"
+  },
+  {
+    "sleeper_id": "11377",
+    "name": "Tyrell Shavers",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tyrellshavers"
+  },
+  {
+    "sleeper_id": "11435",
+    "name": "Emanuel Wilson",
+    "position": "RB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "emanuelwilson"
+  },
+  {
+    "sleeper_id": "11439",
+    "name": "Jaleel McLaughlin",
+    "position": "RB",
+    "team": "DEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jaleelmclaughlin"
+  },
+  {
+    "sleeper_id": "11557",
+    "name": "Joe Milton",
+    "position": "QB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "joemilton"
+  },
+  {
+    "sleeper_id": "11559",
+    "name": "Michael Penix",
+    "position": "QB",
+    "team": "ATL",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "michaelpenix"
+  },
+  {
+    "sleeper_id": "11560",
+    "name": "Caleb Williams",
+    "position": "QB",
+    "team": "CHI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "calebwilliams"
+  },
+  {
+    "sleeper_id": "11562",
+    "name": "Spencer Rattler",
+    "position": "QB",
+    "team": "NO",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "spencerrattler"
+  },
+  {
+    "sleeper_id": "11563",
+    "name": "Bo Nix",
+    "position": "QB",
+    "team": "DEN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "bonix"
+  },
+  {
+    "sleeper_id": "11564",
+    "name": "Drake Maye",
+    "position": "QB",
+    "team": "NE",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "drakemaye"
+  },
+  {
+    "sleeper_id": "11565",
+    "name": "J.J. McCarthy",
+    "position": "QB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jjmccarthy"
+  },
+  {
+    "sleeper_id": "11566",
+    "name": "Jayden Daniels",
+    "position": "QB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jaydendaniels"
+  },
+  {
+    "sleeper_id": "11569",
+    "name": "Jarquez Hunter",
+    "position": "RB",
+    "team": "LAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jarquezhunter"
+  },
+  {
+    "sleeper_id": "11571",
+    "name": "Isaiah Davis",
+    "position": "RB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "isaiahdavis"
+  },
+  {
+    "sleeper_id": "11575",
+    "name": "Ray Davis",
+    "position": "RB",
+    "team": "BUF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "raydavis"
+  },
+  {
+    "sleeper_id": "11576",
+    "name": "Braelon Allen",
+    "position": "RB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "braelonallen"
+  },
+  {
+    "sleeper_id": "11577",
+    "name": "Will Shipley",
+    "position": "RB",
+    "team": "PHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "willshipley"
+  },
+  {
+    "sleeper_id": "11579",
+    "name": "Audric Estime",
+    "position": "RB",
+    "team": "NO",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "audricestime"
+  },
+  {
+    "sleeper_id": "11581",
+    "name": "MarShawn Lloyd",
+    "position": "RB",
+    "team": "GB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "marshawnlloyd"
+  },
+  {
+    "sleeper_id": "11583",
+    "name": "Jonathon Brooks",
+    "position": "RB",
+    "team": "CAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jonathonbrooks"
+  },
+  {
+    "sleeper_id": "11584",
+    "name": "Bucky Irving",
+    "position": "RB",
+    "team": "TB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "buckyirving"
+  },
+  {
+    "sleeper_id": "11586",
+    "name": "Blake Corum",
+    "position": "RB",
+    "team": "LAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "blakecorum"
+  },
+  {
+    "sleeper_id": "11588",
+    "name": "Jawhar Jordan",
+    "position": "RB",
+    "team": "HOU",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jawharjordan"
+  },
+  {
+    "sleeper_id": "11589",
+    "name": "Trey Benson",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "treybenson"
+  },
+  {
+    "sleeper_id": "11596",
+    "name": "Ben Sinnott",
+    "position": "TE",
+    "team": "WAS",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "bensinnott"
+  },
+  {
+    "sleeper_id": "11597",
+    "name": "Theo Johnson",
+    "position": "TE",
+    "team": "NYG",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "theojohnson"
+  },
+  {
+    "sleeper_id": "11600",
+    "name": "Ja'Tavion Sanders",
+    "position": "TE",
+    "team": "CAR",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "jatavionsanders"
+  },
+  {
+    "sleeper_id": "11603",
+    "name": "AJ Barner",
+    "position": "TE",
+    "team": "SEA",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "ajbarner"
+  },
+  {
+    "sleeper_id": "11604",
+    "name": "Brock Bowers",
+    "position": "TE",
+    "team": "LV",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "brockbowers"
+  },
+  {
+    "sleeper_id": "11610",
+    "name": "Malik Washington",
+    "position": "WR",
+    "team": "MIA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "malikwashington"
+  },
+  {
+    "sleeper_id": "11616",
+    "name": "Jacob Cowing",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jacobcowing"
+  },
+  {
+    "sleeper_id": "11618",
+    "name": "Jalen McMillan",
+    "position": "WR",
+    "team": "TB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jalenmcmillan"
+  },
+  {
+    "sleeper_id": "11620",
+    "name": "Rome Odunze",
+    "position": "WR",
+    "team": "CHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "romeodunze"
+  },
+  {
+    "sleeper_id": "11623",
+    "name": "Jordan Whittington",
+    "position": "WR",
+    "team": "LAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jordanwhittington"
+  },
+  {
+    "sleeper_id": "11624",
+    "name": "Xavier Worthy",
+    "position": "WR",
+    "team": "KC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "xavierworthy"
+  },
+  {
+    "sleeper_id": "11625",
+    "name": "Adonai Mitchell",
+    "position": "WR",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "adonaimitchell"
+  },
+  {
+    "sleeper_id": "11626",
+    "name": "Xavier Legette",
+    "position": "WR",
+    "team": "CAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "xavierlegette"
+  },
+  {
+    "sleeper_id": "11627",
+    "name": "Troy Franklin",
+    "position": "WR",
+    "team": "DEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "troyfranklin"
+  },
+  {
+    "sleeper_id": "11628",
+    "name": "Marvin Harrison",
+    "position": "WR",
+    "team": "ARI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "marvinharrison"
+  },
+  {
+    "sleeper_id": "11630",
+    "name": "Roman Wilson",
+    "position": "WR",
+    "team": "PIT",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "romanwilson"
+  },
+  {
+    "sleeper_id": "11631",
+    "name": "Brian Thomas",
+    "position": "WR",
+    "team": "JAX",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "brianthomas"
+  },
+  {
+    "sleeper_id": "11632",
+    "name": "Malik Nabers",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "maliknabers"
+  },
+  {
+    "sleeper_id": "11635",
+    "name": "Ladd McConkey",
+    "position": "WR",
+    "team": "LAC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "laddmcconkey"
+  },
+  {
+    "sleeper_id": "11637",
+    "name": "Keon Coleman",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "keoncoleman"
+  },
+  {
+    "sleeper_id": "11638",
+    "name": "Ricky Pearsall",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "rickypearsall"
+  },
+  {
+    "sleeper_id": "11640",
+    "name": "Jermaine Burton",
+    "position": "WR",
+    "team": null,
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jermaineburton"
+  },
+  {
+    "sleeper_id": "11643",
+    "name": "Jaylen Wright",
+    "position": "RB",
+    "team": "MIA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jaylenwright"
+  },
+  {
+    "sleeper_id": "11646",
+    "name": "Jalen Coker",
+    "position": "WR",
+    "team": "CAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jalencoker"
+  },
+  {
+    "sleeper_id": "11647",
+    "name": "Kimani Vidal",
+    "position": "RB",
+    "team": "LAC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kimanividal"
+  },
+  {
+    "sleeper_id": "11650",
+    "name": "Luke McCaffrey",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "lukemccaffrey"
+  },
+  {
+    "sleeper_id": "11651",
+    "name": "Isaac Guerendo",
+    "position": "RB",
+    "team": "SF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "isaacguerendo"
+  },
+  {
+    "sleeper_id": "11655",
+    "name": "Tyrone Tracy",
+    "position": "RB",
+    "team": "NYG",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tyronetracy"
+  },
+  {
+    "sleeper_id": "1166",
+    "name": "Kirk Cousins",
+    "position": "QB",
+    "team": "LV",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "kirkcousins"
+  },
+  {
+    "sleeper_id": "11783",
+    "name": "Ryan Flournoy",
+    "position": "WR",
+    "team": "DAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "ryanflournoy"
+  },
+  {
+    "sleeper_id": "11834",
+    "name": "Devaughn Vele",
+    "position": "WR",
+    "team": "NO",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "devaughnvele"
+  },
+  {
+    "sleeper_id": "12048",
+    "name": "George Holani",
+    "position": "RB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "georgeholani"
+  },
+  {
+    "sleeper_id": "1234",
+    "name": "Russell Wilson",
+    "position": "QB",
+    "team": null,
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "russellwilson"
+  },
+  {
+    "sleeper_id": "12455",
+    "name": "Brashard Smith",
+    "position": "RB",
+    "team": "KC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "brashardsmith"
+  },
+  {
+    "sleeper_id": "12457",
+    "name": "Jaydon Blue",
+    "position": "RB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jaydonblue"
+  },
+  {
+    "sleeper_id": "12462",
+    "name": "Damien Martinez",
+    "position": "RB",
+    "team": "GB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "damienmartinez"
+  },
+  {
+    "sleeper_id": "12467",
+    "name": "Jordan James",
+    "position": "RB",
+    "team": "SF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jordanjames"
+  },
+  {
+    "sleeper_id": "12469",
+    "name": "Dylan Sampson",
+    "position": "RB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "dylansampson"
+  },
+  {
+    "sleeper_id": "12470",
+    "name": "Riley Leonard",
+    "position": "QB",
+    "team": "IND",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "rileyleonard"
+  },
+  {
+    "sleeper_id": "12471",
+    "name": "DJ Giddens",
+    "position": "RB",
+    "team": "IND",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "djgiddens"
+  },
+  {
+    "sleeper_id": "12472",
+    "name": "Raheim Sanders",
+    "position": "RB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "raheimsanders"
+  },
+  {
+    "sleeper_id": "12474",
+    "name": "Woody Marks",
+    "position": "RB",
+    "team": "HOU",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "woodymarks"
+  },
+  {
+    "sleeper_id": "12476",
+    "name": "Devin Neal",
+    "position": "RB",
+    "team": "NO",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "devinneal"
+  },
+  {
+    "sleeper_id": "12481",
+    "name": "Cam Skattebo",
+    "position": "RB",
+    "team": "NYG",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "camskattebo"
+  },
+  {
+    "sleeper_id": "12482",
+    "name": "Savion Williams",
+    "position": "WR",
+    "team": "GB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "savionwilliams"
+  },
+  {
+    "sleeper_id": "12483",
+    "name": "Jack Bech",
+    "position": "WR",
+    "team": "LV",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jackbech"
+  },
+  {
+    "sleeper_id": "12484",
+    "name": "Jayden Higgins",
+    "position": "WR",
+    "team": "HOU",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaydenhiggins"
+  },
+  {
+    "sleeper_id": "12485",
+    "name": "Tez Johnson",
+    "position": "WR",
+    "team": "TB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tezjohnson"
+  },
+  {
+    "sleeper_id": "12486",
+    "name": "Dillon Gabriel",
+    "position": "QB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "dillongabriel"
+  },
+  {
+    "sleeper_id": "12487",
+    "name": "Terrance Ferguson",
+    "position": "TE",
+    "team": "LAR",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "terranceferguson"
+  },
+  {
+    "sleeper_id": "12489",
+    "name": "RJ Harvey",
+    "position": "RB",
+    "team": "DEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "rjharvey"
+  },
+  {
+    "sleeper_id": "12490",
+    "name": "Bhayshul Tuten",
+    "position": "RB",
+    "team": "JAX",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "bhayshultuten"
+  },
+  {
+    "sleeper_id": "12492",
+    "name": "Pat Bryant",
+    "position": "WR",
+    "team": "DEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "patbryant"
+  },
+  {
+    "sleeper_id": "12493",
+    "name": "Oronde Gadsden",
+    "position": "TE",
+    "team": "LAC",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "orondegadsden"
+  },
+  {
+    "sleeper_id": "12495",
+    "name": "Ollie Gordon",
+    "position": "RB",
+    "team": "MIA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "olliegordon"
+  },
+  {
+    "sleeper_id": "12496",
+    "name": "Tai Felton",
+    "position": "WR",
+    "team": "MIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "taifelton"
+  },
+  {
+    "sleeper_id": "12497",
+    "name": "Tory Horton",
+    "position": "WR",
+    "team": "SEA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "toryhorton"
+  },
+  {
+    "sleeper_id": "12498",
+    "name": "Mason Taylor",
+    "position": "TE",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "masontaylor"
+  },
+  {
+    "sleeper_id": "12499",
+    "name": "Elic Ayomanor",
+    "position": "WR",
+    "team": "TEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "elicayomanor"
+  },
+  {
+    "sleeper_id": "12500",
+    "name": "Quinn Ewers",
+    "position": "QB",
+    "team": "MIA",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "quinnewers"
+  },
+  {
+    "sleeper_id": "12501",
+    "name": "Matthew Golden",
+    "position": "WR",
+    "team": "GB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "matthewgolden"
+  },
+  {
+    "sleeper_id": "12502",
+    "name": "Gunnar Helm",
+    "position": "TE",
+    "team": "TEN",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "gunnarhelm"
+  },
+  {
+    "sleeper_id": "12503",
+    "name": "Isaiah Bond",
+    "position": "WR",
+    "team": "CLE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "isaiahbond"
+  },
+  {
+    "sleeper_id": "12504",
+    "name": "Kaleb Johnson",
+    "position": "RB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kalebjohnson"
+  },
+  {
+    "sleeper_id": "12505",
+    "name": "Jalen Royals",
+    "position": "WR",
+    "team": "KC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jalenroyals"
+  },
+  {
+    "sleeper_id": "12506",
+    "name": "Harold Fannin",
+    "position": "TE",
+    "team": "CLE",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "haroldfannin"
+  },
+  {
+    "sleeper_id": "12507",
+    "name": "Omarion Hampton",
+    "position": "RB",
+    "team": "LAC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "omarionhampton"
+  },
+  {
+    "sleeper_id": "12508",
+    "name": "Jaxson Dart",
+    "position": "QB",
+    "team": "NYG",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jaxsondart"
+  },
+  {
+    "sleeper_id": "12509",
+    "name": "Tre' Harris",
+    "position": "WR",
+    "team": "LAC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "treharris"
+  },
+  {
+    "sleeper_id": "12510",
+    "name": "Jalen Milroe",
+    "position": "QB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jalenmilroe"
+  },
+  {
+    "sleeper_id": "12511",
+    "name": "Will Howard",
+    "position": "QB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "willhoward"
+  },
+  {
+    "sleeper_id": "12512",
+    "name": "Quinshon Judkins",
+    "position": "RB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "quinshonjudkins"
+  },
+  {
+    "sleeper_id": "12514",
+    "name": "Emeka Egbuka",
+    "position": "WR",
+    "team": "TB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "emekaegbuka"
+  },
+  {
+    "sleeper_id": "12516",
+    "name": "Kalel Mullings",
+    "position": "RB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kalelmullings"
+  },
+  {
+    "sleeper_id": "12517",
+    "name": "Colston Loveland",
+    "position": "TE",
+    "team": "CHI",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "colstonloveland"
+  },
+  {
+    "sleeper_id": "12518",
+    "name": "Tyler Warren",
+    "position": "TE",
+    "team": "IND",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "tylerwarren"
+  },
+  {
+    "sleeper_id": "12519",
+    "name": "Luther Burden",
+    "position": "WR",
+    "team": "CHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "lutherburden"
+  },
+  {
+    "sleeper_id": "12521",
+    "name": "Elijah Arroyo",
+    "position": "TE",
+    "team": "SEA",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "elijaharroyo"
+  },
+  {
+    "sleeper_id": "12522",
+    "name": "Cam Ward",
+    "position": "QB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "camward"
+  },
+  {
+    "sleeper_id": "12524",
+    "name": "Shedeur Sanders",
+    "position": "QB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "shedeursanders"
+  },
+  {
+    "sleeper_id": "12526",
+    "name": "Tetairoa McMillan",
+    "position": "WR",
+    "team": "CAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tetairoamcmillan"
+  },
+  {
+    "sleeper_id": "12527",
+    "name": "Ashton Jeanty",
+    "position": "RB",
+    "team": "LV",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "ashtonjeanty"
+  },
+  {
+    "sleeper_id": "12529",
+    "name": "TreVeyon Henderson",
+    "position": "RB",
+    "team": "NE",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "treveyonhenderson"
+  },
+  {
+    "sleeper_id": "12530",
+    "name": "Travis Hunter",
+    "position": "WR",
+    "team": "JAX",
+    "fantasy_positions": [
+      "DB",
+      "WR"
+    ],
+    "search_full_name": "travishunter"
+  },
+  {
+    "sleeper_id": "12531",
+    "name": "Trevor Etienne",
+    "position": "RB",
+    "team": "CAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "trevoretienne"
+  },
+  {
+    "sleeper_id": "12533",
+    "name": "Jacory Croskey-Merritt",
+    "position": "RB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jacorycroskeymerritt"
+  },
+  {
+    "sleeper_id": "12534",
+    "name": "Kyle Monangai",
+    "position": "RB",
+    "team": "CHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kylemonangai"
+  },
+  {
+    "sleeper_id": "12535",
+    "name": "Isaac TeSlaa",
+    "position": "WR",
+    "team": "DET",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "isaacteslaa"
+  },
+  {
+    "sleeper_id": "12536",
+    "name": "Jaylin Noel",
+    "position": "WR",
+    "team": "HOU",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaylinnoel"
+  },
+  {
+    "sleeper_id": "12538",
+    "name": "Brady Cook",
+    "position": "QB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "bradycook"
+  },
+  {
+    "sleeper_id": "12539",
+    "name": "Arian Smith",
+    "position": "WR",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "ariansmith"
+  },
+  {
+    "sleeper_id": "12540",
+    "name": "Chimere Dike",
+    "position": "WR",
+    "team": "TEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "chimeredike"
+  },
+  {
+    "sleeper_id": "12541",
+    "name": "Dont'e Thornton",
+    "position": "WR",
+    "team": "LV",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dontethornton"
+  },
+  {
+    "sleeper_id": "12542",
+    "name": "Efton Chism",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "eftonchism"
+  },
+  {
+    "sleeper_id": "12543",
+    "name": "Tahj Brooks",
+    "position": "RB",
+    "team": "CIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tahjbrooks"
+  },
+  {
+    "sleeper_id": "12544",
+    "name": "LeQuint Allen",
+    "position": "RB",
+    "team": "JAX",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "lequintallen"
+  },
+  {
+    "sleeper_id": "12545",
+    "name": "Tyler Shough",
+    "position": "QB",
+    "team": "NO",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "tylershough"
+  },
+  {
+    "sleeper_id": "12547",
+    "name": "Kyle Williams",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kylewilliams"
+  },
+  {
+    "sleeper_id": "12641",
+    "name": "Jaylin Lane",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaylinlane"
+  },
+  {
+    "sleeper_id": "12670",
+    "name": "KeAndre Lambert-Smith",
+    "position": "WR",
+    "team": "LAC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "keandrelambertsmith"
+  },
+  {
+    "sleeper_id": "12718",
+    "name": "Konata Mumpfield",
+    "position": "WR",
+    "team": "LAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "konatamumpfield"
+  },
+  {
+    "sleeper_id": "12738",
+    "name": "Phil Mafah",
+    "position": "RB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "philmafah"
+  },
+  {
+    "sleeper_id": "12775",
+    "name": "Max Brosmer",
+    "position": "QB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "maxbrosmer"
+  },
+  {
+    "sleeper_id": "13268",
+    "name": "Elijah Sarratt",
+    "position": "WR",
+    "team": "BAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "elijahsarratt"
+  },
+  {
+    "sleeper_id": "13269",
+    "name": "Fernando Mendoza",
+    "position": "QB",
+    "team": "LV",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "fernandomendoza"
+  },
+  {
+    "sleeper_id": "13270",
+    "name": "CJ Daniels",
+    "position": "WR",
+    "team": "LAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "cjdaniels"
+  },
+  {
+    "sleeper_id": "13272",
+    "name": "Carson Beck",
+    "position": "QB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "carsonbeck"
+  },
+  {
+    "sleeper_id": "13274",
+    "name": "Germie Bernard",
+    "position": "WR",
+    "team": "PIT",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "germiebernard"
+  },
+  {
+    "sleeper_id": "13275",
+    "name": "Ty Simpson",
+    "position": "QB",
+    "team": "LAR",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "tysimpson"
+  },
+  {
+    "sleeper_id": "13276",
+    "name": "Omar Cooper",
+    "position": "WR",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "omarcooper"
+  },
+  {
+    "sleeper_id": "13278",
+    "name": "Max Klare",
+    "position": "TE",
+    "team": "LAR",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "maxklare"
+  },
+  {
+    "sleeper_id": "13279",
+    "name": "Carnell Tate",
+    "position": "WR",
+    "team": "TEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "carnelltate"
+  },
+  {
+    "sleeper_id": "13281",
+    "name": "Jordyn Tyson",
+    "position": "WR",
+    "team": "NO",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jordyntyson"
+  },
+  {
+    "sleeper_id": "13285",
+    "name": "Malachi Fields",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "malachifields"
+  },
+  {
+    "sleeper_id": "13286",
+    "name": "Jadarian Price",
+    "position": "RB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jadarianprice"
+  },
+  {
+    "sleeper_id": "13287",
+    "name": "Jeremiyah Love",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jeremiyahlove"
+  },
+  {
+    "sleeper_id": "13288",
+    "name": "Nicholas Singleton",
+    "position": "RB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "nicholassingleton"
+  },
+  {
+    "sleeper_id": "13289",
+    "name": "Drew Allar",
+    "position": "QB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "drewallar"
+  },
+  {
+    "sleeper_id": "13293",
+    "name": "Ja'Kobi Lane",
+    "position": "WR",
+    "team": "BAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jakobilane"
+  },
+  {
+    "sleeper_id": "13294",
+    "name": "Makai Lemon",
+    "position": "WR",
+    "team": "PHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "makailemon"
+  },
+  {
+    "sleeper_id": "13296",
+    "name": "Caleb Douglas",
+    "position": "WR",
+    "team": "MIA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "calebdouglas"
+  },
+  {
+    "sleeper_id": "13298",
+    "name": "KC Concepcion",
+    "position": "WR",
+    "team": "CLE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kcconcepcion"
+  },
+  {
+    "sleeper_id": "13301",
+    "name": "Antonio Williams",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "antoniowilliams"
+  },
+  {
+    "sleeper_id": "13302",
+    "name": "Adam Randall",
+    "position": "RB",
+    "team": "BAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "adamrandall"
+  },
+  {
+    "sleeper_id": "13303",
+    "name": "Cade Klubnik",
+    "position": "QB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "cadeklubnik"
+  },
+  {
+    "sleeper_id": "13305",
+    "name": "Mike Washington",
+    "position": "RB",
+    "team": "LV",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "mikewashington"
+  },
+  {
+    "sleeper_id": "13306",
+    "name": "Taylen Green",
+    "position": "QB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "taylengreen"
+  },
+  {
+    "sleeper_id": "13311",
+    "name": "Chris Bell",
+    "position": "WR",
+    "team": "MIA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "chrisbell"
+  },
+  {
+    "sleeper_id": "13317",
+    "name": "Ted Hurst",
+    "position": "WR",
+    "team": "TB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tedhurst"
+  },
+  {
+    "sleeper_id": "13319",
+    "name": "Oscar Delp",
+    "position": "TE",
+    "team": "NO",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "oscardelp"
+  },
+  {
+    "sleeper_id": "13320",
+    "name": "Zachariah Branch",
+    "position": "WR",
+    "team": "ATL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "zachariahbranch"
+  },
+  {
+    "sleeper_id": "13324",
+    "name": "Matt Hibner",
+    "position": "TE",
+    "team": "BAL",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "matthibner"
+  },
+  {
+    "sleeper_id": "13329",
+    "name": "Malik Benson",
+    "position": "WR",
+    "team": "LV",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "malikbenson"
+  },
+  {
+    "sleeper_id": "13330",
+    "name": "Kenyon Sadiq",
+    "position": "TE",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "kenyonsadiq"
+  },
+  {
+    "sleeper_id": "13335",
+    "name": "Cole Payton",
+    "position": "QB",
+    "team": "PHI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "colepayton"
+  },
+  {
+    "sleeper_id": "13337",
+    "name": "Emmett Johnson",
+    "position": "RB",
+    "team": "KC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "emmettjohnson"
+  },
+  {
+    "sleeper_id": "13338",
+    "name": "Kevin Coleman",
+    "position": "WR",
+    "team": "MIA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kevincoleman"
+  },
+  {
+    "sleeper_id": "13345",
+    "name": "Jonah Coleman",
+    "position": "RB",
+    "team": "DEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jonahcoleman"
+  },
+  {
+    "sleeper_id": "13346",
+    "name": "Denzel Boston",
+    "position": "WR",
+    "team": "CLE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "denzelboston"
+  },
+  {
+    "sleeper_id": "13347",
+    "name": "Demond Claiborne",
+    "position": "RB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "demondclaiborne"
+  },
+  {
+    "sleeper_id": "13349",
+    "name": "Eli Stowers",
+    "position": "TE",
+    "team": "PHI",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "elistowers"
+  },
+  {
+    "sleeper_id": "13353",
+    "name": "Chris Brazzell",
+    "position": "WR",
+    "team": "CAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "chrisbrazzell"
+  },
+  {
+    "sleeper_id": "13380",
+    "name": "Brenen Thompson",
+    "position": "WR",
+    "team": "LAC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "brenenthompson"
+  },
+  {
+    "sleeper_id": "13400",
+    "name": "Justin Joly",
+    "position": "TE",
+    "team": "DEN",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "justinjoly"
+  },
+  {
+    "sleeper_id": "13402",
+    "name": "Skyler Bell",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "skylerbell"
+  },
+  {
+    "sleeper_id": "13404",
+    "name": "Garrett Nussmeier",
+    "position": "QB",
+    "team": "KC",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "garrettnussmeier"
+  },
+  {
+    "sleeper_id": "13405",
+    "name": "Kaytron Allen",
+    "position": "RB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kaytronallen"
+  },
+  {
+    "sleeper_id": "13408",
+    "name": "Tanner Koziol",
+    "position": "TE",
+    "team": "JAX",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "tannerkoziol"
+  },
+  {
+    "sleeper_id": "13411",
+    "name": "Zavion Thomas",
+    "position": "WR",
+    "team": "CHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "zavionthomas"
+  },
+  {
+    "sleeper_id": "13413",
+    "name": "Cyrus Allen",
+    "position": "WR",
+    "team": "KC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "cyrusallen"
+  },
+  {
+    "sleeper_id": "13414",
+    "name": "Kaelon Black",
+    "position": "RB",
+    "team": "SF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kaelonblack"
+  },
+  {
+    "sleeper_id": "13417",
+    "name": "De'Zhaun Stribling",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dezhaunstribling"
+  },
+  {
+    "sleeper_id": "13420",
+    "name": "Bryce Lance",
+    "position": "WR",
+    "team": "NO",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "brycelance"
+  },
+  {
+    "sleeper_id": "13421",
+    "name": "Eli Raridon",
+    "position": "TE",
+    "team": "NE",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "eliraridon"
+  },
+  {
+    "sleeper_id": "13423",
+    "name": "Eli Heidenreich",
+    "position": "RB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "eliheidenreich"
+  },
+  {
+    "sleeper_id": "13533",
+    "name": "Barion Brown",
+    "position": "WR",
+    "team": "NO",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "barionbrown"
+  },
+  {
+    "sleeper_id": "1373",
+    "name": "Geno Smith",
+    "position": "QB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "genosmith"
+  },
+  {
+    "sleeper_id": "1466",
+    "name": "Travis Kelce",
+    "position": "TE",
+    "team": "KC",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "traviskelce"
+  },
+  {
+    "sleeper_id": "1479",
+    "name": "Keenan Allen",
+    "position": "WR",
+    "team": null,
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "keenanallen"
+  },
+  {
+    "sleeper_id": "19",
+    "name": "Joe Flacco",
+    "position": "QB",
+    "team": "CIN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "joeflacco"
+  },
+  {
+    "sleeper_id": "2133",
+    "name": "Davante Adams",
+    "position": "WR",
+    "team": "LAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "davanteadams"
+  },
+  {
+    "sleeper_id": "2216",
+    "name": "Mike Evans",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "mikeevans"
+  },
+  {
+    "sleeper_id": "2306",
+    "name": "Jameis Winston",
+    "position": "QB",
+    "team": "NYG",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jameiswinston"
+  },
+  {
+    "sleeper_id": "2307",
+    "name": "Marcus Mariota",
+    "position": "QB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "marcusmariota"
+  },
+  {
+    "sleeper_id": "2374",
+    "name": "Tyler Lockett",
+    "position": "WR",
+    "team": null,
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tylerlockett"
+  },
+  {
+    "sleeper_id": "2449",
+    "name": "Stefon Diggs",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "stefondiggs"
+  },
+  {
+    "sleeper_id": "2505",
+    "name": "Darren Waller",
+    "position": "TE",
+    "team": null,
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "darrenwaller"
+  },
+  {
+    "sleeper_id": "3163",
+    "name": "Jared Goff",
+    "position": "QB",
+    "team": "DET",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jaredgoff"
+  },
+  {
+    "sleeper_id": "3198",
+    "name": "Derrick Henry",
+    "position": "RB",
+    "team": "BAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "derrickhenry"
+  },
+  {
+    "sleeper_id": "3214",
+    "name": "Hunter Henry",
+    "position": "TE",
+    "team": "NE",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "hunterhenry"
+  },
+  {
+    "sleeper_id": "3257",
+    "name": "Jacoby Brissett",
+    "position": "QB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jacobybrissett"
+  },
+  {
+    "sleeper_id": "3294",
+    "name": "Dak Prescott",
+    "position": "QB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "dakprescott"
+  },
+  {
+    "sleeper_id": "331",
+    "name": "Philip Rivers",
+    "position": "QB",
+    "team": null,
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "philiprivers"
+  },
+  {
+    "sleeper_id": "3321",
+    "name": "Tyreek Hill",
+    "position": "WR",
+    "team": null,
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tyreekhill"
+  },
+  {
+    "sleeper_id": "4017",
+    "name": "Deshaun Watson",
+    "position": "QB",
+    "team": "CLE",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "deshaunwatson"
+  },
+  {
+    "sleeper_id": "4018",
+    "name": "Joe Mixon",
+    "position": "RB",
+    "team": null,
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "joemixon"
+  },
+  {
+    "sleeper_id": "4033",
+    "name": "David Njoku",
+    "position": "TE",
+    "team": "LAC",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "davidnjoku"
+  },
+  {
+    "sleeper_id": "4034",
+    "name": "Christian McCaffrey",
+    "position": "RB",
+    "team": "SF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "christianmccaffrey"
+  },
+  {
+    "sleeper_id": "4035",
+    "name": "Alvin Kamara",
+    "position": "RB",
+    "team": "NO",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "alvinkamara"
+  },
+  {
+    "sleeper_id": "4037",
+    "name": "Chris Godwin",
+    "position": "WR",
+    "team": "TB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "chrisgodwin"
+  },
+  {
+    "sleeper_id": "4039",
+    "name": "Cooper Kupp",
+    "position": "WR",
+    "team": "SEA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "cooperkupp"
+  },
+  {
+    "sleeper_id": "4040",
+    "name": "JuJu Smith-Schuster",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jujusmithschuster"
+  },
+  {
+    "sleeper_id": "4046",
+    "name": "Patrick Mahomes",
+    "position": "QB",
+    "team": "KC",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "patrickmahomes"
+  },
+  {
+    "sleeper_id": "4066",
+    "name": "Evan Engram",
+    "position": "TE",
+    "team": "DEN",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "evanengram"
+  },
+  {
+    "sleeper_id": "4080",
+    "name": "Zay Jones",
+    "position": "WR",
+    "team": null,
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "zayjones"
+  },
+  {
+    "sleeper_id": "4098",
+    "name": "Kareem Hunt",
+    "position": "RB",
+    "team": null,
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kareemhunt"
+  },
+  {
+    "sleeper_id": "4137",
+    "name": "James Conner",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jamesconner"
+  },
+  {
+    "sleeper_id": "4144",
+    "name": "Jonnu Smith",
+    "position": "TE",
+    "team": null,
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "jonnusmith"
+  },
+  {
+    "sleeper_id": "4147",
+    "name": "Samaje Perine",
+    "position": "RB",
+    "team": "CIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "samajeperine"
+  },
+  {
+    "sleeper_id": "4177",
+    "name": "Mack Hollins",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "mackhollins"
+  },
+  {
+    "sleeper_id": "4199",
+    "name": "Aaron Jones",
+    "position": "RB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "aaronjones"
+  },
+  {
+    "sleeper_id": "421",
+    "name": "Matthew Stafford",
+    "position": "QB",
+    "team": "LAR",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "matthewstafford"
+  },
+  {
+    "sleeper_id": "4217",
+    "name": "George Kittle",
+    "position": "TE",
+    "team": "SF",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "georgekittle"
+  },
+  {
+    "sleeper_id": "4219",
+    "name": "Jeremy McNichols",
+    "position": "RB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jeremymcnichols"
+  },
+  {
+    "sleeper_id": "4454",
+    "name": "Kendrick Bourne",
+    "position": "WR",
+    "team": "ARI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kendrickbourne"
+  },
+  {
+    "sleeper_id": "4663",
+    "name": "Austin Ekeler",
+    "position": "RB",
+    "team": null,
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "austinekeler"
+  },
+  {
+    "sleeper_id": "4718",
+    "name": "Dare Ogunbowale",
+    "position": "RB",
+    "team": "LV",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "dareogunbowale"
+  },
+  {
+    "sleeper_id": "4866",
+    "name": "Saquon Barkley",
+    "position": "RB",
+    "team": "PHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "saquonbarkley"
+  },
+  {
+    "sleeper_id": "4881",
+    "name": "Lamar Jackson",
+    "position": "QB",
+    "team": "BAL",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "lamarjackson"
+  },
+  {
+    "sleeper_id": "4892",
+    "name": "Baker Mayfield",
+    "position": "QB",
+    "team": "TB",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "bakermayfield"
+  },
+  {
+    "sleeper_id": "4943",
+    "name": "Sam Darnold",
+    "position": "QB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "samdarnold"
+  },
+  {
+    "sleeper_id": "4950",
+    "name": "Christian Kirk",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "christiankirk"
+  },
+  {
+    "sleeper_id": "4972",
+    "name": "Mason Rudolph",
+    "position": "QB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "masonrudolph"
+  },
+  {
+    "sleeper_id": "4981",
+    "name": "Calvin Ridley",
+    "position": "WR",
+    "team": "TEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "calvinridley"
+  },
+  {
+    "sleeper_id": "4983",
+    "name": "DJ Moore",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "djmoore"
+  },
+  {
+    "sleeper_id": "4984",
+    "name": "Josh Allen",
+    "position": "QB",
+    "team": "BUF",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "joshallen"
+  },
+  {
+    "sleeper_id": "4988",
+    "name": "Nick Chubb",
+    "position": "RB",
+    "team": null,
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "nickchubb"
+  },
+  {
+    "sleeper_id": "5001",
+    "name": "Dalton Schultz",
+    "position": "TE",
+    "team": "HOU",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "daltonschultz"
+  },
+  {
+    "sleeper_id": "5012",
+    "name": "Mark Andrews",
+    "position": "TE",
+    "team": "BAL",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "markandrews"
+  },
+  {
+    "sleeper_id": "5022",
+    "name": "Dallas Goedert",
+    "position": "TE",
+    "team": "PHI",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "dallasgoedert"
+  },
+  {
+    "sleeper_id": "5045",
+    "name": "Courtland Sutton",
+    "position": "WR",
+    "team": "DEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "courtlandsutton"
+  },
+  {
+    "sleeper_id": "5844",
+    "name": "T.J. Hockenson",
+    "position": "TE",
+    "team": "MIN",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "tjhockenson"
+  },
+  {
+    "sleeper_id": "5846",
+    "name": "DK Metcalf",
+    "position": "WR",
+    "team": "PIT",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dkmetcalf"
+  },
+  {
+    "sleeper_id": "5848",
+    "name": "Marquise Brown",
+    "position": "WR",
+    "team": "PHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "marquisebrown"
+  },
+  {
+    "sleeper_id": "5849",
+    "name": "Kyler Murray",
+    "position": "QB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "kylermurray"
+  },
+  {
+    "sleeper_id": "5850",
+    "name": "Josh Jacobs",
+    "position": "RB",
+    "team": "GB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "joshjacobs"
+  },
+  {
+    "sleeper_id": "5854",
+    "name": "Drew Lock",
+    "position": "QB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "drewlock"
+  },
+  {
+    "sleeper_id": "5859",
+    "name": "A.J. Brown",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "ajbrown"
+  },
+  {
+    "sleeper_id": "5870",
+    "name": "Daniel Jones",
+    "position": "QB",
+    "team": "IND",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "danieljones"
+  },
+  {
+    "sleeper_id": "5872",
+    "name": "Deebo Samuel",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "deebosamuel"
+  },
+  {
+    "sleeper_id": "5892",
+    "name": "David Montgomery",
+    "position": "RB",
+    "team": "HOU",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "davidmontgomery"
+  },
+  {
+    "sleeper_id": "5906",
+    "name": "Dawson Knox",
+    "position": "TE",
+    "team": "BUF",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "dawsonknox"
+  },
+  {
+    "sleeper_id": "5927",
+    "name": "Terry McLaurin",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "terrymclaurin"
+  },
+  {
+    "sleeper_id": "5947",
+    "name": "Jakobi Meyers",
+    "position": "WR",
+    "team": "JAX",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jakobimeyers"
+  },
+  {
+    "sleeper_id": "5967",
+    "name": "Tony Pollard",
+    "position": "RB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tonypollard"
+  },
+  {
+    "sleeper_id": "5995",
+    "name": "Justice Hill",
+    "position": "RB",
+    "team": "BAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "justicehill"
+  },
+  {
+    "sleeper_id": "6011",
+    "name": "Gardner Minshew",
+    "position": "QB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "gardnerminshew"
+  },
+  {
+    "sleeper_id": "6039",
+    "name": "Ty Johnson",
+    "position": "RB",
+    "team": "BUF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tyjohnson"
+  },
+  {
+    "sleeper_id": "6130",
+    "name": "Devin Singletary",
+    "position": "RB",
+    "team": "NYG",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "devinsingletary"
+  },
+  {
+    "sleeper_id": "6149",
+    "name": "Darius Slayton",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dariusslayton"
+  },
+  {
+    "sleeper_id": "6271",
+    "name": "Olamide Zaccheaus",
+    "position": "WR",
+    "team": "ATL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "olamidezaccheaus"
+  },
+  {
+    "sleeper_id": "6768",
+    "name": "Tua Tagovailoa",
+    "position": "QB",
+    "team": "ATL",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "tuatagovailoa"
+  },
+  {
+    "sleeper_id": "6770",
+    "name": "Joe Burrow",
+    "position": "QB",
+    "team": "CIN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "joeburrow"
+  },
+  {
+    "sleeper_id": "6783",
+    "name": "Jerry Jeudy",
+    "position": "WR",
+    "team": "CLE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jerryjeudy"
+  },
+  {
+    "sleeper_id": "6786",
+    "name": "CeeDee Lamb",
+    "position": "WR",
+    "team": "DAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "ceedeelamb"
+  },
+  {
+    "sleeper_id": "6790",
+    "name": "D'Andre Swift",
+    "position": "RB",
+    "team": "CHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "dandreswift"
+  },
+  {
+    "sleeper_id": "6794",
+    "name": "Justin Jefferson",
+    "position": "WR",
+    "team": "MIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "justinjefferson"
+  },
+  {
+    "sleeper_id": "6797",
+    "name": "Justin Herbert",
+    "position": "QB",
+    "team": "LAC",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "justinherbert"
+  },
+  {
+    "sleeper_id": "6801",
+    "name": "Tee Higgins",
+    "position": "WR",
+    "team": "CIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "teehiggins"
+  },
+  {
+    "sleeper_id": "6803",
+    "name": "Brandon Aiyuk",
+    "position": "WR",
+    "team": "SF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "brandonaiyuk"
+  },
+  {
+    "sleeper_id": "6804",
+    "name": "Jordan Love",
+    "position": "QB",
+    "team": "GB",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jordanlove"
+  },
+  {
+    "sleeper_id": "6806",
+    "name": "J.K. Dobbins",
+    "position": "RB",
+    "team": "DEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jkdobbins"
+  },
+  {
+    "sleeper_id": "6813",
+    "name": "Jonathan Taylor",
+    "position": "RB",
+    "team": "IND",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jonathantaylor"
+  },
+  {
+    "sleeper_id": "6819",
+    "name": "Michael Pittman",
+    "position": "WR",
+    "team": "PIT",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "michaelpittman"
+  },
+  {
+    "sleeper_id": "6826",
+    "name": "Cole Kmet",
+    "position": "TE",
+    "team": "CHI",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "colekmet"
+  },
+  {
+    "sleeper_id": "6865",
+    "name": "Colby Parkinson",
+    "position": "TE",
+    "team": "LAR",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "colbyparkinson"
+  },
+  {
+    "sleeper_id": "6904",
+    "name": "Jalen Hurts",
+    "position": "QB",
+    "team": "PHI",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "jalenhurts"
+  },
+  {
+    "sleeper_id": "7002",
+    "name": "Juwan Johnson",
+    "position": "TE",
+    "team": "NO",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "juwanjohnson"
+  },
+  {
+    "sleeper_id": "7021",
+    "name": "Rico Dowdle",
+    "position": "RB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "ricodowdle"
+  },
+  {
+    "sleeper_id": "7049",
+    "name": "Jauan Jennings",
+    "position": "WR",
+    "team": "MIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jauanjennings"
+  },
+  {
+    "sleeper_id": "7090",
+    "name": "Darnell Mooney",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "darnellmooney"
+  },
+  {
+    "sleeper_id": "7523",
+    "name": "Trevor Lawrence",
+    "position": "QB",
+    "team": "JAX",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "trevorlawrence"
+  },
+  {
+    "sleeper_id": "7525",
+    "name": "DeVonta Smith",
+    "position": "WR",
+    "team": "PHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "devontasmith"
+  },
+  {
+    "sleeper_id": "7526",
+    "name": "Jaylen Waddle",
+    "position": "WR",
+    "team": "DEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaylenwaddle"
+  },
+  {
+    "sleeper_id": "7527",
+    "name": "Mac Jones",
+    "position": "QB",
+    "team": "SF",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "macjones"
+  },
+  {
+    "sleeper_id": "7528",
+    "name": "Najee Harris",
+    "position": "RB",
+    "team": null,
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "najeeharris"
+  },
+  {
+    "sleeper_id": "7543",
+    "name": "Travis Etienne",
+    "position": "RB",
+    "team": "NO",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "travisetienne"
+  },
+  {
+    "sleeper_id": "7547",
+    "name": "Amon-Ra St. Brown",
+    "position": "WR",
+    "team": "DET",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "amonrastbrown"
+  },
+  {
+    "sleeper_id": "7553",
+    "name": "Kyle Pitts",
+    "position": "TE",
+    "team": "ATL",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "kylepitts"
+  },
+  {
+    "sleeper_id": "7564",
+    "name": "Ja'Marr Chase",
+    "position": "WR",
+    "team": "CIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jamarrchase"
+  },
+  {
+    "sleeper_id": "7567",
+    "name": "Kenny Gainwell",
+    "position": "RB",
+    "team": "TB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kennygainwell"
+  },
+  {
+    "sleeper_id": "7569",
+    "name": "Nico Collins",
+    "position": "WR",
+    "team": "HOU",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "nicocollins"
+  },
+  {
+    "sleeper_id": "7571",
+    "name": "Rashod Bateman",
+    "position": "WR",
+    "team": "BAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "rashodbateman"
+  },
+  {
+    "sleeper_id": "7585",
+    "name": "Davis Mills",
+    "position": "QB",
+    "team": "HOU",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "davismills"
+  },
+  {
+    "sleeper_id": "7587",
+    "name": "Dyami Brown",
+    "position": "WR",
+    "team": "WAS",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dyamibrown"
+  },
+  {
+    "sleeper_id": "7588",
+    "name": "Javonte Williams",
+    "position": "RB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "javontewilliams"
+  },
+  {
+    "sleeper_id": "7591",
+    "name": "Justin Fields",
+    "position": "QB",
+    "team": "KC",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "justinfields"
+  },
+  {
+    "sleeper_id": "7594",
+    "name": "Chuba Hubbard",
+    "position": "RB",
+    "team": "CAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "chubahubbard"
+  },
+  {
+    "sleeper_id": "7600",
+    "name": "Pat Freiermuth",
+    "position": "TE",
+    "team": "PIT",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "patfreiermuth"
+  },
+  {
+    "sleeper_id": "7607",
+    "name": "Michael Carter",
+    "position": "RB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "michaelcarter"
+  },
+  {
+    "sleeper_id": "7611",
+    "name": "Rhamondre Stevenson",
+    "position": "RB",
+    "team": "NE",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "rhamondrestevenson"
+  },
+  {
+    "sleeper_id": "7670",
+    "name": "Joshua Palmer",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "joshuapalmer"
+  },
+  {
+    "sleeper_id": "7828",
+    "name": "Noah Gray",
+    "position": "TE",
+    "team": "KC",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "noahgray"
+  },
+  {
+    "sleeper_id": "8110",
+    "name": "Jake Ferguson",
+    "position": "TE",
+    "team": "DAL",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "jakeferguson"
+  },
+  {
+    "sleeper_id": "8111",
+    "name": "Cade Otton",
+    "position": "TE",
+    "team": "TB",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "cadeotton"
+  },
+  {
+    "sleeper_id": "8112",
+    "name": "Drake London",
+    "position": "WR",
+    "team": "ATL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "drakelondon"
+  },
+  {
+    "sleeper_id": "8117",
+    "name": "Jalen Tolbert",
+    "position": "WR",
+    "team": "MIA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jalentolbert"
+  },
+  {
+    "sleeper_id": "8121",
+    "name": "Romeo Doubs",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "romeodoubs"
+  },
+  {
+    "sleeper_id": "8122",
+    "name": "Zonovan Knight",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "zonovanknight"
+  },
+  {
+    "sleeper_id": "8125",
+    "name": "Calvin Austin",
+    "position": "WR",
+    "team": "NYG",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "calvinaustin"
+  },
+  {
+    "sleeper_id": "8126",
+    "name": "Wan'Dale Robinson",
+    "position": "WR",
+    "team": "TEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "wandalerobinson"
+  },
+  {
+    "sleeper_id": "8130",
+    "name": "Trey McBride",
+    "position": "TE",
+    "team": "ARI",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "treymcbride"
+  },
+  {
+    "sleeper_id": "8131",
+    "name": "Isaiah Likely",
+    "position": "TE",
+    "team": "NYG",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "isaiahlikely"
+  },
+  {
+    "sleeper_id": "8132",
+    "name": "Tyler Allgeier",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tylerallgeier"
+  },
+  {
+    "sleeper_id": "8134",
+    "name": "Khalil Shakir",
+    "position": "WR",
+    "team": "BUF",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "khalilshakir"
+  },
+  {
+    "sleeper_id": "8136",
+    "name": "Rachaad White",
+    "position": "RB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "rachaadwhite"
+  },
+  {
+    "sleeper_id": "8137",
+    "name": "George Pickens",
+    "position": "WR",
+    "team": "DAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "georgepickens"
+  },
+  {
+    "sleeper_id": "8138",
+    "name": "James Cook",
+    "position": "RB",
+    "team": "BUF",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jamescook"
+  },
+  {
+    "sleeper_id": "8142",
+    "name": "Alec Pierce",
+    "position": "WR",
+    "team": "IND",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "alecpierce"
+  },
+  {
+    "sleeper_id": "8143",
+    "name": "Jerome Ford",
+    "position": "RB",
+    "team": "WAS",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jeromeford"
+  },
+  {
+    "sleeper_id": "8144",
+    "name": "Chris Olave",
+    "position": "WR",
+    "team": "NO",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "chrisolave"
+  },
+  {
+    "sleeper_id": "8146",
+    "name": "Garrett Wilson",
+    "position": "WR",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "garrettwilson"
+  },
+  {
+    "sleeper_id": "8147",
+    "name": "John Metchie",
+    "position": "WR",
+    "team": "CAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "johnmetchie"
+  },
+  {
+    "sleeper_id": "8148",
+    "name": "Jameson Williams",
+    "position": "WR",
+    "team": "DET",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jamesonwilliams"
+  },
+  {
+    "sleeper_id": "8150",
+    "name": "Kyren Williams",
+    "position": "RB",
+    "team": "LAR",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kyrenwilliams"
+  },
+  {
+    "sleeper_id": "8151",
+    "name": "Kenneth Walker",
+    "position": "RB",
+    "team": "KC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kennethwalker"
+  },
+  {
+    "sleeper_id": "8154",
+    "name": "Brian Robinson",
+    "position": "RB",
+    "team": "ATL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "brianrobinson"
+  },
+  {
+    "sleeper_id": "8155",
+    "name": "Breece Hall",
+    "position": "RB",
+    "team": "NYJ",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "breecehall"
+  },
+  {
+    "sleeper_id": "8160",
+    "name": "Kenny Pickett",
+    "position": "QB",
+    "team": "CAR",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "kennypickett"
+  },
+  {
+    "sleeper_id": "8161",
+    "name": "Malik Willis",
+    "position": "QB",
+    "team": "MIA",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "malikwillis"
+  },
+  {
+    "sleeper_id": "8167",
+    "name": "Christian Watson",
+    "position": "WR",
+    "team": "GB",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "christianwatson"
+  },
+  {
+    "sleeper_id": "8172",
+    "name": "Greg Dulcich",
+    "position": "TE",
+    "team": "MIA",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "gregdulcich"
+  },
+  {
+    "sleeper_id": "8180",
+    "name": "Jalen Nailor",
+    "position": "WR",
+    "team": "LV",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jalennailor"
+  },
+  {
+    "sleeper_id": "8183",
+    "name": "Brock Purdy",
+    "position": "QB",
+    "team": "SF",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "brockpurdy"
+  },
+  {
+    "sleeper_id": "8188",
+    "name": "Tyquan Thornton",
+    "position": "WR",
+    "team": "KC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tyquanthornton"
+  },
+  {
+    "sleeper_id": "8205",
+    "name": "Isiah Pacheco",
+    "position": "RB",
+    "team": "DET",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "isiahpacheco"
+  },
+  {
+    "sleeper_id": "8210",
+    "name": "Chig Okonkwo",
+    "position": "TE",
+    "team": "WAS",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "chigokonkwo"
+  },
+  {
+    "sleeper_id": "8228",
+    "name": "Jaylen Warren",
+    "position": "RB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jaylenwarren"
+  },
+  {
+    "sleeper_id": "827",
+    "name": "Tyrod Taylor",
+    "position": "QB",
+    "team": "GB",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "tyrodtaylor"
+  },
+  {
+    "sleeper_id": "8408",
+    "name": "Jordan Mason",
+    "position": "RB",
+    "team": "MIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jordanmason"
+  },
+  {
+    "sleeper_id": "8676",
+    "name": "Rashid Shaheed",
+    "position": "WR",
+    "team": "SEA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "rashidshaheed"
+  },
+  {
+    "sleeper_id": "8698",
+    "name": "Jake Tonges",
+    "position": "TE",
+    "team": "SF",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "jaketonges"
+  },
+  {
+    "sleeper_id": "8800",
+    "name": "Malik Davis",
+    "position": "RB",
+    "team": "DAL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "malikdavis"
+  },
+  {
+    "sleeper_id": "8917",
+    "name": "KaVontae Turpin",
+    "position": "WR",
+    "team": "DAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kavontaeturpin"
+  },
+  {
+    "sleeper_id": "9220",
+    "name": "Evan Hull",
+    "position": "RB",
+    "team": "ARI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "evanhull"
+  },
+  {
+    "sleeper_id": "9221",
+    "name": "Jahmyr Gibbs",
+    "position": "RB",
+    "team": "DET",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "jahmyrgibbs"
+  },
+  {
+    "sleeper_id": "9224",
+    "name": "Chase Brown",
+    "position": "RB",
+    "team": "CIN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "chasebrown"
+  },
+  {
+    "sleeper_id": "9225",
+    "name": "Tank Bigsby",
+    "position": "RB",
+    "team": "PHI",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tankbigsby"
+  },
+  {
+    "sleeper_id": "9226",
+    "name": "De'Von Achane",
+    "position": "RB",
+    "team": "MIA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "devonachane"
+  },
+  {
+    "sleeper_id": "9228",
+    "name": "Bryce Young",
+    "position": "QB",
+    "team": "CAR",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "bryceyoung"
+  },
+  {
+    "sleeper_id": "9229",
+    "name": "Anthony Richardson",
+    "position": "QB",
+    "team": "IND",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "anthonyrichardson"
+  },
+  {
+    "sleeper_id": "9479",
+    "name": "Darnell Washington",
+    "position": "TE",
+    "team": "PIT",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "darnellwashington"
+  },
+  {
+    "sleeper_id": "9480",
+    "name": "Brenton Strange",
+    "position": "TE",
+    "team": "JAX",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "brentonstrange"
+  },
+  {
+    "sleeper_id": "9481",
+    "name": "Luke Musgrave",
+    "position": "TE",
+    "team": "GB",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "lukemusgrave"
+  },
+  {
+    "sleeper_id": "9482",
+    "name": "Michael Mayer",
+    "position": "TE",
+    "team": "LV",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "michaelmayer"
+  },
+  {
+    "sleeper_id": "9484",
+    "name": "Tucker Kraft",
+    "position": "TE",
+    "team": "GB",
+    "fantasy_positions": [
+      "TE"
+    ],
+    "search_full_name": "tuckerkraft"
+  },
+  {
+    "sleeper_id": "9486",
+    "name": "Dontayvion Wicks",
+    "position": "WR",
+    "team": "PHI",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "dontayvionwicks"
+  },
+  {
+    "sleeper_id": "9487",
+    "name": "Parker Washington",
+    "position": "WR",
+    "team": "JAX",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "parkerwashington"
+  },
+  {
+    "sleeper_id": "9488",
+    "name": "Jaxon Smith-Njigba",
+    "position": "WR",
+    "team": "SEA",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jaxonsmithnjigba"
+  },
+  {
+    "sleeper_id": "9493",
+    "name": "Puka Nacua",
+    "position": "WR",
+    "team": "LAR",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "pukanacua"
+  },
+  {
+    "sleeper_id": "9494",
+    "name": "Marvin Mims",
+    "position": "WR",
+    "team": "DEN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "marvinmims"
+  },
+  {
+    "sleeper_id": "9500",
+    "name": "Josh Downs",
+    "position": "WR",
+    "team": "IND",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "joshdowns"
+  },
+  {
+    "sleeper_id": "9501",
+    "name": "DeMario Douglas",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "demariodouglas"
+  },
+  {
+    "sleeper_id": "9502",
+    "name": "Tank Dell",
+    "position": "WR",
+    "team": "HOU",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "tankdell"
+  },
+  {
+    "sleeper_id": "9504",
+    "name": "Kayshon Boutte",
+    "position": "WR",
+    "team": "NE",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "kayshonboutte"
+  },
+  {
+    "sleeper_id": "9506",
+    "name": "Sean Tucker",
+    "position": "RB",
+    "team": "TB",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "seantucker"
+  },
+  {
+    "sleeper_id": "9508",
+    "name": "Tyjae Spears",
+    "position": "RB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "tyjaespears"
+  },
+  {
+    "sleeper_id": "9509",
+    "name": "Bijan Robinson",
+    "position": "RB",
+    "team": "ATL",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "bijanrobinson"
+  },
+  {
+    "sleeper_id": "9511",
+    "name": "Keaton Mitchell",
+    "position": "RB",
+    "team": "LAC",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "keatonmitchell"
+  },
+  {
+    "sleeper_id": "96",
+    "name": "Aaron Rodgers",
+    "position": "QB",
+    "team": "PIT",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "aaronrodgers"
+  },
+  {
+    "sleeper_id": "9753",
+    "name": "Zach Charbonnet",
+    "position": "RB",
+    "team": "SEA",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "zachcharbonnet"
+  },
+  {
+    "sleeper_id": "9754",
+    "name": "Quentin Johnston",
+    "position": "WR",
+    "team": "LAC",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "quentinjohnston"
+  },
+  {
+    "sleeper_id": "9756",
+    "name": "Jordan Addison",
+    "position": "WR",
+    "team": "MIN",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "jordanaddison"
+  },
+  {
+    "sleeper_id": "9757",
+    "name": "Kendre Miller",
+    "position": "RB",
+    "team": "NO",
+    "fantasy_positions": [
+      "RB"
+    ],
+    "search_full_name": "kendremiller"
+  },
+  {
+    "sleeper_id": "9758",
+    "name": "C.J. Stroud",
+    "position": "QB",
+    "team": "HOU",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "cjstroud"
+  },
+  {
+    "sleeper_id": "9997",
+    "name": "Zay Flowers",
+    "position": "WR",
+    "team": "BAL",
+    "fantasy_positions": [
+      "WR"
+    ],
+    "search_full_name": "zayflowers"
+  },
+  {
+    "sleeper_id": "9999",
+    "name": "Will Levis",
+    "position": "QB",
+    "team": "TEN",
+    "fantasy_positions": [
+      "QB"
+    ],
+    "search_full_name": "willlevis"
+  }
+]
