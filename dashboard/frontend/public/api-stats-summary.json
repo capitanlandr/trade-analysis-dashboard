@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 107,
-      "totalTradeValue": 392559.0,
-      "avgTradeMargin": 904.0280373831775,
+      "totalTrades": 108,
+      "totalTradeValue": 393469.0,
+      "avgTradeMargin": 900.6944444444445,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 32,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-15"
+        "latest": "2026-08-19"
       }
     },
     "teamRankings": {
@@ -76,9 +76,9 @@
           "realName": "Johnny",
           "sleeperUsername": "jwalters74",
           "nickname": "Johnny",
-          "tradeCount": 34,
-          "winRate": 44.11764705882353,
-          "avgMargin": 1027.0294117647059,
+          "tradeCount": 35,
+          "winRate": 42.857142857142854,
+          "avgMargin": 1013.2285714285714,
           "totalValueGained": 157.0
         },
         {
@@ -87,9 +87,9 @@
           "realName": "Brevin",
           "sleeperUsername": "brevinowens",
           "nickname": "Brevin",
-          "tradeCount": 4,
-          "winRate": 75.0,
-          "avgMargin": 242.0,
+          "tradeCount": 5,
+          "winRate": 80.0,
+          "avgMargin": 302.4,
           "totalValueGained": -1209.0
         },
         {
@@ -133,9 +133,9 @@
           "realName": "Brevin",
           "sleeperUsername": "brevinowens",
           "nickname": "Brevin",
-          "tradeCount": 4,
-          "winRate": 75.0,
-          "avgMargin": 242.0,
+          "tradeCount": 5,
+          "winRate": 80.0,
+          "avgMargin": 302.4,
           "totalValueGained": -1209.0
         },
         {
@@ -216,17 +216,6 @@
           "totalValueGained": -8549.0
         },
         {
-          "rosterId": 7,
-          "teamName": "Cártel de Breece y Puka",
-          "realName": "Johnny",
-          "sleeperUsername": "jwalters74",
-          "nickname": "Johnny",
-          "tradeCount": 34,
-          "winRate": 44.11764705882353,
-          "avgMargin": 1027.0294117647059,
-          "totalValueGained": 157.0
-        },
-        {
           "rosterId": 12,
           "teamName": "Omar Comin",
           "realName": "Don",
@@ -236,6 +225,17 @@
           "winRate": 43.75,
           "avgMargin": 818.9375,
           "totalValueGained": 2495.0
+        },
+        {
+          "rosterId": 7,
+          "teamName": "Cártel de Breece y Puka",
+          "realName": "Johnny",
+          "sleeperUsername": "jwalters74",
+          "nickname": "Johnny",
+          "tradeCount": 35,
+          "winRate": 42.857142857142854,
+          "avgMargin": 1013.2285714285714,
+          "totalValueGained": 157.0
         }
       ],
       "byTradeCount": [
@@ -245,9 +245,9 @@
           "realName": "Johnny",
           "sleeperUsername": "jwalters74",
           "nickname": "Johnny",
-          "tradeCount": 34,
-          "winRate": 44.11764705882353,
-          "avgMargin": 1027.0294117647059,
+          "tradeCount": 35,
+          "winRate": 42.857142857142854,
+          "avgMargin": 1013.2285714285714,
           "totalValueGained": 157.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 27
+        "season_3": 28
       },
       "seasonInfo": {
         "season_2": {
@@ -367,88 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-19T14:27:35.099855Z"
+          "last_fetched": "2026-08-20T14:30:42.097597Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1388605639894249472",
-        "transactionId": "1388605639894249472",
-        "tradeDate": "2026-07-30",
-        "season": "season_3",
-        "teamA": "lndahayo",
-        "teamAReceived": [
-          "Baker Mayfield",
-          "Jonathan Taylor",
-          "Sean Tucker"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Baker Mayfield",
-            "type": "player",
-            "value_then": 2655,
-            "value_now": 2836
-          },
-          {
-            "name": "Jonathan Taylor",
-            "type": "player",
-            "value_then": 4538,
-            "value_now": 4602
-          },
-          {
-            "name": "Sean Tucker",
-            "type": "player",
-            "value_then": 30,
-            "value_now": 38
-          }
-        ],
-        "teamAValueThen": 7223.0,
-        "teamAValueNow": 7476.0,
-        "teamAValueChange": 253.0,
-        "teamB": "tylerpilgrim",
-        "teamBReceived": [
-          "Dylan Sampson",
-          "Woody Marks",
-          "Quinshon Judkins",
-          "Dak Prescott"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Dylan Sampson",
-            "type": "player",
-            "value_then": 134,
-            "value_now": 130
-          },
-          {
-            "name": "Woody Marks",
-            "type": "player",
-            "value_then": 179,
-            "value_now": 182
-          },
-          {
-            "name": "Quinshon Judkins",
-            "type": "player",
-            "value_then": 2412,
-            "value_now": 2211
-          },
-          {
-            "name": "Dak Prescott",
-            "type": "player",
-            "value_then": 4858,
-            "value_now": 5020
-          }
-        ],
-        "teamBValueThen": 7583.0,
-        "teamBValueNow": 7543.0,
-        "teamBValueChange": -40.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": -360.0,
-        "marginCurrent": -67.0,
-        "swingWinner": "tylerpilgrim",
-        "swingMargin": 293.0
-      },
       {
         "tradeId": "1388374053886099456",
         "transactionId": "1388374053886099456",
@@ -847,8 +770,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 330,
-            "value_now": 330
+            "value_then": 183,
+            "value_now": 183
           }
         ],
         "teamAValueThen": 4602.0,
@@ -924,8 +847,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 330,
-            "value_now": 330
+            "value_then": 183,
+            "value_now": 183
           }
         ],
         "teamAValueThen": 411.0,
@@ -964,6 +887,48 @@
         "winnerCurrent": "mgaeta23",
         "marginAtTrade": -209.0,
         "marginCurrent": -209.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1395644773615800320",
+        "transactionId": "1395644773615800320",
+        "tradeDate": "2026-08-19",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Mike Evans"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Mike Evans",
+            "type": "player",
+            "value_then": 727,
+            "value_now": 727
+          }
+        ],
+        "teamAValueThen": 727.0,
+        "teamAValueNow": 727.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2028 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 183,
+            "value_now": 183
+          }
+        ],
+        "teamBValueThen": 183.0,
+        "teamBValueNow": 183.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "brevinowens",
+        "winnerCurrent": "brevinowens",
+        "marginAtTrade": 544.0,
+        "marginCurrent": 544.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
       }

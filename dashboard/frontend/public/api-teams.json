@@ -30,9 +30,9 @@
         "realName": "Brevin",
         "sleeperUsername": "brevinowens",
         "nickname": "Brevin",
-        "tradeCount": 4,
-        "winRate": 75.0,
-        "avgMargin": 242.0,
+        "tradeCount": 5,
+        "winRate": 80.0,
+        "avgMargin": 302.4,
         "totalValueGained": -1209.0
       },
       {
@@ -74,9 +74,9 @@
         "realName": "Johnny",
         "sleeperUsername": "jwalters74",
         "nickname": "Johnny",
-        "tradeCount": 34,
-        "winRate": 44.11764705882353,
-        "avgMargin": 1027.0294117647059,
+        "tradeCount": 35,
+        "winRate": 42.857142857142854,
+        "avgMargin": 1013.2285714285714,
         "totalValueGained": 157.0
       },
       {
@@ -137,7 +137,7 @@
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 107,
+      "totalTrades": 108,
       "seasonsIncluded": [
         "season_2",
         "season_3"

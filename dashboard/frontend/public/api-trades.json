@@ -1530,7 +1530,7 @@
           {
             "name": "Mike Evans",
             "type": "player",
-            "value_then": 1297,
+            "value_then": 727,
             "value_now": 727
           },
           {
@@ -2240,7 +2240,7 @@
           {
             "name": "Mike Evans",
             "type": "player",
-            "value_then": 1297,
+            "value_then": 727,
             "value_now": 727
           },
           {
@@ -5932,8 +5932,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 330,
-            "value_now": 330
+            "value_then": 183,
+            "value_now": 183
           }
         ],
         "teamAValueThen": 4602.0,
@@ -6009,8 +6009,8 @@
           {
             "name": "2028 Round 2",
             "type": "draft_pick",
-            "value_then": 330,
-            "value_now": 330
+            "value_then": 183,
+            "value_now": 183
           }
         ],
         "teamAValueThen": 411.0,
@@ -6051,14 +6051,56 @@
         "marginCurrent": -209.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1395644773615800320",
+        "transactionId": "1395644773615800320",
+        "tradeDate": "2026-08-19",
+        "season": "season_3",
+        "teamA": "brevinowens",
+        "teamAReceived": [
+          "Mike Evans"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Mike Evans",
+            "type": "player",
+            "value_then": 727,
+            "value_now": 727
+          }
+        ],
+        "teamAValueThen": 727.0,
+        "teamAValueNow": 727.0,
+        "teamAValueChange": 0.0,
+        "teamB": "jwalters74",
+        "teamBReceived": [
+          "2028 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 183,
+            "value_now": 183
+          }
+        ],
+        "teamBValueThen": 183.0,
+        "teamBValueNow": 183.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "brevinowens",
+        "winnerCurrent": "brevinowens",
+        "marginAtTrade": 544.0,
+        "marginCurrent": 544.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-19T14:28:54.181096",
-      "totalTrades": 107,
+      "lastUpdated": "2026-08-20T14:32:15.627699",
+      "totalTrades": 108,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-15"
+        "latest": "2026-08-19"
       },
       "seasonsIncluded": [
         "season_2",
@@ -6066,7 +6108,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 27
+        "season_3": 28
       },
       "seasonInfo": {
         "season_2": {
@@ -6075,14 +6117,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-19T14:27:35.099855Z"
+          "last_fetched": "2026-08-20T14:30:42.097597Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 108,
-        "dashboardTradesGenerated": 107,
+        "rawTradesProcessed": 109,
+        "dashboardTradesGenerated": 108,
         "multiTeamTradesSkipped": 1
       }
     }
