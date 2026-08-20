@@ -1,0 +1,816 @@
+{
+  "season": 2025,
+  "draft_year": 2026,
+  "through_week": 17,
+  "determination_level": "complete",
+  "last_updated": "2026-08-08T14:27:18.050965Z",
+  "summary": {
+    "total_picks": 48,
+    "locked_picks": 48,
+    "uncertain_picks": 0,
+    "round_1_locked": 12,
+    "round_1_uncertain": 0
+  },
+  "draft_order": {
+    "round_1": [
+      {
+        "pick_number": 1,
+        "pick_label": "1.01",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 11,
+          "team_name": "On To 2026",
+          "description": "Toilet Bowl Winner"
+        },
+        "current_owner": {
+          "roster_id": 11,
+          "team_name": "All You Need Is LOVE"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 2,
+        "pick_label": "1.02",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier ",
+          "description": "Toilet Bowl Loser"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 3,
+        "pick_label": "1.03",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 4,
+          "team_name": "Spirit Halloween",
+          "regular_season_rank": 12,
+          "description": "12th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 4,
+          "team_name": "Lisan al-Caleb"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 4,
+        "pick_label": "1.04",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "regular_season_rank": 11,
+          "description": "11th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 4,
+          "team_name": "Lisan al-Caleb"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 5,
+        "pick_label": "1.05",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed",
+          "regular_season_rank": 9,
+          "description": "9th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 8,
+          "team_name": "Loading\u2026"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 6,
+        "pick_label": "1.06",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers",
+          "regular_season_rank": 7,
+          "description": "7th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 11,
+          "team_name": "All You Need Is LOVE"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 7,
+        "pick_label": "1.07",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC",
+          "regular_season_rank": 6,
+          "description": "6th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 8,
+        "pick_label": "1.08",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 12,
+          "team_name": "Paper Tigers",
+          "regular_season_rank": 5,
+          "description": "5th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 9,
+        "pick_label": "1.09",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 2,
+          "team_name": "Like a Good Naber",
+          "description": "3rd Place Winner"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 10,
+        "pick_label": "1.10",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way",
+          "description": "3rd Place Loser"
+        },
+        "current_owner": {
+          "roster_id": 11,
+          "team_name": "All You Need Is LOVE"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 11,
+        "pick_label": "1.11",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 3,
+          "team_name": "Bucky\u2019s Depression",
+          "description": "Championship Loser"
+        },
+        "current_owner": {
+          "roster_id": 3,
+          "team_name": "Golden Hour"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 12,
+        "pick_label": "1.12",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 7,
+          "team_name": "2-Man Title Charge",
+          "description": "Championship Winner"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": true
+      }
+    ],
+    "round_2": [
+      {
+        "pick_number": 1,
+        "pick_label": "2.01",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 11,
+          "team_name": "On To 2026",
+          "description": "Toilet Bowl Winner"
+        },
+        "current_owner": {
+          "roster_id": 11,
+          "team_name": "All You Need Is LOVE"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 2,
+        "pick_label": "2.02",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier ",
+          "description": "Toilet Bowl Loser"
+        },
+        "current_owner": {
+          "roster_id": 12,
+          "team_name": "Omar Comin"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 3,
+        "pick_label": "2.03",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 4,
+          "team_name": "Spirit Halloween",
+          "regular_season_rank": 12,
+          "description": "12th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 4,
+        "pick_label": "2.04",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "regular_season_rank": 11,
+          "description": "11th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 4,
+          "team_name": "Lisan al-Caleb"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 5,
+        "pick_label": "2.05",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed",
+          "regular_season_rank": 9,
+          "description": "9th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 6,
+        "pick_label": "2.06",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers",
+          "regular_season_rank": 7,
+          "description": "7th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 7,
+        "pick_label": "2.07",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC",
+          "regular_season_rank": 6,
+          "description": "6th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 8,
+        "pick_label": "2.08",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 12,
+          "team_name": "Paper Tigers",
+          "regular_season_rank": 5,
+          "description": "5th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 9,
+        "pick_label": "2.09",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 2,
+          "team_name": "Like a Good Naber",
+          "description": "3rd Place Winner"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 10,
+        "pick_label": "2.10",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way",
+          "description": "3rd Place Loser"
+        },
+        "current_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 11,
+        "pick_label": "2.11",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 3,
+          "team_name": "Bucky\u2019s Depression",
+          "description": "Championship Loser"
+        },
+        "current_owner": {
+          "roster_id": 7,
+          "team_name": "C\u00e1rtel de Breece y Puka"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 12,
+        "pick_label": "2.12",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 7,
+          "team_name": "2-Man Title Charge",
+          "description": "Championship Winner"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      }
+    ],
+    "round_3": [
+      {
+        "pick_number": 1,
+        "pick_label": "3.01",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 11,
+          "team_name": "On To 2026",
+          "description": "Toilet Bowl Winner"
+        },
+        "current_owner": {
+          "roster_id": 12,
+          "team_name": "Omar Comin"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 2,
+        "pick_label": "3.02",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier ",
+          "description": "Toilet Bowl Loser"
+        },
+        "current_owner": {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 3,
+        "pick_label": "3.03",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 4,
+          "team_name": "Spirit Halloween",
+          "regular_season_rank": 12,
+          "description": "12th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 4,
+        "pick_label": "3.04",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "regular_season_rank": 11,
+          "description": "11th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 7,
+          "team_name": "C\u00e1rtel de Breece y Puka"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 5,
+        "pick_label": "3.05",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed",
+          "regular_season_rank": 9,
+          "description": "9th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 6,
+        "pick_label": "3.06",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers",
+          "regular_season_rank": 7,
+          "description": "7th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 8,
+          "team_name": "Loading\u2026"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 7,
+        "pick_label": "3.07",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC",
+          "regular_season_rank": 6,
+          "description": "6th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 7,
+          "team_name": "C\u00e1rtel de Breece y Puka"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 8,
+        "pick_label": "3.08",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 12,
+          "team_name": "Paper Tigers",
+          "regular_season_rank": 5,
+          "description": "5th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 9,
+        "pick_label": "3.09",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 2,
+          "team_name": "Like a Good Naber",
+          "description": "3rd Place Winner"
+        },
+        "current_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 10,
+        "pick_label": "3.10",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way",
+          "description": "3rd Place Loser"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 11,
+        "pick_label": "3.11",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 3,
+          "team_name": "Bucky\u2019s Depression",
+          "description": "Championship Loser"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 12,
+        "pick_label": "3.12",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 7,
+          "team_name": "2-Man Title Charge",
+          "description": "Championship Winner"
+        },
+        "current_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier "
+        },
+        "traded": true
+      }
+    ],
+    "round_4": [
+      {
+        "pick_number": 1,
+        "pick_label": "4.01",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 11,
+          "team_name": "On To 2026",
+          "description": "Toilet Bowl Winner"
+        },
+        "current_owner": {
+          "roster_id": 7,
+          "team_name": "C\u00e1rtel de Breece y Puka"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 2,
+        "pick_label": "4.02",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 5,
+          "team_name": "Mommy Rainier ",
+          "description": "Toilet Bowl Loser"
+        },
+        "current_owner": {
+          "roster_id": 4,
+          "team_name": "Lisan al-Caleb"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 3,
+        "pick_label": "4.03",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 4,
+          "team_name": "Spirit Halloween",
+          "regular_season_rank": 12,
+          "description": "12th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 4,
+        "pick_label": "4.04",
+        "tier": "Early",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 8,
+          "team_name": "TRIPS \ud83d\udd25",
+          "regular_season_rank": 11,
+          "description": "11th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 8,
+          "team_name": "Loading\u2026"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 5,
+        "pick_label": "4.05",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed",
+          "regular_season_rank": 9,
+          "description": "9th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 12,
+          "team_name": "Omar Comin"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 6,
+        "pick_label": "4.06",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 10,
+          "team_name": "Rashid Shaheed Truthers",
+          "regular_season_rank": 7,
+          "description": "7th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 4,
+          "team_name": "Lisan al-Caleb"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 7,
+        "pick_label": "4.07",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 9,
+          "team_name": "Gaeta Spur FC",
+          "regular_season_rank": 6,
+          "description": "6th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 2,
+          "team_name": "The Federal Reserve"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 8,
+        "pick_label": "4.08",
+        "tier": "Mid",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 12,
+          "team_name": "Paper Tigers",
+          "regular_season_rank": 5,
+          "description": "5th place (remaining team)"
+        },
+        "current_owner": {
+          "roster_id": 6,
+          "team_name": "Mostly Washed"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 9,
+        "pick_label": "4.09",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 2,
+          "team_name": "Like a Good Naber",
+          "description": "3rd Place Winner"
+        },
+        "current_owner": {
+          "roster_id": 8,
+          "team_name": "Loading\u2026"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 10,
+        "pick_label": "4.10",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 1,
+          "team_name": "208 Ferrari Way",
+          "description": "3rd Place Loser"
+        },
+        "current_owner": {
+          "roster_id": 7,
+          "team_name": "C\u00e1rtel de Breece y Puka"
+        },
+        "traded": true
+      },
+      {
+        "pick_number": 11,
+        "pick_label": "4.11",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 3,
+          "team_name": "Bucky\u2019s Depression",
+          "description": "Championship Loser"
+        },
+        "current_owner": {
+          "roster_id": 3,
+          "team_name": "Golden Hour"
+        },
+        "traded": false
+      },
+      {
+        "pick_number": 12,
+        "pick_label": "4.12",
+        "tier": "Late",
+        "certainty": "locked",
+        "original_owner": {
+          "roster_id": 7,
+          "team_name": "2-Man Title Charge",
+          "description": "Championship Winner"
+        },
+        "current_owner": {
+          "roster_id": 2,
+          "team_name": "The Federal Reserve"
+        },
+        "traded": true
+      }
+    ]
+  }
+}

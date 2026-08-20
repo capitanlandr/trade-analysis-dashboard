@@ -1,0 +1,4502 @@
+[
+  {
+    "slug": "jahmyr-gibbs-1415",
+    "playerID": 1415,
+    "playerName": "Jahmyr Gibbs",
+    "position": "RB",
+    "team": "DET",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "bijan-robinson-1414",
+    "playerID": 1414,
+    "playerName": "Bijan Robinson",
+    "position": "RB",
+    "team": "ATL",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "ja-marr-chase-1004",
+    "playerID": 1004,
+    "playerName": "Ja'Marr Chase",
+    "position": "WR",
+    "team": "CIN",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "jaxon-smith-njigba-1437",
+    "playerID": 1437,
+    "playerName": "Jaxon Smith-Njigba",
+    "position": "WR",
+    "team": "SEA",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "puka-nacua-1426",
+    "playerID": 1426,
+    "playerName": "Puka Nacua",
+    "position": "WR",
+    "team": "LAR",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "brock-bowers-1612",
+    "playerID": 1612,
+    "playerName": "Brock Bowers",
+    "position": "TE",
+    "team": "LVR",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "amon-ra-st-brown-1010",
+    "playerID": 1010,
+    "playerName": "Amon-Ra St. Brown",
+    "position": "WR",
+    "team": "DET",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "ashton-jeanty-1742",
+    "playerID": 1742,
+    "playerName": "Ashton Jeanty",
+    "position": "RB",
+    "team": "LVR",
+    "age": 22.7,
+    "rookie": false
+  },
+  {
+    "slug": "justin-jefferson-542",
+    "playerID": 542,
+    "playerName": "Justin Jefferson",
+    "position": "WR",
+    "team": "MIN",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "malik-nabers-1586",
+    "playerID": 1586,
+    "playerName": "Malik Nabers",
+    "position": "WR",
+    "team": "NYG",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "jeremiyah-love-1934",
+    "playerID": 1934,
+    "playerName": "Jeremiyah Love",
+    "position": "RB",
+    "team": "ARI",
+    "age": 21.2,
+    "rookie": true
+  },
+  {
+    "slug": "josh-allen-365",
+    "playerID": 365,
+    "playerName": "Josh Allen",
+    "position": "QB",
+    "team": "BUF",
+    "age": 30.2,
+    "rookie": false
+  },
+  {
+    "slug": "trey-mcbride-1253",
+    "playerID": 1253,
+    "playerName": "Trey McBride",
+    "position": "TE",
+    "team": "ARI",
+    "age": 26.7,
+    "rookie": false
+  },
+  {
+    "slug": "omarion-hampton-1744",
+    "playerID": 1744,
+    "playerName": "Omarion Hampton",
+    "position": "RB",
+    "team": "LAC",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "ceedee-lamb-546",
+    "playerID": 546,
+    "playerName": "CeeDee Lamb",
+    "position": "WR",
+    "team": "DAL",
+    "age": 27.3,
+    "rookie": false
+  },
+  {
+    "slug": "2027-early-1st-1702",
+    "playerID": 1702,
+    "playerName": "2027 Early 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "drake-london-1268",
+    "playerID": 1268,
+    "playerName": "Drake London",
+    "position": "WR",
+    "team": "ATL",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "de-von-achane-1398",
+    "playerID": 1398,
+    "playerName": "De'Von Achane",
+    "position": "RB",
+    "team": "MIA",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "tetairoa-mcmillan-1771",
+    "playerID": 1771,
+    "playerName": "Tetairoa McMillan",
+    "position": "WR",
+    "team": "CAR",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "jonathan-taylor-634",
+    "playerID": 634,
+    "playerName": "Jonathan Taylor",
+    "position": "RB",
+    "team": "IND",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "emeka-egbuka-1781",
+    "playerID": 1781,
+    "playerName": "Emeka Egbuka",
+    "position": "WR",
+    "team": "TBB",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "james-cook-1231",
+    "playerID": 1231,
+    "playerName": "James Cook",
+    "position": "RB",
+    "team": "BUF",
+    "age": 26.9,
+    "rookie": false
+  },
+  {
+    "slug": "george-pickens-1279",
+    "playerID": 1279,
+    "playerName": "George Pickens",
+    "position": "WR",
+    "team": "DAL",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "colston-loveland-1804",
+    "playerID": 1804,
+    "playerName": "Colston Loveland",
+    "position": "TE",
+    "team": "CHI",
+    "age": 22.3,
+    "rookie": false
+  },
+  {
+    "slug": "drake-maye-1551",
+    "playerID": 1551,
+    "playerName": "Drake Maye",
+    "position": "QB",
+    "team": "NEP",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "carnell-tate-1959",
+    "playerID": 1959,
+    "playerName": "Carnell Tate",
+    "position": "WR",
+    "team": "TEN",
+    "age": 21.6,
+    "rookie": true
+  },
+  {
+    "slug": "tyler-warren-1802",
+    "playerID": 1802,
+    "playerName": "Tyler Warren",
+    "position": "TE",
+    "team": "IND",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "kenneth-walker-iii-1227",
+    "playerID": 1227,
+    "playerName": "Kenneth Walker III",
+    "position": "RB",
+    "team": "KCC",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "lamar-jackson-372",
+    "playerID": 372,
+    "playerName": "Lamar Jackson",
+    "position": "QB",
+    "team": "BAL",
+    "age": 29.6,
+    "rookie": false
+  },
+  {
+    "slug": "ladd-mcconkey-1598",
+    "playerID": 1598,
+    "playerName": "Ladd McConkey",
+    "position": "WR",
+    "team": "LAC",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "nico-collins-1040",
+    "playerID": 1040,
+    "playerName": "Nico Collins",
+    "position": "WR",
+    "team": "HOU",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "chris-olave-1271",
+    "playerID": 1271,
+    "playerName": "Chris Olave",
+    "position": "WR",
+    "team": "NOS",
+    "age": 26.1,
+    "rookie": false
+  },
+  {
+    "slug": "garrett-wilson-1270",
+    "playerID": 1270,
+    "playerName": "Garrett Wilson",
+    "position": "WR",
+    "team": "NYJ",
+    "age": 26.0,
+    "rookie": false
+  },
+  {
+    "slug": "luther-burden-1770",
+    "playerID": 1770,
+    "playerName": "Luther Burden",
+    "position": "WR",
+    "team": "CHI",
+    "age": 22.7,
+    "rookie": false
+  },
+  {
+    "slug": "quinshon-judkins-1751",
+    "playerID": 1751,
+    "playerName": "Quinshon Judkins",
+    "position": "RB",
+    "team": "CLE",
+    "age": 22.8,
+    "rookie": false
+  },
+  {
+    "slug": "devonta-smith-1005",
+    "playerID": 1005,
+    "playerName": "DeVonta Smith",
+    "position": "WR",
+    "team": "PHI",
+    "age": 27.7,
+    "rookie": false
+  },
+  {
+    "slug": "2026-early-1st-1527",
+    "playerID": 1527,
+    "playerName": "2026 Early 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "chase-brown-1396",
+    "playerID": 1396,
+    "playerName": "Chase Brown",
+    "position": "RB",
+    "team": "CIN",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "2027-mid-1st-1703",
+    "playerID": 1703,
+    "playerName": "2027 Mid 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "jayden-daniels-1552",
+    "playerID": 1552,
+    "playerName": "Jayden Daniels",
+    "position": "QB",
+    "team": "WAS",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "jordyn-tyson-1960",
+    "playerID": 1960,
+    "playerName": "Jordyn Tyson",
+    "position": "WR",
+    "team": "NOS",
+    "age": 22.0,
+    "rookie": true
+  },
+  {
+    "slug": "breece-hall-1224",
+    "playerID": 1224,
+    "playerName": "Breece Hall",
+    "position": "RB",
+    "team": "NYJ",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "treveyon-henderson-1743",
+    "playerID": 1743,
+    "playerName": "TreVeyon Henderson",
+    "position": "RB",
+    "team": "NEP",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "christian-mccaffrey-283",
+    "playerID": 283,
+    "playerName": "Christian McCaffrey",
+    "position": "RB",
+    "team": "SFO",
+    "age": 30.2,
+    "rookie": false
+  },
+  {
+    "slug": "zay-flowers-1443",
+    "playerID": 1443,
+    "playerName": "Zay Flowers",
+    "position": "WR",
+    "team": "BAL",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "rome-odunze-1587",
+    "playerID": 1587,
+    "playerName": "Rome Odunze",
+    "position": "WR",
+    "team": "CHI",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "saquon-barkley-1",
+    "playerID": 1,
+    "playerName": "Saquon Barkley",
+    "position": "RB",
+    "team": "PHI",
+    "age": 29.5,
+    "rookie": false
+  },
+  {
+    "slug": "caleb-williams-1550",
+    "playerID": 1550,
+    "playerName": "Caleb Williams",
+    "position": "QB",
+    "team": "CHI",
+    "age": 24.7,
+    "rookie": false
+  },
+  {
+    "slug": "aj-brown-217",
+    "playerID": 217,
+    "playerName": "A.J. Brown",
+    "position": "WR",
+    "team": "NEP",
+    "age": 29.1,
+    "rookie": false
+  },
+  {
+    "slug": "joe-burrow-601",
+    "playerID": 601,
+    "playerName": "Joe Burrow",
+    "position": "QB",
+    "team": "CIN",
+    "age": 29.7,
+    "rookie": false
+  },
+  {
+    "slug": "rashee-rice-1447",
+    "playerID": 1447,
+    "playerName": "Rashee Rice",
+    "position": "WR",
+    "team": "KCC",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "makai-lemon-1961",
+    "playerID": 1961,
+    "playerName": "Makai Lemon",
+    "position": "WR",
+    "team": "PHI",
+    "age": 22.2,
+    "rookie": true
+  },
+  {
+    "slug": "tee-higgins-543",
+    "playerID": 543,
+    "playerName": "Tee Higgins",
+    "position": "WR",
+    "team": "CIN",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "kyren-williams-1226",
+    "playerID": 1226,
+    "playerName": "Kyren Williams",
+    "position": "RB",
+    "team": "LAR",
+    "age": 26.0,
+    "rookie": false
+  },
+  {
+    "slug": "2028-early-1st-1882",
+    "playerID": 1882,
+    "playerName": "2028 Early 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "cam-skattebo-1745",
+    "playerID": 1745,
+    "playerName": "Cam Skattebo",
+    "position": "RB",
+    "team": "NYG",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "jadarian-price-1935",
+    "playerID": 1935,
+    "playerName": "Jadarian Price",
+    "position": "RB",
+    "team": "SEA",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "jaylen-waddle-1007",
+    "playerID": 1007,
+    "playerName": "Jaylen Waddle",
+    "position": "WR",
+    "team": "DEN",
+    "age": 27.7,
+    "rookie": false
+  },
+  {
+    "slug": "tucker-kraft-1418",
+    "playerID": 1418,
+    "playerName": "Tucker Kraft",
+    "position": "TE",
+    "team": "GBP",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "2027-late-1st-1704",
+    "playerID": 1704,
+    "playerName": "2027 Late 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "brian-thomas-jr-1589",
+    "playerID": 1589,
+    "playerName": "Brian Thomas Jr.",
+    "position": "WR",
+    "team": "JAC",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "marvin-harrison-jr-1585",
+    "playerID": 1585,
+    "playerName": "Marvin Harrison Jr.",
+    "position": "WR",
+    "team": "ARI",
+    "age": 24.0,
+    "rookie": false
+  },
+  {
+    "slug": "harold-fannin-1803",
+    "playerID": 1803,
+    "playerName": "Harold Fannin",
+    "position": "TE",
+    "team": "CLE",
+    "age": 22.0,
+    "rookie": false
+  },
+  {
+    "slug": "javonte-williams-1033",
+    "playerID": 1033,
+    "playerName": "Javonte Williams",
+    "position": "RB",
+    "team": "DAL",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "justin-herbert-599",
+    "playerID": 599,
+    "playerName": "Justin Herbert",
+    "position": "QB",
+    "team": "LAC",
+    "age": 28.4,
+    "rookie": false
+  },
+  {
+    "slug": "jameson-williams-1273",
+    "playerID": 1273,
+    "playerName": "Jameson Williams",
+    "position": "WR",
+    "team": "DET",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "bucky-irving-1569",
+    "playerID": 1569,
+    "playerName": "Bucky Irving",
+    "position": "RB",
+    "team": "TBB",
+    "age": 24.0,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-hurts-595",
+    "playerID": 595,
+    "playerName": "Jalen Hurts",
+    "position": "QB",
+    "team": "PHI",
+    "age": 28.0,
+    "rookie": false
+  },
+  {
+    "slug": "jaxson-dart-1732",
+    "playerID": 1732,
+    "playerName": "Jaxson Dart",
+    "position": "QB",
+    "team": "NYG",
+    "age": 23.2,
+    "rookie": false
+  },
+  {
+    "slug": "2026-mid-1st-1528",
+    "playerID": 1528,
+    "playerName": "2026 Mid 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "patrick-mahomes-272",
+    "playerID": 272,
+    "playerName": "Patrick Mahomes",
+    "position": "QB",
+    "team": "KCC",
+    "age": 30.9,
+    "rookie": false
+  },
+  {
+    "slug": "bhayshul-tuten-1752",
+    "playerID": 1752,
+    "playerName": "Bhayshul Tuten",
+    "position": "RB",
+    "team": "JAC",
+    "age": 23.5,
+    "rookie": false
+  },
+  {
+    "slug": "2028-mid-1st-1883",
+    "playerID": 1883,
+    "playerName": "2028 Mid 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "sam-laporta-1429",
+    "playerID": 1429,
+    "playerName": "Sam LaPorta",
+    "position": "TE",
+    "team": "DET",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "kyle-pitts-1051",
+    "playerID": 1051,
+    "playerName": "Kyle Pitts",
+    "position": "TE",
+    "team": "ATL",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "trevor-lawrence-1094",
+    "playerID": 1094,
+    "playerName": "Trevor Lawrence",
+    "position": "QB",
+    "team": "JAC",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "kc-concepcion-1963",
+    "playerID": 1963,
+    "playerName": "KC Concepcion",
+    "position": "WR",
+    "team": "CLE",
+    "age": 21.9,
+    "rookie": true
+  },
+  {
+    "slug": "travis-etienne-1030",
+    "playerID": 1030,
+    "playerName": "Travis Etienne",
+    "position": "RB",
+    "team": "NOS",
+    "age": 27.5,
+    "rookie": false
+  },
+  {
+    "slug": "josh-jacobs-303",
+    "playerID": 303,
+    "playerName": "Josh Jacobs",
+    "position": "RB",
+    "team": "GBP",
+    "age": 28.5,
+    "rookie": false
+  },
+  {
+    "slug": "derrick-henry-296",
+    "playerID": 296,
+    "playerName": "Derrick Henry",
+    "position": "RB",
+    "team": "BAL",
+    "age": 32.6,
+    "rookie": false
+  },
+  {
+    "slug": "bo-nix-1553",
+    "playerID": 1553,
+    "playerName": "Bo Nix",
+    "position": "QB",
+    "team": "DEN",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "parker-washington-1445",
+    "playerID": 1445,
+    "playerName": "Parker Washington",
+    "position": "WR",
+    "team": "JAC",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "christian-watson-1248",
+    "playerID": 1248,
+    "playerName": "Christian Watson",
+    "position": "WR",
+    "team": "GBP",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "alec-pierce-1285",
+    "playerID": 1285,
+    "playerName": "Alec Pierce",
+    "position": "WR",
+    "team": "IND",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "2028-late-1st-1884",
+    "playerID": 1884,
+    "playerName": "2028 Late 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "jordan-addison-1420",
+    "playerID": 1420,
+    "playerName": "Jordan Addison",
+    "position": "WR",
+    "team": "MIN",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "brock-purdy-1214",
+    "playerID": 1214,
+    "playerName": "Brock Purdy",
+    "position": "QB",
+    "team": "SFO",
+    "age": 26.6,
+    "rookie": false
+  },
+  {
+    "slug": "kenyon-sadiq-2005",
+    "playerID": 2005,
+    "playerName": "Kenyon Sadiq",
+    "position": "TE",
+    "team": "NYJ",
+    "age": 21.4,
+    "rookie": true
+  },
+  {
+    "slug": "d-andre-swift-639",
+    "playerID": 639,
+    "playerName": "D'Andre Swift",
+    "position": "RB",
+    "team": "CHI",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "2026-late-1st-1529",
+    "playerID": 1529,
+    "playerName": "2026 Late 1st",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "michael-wilson-1421",
+    "playerID": 1421,
+    "playerName": "Michael Wilson",
+    "position": "WR",
+    "team": "ARI",
+    "age": 26.5,
+    "rookie": false
+  },
+  {
+    "slug": "josh-downs-1440",
+    "playerID": 1440,
+    "playerName": "Josh Downs",
+    "position": "WR",
+    "team": "IND",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "fernando-mendoza-1924",
+    "playerID": 1924,
+    "playerName": "Fernando Mendoza",
+    "position": "QB",
+    "team": "LVR",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "dj-moore-304",
+    "playerID": 304,
+    "playerName": "D.J. Moore",
+    "position": "WR",
+    "team": "BUF",
+    "age": 29.3,
+    "rookie": false
+  },
+  {
+    "slug": "2027-early-2nd-1705",
+    "playerID": 1705,
+    "playerName": "2027 Early 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "jordan-love-596",
+    "playerID": 596,
+    "playerName": "Jordan Love",
+    "position": "QB",
+    "team": "GBP",
+    "age": 27.8,
+    "rookie": false
+  },
+  {
+    "slug": "matthew-golden-1775",
+    "playerID": 1775,
+    "playerName": "Matthew Golden",
+    "position": "WR",
+    "team": "GBP",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "terry-mclaurin-328",
+    "playerID": 328,
+    "playerName": "Terry McLaurin",
+    "position": "WR",
+    "team": "WAS",
+    "age": 30.9,
+    "rookie": false
+  },
+  {
+    "slug": "denzel-boston-1962",
+    "playerID": 1962,
+    "playerName": "Denzel Boston",
+    "position": "WR",
+    "team": "CLE",
+    "age": 22.7,
+    "rookie": true
+  },
+  {
+    "slug": "jonathon-brooks-1568",
+    "playerID": 1568,
+    "playerName": "Jonathon Brooks",
+    "position": "RB",
+    "team": "CAR",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "cam-ward-1730",
+    "playerID": 1730,
+    "playerName": "Cam Ward",
+    "position": "QB",
+    "team": "TEN",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "omar-cooper-jr-1964",
+    "playerID": 1964,
+    "playerName": "Omar Cooper Jr.",
+    "position": "WR",
+    "team": "NYJ",
+    "age": 22.6,
+    "rookie": true
+  },
+  {
+    "slug": "dak-prescott-371",
+    "playerID": 371,
+    "playerName": "Dak Prescott",
+    "position": "QB",
+    "team": "DAL",
+    "age": 33.0,
+    "rookie": false
+  },
+  {
+    "slug": "kyle-monangai-1766",
+    "playerID": 1766,
+    "playerName": "Kyle Monangai",
+    "position": "RB",
+    "team": "CHI",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "quentin-johnston-1441",
+    "playerID": 1441,
+    "playerName": "Quentin Johnston",
+    "position": "WR",
+    "team": "LAC",
+    "age": 24.9,
+    "rookie": false
+  },
+  {
+    "slug": "dk-metcalf-224",
+    "playerID": 224,
+    "playerName": "DK Metcalf",
+    "position": "WR",
+    "team": "PIT",
+    "age": 28.6,
+    "rookie": false
+  },
+  {
+    "slug": "davante-adams-277",
+    "playerID": 277,
+    "playerName": "Davante Adams",
+    "position": "WR",
+    "team": "LAR",
+    "age": 33.6,
+    "rookie": false
+  },
+  {
+    "slug": "jayden-higgins-1783",
+    "playerID": 1783,
+    "playerName": "Jayden Higgins",
+    "position": "WR",
+    "team": "HOU",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "blake-corum-1564",
+    "playerID": 1564,
+    "playerName": "Blake Corum",
+    "position": "RB",
+    "team": "LAR",
+    "age": 25.7,
+    "rookie": false
+  },
+  {
+    "slug": "david-montgomery-288",
+    "playerID": 288,
+    "playerName": "David Montgomery",
+    "position": "RB",
+    "team": "HOU",
+    "age": 29.2,
+    "rookie": false
+  },
+  {
+    "slug": "jayden-reed-1419",
+    "playerID": 1419,
+    "playerName": "Jayden Reed",
+    "position": "WR",
+    "team": "GBP",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "wan-dale-robinson-1274",
+    "playerID": 1274,
+    "playerName": "Wan'Dale Robinson",
+    "position": "WR",
+    "team": "TEN",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "zach-charbonnet-1384",
+    "playerID": 1384,
+    "playerName": "Zach Charbonnet",
+    "position": "RB",
+    "team": "SEA",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "isaiah-likely-1257",
+    "playerID": 1257,
+    "playerName": "Isaiah Likely",
+    "position": "TE",
+    "team": "NYG",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "michael-pittman-536",
+    "playerID": 536,
+    "playerName": "Michael Pittman",
+    "position": "WR",
+    "team": "PIT",
+    "age": 28.8,
+    "rookie": false
+  },
+  {
+    "slug": "rj-harvey-1768",
+    "playerID": 1768,
+    "playerName": "RJ Harvey",
+    "position": "RB",
+    "team": "DEN",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "2027-mid-2nd-1706",
+    "playerID": 1706,
+    "playerName": "2027 Mid 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "travis-hunter-1774",
+    "playerID": 1774,
+    "playerName": "Travis Hunter",
+    "position": "WR",
+    "team": "JAC",
+    "age": 23.2,
+    "rookie": false
+  },
+  {
+    "slug": "oronde-gadsden-1799",
+    "playerID": 1799,
+    "playerName": "Oronde Gadsden",
+    "position": "TE",
+    "team": "LAC",
+    "age": 23.1,
+    "rookie": false
+  },
+  {
+    "slug": "george-kittle-298",
+    "playerID": 298,
+    "playerName": "George Kittle",
+    "position": "TE",
+    "team": "SFO",
+    "age": 32.8,
+    "rookie": false
+  },
+  {
+    "slug": "eli-stowers-2006",
+    "playerID": 2006,
+    "playerName": "Eli Stowers",
+    "position": "TE",
+    "team": "PHI",
+    "age": 23.3,
+    "rookie": true
+  },
+  {
+    "slug": "jaylen-warren-1201",
+    "playerID": 1201,
+    "playerName": "Jaylen Warren",
+    "position": "RB",
+    "team": "PIT",
+    "age": 27.8,
+    "rookie": false
+  },
+  {
+    "slug": "mike-evans-275",
+    "playerID": 275,
+    "playerName": "Mike Evans",
+    "position": "WR",
+    "team": "SFO",
+    "age": 33.0,
+    "rookie": false
+  },
+  {
+    "slug": "2026-early-2nd-1530",
+    "playerID": 1530,
+    "playerName": "2026 Early 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-shough-1739",
+    "playerID": 1739,
+    "playerName": "Tyler Shough",
+    "position": "QB",
+    "team": "NOS",
+    "age": 26.9,
+    "rookie": false
+  },
+  {
+    "slug": "xavier-worthy-1591",
+    "playerID": 1591,
+    "playerName": "Xavier Worthy",
+    "position": "WR",
+    "team": "KCC",
+    "age": 23.3,
+    "rookie": false
+  },
+  {
+    "slug": "cj-stroud-1403",
+    "playerID": 1403,
+    "playerName": "C.J. Stroud",
+    "position": "QB",
+    "team": "HOU",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "baker-mayfield-215",
+    "playerID": 215,
+    "playerName": "Baker Mayfield",
+    "position": "QB",
+    "team": "TBB",
+    "age": 31.3,
+    "rookie": false
+  },
+  {
+    "slug": "de-zhaun-stribling-1976",
+    "playerID": 1976,
+    "playerName": "De'Zhaun Stribling",
+    "position": "WR",
+    "team": "SFO",
+    "age": 23.6,
+    "rookie": true
+  },
+  {
+    "slug": "jared-goff-388",
+    "playerID": 388,
+    "playerName": "Jared Goff",
+    "position": "QB",
+    "team": "DET",
+    "age": 31.8,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-coker-1653",
+    "playerID": 1653,
+    "playerName": "Jalen Coker",
+    "position": "WR",
+    "team": "CAR",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "jonah-coleman-1939",
+    "playerID": 1939,
+    "playerName": "Jonah Coleman",
+    "position": "RB",
+    "team": "DEN",
+    "age": 23.0,
+    "rookie": true
+  },
+  {
+    "slug": "chuba-hubbard-1014",
+    "playerID": 1014,
+    "playerName": "Chuba Hubbard",
+    "position": "RB",
+    "team": "CAR",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "2027-late-2nd-1707",
+    "playerID": 1707,
+    "playerName": "2027 Late 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "2028-early-2nd-1885",
+    "playerID": 1885,
+    "playerName": "2028 Early 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "dalton-kincaid-1428",
+    "playerID": 1428,
+    "playerName": "Dalton Kincaid",
+    "position": "TE",
+    "team": "BUF",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "jk-dobbins-636",
+    "playerID": 636,
+    "playerName": "J.K. Dobbins",
+    "position": "RB",
+    "team": "DEN",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "rico-dowdle-555",
+    "playerID": 555,
+    "playerName": "Rico Dowdle",
+    "position": "RB",
+    "team": "PIT",
+    "age": 28.2,
+    "rookie": false
+  },
+  {
+    "slug": "courtland-sutton-226",
+    "playerID": 226,
+    "playerName": "Courtland Sutton",
+    "position": "WR",
+    "team": "DEN",
+    "age": 30.8,
+    "rookie": false
+  },
+  {
+    "slug": "jake-ferguson-1258",
+    "playerID": 1258,
+    "playerName": "Jake Ferguson",
+    "position": "TE",
+    "team": "DAL",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "rhamondre-stevenson-1036",
+    "playerID": 1036,
+    "playerName": "Rhamondre Stevenson",
+    "position": "RB",
+    "team": "NEP",
+    "age": 28.5,
+    "rookie": false
+  },
+  {
+    "slug": "jacory-croskey-merritt-1832",
+    "playerID": 1832,
+    "playerName": "Jacory Croskey-Merritt",
+    "position": "RB",
+    "team": "WAS",
+    "age": 25.3,
+    "rookie": false
+  },
+  {
+    "slug": "matthew-stafford-356",
+    "playerID": 356,
+    "playerName": "Matthew Stafford",
+    "position": "QB",
+    "team": "LAR",
+    "age": 38.5,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-mcmillan-1599",
+    "playerID": 1599,
+    "playerName": "Jalen McMillan",
+    "position": "WR",
+    "team": "TBB",
+    "age": 24.7,
+    "rookie": false
+  },
+  {
+    "slug": "kyler-murray-379",
+    "playerID": 379,
+    "playerName": "Kyler Murray",
+    "position": "QB",
+    "team": "MIN",
+    "age": 29.0,
+    "rookie": false
+  },
+  {
+    "slug": "sam-darnold-331",
+    "playerID": 331,
+    "playerName": "Sam Darnold",
+    "position": "QB",
+    "team": "SEA",
+    "age": 29.2,
+    "rookie": false
+  },
+  {
+    "slug": "brenton-strange-1461",
+    "playerID": 1461,
+    "playerName": "Brenton Strange",
+    "position": "TE",
+    "team": "JAC",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "romeo-doubs-1238",
+    "playerID": 1238,
+    "playerName": "Romeo Doubs",
+    "position": "WR",
+    "team": "NEP",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "2026-mid-2nd-1531",
+    "playerID": 1531,
+    "playerName": "2026 Mid 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "chris-bell-1968",
+    "playerID": 1968,
+    "playerName": "Chris Bell",
+    "position": "WR",
+    "team": "MIA",
+    "age": 22.2,
+    "rookie": true
+  },
+  {
+    "slug": "jakobi-meyers-13",
+    "playerID": 13,
+    "playerName": "Jakobi Meyers",
+    "position": "WR",
+    "team": "JAC",
+    "age": 29.8,
+    "rookie": false
+  },
+  {
+    "slug": "antonio-williams-1974",
+    "playerID": 1974,
+    "playerName": "Antonio Williams",
+    "position": "WR",
+    "team": "WAS",
+    "age": 22.1,
+    "rookie": true
+  },
+  {
+    "slug": "nicholas-singleton-1938",
+    "playerID": 1938,
+    "playerName": "Nicholas Singleton",
+    "position": "RB",
+    "team": "TEN",
+    "age": 22.6,
+    "rookie": true
+  },
+  {
+    "slug": "chris-godwin-299",
+    "playerID": 299,
+    "playerName": "Chris Godwin",
+    "position": "WR",
+    "team": "TBB",
+    "age": 30.4,
+    "rookie": false
+  },
+  {
+    "slug": "kenneth-gainwell-1032",
+    "playerID": 1032,
+    "playerName": "Kenneth Gainwell",
+    "position": "RB",
+    "team": "TBB",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "malik-willis-1210",
+    "playerID": 1210,
+    "playerName": "Malik Willis",
+    "position": "QB",
+    "team": "MIA",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "2028-mid-2nd-1886",
+    "playerID": 1886,
+    "playerName": "2028 Mid 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "rachaad-white-1180",
+    "playerID": 1180,
+    "playerName": "Rachaad White",
+    "position": "RB",
+    "team": "WAS",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "khalil-shakir-1278",
+    "playerID": 1278,
+    "playerName": "Khalil Shakir",
+    "position": "WR",
+    "team": "BUF",
+    "age": 26.5,
+    "rookie": false
+  },
+  {
+    "slug": "2026-late-2nd-1532",
+    "playerID": 1532,
+    "playerName": "2026 Late 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "zachariah-branch-1969",
+    "playerID": 1969,
+    "playerName": "Zachariah Branch",
+    "position": "WR",
+    "team": "ATL",
+    "age": 22.4,
+    "rookie": true
+  },
+  {
+    "slug": "chigoziem-okonkwo-1320",
+    "playerID": 1320,
+    "playerName": "Chigoziem Okonkwo",
+    "position": "TE",
+    "team": "WAS",
+    "age": 26.9,
+    "rookie": false
+  },
+  {
+    "slug": "jordan-mason-1330",
+    "playerID": 1330,
+    "playerName": "Jordan Mason",
+    "position": "RB",
+    "team": "MIN",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "bryce-young-1456",
+    "playerID": 1456,
+    "playerName": "Bryce Young",
+    "position": "QB",
+    "team": "CAR",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "rashid-shaheed-1360",
+    "playerID": 1360,
+    "playerName": "Rashid Shaheed",
+    "position": "WR",
+    "team": "SEA",
+    "age": 27.9,
+    "rookie": false
+  },
+  {
+    "slug": "germie-bernard-1965",
+    "playerID": 1965,
+    "playerName": "Germie Bernard",
+    "position": "WR",
+    "team": "PIT",
+    "age": 22.7,
+    "rookie": true
+  },
+  {
+    "slug": "tony-pollard-344",
+    "playerID": 344,
+    "playerName": "Tony Pollard",
+    "position": "RB",
+    "team": "TEN",
+    "age": 29.3,
+    "rookie": false
+  },
+  {
+    "slug": "stefon-diggs-262",
+    "playerID": 262,
+    "playerName": "Stefon Diggs",
+    "position": "WR",
+    "team": "WAS",
+    "age": 32.7,
+    "rookie": false
+  },
+  {
+    "slug": "daniel-jones-87",
+    "playerID": 87,
+    "playerName": "Daniel Jones",
+    "position": "QB",
+    "team": "IND",
+    "age": 29.2,
+    "rookie": false
+  },
+  {
+    "slug": "woody-marks-1753",
+    "playerID": 1753,
+    "playerName": "Woody Marks",
+    "position": "RB",
+    "team": "HOU",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "terrance-ferguson-1807",
+    "playerID": 1807,
+    "playerName": "Terrance Ferguson",
+    "position": "TE",
+    "team": "LAR",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "2028-late-2nd-1887",
+    "playerID": 1887,
+    "playerName": "2028 Late 2nd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "tre-harris-1772",
+    "playerID": 1772,
+    "playerName": "Tre Harris",
+    "position": "WR",
+    "team": "LAC",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "isaac-teslaa-1813",
+    "playerID": 1813,
+    "playerName": "Isaac TeSlaa",
+    "position": "WR",
+    "team": "DET",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-allgeier-1228",
+    "playerID": 1228,
+    "playerName": "Tyler Allgeier",
+    "position": "RB",
+    "team": "ARI",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "aj-barner-1629",
+    "playerID": 1629,
+    "playerName": "AJ Barner",
+    "position": "TE",
+    "team": "SEA",
+    "age": 24.3,
+    "rookie": false
+  },
+  {
+    "slug": "mark-andrews-366",
+    "playerID": 366,
+    "playerName": "Mark Andrews",
+    "position": "TE",
+    "team": "BAL",
+    "age": 30.9,
+    "rookie": false
+  },
+  {
+    "slug": "tank-bigsby-1401",
+    "playerID": 1401,
+    "playerName": "Tank Bigsby",
+    "position": "RB",
+    "team": "PHI",
+    "age": 24.9,
+    "rookie": false
+  },
+  {
+    "slug": "kayshon-boutte-1446",
+    "playerID": 1446,
+    "playerName": "Kayshon Boutte",
+    "position": "WR",
+    "team": "NEP",
+    "age": 24.3,
+    "rookie": false
+  },
+  {
+    "slug": "chris-rodriguez-1389",
+    "playerID": 1389,
+    "playerName": "Chris Rodriguez",
+    "position": "RB",
+    "team": "JAC",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "dylan-sampson-1747",
+    "playerID": 1747,
+    "playerName": "Dylan Sampson",
+    "position": "RB",
+    "team": "CLE",
+    "age": 21.9,
+    "rookie": false
+  },
+  {
+    "slug": "malachi-fields-1973",
+    "playerID": 1973,
+    "playerName": "Malachi Fields",
+    "position": "WR",
+    "team": "NYG",
+    "age": 23.0,
+    "rookie": true
+  },
+  {
+    "slug": "keaton-mitchell-1393",
+    "playerID": 1393,
+    "playerName": "Keaton Mitchell",
+    "position": "RB",
+    "team": "LAC",
+    "age": 24.6,
+    "rookie": false
+  },
+  {
+    "slug": "adonai-mitchell-1597",
+    "playerID": 1597,
+    "playerName": "Adonai Mitchell",
+    "position": "WR",
+    "team": "NYJ",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "ja-kobi-lane-1979",
+    "playerID": 1979,
+    "playerName": "Ja'Kobi Lane",
+    "position": "WR",
+    "team": "BAL",
+    "age": 22.0,
+    "rookie": true
+  },
+  {
+    "slug": "elijah-sarratt-1967",
+    "playerID": 1967,
+    "playerName": "Elijah Sarratt",
+    "position": "WR",
+    "team": "BAL",
+    "age": 23.2,
+    "rookie": true
+  },
+  {
+    "slug": "malik-washington-1623",
+    "playerID": 1623,
+    "playerName": "Malik Washington",
+    "position": "WR",
+    "team": "MIA",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "dallas-goedert-382",
+    "playerID": 382,
+    "playerName": "Dallas Goedert",
+    "position": "TE",
+    "team": "PHI",
+    "age": 31.6,
+    "rookie": false
+  },
+  {
+    "slug": "ricky-pearsall-1593",
+    "playerID": 1593,
+    "playerName": "Ricky Pearsall",
+    "position": "WR",
+    "team": "SFO",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "tank-dell-1438",
+    "playerID": 1438,
+    "playerName": "Tank Dell",
+    "position": "WR",
+    "team": "HOU",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "ty-simpson-1925",
+    "playerID": 1925,
+    "playerName": "Ty Simpson",
+    "position": "QB",
+    "team": "LAR",
+    "age": 23.6,
+    "rookie": true
+  },
+  {
+    "slug": "ted-hurst-1982",
+    "playerID": 1982,
+    "playerName": "Ted Hurst",
+    "position": "WR",
+    "team": "TBB",
+    "age": 22.1,
+    "rookie": true
+  },
+  {
+    "slug": "jaylin-noel-1780",
+    "playerID": 1780,
+    "playerName": "Jaylin Noel",
+    "position": "WR",
+    "team": "HOU",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "tory-horton-1798",
+    "playerID": 1798,
+    "playerName": "Tory Horton",
+    "position": "WR",
+    "team": "SEA",
+    "age": 23.7,
+    "rookie": false
+  },
+  {
+    "slug": "tyrone-tracy-1632",
+    "playerID": 1632,
+    "playerName": "Tyrone Tracy",
+    "position": "RB",
+    "team": "NYG",
+    "age": 26.7,
+    "rookie": false
+  },
+  {
+    "slug": "braelon-allen-1567",
+    "playerID": 1567,
+    "playerName": "Braelon Allen",
+    "position": "RB",
+    "team": "NYJ",
+    "age": 22.6,
+    "rookie": false
+  },
+  {
+    "slug": "tyjae-spears-1417",
+    "playerID": 1417,
+    "playerName": "Tyjae Spears",
+    "position": "RB",
+    "team": "TEN",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "gunnar-helm-1805",
+    "playerID": 1805,
+    "playerName": "Gunnar Helm",
+    "position": "TE",
+    "team": "TEN",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "2027-early-3rd-1708",
+    "playerID": 1708,
+    "playerName": "2027 Early 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "pat-bryant-1782",
+    "playerID": 1782,
+    "playerName": "Pat Bryant",
+    "position": "WR",
+    "team": "DEN",
+    "age": 23.7,
+    "rookie": false
+  },
+  {
+    "slug": "travis-kelce-264",
+    "playerID": 264,
+    "playerName": "Travis Kelce",
+    "position": "TE",
+    "team": "KCC",
+    "age": 36.8,
+    "rookie": false
+  },
+  {
+    "slug": "tj-hockenson-247",
+    "playerID": 247,
+    "playerName": "T.J. Hockenson",
+    "position": "TE",
+    "team": "MIN",
+    "age": 29.1,
+    "rookie": false
+  },
+  {
+    "slug": "kaytron-allen-1940",
+    "playerID": 1940,
+    "playerName": "Kaytron Allen",
+    "position": "RB",
+    "team": "WAS",
+    "age": 23.6,
+    "rookie": true
+  },
+  {
+    "slug": "elic-ayomanor-1773",
+    "playerID": 1773,
+    "playerName": "Elic Ayomanor",
+    "position": "WR",
+    "team": "TEN",
+    "age": 23.2,
+    "rookie": false
+  },
+  {
+    "slug": "tre-tucker-1460",
+    "playerID": 1460,
+    "playerName": "Tre Tucker",
+    "position": "WR",
+    "team": "LVR",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "dontayvion-wicks-1448",
+    "playerID": 1448,
+    "playerName": "Dontayvion Wicks",
+    "position": "WR",
+    "team": "PHI",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "troy-franklin-1590",
+    "playerID": 1590,
+    "playerName": "Troy Franklin",
+    "position": "WR",
+    "team": "DEN",
+    "age": 23.5,
+    "rookie": false
+  },
+  {
+    "slug": "emmett-johnson-1936",
+    "playerID": 1936,
+    "playerName": "Emmett Johnson",
+    "position": "RB",
+    "team": "KCC",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "jalen-nailor-1245",
+    "playerID": 1245,
+    "playerName": "Jalen Nailor",
+    "position": "WR",
+    "team": "LVR",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "jerry-jeudy-545",
+    "playerID": 545,
+    "playerName": "Jerry Jeudy",
+    "position": "WR",
+    "team": "CLE",
+    "age": 27.3,
+    "rookie": false
+  },
+  {
+    "slug": "mike-washington-jr-1944",
+    "playerID": 1944,
+    "playerName": "Mike Washington Jr.",
+    "position": "RB",
+    "team": "LVR",
+    "age": 23.1,
+    "rookie": true
+  },
+  {
+    "slug": "chris-brazzell-ii-1971",
+    "playerID": 1971,
+    "playerName": "Chris Brazzell II",
+    "position": "WR",
+    "team": "CAR",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "2027-mid-3rd-1709",
+    "playerID": 1709,
+    "playerName": "2027 Mid 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "elijah-arroyo-1808",
+    "playerID": 1808,
+    "playerName": "Elijah Arroyo",
+    "position": "TE",
+    "team": "SEA",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "2026-early-3rd-1533",
+    "playerID": 1533,
+    "playerName": "2026 Early 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "skyler-bell-1970",
+    "playerID": 1970,
+    "playerName": "Skyler Bell",
+    "position": "WR",
+    "team": "BUF",
+    "age": 24.1,
+    "rookie": true
+  },
+  {
+    "slug": "deebo-samuel-383",
+    "playerID": 383,
+    "playerName": "Deebo Samuel",
+    "position": "WR",
+    "team": "SFO",
+    "age": 30.6,
+    "rookie": false
+  },
+  {
+    "slug": "brian-robinson-1232",
+    "playerID": 1232,
+    "playerName": "Brian Robinson",
+    "position": "RB",
+    "team": "ATL",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "keon-coleman-1588",
+    "playerID": 1588,
+    "playerName": "Keon Coleman",
+    "position": "WR",
+    "team": "BUF",
+    "age": 23.2,
+    "rookie": false
+  },
+  {
+    "slug": "jauan-jennings-576",
+    "playerID": 576,
+    "playerName": "Jauan Jennings",
+    "position": "WR",
+    "team": "MIN",
+    "age": 29.1,
+    "rookie": false
+  },
+  {
+    "slug": "michael-penix-jr-1554",
+    "playerID": 1554,
+    "playerName": "Michael Penix Jr.",
+    "position": "QB",
+    "team": "ATL",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "ollie-gordon-1759",
+    "playerID": 1759,
+    "playerName": "Ollie Gordon",
+    "position": "RB",
+    "team": "MIA",
+    "age": 22.6,
+    "rookie": false
+  },
+  {
+    "slug": "jack-bech-1778",
+    "playerID": 1778,
+    "playerName": "Jack Bech",
+    "position": "WR",
+    "team": "LVR",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "isiah-pacheco-1266",
+    "playerID": 1266,
+    "playerName": "Isiah Pacheco",
+    "position": "RB",
+    "team": "DET",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "jaydon-blue-1769",
+    "playerID": 1769,
+    "playerName": "Jaydon Blue",
+    "position": "RB",
+    "team": "DAL",
+    "age": 22.6,
+    "rookie": false
+  },
+  {
+    "slug": "jaylen-wright-1581",
+    "playerID": 1581,
+    "playerName": "Jaylen Wright",
+    "position": "RB",
+    "team": "MIA",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "juwan-johnson-575",
+    "playerID": 575,
+    "playerName": "Juwan Johnson",
+    "position": "TE",
+    "team": "NOS",
+    "age": 29.9,
+    "rookie": false
+  },
+  {
+    "slug": "aaron-jones-301",
+    "playerID": 301,
+    "playerName": "Aaron Jones",
+    "position": "RB",
+    "team": "MIN",
+    "age": 31.7,
+    "rookie": false
+  },
+  {
+    "slug": "marshawn-lloyd-1575",
+    "playerID": 1575,
+    "playerName": "MarShawn Lloyd",
+    "position": "RB",
+    "team": "GBP",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "kimani-vidal-1636",
+    "playerID": 1636,
+    "playerName": "Kimani Vidal",
+    "position": "RB",
+    "team": "LAC",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "hunter-henry-212",
+    "playerID": 212,
+    "playerName": "Hunter Henry",
+    "position": "TE",
+    "team": "NEP",
+    "age": 31.7,
+    "rookie": false
+  },
+  {
+    "slug": "chimere-dike-1814",
+    "playerID": 1814,
+    "playerName": "Chimere Dike",
+    "position": "WR",
+    "team": "TEN",
+    "age": 24.6,
+    "rookie": false
+  },
+  {
+    "slug": "mason-taylor-1806",
+    "playerID": 1806,
+    "playerName": "Mason Taylor",
+    "position": "TE",
+    "team": "NYJ",
+    "age": 22.2,
+    "rookie": false
+  },
+  {
+    "slug": "cade-otton-1261",
+    "playerID": 1261,
+    "playerName": "Cade Otton",
+    "position": "TE",
+    "team": "TBB",
+    "age": 27.3,
+    "rookie": false
+  },
+  {
+    "slug": "max-klare-2009",
+    "playerID": 2009,
+    "playerName": "Max Klare",
+    "position": "TE",
+    "team": "LAR",
+    "age": 23.1,
+    "rookie": true
+  },
+  {
+    "slug": "jordan-james-1755",
+    "playerID": 1755,
+    "playerName": "Jordan James",
+    "position": "RB",
+    "team": "SFO",
+    "age": 22.4,
+    "rookie": false
+  },
+  {
+    "slug": "kaleb-johnson-1748",
+    "playerID": 1748,
+    "playerName": "Kaleb Johnson",
+    "position": "RB",
+    "team": "PIT",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "2027-late-3rd-1710",
+    "playerID": 1710,
+    "playerName": "2027 Late 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "greg-dulcich-1256",
+    "playerID": 1256,
+    "playerName": "Greg Dulcich",
+    "position": "TE",
+    "team": "MIA",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "sean-tucker-1400",
+    "playerID": 1400,
+    "playerName": "Sean Tucker",
+    "position": "RB",
+    "team": "TBB",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "2028-early-3rd-1888",
+    "playerID": 1888,
+    "playerName": "2028 Early 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "demond-claiborne-1943",
+    "playerID": 1943,
+    "playerName": "Demond Claiborne",
+    "position": "RB",
+    "team": "MIN",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "2026-mid-3rd-1534",
+    "playerID": 1534,
+    "playerName": "2026 Mid 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "david-njoku-252",
+    "playerID": 252,
+    "playerName": "David Njoku",
+    "position": "TE",
+    "team": "LAC",
+    "age": 30.1,
+    "rookie": false
+  },
+  {
+    "slug": "alvin-kamara-282",
+    "playerID": 282,
+    "playerName": "Alvin Kamara",
+    "position": "RB",
+    "team": "NOS",
+    "age": 31.0,
+    "rookie": false
+  },
+  {
+    "slug": "theo-johnson-1620",
+    "playerID": 1620,
+    "playerName": "Theo Johnson",
+    "position": "TE",
+    "team": "NYG",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "dalton-schultz-487",
+    "playerID": 487,
+    "playerName": "Dalton Schultz",
+    "position": "TE",
+    "team": "HOU",
+    "age": 30.1,
+    "rookie": false
+  },
+  {
+    "slug": "kaelon-black-1947",
+    "playerID": 1947,
+    "playerName": "Kaelon Black",
+    "position": "RB",
+    "team": "SFO",
+    "age": 24.8,
+    "rookie": true
+  },
+  {
+    "slug": "trey-benson-1565",
+    "playerID": 1565,
+    "playerName": "Trey Benson",
+    "position": "RB",
+    "team": "ARI",
+    "age": 24.0,
+    "rookie": false
+  },
+  {
+    "slug": "kyle-williams-1812",
+    "playerID": 1812,
+    "playerName": "Kyle Williams",
+    "position": "WR",
+    "team": "NEP",
+    "age": 23.7,
+    "rookie": false
+  },
+  {
+    "slug": "tez-johnson-1779",
+    "playerID": 1779,
+    "playerName": "Tez Johnson",
+    "position": "WR",
+    "team": "TBB",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "marvin-mims-1442",
+    "playerID": 1442,
+    "playerName": "Marvin Mims",
+    "position": "WR",
+    "team": "DEN",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "caleb-douglas-2016",
+    "playerID": 2016,
+    "playerName": "Caleb Douglas",
+    "position": "WR",
+    "team": "MIA",
+    "age": 22.9,
+    "rookie": true
+  },
+  {
+    "slug": "kevin-coleman-1990",
+    "playerID": 1990,
+    "playerName": "Kevin Coleman",
+    "position": "WR",
+    "team": "MIA",
+    "age": 22.9,
+    "rookie": true
+  },
+  {
+    "slug": "pat-freiermuth-1053",
+    "playerID": 1053,
+    "playerName": "Pat Freiermuth",
+    "position": "TE",
+    "team": "PIT",
+    "age": 27.8,
+    "rookie": false
+  },
+  {
+    "slug": "lequint-allen-1761",
+    "playerID": 1761,
+    "playerName": "LeQuint Allen",
+    "position": "RB",
+    "team": "JAC",
+    "age": 22.0,
+    "rookie": false
+  },
+  {
+    "slug": "michael-mayer-1427",
+    "playerID": 1427,
+    "playerName": "Michael Mayer",
+    "position": "TE",
+    "team": "LVR",
+    "age": 25.1,
+    "rookie": false
+  },
+  {
+    "slug": "eli-raridon-2018",
+    "playerID": 2018,
+    "playerName": "Eli Raridon",
+    "position": "TE",
+    "team": "NEP",
+    "age": 22.5,
+    "rookie": true
+  },
+  {
+    "slug": "rashod-bateman-1070",
+    "playerID": 1070,
+    "playerName": "Rashod Bateman",
+    "position": "WR",
+    "team": "BAL",
+    "age": 26.7,
+    "rookie": false
+  },
+  {
+    "slug": "2026-late-3rd-1535",
+    "playerID": 1535,
+    "playerName": "2026 Late 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "ray-davis-1574",
+    "playerID": 1574,
+    "playerName": "Ray Davis",
+    "position": "RB",
+    "team": "BUF",
+    "age": 26.7,
+    "rookie": false
+  },
+  {
+    "slug": "jj-mccarthy-1555",
+    "playerID": 1555,
+    "playerName": "J.J. McCarthy",
+    "position": "QB",
+    "team": "MIN",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "2028-mid-3rd-1889",
+    "playerID": 1889,
+    "playerName": "2028 Mid 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "cyrus-allen-1980",
+    "playerID": 1980,
+    "playerName": "Cyrus Allen",
+    "position": "WR",
+    "team": "KCC",
+    "age": 23.5,
+    "rookie": true
+  },
+  {
+    "slug": "ryan-flournoy-1642",
+    "playerID": 1642,
+    "playerName": "Ryan Flournoy",
+    "position": "WR",
+    "team": "DAL",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "isaiah-bond-1776",
+    "playerID": 1776,
+    "playerName": "Isaiah Bond",
+    "position": "WR",
+    "team": "CLE",
+    "age": 22.4,
+    "rookie": false
+  },
+  {
+    "slug": "dj-giddens-1760",
+    "playerID": 1760,
+    "playerName": "DJ Giddens",
+    "position": "RB",
+    "team": "IND",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "ja-tavion-sanders-1614",
+    "playerID": 1614,
+    "playerName": "Ja'Tavion Sanders",
+    "position": "TE",
+    "team": "CAR",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "oscar-delp-2013",
+    "playerID": 2013,
+    "playerName": "Oscar Delp",
+    "position": "TE",
+    "team": "NOS",
+    "age": 23.0,
+    "rookie": true
+  },
+  {
+    "slug": "shedeur-sanders-1731",
+    "playerID": 1731,
+    "playerName": "Shedeur Sanders",
+    "position": "QB",
+    "team": "CLE",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "colby-parkinson-565",
+    "playerID": 565,
+    "playerName": "Colby Parkinson",
+    "position": "TE",
+    "team": "LAR",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "darnell-mooney-911",
+    "playerID": 911,
+    "playerName": "Darnell Mooney",
+    "position": "WR",
+    "team": "NYG",
+    "age": 28.8,
+    "rookie": false
+  },
+  {
+    "slug": "jake-tonges-1356",
+    "playerID": 1356,
+    "playerName": "Jake Tonges",
+    "position": "TE",
+    "team": "SFO",
+    "age": 27.1,
+    "rookie": false
+  },
+  {
+    "slug": "xavier-legette-1610",
+    "playerID": 1610,
+    "playerName": "Xavier Legette",
+    "position": "WR",
+    "team": "CAR",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "dont-e-thornton-1787",
+    "playerID": 1787,
+    "playerName": "Dont'e Thornton",
+    "position": "WR",
+    "team": "LVR",
+    "age": 23.7,
+    "rookie": false
+  },
+  {
+    "slug": "devin-neal-1746",
+    "playerID": 1746,
+    "playerName": "Devin Neal",
+    "position": "RB",
+    "team": "NOS",
+    "age": 23.0,
+    "rookie": false
+  },
+  {
+    "slug": "demario-douglas-1468",
+    "playerID": 1468,
+    "playerName": "Demario Douglas",
+    "position": "WR",
+    "team": "NEP",
+    "age": 25.7,
+    "rookie": false
+  },
+  {
+    "slug": "cole-kmet-569",
+    "playerID": 569,
+    "playerName": "Cole Kmet",
+    "position": "TE",
+    "team": "CHI",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "2028-late-3rd-1890",
+    "playerID": 1890,
+    "playerName": "2028 Late 3rd",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "jaylin-lane-1816",
+    "playerID": 1816,
+    "playerName": "Jaylin Lane",
+    "position": "WR",
+    "team": "WAS",
+    "age": 24.3,
+    "rookie": false
+  },
+  {
+    "slug": "trevor-etienne-1756",
+    "playerID": 1756,
+    "playerName": "Trevor Etienne",
+    "position": "RB",
+    "team": "CAR",
+    "age": 22.1,
+    "rookie": false
+  },
+  {
+    "slug": "tua-tagovailoa-600",
+    "playerID": 600,
+    "playerName": "Tua Tagovailoa",
+    "position": "QB",
+    "team": "ATL",
+    "age": 28.4,
+    "rookie": false
+  },
+  {
+    "slug": "emanuel-wilson-1515",
+    "playerID": 1515,
+    "playerName": "Emanuel Wilson",
+    "position": "RB",
+    "team": "SEA",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-royals-1786",
+    "playerID": 1786,
+    "playerName": "Jalen Royals",
+    "position": "WR",
+    "team": "KCC",
+    "age": 23.5,
+    "rookie": false
+  },
+  {
+    "slug": "darnell-washington-1431",
+    "playerID": 1431,
+    "playerName": "Darnell Washington",
+    "position": "TE",
+    "team": "PIT",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "isaiah-davis-1635",
+    "playerID": 1635,
+    "playerName": "Isaiah Davis",
+    "position": "RB",
+    "team": "NYJ",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "mac-jones-1018",
+    "playerID": 1018,
+    "playerName": "Mac Jones",
+    "position": "QB",
+    "team": "SFO",
+    "age": 27.9,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-milroe-1733",
+    "playerID": 1733,
+    "playerName": "Jalen Milroe",
+    "position": "QB",
+    "team": "SEA",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "christian-kirk-221",
+    "playerID": 221,
+    "playerName": "Christian Kirk",
+    "position": "WR",
+    "team": "SFO",
+    "age": 29.7,
+    "rookie": false
+  },
+  {
+    "slug": "jalen-tolbert-1247",
+    "playerID": 1247,
+    "playerName": "Jalen Tolbert",
+    "position": "WR",
+    "team": "MIA",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "2027-early-4th-1711",
+    "playerID": 1711,
+    "playerName": "2027 Early 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "roman-wilson-1600",
+    "playerID": 1600,
+    "playerName": "Roman Wilson",
+    "position": "WR",
+    "team": "PIT",
+    "age": 25.1,
+    "rookie": false
+  },
+  {
+    "slug": "calvin-ridley-293",
+    "playerID": 293,
+    "playerName": "Calvin Ridley",
+    "position": "WR",
+    "team": "TEN",
+    "age": 31.6,
+    "rookie": false
+  },
+  {
+    "slug": "brashard-smith-1749",
+    "playerID": 1749,
+    "playerName": "Brashard Smith",
+    "position": "RB",
+    "team": "KCC",
+    "age": 23.3,
+    "rookie": false
+  },
+  {
+    "slug": "tyquan-thornton-1246",
+    "playerID": 1246,
+    "playerName": "Tyquan Thornton",
+    "position": "WR",
+    "team": "KCC",
+    "age": 26.0,
+    "rookie": false
+  },
+  {
+    "slug": "bryce-lance-1981",
+    "playerID": 1981,
+    "playerName": "Bryce Lance",
+    "position": "WR",
+    "team": "NOS",
+    "age": 24.0,
+    "rookie": true
+  },
+  {
+    "slug": "evan-engram-229",
+    "playerID": 229,
+    "playerName": "Evan Engram",
+    "position": "TE",
+    "team": "DEN",
+    "age": 31.9,
+    "rookie": false
+  },
+  {
+    "slug": "tahj-brooks-1758",
+    "playerID": 1758,
+    "playerName": "Tahj Brooks",
+    "position": "RB",
+    "team": "CIN",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "ben-sinnott-1615",
+    "playerID": 1615,
+    "playerName": "Ben Sinnott",
+    "position": "TE",
+    "team": "WAS",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "james-conner-268",
+    "playerID": 268,
+    "playerName": "James Conner",
+    "position": "RB",
+    "team": "ARI",
+    "age": 31.3,
+    "rookie": false
+  },
+  {
+    "slug": "cedric-tillman-1444",
+    "playerID": 1444,
+    "playerName": "Cedric Tillman",
+    "position": "WR",
+    "team": "CLE",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "anthony-richardson-1405",
+    "playerID": 1405,
+    "playerName": "Anthony Richardson",
+    "position": "QB",
+    "team": "IND",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "justin-joly-2010",
+    "playerID": 2010,
+    "playerName": "Justin Joly",
+    "position": "TE",
+    "team": "DEN",
+    "age": 22.1,
+    "rookie": true
+  },
+  {
+    "slug": "zavion-thomas-1983",
+    "playerID": 1983,
+    "playerName": "Zavion Thomas",
+    "position": "WR",
+    "team": "CHI",
+    "age": 22.5,
+    "rookie": true
+  },
+  {
+    "slug": "savion-williams-1796",
+    "playerID": 1796,
+    "playerName": "Savion Williams",
+    "position": "WR",
+    "team": "GBP",
+    "age": 24.7,
+    "rookie": false
+  },
+  {
+    "slug": "kendre-miller-1386",
+    "playerID": 1386,
+    "playerName": "Kendre Miller",
+    "position": "RB",
+    "team": "NOS",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "luke-musgrave-1430",
+    "playerID": 1430,
+    "playerName": "Luke Musgrave",
+    "position": "TE",
+    "team": "GBP",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "2027-mid-4th-1712",
+    "playerID": 1712,
+    "playerName": "2027 Mid 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "brenen-thompson-1991",
+    "playerID": 1991,
+    "playerName": "Brenen Thompson",
+    "position": "WR",
+    "team": "LAC",
+    "age": 23.0,
+    "rookie": true
+  },
+  {
+    "slug": "jacoby-brissett-20",
+    "playerID": 20,
+    "playerName": "Jacoby Brissett",
+    "position": "QB",
+    "team": "ARI",
+    "age": 33.7,
+    "rookie": false
+  },
+  {
+    "slug": "2026-early-4th-1536",
+    "playerID": 1536,
+    "playerName": "2026 Early 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "luke-mccaffrey-1606",
+    "playerID": 1606,
+    "playerName": "Luke McCaffrey",
+    "position": "WR",
+    "team": "WAS",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "xavier-hutchinson-1454",
+    "playerID": 1454,
+    "playerName": "Xavier Hutchinson",
+    "position": "WR",
+    "team": "HOU",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "andrei-iosivas-1422",
+    "playerID": 1422,
+    "playerName": "Andrei Iosivas",
+    "position": "WR",
+    "team": "CIN",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "jahan-dotson-1272",
+    "playerID": 1272,
+    "playerName": "Jahan Dotson",
+    "position": "WR",
+    "team": "ATL",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "treylon-burks-1269",
+    "playerID": 1269,
+    "playerName": "Treylon Burks",
+    "position": "WR",
+    "team": "WAS",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "jarquez-hunter-1764",
+    "playerID": 1764,
+    "playerName": "Jarquez Hunter",
+    "position": "RB",
+    "team": "LAR",
+    "age": 23.6,
+    "rookie": false
+  },
+  {
+    "slug": "justin-fields-1015",
+    "playerID": 1015,
+    "playerName": "Justin Fields",
+    "position": "QB",
+    "team": "KCC",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "eli-heidenreich-2036",
+    "playerID": 2036,
+    "playerName": "Eli Heidenreich",
+    "position": "RB",
+    "team": "PIT",
+    "age": 23.1,
+    "rookie": true
+  },
+  {
+    "slug": "cooper-kupp-310",
+    "playerID": 310,
+    "playerName": "Cooper Kupp",
+    "position": "WR",
+    "team": "SEA",
+    "age": 33.2,
+    "rookie": false
+  },
+  {
+    "slug": "jimmy-horn-1824",
+    "playerID": 1824,
+    "playerName": "Jimmy Horn",
+    "position": "WR",
+    "team": "CAR",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "george-holani-1579",
+    "playerID": 1579,
+    "playerName": "George Holani",
+    "position": "RB",
+    "team": "SEA",
+    "age": 26.6,
+    "rookie": false
+  },
+  {
+    "slug": "2028-early-4th-1891",
+    "playerID": 1891,
+    "playerName": "2028 Early 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "dawson-knox-88",
+    "playerID": 88,
+    "playerName": "Dawson Knox",
+    "position": "TE",
+    "team": "BUF",
+    "age": 29.7,
+    "rookie": false
+  },
+  {
+    "slug": "2027-late-4th-1713",
+    "playerID": 1713,
+    "playerName": "2027 Late 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "adam-randall-2026",
+    "playerID": 2026,
+    "playerName": "Adam Randall",
+    "position": "RB",
+    "team": "BAL",
+    "age": 22.1,
+    "rookie": true
+  },
+  {
+    "slug": "2026-mid-4th-1537",
+    "playerID": 1537,
+    "playerName": "2026 Mid 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "tutu-atwell-1078",
+    "playerID": 1078,
+    "playerName": "Tutu Atwell",
+    "position": "WR",
+    "team": "MIA",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "will-shipley-1572",
+    "playerID": 1572,
+    "playerName": "Will Shipley",
+    "position": "RB",
+    "team": "PHI",
+    "age": 24.0,
+    "rookie": false
+  },
+  {
+    "slug": "joshua-palmer-1065",
+    "playerID": 1065,
+    "playerName": "Joshua Palmer",
+    "position": "WR",
+    "team": "BUF",
+    "age": 26.9,
+    "rookie": false
+  },
+  {
+    "slug": "justice-hill-368",
+    "playerID": 368,
+    "playerName": "Justice Hill",
+    "position": "RB",
+    "team": "BAL",
+    "age": 28.7,
+    "rookie": false
+  },
+  {
+    "slug": "darius-slayton-77",
+    "playerID": 77,
+    "playerName": "Darius Slayton",
+    "position": "WR",
+    "team": "NYG",
+    "age": 29.6,
+    "rookie": false
+  },
+  {
+    "slug": "erick-all-1616",
+    "playerID": 1616,
+    "playerName": "Erick All",
+    "position": "TE",
+    "team": "CIN",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "mike-gesicki-330",
+    "playerID": 330,
+    "playerName": "Mike Gesicki",
+    "position": "TE",
+    "team": "CIN",
+    "age": 30.8,
+    "rookie": false
+  },
+  {
+    "slug": "2028-mid-4th-1892",
+    "playerID": 1892,
+    "playerName": "2028 Mid 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "barion-brown-2003",
+    "playerID": 2003,
+    "playerName": "Barion Brown",
+    "position": "WR",
+    "team": "NOS",
+    "age": 22.7,
+    "rookie": true
+  },
+  {
+    "slug": "noah-gray-1059",
+    "playerID": 1059,
+    "playerName": "Noah Gray",
+    "position": "TE",
+    "team": "KCC",
+    "age": 27.3,
+    "rookie": false
+  },
+  {
+    "slug": "devontez-walker-1592",
+    "playerID": 1592,
+    "playerName": "Devontez Walker",
+    "position": "WR",
+    "team": "BAL",
+    "age": 25.1,
+    "rookie": false
+  },
+  {
+    "slug": "2026-late-4th-1538",
+    "playerID": 1538,
+    "playerName": "2026 Late 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "seth-mcgowan-1937",
+    "playerID": 1937,
+    "playerName": "Seth McGowan",
+    "position": "RB",
+    "team": "IND",
+    "age": 24.8,
+    "rookie": true
+  },
+  {
+    "slug": "audric-estime-1566",
+    "playerID": 1566,
+    "playerName": "Audric Estime",
+    "position": "RB",
+    "team": "NOS",
+    "age": 22.9,
+    "rookie": false
+  },
+  {
+    "slug": "chris-brooks-1490",
+    "playerID": 1490,
+    "playerName": "Chris Brooks",
+    "position": "RB",
+    "team": "GBP",
+    "age": 26.6,
+    "rookie": false
+  },
+  {
+    "slug": "keandre-lambert-smith-1818",
+    "playerID": 1818,
+    "playerName": "KeAndre Lambert-Smith",
+    "position": "WR",
+    "team": "LAC",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "jordan-whittington-1604",
+    "playerID": 1604,
+    "playerName": "Jordan Whittington",
+    "position": "WR",
+    "team": "LAR",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "marquise-brown-311",
+    "playerID": 311,
+    "playerName": "Marquise Brown",
+    "position": "WR",
+    "team": "PHI",
+    "age": 29.2,
+    "rookie": false
+  },
+  {
+    "slug": "tyreek-hill-286",
+    "playerID": 286,
+    "playerName": "Tyreek Hill",
+    "position": "WR",
+    "team": "FA",
+    "age": 32.4,
+    "rookie": false
+  },
+  {
+    "slug": "malik-davis-1197",
+    "playerID": 1197,
+    "playerName": "Malik Davis",
+    "position": "RB",
+    "team": "DAL",
+    "age": 27.7,
+    "rookie": false
+  },
+  {
+    "slug": "brandon-aiyuk-538",
+    "playerID": 538,
+    "playerName": "Brandon Aiyuk",
+    "position": "WR",
+    "team": "SFO",
+    "age": 28.4,
+    "rookie": false
+  },
+  {
+    "slug": "devaughn-vele-1643",
+    "playerID": 1643,
+    "playerName": "Devaughn Vele",
+    "position": "WR",
+    "team": "NOS",
+    "age": 28.7,
+    "rookie": false
+  },
+  {
+    "slug": "damien-martinez-1754",
+    "playerID": 1754,
+    "playerName": "Damien Martinez",
+    "position": "RB",
+    "team": "GBP",
+    "age": 22.5,
+    "rookie": false
+  },
+  {
+    "slug": "jerome-ford-1229",
+    "playerID": 1229,
+    "playerName": "Jerome Ford",
+    "position": "RB",
+    "team": "WAS",
+    "age": 26.9,
+    "rookie": false
+  },
+  {
+    "slug": "john-metchie-1276",
+    "playerID": 1276,
+    "playerName": "John Metchie",
+    "position": "WR",
+    "team": "CAR",
+    "age": 26.1,
+    "rookie": false
+  },
+  {
+    "slug": "calvin-austin-iii-1262",
+    "playerID": 1262,
+    "playerName": "Calvin Austin III",
+    "position": "WR",
+    "team": "NYG",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "dyami-brown-1069",
+    "playerID": 1069,
+    "playerName": "Dyami Brown",
+    "position": "WR",
+    "team": "WAS",
+    "age": 26.8,
+    "rookie": false
+  },
+  {
+    "slug": "konata-mumpfield-1830",
+    "playerID": 1830,
+    "playerName": "Konata Mumpfield",
+    "position": "WR",
+    "team": "LAR",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "isaac-guerendo-1626",
+    "playerID": 1626,
+    "playerName": "Isaac Guerendo",
+    "position": "RB",
+    "team": "SFO",
+    "age": 26.1,
+    "rookie": false
+  },
+  {
+    "slug": "jalin-hyatt-1399",
+    "playerID": 1399,
+    "playerName": "Jalin Hyatt",
+    "position": "WR",
+    "team": "NYG",
+    "age": 24.9,
+    "rookie": false
+  },
+  {
+    "slug": "roschon-johnson-1390",
+    "playerID": 1390,
+    "playerName": "Roschon Johnson",
+    "position": "RB",
+    "team": "CHI",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "noah-fant-243",
+    "playerID": 243,
+    "playerName": "Noah Fant",
+    "position": "TE",
+    "team": "NOS",
+    "age": 28.7,
+    "rookie": false
+  },
+  {
+    "slug": "devin-singletary-238",
+    "playerID": 238,
+    "playerName": "Devin Singletary",
+    "position": "RB",
+    "team": "NYG",
+    "age": 28.9,
+    "rookie": false
+  },
+  {
+    "slug": "geno-smith-671",
+    "playerID": 671,
+    "playerName": "Geno Smith",
+    "position": "QB",
+    "team": "NYJ",
+    "age": 35.8,
+    "rookie": false
+  },
+  {
+    "slug": "daniel-bellinger-1322",
+    "playerID": 1322,
+    "playerName": "Daniel Bellinger",
+    "position": "TE",
+    "team": "TEN",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "tommy-tremble-1054",
+    "playerID": 1054,
+    "playerName": "Tommy Tremble",
+    "position": "TE",
+    "team": "CAR",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "ty-johnson-6",
+    "playerID": 6,
+    "playerName": "Ty Johnson",
+    "position": "RB",
+    "team": "BUF",
+    "age": 28.9,
+    "rookie": false
+  },
+  {
+    "slug": "cade-stover-1613",
+    "playerID": 1613,
+    "playerName": "Cade Stover",
+    "position": "TE",
+    "team": "HOU",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "jaleel-mclaughlin-1486",
+    "playerID": 1486,
+    "playerName": "Jaleel McLaughlin",
+    "position": "RB",
+    "team": "DEN",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "will-howard-1736",
+    "playerID": 1736,
+    "playerName": "Will Howard",
+    "position": "QB",
+    "team": "PIT",
+    "age": 24.9,
+    "rookie": false
+  },
+  {
+    "slug": "tai-felton-1797",
+    "playerID": 1797,
+    "playerName": "Tai Felton",
+    "position": "WR",
+    "team": "MIN",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "tahj-washington-1644",
+    "playerID": 1644,
+    "playerName": "Tahj Washington",
+    "position": "WR",
+    "team": "MIA",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "phil-mafah-1763",
+    "playerID": 1763,
+    "playerName": "Phil Mafah",
+    "position": "RB",
+    "team": "DAL",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "aaron-rodgers-235",
+    "playerID": 235,
+    "playerName": "Aaron Rodgers",
+    "position": "QB",
+    "team": "PIT",
+    "age": 42.7,
+    "rookie": false
+  },
+  {
+    "slug": "rasheen-ali-1631",
+    "playerID": 1631,
+    "playerName": "Rasheen Ali",
+    "position": "RB",
+    "team": "BAL",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-higbee-159",
+    "playerID": 159,
+    "playerName": "Tyler Higbee",
+    "position": "TE",
+    "team": "LAR",
+    "age": 33.6,
+    "rookie": false
+  },
+  {
+    "slug": "olamide-zaccheaus-609",
+    "playerID": 609,
+    "playerName": "Olamide Zaccheaus",
+    "position": "WR",
+    "team": "ATL",
+    "age": 29.0,
+    "rookie": false
+  },
+  {
+    "slug": "quinn-ewers-1734",
+    "playerID": 1734,
+    "playerName": "Quinn Ewers",
+    "position": "QB",
+    "team": "MIA",
+    "age": 23.2,
+    "rookie": false
+  },
+  {
+    "slug": "kendrick-bourne-153",
+    "playerID": 153,
+    "playerName": "Kendrick Bourne",
+    "position": "WR",
+    "team": "ARI",
+    "age": 31.0,
+    "rookie": false
+  },
+  {
+    "slug": "malachi-corley-1607",
+    "playerID": 1607,
+    "playerName": "Malachi Corley",
+    "position": "WR",
+    "team": "CLE",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "xavier-restrepo-1777",
+    "playerID": 1777,
+    "playerName": "Xavier Restrepo",
+    "position": "WR",
+    "team": "TEN",
+    "age": 24.3,
+    "rookie": false
+  },
+  {
+    "slug": "jordan-watkins-1817",
+    "playerID": 1817,
+    "playerName": "Jordan Watkins",
+    "position": "WR",
+    "team": "SFO",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "2028-late-4th-1893",
+    "playerID": 1893,
+    "playerName": "2028 Late 4th",
+    "position": "RDP",
+    "team": "FA",
+    "age": 0.0,
+    "rookie": false
+  },
+  {
+    "slug": "keenan-allen-265",
+    "playerID": 265,
+    "playerName": "Keenan Allen",
+    "position": "WR",
+    "team": "FA",
+    "age": 34.3,
+    "rookie": false
+  },
+  {
+    "slug": "garrett-nussmeier-1927",
+    "playerID": 1927,
+    "playerName": "Garrett Nussmeier",
+    "position": "QB",
+    "team": "KCC",
+    "age": 24.5,
+    "rookie": true
+  },
+  {
+    "slug": "emari-demercado-1481",
+    "playerID": 1481,
+    "playerName": "Emari Demercado",
+    "position": "RB",
+    "team": "KCC",
+    "age": 27.6,
+    "rookie": false
+  },
+  {
+    "slug": "jacob-cowing-1611",
+    "playerID": 1611,
+    "playerName": "Jacob Cowing",
+    "position": "WR",
+    "team": "SFO",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "deion-burks-1972",
+    "playerID": 1972,
+    "playerName": "Deion Burks",
+    "position": "WR",
+    "team": "IND",
+    "age": 23.6,
+    "rookie": true
+  },
+  {
+    "slug": "elijah-moore-1012",
+    "playerID": 1012,
+    "playerName": "Elijah Moore",
+    "position": "WR",
+    "team": "PHI",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "trey-palmer-1452",
+    "playerID": 1452,
+    "playerName": "Trey Palmer",
+    "position": "WR",
+    "team": "NOS",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "kameron-johnson-1701",
+    "playerID": 1701,
+    "playerName": "Kameron Johnson",
+    "position": "WR",
+    "team": "TBB",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "raheim-sanders-1762",
+    "playerID": 1762,
+    "playerName": "Raheim Sanders",
+    "position": "RB",
+    "team": "CLE",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "michael-trigg-2008",
+    "playerID": 2008,
+    "playerName": "Michael Trigg",
+    "position": "TE",
+    "team": "DAL",
+    "age": 24.1,
+    "rookie": true
+  },
+  {
+    "slug": "elijah-higgins-1469",
+    "playerID": 1469,
+    "playerName": "Elijah Higgins",
+    "position": "TE",
+    "team": "ARI",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "jahdae-walker-1904",
+    "playerID": 1904,
+    "playerName": "Jahdae Walker",
+    "position": "WR",
+    "team": "CHI",
+    "age": 24.1,
+    "rookie": false
+  },
+  {
+    "slug": "efton-chism-1838",
+    "playerID": 1838,
+    "playerName": "Efton Chism",
+    "position": "WR",
+    "team": "NEP",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "cj-daniels-1966",
+    "playerID": 1966,
+    "playerName": "CJ Daniels",
+    "position": "WR",
+    "team": "LAR",
+    "age": 24.6,
+    "rookie": true
+  },
+  {
+    "slug": "greg-dortch-10",
+    "playerID": 10,
+    "playerName": "Greg Dortch",
+    "position": "WR",
+    "team": "DET",
+    "age": 28.2,
+    "rookie": false
+  },
+  {
+    "slug": "joe-milton-1556",
+    "playerID": 1556,
+    "playerName": "Joe Milton",
+    "position": "QB",
+    "team": "DAL",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "donovan-edwards-1757",
+    "playerID": 1757,
+    "playerName": "Donovan Edwards",
+    "position": "RB",
+    "team": "MIA",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "kalel-mullings-1750",
+    "playerID": 1750,
+    "playerName": "Kalel Mullings",
+    "position": "RB",
+    "team": "TEN",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "luke-schoonmaker-1382",
+    "playerID": 1382,
+    "playerName": "Luke Schoonmaker",
+    "position": "TE",
+    "team": "DAL",
+    "age": 27.9,
+    "rookie": false
+  },
+  {
+    "slug": "najee-harris-1031",
+    "playerID": 1031,
+    "playerName": "Najee Harris",
+    "position": "RB",
+    "team": "FA",
+    "age": 28.4,
+    "rookie": false
+  },
+  {
+    "slug": "mitchell-evans-1809",
+    "playerID": 1809,
+    "playerName": "Mitchell Evans",
+    "position": "TE",
+    "team": "CAR",
+    "age": 23.4,
+    "rookie": false
+  },
+  {
+    "slug": "kavontae-turpin-1336",
+    "playerID": 1336,
+    "playerName": "KaVontae Turpin",
+    "position": "WR",
+    "team": "DAL",
+    "age": 30.0,
+    "rookie": false
+  },
+  {
+    "slug": "cade-klubnik-1929",
+    "playerID": 1929,
+    "playerName": "Cade Klubnik",
+    "position": "QB",
+    "team": "NYJ",
+    "age": 22.8,
+    "rookie": true
+  },
+  {
+    "slug": "bam-knight-1186",
+    "playerID": 1186,
+    "playerName": "Bam Knight",
+    "position": "RB",
+    "team": "ARI",
+    "age": 25.3,
+    "rookie": false
+  },
+  {
+    "slug": "javon-baker-1608",
+    "playerID": 1608,
+    "playerName": "Javon Baker",
+    "position": "WR",
+    "team": "SFO",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "jonathan-mingo-1450",
+    "playerID": 1450,
+    "playerName": "Jonathan Mingo",
+    "position": "WR",
+    "team": "DAL",
+    "age": 25.3,
+    "rookie": false
+  },
+  {
+    "slug": "charlie-kolar-1254",
+    "playerID": 1254,
+    "playerName": "Charlie Kolar",
+    "position": "TE",
+    "team": "LAC",
+    "age": 27.5,
+    "rookie": false
+  },
+  {
+    "slug": "david-bell-1275",
+    "playerID": 1275,
+    "playerName": "David Bell",
+    "position": "WR",
+    "team": "CLE",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "malik-benson-2040",
+    "playerID": 2040,
+    "playerName": "Malik Benson",
+    "position": "WR",
+    "team": "LVR",
+    "age": 23.8,
+    "rookie": true
+  },
+  {
+    "slug": "spencer-rattler-1557",
+    "playerID": 1557,
+    "playerName": "Spencer Rattler",
+    "position": "QB",
+    "team": "NOS",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "kirk-cousins-396",
+    "playerID": 396,
+    "playerName": "Kirk Cousins",
+    "position": "QB",
+    "team": "LVR",
+    "age": 38.0,
+    "rookie": false
+  },
+  {
+    "slug": "gabriel-davis-533",
+    "playerID": 533,
+    "playerName": "Gabriel Davis",
+    "position": "WR",
+    "team": "BUF",
+    "age": 27.4,
+    "rookie": false
+  },
+  {
+    "slug": "dillon-gabriel-1737",
+    "playerID": 1737,
+    "playerName": "Dillon Gabriel",
+    "position": "QB",
+    "team": "CLE",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-goodson-1189",
+    "playerID": 1189,
+    "playerName": "Tyler Goodson",
+    "position": "RB",
+    "team": "ATL",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "davis-allen-1434",
+    "playerID": 1434,
+    "playerName": "Davis Allen",
+    "position": "TE",
+    "team": "LAR",
+    "age": 25.5,
+    "rookie": false
+  },
+  {
+    "slug": "nick-westbrook-ikhine-950",
+    "playerID": 950,
+    "playerName": "Nick Westbrook-Ikhine",
+    "position": "WR",
+    "team": "IND",
+    "age": 29.4,
+    "rookie": false
+  },
+  {
+    "slug": "j-mari-taylor-1949",
+    "playerID": 1949,
+    "playerName": "J'Mari Taylor",
+    "position": "RB",
+    "team": "JAC",
+    "age": -1.0,
+    "rookie": true
+  },
+  {
+    "slug": "brevin-jordan-1052",
+    "playerID": 1052,
+    "playerName": "Brevin Jordan",
+    "position": "TE",
+    "team": "HOU",
+    "age": 26.1,
+    "rookie": false
+  },
+  {
+    "slug": "dameon-pierce-1207",
+    "playerID": 1207,
+    "playerName": "Dameon Pierce",
+    "position": "RB",
+    "team": "PHI",
+    "age": 26.5,
+    "rookie": false
+  },
+  {
+    "slug": "ja-lynn-polk-1602",
+    "playerID": 1602,
+    "playerName": "Ja'Lynn Polk",
+    "position": "WR",
+    "team": "FA",
+    "age": 24.3,
+    "rookie": false
+  },
+  {
+    "slug": "mack-hollins-767",
+    "playerID": 767,
+    "playerName": "Mack Hollins",
+    "position": "WR",
+    "team": "NEP",
+    "age": 32.9,
+    "rookie": false
+  },
+  {
+    "slug": "jake-bobo-1488",
+    "playerID": 1488,
+    "playerName": "Jake Bobo",
+    "position": "WR",
+    "team": "SEA",
+    "age": 28.0,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-badie-1206",
+    "playerID": 1206,
+    "playerName": "Tyler Badie",
+    "position": "RB",
+    "team": "DEN",
+    "age": 26.5,
+    "rookie": false
+  },
+  {
+    "slug": "michael-carter-1035",
+    "playerID": 1035,
+    "playerName": "Michael Carter",
+    "position": "RB",
+    "team": "TEN",
+    "age": 27.3,
+    "rookie": false
+  },
+  {
+    "slug": "riley-leonard-1735",
+    "playerID": 1735,
+    "playerName": "Riley Leonard",
+    "position": "QB",
+    "team": "IND",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "tyrell-shavers-1524",
+    "playerID": 1524,
+    "playerName": "Tyrell Shavers",
+    "position": "WR",
+    "team": "BUF",
+    "age": 27.0,
+    "rookie": false
+  },
+  {
+    "slug": "isaiah-hodgins-561",
+    "playerID": 561,
+    "playerName": "Isaiah Hodgins",
+    "position": "WR",
+    "team": "NYG",
+    "age": 27.8,
+    "rookie": false
+  },
+  {
+    "slug": "israel-abanikanda-1383",
+    "playerID": 1383,
+    "playerName": "Israel Abanikanda",
+    "position": "RB",
+    "team": "DAL",
+    "age": 23.8,
+    "rookie": false
+  },
+  {
+    "slug": "jam-miller-1948",
+    "playerID": 1948,
+    "playerName": "Jam Miller",
+    "position": "RB",
+    "team": "NEP",
+    "age": 22.3,
+    "rookie": true
+  },
+  {
+    "slug": "frank-gore-jr-1570",
+    "playerID": 1570,
+    "playerName": "Frank Gore Jr.",
+    "position": "RB",
+    "team": "BUF",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "jared-wiley-1619",
+    "playerID": 1619,
+    "playerName": "Jared Wiley",
+    "position": "TE",
+    "team": "KCC",
+    "age": 25.8,
+    "rookie": false
+  },
+  {
+    "slug": "arian-smith-1815",
+    "playerID": 1815,
+    "playerName": "Arian Smith",
+    "position": "WR",
+    "team": "NYJ",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-scott-1436",
+    "playerID": 1436,
+    "playerName": "Tyler Scott",
+    "position": "WR",
+    "team": "LAR",
+    "age": 24.8,
+    "rookie": false
+  },
+  {
+    "slug": "sam-roush-2011",
+    "playerID": 2011,
+    "playerName": "Sam Roush",
+    "position": "TE",
+    "team": "CHI",
+    "age": 22.9,
+    "rookie": true
+  },
+  {
+    "slug": "bo-melton-1244",
+    "playerID": 1244,
+    "playerName": "Bo Melton",
+    "position": "WR",
+    "team": "GBP",
+    "age": 27.2,
+    "rookie": false
+  },
+  {
+    "slug": "khalil-herbert-994",
+    "playerID": 994,
+    "playerName": "Khalil Herbert",
+    "position": "RB",
+    "team": "SFO",
+    "age": 28.3,
+    "rookie": false
+  },
+  {
+    "slug": "xavier-gipson-1504",
+    "playerID": 1504,
+    "playerName": "Xavier Gipson",
+    "position": "WR",
+    "team": "NYG",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "sione-vaki-1627",
+    "playerID": 1627,
+    "playerName": "Sione Vaki",
+    "position": "RB",
+    "team": "DET",
+    "age": 25.0,
+    "rookie": false
+  },
+  {
+    "slug": "skyy-moore-1283",
+    "playerID": 1283,
+    "playerName": "Skyy Moore",
+    "position": "WR",
+    "team": "GBP",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "mason-tipton-1686",
+    "playerID": 1686,
+    "playerName": "Mason Tipton",
+    "position": "WR",
+    "team": "NOS",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "kendall-milton-1577",
+    "playerID": 1577,
+    "playerName": "Kendall Milton",
+    "position": "RB",
+    "team": "CIN",
+    "age": 24.5,
+    "rookie": false
+  },
+  {
+    "slug": "le-veon-moss-1941",
+    "playerID": 1941,
+    "playerName": "Le'Veon Moss",
+    "position": "RB",
+    "team": "MIA",
+    "age": 23.7,
+    "rookie": true
+  },
+  {
+    "slug": "jameis-winston-413",
+    "playerID": 413,
+    "playerName": "Jameis Winston",
+    "position": "QB",
+    "team": "NYG",
+    "age": 32.6,
+    "rookie": false
+  },
+  {
+    "slug": "samaje-perine-785",
+    "playerID": 785,
+    "playerName": "Samaje Perine",
+    "position": "RB",
+    "team": "CIN",
+    "age": 30.9,
+    "rookie": false
+  },
+  {
+    "slug": "matthew-hibner-2020",
+    "playerID": 2020,
+    "playerName": "Matthew Hibner",
+    "position": "TE",
+    "team": "BAL",
+    "age": 24.4,
+    "rookie": true
+  },
+  {
+    "slug": "brock-wright-1162",
+    "playerID": 1162,
+    "playerName": "Brock Wright",
+    "position": "TE",
+    "team": "DET",
+    "age": 27.7,
+    "rookie": false
+  },
+  {
+    "slug": "brenden-rice-1594",
+    "playerID": 1594,
+    "playerName": "Brenden Rice",
+    "position": "WR",
+    "team": "FA",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "hassan-haskins-1191",
+    "playerID": 1191,
+    "playerName": "Hassan Haskins",
+    "position": "RB",
+    "team": "LAC",
+    "age": 26.7,
+    "rookie": false
+  },
+  {
+    "slug": "jawhar-jordan-1641",
+    "playerID": 1641,
+    "playerName": "Jawhar Jordan",
+    "position": "RB",
+    "team": "HOU",
+    "age": 27.0,
+    "rookie": false
+  },
+  {
+    "slug": "demarcus-robinson-52",
+    "playerID": 52,
+    "playerName": "Demarcus Robinson",
+    "position": "WR",
+    "team": "SFO",
+    "age": 31.9,
+    "rookie": false
+  },
+  {
+    "slug": "elijah-mitchell-1013",
+    "playerID": 1013,
+    "playerName": "Elijah Mitchell",
+    "position": "RB",
+    "team": "PHI",
+    "age": 28.3,
+    "rookie": false
+  },
+  {
+    "slug": "johnny-wilson-1596",
+    "playerID": 1596,
+    "playerName": "Johnny Wilson",
+    "position": "WR",
+    "team": "PHI",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "colbie-young-2004",
+    "playerID": 2004,
+    "playerName": "Colbie Young",
+    "position": "WR",
+    "team": "CIN",
+    "age": 24.0,
+    "rookie": true
+  },
+  {
+    "slug": "deshaun-watson-261",
+    "playerID": 261,
+    "playerName": "Deshaun Watson",
+    "position": "QB",
+    "team": "CLE",
+    "age": 30.9,
+    "rookie": false
+  },
+  {
+    "slug": "lil-jordan-humphrey-177",
+    "playerID": 177,
+    "playerName": "Lil'Jordan Humphrey",
+    "position": "WR",
+    "team": "DEN",
+    "age": 28.3,
+    "rookie": false
+  },
+  {
+    "slug": "bub-means-1634",
+    "playerID": 1634,
+    "playerName": "Bub Means",
+    "position": "WR",
+    "team": "NOS",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "jack-endries-2007",
+    "playerID": 2007,
+    "playerName": "Jack Endries",
+    "position": "TE",
+    "team": "CIN",
+    "age": 22.4,
+    "rookie": true
+  },
+  {
+    "slug": "jonnu-smith-84",
+    "playerID": 84,
+    "playerName": "Jonnu Smith",
+    "position": "TE",
+    "team": "FA",
+    "age": 31.0,
+    "rookie": false
+  },
+  {
+    "slug": "alexander-mattison-326",
+    "playerID": 326,
+    "playerName": "Alexander Mattison",
+    "position": "RB",
+    "team": "MIA",
+    "age": 28.1,
+    "rookie": false
+  },
+  {
+    "slug": "jamari-thrash-1595",
+    "playerID": 1595,
+    "playerName": "Jamari Thrash",
+    "position": "WR",
+    "team": "FA",
+    "age": 25.6,
+    "rookie": false
+  },
+  {
+    "slug": "marcus-mariota-23",
+    "playerID": 23,
+    "playerName": "Marcus Mariota",
+    "position": "QB",
+    "team": "WAS",
+    "age": 32.8,
+    "rookie": false
+  },
+  {
+    "slug": "juju-smith-schuster-276",
+    "playerID": 276,
+    "playerName": "JuJu Smith-Schuster",
+    "position": "WR",
+    "team": "NYG",
+    "age": 29.7,
+    "rookie": false
+  },
+  {
+    "slug": "joe-flacco-722",
+    "playerID": 722,
+    "playerName": "Joe Flacco",
+    "position": "QB",
+    "team": "CIN",
+    "age": 41.6,
+    "rookie": false
+  },
+  {
+    "slug": "derius-davis-1473",
+    "playerID": 1473,
+    "playerName": "Derius Davis",
+    "position": "WR",
+    "team": "LAC",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "aj-dillon-631",
+    "playerID": 631,
+    "playerName": "AJ Dillon",
+    "position": "RB",
+    "team": "CAR",
+    "age": 28.3,
+    "rookie": false
+  },
+  {
+    "slug": "nathan-carter-1902",
+    "playerID": 1902,
+    "playerName": "Nathan Carter",
+    "position": "RB",
+    "team": "ATL",
+    "age": 24.2,
+    "rookie": false
+  },
+  {
+    "slug": "reggie-virgil-1988",
+    "playerID": 1988,
+    "playerName": "Reggie Virgil",
+    "position": "WR",
+    "team": "ARI",
+    "age": 22.2,
+    "rookie": true
+  },
+  {
+    "slug": "lajohntay-wester-1823",
+    "playerID": 1823,
+    "playerName": "LaJohntay Wester",
+    "position": "WR",
+    "team": "BAL",
+    "age": 24.4,
+    "rookie": false
+  },
+  {
+    "slug": "mecole-hardman-404",
+    "playerID": 404,
+    "playerName": "Mecole Hardman",
+    "position": "WR",
+    "team": "BUF",
+    "age": 28.4,
+    "rookie": false
+  },
+  {
+    "slug": "terrell-jennings-1720",
+    "playerID": 1720,
+    "playerName": "Terrell Jennings",
+    "position": "RB",
+    "team": "NEP",
+    "age": 25.4,
+    "rookie": false
+  },
+  {
+    "slug": "malik-heath-1502",
+    "playerID": 1502,
+    "playerName": "Malik Heath",
+    "position": "WR",
+    "team": "ATL",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "jeremy-mcnichols-782",
+    "playerID": 782,
+    "playerName": "Jeremy McNichols",
+    "position": "RB",
+    "team": "WAS",
+    "age": 30.6,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-johnson-572",
+    "playerID": 572,
+    "playerName": "Tyler Johnson",
+    "position": "WR",
+    "team": "DAL",
+    "age": 28.0,
+    "rookie": false
+  },
+  {
+    "slug": "zay-jones-327",
+    "playerID": 327,
+    "playerName": "Zay Jones",
+    "position": "WR",
+    "team": "ARI",
+    "age": 31.4,
+    "rookie": false
+  },
+  {
+    "slug": "zavier-scott-1898",
+    "playerID": 1898,
+    "playerName": "Zavier Scott",
+    "position": "RB",
+    "team": "MIN",
+    "age": 27.1,
+    "rookie": false
+  },
+  {
+    "slug": "ty-chandler-1182",
+    "playerID": 1182,
+    "playerName": "Ty Chandler",
+    "position": "RB",
+    "team": "NOS",
+    "age": 28.2,
+    "rookie": false
+  },
+  {
+    "slug": "dylan-laube-1584",
+    "playerID": 1584,
+    "playerName": "Dylan Laube",
+    "position": "RB",
+    "team": "LVR",
+    "age": 26.6,
+    "rookie": false
+  },
+  {
+    "slug": "tyler-huntley-618",
+    "playerID": 618,
+    "playerName": "Tyler Huntley",
+    "position": "QB",
+    "team": "BAL",
+    "age": 28.5,
+    "rookie": false
+  },
+  {
+    "slug": "ainias-smith-1624",
+    "playerID": 1624,
+    "playerName": "Ainias Smith",
+    "position": "WR",
+    "team": "FA",
+    "age": 25.2,
+    "rookie": false
+  },
+  {
+    "slug": "trey-lance-1017",
+    "playerID": 1017,
+    "playerName": "Trey Lance",
+    "position": "QB",
+    "team": "LAC",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "sam-howell-1209",
+    "playerID": 1209,
+    "playerName": "Sam Howell",
+    "position": "QB",
+    "team": "DAL",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "kenny-pickett-1208",
+    "playerID": 1208,
+    "playerName": "Kenny Pickett",
+    "position": "QB",
+    "team": "CAR",
+    "age": 28.2,
+    "rookie": false
+  },
+  {
+    "slug": "kenny-mcintosh-1385",
+    "playerID": 1385,
+    "playerName": "Kenny McIntosh",
+    "position": "RB",
+    "team": "FA",
+    "age": 26.4,
+    "rookie": false
+  },
+  {
+    "slug": "antonio-gibson-584",
+    "playerID": 584,
+    "playerName": "Antonio Gibson",
+    "position": "RB",
+    "team": "FA",
+    "age": 28.1,
+    "rookie": false
+  },
+  {
+    "slug": "hunter-long-1056",
+    "playerID": 1056,
+    "playerName": "Hunter Long",
+    "position": "TE",
+    "team": "JAC",
+    "age": 28.0,
+    "rookie": false
+  },
+  {
+    "slug": "trayveon-williams-99",
+    "playerID": 99,
+    "playerName": "Trayveon Williams",
+    "position": "RB",
+    "team": "CLE",
+    "age": 28.8,
+    "rookie": false
+  },
+  {
+    "slug": "zach-wilson-1016",
+    "playerID": 1016,
+    "playerName": "Zach Wilson",
+    "position": "QB",
+    "team": "NOS",
+    "age": 27.0,
+    "rookie": false
+  },
+  {
+    "slug": "noah-brown-776",
+    "playerID": 776,
+    "playerName": "Noah Brown",
+    "position": "WR",
+    "team": "WAS",
+    "age": 30.6,
+    "rookie": false
+  },
+  {
+    "slug": "sincere-mccormick-1202",
+    "playerID": 1202,
+    "playerName": "Sincere McCormick",
+    "position": "RB",
+    "team": "SFO",
+    "age": 25.9,
+    "rookie": false
+  },
+  {
+    "slug": "will-levis-1402",
+    "playerID": 1402,
+    "playerName": "Will Levis",
+    "position": "QB",
+    "team": "TEN",
+    "age": 27.1,
+    "rookie": false
+  },
+  {
+    "slug": "tanner-mckee-1218",
+    "playerID": 1218,
+    "playerName": "Tanner McKee",
+    "position": "QB",
+    "team": "PHI",
+    "age": 26.3,
+    "rookie": false
+  },
+  {
+    "slug": "drew-lock-33",
+    "playerID": 33,
+    "playerName": "Drew Lock",
+    "position": "QB",
+    "team": "SEA",
+    "age": 29.8,
+    "rookie": false
+  },
+  {
+    "slug": "gardner-minshew-47",
+    "playerID": 47,
+    "playerName": "Gardner Minshew",
+    "position": "QB",
+    "team": "ARI",
+    "age": 30.2,
+    "rookie": false
+  },
+  {
+    "slug": "tyson-bagent-1478",
+    "playerID": 1478,
+    "playerName": "Tyson Bagent",
+    "position": "QB",
+    "team": "CHI",
+    "age": 26.2,
+    "rookie": false
+  },
+  {
+    "slug": "davis-mills-1029",
+    "playerID": 1029,
+    "playerName": "Davis Mills",
+    "position": "QB",
+    "team": "HOU",
+    "age": 27.8,
+    "rookie": false
+  },
+  {
+    "slug": "carson-beck-1928",
+    "playerID": 1928,
+    "playerName": "Carson Beck",
+    "position": "QB",
+    "team": "ARI",
+    "age": 24.7,
+    "rookie": true
+  },
+  {
+    "slug": "kyle-mccord-1738",
+    "playerID": 1738,
+    "playerName": "Kyle McCord",
+    "position": "QB",
+    "team": "GBP",
+    "age": 23.9,
+    "rookie": false
+  },
+  {
+    "slug": "drew-allar-1930",
+    "playerID": 1930,
+    "playerName": "Drew Allar",
+    "position": "QB",
+    "team": "PIT",
+    "age": 22.4,
+    "rookie": true
+  },
+  {
+    "slug": "cole-payton-2027",
+    "playerID": 2027,
+    "playerName": "Cole Payton",
+    "position": "QB",
+    "team": "PHI",
+    "age": 23.8,
+    "rookie": true
+  },
+  {
+    "slug": "taylen-green-2029",
+    "playerID": 2029,
+    "playerName": "Taylen Green",
+    "position": "QB",
+    "team": "CLE",
+    "age": 23.8,
+    "rookie": true
+  }
+]

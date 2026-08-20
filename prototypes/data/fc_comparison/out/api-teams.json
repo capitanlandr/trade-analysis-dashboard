@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "data": {
+    "teams": [
+      {
+        "rosterId": 2,
+        "teamName": "The Federal Reserve",
+        "realName": "Grant",
+        "sleeperUsername": "gnewman4",
+        "nickname": "Grant",
+        "tradeCount": 20,
+        "winRate": 65.0,
+        "avgMargin": 873.15,
+        "totalValueGained": 17463.0
+      },
+      {
+        "rosterId": 9,
+        "teamName": "Gaeta Spur FC",
+        "realName": "Matt",
+        "sleeperUsername": "mgaeta23",
+        "nickname": "Gaeta",
+        "tradeCount": 13,
+        "winRate": 69.23,
+        "avgMargin": 523.615,
+        "totalValueGained": 6807.0
+      },
+      {
+        "rosterId": 8,
+        "teamName": "Loading\u2026",
+        "realName": "Tyler",
+        "sleeperUsername": "tylerpilgrim",
+        "nickname": "Tyler",
+        "tradeCount": 19,
+        "winRate": 57.89,
+        "avgMargin": 318.632,
+        "totalValueGained": 6054.0
+      },
+      {
+        "rosterId": 1,
+        "teamName": "208 Ferrari Way",
+        "realName": "Landry",
+        "sleeperUsername": "lndahayo",
+        "nickname": "Landry",
+        "tradeCount": 16,
+        "winRate": 56.25,
+        "avgMargin": 278.75,
+        "totalValueGained": 4460.0
+      },
+      {
+        "rosterId": 4,
+        "teamName": "Lisan al-Caleb",
+        "realName": "Kyle",
+        "sleeperUsername": "thekylecasey",
+        "nickname": "Kyle",
+        "tradeCount": 11,
+        "winRate": 54.55,
+        "avgMargin": 373.091,
+        "totalValueGained": 4104.0
+      },
+      {
+        "rosterId": 10,
+        "teamName": "Rashid Shaheed Truthers",
+        "realName": "Jake",
+        "sleeperUsername": "jakeduf",
+        "nickname": "Jake",
+        "tradeCount": 11,
+        "winRate": 63.64,
+        "avgMargin": 221.727,
+        "totalValueGained": 2439.0
+      },
+      {
+        "rosterId": 11,
+        "teamName": "All You Need Is LOVE",
+        "realName": "Will",
+        "sleeperUsername": "wkerwin",
+        "nickname": "Will",
+        "tradeCount": 12,
+        "winRate": 50.0,
+        "avgMargin": 13.833,
+        "totalValueGained": 166.0
+      },
+      {
+        "rosterId": 3,
+        "teamName": "Golden Hour",
+        "realName": "Brevin",
+        "sleeperUsername": "brevinowens",
+        "nickname": "Brevin",
+        "tradeCount": 4,
+        "winRate": 50.0,
+        "avgMargin": -259.75,
+        "totalValueGained": -1039.0
+      },
+      {
+        "rosterId": 12,
+        "teamName": "Omar Comin",
+        "realName": "Don",
+        "sleeperUsername": "donewton",
+        "nickname": "Don",
+        "tradeCount": 31,
+        "winRate": 35.48,
+        "avgMargin": -105.258,
+        "totalValueGained": -3263.0
+      },
+      {
+        "rosterId": 6,
+        "teamName": "Mostly Washed",
+        "realName": "Chris",
+        "sleeperUsername": "cjsyregelas",
+        "nickname": "Chris",
+        "tradeCount": 10,
+        "winRate": 50.0,
+        "avgMargin": -679.4,
+        "totalValueGained": -6794.0
+      },
+      {
+        "rosterId": 5,
+        "teamName": "Mommy Rainier ",
+        "realName": "Zach",
+        "sleeperUsername": "zachlearningtogolf",
+        "nickname": "Zach",
+        "tradeCount": 27,
+        "winRate": 37.04,
+        "avgMargin": -533.741,
+        "totalValueGained": -14411.0
+      },
+      {
+        "rosterId": 7,
+        "teamName": "C\u00e1rtel de Breece y Puka",
+        "realName": "Johnny",
+        "sleeperUsername": "jwalters74",
+        "nickname": "Johnny",
+        "tradeCount": 34,
+        "winRate": 38.24,
+        "avgMargin": -470.176,
+        "totalValueGained": -15986.0
+      }
+    ],
+    "summary": {
+      "totalTeams": 12,
+      "totalTrades": 104,
+      "seasonsIncluded": [
+        "season_2",
+        "season_3"
+      ]
+    },
+    "metadata": {
+      "note": "FantasyCalc has no historical series; at-trade (\"then\") values use current FC value for every asset. Winners/margins recomputed on current FC values. FC scale is uncapped (~10k top); no 9999 cap applied."
+    }
+  }
+}

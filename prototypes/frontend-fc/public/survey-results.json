@@ -1,0 +1,514 @@
+{
+  "title": "Preseason Predictions Survey",
+  "subtitle": "Dynasuiiii league members' preseason predictions",
+  "total_responses": 12,
+  "divisions": [
+    {
+      "division": "FIBs",
+      "teams": [
+        {
+          "team": "Tyler (Loading…)",
+          "team_short": "Tyler",
+          "avg_predicted_rank": 1.17,
+          "first_place_votes": 11,
+          "first_place_pct": 91.7,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 11
+            },
+            {
+              "place": "2nd",
+              "count": 0
+            },
+            {
+              "place": "3rd",
+              "count": 1
+            },
+            {
+              "place": "4th",
+              "count": 0
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 1
+        },
+        {
+          "team": "Will (All You Need Is LOVE)",
+          "team_short": "Will",
+          "avg_predicted_rank": 2.5,
+          "first_place_votes": 0,
+          "first_place_pct": 0.0,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 0
+            },
+            {
+              "place": "2nd",
+              "count": 7
+            },
+            {
+              "place": "3rd",
+              "count": 4
+            },
+            {
+              "place": "4th",
+              "count": 1
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 2
+        },
+        {
+          "team": "Kyle (Lisan al-Caleb)",
+          "team_short": "Kyle",
+          "avg_predicted_rank": 2.58,
+          "first_place_votes": 0,
+          "first_place_pct": 0.0,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 0
+            },
+            {
+              "place": "2nd",
+              "count": 5
+            },
+            {
+              "place": "3rd",
+              "count": 7
+            },
+            {
+              "place": "4th",
+              "count": 0
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 3
+        },
+        {
+          "team": "Chris (Mostly Washed)",
+          "team_short": "Chris",
+          "avg_predicted_rank": 3.75,
+          "first_place_votes": 1,
+          "first_place_pct": 8.3,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 1
+            },
+            {
+              "place": "2nd",
+              "count": 0
+            },
+            {
+              "place": "3rd",
+              "count": 0
+            },
+            {
+              "place": "4th",
+              "count": 11
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 4
+        }
+      ],
+      "consensus_favorite": "Tyler"
+    },
+    {
+      "division": "Wisconsin",
+      "teams": [
+        {
+          "team": "Brevin (Golden Hour)",
+          "team_short": "Brevin",
+          "avg_predicted_rank": 1.75,
+          "first_place_votes": 5,
+          "first_place_pct": 41.7,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 5
+            },
+            {
+              "place": "2nd",
+              "count": 5
+            },
+            {
+              "place": "3rd",
+              "count": 2
+            },
+            {
+              "place": "4th",
+              "count": 0
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 1
+        },
+        {
+          "team": "Jake (Rashid Shaheed Truthers)",
+          "team_short": "Jake",
+          "avg_predicted_rank": 2.25,
+          "first_place_votes": 3,
+          "first_place_pct": 25.0,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 3
+            },
+            {
+              "place": "2nd",
+              "count": 4
+            },
+            {
+              "place": "3rd",
+              "count": 4
+            },
+            {
+              "place": "4th",
+              "count": 1
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 2
+        },
+        {
+          "team": "Don (Omar Comin)",
+          "team_short": "Don",
+          "avg_predicted_rank": 2.42,
+          "first_place_votes": 4,
+          "first_place_pct": 33.3,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 4
+            },
+            {
+              "place": "2nd",
+              "count": 2
+            },
+            {
+              "place": "3rd",
+              "count": 3
+            },
+            {
+              "place": "4th",
+              "count": 3
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 3
+        },
+        {
+          "team": "Matt (Gaeta Spur FC)",
+          "team_short": "Matt",
+          "avg_predicted_rank": 3.58,
+          "first_place_votes": 0,
+          "first_place_pct": 0.0,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 0
+            },
+            {
+              "place": "2nd",
+              "count": 1
+            },
+            {
+              "place": "3rd",
+              "count": 3
+            },
+            {
+              "place": "4th",
+              "count": 8
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 4
+        }
+      ],
+      "consensus_favorite": "Brevin"
+    },
+    {
+      "division": "American",
+      "teams": [
+        {
+          "team": "Grant (The Federal Reserve)",
+          "team_short": "Grant",
+          "avg_predicted_rank": 1.5,
+          "first_place_votes": 8,
+          "first_place_pct": 66.7,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 8
+            },
+            {
+              "place": "2nd",
+              "count": 3
+            },
+            {
+              "place": "3rd",
+              "count": 0
+            },
+            {
+              "place": "4th",
+              "count": 1
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 1
+        },
+        {
+          "team": "Johnny (Cártel de Breece y Puka)",
+          "team_short": "Johnny",
+          "avg_predicted_rank": 2.17,
+          "first_place_votes": 3,
+          "first_place_pct": 25.0,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 3
+            },
+            {
+              "place": "2nd",
+              "count": 4
+            },
+            {
+              "place": "3rd",
+              "count": 5
+            },
+            {
+              "place": "4th",
+              "count": 0
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 2
+        },
+        {
+          "team": "Landry (208 Ferrari Way)",
+          "team_short": "Landry",
+          "avg_predicted_rank": 2.5,
+          "first_place_votes": 1,
+          "first_place_pct": 8.3,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 1
+            },
+            {
+              "place": "2nd",
+              "count": 4
+            },
+            {
+              "place": "3rd",
+              "count": 7
+            },
+            {
+              "place": "4th",
+              "count": 0
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 3
+        },
+        {
+          "team": "Zach (Mommy Rainier)",
+          "team_short": "Zach",
+          "avg_predicted_rank": 3.75,
+          "first_place_votes": 1,
+          "first_place_pct": 8.3,
+          "placements": [
+            {
+              "place": "1st",
+              "count": 1
+            },
+            {
+              "place": "2nd",
+              "count": 0
+            },
+            {
+              "place": "3rd",
+              "count": 0
+            },
+            {
+              "place": "4th",
+              "count": 11
+            }
+          ],
+          "responses": 12,
+          "consensus_seed": 4
+        }
+      ],
+      "consensus_favorite": "Grant"
+    }
+  ],
+  "pick_questions": [
+    {
+      "question": "Who do you think will win the championship?",
+      "multi_select": false,
+      "note": null,
+      "responses": 12,
+      "top_answer": "Grant (The Federal Reserve)",
+      "top_pct": 58.3,
+      "results": [
+        {
+          "label": "Grant (The Federal Reserve)",
+          "count": 7,
+          "pct": 58.3
+        },
+        {
+          "label": "Johnny (Cártel de Breece y Puka)",
+          "count": 2,
+          "pct": 16.7
+        },
+        {
+          "label": "Landry (208 Ferrari Way)",
+          "count": 1,
+          "pct": 8.3
+        },
+        {
+          "label": "Brevin (Golden Hour)",
+          "count": 1,
+          "pct": 8.3
+        },
+        {
+          "label": "Chris (Mostly Washed)",
+          "count": 1,
+          "pct": 8.3
+        }
+      ]
+    },
+    {
+      "question": "Who do you think will be in the Toilet Bowl?",
+      "multi_select": true,
+      "note": "Multi-select — respondents could choose more than one; percentages are of respondents.",
+      "responses": 12,
+      "top_answer": "Zach (Mommy Rainier)",
+      "top_pct": 100.0,
+      "results": [
+        {
+          "label": "Zach (Mommy Rainier)",
+          "count": 12,
+          "pct": 100.0
+        },
+        {
+          "label": "Chris (Mostly Washed)",
+          "count": 8,
+          "pct": 66.7
+        },
+        {
+          "label": "Kyle (Lisan al-Caleb)",
+          "count": 2,
+          "pct": 16.7
+        },
+        {
+          "label": "Tyler (Loading…)",
+          "count": 1,
+          "pct": 8.3
+        },
+        {
+          "label": "Don (Omar Comin)",
+          "count": 1,
+          "pct": 8.3
+        }
+      ]
+    },
+    {
+      "question": "Who will win the Toilet Bowl?",
+      "multi_select": false,
+      "note": null,
+      "responses": 12,
+      "top_answer": "Zach (Mommy Rainier)",
+      "top_pct": 50.0,
+      "results": [
+        {
+          "label": "Zach (Mommy Rainier)",
+          "count": 6,
+          "pct": 50.0
+        },
+        {
+          "label": "Chris (Mostly Washed)",
+          "count": 4,
+          "pct": 33.3
+        },
+        {
+          "label": "Kyle (Lisan al-Caleb)",
+          "count": 2,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "question": "Which team that made the playoffs last year is most likely to miss them this year?",
+      "multi_select": false,
+      "note": null,
+      "responses": 12,
+      "top_answer": "Chris (Mostly Washed)",
+      "top_pct": 83.3,
+      "results": [
+        {
+          "label": "Chris (Mostly Washed)",
+          "count": 10,
+          "pct": 83.3
+        },
+        {
+          "label": "Landry (208 Ferrari Way)",
+          "count": 1,
+          "pct": 8.3
+        },
+        {
+          "label": "Don (Omar Comin)",
+          "count": 1,
+          "pct": 8.3
+        }
+      ]
+    },
+    {
+      "question": "Which team that missed the playoffs last year is most likely to make them this year?",
+      "multi_select": false,
+      "note": null,
+      "responses": 12,
+      "top_answer": "Tyler (Loading…)",
+      "top_pct": 50.0,
+      "results": [
+        {
+          "label": "Tyler (Loading…)",
+          "count": 6,
+          "pct": 50.0
+        },
+        {
+          "label": "Jake (Rashid Shaheed Truthers)",
+          "count": 2,
+          "pct": 16.7
+        },
+        {
+          "label": "Zach (Mommy Rainier)",
+          "count": 2,
+          "pct": 16.7
+        },
+        {
+          "label": "Matt (Gaeta Spur FC)",
+          "count": 1,
+          "pct": 8.3
+        },
+        {
+          "label": "Kyle (Lisan al-Caleb)",
+          "count": 1,
+          "pct": 8.3
+        }
+      ]
+    }
+  ],
+  "insights": [
+    "Championship favorite: Grant (The Federal Reserve) — 7 of 12 votes (58.3%).",
+    "Most-picked to fall out of the playoffs: Chris (Mostly Washed) (10/12, 83.3%).",
+    "Most-picked breakout (missed playoffs → makes them): Tyler (Loading…) (6/12, 50.0%).",
+    "FIBs division consensus favorite: Tyler (avg predicted finish 1.17, 11 first-place votes).",
+    "Wisconsin division consensus favorite: Brevin (avg predicted finish 1.75, 5 first-place votes).",
+    "American division consensus favorite: Grant (avg predicted finish 1.5, 8 first-place votes)."
+  ]
+}
