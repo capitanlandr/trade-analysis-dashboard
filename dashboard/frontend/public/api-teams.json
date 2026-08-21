@@ -3,15 +3,37 @@
   "data": {
     "teams": [
       {
+        "rosterId": 1,
+        "teamName": "208 Ferrari Way",
+        "realName": "Landry",
+        "sleeperUsername": "lndahayo",
+        "nickname": "Landry",
+        "tradeCount": 16,
+        "winRate": 62.5,
+        "avgMargin": 737.1875,
+        "totalValueGained": 13124.0
+      },
+      {
         "rosterId": 2,
         "teamName": "The Federal Reserve",
         "realName": "Grant",
         "sleeperUsername": "gnewman4",
         "nickname": "Grant",
-        "tradeCount": 20,
-        "winRate": 60.0,
-        "avgMargin": 1292.05,
-        "totalValueGained": 25841.0
+        "tradeCount": 21,
+        "winRate": 52.38095238095239,
+        "avgMargin": 1053.0,
+        "totalValueGained": 1179.0
+      },
+      {
+        "rosterId": 3,
+        "teamName": "Golden Hour",
+        "realName": "Brevin",
+        "sleeperUsername": "brevinowens",
+        "nickname": "Brevin",
+        "tradeCount": 5,
+        "winRate": 80.0,
+        "avgMargin": 319.8,
+        "totalValueGained": -1180.0
       },
       {
         "rosterId": 4,
@@ -19,43 +41,21 @@
         "realName": "Kyle",
         "sleeperUsername": "thekylecasey",
         "nickname": "Kyle",
-        "tradeCount": 11,
-        "winRate": 45.45,
-        "avgMargin": 1333.818,
-        "totalValueGained": 14672.0
-      },
-      {
-        "rosterId": 9,
-        "teamName": "Gaeta Spur FC",
-        "realName": "Matt",
-        "sleeperUsername": "mgaeta23",
-        "nickname": "Gaeta",
-        "tradeCount": 13,
-        "winRate": 76.92,
-        "avgMargin": 1064.538,
-        "totalValueGained": 13839.0
-      },
-      {
-        "rosterId": 11,
-        "teamName": "All You Need Is LOVE",
-        "realName": "Will",
-        "sleeperUsername": "wkerwin",
-        "nickname": "Will",
         "tradeCount": 12,
-        "winRate": 58.33,
-        "avgMargin": 348.167,
-        "totalValueGained": 4178.0
+        "winRate": 33.33333333333333,
+        "avgMargin": 1422.75,
+        "totalValueGained": 5519.0
       },
       {
-        "rosterId": 10,
-        "teamName": "Rashid Shaheed Truthers",
-        "realName": "Jake",
-        "sleeperUsername": "jakeduf",
-        "nickname": "Jake",
-        "tradeCount": 11,
-        "winRate": 45.45,
-        "avgMargin": 144.0,
-        "totalValueGained": 1584.0
+        "rosterId": 5,
+        "teamName": "Mommy Rainier ",
+        "realName": "Zach",
+        "sleeperUsername": "zachlearningtogolf",
+        "nickname": "Zach",
+        "tradeCount": 29,
+        "winRate": 48.275862068965516,
+        "avgMargin": 1143.103448275862,
+        "totalValueGained": -8916.0
       },
       {
         "rosterId": 6,
@@ -64,20 +64,20 @@
         "sleeperUsername": "cjsyregelas",
         "nickname": "Chris",
         "tradeCount": 10,
-        "winRate": 60.0,
-        "avgMargin": -0.8,
-        "totalValueGained": -8.0
+        "winRate": 50.0,
+        "avgMargin": 1237.9,
+        "totalValueGained": -1798.0
       },
       {
-        "rosterId": 3,
-        "teamName": "Golden Hour",
-        "realName": "Brevin",
-        "sleeperUsername": "brevinowens",
-        "nickname": "Brevin",
-        "tradeCount": 4,
-        "winRate": 75.0,
-        "avgMargin": -44.5,
-        "totalValueGained": -178.0
+        "rosterId": 7,
+        "teamName": "C\u00e1rtel de Breece y Puka",
+        "realName": "Johnny",
+        "sleeperUsername": "jwalters74",
+        "nickname": "Johnny",
+        "tradeCount": 35,
+        "winRate": 40.0,
+        "avgMargin": 1019.5714285714286,
+        "totalValueGained": 290.0
       },
       {
         "rosterId": 8,
@@ -86,31 +86,42 @@
         "sleeperUsername": "tylerpilgrim",
         "nickname": "Tyler",
         "tradeCount": 19,
-        "winRate": 52.63,
-        "avgMargin": -86.842,
-        "totalValueGained": -1650.0
+        "winRate": 68.42105263157895,
+        "avgMargin": 825.6842105263158,
+        "totalValueGained": 5458.0
       },
       {
-        "rosterId": 1,
-        "teamName": "208 Ferrari Way",
-        "realName": "Landry",
-        "sleeperUsername": "lndahayo",
-        "nickname": "Landry",
-        "tradeCount": 16,
-        "winRate": 43.75,
-        "avgMargin": -280.25,
-        "totalValueGained": -4484.0
+        "rosterId": 9,
+        "teamName": "Gaeta Spur FC",
+        "realName": "Matt",
+        "sleeperUsername": "mgaeta23",
+        "nickname": "Gaeta",
+        "tradeCount": 14,
+        "winRate": 57.14285714285714,
+        "avgMargin": 680.9285714285714,
+        "totalValueGained": -2104.0
       },
       {
-        "rosterId": 5,
-        "teamName": "Mommy Rainier ",
-        "realName": "Zach",
-        "sleeperUsername": "zachlearningtogolf",
-        "nickname": "Zach",
-        "tradeCount": 27,
-        "winRate": 48.15,
-        "avgMargin": -514.778,
-        "totalValueGained": -13899.0
+        "rosterId": 10,
+        "teamName": "Rashid Shaheed Truthers",
+        "realName": "Jake",
+        "sleeperUsername": "jakeduf",
+        "nickname": "Jake",
+        "tradeCount": 11,
+        "winRate": 54.54545454545454,
+        "avgMargin": 327.0,
+        "totalValueGained": -1807.0
+      },
+      {
+        "rosterId": 11,
+        "teamName": "All You Need Is LOVE",
+        "realName": "Will",
+        "sleeperUsername": "wkerwin",
+        "nickname": "Will",
+        "tradeCount": 12,
+        "winRate": 41.66666666666667,
+        "avgMargin": 512.0833333333334,
+        "totalValueGained": -5457.0
       },
       {
         "rosterId": 12,
@@ -118,26 +129,15 @@
         "realName": "Don",
         "sleeperUsername": "donewton",
         "nickname": "Don",
-        "tradeCount": 31,
-        "winRate": 38.71,
-        "avgMargin": -595.129,
-        "totalValueGained": -18449.0
-      },
-      {
-        "rosterId": 7,
-        "teamName": "C\u00e1rtel de Breece y Puka",
-        "realName": "Johnny",
-        "sleeperUsername": "jwalters74",
-        "nickname": "Johnny",
-        "tradeCount": 34,
-        "winRate": 35.29,
-        "avgMargin": -630.765,
-        "totalValueGained": -21446.0
+        "tradeCount": 32,
+        "winRate": 43.75,
+        "avgMargin": 811.21875,
+        "totalValueGained": 2197.0
       }
     ],
     "summary": {
       "totalTeams": 12,
-      "totalTrades": 104,
+      "totalTrades": 108,
       "seasonsIncluded": [
         "season_2",
         "season_3"
