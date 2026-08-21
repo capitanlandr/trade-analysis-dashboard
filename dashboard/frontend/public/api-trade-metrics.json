@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-08-21 14:29:59",
-    "total_trades": 108,
+    "generated": "2026-08-21 19:24:20",
+    "total_trades": 109,
     "description": "Advanced trade metrics: Sharpe Ratio, Significance Test, Opponent-Adjusted Performance"
   },
   "managers": [
@@ -83,25 +83,25 @@
     {
       "username": "lndahayo",
       "real_name": "Landry",
-      "trades": 16,
-      "net_advantage": 7745.0,
+      "trades": 17,
+      "net_advantage": 8541.0,
       "sharpe": {
-        "value": 0.522,
-        "mean": 484.1,
-        "std_dev": 928.1,
+        "value": 0.556,
+        "mean": 502.4,
+        "std_dev": 903.4,
         "verdict": "elite"
       },
       "significance": {
-        "wins": 10,
-        "win_rate": 62.5,
-        "p_value": 0.2272,
+        "wins": 11,
+        "win_rate": 64.7,
+        "p_value": 0.1662,
         "direction": "winning",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 9,
-        "positive_matchups": 5,
-        "top_opponent_concentration_pct": 29.6,
+        "positive_matchups": 6,
+        "top_opponent_concentration_pct": 26.8,
         "opponents": [
           {
             "opponent": "jwalters74",
@@ -139,6 +139,13 @@
             "avg_per_trade": 303.5
           },
           {
+            "opponent": "tylerpilgrim",
+            "opponent_name": "Tyler",
+            "net_advantage": 540.0,
+            "trade_count": 2,
+            "avg_per_trade": 270.0
+          },
+          {
             "opponent": "mgaeta23",
             "opponent_name": "Matt",
             "net_advantage": -22.0,
@@ -158,13 +165,6 @@
             "net_advantage": -38.0,
             "trade_count": 1,
             "avg_per_trade": -38.0
-          },
-          {
-            "opponent": "tylerpilgrim",
-            "opponent_name": "Tyler",
-            "net_advantage": -256.0,
-            "trade_count": 1,
-            "avg_per_trade": -256.0
           }
         ]
       }
@@ -343,25 +343,25 @@
     {
       "username": "tylerpilgrim",
       "real_name": "Tyler",
-      "trades": 19,
-      "net_advantage": 1954.0,
+      "trades": 20,
+      "net_advantage": 1158.0,
       "sharpe": {
-        "value": 0.061,
-        "mean": 102.8,
-        "std_dev": 1679.9,
+        "value": 0.035,
+        "mean": 57.9,
+        "std_dev": 1649.1,
         "verdict": "positive_noisy"
       },
       "significance": {
         "wins": 13,
-        "win_rate": 68.4,
-        "p_value": 0.0835,
+        "win_rate": 65.0,
+        "p_value": 0.1316,
         "direction": "winning",
-        "verdict": "approaching"
+        "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 7,
-        "positive_matchups": 5,
-        "top_opponent_concentration_pct": 297.9,
+        "positive_matchups": 4,
+        "top_opponent_concentration_pct": 502.7,
         "opponents": [
           {
             "opponent": "jwalters74",
@@ -385,13 +385,6 @@
             "avg_per_trade": 114.2
           },
           {
-            "opponent": "lndahayo",
-            "opponent_name": "Landry",
-            "net_advantage": 256.0,
-            "trade_count": 1,
-            "avg_per_trade": 256.0
-          },
-          {
             "opponent": "gnewman4",
             "opponent_name": "Grant",
             "net_advantage": 40.0,
@@ -404,6 +397,13 @@
             "net_advantage": -114.0,
             "trade_count": 1,
             "avg_per_trade": -114.0
+          },
+          {
+            "opponent": "lndahayo",
+            "opponent_name": "Landry",
+            "net_advantage": -540.0,
+            "trade_count": 2,
+            "avg_per_trade": -270.0
           },
           {
             "opponent": "thekylecasey",

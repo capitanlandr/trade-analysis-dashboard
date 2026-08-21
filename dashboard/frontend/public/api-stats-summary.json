@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 108,
-      "totalTradeValue": 391708.0,
-      "avgTradeMargin": 901.4629629629629,
+      "totalTrades": 109,
+      "totalTradeValue": 393202.0,
+      "avgTradeMargin": 900.4954128440367,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 32,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-19"
+        "latest": "2026-08-21"
       }
     },
     "teamRankings": {
@@ -21,9 +21,9 @@
           "realName": "Landry",
           "sleeperUsername": "lndahayo",
           "nickname": "Landry",
-          "tradeCount": 16,
-          "winRate": 62.5,
-          "avgMargin": 737.1875,
+          "tradeCount": 17,
+          "winRate": 64.70588235294117,
+          "avgMargin": 740.6470588235294,
           "totalValueGained": 13124.0
         },
         {
@@ -43,9 +43,9 @@
           "realName": "Tyler",
           "sleeperUsername": "tylerpilgrim",
           "nickname": "Tyler",
-          "tradeCount": 19,
-          "winRate": 68.42105263157895,
-          "avgMargin": 825.6842105263158,
+          "tradeCount": 20,
+          "winRate": 65.0,
+          "avgMargin": 824.2,
           "totalValueGained": 5458.0
         },
         {
@@ -144,9 +144,9 @@
           "realName": "Tyler",
           "sleeperUsername": "tylerpilgrim",
           "nickname": "Tyler",
-          "tradeCount": 19,
-          "winRate": 68.42105263157895,
-          "avgMargin": 825.6842105263158,
+          "tradeCount": 20,
+          "winRate": 65.0,
+          "avgMargin": 824.2,
           "totalValueGained": 5458.0
         },
         {
@@ -155,9 +155,9 @@
           "realName": "Landry",
           "sleeperUsername": "lndahayo",
           "nickname": "Landry",
-          "tradeCount": 16,
-          "winRate": 62.5,
-          "avgMargin": 737.1875,
+          "tradeCount": 17,
+          "winRate": 64.70588235294117,
+          "avgMargin": 740.6470588235294,
           "totalValueGained": 13124.0
         },
         {
@@ -289,9 +289,9 @@
           "realName": "Tyler",
           "sleeperUsername": "tylerpilgrim",
           "nickname": "Tyler",
-          "tradeCount": 19,
-          "winRate": 68.42105263157895,
-          "avgMargin": 825.6842105263158,
+          "tradeCount": 20,
+          "winRate": 65.0,
+          "avgMargin": 824.2,
           "totalValueGained": 5458.0
         },
         {
@@ -300,9 +300,9 @@
           "realName": "Landry",
           "sleeperUsername": "lndahayo",
           "nickname": "Landry",
-          "tradeCount": 16,
-          "winRate": 62.5,
-          "avgMargin": 737.1875,
+          "tradeCount": 17,
+          "winRate": 64.70588235294117,
+          "avgMargin": 740.6470588235294,
           "totalValueGained": 13124.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 28
+        "season_3": 30
       },
       "seasonInfo": {
         "season_2": {
@@ -367,60 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-21T14:29:01.427424Z"
+          "last_fetched": "2026-08-21T19:23:28.540332Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1388374053886099456",
-        "transactionId": "1388374053886099456",
-        "tradeDate": "2026-07-30",
-        "season": "season_3",
-        "teamA": "brevinowens",
-        "teamAReceived": [
-          "Marvin Harrison",
-          "Kenny Gainwell"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Marvin Harrison",
-            "type": "player",
-            "value_then": 3804,
-            "value_now": 3725
-          },
-          {
-            "name": "Kenny Gainwell",
-            "type": "player",
-            "value_then": 253,
-            "value_now": 270
-          }
-        ],
-        "teamAValueThen": 4057.0,
-        "teamAValueNow": 3995.0,
-        "teamAValueChange": -62.0,
-        "teamB": "tylerpilgrim",
-        "teamBReceived": [
-          "Jonathan Taylor"
-        ],
-        "teamBAssets": [
-          {
-            "name": "Jonathan Taylor",
-            "type": "player",
-            "value_then": 4538,
-            "value_now": 4646
-          }
-        ],
-        "teamBValueThen": 4538.0,
-        "teamBValueNow": 4646.0,
-        "teamBValueChange": 108.0,
-        "winnerAtTrade": "tylerpilgrim",
-        "winnerCurrent": "tylerpilgrim",
-        "marginAtTrade": 481.0,
-        "marginCurrent": 651.0,
-        "swingWinner": "tylerpilgrim",
-        "swingMargin": 170.0
-      },
       {
         "tradeId": "1390130079702487040",
         "transactionId": "1390130079702487040",
@@ -441,7 +392,7 @@
           {
             "name": "2027 Round 3",
             "type": "draft_pick",
-            "value_then": 28,
+            "value_then": 30,
             "value_now": 30
           }
         ],
@@ -483,8 +434,8 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4278,
-            "value_now": 4753
+            "value_then": 979,
+            "value_now": 976
           }
         ],
         "teamAValueThen": 1935.0,
@@ -554,8 +505,8 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4278,
-            "value_now": 4753
+            "value_then": 979,
+            "value_now": 976
           }
         ],
         "teamBValueThen": 4338.0,
@@ -806,8 +757,8 @@
           {
             "name": "2027 Round 1",
             "type": "draft_pick",
-            "value_then": 4278,
-            "value_now": 4753
+            "value_then": 979,
+            "value_now": 976
           }
         ],
         "teamBValueThen": 7799.0,
@@ -931,6 +882,69 @@
         "marginCurrent": 541.0,
         "swingWinner": "brevinowens",
         "swingMargin": 3.0
+      },
+      {
+        "tradeId": "1396591874663264256",
+        "transactionId": "1396591874663264256",
+        "tradeDate": "2026-08-21",
+        "season": "season_3",
+        "teamA": "lndahayo",
+        "teamAReceived": [
+          "Travis Kelce",
+          "D'Andre Swift"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Travis Kelce",
+            "type": "player",
+            "value_then": 212,
+            "value_now": 212
+          },
+          {
+            "name": "D'Andre Swift",
+            "type": "player",
+            "value_then": 933,
+            "value_now": 933
+          }
+        ],
+        "teamAValueThen": 1145.0,
+        "teamAValueNow": 1145.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Juwan Johnson",
+          "2027 Round 2",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Juwan Johnson",
+            "type": "player",
+            "value_then": 201,
+            "value_now": 201
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 136,
+            "value_now": 137
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 11,
+            "value_now": 11
+          }
+        ],
+        "teamBValueThen": 349.0,
+        "teamBValueNow": 349.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "lndahayo",
+        "winnerCurrent": "lndahayo",
+        "marginAtTrade": 796.0,
+        "marginCurrent": 796.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }
