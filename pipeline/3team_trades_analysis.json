@@ -19,17 +19,6 @@
         "value_now": 15074.0
       },
       {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12501.0
-      },
-      {
         "manager": "cjsyregelas",
         "assets": [
           "Rome Odunze",
@@ -39,6 +28,17 @@
         ],
         "value_then": 15270.0,
         "value_now": 11180.0
+      },
+      {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12501.0
       }
     ]
   },
@@ -46,6 +46,14 @@
     "date": "2026-08-20",
     "trade_id": 1396196194731950080,
     "teams": [
+      {
+        "manager": "tylerpilgrim",
+        "assets": [
+          "DeVonta Smith"
+        ],
+        "value_then": 3760.0,
+        "value_now": 3760.0
+      },
       {
         "manager": "mgaeta23",
         "assets": [
@@ -65,14 +73,6 @@
         ],
         "value_then": 3581.0,
         "value_now": 3663.0
-      },
-      {
-        "manager": "tylerpilgrim",
-        "assets": [
-          "DeVonta Smith"
-        ],
-        "value_then": 3760.0,
-        "value_now": 3760.0
       }
     ]
   }
