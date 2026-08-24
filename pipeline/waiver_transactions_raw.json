@@ -8499,5 +8499,99 @@
     "waiver_budget": [],
     "league_id": "1312166810505719808",
     "season": "season_3"
+  },
+  {
+    "status": "complete",
+    "type": "waiver",
+    "metadata": {
+      "notes": "Your waiver claim was processed successfully!"
+    },
+    "created": 1787552445028,
+    "settings": {
+      "seq": 1,
+      "waiver_bid": 5
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "865815956675538944",
+    "transaction_id": "1397499880175308800",
+    "adds": {
+      "13424": 7
+    },
+    "consenter_ids": [
+      7
+    ],
+    "drops": {
+      "6826": 7
+    },
+    "roster_ids": [
+      7
+    ],
+    "status_updated": 1787555319514,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
+  },
+  {
+    "status": "failed",
+    "type": "waiver",
+    "metadata": {
+      "notes": "This player was claimed by another owner."
+    },
+    "created": 1787541704035,
+    "settings": {
+      "seq": 2,
+      "waiver_bid": 3
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1115878936925294592",
+    "transaction_id": "1397454829185404928",
+    "adds": {
+      "13424": 8
+    },
+    "consenter_ids": [
+      8
+    ],
+    "drops": null,
+    "roster_ids": [
+      8
+    ],
+    "status_updated": 1787555319514,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
+  },
+  {
+    "status": "complete",
+    "type": "waiver",
+    "metadata": {
+      "notes": "Your waiver claim was processed successfully!"
+    },
+    "created": 1787504166157,
+    "settings": {
+      "seq": 0,
+      "waiver_bid": 25
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "865815956675538944",
+    "transaction_id": "1397297383917813760",
+    "adds": {
+      "13602": 7
+    },
+    "consenter_ids": [
+      7
+    ],
+    "drops": {
+      "12476": 7
+    },
+    "roster_ids": [
+      7
+    ],
+    "status_updated": 1787555319514,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
   }
 ]
