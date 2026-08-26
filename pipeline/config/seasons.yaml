@@ -1,4 +1,11 @@
 seasons:
+  season_1:
+    status: static
+    league_id: '1101631897148493824'
+    year: 2024
+    description: Season 1 - Startup / true origin (2024, "Dynasuiiii"); previous_league_id=None
+    backfill_completed: true
+    last_incremental_fetch: '2025-01-03T00:00:00+00:00'
   season_2:
     status: static
     league_id: '1180814327660371968'
@@ -16,6 +23,7 @@ pipeline:
   active_seasons:
   - season_3
   static_seasons:
+  - season_1
   - season_2
   allow_static_refetch: false
   cumulative_files:
