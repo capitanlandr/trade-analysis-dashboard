@@ -90,7 +90,7 @@ button:hover{color:var(--ink);border-color:var(--muted);}
 <body>
 <div class="wrap">
   <h1>Dynasty Value Over Time — “Dynasuiiii”</h1>
-  <p class="sub">12 teams · daily Superflex value (roster players + draft picks) · Keep Trade Cut–backed · Season 1 startup (2024-08-14) → last KTC observation (2026-08-11)</p>
+  <p class="sub">12 teams · daily Superflex value (roster players + draft picks) · Keep Trade Cut–backed · Season 1 startup (2024-08-14) → last KTC observation (2026-08-26)</p>
   <div class="card">
     <div class="toolbar">
       <button id="metricTotal" class="on">Total value</button>
