@@ -144,8 +144,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           },
           {
             "name": "2026 Round 2",
@@ -1687,8 +1687,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           }
         ],
         "teamAValueThen": 330.0,
@@ -1837,8 +1837,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           },
           {
             "name": "2026 Round 1",
@@ -1871,7 +1871,7 @@
           {
             "name": "Daniel Jones",
             "type": "player",
-            "value_then": 1113,
+            "value_then": 1148,
             "value_now": 1148
           }
         ],
@@ -2137,8 +2137,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           },
           {
             "name": "2026 Round 1",
@@ -2322,8 +2322,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           }
         ],
         "teamBValueThen": 2796.0,
@@ -2356,8 +2356,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           }
         ],
         "teamAValueThen": 835.0,
@@ -3155,8 +3155,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           }
         ],
         "teamBValueThen": 393.0,
@@ -5324,8 +5324,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           },
           {
             "name": "2027 Round 3",
@@ -5848,7 +5848,7 @@
           {
             "name": "Daniel Jones",
             "type": "player",
-            "value_then": 1113,
+            "value_then": 1148,
             "value_now": 1148
           }
         ],
@@ -6137,8 +6137,8 @@
           {
             "name": "2027 Round 2",
             "type": "draft_pick",
-            "value_then": 136,
-            "value_now": 137
+            "value_then": 481,
+            "value_now": 481
           },
           {
             "name": "2027 Round 4",
@@ -6156,14 +6156,133 @@
         "marginCurrent": 796.0,
         "swingWinner": "Tie",
         "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1398424481822732288",
+        "transactionId": "1398424481822732288",
+        "tradeDate": "2026-08-26",
+        "season": "season_3",
+        "teamA": "gnewman4",
+        "teamAReceived": [
+          "Jared Goff",
+          "2027 Round 2"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Jared Goff",
+            "type": "player",
+            "value_then": 3521,
+            "value_now": 3521
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 481,
+            "value_now": 481
+          }
+        ],
+        "teamAValueThen": 3771.0,
+        "teamAValueNow": 3771.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Daniel Jones",
+          "2028 Round 1"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Daniel Jones",
+            "type": "player",
+            "value_then": 1148,
+            "value_now": 1148
+          },
+          {
+            "name": "2028 Round 1",
+            "type": "draft_pick",
+            "value_then": 2558,
+            "value_now": 2558
+          }
+        ],
+        "teamBValueThen": 3706.0,
+        "teamBValueNow": 3706.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "gnewman4",
+        "winnerCurrent": "gnewman4",
+        "marginAtTrade": 65.0,
+        "marginCurrent": 65.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
+      },
+      {
+        "tradeId": "1398421741792919552",
+        "transactionId": "1398421741792919552",
+        "tradeDate": "2026-08-26",
+        "season": "season_3",
+        "teamA": "jwalters74",
+        "teamAReceived": [
+          "DeVonta Smith",
+          "$1 FAAB"
+        ],
+        "teamAAssets": [
+          {
+            "name": "DeVonta Smith",
+            "type": "player",
+            "value_then": 3760,
+            "value_now": 3760
+          },
+          {
+            "name": "$1 FAAB",
+            "type": "faab",
+            "value_then": 1,
+            "value_now": 1
+          }
+        ],
+        "teamAValueThen": 3761.0,
+        "teamAValueNow": 3761.0,
+        "teamAValueChange": 0.0,
+        "teamB": "tylerpilgrim",
+        "teamBReceived": [
+          "Drew Allar",
+          "2028 Round 2",
+          "2027 Round 2"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Drew Allar",
+            "type": "player",
+            "value_then": 52,
+            "value_now": 52
+          },
+          {
+            "name": "2028 Round 2",
+            "type": "draft_pick",
+            "value_then": 183,
+            "value_now": 183
+          },
+          {
+            "name": "2027 Round 2",
+            "type": "draft_pick",
+            "value_then": 481,
+            "value_now": 481
+          }
+        ],
+        "teamBValueThen": 716.0,
+        "teamBValueNow": 716.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "jwalters74",
+        "winnerCurrent": "jwalters74",
+        "marginAtTrade": -3045.0,
+        "marginCurrent": -3045.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-26T14:40:24.373673",
-      "totalTrades": 109,
+      "lastUpdated": "2026-08-27T23:31:59.768927",
+      "totalTrades": 111,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-21"
+        "latest": "2026-08-26"
       },
       "seasonsIncluded": [
         "season_2",
@@ -6171,7 +6290,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 30
+        "season_3": 32
       },
       "seasonInfo": {
         "season_2": {
@@ -6180,14 +6299,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-26T14:38:55.548331Z"
+          "last_fetched": "2026-08-27T23:30:40.763931Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 111,
-        "dashboardTradesGenerated": 109,
+        "rawTradesProcessed": 113,
+        "dashboardTradesGenerated": 111,
         "multiTeamTradesSkipped": 2
       }
     }

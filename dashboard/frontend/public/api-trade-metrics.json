@@ -1,32 +1,32 @@
 {
   "metadata": {
-    "generated": "2026-08-26 14:39:58",
-    "total_trades": 109,
+    "generated": "2026-08-27 23:31:36",
+    "total_trades": 111,
     "description": "Advanced trade metrics: Sharpe Ratio, Significance Test, Opponent-Adjusted Performance"
   },
   "managers": [
     {
       "username": "gnewman4",
       "real_name": "Grant",
-      "trades": 21,
-      "net_advantage": 10971.0,
+      "trades": 22,
+      "net_advantage": 11036.0,
       "sharpe": {
-        "value": 0.298,
-        "mean": 522.4,
-        "std_dev": 1752.2,
+        "value": 0.293,
+        "mean": 501.6,
+        "std_dev": 1714.5,
         "verdict": "positive_noisy"
       },
       "significance": {
-        "wins": 11,
-        "win_rate": 52.4,
-        "p_value": 0.5,
+        "wins": 12,
+        "win_rate": 54.5,
+        "p_value": 0.4159,
         "direction": "winning",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 7,
         "positive_matchups": 6,
-        "top_opponent_concentration_pct": 52.4,
+        "top_opponent_concentration_pct": 52.1,
         "opponents": [
           {
             "opponent": "zachlearningtogolf",
@@ -52,9 +52,9 @@
           {
             "opponent": "mgaeta23",
             "opponent_name": "Matt",
-            "net_advantage": 132.0,
-            "trade_count": 2,
-            "avg_per_trade": 66.0
+            "net_advantage": 197.0,
+            "trade_count": 3,
+            "avg_per_trade": 65.7
           },
           {
             "opponent": "lndahayo",
@@ -172,25 +172,25 @@
     {
       "username": "mgaeta23",
       "real_name": "Matt",
-      "trades": 14,
-      "net_advantage": 4001.0,
+      "trades": 15,
+      "net_advantage": 3936.0,
       "sharpe": {
-        "value": 0.22,
-        "mean": 285.8,
-        "std_dev": 1296.5,
+        "value": 0.209,
+        "mean": 262.4,
+        "std_dev": 1255.6,
         "verdict": "positive_noisy"
       },
       "significance": {
         "wins": 8,
-        "win_rate": 57.1,
-        "p_value": 0.3953,
+        "win_rate": 53.3,
+        "p_value": 0.5,
         "direction": "winning",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
         "unique_opponents": 7,
         "positive_matchups": 4,
-        "top_opponent_concentration_pct": 125.8,
+        "top_opponent_concentration_pct": 127.9,
         "opponents": [
           {
             "opponent": "zachlearningtogolf",
@@ -223,9 +223,9 @@
           {
             "opponent": "gnewman4",
             "opponent_name": "Grant",
-            "net_advantage": -132.0,
-            "trade_count": 2,
-            "avg_per_trade": -66.0
+            "net_advantage": -197.0,
+            "trade_count": 3,
+            "avg_per_trade": -65.7
           },
           {
             "opponent": "brevinowens",
@@ -336,81 +336,6 @@
             "net_advantage": -4782.0,
             "trade_count": 3,
             "avg_per_trade": -1594.0
-          }
-        ]
-      }
-    },
-    {
-      "username": "tylerpilgrim",
-      "real_name": "Tyler",
-      "trades": 20,
-      "net_advantage": 1158.0,
-      "sharpe": {
-        "value": 0.035,
-        "mean": 57.9,
-        "std_dev": 1649.1,
-        "verdict": "positive_noisy"
-      },
-      "significance": {
-        "wins": 13,
-        "win_rate": 65.0,
-        "p_value": 0.1316,
-        "direction": "winning",
-        "verdict": "not_significant"
-      },
-      "opponent_adjusted": {
-        "unique_opponents": 7,
-        "positive_matchups": 4,
-        "top_opponent_concentration_pct": 502.7,
-        "opponents": [
-          {
-            "opponent": "jwalters74",
-            "opponent_name": "Johnny",
-            "net_advantage": 5821.0,
-            "trade_count": 6,
-            "avg_per_trade": 970.2
-          },
-          {
-            "opponent": "brevinowens",
-            "opponent_name": "Brevin",
-            "net_advantage": 651.0,
-            "trade_count": 1,
-            "avg_per_trade": 651.0
-          },
-          {
-            "opponent": "donewton",
-            "opponent_name": "Don",
-            "net_advantage": 571.0,
-            "trade_count": 5,
-            "avg_per_trade": 114.2
-          },
-          {
-            "opponent": "gnewman4",
-            "opponent_name": "Grant",
-            "net_advantage": 40.0,
-            "trade_count": 3,
-            "avg_per_trade": 13.3
-          },
-          {
-            "opponent": "jakeduf",
-            "opponent_name": "Jake",
-            "net_advantage": -114.0,
-            "trade_count": 1,
-            "avg_per_trade": -114.0
-          },
-          {
-            "opponent": "lndahayo",
-            "opponent_name": "Landry",
-            "net_advantage": -540.0,
-            "trade_count": 2,
-            "avg_per_trade": -270.0
-          },
-          {
-            "opponent": "thekylecasey",
-            "opponent_name": "Kyle",
-            "net_advantage": -5271.0,
-            "trade_count": 2,
-            "avg_per_trade": -2635.5
           }
         ]
       }
@@ -627,6 +552,184 @@
       }
     },
     {
+      "username": "tylerpilgrim",
+      "real_name": "Tyler",
+      "trades": 21,
+      "net_advantage": -1887.0,
+      "sharpe": {
+        "value": -0.052,
+        "mean": -89.9,
+        "std_dev": 1739.7,
+        "verdict": "losing"
+      },
+      "significance": {
+        "wins": 13,
+        "win_rate": 61.9,
+        "p_value": 0.1917,
+        "direction": "winning",
+        "verdict": "not_significant"
+      },
+      "opponent_adjusted": {
+        "unique_opponents": 7,
+        "positive_matchups": 4,
+        "top_opponent_concentration_pct": -147.1,
+        "opponents": [
+          {
+            "opponent": "jwalters74",
+            "opponent_name": "Johnny",
+            "net_advantage": 2776.0,
+            "trade_count": 7,
+            "avg_per_trade": 396.6
+          },
+          {
+            "opponent": "brevinowens",
+            "opponent_name": "Brevin",
+            "net_advantage": 651.0,
+            "trade_count": 1,
+            "avg_per_trade": 651.0
+          },
+          {
+            "opponent": "donewton",
+            "opponent_name": "Don",
+            "net_advantage": 571.0,
+            "trade_count": 5,
+            "avg_per_trade": 114.2
+          },
+          {
+            "opponent": "gnewman4",
+            "opponent_name": "Grant",
+            "net_advantage": 40.0,
+            "trade_count": 3,
+            "avg_per_trade": 13.3
+          },
+          {
+            "opponent": "jakeduf",
+            "opponent_name": "Jake",
+            "net_advantage": -114.0,
+            "trade_count": 1,
+            "avg_per_trade": -114.0
+          },
+          {
+            "opponent": "lndahayo",
+            "opponent_name": "Landry",
+            "net_advantage": -540.0,
+            "trade_count": 2,
+            "avg_per_trade": -270.0
+          },
+          {
+            "opponent": "thekylecasey",
+            "opponent_name": "Kyle",
+            "net_advantage": -5271.0,
+            "trade_count": 2,
+            "avg_per_trade": -2635.5
+          }
+        ]
+      }
+    },
+    {
+      "username": "jwalters74",
+      "real_name": "Johnny",
+      "trades": 36,
+      "net_advantage": -4020.0,
+      "sharpe": {
+        "value": -0.071,
+        "mean": -111.7,
+        "std_dev": 1562.1,
+        "verdict": "losing"
+      },
+      "significance": {
+        "wins": 15,
+        "win_rate": 41.7,
+        "p_value": 0.2025,
+        "direction": "losing",
+        "verdict": "not_significant"
+      },
+      "opponent_adjusted": {
+        "unique_opponents": 11,
+        "positive_matchups": 4,
+        "top_opponent_concentration_pct": -70.9,
+        "opponents": [
+          {
+            "opponent": "cjsyregelas",
+            "opponent_name": "Chris",
+            "net_advantage": 2849.0,
+            "trade_count": 3,
+            "avg_per_trade": 949.7
+          },
+          {
+            "opponent": "mgaeta23",
+            "opponent_name": "Matt",
+            "net_advantage": 1369.0,
+            "trade_count": 3,
+            "avg_per_trade": 456.3
+          },
+          {
+            "opponent": "thekylecasey",
+            "opponent_name": "Kyle",
+            "net_advantage": 1128.0,
+            "trade_count": 2,
+            "avg_per_trade": 564.0
+          },
+          {
+            "opponent": "jakeduf",
+            "opponent_name": "Jake",
+            "net_advantage": 140.0,
+            "trade_count": 2,
+            "avg_per_trade": 70.0
+          },
+          {
+            "opponent": "gnewman4",
+            "opponent_name": "Grant",
+            "net_advantage": -303.0,
+            "trade_count": 4,
+            "avg_per_trade": -75.8
+          },
+          {
+            "opponent": "wkerwin",
+            "opponent_name": "Will",
+            "net_advantage": -386.0,
+            "trade_count": 2,
+            "avg_per_trade": -193.0
+          },
+          {
+            "opponent": "zachlearningtogolf",
+            "opponent_name": "Zach",
+            "net_advantage": -411.0,
+            "trade_count": 5,
+            "avg_per_trade": -82.2
+          },
+          {
+            "opponent": "brevinowens",
+            "opponent_name": "Brevin",
+            "net_advantage": -541.0,
+            "trade_count": 1,
+            "avg_per_trade": -541.0
+          },
+          {
+            "opponent": "lndahayo",
+            "opponent_name": "Landry",
+            "net_advantage": -2290.0,
+            "trade_count": 5,
+            "avg_per_trade": -458.0
+          },
+          {
+            "opponent": "tylerpilgrim",
+            "opponent_name": "Tyler",
+            "net_advantage": -2776.0,
+            "trade_count": 7,
+            "avg_per_trade": -396.6
+          },
+          {
+            "opponent": "donewton",
+            "opponent_name": "Don",
+            "net_advantage": -2799.0,
+            "trade_count": 2,
+            "avg_per_trade": -1399.5
+          }
+        ]
+      }
+    },
+    {
       "username": "wkerwin",
       "real_name": "Will",
       "trades": 12,
@@ -751,109 +854,6 @@
             "net_advantage": -2849.0,
             "trade_count": 3,
             "avg_per_trade": -949.7
-          }
-        ]
-      }
-    },
-    {
-      "username": "jwalters74",
-      "real_name": "Johnny",
-      "trades": 35,
-      "net_advantage": -7065.0,
-      "sharpe": {
-        "value": -0.136,
-        "mean": -201.9,
-        "std_dev": 1489.0,
-        "verdict": "losing"
-      },
-      "significance": {
-        "wins": 14,
-        "win_rate": 40.0,
-        "p_value": 0.1553,
-        "direction": "losing",
-        "verdict": "not_significant"
-      },
-      "opponent_adjusted": {
-        "unique_opponents": 11,
-        "positive_matchups": 4,
-        "top_opponent_concentration_pct": -40.3,
-        "opponents": [
-          {
-            "opponent": "cjsyregelas",
-            "opponent_name": "Chris",
-            "net_advantage": 2849.0,
-            "trade_count": 3,
-            "avg_per_trade": 949.7
-          },
-          {
-            "opponent": "mgaeta23",
-            "opponent_name": "Matt",
-            "net_advantage": 1369.0,
-            "trade_count": 3,
-            "avg_per_trade": 456.3
-          },
-          {
-            "opponent": "thekylecasey",
-            "opponent_name": "Kyle",
-            "net_advantage": 1128.0,
-            "trade_count": 2,
-            "avg_per_trade": 564.0
-          },
-          {
-            "opponent": "jakeduf",
-            "opponent_name": "Jake",
-            "net_advantage": 140.0,
-            "trade_count": 2,
-            "avg_per_trade": 70.0
-          },
-          {
-            "opponent": "gnewman4",
-            "opponent_name": "Grant",
-            "net_advantage": -303.0,
-            "trade_count": 4,
-            "avg_per_trade": -75.8
-          },
-          {
-            "opponent": "wkerwin",
-            "opponent_name": "Will",
-            "net_advantage": -386.0,
-            "trade_count": 2,
-            "avg_per_trade": -193.0
-          },
-          {
-            "opponent": "zachlearningtogolf",
-            "opponent_name": "Zach",
-            "net_advantage": -411.0,
-            "trade_count": 5,
-            "avg_per_trade": -82.2
-          },
-          {
-            "opponent": "brevinowens",
-            "opponent_name": "Brevin",
-            "net_advantage": -541.0,
-            "trade_count": 1,
-            "avg_per_trade": -541.0
-          },
-          {
-            "opponent": "lndahayo",
-            "opponent_name": "Landry",
-            "net_advantage": -2290.0,
-            "trade_count": 5,
-            "avg_per_trade": -458.0
-          },
-          {
-            "opponent": "donewton",
-            "opponent_name": "Don",
-            "net_advantage": -2799.0,
-            "trade_count": 2,
-            "avg_per_trade": -1399.5
-          },
-          {
-            "opponent": "tylerpilgrim",
-            "opponent_name": "Tyler",
-            "net_advantage": -5821.0,
-            "trade_count": 6,
-            "avg_per_trade": -970.2
           }
         ]
       }
