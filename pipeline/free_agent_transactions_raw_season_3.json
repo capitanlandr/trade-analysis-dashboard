@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "status": "complete",
+    "type": "free_agent",
+    "metadata": null,
+    "created": 1787878431962,
+    "settings": null,
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1051659324998668288",
+    "transaction_id": "1398867168480727040",
+    "adds": null,
+    "drops": {
+      "12511": 4
+    },
+    "consenter_ids": [
+      4
+    ],
+    "roster_ids": [
+      4
+    ],
+    "status_updated": 1787878431962,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808"
+  }
+]
