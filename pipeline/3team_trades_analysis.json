@@ -4,17 +4,6 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 11175.0
-      },
-      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -39,6 +28,17 @@
         ],
         "value_then": 13482.0,
         "value_now": 12809.0
+      },
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 11175.0
       }
     ]
   },
@@ -46,16 +46,6 @@
     "date": "2026-08-20",
     "trade_id": 1396196194731950080,
     "teams": [
-      {
-        "manager": "mgaeta23",
-        "assets": [
-          "Tahj Brooks",
-          "Chris Godwin",
-          "2027 Round 1"
-        ],
-        "value_then": 1566.0,
-        "value_now": 1551.0
-      },
       {
         "manager": "tylerpilgrim",
         "assets": [
@@ -73,6 +63,16 @@
         ],
         "value_then": 3581.0,
         "value_now": 3721.0
+      },
+      {
+        "manager": "mgaeta23",
+        "assets": [
+          "Tahj Brooks",
+          "Chris Godwin",
+          "2027 Round 1"
+        ],
+        "value_then": 1566.0,
+        "value_now": 1551.0
       }
     ]
   }
