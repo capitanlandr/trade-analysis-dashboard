@@ -9,6 +9,7 @@ import CommishTiersArchive from './pages/CommishTiersArchive'
 import WaiverWireAnalysis from './pages/WaiverWireAnalysis'
 import SurveyResults from './pages/SurveyResults'
 import NflTop100 from './pages/NflTop100'
+import DraftPickValue from './pages/DraftPickValue'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
 const queryClient = new QueryClient({
@@ -58,6 +59,7 @@ function App() {
                 <Route path="waiver-wire" element={<WaiverWireAnalysis />} />
                 <Route path="survey-results" element={<SurveyResults />} />
                 <Route path="nfl-top-100" element={<NflTop100 />} />
+                <Route path="draft-value" element={<DraftPickValue />} />
               </Route>
             </Routes>
           </ErrorBoundary>

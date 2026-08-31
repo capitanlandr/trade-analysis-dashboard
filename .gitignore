@@ -167,3 +167,6 @@ poll/__pycache__/
 # Prototype scrape cache (regenerable KTC/Sleeper HTML) — kept locally, excluded from git.
 # See PROTOTYPES.md track 2.
 prototypes/data/ktc_history/raw/
+
+# draft-value: raw KTC page cache. CI has no cache and must always fetch live.
+pipeline/draft_value/_raw/

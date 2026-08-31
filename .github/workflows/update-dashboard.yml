@@ -57,6 +57,29 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
 
+      # Draft Pick Value tab. Two steps, split so a KTC outage cannot block the
+      # deploy. Step 1 hits KeepTradeCut (~103 pages, ~7 min) and appends new
+      # dates into the committed store; it is continue-on-error, and KTC history
+      # is immutable (verified: 2,162 overlapping dates, 0 value mismatches) so a
+      # re-run can only ever ADD dates, never rewrite a past number. Step 2 is
+      # pure-local and always runs: it regenerates both JSONs from whatever the
+      # store holds and stamps meta.refresh_status, so if step 1 failed the tab
+      # renders a stale-data banner instead of quietly looking current. Same
+      # preserve-last-good shape as the NFL Top 100 step above.
+      - name: Refresh draft-value store (KeepTradeCut)
+        continue-on-error: true
+        run: |
+          python3 pipeline/draft_value/build_draft_value_store.py
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: Generate draft-value JSON
+        if: always()
+        run: |
+          python3 scripts/generate_draft_value.py
+        env:
+          PYTHONUNBUFFERED: 1
+
       - name: Setup Node.js for frontend build
         uses: actions/setup-node@v3
         with:
