@@ -4,6 +4,17 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 11175.0
+      },
+      {
         "manager": "lndahayo",
         "assets": [
           "Amon-Ra St. Brown",
@@ -28,17 +39,6 @@
         ],
         "value_then": 12552.0,
         "value_now": 15111.0
-      },
-      {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 11175.0
       }
     ]
   },
@@ -46,16 +46,6 @@
     "date": "2026-08-20",
     "trade_id": 1396196194731950080,
     "teams": [
-      {
-        "manager": "lndahayo",
-        "assets": [
-          "Jaylen Waddle",
-          "2027 Round 2",
-          "2027 Round 3"
-        ],
-        "value_then": 3581.0,
-        "value_now": 3721.0
-      },
       {
         "manager": "tylerpilgrim",
         "assets": [
@@ -73,6 +63,16 @@
         ],
         "value_then": 1566.0,
         "value_now": 1551.0
+      },
+      {
+        "manager": "lndahayo",
+        "assets": [
+          "Jaylen Waddle",
+          "2027 Round 2",
+          "2027 Round 3"
+        ],
+        "value_then": 3581.0,
+        "value_now": 3721.0
       }
     ]
   }
