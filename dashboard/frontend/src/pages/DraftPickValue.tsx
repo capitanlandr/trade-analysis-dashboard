@@ -555,8 +555,11 @@ const DraftPickValue: React.FC = () => {
           <Trophy className="h-5 w-5 text-primary-600" />
           Per-Round Rollup
         </h2>
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200">
+        {/* overflow-x-auto (not overflow-hidden) so the 7 columns can be reached
+            on a 390px phone; min-w forces a real scroll instead of squashing
+            Median Rel Δ and Share Appreciating into unreadable wrapped text. */}
+        <div className="bg-white rounded-lg shadow overflow-x-auto">
+          <table className="min-w-[760px] w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Round</th>
@@ -605,8 +608,8 @@ const DraftPickValue: React.FC = () => {
             <Users className="h-5 w-5 text-primary-600" />
             Per-Position Rollup
           </h2>
-          <div className="bg-white rounded-lg shadow overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200">
+          <div className="bg-white rounded-lg shadow overflow-x-auto">
+            <table className="min-w-[600px] w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Position</th>

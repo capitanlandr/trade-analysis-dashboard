@@ -25,11 +25,11 @@
       "2025 Pick 4.10 Xavier Restrepo"
     ],
     "picks_shown": 47,
-    "generated_utc": "2026-08-31T22:39:40.275677+00:00",
+    "generated_utc": "2026-08-31T22:58:12.257470+00:00",
     "refresh_status": {
       "degraded": false,
       "data_age_days": 0,
-      "last_attempt_utc": "2026-08-31T22:38:30.744787+00:00",
+      "last_attempt_utc": "2026-08-31T22:39:55.255102+00:00",
       "last_success_date": "2026-08-31",
       "errors": [],
       "data_through": "2026-08-31"
@@ -2492,7 +2492,48 @@
       "dips": false
     }
   ],
-  "per_position": [],
+  "per_position": [
+    {
+      "pos": "QB",
+      "count": 6,
+      "median_abs_pct": -10.58,
+      "mean_abs_pct": 6.33,
+      "median_rel_delta": -17.98,
+      "class_share_pre_pct": 14.04,
+      "class_share_latest_pct": 13.58,
+      "share_appreciating": 0.333
+    },
+    {
+      "pos": "RB",
+      "count": 19,
+      "median_abs_pct": 2.96,
+      "mean_abs_pct": 50.51,
+      "median_rel_delta": -5.55,
+      "class_share_pre_pct": 38.9,
+      "class_share_latest_pct": 39.4,
+      "share_appreciating": 0.474
+    },
+    {
+      "pos": "TE",
+      "count": 6,
+      "median_abs_pct": 22.06,
+      "mean_abs_pct": 27.75,
+      "median_rel_delta": 11.98,
+      "class_share_pre_pct": 13.21,
+      "class_share_latest_pct": 15.45,
+      "share_appreciating": 0.667
+    },
+    {
+      "pos": "WR",
+      "count": 16,
+      "median_abs_pct": 7.42,
+      "mean_abs_pct": 15.9,
+      "median_rel_delta": -1.45,
+      "class_share_pre_pct": 33.85,
+      "class_share_latest_pct": 31.58,
+      "share_appreciating": 0.375
+    }
+  ],
   "round1_dips": false,
   "round1_note": "Round 1 moved -4.79% (median) off its pre-draft value and holds 37.87% of class value vs 43.5% before the draft. Share is the number that matters: it is scale-free, so a class-wide move cancels out.",
   "window_split": {

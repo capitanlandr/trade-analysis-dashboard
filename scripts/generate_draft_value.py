@@ -171,6 +171,29 @@ def build(season, picks, daily, status):
             "dips": bool(med("abs_pct") is not None and med("abs_pct") < -FLAT),
         })
 
+    # Per-position rollup. Stubbing this to [] silently HID the whole
+    # Per-Position Rollup section, since the page renders it conditionally on
+    # per_position.length > 0.
+    per_position = []
+    for pos in sorted({r["player"]["pos"] for r in rows if r["player"]["pos"]}):
+        g = [r for r in rows if r["player"]["pos"] == pos]
+
+        def pmed(k, g=g):
+            v = [x[k] for x in g if x.get(k) is not None]
+            return round(st.median(v), 2) if v else None
+
+        per_position.append({
+            "pos": pos, "count": len(g),
+            "median_abs_pct": pmed("abs_pct"),
+            "mean_abs_pct": round(st.mean([x["abs_pct"] for x in g
+                                           if x["abs_pct"] is not None]), 2),
+            "median_rel_delta": pmed("rel_delta"),
+            "class_share_pre_pct": round(sum(x["share_pct_pre"] for x in g), 2),
+            "class_share_latest_pct": round(sum(x["share_pct_latest"] for x in g), 2),
+            "share_appreciating": round(
+                sum(1 for x in g if x["verdict_relative"] == "APPRECIATED") / len(g), 3),
+        })
+
     fa = [r["fa_window_pct"] for r in rows if r["fa_window_pct"] is not None]
     dr = [r["draft_window_pct"] for r in rows if r["draft_window_pct"] is not None]
     r1 = per_round[0]
@@ -202,7 +225,7 @@ def build(season, picks, daily, status):
                 "data_through": latest_date,
             },
         },
-        "picks": rows, "per_round": per_round, "per_position": [],
+        "picks": rows, "per_round": per_round, "per_position": per_position,
         "round1_dips": bool(r1["dips"]),
         "round1_note": (
             f"Round 1 moved {r1['median_abs_pct']}% (median) off its pre-draft value and holds "
