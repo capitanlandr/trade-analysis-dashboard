@@ -2,15 +2,15 @@
   "success": true,
   "data": {
     "overview": {
-      "totalTrades": 112,
-      "totalTradeValue": 401124.0,
-      "avgTradeMargin": 901.6607142857143,
+      "totalTrades": 113,
+      "totalTradeValue": 403730.0,
+      "avgTradeMargin": 899.0796460176991,
       "mostActiveTrader": "Johnny",
       "biggestWinner": "Landry",
       "blockbusterCount": 33,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-26"
+        "latest": "2026-08-30"
       }
     },
     "teamRankings": {
@@ -32,9 +32,9 @@
           "realName": "Tyler",
           "sleeperUsername": "tylerpilgrim",
           "nickname": "Tyler",
-          "tradeCount": 21,
-          "winRate": 66.66666666666666,
-          "avgMargin": 890.952380952381,
+          "tradeCount": 22,
+          "winRate": 68.18181818181817,
+          "avgMargin": 878.1818181818181,
           "totalValueGained": 5215.0
         },
         {
@@ -120,13 +120,24 @@
           "realName": "Matt",
           "sleeperUsername": "mgaeta23",
           "nickname": "Gaeta",
-          "tradeCount": 15,
-          "winRate": 53.333333333333336,
-          "avgMargin": 637.1333333333333,
+          "tradeCount": 16,
+          "winRate": 50.0,
+          "avgMargin": 635.4375,
           "totalValueGained": -2422.0
         }
       ],
       "byWinRate": [
+        {
+          "rosterId": 8,
+          "teamName": "FETTI",
+          "realName": "Tyler",
+          "sleeperUsername": "tylerpilgrim",
+          "nickname": "Tyler",
+          "tradeCount": 22,
+          "winRate": 68.18181818181817,
+          "avgMargin": 878.1818181818181,
+          "totalValueGained": 5215.0
+        },
         {
           "rosterId": 3,
           "teamName": "Golden Hour",
@@ -137,17 +148,6 @@
           "winRate": 66.66666666666666,
           "avgMargin": 365.3333333333333,
           "totalValueGained": -1236.0
-        },
-        {
-          "rosterId": 8,
-          "teamName": "FETTI",
-          "realName": "Tyler",
-          "sleeperUsername": "tylerpilgrim",
-          "nickname": "Tyler",
-          "tradeCount": 21,
-          "winRate": 66.66666666666666,
-          "avgMargin": 890.952380952381,
-          "totalValueGained": 5215.0
         },
         {
           "rosterId": 1,
@@ -172,17 +172,6 @@
           "totalValueGained": -1644.0
         },
         {
-          "rosterId": 9,
-          "teamName": "Gaeta Spur FC",
-          "realName": "Matt",
-          "sleeperUsername": "mgaeta23",
-          "nickname": "Gaeta",
-          "tradeCount": 15,
-          "winRate": 53.333333333333336,
-          "avgMargin": 637.1333333333333,
-          "totalValueGained": -2422.0
-        },
-        {
           "rosterId": 2,
           "teamName": "The Federal Reserve",
           "realName": "Grant",
@@ -203,6 +192,17 @@
           "winRate": 50.0,
           "avgMargin": 1209.5,
           "totalValueGained": -1938.0
+        },
+        {
+          "rosterId": 9,
+          "teamName": "Gaeta Spur FC",
+          "realName": "Matt",
+          "sleeperUsername": "mgaeta23",
+          "nickname": "Gaeta",
+          "tradeCount": 16,
+          "winRate": 50.0,
+          "avgMargin": 635.4375,
+          "totalValueGained": -2422.0
         },
         {
           "rosterId": 5,
@@ -289,9 +289,9 @@
           "realName": "Tyler",
           "sleeperUsername": "tylerpilgrim",
           "nickname": "Tyler",
-          "tradeCount": 21,
-          "winRate": 66.66666666666666,
-          "avgMargin": 890.952380952381,
+          "tradeCount": 22,
+          "winRate": 68.18181818181817,
+          "avgMargin": 878.1818181818181,
           "totalValueGained": 5215.0
         },
         {
@@ -311,9 +311,9 @@
           "realName": "Matt",
           "sleeperUsername": "mgaeta23",
           "nickname": "Gaeta",
-          "tradeCount": 15,
-          "winRate": 53.333333333333336,
-          "avgMargin": 637.1333333333333,
+          "tradeCount": 16,
+          "winRate": 50.0,
+          "avgMargin": 635.4375,
           "totalValueGained": -2422.0
         },
         {
@@ -358,7 +358,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 33
+        "season_3": 34
       },
       "seasonInfo": {
         "season_2": {
@@ -367,60 +367,11 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-30T17:52:20.452738Z"
+          "last_fetched": "2026-08-31T19:48:14.092258Z"
         }
       }
     },
     "recentActivity": [
-      {
-        "tradeId": "1390759953450414080",
-        "transactionId": "1390759953450414080",
-        "tradeDate": "2026-08-05",
-        "season": "season_3",
-        "teamA": "cjsyregelas",
-        "teamAReceived": [
-          "Bo Nix",
-          "Skyler Bell"
-        ],
-        "teamAAssets": [
-          {
-            "name": "Bo Nix",
-            "type": "player",
-            "value_then": 5489,
-            "value_now": 5862
-          },
-          {
-            "name": "Skyler Bell",
-            "type": "player",
-            "value_then": 121,
-            "value_now": 99
-          }
-        ],
-        "teamAValueThen": 5610.0,
-        "teamAValueNow": 5961.0,
-        "teamAValueChange": 351.0,
-        "teamB": "donewton",
-        "teamBReceived": [
-          "James Cook"
-        ],
-        "teamBAssets": [
-          {
-            "name": "James Cook",
-            "type": "player",
-            "value_then": 4962,
-            "value_now": 5374
-          }
-        ],
-        "teamBValueThen": 4962.0,
-        "teamBValueNow": 5374.0,
-        "teamBValueChange": 412.0,
-        "winnerAtTrade": "cjsyregelas",
-        "winnerCurrent": "cjsyregelas",
-        "marginAtTrade": 648.0,
-        "marginCurrent": 587.0,
-        "swingWinner": "cjsyregelas",
-        "swingMargin": 61.0
-      },
       {
         "tradeId": "1391287814628311040",
         "transactionId": "1391287814628311040",
@@ -680,7 +631,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -785,7 +736,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -966,6 +917,76 @@
         "marginCurrent": -217.0,
         "swingWinner": "gnewman4",
         "swingMargin": 2.0
+      },
+      {
+        "tradeId": "1399884691384844288",
+        "transactionId": "1399884691384844288",
+        "tradeDate": "2026-08-30",
+        "season": "season_3",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "Chris Godwin",
+          "Dallas Goedert",
+          "Jakobi Meyers"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Chris Godwin",
+            "type": "player",
+            "value_then": 571,
+            "value_now": 571
+          },
+          {
+            "name": "Dallas Goedert",
+            "type": "player",
+            "value_then": 440,
+            "value_now": 440
+          },
+          {
+            "name": "Jakobi Meyers",
+            "type": "player",
+            "value_then": 597,
+            "value_now": 597
+          }
+        ],
+        "teamAValueThen": 1608.0,
+        "teamAValueNow": 1608.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Jalen Coker",
+          "Brenton Strange",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jalen Coker",
+            "type": "player",
+            "value_then": 440,
+            "value_now": 440
+          },
+          {
+            "name": "Brenton Strange",
+            "type": "player",
+            "value_then": 545,
+            "value_now": 545
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 13,
+            "value_now": 13
+          }
+        ],
+        "teamBValueThen": 998.0,
+        "teamBValueNow": 998.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": -610.0,
+        "marginCurrent": -610.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ]
   }

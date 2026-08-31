@@ -1,22 +1,22 @@
 {
   "summary": {
-    "total_waiver_transactions": 414,
-    "total_free_agent_transactions": 295,
-    "successful_waivers": 299,
-    "failed_waivers": 115,
-    "total_waiver_bids": "2765",
-    "average_waiver_bid": 13.357487922705314
+    "total_waiver_transactions": 422,
+    "total_free_agent_transactions": 300,
+    "successful_waivers": 306,
+    "failed_waivers": 116,
+    "total_waiver_bids": "2795",
+    "average_waiver_bid": 13.4375
   },
   "manager_activity": [
     {
       "roster_id": 1,
       "team_name": "208 Ferrari Way",
-      "total_claims": 29,
+      "total_claims": 34,
       "total_bid": 153,
-      "avg_bid": 3.73,
+      "avg_bid": 3.33,
       "max_bid": 52,
-      "successful_claims": 28,
-      "success_rate": 96.6
+      "successful_claims": 32,
+      "success_rate": 94.1
     },
     {
       "roster_id": 2,
@@ -31,11 +31,11 @@
     {
       "roster_id": 3,
       "team_name": "Golden Hour",
-      "total_claims": 20,
+      "total_claims": 21,
       "total_bid": 222,
-      "avg_bid": 7.4,
+      "avg_bid": 7.16,
       "max_bid": 46,
-      "successful_claims": 20,
+      "successful_claims": 21,
       "success_rate": 100.0
     },
     {
@@ -51,12 +51,12 @@
     {
       "roster_id": 5,
       "team_name": "Mommy Rainier ",
-      "total_claims": 40,
-      "total_bid": 273,
-      "avg_bid": 4.71,
+      "total_claims": 42,
+      "total_bid": 303,
+      "avg_bid": 5.05,
       "max_bid": 55,
-      "successful_claims": 39,
-      "success_rate": 97.5
+      "successful_claims": 41,
+      "success_rate": 97.6
     },
     {
       "roster_id": 6,
@@ -131,8 +131,8 @@
   ],
   "weekly_activity": {
     "1": {
-      "free_agent": 164,
-      "waiver": 265
+      "free_agent": 169,
+      "waiver": 273
     },
     "2": {
       "free_agent": 7,
@@ -312,9 +312,9 @@
       "4": 10,
       "25": 9,
       "11": 9,
+      "6": 8,
       "3": 8,
       "7": 8,
-      "6": 8,
       "9": 6,
       "15": 6,
       "8": 5,
@@ -322,21 +322,22 @@
       "41": 3,
       "13": 3,
       "50": 2,
-      "38": 2,
-      "17": 2,
       "51": 2,
+      "17": 2,
+      "38": 2,
       "43": 2,
+      "24": 2,
       "16": 2,
       "32": 2,
       "52": 2,
       "39": 2,
       "31": 2,
       "46": 2,
-      "24": 2,
       "109": 1,
       "55": 1,
       "84": 1,
-      "75": 1
+      "75": 1,
+      "30": 1
     },
     "highest_bids": [
       {
@@ -400,14 +401,14 @@
         "status": "complete"
       }
     ],
-    "zero_bid_success_rate": 81.15942028985508
+    "zero_bid_success_rate": 81.30841121495327
   },
   "multi_season_metadata": {
     "processed_seasons": [
       "season_3"
     ],
-    "total_new_transactions": 0,
-    "total_duplicates": 3,
+    "total_new_transactions": 13,
+    "total_duplicates": 0,
     "fetch_mode": "incremental"
   }
 }
