@@ -4,6 +4,28 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12809.0
+      },
+      {
+        "manager": "cjsyregelas",
+        "assets": [
+          "Rome Odunze",
+          "Josh Jacobs",
+          "C.J. Stroud",
+          "2025 Round 2"
+        ],
+        "value_then": 15270.0,
+        "value_now": 11175.0
+      },
+      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -16,29 +38,7 @@
           "2026 Round 1"
         ],
         "value_then": 12552.0,
-        "value_now": 15074.0
-      },
-      {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12501.0
-      },
-      {
-        "manager": "cjsyregelas",
-        "assets": [
-          "Rome Odunze",
-          "Josh Jacobs",
-          "C.J. Stroud",
-          "2025 Round 2"
-        ],
-        "value_then": 15270.0,
-        "value_now": 11180.0
+        "value_now": 15111.0
       }
     ]
   },
@@ -47,14 +47,12 @@
     "trade_id": 1396196194731950080,
     "teams": [
       {
-        "manager": "mgaeta23",
+        "manager": "tylerpilgrim",
         "assets": [
-          "Tahj Brooks",
-          "Chris Godwin",
-          "2027 Round 1"
+          "DeVonta Smith"
         ],
-        "value_then": 1566.0,
-        "value_now": 1572.0
+        "value_then": 3760.0,
+        "value_now": 3690.0
       },
       {
         "manager": "lndahayo",
@@ -64,15 +62,17 @@
           "2027 Round 3"
         ],
         "value_then": 3581.0,
-        "value_now": 3663.0
+        "value_now": 3721.0
       },
       {
-        "manager": "tylerpilgrim",
+        "manager": "mgaeta23",
         "assets": [
-          "DeVonta Smith"
+          "Tahj Brooks",
+          "Chris Godwin",
+          "2027 Round 1"
         ],
-        "value_then": 3760.0,
-        "value_now": 3760.0
+        "value_then": 1566.0,
+        "value_now": 1551.0
       }
     ]
   }
