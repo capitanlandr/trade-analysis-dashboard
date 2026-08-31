@@ -80,6 +80,33 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
 
+      # Persist the appended rows. Without this the refresh is throwaway: the
+      # "Run pipeline and update dashboard" step does its `git add .` commit
+      # BEFORE these steps run, so the new dates would be built into the deployed
+      # JSON and then discarded, leaving the committed store frozen forever.
+      # That still renders correctly today (each KTC page carries the full series,
+      # so CI re-derives it), but it defeats the archive: KTC RETIRES pick assets
+      # after a draft, so once the 2027 draft lands the 2026 tier history is gone
+      # from the source and only our commits would still hold it.
+      # Targeted add (not `git add .`) so this can never sweep up unrelated files.
+      - name: Commit draft-value store
+        if: always()
+        continue-on-error: true
+        run: |
+          if [ -z "$(git status --porcelain pipeline/draft_value)" ]; then
+            echo "store unchanged, nothing to commit"
+            exit 0
+          fi
+          git add pipeline/draft_value/draft_value_daily.csv \
+                  pipeline/draft_value/draft_value_picks.csv \
+                  pipeline/draft_value/refresh_status.json
+          git commit -m "data: append draft-value store - $(date -u '+%Y-%m-%d %H:%M:%S')"
+          # The earlier pipeline step already pushed, so rebase onto whatever
+          # landed before pushing to avoid a non-fast-forward reject.
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+          echo "store committed and pushed"
+
       - name: Setup Node.js for frontend build
         uses: actions/setup-node@v3
         with:
