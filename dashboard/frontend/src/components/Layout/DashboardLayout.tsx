@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { BarChart3, TrendingUp, Trophy, RefreshCw, Award, FileText, Users, Target, ClipboardList, ListOrdered, Layers } from 'lucide-react';
 import HostingBanner from '../UI/HostingBanner';
-import ChampionBanner from '../UI/ChampionBanner';
 import { useStandingsData } from '../../services/api';
 import { activeSeason } from '../../config/seasons';
 
@@ -67,8 +66,6 @@ const DashboardLayout: React.FC = () => {
       {/* Hosting Migration Banner */}
       <HostingBanner />
 
-      {/* Championship Banner */}
-      <ChampionBanner />
 
       {/* Navigation */}
       <nav className="bg-white shadow-sm relative z-20">

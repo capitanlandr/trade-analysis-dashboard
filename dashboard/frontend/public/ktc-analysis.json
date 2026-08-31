@@ -28,11 +28,11 @@
       "2026 Pick 4.12 Tanner Koziol"
     ],
     "picks_shown": 44,
-    "generated_utc": "2026-08-31T22:39:40.270162+00:00",
+    "generated_utc": "2026-08-31T22:58:12.251659+00:00",
     "refresh_status": {
       "degraded": false,
       "data_age_days": 0,
-      "last_attempt_utc": "2026-08-31T22:38:30.744787+00:00",
+      "last_attempt_utc": "2026-08-31T22:39:55.255102+00:00",
       "last_success_date": "2026-08-31",
       "errors": [],
       "data_through": "2026-08-31"
@@ -2342,7 +2342,48 @@
       "dips": false
     }
   ],
-  "per_position": [],
+  "per_position": [
+    {
+      "pos": "QB",
+      "count": 6,
+      "median_abs_pct": -5.91,
+      "mean_abs_pct": 3.32,
+      "median_rel_delta": -7.04,
+      "class_share_pre_pct": 13.3,
+      "class_share_latest_pct": 13.22,
+      "share_appreciating": 0.333
+    },
+    {
+      "pos": "RB",
+      "count": 11,
+      "median_abs_pct": 6.58,
+      "mean_abs_pct": 8.16,
+      "median_rel_delta": 5.31,
+      "class_share_pre_pct": 24.56,
+      "class_share_latest_pct": 26.06,
+      "share_appreciating": 0.545
+    },
+    {
+      "pos": "TE",
+      "count": 6,
+      "median_abs_pct": -5.4,
+      "mean_abs_pct": 5.16,
+      "median_rel_delta": -6.53,
+      "class_share_pre_pct": 12.18,
+      "class_share_latest_pct": 11.41,
+      "share_appreciating": 0.333
+    },
+    {
+      "pos": "WR",
+      "count": 21,
+      "median_abs_pct": -2.98,
+      "mean_abs_pct": 3.53,
+      "median_rel_delta": -4.15,
+      "class_share_pre_pct": 49.96,
+      "class_share_latest_pct": 49.32,
+      "share_appreciating": 0.286
+    }
+  ],
   "round1_dips": true,
   "round1_note": "Round 1 moved -6.55% (median) off its pre-draft value and holds 40.05% of class value vs 43.14% before the draft. Share is the number that matters: it is scale-free, so a class-wide move cancels out.",
   "window_split": {
