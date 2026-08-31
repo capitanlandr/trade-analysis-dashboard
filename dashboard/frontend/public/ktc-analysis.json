@@ -1,0 +1,2390 @@
+{
+  "meta": {
+    "season": 2026,
+    "source": "KeepTradeCut",
+    "format": "SF",
+    "is_fixture": false,
+    "value_column": "KTC Superflex",
+    "draft_day": "2026-04-27",
+    "draft_started_utc": "2026-04-27T00:00:00Z",
+    "baseline_date": "2026-04-26",
+    "baseline_days_before_draft": 1,
+    "baseline_predates_free_agency": false,
+    "baseline_kind": "pick_tier",
+    "pre_draft_snapshot": {
+      "date": "2026-04-26",
+      "sha": "ktc-store"
+    },
+    "post_draft_snapshot": {
+      "date": "2026-04-28",
+      "sha": "ktc-store"
+    },
+    "latest": "2026-08-31",
+    "gap_note": "KTC publishes near-daily including draft day, so this baseline really is the day before the draft and free agency is isolated as its own segment. Baseline is the PICK-TIER value (KTC prices picks Early/Mid/Late per round), so all four picks in a tier share one pre-draft number.",
+    "picks_excluded_no_ktc_data": [
+      "2026 Pick 4.03 Josh Cameron",
+      "2026 Pick 4.04 Seth McGowan",
+      "2026 Pick 4.10 Michael Trigg",
+      "2026 Pick 4.12 Tanner Koziol"
+    ],
+    "picks_shown": 44,
+    "generated_utc": "2026-08-31T22:39:40.270162+00:00",
+    "refresh_status": {
+      "degraded": false,
+      "data_age_days": 0,
+      "last_attempt_utc": "2026-08-31T22:38:30.744787+00:00",
+      "last_success_date": "2026-08-31",
+      "errors": [],
+      "data_through": "2026-08-31"
+    }
+  },
+  "picks": [
+    {
+      "pick_label": "2026 Pick 1.01",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 1,
+      "overall": 1,
+      "owner_team": "All You Need Is LOVE",
+      "player": {
+        "name": "Jeremiyah Love",
+        "sleeper_id": "13287",
+        "pos": "RB",
+        "nfl_team": "ARI"
+      },
+      "pre_draft_pick_value": 5730.0,
+      "latest_player_value": 7332.0,
+      "share_pct_pre": 4.2905,
+      "share_pct_latest": 5.4243,
+      "abs_delta": 1602.0,
+      "abs_pct": 27.96,
+      "rel_delta": 26.43,
+      "fa_window_pct": -4.15,
+      "draft_window_pct": 32.25,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 1,
+      "rank_latest": 1,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 7578.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 7612.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 7540.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 7332.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.02",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 2,
+      "overall": 2,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Fernando Mendoza",
+        "sleeper_id": "13269",
+        "pos": "QB",
+        "nfl_team": "LV"
+      },
+      "pre_draft_pick_value": 5730.0,
+      "latest_player_value": 5295.0,
+      "share_pct_pre": 4.2905,
+      "share_pct_latest": 3.9173,
+      "abs_delta": -435.0,
+      "abs_pct": -7.59,
+      "rel_delta": -8.7,
+      "fa_window_pct": -4.15,
+      "draft_window_pct": -1.31,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 2,
+      "rank_latest": 3,
+      "rank_change": -1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 5655.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 5612.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 5505.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5295.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.03",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 3,
+      "overall": 3,
+      "owner_team": "Lisan al-Caleb",
+      "player": {
+        "name": "Carnell Tate",
+        "sleeper_id": "13279",
+        "pos": "WR",
+        "nfl_team": "TEN"
+      },
+      "pre_draft_pick_value": 5730.0,
+      "latest_player_value": 5559.0,
+      "share_pct_pre": 4.2905,
+      "share_pct_latest": 4.1126,
+      "abs_delta": -171.0,
+      "abs_pct": -2.98,
+      "rel_delta": -4.15,
+      "fa_window_pct": -4.15,
+      "draft_window_pct": -1.06,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 3,
+      "rank_latest": 2,
+      "rank_change": 1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 5669.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 5892.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 5938.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5559.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.04",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 4,
+      "overall": 4,
+      "owner_team": "Lisan al-Caleb",
+      "player": {
+        "name": "Jordyn Tyson",
+        "sleeper_id": "13281",
+        "pos": "WR",
+        "nfl_team": "NO"
+      },
+      "pre_draft_pick_value": 5730.0,
+      "latest_player_value": 4952.0,
+      "share_pct_pre": 4.2905,
+      "share_pct_latest": 3.6635,
+      "abs_delta": -778.0,
+      "abs_pct": -13.58,
+      "rel_delta": -14.61,
+      "fa_window_pct": -4.15,
+      "draft_window_pct": -10.59,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 4,
+      "rank_latest": 5,
+      "rank_change": -1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 5123.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 5399.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 5296.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4952.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.05",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 5,
+      "overall": 5,
+      "owner_team": "FETTI",
+      "player": {
+        "name": "Makai Lemon",
+        "sleeper_id": "13294",
+        "pos": "WR",
+        "nfl_team": "PHI"
+      },
+      "pre_draft_pick_value": 4741.0,
+      "latest_player_value": 4770.0,
+      "share_pct_pre": 3.5499,
+      "share_pct_latest": 3.5289,
+      "abs_delta": 29.0,
+      "abs_pct": 0.61,
+      "rel_delta": -0.59,
+      "fa_window_pct": 1.3,
+      "draft_window_pct": 8.1,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 5,
+      "rank_latest": 6,
+      "rank_change": -1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 5125.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 5072.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 4928.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4770.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.06",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 6,
+      "overall": 6,
+      "owner_team": "All You Need Is LOVE",
+      "player": {
+        "name": "KC Concepcion",
+        "sleeper_id": "13298",
+        "pos": "WR",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 4741.0,
+      "latest_player_value": 4714.0,
+      "share_pct_pre": 3.5499,
+      "share_pct_latest": 3.4875,
+      "abs_delta": -27.0,
+      "abs_pct": -0.57,
+      "rel_delta": -1.76,
+      "fa_window_pct": 1.3,
+      "draft_window_pct": -9.89,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 6,
+      "rank_latest": 7,
+      "rank_change": -1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 4272.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 4516.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 4369.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4714.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.07",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 7,
+      "overall": 7,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Jadarian Price",
+        "sleeper_id": "13286",
+        "pos": "RB",
+        "nfl_team": "SEA"
+      },
+      "pre_draft_pick_value": 4741.0,
+      "latest_player_value": 5094.0,
+      "share_pct_pre": 3.5499,
+      "share_pct_latest": 3.7686,
+      "abs_delta": 353.0,
+      "abs_pct": 7.45,
+      "rel_delta": 6.16,
+      "fa_window_pct": 1.3,
+      "draft_window_pct": -7.51,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 7,
+      "rank_latest": 4,
+      "rank_change": 3,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 4385.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 4864.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 4775.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5094.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.08",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 8,
+      "overall": 8,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Kenyon Sadiq",
+        "sleeper_id": "13330",
+        "pos": "TE",
+        "nfl_team": "NYJ"
+      },
+      "pre_draft_pick_value": 4741.0,
+      "latest_player_value": 3637.0,
+      "share_pct_pre": 3.5499,
+      "share_pct_latest": 2.6907,
+      "abs_delta": -1104.0,
+      "abs_pct": -23.29,
+      "rel_delta": -24.2,
+      "fa_window_pct": 1.3,
+      "draft_window_pct": -13.2,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 8,
+      "rank_latest": 11,
+      "rank_change": -3,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 4115.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 4149.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3992.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3637.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.09",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 9,
+      "overall": 9,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Omar Cooper",
+        "sleeper_id": "13276",
+        "pos": "WR",
+        "nfl_team": "NYJ"
+      },
+      "pre_draft_pick_value": 3931.0,
+      "latest_player_value": 3301.0,
+      "share_pct_pre": 2.9434,
+      "share_pct_latest": 2.4421,
+      "abs_delta": -630.0,
+      "abs_pct": -16.03,
+      "rel_delta": -17.03,
+      "fa_window_pct": -6.54,
+      "draft_window_pct": -3.1,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 9,
+      "rank_latest": 12,
+      "rank_change": -3,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 3809.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3849.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3598.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3301.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.10",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 10,
+      "overall": 10,
+      "owner_team": "All You Need Is LOVE",
+      "player": {
+        "name": "Eli Stowers",
+        "sleeper_id": "13349",
+        "pos": "TE",
+        "nfl_team": "PHI"
+      },
+      "pre_draft_pick_value": 3931.0,
+      "latest_player_value": 3030.0,
+      "share_pct_pre": 2.9434,
+      "share_pct_latest": 2.2416,
+      "abs_delta": -901.0,
+      "abs_pct": -22.92,
+      "rel_delta": -23.84,
+      "fa_window_pct": -6.54,
+      "draft_window_pct": -14.04,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 10,
+      "rank_latest": 16,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 3379.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3643.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3467.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3030.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.11",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 11,
+      "overall": 11,
+      "owner_team": "Golden Hour",
+      "player": {
+        "name": "Nicholas Singleton",
+        "sleeper_id": "13288",
+        "pos": "RB",
+        "nfl_team": "TEN"
+      },
+      "pre_draft_pick_value": 3931.0,
+      "latest_player_value": 2740.0,
+      "share_pct_pre": 2.9434,
+      "share_pct_latest": 2.0271,
+      "abs_delta": -1191.0,
+      "abs_pct": -30.3,
+      "rel_delta": -31.13,
+      "fa_window_pct": -6.54,
+      "draft_window_pct": -31.87,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 11,
+      "rank_latest": 22,
+      "rank_change": -11,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2678.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2974.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2832.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2740.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 1.12",
+      "ktc_tier": "pick_tier",
+      "round": 1,
+      "slot": 12,
+      "overall": 12,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Ty Simpson",
+        "sleeper_id": "13275",
+        "pos": "QB",
+        "nfl_team": "LAR"
+      },
+      "pre_draft_pick_value": 3931.0,
+      "latest_player_value": 3714.0,
+      "share_pct_pre": 2.9434,
+      "share_pct_latest": 2.7477,
+      "abs_delta": -217.0,
+      "abs_pct": -5.52,
+      "rel_delta": -6.65,
+      "fa_window_pct": -6.54,
+      "draft_window_pct": -10.4,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 12,
+      "rank_latest": 9,
+      "rank_change": 3,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 3522.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3644.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3565.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3714.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.01",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 1,
+      "overall": 13,
+      "owner_team": "All You Need Is LOVE",
+      "player": {
+        "name": "Chris Bell",
+        "sleeper_id": "13311",
+        "pos": "WR",
+        "nfl_team": "MIA"
+      },
+      "pre_draft_pick_value": 3311.0,
+      "latest_player_value": 3029.0,
+      "share_pct_pre": 2.4792,
+      "share_pct_latest": 2.2409,
+      "abs_delta": -282.0,
+      "abs_pct": -8.52,
+      "rel_delta": -9.61,
+      "fa_window_pct": -3.89,
+      "draft_window_pct": -20.81,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 13,
+      "rank_latest": 17,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2622.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3008.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3010.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3029.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.02",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 2,
+      "overall": 14,
+      "owner_team": "Omar Comin",
+      "player": {
+        "name": "Denzel Boston",
+        "sleeper_id": "13346",
+        "pos": "WR",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 3311.0,
+      "latest_player_value": 3713.0,
+      "share_pct_pre": 2.4792,
+      "share_pct_latest": 2.7469,
+      "abs_delta": 402.0,
+      "abs_pct": 12.14,
+      "rel_delta": 10.8,
+      "fa_window_pct": -3.89,
+      "draft_window_pct": 2.99,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 14,
+      "rank_latest": 10,
+      "rank_change": 4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 3410.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3434.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3413.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3713.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.03",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 3,
+      "overall": 15,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Jonah Coleman",
+        "sleeper_id": "13345",
+        "pos": "RB",
+        "nfl_team": "DEN"
+      },
+      "pre_draft_pick_value": 3311.0,
+      "latest_player_value": 3294.0,
+      "share_pct_pre": 2.4792,
+      "share_pct_latest": 2.4369,
+      "abs_delta": -17.0,
+      "abs_pct": -0.51,
+      "rel_delta": -1.71,
+      "fa_window_pct": -3.89,
+      "draft_window_pct": -15.37,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 15,
+      "rank_latest": 13,
+      "rank_change": 2,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2802.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 3147.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3185.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3294.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.04",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 4,
+      "overall": 16,
+      "owner_team": "Lisan al-Caleb",
+      "player": {
+        "name": "De'Zhaun Stribling",
+        "sleeper_id": "13417",
+        "pos": "WR",
+        "nfl_team": "SF"
+      },
+      "pre_draft_pick_value": 3311.0,
+      "latest_player_value": 3920.0,
+      "share_pct_pre": 2.4792,
+      "share_pct_latest": 2.9001,
+      "abs_delta": 609.0,
+      "abs_pct": 18.39,
+      "rel_delta": 16.98,
+      "fa_window_pct": -3.89,
+      "draft_window_pct": -72.55,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 16,
+      "rank_latest": 8,
+      "rank_change": 8,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 909.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2545.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2827.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3920.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.05",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 5,
+      "overall": 17,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Elijah Sarratt",
+        "sleeper_id": "13268",
+        "pos": "WR",
+        "nfl_team": "BAL"
+      },
+      "pre_draft_pick_value": 3005.0,
+      "latest_player_value": 2485.0,
+      "share_pct_pre": 2.2501,
+      "share_pct_latest": 1.8384,
+      "abs_delta": -520.0,
+      "abs_pct": -17.3,
+      "rel_delta": -18.3,
+      "fa_window_pct": -0.92,
+      "draft_window_pct": -14.98,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 17,
+      "rank_latest": 30,
+      "rank_change": -13,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2555.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2766.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2694.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2485.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.06",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 6,
+      "overall": 18,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Antonio Williams",
+        "sleeper_id": "13301",
+        "pos": "WR",
+        "nfl_team": "WAS"
+      },
+      "pre_draft_pick_value": 3005.0,
+      "latest_player_value": 2874.0,
+      "share_pct_pre": 2.2501,
+      "share_pct_latest": 2.1262,
+      "abs_delta": -131.0,
+      "abs_pct": -4.36,
+      "rel_delta": -5.51,
+      "fa_window_pct": -0.92,
+      "draft_window_pct": -40.8,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 18,
+      "rank_latest": 19,
+      "rank_change": -1,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1779.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2990.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 3061.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2874.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.07",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 7,
+      "overall": 19,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Zachariah Branch",
+        "sleeper_id": "13320",
+        "pos": "WR",
+        "nfl_team": "ATL"
+      },
+      "pre_draft_pick_value": 3005.0,
+      "latest_player_value": 2731.0,
+      "share_pct_pre": 2.2501,
+      "share_pct_latest": 2.0204,
+      "abs_delta": -274.0,
+      "abs_pct": -9.12,
+      "rel_delta": -10.21,
+      "fa_window_pct": -0.92,
+      "draft_window_pct": -22.8,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 19,
+      "rank_latest": 23,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2320.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2708.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2743.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2731.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.08",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 8,
+      "overall": 20,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Malachi Fields",
+        "sleeper_id": "13285",
+        "pos": "WR",
+        "nfl_team": "NYG"
+      },
+      "pre_draft_pick_value": 3005.0,
+      "latest_player_value": 2830.0,
+      "share_pct_pre": 2.2501,
+      "share_pct_latest": 2.0937,
+      "abs_delta": -175.0,
+      "abs_pct": -5.82,
+      "rel_delta": -6.95,
+      "fa_window_pct": -0.92,
+      "draft_window_pct": -26.49,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 20,
+      "rank_latest": 20,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2209.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2685.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2639.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2830.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.09",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 9,
+      "overall": 21,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Ted Hurst",
+        "sleeper_id": "13317",
+        "pos": "WR",
+        "nfl_team": "TB"
+      },
+      "pre_draft_pick_value": 2771.0,
+      "latest_player_value": 2535.0,
+      "share_pct_pre": 2.0748,
+      "share_pct_latest": 1.8754,
+      "abs_delta": -236.0,
+      "abs_pct": -8.52,
+      "rel_delta": -9.61,
+      "fa_window_pct": 0.22,
+      "draft_window_pct": -47.28,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 21,
+      "rank_latest": 27,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1461.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2412.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2613.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2535.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.10",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 10,
+      "overall": 22,
+      "owner_team": "Mostly Washed",
+      "player": {
+        "name": "Germie Bernard",
+        "sleeper_id": "13274",
+        "pos": "WR",
+        "nfl_team": "PIT"
+      },
+      "pre_draft_pick_value": 2771.0,
+      "latest_player_value": 2901.0,
+      "share_pct_pre": 2.0748,
+      "share_pct_latest": 2.1462,
+      "abs_delta": 130.0,
+      "abs_pct": 4.69,
+      "rel_delta": 3.44,
+      "fa_window_pct": 0.22,
+      "draft_window_pct": -10.72,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 22,
+      "rank_latest": 18,
+      "rank_change": 4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2474.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2933.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2919.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2901.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.11",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 11,
+      "overall": 23,
+      "owner_team": "C\u00e1rtel de Breece y Puka",
+      "player": {
+        "name": "Chris Brazzell",
+        "sleeper_id": "13353",
+        "pos": "WR",
+        "nfl_team": "CAR"
+      },
+      "pre_draft_pick_value": 2771.0,
+      "latest_player_value": 2238.0,
+      "share_pct_pre": 2.0748,
+      "share_pct_latest": 1.6557,
+      "abs_delta": -533.0,
+      "abs_pct": -19.23,
+      "rel_delta": -20.2,
+      "fa_window_pct": 0.22,
+      "draft_window_pct": -7.33,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 23,
+      "rank_latest": 35,
+      "rank_change": -12,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2568.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2594.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2490.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2238.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 2.12",
+      "ktc_tier": "pick_tier",
+      "round": 2,
+      "slot": 12,
+      "overall": 24,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Kaytron Allen",
+        "sleeper_id": "13405",
+        "pos": "RB",
+        "nfl_team": "WAS"
+      },
+      "pre_draft_pick_value": 2771.0,
+      "latest_player_value": 2489.0,
+      "share_pct_pre": 2.0748,
+      "share_pct_latest": 1.8414,
+      "abs_delta": -282.0,
+      "abs_pct": -10.18,
+      "rel_delta": -11.25,
+      "fa_window_pct": 0.22,
+      "draft_window_pct": -23.1,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 24,
+      "rank_latest": 29,
+      "rank_change": -5,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2131.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2584.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2537.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2489.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.01",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 1,
+      "overall": 25,
+      "owner_team": "Omar Comin",
+      "player": {
+        "name": "Skyler Bell",
+        "sleeper_id": "13402",
+        "pos": "WR",
+        "nfl_team": "BUF"
+      },
+      "pre_draft_pick_value": 2343.0,
+      "latest_player_value": 2371.0,
+      "share_pct_pre": 1.7544,
+      "share_pct_latest": 1.7541,
+      "abs_delta": 28.0,
+      "abs_pct": 1.2,
+      "rel_delta": -0.02,
+      "fa_window_pct": -0.3,
+      "draft_window_pct": -14.55,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 25,
+      "rank_latest": 32,
+      "rank_change": -7,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2002.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2531.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2453.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2371.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.02",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 2,
+      "overall": 26,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Max Klare",
+        "sleeper_id": "13278",
+        "pos": "TE",
+        "nfl_team": "LAR"
+      },
+      "pre_draft_pick_value": 2343.0,
+      "latest_player_value": 2254.0,
+      "share_pct_pre": 1.7544,
+      "share_pct_latest": 1.6675,
+      "abs_delta": -89.0,
+      "abs_pct": -3.8,
+      "rel_delta": -4.95,
+      "fa_window_pct": -0.3,
+      "draft_window_pct": -31.41,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 26,
+      "rank_latest": 34,
+      "rank_change": -8,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1607.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2269.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2354.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2254.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.03",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 3,
+      "overall": 27,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Emmett Johnson",
+        "sleeper_id": "13337",
+        "pos": "RB",
+        "nfl_team": "KC"
+      },
+      "pre_draft_pick_value": 2343.0,
+      "latest_player_value": 2570.0,
+      "share_pct_pre": 1.7544,
+      "share_pct_latest": 1.9013,
+      "abs_delta": 227.0,
+      "abs_pct": 9.69,
+      "rel_delta": 8.37,
+      "fa_window_pct": -0.3,
+      "draft_window_pct": -4.27,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 27,
+      "rank_latest": 25,
+      "rank_change": 2,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2243.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2555.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2588.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2570.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.04",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 4,
+      "overall": 28,
+      "owner_team": "C\u00e1rtel de Breece y Puka",
+      "player": {
+        "name": "Ja'Kobi Lane",
+        "sleeper_id": "13293",
+        "pos": "WR",
+        "nfl_team": "BAL"
+      },
+      "pre_draft_pick_value": 2343.0,
+      "latest_player_value": 3256.0,
+      "share_pct_pre": 1.7544,
+      "share_pct_latest": 2.4088,
+      "abs_delta": 913.0,
+      "abs_pct": 38.97,
+      "rel_delta": 37.3,
+      "fa_window_pct": -0.3,
+      "draft_window_pct": -12.38,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 28,
+      "rank_latest": 14,
+      "rank_change": 14,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2053.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2383.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2353.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3256.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.05",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 5,
+      "overall": 29,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Demond Claiborne",
+        "sleeper_id": "13347",
+        "pos": "RB",
+        "nfl_team": "MIN"
+      },
+      "pre_draft_pick_value": 2187.0,
+      "latest_player_value": 2331.0,
+      "share_pct_pre": 1.6376,
+      "share_pct_latest": 1.7245,
+      "abs_delta": 144.0,
+      "abs_pct": 6.58,
+      "rel_delta": 5.31,
+      "fa_window_pct": 1.11,
+      "draft_window_pct": -46.0,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 29,
+      "rank_latest": 33,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1181.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1842.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2098.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2331.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.06",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 6,
+      "overall": 30,
+      "owner_team": "FETTI",
+      "player": {
+        "name": "Mike Washington",
+        "sleeper_id": "13305",
+        "pos": "RB",
+        "nfl_team": "LV"
+      },
+      "pre_draft_pick_value": 2187.0,
+      "latest_player_value": 3191.0,
+      "share_pct_pre": 1.6376,
+      "share_pct_latest": 2.3607,
+      "abs_delta": 1004.0,
+      "abs_pct": 45.91,
+      "rel_delta": 44.16,
+      "fa_window_pct": 1.11,
+      "draft_window_pct": 14.22,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 30,
+      "rank_latest": 15,
+      "rank_change": 15,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 2498.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 2336.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2311.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3191.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.07",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 7,
+      "overall": 31,
+      "owner_team": "C\u00e1rtel de Breece y Puka",
+      "player": {
+        "name": "Drew Allar",
+        "sleeper_id": "13289",
+        "pos": "QB",
+        "nfl_team": "PIT"
+      },
+      "pre_draft_pick_value": 2187.0,
+      "latest_player_value": 2565.0,
+      "share_pct_pre": 1.6376,
+      "share_pct_latest": 1.8976,
+      "abs_delta": 378.0,
+      "abs_pct": 17.28,
+      "rel_delta": 15.88,
+      "fa_window_pct": 1.11,
+      "draft_window_pct": -61.73,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 31,
+      "rank_latest": 26,
+      "rank_change": 5,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 837.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1700.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1948.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2565.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.08",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 8,
+      "overall": 32,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Cade Klubnik",
+        "sleeper_id": "13303",
+        "pos": "QB",
+        "nfl_team": "NYJ"
+      },
+      "pre_draft_pick_value": 2187.0,
+      "latest_player_value": 2049.0,
+      "share_pct_pre": 1.6376,
+      "share_pct_latest": 1.5159,
+      "abs_delta": -138.0,
+      "abs_pct": -6.31,
+      "rel_delta": -7.43,
+      "fa_window_pct": 1.11,
+      "draft_window_pct": -42.48,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 32,
+      "rank_latest": 37,
+      "rank_change": -5,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1258.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1804.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1868.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2049.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.09",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 9,
+      "overall": 33,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Carson Beck",
+        "sleeper_id": "13272",
+        "pos": "QB",
+        "nfl_team": "ARI"
+      },
+      "pre_draft_pick_value": 2086.0,
+      "latest_player_value": 2767.0,
+      "share_pct_pre": 1.5619,
+      "share_pct_latest": 2.0471,
+      "abs_delta": 681.0,
+      "abs_pct": 32.65,
+      "rel_delta": 31.06,
+      "fa_window_pct": -0.48,
+      "draft_window_pct": -56.66,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 33,
+      "rank_latest": 21,
+      "rank_change": 12,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 904.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1948.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2545.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2767.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.10",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 10,
+      "overall": 34,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Justin Joly",
+        "sleeper_id": "13400",
+        "pos": "TE",
+        "nfl_team": "DEN"
+      },
+      "pre_draft_pick_value": 2086.0,
+      "latest_player_value": 1940.0,
+      "share_pct_pre": 1.5619,
+      "share_pct_latest": 1.4352,
+      "abs_delta": -146.0,
+      "abs_pct": -7.0,
+      "rel_delta": -8.11,
+      "fa_window_pct": -0.48,
+      "draft_window_pct": -89.26,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 34,
+      "rank_latest": 40,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 224.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1606.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1860.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1940.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.11",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 11,
+      "overall": 35,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Kevin Coleman",
+        "sleeper_id": "13338",
+        "pos": "WR",
+        "nfl_team": "MIA"
+      },
+      "pre_draft_pick_value": 2086.0,
+      "latest_player_value": 2023.0,
+      "share_pct_pre": 1.5619,
+      "share_pct_latest": 1.4966,
+      "abs_delta": -63.0,
+      "abs_pct": -3.02,
+      "rel_delta": -4.18,
+      "fa_window_pct": -0.48,
+      "draft_window_pct": -40.51,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 35,
+      "rank_latest": 39,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1241.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1767.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2052.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2023.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 3.12",
+      "ktc_tier": "pick_tier",
+      "round": 3,
+      "slot": 12,
+      "overall": 36,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Adam Randall",
+        "sleeper_id": "13302",
+        "pos": "RB",
+        "nfl_team": "BAL"
+      },
+      "pre_draft_pick_value": 2086.0,
+      "latest_player_value": 2045.0,
+      "share_pct_pre": 1.5619,
+      "share_pct_latest": 1.5129,
+      "abs_delta": -41.0,
+      "abs_pct": -1.97,
+      "rel_delta": -3.14,
+      "fa_window_pct": -0.48,
+      "draft_window_pct": -97.36,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "FLAT",
+      "divergence": false,
+      "rank_pre": 36,
+      "rank_latest": 38,
+      "rank_change": -2,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 55.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1055.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1425.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2045.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.01",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 1,
+      "overall": 37,
+      "owner_team": "C\u00e1rtel de Breece y Puka",
+      "player": {
+        "name": "Kaelon Black",
+        "sleeper_id": "13414",
+        "pos": "RB",
+        "nfl_team": "SF"
+      },
+      "pre_draft_pick_value": 1759.0,
+      "latest_player_value": 2502.0,
+      "share_pct_pre": 1.3171,
+      "share_pct_latest": 1.851,
+      "abs_delta": 743.0,
+      "abs_pct": 42.24,
+      "rel_delta": 40.54,
+      "fa_window_pct": 0.34,
+      "draft_window_pct": -80.9,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 37,
+      "rank_latest": 28,
+      "rank_change": 9,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 336.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1631.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2077.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2502.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.02",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 2,
+      "overall": 38,
+      "owner_team": "Lisan al-Caleb",
+      "player": {
+        "name": "Eli Heidenreich",
+        "sleeper_id": "13423",
+        "pos": "RB",
+        "nfl_team": "PIT"
+      },
+      "pre_draft_pick_value": 1759.0,
+      "latest_player_value": 1633.0,
+      "share_pct_pre": 1.3171,
+      "share_pct_latest": 1.2081,
+      "abs_delta": -126.0,
+      "abs_pct": -7.16,
+      "rel_delta": -8.28,
+      "fa_window_pct": 0.34,
+      "draft_window_pct": -96.93,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 38,
+      "rank_latest": 43,
+      "rank_change": -5,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 54.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1225.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1584.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1633.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.05",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 5,
+      "overall": 41,
+      "owner_team": "Omar Comin",
+      "player": {
+        "name": "Brenen Thompson",
+        "sleeper_id": "13380",
+        "pos": "WR",
+        "nfl_team": "LAC"
+      },
+      "pre_draft_pick_value": 1648.0,
+      "latest_player_value": 1808.0,
+      "share_pct_pre": 1.234,
+      "share_pct_latest": 1.3376,
+      "abs_delta": 160.0,
+      "abs_pct": 9.71,
+      "rel_delta": 8.4,
+      "fa_window_pct": -0.36,
+      "draft_window_pct": -92.11,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 39,
+      "rank_latest": 42,
+      "rank_change": -3,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 130.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1413.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1652.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1808.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.06",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 6,
+      "overall": 42,
+      "owner_team": "Lisan al-Caleb",
+      "player": {
+        "name": "Garrett Nussmeier",
+        "sleeper_id": "13404",
+        "pos": "QB",
+        "nfl_team": "KC"
+      },
+      "pre_draft_pick_value": 1648.0,
+      "latest_player_value": 1473.0,
+      "share_pct_pre": 1.234,
+      "share_pct_latest": 1.0897,
+      "abs_delta": -175.0,
+      "abs_pct": -10.62,
+      "rel_delta": -11.69,
+      "fa_window_pct": -0.36,
+      "draft_window_pct": 15.66,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 40,
+      "rank_latest": 44,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 1906.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1670.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1556.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1473.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.07",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 7,
+      "overall": 43,
+      "owner_team": "The Federal Reserve",
+      "player": {
+        "name": "Bryce Lance",
+        "sleeper_id": "13420",
+        "pos": "WR",
+        "nfl_team": "NO"
+      },
+      "pre_draft_pick_value": 1648.0,
+      "latest_player_value": 1935.0,
+      "share_pct_pre": 1.234,
+      "share_pct_latest": 1.4315,
+      "abs_delta": 287.0,
+      "abs_pct": 17.42,
+      "rel_delta": 16.0,
+      "fa_window_pct": -0.36,
+      "draft_window_pct": -70.75,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 41,
+      "rank_latest": 41,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 482.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1270.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1687.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1935.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.08",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 8,
+      "overall": 44,
+      "owner_team": "Mostly Washed",
+      "player": {
+        "name": "Eli Raridon",
+        "sleeper_id": "13421",
+        "pos": "TE",
+        "nfl_team": "NE"
+      },
+      "pre_draft_pick_value": 1648.0,
+      "latest_player_value": 2484.0,
+      "share_pct_pre": 1.234,
+      "share_pct_latest": 1.8377,
+      "abs_delta": 836.0,
+      "abs_pct": 50.73,
+      "rel_delta": 48.92,
+      "fa_window_pct": -0.36,
+      "draft_window_pct": -90.41,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 42,
+      "rank_latest": 31,
+      "rank_change": 11,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 158.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1330.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2051.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2484.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.09",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 9,
+      "overall": 45,
+      "owner_team": "FETTI",
+      "player": {
+        "name": "Oscar Delp",
+        "sleeper_id": "13319",
+        "pos": "TE",
+        "nfl_team": "NO"
+      },
+      "pre_draft_pick_value": 1511.0,
+      "latest_player_value": 2074.0,
+      "share_pct_pre": 1.1314,
+      "share_pct_latest": 1.5344,
+      "abs_delta": 563.0,
+      "abs_pct": 37.26,
+      "rel_delta": 35.62,
+      "fa_window_pct": -1.05,
+      "draft_window_pct": -71.28,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 43,
+      "rank_latest": 36,
+      "rank_change": 7,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 434.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1470.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 2017.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2074.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2026 Pick 4.11",
+      "ktc_tier": "pick_tier",
+      "round": 4,
+      "slot": 11,
+      "overall": 47,
+      "owner_team": "Golden Hour",
+      "player": {
+        "name": "Caleb Douglas",
+        "sleeper_id": "13296",
+        "pos": "WR",
+        "nfl_team": "MIA"
+      },
+      "pre_draft_pick_value": 1511.0,
+      "latest_player_value": 2722.0,
+      "share_pct_pre": 1.1314,
+      "share_pct_latest": 2.0138,
+      "abs_delta": 1211.0,
+      "abs_pct": 80.15,
+      "rel_delta": 77.99,
+      "fa_window_pct": -1.05,
+      "draft_window_pct": -96.76,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 44,
+      "rank_latest": 24,
+      "rank_change": 20,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 49.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-06-09",
+          "value": 1199.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1779.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2722.0,
+          "kind": "player"
+        }
+      ]
+    }
+  ],
+  "per_round": [
+    {
+      "round": 1,
+      "count": 12,
+      "mean_abs_pct": -7.23,
+      "median_abs_pct": -6.55,
+      "mean_rel_delta": -8.34,
+      "median_rel_delta": -7.67,
+      "median_fa_window_pct": -4.15,
+      "median_draft_window_pct": -8.7,
+      "class_share_pre_pct": 43.14,
+      "class_share_latest_pct": 40.05,
+      "share_appreciating": 0.167,
+      "dips": true
+    },
+    {
+      "round": 2,
+      "count": 12,
+      "mean_abs_pct": -4.03,
+      "median_abs_pct": -7.17,
+      "mean_rel_delta": -5.18,
+      "median_rel_delta": -8.28,
+      "median_fa_window_pct": -0.92,
+      "median_draft_window_pct": -21.8,
+      "class_share_pre_pct": 27.22,
+      "class_share_latest_pct": 25.92,
+      "share_appreciating": 0.167,
+      "dips": true
+    },
+    {
+      "round": 3,
+      "count": 12,
+      "mean_abs_pct": 10.85,
+      "median_abs_pct": 3.89,
+      "mean_rel_delta": 9.52,
+      "median_rel_delta": 2.65,
+      "median_fa_window_pct": -0.3,
+      "median_draft_window_pct": -41.49,
+      "class_share_pre_pct": 19.82,
+      "class_share_latest_pct": 21.72,
+      "share_appreciating": 0.5,
+      "dips": false
+    },
+    {
+      "round": 4,
+      "count": 8,
+      "mean_abs_pct": 27.47,
+      "median_abs_pct": 27.34,
+      "mean_rel_delta": 25.94,
+      "median_rel_delta": 25.81,
+      "median_fa_window_pct": -0.36,
+      "median_draft_window_pct": -85.66,
+      "class_share_pre_pct": 9.83,
+      "class_share_latest_pct": 12.3,
+      "share_appreciating": 0.75,
+      "dips": false
+    }
+  ],
+  "per_position": [],
+  "round1_dips": true,
+  "round1_note": "Round 1 moved -6.55% (median) off its pre-draft value and holds 40.05% of class value vs 43.14% before the draft. Share is the number that matters: it is scale-free, so a class-wide move cancels out.",
+  "window_split": {
+    "fa_window": {
+      "from": "2026-03-01",
+      "to": "2026-04-26",
+      "median_pct": -0.42,
+      "mean_pct": -1.31,
+      "min_pct": -6.54,
+      "max_pct": 1.3
+    },
+    "draft_window": {
+      "from": "2026-04-26",
+      "to": "2026-04-28",
+      "median_pct": -21.8,
+      "mean_pct": -32.45,
+      "min_pct": -97.36,
+      "max_pct": 32.25
+    },
+    "ratio_draft_over_fa": 51.9,
+    "verdict": "Free agency moved value by a median of -0.42%. The draft moved it -21.80%."
+  },
+  "class_index_series": [
+    {
+      "date": "2026-04-28",
+      "cohort_index": 2170.0,
+      "class_total": 102202.0
+    },
+    {
+      "date": "2026-06-09",
+      "cohort_index": 2569.5,
+      "class_total": 126036.0
+    },
+    {
+      "date": "2026-07-21",
+      "cohort_index": 2600.5,
+      "class_total": 130194.0
+    },
+    {
+      "date": "2026-08-31",
+      "cohort_index": 2735.5,
+      "class_total": 135170.0
+    }
+  ]
+}

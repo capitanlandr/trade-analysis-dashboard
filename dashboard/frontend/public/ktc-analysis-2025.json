@@ -1,0 +1,2540 @@
+{
+  "meta": {
+    "season": 2025,
+    "source": "KeepTradeCut",
+    "format": "SF",
+    "is_fixture": false,
+    "value_column": "KTC Superflex",
+    "draft_day": "2025-04-30",
+    "draft_started_utc": "2025-04-30T00:00:00Z",
+    "baseline_date": "2025-04-29",
+    "baseline_days_before_draft": 1,
+    "baseline_predates_free_agency": false,
+    "baseline_kind": "prospect",
+    "pre_draft_snapshot": {
+      "date": "2025-04-29",
+      "sha": "ktc-store"
+    },
+    "post_draft_snapshot": {
+      "date": "2025-05-01",
+      "sha": "ktc-store"
+    },
+    "latest": "2026-08-31",
+    "gap_note": "2025 baseline is each ROOKIE'S OWN pre-draft prospect value: KTC retires pick assets after a draft so no 2025 tier history exists. Better resolution (per-player, not per-tier) but it asks a slightly different question: did the PLAYER beat his prospect price, not did the PICK beat its slot price.",
+    "picks_excluded_no_ktc_data": [
+      "2025 Pick 4.10 Xavier Restrepo"
+    ],
+    "picks_shown": 47,
+    "generated_utc": "2026-08-31T22:39:40.275677+00:00",
+    "refresh_status": {
+      "degraded": false,
+      "data_age_days": 0,
+      "last_attempt_utc": "2026-08-31T22:38:30.744787+00:00",
+      "last_success_date": "2026-08-31",
+      "errors": [],
+      "data_through": "2026-08-31"
+    }
+  },
+  "picks": [
+    {
+      "pick_label": "2025 Pick 1.01",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 1,
+      "overall": 1,
+      "owner_team": "TRIPS \ud83d\udd25",
+      "player": {
+        "name": "Ashton Jeanty",
+        "sleeper_id": "12527",
+        "pos": "RB",
+        "nfl_team": "LV"
+      },
+      "pre_draft_pick_value": 7519.0,
+      "latest_player_value": 7307.0,
+      "share_pct_pre": 5.1551,
+      "share_pct_latest": 4.5958,
+      "abs_delta": -212.0,
+      "abs_pct": -2.82,
+      "rel_delta": -10.85,
+      "fa_window_pct": 8.59,
+      "draft_window_pct": 1.41,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 1,
+      "rank_latest": 1,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 7625.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 6992.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 7471.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 7307.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.02",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 2,
+      "overall": 2,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "Omarion Hampton",
+        "sleeper_id": "12507",
+        "pos": "RB",
+        "nfl_team": "LAC"
+      },
+      "pre_draft_pick_value": 6074.0,
+      "latest_player_value": 6967.0,
+      "share_pct_pre": 4.1644,
+      "share_pct_latest": 4.382,
+      "abs_delta": 893.0,
+      "abs_pct": 14.7,
+      "rel_delta": 5.23,
+      "fa_window_pct": 19.4,
+      "draft_window_pct": 2.09,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 2,
+      "rank_latest": 2,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 6201.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 6379.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 6724.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 6967.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.03",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 3,
+      "overall": 3,
+      "owner_team": "On To 2026",
+      "player": {
+        "name": "Travis Hunter",
+        "sleeper_id": "12530",
+        "pos": "WR",
+        "nfl_team": "JAX"
+      },
+      "pre_draft_pick_value": 5978.0,
+      "latest_player_value": 3000.0,
+      "share_pct_pre": 4.0986,
+      "share_pct_latest": 1.8869,
+      "abs_delta": -2978.0,
+      "abs_pct": -49.82,
+      "rel_delta": -53.96,
+      "fa_window_pct": 50.13,
+      "draft_window_pct": 2.43,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 3,
+      "rank_latest": 19,
+      "rank_change": -16,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 6123.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 4537.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 3711.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3000.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.04",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 4,
+      "overall": 4,
+      "owner_team": "Bucky\u2019s Depression",
+      "player": {
+        "name": "Tetairoa McMillan",
+        "sleeper_id": "12526",
+        "pos": "WR",
+        "nfl_team": "CAR"
+      },
+      "pre_draft_pick_value": 5528.0,
+      "latest_player_value": 6183.0,
+      "share_pct_pre": 3.7901,
+      "share_pct_latest": 3.8889,
+      "abs_delta": 655.0,
+      "abs_pct": 11.85,
+      "rel_delta": 2.61,
+      "fa_window_pct": -5.36,
+      "draft_window_pct": -0.16,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "FLAT",
+      "divergence": true,
+      "rank_pre": 5,
+      "rank_latest": 5,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 5519.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 6276.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 6594.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 6183.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.05",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 5,
+      "overall": 5,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Cameron Ward",
+        "sleeper_id": "12522",
+        "pos": "QB",
+        "nfl_team": "TEN"
+      },
+      "pre_draft_pick_value": 5590.0,
+      "latest_player_value": 4684.0,
+      "share_pct_pre": 3.8326,
+      "share_pct_latest": 2.946,
+      "abs_delta": -906.0,
+      "abs_pct": -16.21,
+      "rel_delta": -23.13,
+      "fa_window_pct": 6.42,
+      "draft_window_pct": 0.04,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 4,
+      "rank_latest": 13,
+      "rank_change": -9,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 5592.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 4773.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5105.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4684.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.06",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 6,
+      "overall": 6,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "TreVeyon Henderson",
+        "sleeper_id": "12529",
+        "pos": "RB",
+        "nfl_team": "NE"
+      },
+      "pre_draft_pick_value": 5297.0,
+      "latest_player_value": 4939.0,
+      "share_pct_pre": 3.6317,
+      "share_pct_latest": 3.1064,
+      "abs_delta": -358.0,
+      "abs_pct": -6.76,
+      "rel_delta": -14.46,
+      "fa_window_pct": 11.19,
+      "draft_window_pct": 3.42,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 6,
+      "rank_latest": 10,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 5478.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 5237.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5483.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4939.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.07",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 7,
+      "overall": 7,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Quinshon Judkins",
+        "sleeper_id": "12512",
+        "pos": "RB",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 5099.0,
+      "latest_player_value": 5250.0,
+      "share_pct_pre": 3.4959,
+      "share_pct_latest": 3.302,
+      "abs_delta": 151.0,
+      "abs_pct": 2.96,
+      "rel_delta": -5.55,
+      "fa_window_pct": 15.62,
+      "draft_window_pct": 2.1,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 7,
+      "rank_latest": 9,
+      "rank_change": -2,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 5206.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 6044.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5409.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5250.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.08",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 8,
+      "overall": 8,
+      "owner_team": "On To 2026",
+      "player": {
+        "name": "Emeka Egbuka",
+        "sleeper_id": "12514",
+        "pos": "WR",
+        "nfl_team": "TB"
+      },
+      "pre_draft_pick_value": 4741.0,
+      "latest_player_value": 6193.0,
+      "share_pct_pre": 3.2505,
+      "share_pct_latest": 3.8951,
+      "abs_delta": 1452.0,
+      "abs_pct": 30.63,
+      "rel_delta": 19.83,
+      "fa_window_pct": 0.79,
+      "draft_window_pct": -0.17,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 8,
+      "rank_latest": 4,
+      "rank_change": 4,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4733.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 7145.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 6068.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 6193.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.09",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 9,
+      "overall": 9,
+      "owner_team": "Bucky\u2019s Depression",
+      "player": {
+        "name": "Matthew Golden",
+        "sleeper_id": "12501",
+        "pos": "WR",
+        "nfl_team": "GB"
+      },
+      "pre_draft_pick_value": 4427.0,
+      "latest_player_value": 3723.0,
+      "share_pct_pre": 3.0352,
+      "share_pct_latest": 2.3416,
+      "abs_delta": -704.0,
+      "abs_pct": -15.9,
+      "rel_delta": -22.85,
+      "fa_window_pct": 44.77,
+      "draft_window_pct": -2.33,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 12,
+      "rank_latest": 16,
+      "rank_change": -4,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4324.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 4431.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 3554.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3723.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.10",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 10,
+      "overall": 10,
+      "owner_team": "Spirit Halloween",
+      "player": {
+        "name": "Colston Loveland",
+        "sleeper_id": "12517",
+        "pos": "TE",
+        "nfl_team": "CHI"
+      },
+      "pre_draft_pick_value": 4685.0,
+      "latest_player_value": 6335.0,
+      "share_pct_pre": 3.2121,
+      "share_pct_latest": 3.9845,
+      "abs_delta": 1650.0,
+      "abs_pct": 35.22,
+      "rel_delta": 24.05,
+      "fa_window_pct": 26.59,
+      "draft_window_pct": -0.3,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 10,
+      "rank_latest": 3,
+      "rank_change": 7,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4671.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3735.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5997.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 6335.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.11",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 11,
+      "overall": 11,
+      "owner_team": "On To 2026",
+      "player": {
+        "name": "Kaleb Johnson",
+        "sleeper_id": "12504",
+        "pos": "RB",
+        "nfl_team": "PIT"
+      },
+      "pre_draft_pick_value": 4480.0,
+      "latest_player_value": 2333.0,
+      "share_pct_pre": 3.0715,
+      "share_pct_latest": 1.4674,
+      "abs_delta": -2147.0,
+      "abs_pct": -47.92,
+      "rel_delta": -52.23,
+      "fa_window_pct": 5.16,
+      "draft_window_pct": 4.04,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 11,
+      "rank_latest": 30,
+      "rank_change": -19,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4661.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3011.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2469.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2333.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 1.12",
+      "ktc_tier": "prospect",
+      "round": 1,
+      "slot": 12,
+      "overall": 12,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "RJ Harvey",
+        "sleeper_id": "12489",
+        "pos": "RB",
+        "nfl_team": "DEN"
+      },
+      "pre_draft_pick_value": 4026.0,
+      "latest_player_value": 3301.0,
+      "share_pct_pre": 2.7603,
+      "share_pct_latest": 2.0762,
+      "abs_delta": -725.0,
+      "abs_pct": -18.01,
+      "rel_delta": -24.78,
+      "fa_window_pct": 148.83,
+      "draft_window_pct": 14.03,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 15,
+      "rank_latest": 18,
+      "rank_change": -3,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4591.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 4189.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 3807.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3301.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.01",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 1,
+      "overall": 13,
+      "owner_team": "Mostly Washed",
+      "player": {
+        "name": "Tyler Warren",
+        "sleeper_id": "12518",
+        "pos": "TE",
+        "nfl_team": "IND"
+      },
+      "pre_draft_pick_value": 4707.0,
+      "latest_player_value": 5980.0,
+      "share_pct_pre": 3.2272,
+      "share_pct_latest": 3.7612,
+      "abs_delta": 1273.0,
+      "abs_pct": 27.04,
+      "rel_delta": 16.55,
+      "fa_window_pct": 3.7,
+      "draft_window_pct": -0.76,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 9,
+      "rank_latest": 6,
+      "rank_change": 3,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4671.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 6046.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5762.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5980.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.02",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 2,
+      "overall": 14,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "Jaxson Dart",
+        "sleeper_id": "12508",
+        "pos": "QB",
+        "nfl_team": "NYG"
+      },
+      "pre_draft_pick_value": 4303.0,
+      "latest_player_value": 5898.0,
+      "share_pct_pre": 2.9502,
+      "share_pct_latest": 3.7096,
+      "abs_delta": 1595.0,
+      "abs_pct": 37.07,
+      "rel_delta": 25.74,
+      "fa_window_pct": 29.26,
+      "draft_window_pct": 1.16,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 13,
+      "rank_latest": 7,
+      "rank_change": 6,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4353.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 5279.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 6592.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5898.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.03",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 3,
+      "overall": 15,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Luther Burden",
+        "sleeper_id": "12519",
+        "pos": "WR",
+        "nfl_team": "CHI"
+      },
+      "pre_draft_pick_value": 4082.0,
+      "latest_player_value": 5489.0,
+      "share_pct_pre": 2.7987,
+      "share_pct_latest": 3.4524,
+      "abs_delta": 1407.0,
+      "abs_pct": 34.47,
+      "rel_delta": 23.36,
+      "fa_window_pct": -10.19,
+      "draft_window_pct": 1.35,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 14,
+      "rank_latest": 8,
+      "rank_change": 6,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 4137.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3648.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 5370.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 5489.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.04",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 4,
+      "overall": 16,
+      "owner_team": "Bucky\u2019s Depression",
+      "player": {
+        "name": "Tre Harris",
+        "sleeper_id": "12509",
+        "pos": "WR",
+        "nfl_team": "LAC"
+      },
+      "pre_draft_pick_value": 3372.0,
+      "latest_player_value": 2610.0,
+      "share_pct_pre": 2.3119,
+      "share_pct_latest": 1.6416,
+      "abs_delta": -762.0,
+      "abs_pct": -22.6,
+      "rel_delta": -28.99,
+      "fa_window_pct": 23.83,
+      "draft_window_pct": 1.45,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 18,
+      "rank_latest": 24,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 3421.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2730.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2827.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2610.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.05",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 5,
+      "overall": 17,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Jayden Higgins",
+        "sleeper_id": "12484",
+        "pos": "WR",
+        "nfl_team": "HOU"
+      },
+      "pre_draft_pick_value": 3696.0,
+      "latest_player_value": 2923.0,
+      "share_pct_pre": 2.534,
+      "share_pct_latest": 1.8384,
+      "abs_delta": -773.0,
+      "abs_pct": -20.91,
+      "rel_delta": -27.45,
+      "fa_window_pct": 140.94,
+      "draft_window_pct": -0.49,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 16,
+      "rank_latest": 21,
+      "rank_change": -5,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 3678.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3032.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 3548.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2923.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.06",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 6,
+      "overall": 18,
+      "owner_team": "Like a Good Naber",
+      "player": {
+        "name": "Cam Skattebo",
+        "sleeper_id": "12481",
+        "pos": "RB",
+        "nfl_team": "NYG"
+      },
+      "pre_draft_pick_value": 3574.0,
+      "latest_player_value": 4656.0,
+      "share_pct_pre": 2.4504,
+      "share_pct_latest": 2.9284,
+      "abs_delta": 1082.0,
+      "abs_pct": 30.27,
+      "rel_delta": 19.51,
+      "fa_window_pct": 12.53,
+      "draft_window_pct": 3.67,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 17,
+      "rank_latest": 14,
+      "rank_change": 3,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 3705.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 4908.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 4534.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4656.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.07",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 7,
+      "overall": 19,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Jack Bech",
+        "sleeper_id": "12483",
+        "pos": "WR",
+        "nfl_team": "LV"
+      },
+      "pre_draft_pick_value": 3206.0,
+      "latest_player_value": 2329.0,
+      "share_pct_pre": 2.1981,
+      "share_pct_latest": 1.4648,
+      "abs_delta": -877.0,
+      "abs_pct": -27.35,
+      "rel_delta": -33.36,
+      "fa_window_pct": 145.11,
+      "draft_window_pct": 0.72,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 19,
+      "rank_latest": 32,
+      "rank_change": -13,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 3229.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2447.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2433.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2329.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.08",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 8,
+      "overall": 20,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Bhayshul Tuten",
+        "sleeper_id": "12490",
+        "pos": "RB",
+        "nfl_team": "JAX"
+      },
+      "pre_draft_pick_value": 2763.0,
+      "latest_player_value": 4290.0,
+      "share_pct_pre": 1.8943,
+      "share_pct_latest": 2.6982,
+      "abs_delta": 1527.0,
+      "abs_pct": 55.27,
+      "rel_delta": 42.44,
+      "fa_window_pct": 408.84,
+      "draft_window_pct": 8.51,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 23,
+      "rank_latest": 15,
+      "rank_change": 8,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2998.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3445.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 4001.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4290.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.09",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 9,
+      "overall": 21,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Tyler Shough",
+        "sleeper_id": "12545",
+        "pos": "QB",
+        "nfl_team": "NO"
+      },
+      "pre_draft_pick_value": 2794.0,
+      "latest_player_value": 4802.0,
+      "share_pct_pre": 1.9156,
+      "share_pct_latest": 3.0203,
+      "abs_delta": 2008.0,
+      "abs_pct": 71.87,
+      "rel_delta": 57.67,
+      "fa_window_pct": 142.96,
+      "draft_window_pct": -5.55,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 22,
+      "rank_latest": 11,
+      "rank_change": 11,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2639.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1893.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 4642.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4802.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.10",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 10,
+      "overall": 22,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "Jalen Royals",
+        "sleeper_id": "12505",
+        "pos": "WR",
+        "nfl_team": "KC"
+      },
+      "pre_draft_pick_value": 2384.0,
+      "latest_player_value": 1797.0,
+      "share_pct_pre": 1.6345,
+      "share_pct_latest": 1.1302,
+      "abs_delta": -587.0,
+      "abs_pct": -24.62,
+      "rel_delta": -30.85,
+      "fa_window_pct": 38.77,
+      "draft_window_pct": 8.35,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 30,
+      "rank_latest": 42,
+      "rank_change": -12,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2583.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2089.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 1871.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1797.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.11",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 11,
+      "overall": 23,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Jalen Milroe",
+        "sleeper_id": "12510",
+        "pos": "QB",
+        "nfl_team": "SEA"
+      },
+      "pre_draft_pick_value": 3164.0,
+      "latest_player_value": 2101.0,
+      "share_pct_pre": 2.1693,
+      "share_pct_latest": 1.3214,
+      "abs_delta": -1063.0,
+      "abs_pct": -33.6,
+      "rel_delta": -39.09,
+      "fa_window_pct": 14.97,
+      "draft_window_pct": -0.41,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 20,
+      "rank_latest": 38,
+      "rank_change": -18,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 3151.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2699.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2490.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2101.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 2.12",
+      "ktc_tier": "prospect",
+      "round": 2,
+      "slot": 12,
+      "overall": 24,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Kyle Williams",
+        "sleeper_id": "12547",
+        "pos": "WR",
+        "nfl_team": "NE"
+      },
+      "pre_draft_pick_value": 1855.0,
+      "latest_player_value": 2267.0,
+      "share_pct_pre": 1.2718,
+      "share_pct_latest": 1.4258,
+      "abs_delta": 412.0,
+      "abs_pct": 22.21,
+      "rel_delta": 12.11,
+      "fa_window_pct": null,
+      "draft_window_pct": 36.98,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 37,
+      "rank_latest": 34,
+      "rank_change": 3,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2541.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2439.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2715.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2267.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.01",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 1,
+      "overall": 25,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Mason Taylor",
+        "sleeper_id": "12498",
+        "pos": "TE",
+        "nfl_team": "NYJ"
+      },
+      "pre_draft_pick_value": 2664.0,
+      "latest_player_value": 2251.0,
+      "share_pct_pre": 1.8265,
+      "share_pct_latest": 1.4158,
+      "abs_delta": -413.0,
+      "abs_pct": -15.5,
+      "rel_delta": -22.49,
+      "fa_window_pct": 103.36,
+      "draft_window_pct": 4.99,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 26,
+      "rank_latest": 35,
+      "rank_change": -9,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2797.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2967.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2908.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2251.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.02",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 2,
+      "overall": 26,
+      "owner_team": "TRIPS \ud83d\udd25",
+      "player": {
+        "name": "Jaylin Noel",
+        "sleeper_id": "12536",
+        "pos": "WR",
+        "nfl_team": "HOU"
+      },
+      "pre_draft_pick_value": 2889.0,
+      "latest_player_value": 2459.0,
+      "share_pct_pre": 1.9807,
+      "share_pct_latest": 1.5466,
+      "abs_delta": -430.0,
+      "abs_pct": -14.88,
+      "rel_delta": -21.92,
+      "fa_window_pct": 108.74,
+      "draft_window_pct": 2.67,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 21,
+      "rank_latest": 27,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2966.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2588.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2801.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2459.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.03",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 3,
+      "overall": 27,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Shedeur Sanders",
+        "sleeper_id": "12524",
+        "pos": "QB",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 2761.0,
+      "latest_player_value": 2369.0,
+      "share_pct_pre": 1.893,
+      "share_pct_latest": 1.49,
+      "abs_delta": -392.0,
+      "abs_pct": -14.2,
+      "rel_delta": -21.29,
+      "fa_window_pct": -40.56,
+      "draft_window_pct": -0.62,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 24,
+      "rank_latest": 29,
+      "rank_change": -5,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2744.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2070.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2788.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2369.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.04",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 4,
+      "overall": 28,
+      "owner_team": "Bucky\u2019s Depression",
+      "player": {
+        "name": "Isaac TeSlaa",
+        "sleeper_id": "12535",
+        "pos": "WR",
+        "nfl_team": "DET"
+      },
+      "pre_draft_pick_value": 1112.0,
+      "latest_player_value": 2490.0,
+      "share_pct_pre": 0.7624,
+      "share_pct_latest": 1.5661,
+      "abs_delta": 1378.0,
+      "abs_pct": 123.92,
+      "rel_delta": 105.42,
+      "fa_window_pct": null,
+      "draft_window_pct": 65.29,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 42,
+      "rank_latest": 26,
+      "rank_change": 16,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1838.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2918.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2838.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2490.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.05",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 5,
+      "overall": 29,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "Elijah Arroyo",
+        "sleeper_id": "12521",
+        "pos": "TE",
+        "nfl_team": "SEA"
+      },
+      "pre_draft_pick_value": 2383.0,
+      "latest_player_value": 2331.0,
+      "share_pct_pre": 1.6338,
+      "share_pct_latest": 1.4661,
+      "abs_delta": -52.0,
+      "abs_pct": -2.18,
+      "rel_delta": -10.26,
+      "fa_window_pct": 16.02,
+      "draft_window_pct": 5.87,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 31,
+      "rank_latest": 31,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2523.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2759.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2552.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2331.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.06",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 6,
+      "overall": 30,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Elic Ayomanor",
+        "sleeper_id": "12499",
+        "pos": "WR",
+        "nfl_team": "TEN"
+      },
+      "pre_draft_pick_value": 2206.0,
+      "latest_player_value": 2272.0,
+      "share_pct_pre": 1.5125,
+      "share_pct_latest": 1.429,
+      "abs_delta": 66.0,
+      "abs_pct": 2.99,
+      "rel_delta": -5.52,
+      "fa_window_pct": 2.75,
+      "draft_window_pct": 4.31,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 34,
+      "rank_latest": 33,
+      "rank_change": 1,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2301.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3328.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2832.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2272.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.07",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 7,
+      "overall": 31,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Dylan Sampson",
+        "sleeper_id": "12469",
+        "pos": "RB",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 2711.0,
+      "latest_player_value": 2596.0,
+      "share_pct_pre": 1.8587,
+      "share_pct_latest": 1.6328,
+      "abs_delta": -115.0,
+      "abs_pct": -4.24,
+      "rel_delta": -12.15,
+      "fa_window_pct": 2.19,
+      "draft_window_pct": 4.76,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 25,
+      "rank_latest": 25,
+      "rank_change": 0,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2840.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2746.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2691.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2596.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.08",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 8,
+      "overall": 32,
+      "owner_team": "Paper Tigers",
+      "player": {
+        "name": "Jaydon Blue",
+        "sleeper_id": "12457",
+        "pos": "RB",
+        "nfl_team": "DAL"
+      },
+      "pre_draft_pick_value": 2604.0,
+      "latest_player_value": 1955.0,
+      "share_pct_pre": 1.7853,
+      "share_pct_latest": 1.2296,
+      "abs_delta": -649.0,
+      "abs_pct": -24.92,
+      "rel_delta": -31.13,
+      "fa_window_pct": 201.39,
+      "draft_window_pct": 7.26,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 27,
+      "rank_latest": 39,
+      "rank_change": -12,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2793.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2414.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2075.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1955.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.09",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 9,
+      "overall": 33,
+      "owner_team": "Gaeta Spur FC",
+      "player": {
+        "name": "Tai Felton",
+        "sleeper_id": "12496",
+        "pos": "WR",
+        "nfl_team": "MIN"
+      },
+      "pre_draft_pick_value": 1238.0,
+      "latest_player_value": 1400.0,
+      "share_pct_pre": 0.8488,
+      "share_pct_latest": 0.8805,
+      "abs_delta": 162.0,
+      "abs_pct": 13.09,
+      "rel_delta": 3.73,
+      "fa_window_pct": null,
+      "draft_window_pct": 41.2,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "FLAT",
+      "divergence": true,
+      "rank_pre": 40,
+      "rank_latest": 47,
+      "rank_change": -7,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1748.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1358.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 1323.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1400.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.10",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 10,
+      "overall": 34,
+      "owner_team": "On To 2026",
+      "player": {
+        "name": "Harold Fannin",
+        "sleeper_id": "12506",
+        "pos": "TE",
+        "nfl_team": "CLE"
+      },
+      "pre_draft_pick_value": 2292.0,
+      "latest_player_value": 4695.0,
+      "share_pct_pre": 1.5714,
+      "share_pct_latest": 2.953,
+      "abs_delta": 2403.0,
+      "abs_pct": 104.84,
+      "rel_delta": 87.92,
+      "fa_window_pct": 18.57,
+      "draft_window_pct": 12.57,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 32,
+      "rank_latest": 12,
+      "rank_change": 20,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2580.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3688.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 4997.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 4695.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.11",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 11,
+      "overall": 35,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Ollie Gordon",
+        "sleeper_id": "12495",
+        "pos": "RB",
+        "nfl_team": "MIA"
+      },
+      "pre_draft_pick_value": 2218.0,
+      "latest_player_value": 2175.0,
+      "share_pct_pre": 1.5207,
+      "share_pct_latest": 1.368,
+      "abs_delta": -43.0,
+      "abs_pct": -1.94,
+      "rel_delta": -10.04,
+      "fa_window_pct": -20.64,
+      "draft_window_pct": 0.72,
+      "verdict_absolute": "FLAT",
+      "verdict_relative": "DECLINED",
+      "divergence": true,
+      "rank_pre": 33,
+      "rank_latest": 36,
+      "rank_change": -3,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2234.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3016.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2565.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2175.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 3.12",
+      "ktc_tier": "prospect",
+      "round": 3,
+      "slot": 12,
+      "overall": 36,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Devin Neal",
+        "sleeper_id": "12476",
+        "pos": "RB",
+        "nfl_team": "NO"
+      },
+      "pre_draft_pick_value": 2466.0,
+      "latest_player_value": 1865.0,
+      "share_pct_pre": 1.6907,
+      "share_pct_latest": 1.173,
+      "abs_delta": -601.0,
+      "abs_pct": -24.37,
+      "rel_delta": -30.62,
+      "fa_window_pct": -11.04,
+      "draft_window_pct": 2.39,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 29,
+      "rank_latest": 40,
+      "rank_change": -11,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2525.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1897.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2317.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1865.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.01",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 1,
+      "overall": 37,
+      "owner_team": "Like a Good Naber",
+      "player": {
+        "name": "DJ Giddens",
+        "sleeper_id": "12471",
+        "pos": "RB",
+        "nfl_team": "IND"
+      },
+      "pre_draft_pick_value": 2076.0,
+      "latest_player_value": 1861.0,
+      "share_pct_pre": 1.4233,
+      "share_pct_latest": 1.1705,
+      "abs_delta": -215.0,
+      "abs_pct": -10.36,
+      "rel_delta": -17.76,
+      "fa_window_pct": 90.28,
+      "draft_window_pct": 5.25,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 35,
+      "rank_latest": 41,
+      "rank_change": -6,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2185.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2461.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2106.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1861.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.02",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 2,
+      "overall": 38,
+      "owner_team": "2-Man Title Charge",
+      "player": {
+        "name": "Terrance Ferguson",
+        "sleeper_id": "12487",
+        "pos": "TE",
+        "nfl_team": "LAR"
+      },
+      "pre_draft_pick_value": 2534.0,
+      "latest_player_value": 2967.0,
+      "share_pct_pre": 1.7373,
+      "share_pct_latest": 1.8661,
+      "abs_delta": 433.0,
+      "abs_pct": 17.09,
+      "rel_delta": 7.41,
+      "fa_window_pct": 101.91,
+      "draft_window_pct": 7.14,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 28,
+      "rank_latest": 20,
+      "rank_change": 8,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2715.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2420.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2827.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2967.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.03",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 3,
+      "overall": 39,
+      "owner_team": "Spirit Halloween",
+      "player": {
+        "name": "Kyle Monangai",
+        "sleeper_id": "12534",
+        "pos": "RB",
+        "nfl_team": "CHI"
+      },
+      "pre_draft_pick_value": 509.0,
+      "latest_player_value": 3320.0,
+      "share_pct_pre": 0.349,
+      "share_pct_latest": 2.0881,
+      "abs_delta": 2811.0,
+      "abs_pct": 552.26,
+      "rel_delta": 498.31,
+      "fa_window_pct": null,
+      "draft_window_pct": 219.65,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 47,
+      "rank_latest": 17,
+      "rank_change": 30,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1627.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2482.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 3572.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3320.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.04",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 4,
+      "overall": 40,
+      "owner_team": "Bucky\u2019s Depression",
+      "player": {
+        "name": "Jarquez Hunter",
+        "sleeper_id": "11569",
+        "pos": "RB",
+        "nfl_team": "LAR"
+      },
+      "pre_draft_pick_value": 796.0,
+      "latest_player_value": 1625.0,
+      "share_pct_pre": 0.5457,
+      "share_pct_latest": 1.0221,
+      "abs_delta": 829.0,
+      "abs_pct": 104.15,
+      "rel_delta": 87.3,
+      "fa_window_pct": null,
+      "draft_window_pct": 133.54,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 46,
+      "rank_latest": 45,
+      "rank_change": 1,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1859.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1797.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 1727.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1625.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.05",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 5,
+      "overall": 41,
+      "owner_team": "TRIPS \ud83d\udd25",
+      "player": {
+        "name": "Pat Bryant",
+        "sleeper_id": "12492",
+        "pos": "WR",
+        "nfl_team": "DEN"
+      },
+      "pre_draft_pick_value": 1566.0,
+      "latest_player_value": 2661.0,
+      "share_pct_pre": 1.0737,
+      "share_pct_latest": 1.6737,
+      "abs_delta": 1095.0,
+      "abs_pct": 69.92,
+      "rel_delta": 55.88,
+      "fa_window_pct": null,
+      "draft_window_pct": 25.93,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 39,
+      "rank_latest": 23,
+      "rank_change": 16,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1972.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2212.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2821.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2661.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.06",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 6,
+      "overall": 42,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Woody Marks",
+        "sleeper_id": "12474",
+        "pos": "RB",
+        "nfl_team": "HOU"
+      },
+      "pre_draft_pick_value": 1235.0,
+      "latest_player_value": 2860.0,
+      "share_pct_pre": 0.8467,
+      "share_pct_latest": 1.7988,
+      "abs_delta": 1625.0,
+      "abs_pct": 131.58,
+      "rel_delta": 112.45,
+      "fa_window_pct": 77.95,
+      "draft_window_pct": 28.02,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 41,
+      "rank_latest": 22,
+      "rank_change": 19,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1581.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3582.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2817.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2860.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.07",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 7,
+      "overall": 43,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Brashard Smith",
+        "sleeper_id": "12455",
+        "pos": "RB",
+        "nfl_team": "KC"
+      },
+      "pre_draft_pick_value": 847.0,
+      "latest_player_value": 1688.0,
+      "share_pct_pre": 0.5807,
+      "share_pct_latest": 1.0617,
+      "abs_delta": 841.0,
+      "abs_pct": 99.29,
+      "rel_delta": 82.83,
+      "fa_window_pct": 3.93,
+      "draft_window_pct": 27.15,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 45,
+      "rank_latest": 44,
+      "rank_change": 1,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1077.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 2235.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2167.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1688.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.08",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 8,
+      "overall": 44,
+      "owner_team": "Rashid Shaheed Truthers",
+      "player": {
+        "name": "Jordan James",
+        "sleeper_id": "12467",
+        "pos": "RB",
+        "nfl_team": "SF"
+      },
+      "pre_draft_pick_value": 1590.0,
+      "latest_player_value": 2135.0,
+      "share_pct_pre": 1.0901,
+      "share_pct_latest": 1.3428,
+      "abs_delta": 545.0,
+      "abs_pct": 34.28,
+      "rel_delta": 23.18,
+      "fa_window_pct": 0.25,
+      "draft_window_pct": 33.71,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 38,
+      "rank_latest": 37,
+      "rank_change": 1,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2126.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1690.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 1911.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2135.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.09",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 9,
+      "overall": 45,
+      "owner_team": "208 Ferrari Way",
+      "player": {
+        "name": "Tahj Brooks",
+        "sleeper_id": "12543",
+        "pos": "RB",
+        "nfl_team": "CIN"
+      },
+      "pre_draft_pick_value": 860.0,
+      "latest_player_value": 1516.0,
+      "share_pct_pre": 0.5896,
+      "share_pct_latest": 0.9535,
+      "abs_delta": 656.0,
+      "abs_pct": 76.28,
+      "rel_delta": 61.72,
+      "fa_window_pct": null,
+      "draft_window_pct": 126.05,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 44,
+      "rank_latest": 46,
+      "rank_change": -2,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1944.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1845.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 1710.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1516.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.11",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 11,
+      "overall": 47,
+      "owner_team": "Mommy Rainier",
+      "player": {
+        "name": "Will Howard",
+        "sleeper_id": "12511",
+        "pos": "QB",
+        "nfl_team": "PIT"
+      },
+      "pre_draft_pick_value": 1866.0,
+      "latest_player_value": 1736.0,
+      "share_pct_pre": 1.2794,
+      "share_pct_latest": 1.0919,
+      "abs_delta": -130.0,
+      "abs_pct": -6.97,
+      "rel_delta": -14.66,
+      "fa_window_pct": -2.3,
+      "draft_window_pct": 16.35,
+      "verdict_absolute": "DECLINED",
+      "verdict_relative": "DECLINED",
+      "divergence": false,
+      "rank_pre": 36,
+      "rank_latest": 43,
+      "rank_change": -7,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 2171.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 1557.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2114.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1736.0,
+          "kind": "player"
+        }
+      ]
+    },
+    {
+      "pick_label": "2025 Pick 4.12",
+      "ktc_tier": "prospect",
+      "round": 4,
+      "slot": 12,
+      "overall": 48,
+      "owner_team": "On To 2026",
+      "player": {
+        "name": "Tory Horton",
+        "sleeper_id": "12497",
+        "pos": "WR",
+        "nfl_team": "SEA"
+      },
+      "pre_draft_pick_value": 1088.0,
+      "latest_player_value": 2409.0,
+      "share_pct_pre": 0.7459,
+      "share_pct_latest": 1.5152,
+      "abs_delta": 1321.0,
+      "abs_pct": 121.42,
+      "rel_delta": 103.14,
+      "fa_window_pct": 4.11,
+      "draft_window_pct": 63.05,
+      "verdict_absolute": "APPRECIATED",
+      "verdict_relative": "APPRECIATED",
+      "divergence": false,
+      "rank_pre": 43,
+      "rank_latest": 28,
+      "rank_change": 15,
+      "series": [
+        {
+          "date": "2025-05-01",
+          "value": 1774.0,
+          "kind": "player"
+        },
+        {
+          "date": "2025-10-11",
+          "value": 3090.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-03-22",
+          "value": 2711.0,
+          "kind": "player"
+        },
+        {
+          "date": "2026-08-31",
+          "value": 2409.0,
+          "kind": "player"
+        }
+      ]
+    }
+  ],
+  "per_round": [
+    {
+      "round": 1,
+      "count": 12,
+      "mean_abs_pct": -5.17,
+      "median_abs_pct": -4.79,
+      "mean_rel_delta": -13.01,
+      "median_rel_delta": -12.66,
+      "median_fa_window_pct": 13.4,
+      "median_draft_window_pct": 1.75,
+      "class_share_pre_pct": 43.5,
+      "class_share_latest_pct": 37.87,
+      "share_appreciating": 0.25,
+      "dips": false
+    },
+    {
+      "round": 2,
+      "count": 12,
+      "mean_abs_pct": 12.43,
+      "median_abs_pct": 24.62,
+      "mean_rel_delta": 3.14,
+      "median_rel_delta": 14.33,
+      "median_fa_window_pct": 29.26,
+      "median_draft_window_pct": 1.25,
+      "class_share_pre_pct": 27.36,
+      "class_share_latest_pct": 28.39,
+      "share_appreciating": 0.583,
+      "dips": false
+    },
+    {
+      "round": 3,
+      "count": 12,
+      "mean_abs_pct": 11.88,
+      "median_abs_pct": -3.21,
+      "mean_rel_delta": 2.64,
+      "median_rel_delta": -11.21,
+      "median_fa_window_pct": 9.38,
+      "median_draft_window_pct": 4.88,
+      "class_share_pre_pct": 18.88,
+      "class_share_latest_pct": 18.15,
+      "share_appreciating": 0.167,
+      "dips": false
+    },
+    {
+      "round": 4,
+      "count": 11,
+      "mean_abs_pct": 108.09,
+      "median_abs_pct": 76.28,
+      "mean_rel_delta": 90.89,
+      "median_rel_delta": 61.72,
+      "median_fa_window_pct": 4.11,
+      "median_draft_window_pct": 28.02,
+      "class_share_pre_pct": 10.26,
+      "class_share_latest_pct": 15.58,
+      "share_appreciating": 0.818,
+      "dips": false
+    }
+  ],
+  "per_position": [],
+  "round1_dips": false,
+  "round1_note": "Round 1 moved -4.79% (median) off its pre-draft value and holds 37.87% of class value vs 43.5% before the draft. Share is the number that matters: it is scale-free, so a class-wide move cancels out.",
+  "window_split": {
+    "fa_window": {
+      "from": "2025-03-01",
+      "to": "2025-04-29",
+      "median_pct": 15.82,
+      "mean_pct": 48.49,
+      "min_pct": -40.56,
+      "max_pct": 408.84
+    },
+    "draft_window": {
+      "from": "2025-04-29",
+      "to": "2025-05-01",
+      "median_pct": 4.04,
+      "mean_pct": 19.55,
+      "min_pct": -5.55,
+      "max_pct": 219.65
+    },
+    "ratio_draft_over_fa": 0.3,
+    "verdict": "Free agency moved value by a median of +15.82%. The draft moved it +4.04%. NOTE: the 2025 baseline is PROSPECT value, so the first window is pre-draft hype building toward the NFL draft, not free agency repricing picks. Not comparable to the 2026 panel."
+  },
+  "class_index_series": [
+    {
+      "date": "2025-05-01",
+      "cohort_index": 2797.0,
+      "class_total": 156750.0
+    },
+    {
+      "date": "2025-10-11",
+      "cohort_index": 2967.0,
+      "class_total": 160524.0
+    },
+    {
+      "date": "2026-03-22",
+      "cohort_index": 2827.0,
+      "class_total": 168347.0
+    },
+    {
+      "date": "2026-08-31",
+      "cohort_index": 2610.0,
+      "class_total": 158993.0
+    }
+  ]
+}
