@@ -4,8 +4,8 @@
     "league_name": "Multi-Season (season_3)",
     "season": 2026,
     "current_week": 1,
-    "fetch_timestamp": "2026-08-30T17:52:20.465658",
-    "total_trades": 0,
+    "fetch_timestamp": "2026-08-31T19:48:14.105460",
+    "total_trades": 1,
     "incremental_mode": true,
     "processed_seasons": [
       "season_3"
@@ -5765,6 +5765,55 @@
         3
       ],
       "status_updated": 1787898063192,
+      "waiver_budget": [],
+      "league_id": "1312166810505719808",
+      "season": "season_3"
+    },
+    {
+      "status": "complete",
+      "type": "trade",
+      "metadata": {
+        "poll_id": "1399886494121910272",
+        "veto_msg_id": "1399886494226722816"
+      },
+      "created": 1788121028327,
+      "settings": null,
+      "leg": 1,
+      "draft_picks": [
+        {
+          "round": 4,
+          "season": "2027",
+          "league_id": null,
+          "roster_id": 11,
+          "owner_id": 9,
+          "previous_owner_id": 8
+        }
+      ],
+      "creator": "1129475833942372352",
+      "transaction_id": "1399884691384844288",
+      "adds": {
+        "11646": 9,
+        "4037": 8,
+        "5022": 8,
+        "5947": 8,
+        "9480": 9
+      },
+      "drops": {
+        "11646": 8,
+        "4037": 9,
+        "5022": 9,
+        "5947": 9,
+        "9480": 8
+      },
+      "consenter_ids": [
+        8,
+        9
+      ],
+      "roster_ids": [
+        8,
+        9
+      ],
+      "status_updated": 1788147081479,
       "waiver_budget": [],
       "league_id": "1312166810505719808",
       "season": "season_3"

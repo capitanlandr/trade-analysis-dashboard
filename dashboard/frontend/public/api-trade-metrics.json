@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-08-30 17:53:14",
-    "total_trades": 112,
+    "generated": "2026-08-31 19:49:06",
+    "total_trades": 113,
     "description": "Advanced trade metrics: Sharpe Ratio, Significance Test, Opponent-Adjusted Performance"
   },
   "managers": [
@@ -275,25 +275,25 @@
     {
       "username": "mgaeta23",
       "real_name": "Matt",
-      "trades": 15,
-      "net_advantage": 3711.0,
+      "trades": 16,
+      "net_advantage": 3101.0,
       "sharpe": {
-        "value": 0.21,
-        "mean": 247.4,
-        "std_dev": 1176.9,
+        "value": 0.167,
+        "mean": 193.8,
+        "std_dev": 1158.2,
         "verdict": "positive_noisy"
       },
       "significance": {
         "wins": 8,
-        "win_rate": 53.3,
-        "p_value": 0.5,
+        "win_rate": 50.0,
+        "p_value": 0.5982,
         "direction": "winning",
         "verdict": "not_significant"
       },
       "opponent_adjusted": {
-        "unique_opponents": 7,
+        "unique_opponents": 8,
         "positive_matchups": 4,
-        "top_opponent_concentration_pct": 127.0,
+        "top_opponent_concentration_pct": 152.0,
         "opponents": [
           {
             "opponent": "zachlearningtogolf",
@@ -336,6 +336,13 @@
             "net_advantage": -392.0,
             "trade_count": 1,
             "avg_per_trade": -392.0
+          },
+          {
+            "opponent": "tylerpilgrim",
+            "opponent_name": "Tyler",
+            "net_advantage": -610.0,
+            "trade_count": 1,
+            "avg_per_trade": -610.0
           },
           {
             "opponent": "jwalters74",
@@ -493,25 +500,25 @@
     {
       "username": "tylerpilgrim",
       "real_name": "Tyler",
-      "trades": 21,
-      "net_advantage": -900.0,
+      "trades": 22,
+      "net_advantage": -290.0,
       "sharpe": {
-        "value": -0.027,
-        "mean": -42.9,
-        "std_dev": 1616.7,
+        "value": -0.008,
+        "mean": -13.2,
+        "std_dev": 1585.4,
         "verdict": "losing"
       },
       "significance": {
-        "wins": 14,
-        "win_rate": 66.7,
-        "p_value": 0.0946,
+        "wins": 15,
+        "win_rate": 68.2,
+        "p_value": 0.0669,
         "direction": "winning",
         "verdict": "approaching"
       },
       "opponent_adjusted": {
-        "unique_opponents": 7,
-        "positive_matchups": 4,
-        "top_opponent_concentration_pct": -341.0,
+        "unique_opponents": 8,
+        "positive_matchups": 5,
+        "top_opponent_concentration_pct": -1058.3,
         "opponents": [
           {
             "opponent": "jwalters74",
@@ -526,6 +533,13 @@
             "net_advantage": 912.0,
             "trade_count": 1,
             "avg_per_trade": 912.0
+          },
+          {
+            "opponent": "mgaeta23",
+            "opponent_name": "Matt",
+            "net_advantage": 610.0,
+            "trade_count": 1,
+            "avg_per_trade": 610.0
           },
           {
             "opponent": "donewton",

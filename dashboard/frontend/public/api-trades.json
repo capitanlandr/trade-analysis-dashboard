@@ -369,7 +369,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -669,7 +669,7 @@
           {
             "name": "Chris Godwin",
             "type": "player",
-            "value_then": 572,
+            "value_then": 571,
             "value_now": 571
           }
         ],
@@ -817,7 +817,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -1214,7 +1214,7 @@
           {
             "name": "Brenton Strange",
             "type": "player",
-            "value_then": 72,
+            "value_then": 545,
             "value_now": 545
           }
         ],
@@ -1263,7 +1263,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -1472,7 +1472,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           },
           {
@@ -2291,7 +2291,7 @@
           {
             "name": "Dallas Goedert",
             "type": "player",
-            "value_then": 399,
+            "value_then": 440,
             "value_now": 440
           },
           {
@@ -2703,7 +2703,7 @@
           {
             "name": "Brenton Strange",
             "type": "player",
-            "value_then": 72,
+            "value_then": 545,
             "value_now": 545
           },
           {
@@ -3091,7 +3091,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -3241,7 +3241,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -4342,7 +4342,7 @@
           {
             "name": "Brenton Strange",
             "type": "player",
-            "value_then": 72,
+            "value_then": 545,
             "value_now": 545
           },
           {
@@ -5082,7 +5082,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -5225,7 +5225,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -5274,7 +5274,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -5359,7 +5359,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -6038,7 +6038,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -6143,7 +6143,7 @@
           {
             "name": "2027 Round 4",
             "type": "draft_pick",
-            "value_then": 11,
+            "value_then": 13,
             "value_now": 13
           }
         ],
@@ -6324,14 +6324,84 @@
         "marginCurrent": -217.0,
         "swingWinner": "gnewman4",
         "swingMargin": 2.0
+      },
+      {
+        "tradeId": "1399884691384844288",
+        "transactionId": "1399884691384844288",
+        "tradeDate": "2026-08-30",
+        "season": "season_3",
+        "teamA": "tylerpilgrim",
+        "teamAReceived": [
+          "Chris Godwin",
+          "Dallas Goedert",
+          "Jakobi Meyers"
+        ],
+        "teamAAssets": [
+          {
+            "name": "Chris Godwin",
+            "type": "player",
+            "value_then": 571,
+            "value_now": 571
+          },
+          {
+            "name": "Dallas Goedert",
+            "type": "player",
+            "value_then": 440,
+            "value_now": 440
+          },
+          {
+            "name": "Jakobi Meyers",
+            "type": "player",
+            "value_then": 597,
+            "value_now": 597
+          }
+        ],
+        "teamAValueThen": 1608.0,
+        "teamAValueNow": 1608.0,
+        "teamAValueChange": 0.0,
+        "teamB": "mgaeta23",
+        "teamBReceived": [
+          "Jalen Coker",
+          "Brenton Strange",
+          "2027 Round 4"
+        ],
+        "teamBAssets": [
+          {
+            "name": "Jalen Coker",
+            "type": "player",
+            "value_then": 440,
+            "value_now": 440
+          },
+          {
+            "name": "Brenton Strange",
+            "type": "player",
+            "value_then": 545,
+            "value_now": 545
+          },
+          {
+            "name": "2027 Round 4",
+            "type": "draft_pick",
+            "value_then": 13,
+            "value_now": 13
+          }
+        ],
+        "teamBValueThen": 998.0,
+        "teamBValueNow": 998.0,
+        "teamBValueChange": 0.0,
+        "winnerAtTrade": "tylerpilgrim",
+        "winnerCurrent": "tylerpilgrim",
+        "marginAtTrade": -610.0,
+        "marginCurrent": -610.0,
+        "swingWinner": "Tie",
+        "swingMargin": 0.0
       }
     ],
     "metadata": {
-      "lastUpdated": "2026-08-30T17:53:39.878409",
-      "totalTrades": 112,
+      "lastUpdated": "2026-08-31T19:49:29.332582",
+      "totalTrades": 113,
       "dateRange": {
         "earliest": "2025-03-14",
-        "latest": "2026-08-26"
+        "latest": "2026-08-30"
       },
       "seasonsIncluded": [
         "season_2",
@@ -6339,7 +6409,7 @@
       ],
       "tradesBySeason": {
         "season_2": 81,
-        "season_3": 33
+        "season_3": 34
       },
       "seasonInfo": {
         "season_2": {
@@ -6348,14 +6418,14 @@
         },
         "season_3": {
           "status": "active",
-          "last_fetched": "2026-08-30T17:52:20.452738Z"
+          "last_fetched": "2026-08-31T19:48:14.092258Z"
         }
       },
       "schemaVersion": "2.0.0",
       "source": "cumulative_files",
       "processingInfo": {
-        "rawTradesProcessed": 114,
-        "dashboardTradesGenerated": 112,
+        "rawTradesProcessed": 115,
+        "dashboardTradesGenerated": 113,
         "multiTeamTradesSkipped": 2
       }
     }
