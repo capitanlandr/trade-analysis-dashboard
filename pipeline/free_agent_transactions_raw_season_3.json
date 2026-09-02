@@ -3,6 +3,30 @@
     "status": "complete",
     "type": "free_agent",
     "metadata": null,
+    "created": 1788361463248,
+    "settings": null,
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1124774814427832320",
+    "transaction_id": "1400893148535742464",
+    "adds": null,
+    "drops": {
+      "11596": 11
+    },
+    "consenter_ids": [
+      11
+    ],
+    "roster_ids": [
+      11
+    ],
+    "status_updated": 1788361463248,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808"
+  },
+  {
+    "status": "complete",
+    "type": "free_agent",
+    "metadata": null,
     "created": 1788154521386,
     "settings": null,
     "leg": 1,
@@ -10,12 +34,12 @@
     "creator": "870177576986034176",
     "transaction_id": "1400025171456241664",
     "adds": null,
-    "consenter_ids": [
-      1
-    ],
     "drops": {
       "6149": 1
     },
+    "consenter_ids": [
+      1
+    ],
     "roster_ids": [
       1
     ],
@@ -34,12 +58,12 @@
     "creator": "870177576986034176",
     "transaction_id": "1400025055781515264",
     "adds": null,
-    "consenter_ids": [
-      1
-    ],
     "drops": {
       "8917": 1
     },
+    "consenter_ids": [
+      1
+    ],
     "roster_ids": [
       1
     ],
@@ -58,12 +82,12 @@
     "creator": "870177576986034176",
     "transaction_id": "1400024944649175040",
     "adds": null,
-    "consenter_ids": [
-      1
-    ],
     "drops": {
       "6271": 1
     },
+    "consenter_ids": [
+      1
+    ],
     "roster_ids": [
       1
     ],
@@ -82,12 +106,12 @@
     "creator": "1115878936925294592",
     "transaction_id": "1399994683630829568",
     "adds": null,
-    "consenter_ids": [
-      8
-    ],
     "drops": {
       "13533": 8
     },
+    "consenter_ids": [
+      8
+    ],
     "roster_ids": [
       8
     ],
@@ -106,12 +130,12 @@
     "creator": "1129843037888204800",
     "transaction_id": "1399992003298603008",
     "adds": null,
-    "consenter_ids": [
-      5
-    ],
     "drops": {
       "12486": 5
     },
+    "consenter_ids": [
+      5
+    ],
     "roster_ids": [
       5
     ],

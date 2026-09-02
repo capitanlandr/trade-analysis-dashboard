@@ -9077,5 +9077,97 @@
     "waiver_budget": [],
     "league_id": "1312166810505719808",
     "season": "season_3"
+  },
+  {
+    "status": "failed",
+    "type": "waiver",
+    "metadata": {
+      "notes": "This player was claimed by another owner."
+    },
+    "created": 1788298997342,
+    "settings": {
+      "seq": 1,
+      "waiver_bid": 1
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "865815956675538944",
+    "transaction_id": "1400631147532148736",
+    "adds": {
+      "13533": 7
+    },
+    "drops": null,
+    "consenter_ids": [
+      7
+    ],
+    "roster_ids": [
+      7
+    ],
+    "status_updated": 1788333039234,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
+  },
+  {
+    "status": "failed",
+    "type": "waiver",
+    "metadata": {
+      "notes": "This player was claimed by another owner."
+    },
+    "created": 1788186046730,
+    "settings": {
+      "seq": 2,
+      "waiver_bid": 0
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "870177576986034176",
+    "transaction_id": "1400157398328414208",
+    "adds": {
+      "13533": 1
+    },
+    "drops": null,
+    "consenter_ids": [
+      1
+    ],
+    "roster_ids": [
+      1
+    ],
+    "status_updated": 1788333039234,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
+  },
+  {
+    "status": "complete",
+    "type": "waiver",
+    "metadata": {
+      "notes": "Your waiver claim was processed successfully!"
+    },
+    "created": 1788147485121,
+    "settings": {
+      "seq": 0,
+      "waiver_bid": 10
+    },
+    "leg": 1,
+    "draft_picks": [],
+    "creator": "1112526078167375872",
+    "transaction_id": "1399995659217596416",
+    "adds": {
+      "13533": 6
+    },
+    "drops": {
+      "8188": 6
+    },
+    "consenter_ids": [
+      6
+    ],
+    "roster_ids": [
+      6
+    ],
+    "status_updated": 1788333039234,
+    "waiver_budget": [],
+    "league_id": "1312166810505719808",
+    "season": "season_3"
   }
 ]
