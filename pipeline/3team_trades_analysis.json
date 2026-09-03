@@ -55,16 +55,6 @@
         "value_now": 3690.0
       },
       {
-        "manager": "lndahayo",
-        "assets": [
-          "Jaylen Waddle",
-          "2027 Round 2",
-          "2027 Round 3"
-        ],
-        "value_then": 3581.0,
-        "value_now": 3721.0
-      },
-      {
         "manager": "mgaeta23",
         "assets": [
           "Tahj Brooks",
@@ -73,6 +63,16 @@
         ],
         "value_then": 1566.0,
         "value_now": 1551.0
+      },
+      {
+        "manager": "lndahayo",
+        "assets": [
+          "Jaylen Waddle",
+          "2027 Round 2",
+          "2027 Round 3"
+        ],
+        "value_then": 3581.0,
+        "value_now": 3721.0
       }
     ]
   }
