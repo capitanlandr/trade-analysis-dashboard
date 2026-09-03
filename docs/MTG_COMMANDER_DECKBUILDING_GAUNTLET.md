@@ -170,6 +170,35 @@ Use multiple searches with different purposes:
    - `o:` searches for mechanical patterns
 4. **Oracle verification** for every card that affects a category count or a key curve decision.
 
+### Seed-card redundancy loop
+
+The best way to discover mechanically relevant redundancy is often to start from a card the deck builder already likes. Do not begin with a generic list of staples. Begin with a proven card whose objective is exactly right for this deck, then find the vocabulary that describes why it works.
+
+For each seed card:
+
+1. Open the card's Scryfall page and confirm the exact Oracle text, type line, mana value, and relevant faces.
+2. Open the corresponding card on the Scryfall Tagger website at `tagger.scryfall.com`.
+3. Read the **functional/oracle tags** on the Card section, including inherited ancestor tags. Ignore illustration or artwork tags unless the deck specifically cares about art.
+4. Write down the tags that describe the card's actual job, not every tag attached to it. For example, a card may have `card-advantage`, `draw`, `ramp`, `token-generator`, `sacrifice-outlet`, or `trigger-doubler` tags, while tags about a set mechanic or naming convention may be irrelevant.
+5. Use those functional tags as a mechanical search vocabulary. Search Scryfall with the tag syntax when supported, or translate the idea into an Oracle query such as `o:"create a 0/1"`, `o:"cast a noncreature spell"`, `o:"draw two cards"`, or `o:"add"`.
+6. Apply the deck's color identity, legality, mana value, bracket, and theme filters to the resulting candidates.
+7. Verify each candidate's Oracle text independently. A shared functional tag is a discovery signal, not proof that two cards have the same strategic role.
+8. Record why the seed card is preferred over or complemented by each redundant card.
+
+The loop is:
+
+```text
+Loved seed card
+→ Oracle text and type line
+→ Scryfall Tagger functional tags
+→ relevant mechanical tag vocabulary
+→ Scryfall candidate search
+→ Oracle and bracket verification
+→ scored redundant candidates
+```
+
+For the Kuja deck, this prevents a generic “Rakdos staples” search from replacing the deck's actual plan. A liked Wizard-token maker should lead to other Wizard-token makers; a liked noncreature-spell payoff should lead to other cards with that payoff trigger; and a liked draw spell should lead to cards with the same card-flow objective rather than merely cards that EDHREC ranks highly in Rakdos.
+
 Record which source contributed what:
 
 - Moxfield: current deck contents and custom intent tags
