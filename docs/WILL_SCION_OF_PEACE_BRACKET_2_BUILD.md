@@ -12,12 +12,12 @@ Counts below are primary role counts; cards can serve more than one role.
 
 | Role | Count | What it does |
 |---|---:|---|
-| Lifegain / Will enablers | 15 | Turns on Will, supplies life for payoffs, or rewards the lifegain plan. |
+| Lifegain / Will enablers | 13 | Turns on Will, supplies life for payoffs, or rewards the lifegain plan. |
 | Ramp | 10 | Gets Will and the large spells online earlier. |
 | Card draw / selection | 14 | Finds lifegain, lands, interaction, and the next large spell. |
 | Payoffs | 10 | Converts the discount into tokens, alternate wins, or a winning board. |
 | Enhancers | 4 | Makes lifegain or the resulting combat damage matter more. |
-| Removal / answers | 11 | Answers creatures, artifacts, enchantments, and opposing haymakers. |
+| Removal / answers | 13 | Efficiently answers creatures and opposing haymakers without spending three mana on generic removal. |
 | Lands | 38 | Includes three MDFCs; 18 basics keep the mana stable. |
 
 ## Card-by-card rationale
@@ -26,13 +26,12 @@ Counts below are primary role counts; cards can serve more than one role.
 
 - **Will, Scion of Peace** — The engine; vigilance lets it attack while still activating, but the sorcery restriction requires main-phase lifegain.
 - **Soul Warden / Soul's Attendant / Lunarch Veteran** — Repeatable one-mana life triggers that turn ordinary creature development into Will fuel.
-- **Authority of the Consuls** — Gains life against creature decks and slows haste attacks.
+- **Blind Obedience** — Opposing creatures and artifacts enter tapped, while extort gains life during your own spell-heavy turns and directly fuels Will.
 - **Nyx-Fleece Ram** — Reliable upkeep lifegain that also blocks small attackers.
 - **Angel of Vitality** — Scales life gain and becomes a meaningful evasive body once life is high.
 - **Rhox Faithmender / Boon Reflection** — Enhancers that make every later life trigger a larger Will discount.
 - **Chaplain's Blessing** — A deliberately modest one-mana burst trigger; its job is to make a turn-two/turn-three Will activation possible.
 - **Revitalize / Union of the Third Path** — Instant-speed life gain plus cards; Union is especially good when the hand is full and life is low.
-- **Congregate / Sanguine Sacrament** — Large life bursts that can make a single Will activation pay for a major spell.
 - **Celestine, the Living Saint** — Converts lifegain into a body and returns a useful permanent from the graveyard.
 - **Light of Hope** — Flexible lifegain, counter placement, or enchantment interaction; it is not included as a pure one-life effect.
 
@@ -44,7 +43,8 @@ Counts below are primary role counts; cards can serve more than one role.
 - **Mind Stone** — Early ramp that remains useful as a card later.
 - **Thought Vessel** — Ramp plus no maximum hand size for the large draw turns.
 - **Wayfarer's Bauble** — Converts two mana into a basic land and improves the deck’s colored-source count.
-- **Marble Diamond / Sky Diamond** — Slower two-mana rocks that are acceptable at this deliberately moderate power level.
+- **Fellwar Stone** — Untapped two-mana fixing that is usually excellent in a four-player Commander pod.
+- **Liquimetal Torque** — Untapped ramp that can also turn a nonland permanent into an artifact for interaction.
 - **Knight of the White Orchid** — A creature-based catch-up ramp spell that can attack or carry True Conviction later.
 
 ### Draw and selection
@@ -80,15 +80,16 @@ Counts below are primary role counts; cards can serve more than one role.
 
 - **Swords to Plowshares** — Efficient creature removal with a small lifegain benefit to the opponent.
 - **Path to Exile** — Efficient creature exile for threats that must not reach the graveyard.
-- **Generous Gift** — Answers any permanent at the cost of giving a modest blocker.
-- **Stroke of Midnight** — Flexible instant-speed permanent removal.
+- **Pongify / Rapid Hybridization** — One-mana instant creature removal; the token drawback is acceptable for answering a real threat efficiently.
 - **Heliod's Intervention** — Scales from targeted artifact/enchantment removal into a large lifegain spell.
 - **Fumigate** — Creature reset that replenishes the life total for a follow-up Will activation.
 - **Austere Command** — A flexible sweeper whose modes can preserve the deck’s token plan.
 - **Counterspell** — Broad protection for Will, a payoff, or a key permanent.
 - **Negate** — Low-cost coverage for opposing noncreature haymakers.
 - **Dovin's Veto** — Uncounterable protection against noncreature spells.
-- **Seal Away** — Cheap flash interaction for an attacking or tapped creature.
+- **Offer You Can't Refuse** — One-mana answer for a noncreature spell; the two Treasures are a manageable price in exchange for efficiency.
+- **Swan Song** — One-mana answer for a noncreature spell; the Bird token is usually less dangerous than the spell being stopped.
+- **Arcane Denial** — Two-mana universal counterspell that replaces itself and gives the opponent cards, a strong trade for this value-oriented deck.
 
 ## Land-by-land rationale
 
