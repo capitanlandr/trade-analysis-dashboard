@@ -16,7 +16,7 @@
           "2026 Round 1"
         ],
         "value_then": 12552.0,
-        "value_now": 15111.0
+        "value_now": 14459.0
       },
       {
         "manager": "lndahayo",
@@ -27,7 +27,7 @@
           "2026 Round 2"
         ],
         "value_then": 13482.0,
-        "value_now": 12809.0
+        "value_now": 12706.0
       },
       {
         "manager": "cjsyregelas",
@@ -38,7 +38,7 @@
           "2025 Round 2"
         ],
         "value_then": 15270.0,
-        "value_now": 11175.0
+        "value_now": 10732.0
       }
     ]
   },
@@ -47,14 +47,6 @@
     "trade_id": 1396196194731950080,
     "teams": [
       {
-        "manager": "tylerpilgrim",
-        "assets": [
-          "DeVonta Smith"
-        ],
-        "value_then": 3760.0,
-        "value_now": 3690.0
-      },
-      {
         "manager": "mgaeta23",
         "assets": [
           "Tahj Brooks",
@@ -62,7 +54,15 @@
           "2027 Round 1"
         ],
         "value_then": 1566.0,
-        "value_now": 1551.0
+        "value_now": 1618.0
+      },
+      {
+        "manager": "tylerpilgrim",
+        "assets": [
+          "DeVonta Smith"
+        ],
+        "value_then": 3760.0,
+        "value_now": 3796.0
       },
       {
         "manager": "lndahayo",
@@ -72,7 +72,7 @@
           "2027 Round 3"
         ],
         "value_then": 3581.0,
-        "value_now": 3721.0
+        "value_now": 3815.0
       }
     ]
   }
