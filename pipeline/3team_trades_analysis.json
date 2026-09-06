@@ -4,6 +4,17 @@
     "trade_id": 1209959102013263872,
     "teams": [
       {
+        "manager": "lndahayo",
+        "assets": [
+          "Amon-Ra St. Brown",
+          "Nico Collins",
+          "2025 Round 2",
+          "2026 Round 2"
+        ],
+        "value_then": 13482.0,
+        "value_now": 12706.0
+      },
+      {
         "manager": "zachlearningtogolf",
         "assets": [
           "Rashee Rice",
@@ -17,17 +28,6 @@
         ],
         "value_then": 12552.0,
         "value_now": 14459.0
-      },
-      {
-        "manager": "lndahayo",
-        "assets": [
-          "Amon-Ra St. Brown",
-          "Nico Collins",
-          "2025 Round 2",
-          "2026 Round 2"
-        ],
-        "value_then": 13482.0,
-        "value_now": 12706.0
       },
       {
         "manager": "cjsyregelas",
@@ -47,14 +47,14 @@
     "trade_id": 1396196194731950080,
     "teams": [
       {
-        "manager": "mgaeta23",
+        "manager": "lndahayo",
         "assets": [
-          "Tahj Brooks",
-          "Chris Godwin",
-          "2027 Round 1"
+          "Jaylen Waddle",
+          "2027 Round 2",
+          "2027 Round 3"
         ],
-        "value_then": 1566.0,
-        "value_now": 1618.0
+        "value_then": 3581.0,
+        "value_now": 3815.0
       },
       {
         "manager": "tylerpilgrim",
@@ -65,14 +65,14 @@
         "value_now": 3796.0
       },
       {
-        "manager": "lndahayo",
+        "manager": "mgaeta23",
         "assets": [
-          "Jaylen Waddle",
-          "2027 Round 2",
-          "2027 Round 3"
+          "Tahj Brooks",
+          "Chris Godwin",
+          "2027 Round 1"
         ],
-        "value_then": 3581.0,
-        "value_now": 3815.0
+        "value_then": 1566.0,
+        "value_now": 1618.0
       }
     ]
   }
